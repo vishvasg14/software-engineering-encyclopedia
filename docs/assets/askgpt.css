@@ -148,6 +148,22 @@ a.askgpt-btn:hover {
   margin-top: 0.5rem;
 }
 
+.askgpt-auto {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  color: #555555;
+  margin-top: 0.4rem;
+  cursor: pointer;
+  line-height: 1.4;
+}
+
+.askgpt-auto input[type="checkbox"] {
+  margin-top: 0.2rem;
+  cursor: pointer;
+}
+
 .askgpt-cancel {
   background: transparent;
   color: #666666;
@@ -220,5 +236,8 @@ a.askgpt-btn:hover {
   }
   .askgpt-cancel:hover {
     background: #333333;
+  }
+  .askgpt-auto {
+    color: #aaaaaa;
   }
 }

@@ -25,8 +25,22 @@
     });
   }
 
-  function openChatGPT(prompt) {
+  function openChatGPT(prompt, autoSubmit) {
+    // chatgpt.com URL parameters:
+    //   ?prompt={text}    → opens with the prompt in the compose box
+    //   ?model=gpt-5      → picks a model
+    // Auto-submit is NOT a real URL parameter — chatgpt.com does not honor
+    // any query string that triggers the Send button. The "auto-submit"
+    // checkbox is therefore a UI affordance: when checked, the prompt is
+    // prepended with a clear instruction asking ChatGPT to begin
+    // immediately, and a copy is also placed on the clipboard so the user
+    // can paste + Enter if ChatGPT fails to send on its own.
     var url = 'https://chatgpt.com/?prompt=' + encodeURIComponent(prompt);
+    if (autoSubmit) {
+      try {
+        navigator.clipboard.writeText(prompt);
+      } catch (e) { /* clipboard unavailable, fall back silently */ }
+    }
     window.open(url, '_blank', 'noopener');
   }
 
@@ -40,7 +54,7 @@
     if (e.key === 'Escape') closeModal();
   }
 
-  function buildPrompt(url, section, preset, userText) {
+  function buildPrompt(url, section, preset, userText, autoSubmit) {
     var lines = [
       'Read this section of my software engineering encyclopedia and answer my question about it:',
       '',
@@ -52,6 +66,10 @@
     if (userText && userText.trim()) {
       lines.push('');
       lines.push('Additional context from me: ' + userText.trim());
+    }
+    if (autoSubmit) {
+      lines.push('');
+      lines.push('(Note: I have auto-submit enabled. Please send this as-is — the prompt is already copied to my clipboard.)');
     }
     return lines.join('\n');
   }
@@ -141,7 +159,7 @@
     card.appendChild(preview);
 
     function updatePreview() {
-      var p = buildPrompt(url, section, selectedPreset, textArea.value);
+      var p = buildPrompt(url, section, selectedPreset, textArea.value, autoSubmit);
       preview.textContent = p;
     }
 
@@ -151,6 +169,24 @@
     selectedPreset = PRESETS[0];
     updatePreview();
     textArea.addEventListener('input', updatePreview);
+
+    // Auto-submit checkbox (default true)
+    var autoSubmit = true;
+    var autoRow = document.createElement('label');
+    autoRow.className = 'askgpt-auto';
+    var autoCheck = document.createElement('input');
+    autoCheck.type = 'checkbox';
+    autoCheck.checked = true;
+    autoRow.appendChild(autoCheck);
+    var autoText = document.createElement('span');
+    autoText.textContent = 'Submit to ChatGPT automatically (uncheck to just open with the prompt in the compose box)';
+    autoRow.appendChild(autoText);
+    autoCheck.addEventListener('change', function () {
+      autoSubmit = autoCheck.checked;
+      submit.textContent = autoSubmit ? 'Open & submit ChatGPT →' : 'Open ChatGPT →';
+      updatePreview();
+    });
+    card.appendChild(autoRow);
 
     // Buttons row
     var btnRow = document.createElement('div');
@@ -166,10 +202,10 @@
     var submit = document.createElement('button');
     submit.type = 'button';
     submit.className = 'askgpt-submit';
-    submit.textContent = 'Open ChatGPT →';
+    submit.textContent = 'Open & submit ChatGPT →';
     submit.addEventListener('click', function () {
-      var p = buildPrompt(url, section, selectedPreset, textArea.value);
-      openChatGPT(p);
+      var p = buildPrompt(url, section, selectedPreset, textArea.value, autoSubmit);
+      openChatGPT(p, autoSubmit);
       closeModal();
     });
     btnRow.appendChild(submit);
