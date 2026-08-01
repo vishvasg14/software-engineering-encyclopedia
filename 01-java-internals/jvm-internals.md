@@ -327,7 +327,7 @@ sequenceDiagram
     Interpreter->>JIT: profiling triggers compilation
     JIT->>Runtime: install native code for hot methods
     Runtime->>GC: schedule concurrent and incremental GC work
-    Runtime->>OS: dispatch threads; service signals
+    Runtime->>OS: dispatch threads and service OS signals
     Runtime-->>User: program runs to completion
 ```
 
