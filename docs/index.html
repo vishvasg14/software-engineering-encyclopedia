@@ -174,11 +174,9 @@
       }
       return '<h' + level + '>' + inner + '</h' + level + '>\n';
     }
-    renderer.heading = function (text, level) {
-      return renderHeading(text, level);
-    };
-    // Some marked versions pass raw vs escaped separately
     renderer.heading = function (text, level, raw) {
+      // marked v12 passes (text, level, raw). Use raw (unparsed) text so
+      // embedded HTML like <a class='askgpt-btn'> is still visible as a tag.
       return renderHeading(raw || text, level);
     };
 
@@ -190,8 +188,9 @@
       return '<pre><code>' + escapeHtml(code) + '</code></pre>';
     };
 
-    // marked v12 uses object-style options
-    marked.use({ renderer: renderer, gfm: true, breaks: false });
+    // marked v12: pass the renderer via setOptions (use() doesn't merge
+    // renderer properties reliably).
+    marked.setOptions({ renderer: renderer, gfm: true, breaks: false });
     return marked.parse(md);
   }
   function escapeHtml(s) {
