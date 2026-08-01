@@ -162,11 +162,10 @@
     // onto separate lines makes marked render the heading cleanly and the
     // button as a standalone HTML block.
     md = md.replace(
-      /^(#{1,6}\s+.+?)\s+<a class="askgpt-btn"[^>]*>\s*💬\s*<\/a>\s*$/gm,
+      /^(#{1,6}\s+.+?)\s+<a class=(["'])askgpt-btn\2[^>]*>\s*💬\s*<\/a>\s*$/gm,
       function (_, headingLine) {
-        const buttonMatch = headingLine.match(/(<a class="askgpt-btn"[^>]*>\s*💬\s*<\/a>)$/);
+        const buttonMatch = headingLine.match(/(<a class=(["'])askgpt-btn\2[^>]*>\s*💬\s*<\/a>)$/);
         if (!buttonMatch) return _;
-        // Strip the button off the heading
         const headingOnly = headingLine.slice(0, headingLine.length - buttonMatch[0].length).replace(/\s+$/, '');
         return headingOnly + '\n\n' + buttonMatch[0];
       }
