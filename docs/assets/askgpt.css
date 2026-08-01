@@ -1,0 +1,111 @@
+/* AskGPT button + modal styles. */
+
+/* Hide the inline button by default; reveal on heading hover. */
+h1 a.askgpt-btn,
+h2 a.askgpt-btn,
+h3 a.askgpt-btn,
+h4 a.askgpt-btn,
+h5 a.askgpt-btn,
+h6 a.askgpt-btn {
+  opacity: 0;
+  margin-left: 0.4em;
+  font-size: 0.6em;
+  vertical-align: middle;
+  text-decoration: none;
+  transition: opacity 0.15s ease-in-out;
+}
+
+h1:hover a.askgpt-btn,
+h2:hover a.askgpt-btn,
+h3:hover a.askgpt-btn,
+h4:hover a.askgpt-btn,
+h5:hover a.askgpt-btn,
+h6:hover a.askgpt-btn,
+a.askgpt-btn:focus {
+  opacity: 1;
+}
+
+a.askgpt-btn:hover {
+  text-decoration: none;
+  filter: brightness(1.2);
+}
+
+/* Modal backdrop */
+.askgpt-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+}
+
+/* Modal card */
+.askgpt-card {
+  background: #ffffff;
+  color: #111111;
+  border-radius: 8px;
+  padding: 1.25rem 1.5rem;
+  max-width: 28rem;
+  width: calc(100% - 2rem);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.askgpt-title {
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 0.85rem;
+  word-break: break-word;
+}
+
+.askgpt-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 0.85rem;
+}
+
+.askgpt-preset {
+  background: #10a37f;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.55rem 0.85rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  text-align: left;
+}
+
+.askgpt-preset:hover {
+  background: #0e906f;
+}
+
+.askgpt-cancel {
+  background: transparent;
+  color: #666666;
+  border: 1px solid #cccccc;
+  border-radius: 6px;
+  padding: 0.4rem 0.85rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.askgpt-cancel:hover {
+  background: #f4f4f4;
+}
+
+@media (prefers-color-scheme: dark) {
+  .askgpt-card {
+    background: #1f1f1f;
+    color: #f0f0f0;
+  }
+  .askgpt-cancel {
+    color: #cccccc;
+    border-color: #444444;
+  }
+  .askgpt-cancel:hover {
+    background: #2a2a2a;
+  }
+}
