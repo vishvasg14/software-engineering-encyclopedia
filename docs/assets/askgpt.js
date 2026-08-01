@@ -1,29 +1,18 @@
 // AskGPT button handler.
 // Binds click handlers to every <a class="askgpt-btn"> on the page.
 // On click, opens a small modal with two preset prompts. Picking one
-// opens https://chatgpt.com/?q={encoded-prompt} in a new tab.
+// opens https://chatgpt.com/?prompt={encoded} in a new tab.
+//
+// Each <a class="askgpt-btn"> carries two data attributes:
+//   data-askgpt-prompt-depth      → URL-encoded "Explain in depth" prompt
+//   data-askgpt-prompt-examples   → URL-encoded "Real-world examples" prompt
+// Both include the GitHub blob URL of the section so ChatGPT has full
+// context. We just decode and use them as-is.
 (function () {
   'use strict';
 
-  var PRESETS = [
-    {
-      id: 'depth',
-      label: 'Explain in depth',
-      build: function (s) {
-        return "Explain '" + s + "' in detail with concrete examples, the main trade-offs, and common pitfalls a practitioner should know.";
-      },
-    },
-    {
-      id: 'examples',
-      label: 'Real-world examples',
-      build: function (s) {
-        return "Give me 2-3 real-world production examples of '" + s + "' — what went right, what went wrong, and the lessons learned. Include company / project names if relevant.";
-      },
-    },
-  ];
-
   function openChatGPT(prompt) {
-    var url = 'https://chatgpt.com/?prompt=' + encodeURIComponent(prompt);
+    var url = 'https://chatgpt.com/?prompt=' + prompt;  // already encoded
     window.open(url, '_blank', 'noopener');
   }
 
@@ -39,7 +28,7 @@
     }
   }
 
-  function showModal(sectionTitle) {
+  function showModal(sectionTitle, depthPrompt, examplesPrompt) {
     closeModal(document.getElementById('askgpt-modal'));
 
     var backdrop = document.createElement('div');
@@ -59,15 +48,20 @@
     title.textContent = 'Ask ChatGPT about: ' + sectionTitle;
     card.appendChild(title);
 
+    var presets = [
+      { label: 'Explain in depth', encoded: depthPrompt },
+      { label: 'Real-world examples', encoded: examplesPrompt },
+    ];
+
     var list = document.createElement('div');
     list.className = 'askgpt-list';
-    PRESETS.forEach(function (preset) {
+    presets.forEach(function (preset) {
       var btn = document.createElement('button');
       btn.type = 'button';
       btn.className = 'askgpt-preset';
       btn.textContent = preset.label;
       btn.addEventListener('click', function () {
-        openChatGPT(preset.build(sectionTitle));
+        openChatGPT(preset.encoded);
         closeModal(backdrop);
       });
       list.appendChild(btn);
@@ -94,7 +88,9 @@
       buttons[i].addEventListener('click', function (e) {
         e.preventDefault();
         var section = this.getAttribute('data-askgpt') || 'this section';
-        showModal(section);
+        var depth = this.getAttribute('data-askgpt-prompt-depth');
+        var examples = this.getAttribute('data-askgpt-prompt-examples');
+        showModal(section, depth, examples);
       });
     }
   }
