@@ -156,30 +156,6 @@
   function mdToHtml(md) {
     const renderer = new marked.Renderer();
 
-    // Override the heading renderer to split the heading text from the
-    // trailing <a class="askgpt-btn">…</a>. marked treats <a> inside a
-    // heading line as inline HTML and re-parses its href (which contains a
-    // long URL-encoded prompt), corrupting the output. We split the line
-    // ourselves and emit the heading text and the button as separate HTML.
-    function renderHeading(text, level) {
-      // Split off the trailing <a …>…</a> if present.
-      var m = text.match(/^([\s\S]*?)\s*(<a class=['"]askgpt-btn['"][\s\S]*?<\/a>)\s*$/);
-      var inner;
-      if (m) {
-        var headingText = m[1].trim();
-        var buttonHtml = m[2];
-        inner = escapeHtml(headingText) + ' ' + buttonHtml;
-      } else {
-        inner = escapeHtml(text);
-      }
-      return '<h' + level + '>' + inner + '</h' + level + '>\n';
-    }
-    renderer.heading = function (text, level, raw) {
-      // marked v12 passes (text, level, raw). Use raw (unparsed) text so
-      // embedded HTML like <a class='askgpt-btn'> is still visible as a tag.
-      return renderHeading(raw || text, level);
-    };
-
     // Mermaid code blocks → <div class="mermaid">…</div>
     renderer.code = function (code, lang) {
       if (lang === 'mermaid') {
@@ -188,10 +164,40 @@
       return '<pre><code>' + escapeHtml(code) + '</code></pre>';
     };
 
-    // marked v12: pass the renderer via setOptions (use() doesn't merge
-    // renderer properties reliably).
     marked.setOptions({ renderer: renderer, gfm: true, breaks: false });
-    return marked.parse(md);
+    let html = marked.parse(md);
+
+    // marked v12 escapes the embedded <a class='askgpt-btn'>…</a> in
+    // headings because it tokenizes HTML before reaching the renderer.
+    // The escape turns the live button into literal text "a class='...'".
+    // Fix it post-hoc by reversing the escape on the specific pattern.
+    html = html.replace(
+      /(<h[1-6]>)((?:(?!<\/h[1-6]>).)*?)(&lt;a class=&#39;askgpt-btn&#39;[\s\S]*?&lt;\/a&gt;)((?:(?!<\/h[1-6]>).)*?)(<\/h[1-6]>)/g,
+      function (match, open, before, escapedAnchor, after, close) {
+        // Re-encode the surrounding text as proper HTML; restore the anchor.
+        const beforeHtml = before
+          .replace(/&amp;/g, '&')
+          .replace(/&lt;/g, '<')
+          .replace(/&gt;/g, '>')
+          .replace(/&quot;/g, '"')
+          .replace(/&#39;/g, "'");
+        const afterHtml = after
+          .replace(/&amp;/g, '&')
+          .replace(/&lt;/g, '<')
+          .replace(/&gt;/g, '>')
+          .replace(/&quot;/g, '"')
+          .replace(/&#39;/g, "'");
+        // Unescape the anchor tag back to a real <a>.
+        const anchorHtml = escapedAnchor
+          .replace(/&lt;/g, '<')
+          .replace(/&gt;/g, '>')
+          .replace(/&amp;/g, '&')
+          .replace(/&#39;/g, "'")
+          .replace(/&quot;/g, '"');
+        return open + beforeHtml + ' ' + anchorHtml + afterHtml + close;
+      }
+    );
+    return html;
   }
   function escapeHtml(s) {
     return s.replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
