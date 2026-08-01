@@ -362,18 +362,18 @@ sequenceDiagram
 
 ```mermaid
 sequenceDiagram
-    participant HTML as HTML Parser
+    participant HTML as HTML
     participant DOM
     participant Engine as JS Engine
-    participant EventLoop as Browser Event Loop
+    participant EventLoop as Event Loop
     HTML->>DOM: parse HTML, build DOM tree
-    HTML->>Engine: <script> tags trigger parsing
+    HTML->>Engine: trigger script parsing
     Engine->>Engine: parse, compile, execute JS
     Engine->>DOM: mutate DOM via DOM API
-    Engine->>EventLoop: register event listeners
-    Note over EventLoop: task queues<br/>(input, microtask, render, etc.)
+    Engine->>EventLoop: register listeners
+    Note over EventLoop: task queues<br/>(input, microtask, render)
     EventLoop->>Engine: dispatch tasks
-    Engine->>DOM: reflow/repaint if needed
+    Engine->>DOM: reflow and repaint if needed
     DOM-->>User: visual update
 ```
 

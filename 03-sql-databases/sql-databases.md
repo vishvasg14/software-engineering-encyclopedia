@@ -178,16 +178,16 @@ timeline
     1974 : System R — first RDBMS, SQL
     1986 : SQL-86 standardized
     1989 : Postgres project (Berkeley)
-    1992 : SQL-92 (major rewrite)
+    1992 : SQL-92 major rewrite
     1995 : MySQL, PostgreSQL 1.0
-    1999 : SQL:1999 (recursion, OLAP)
-    2003 : SQL:2003 (window functions)
+    1999 : SQL/1999 (recursion, OLAP)
+    2003 : SQL/2003 (window functions)
     2009 : Redis, MongoDB
     2014 : PostgreSQL JSONB
+    2016 : SQL/2016 (JSON)
     2017 : PostgreSQL logical replication
-    2016 : SQL:2016 (JSON)
     2023 : PostgreSQL 16
-    2023 : SQL:2023 (property graph)
+    2023 : SQL/2023 (property graph)
     2024 : PostgreSQL 17
 ```
 
@@ -851,7 +851,7 @@ sequenceDiagram
     Disk-->>WAL: ack
     Backend->>Backend: mark transaction committed
     Backend->>App: COMMIT success
-    Note over Disk: Later: background writer flushes<br/>data page to disk; WAL can be<br/>truncated after checkpoint
+    Note over Disk: Later — background writer flushes data page to disk; WAL can be truncated after checkpoint
 ```
 
 ### 8.20 Replication <a class='askgpt-btn' href='https://chatgpt.com/?prompt=Read%20this%20section%20of%20my%20encyclopedia%20and%20explain%20it%20in%20depth%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know%3A%0A%0Ahttps%3A%2F%2Fgithub.com%2Fvishvasg14%2Fsoftware-engineering-encyclopedia%2Fblob%2Fmain%2F03-sql-databases%2Fsql-databases.md%23820-replication%0A%0ASection%20title%3A%208.20%20Replication' target='_blank' rel='noopener' data-askgpt='8.20 Replication' data-askgpt-url='https://github.com/vishvasg14/software-engineering-encyclopedia/blob/main/03-sql-databases/sql-databases.md#820-replication' data-askgpt-prompt-depth='Read%20this%20section%20of%20my%20encyclopedia%20and%20explain%20it%20in%20depth%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know%3A%0A%0Ahttps%3A%2F%2Fgithub.com%2Fvishvasg14%2Fsoftware-engineering-encyclopedia%2Fblob%2Fmain%2F03-sql-databases%2Fsql-databases.md%23820-replication%0A%0ASection%20title%3A%208.20%20Replication' data-askgpt-prompt-examples='Read%20this%20section%20of%20my%20encyclopedia%20and%20give%20me%202-3%20real-world%20production%20examples%20for%20it.%20For%20each%3A%20what%20went%20right%2C%20what%20went%20wrong%2C%20and%20the%20lessons%20learned.%20Include%20company%20%2F%20project%20names%20if%20relevant.%0A%0Ahttps%3A%2F%2Fgithub.com%2Fvishvasg14%2Fsoftware-engineering-encyclopedia%2Fblob%2Fmain%2F03-sql-databases%2Fsql-databases.md%23820-replication%0A%0ASection%20title%3A%208.20%20Replication' title='Ask ChatGPT about this section'>💬</a>

@@ -696,11 +696,11 @@ graph TB
 ```mermaid
 stateDiagram-v2
     [*] --> Unlocked
-    Unlocked --> Biased: first lock by thread T<br/>+XX:+UseBiasedLocking (default pre-15)
+    Unlocked --> Biased: first lock by thread T — flag +XX:+UseBiasedLocking (default pre-15)
     Biased --> Unlocked: lock released
-    Biased --> Lightweight: another thread CAS's the lock word<br/>(bulk rebias available)
+    Biased --> Lightweight: another thread CAS's the lock word — bulk rebias available
     Lightweight --> Unlocked: lock released
-    Lightweight --> Inflated: contention detected<br/>(spinning exhausted)
+    Lightweight --> Inflated: contention detected — spinning exhausted
     Inflated --> Unlocked: lock released
     Unlocked --> Lightweight: CAS the lock word directly
 ```

@@ -786,9 +786,9 @@ sequenceDiagram
 
     App->>Cache: get(key)
     Cache-->>App: value
-    Note over Cache: TTL approaching;<br/>async refresh
+    Note over Cache: TTL approaching — async refresh
     Cache->>DB: SELECT
-    Cache: update value
+    Cache->>Cache: update value
 ```
 
 Cache refreshes in background before expiry. Avoids sync misses.
