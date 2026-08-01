@@ -25,7 +25,7 @@ The authoritative source for Caffeine is the GitHub project and the user guide. 
 
 ## Core API
 
-### Basic cache <a class="askgpt-btn" data-askgpt="Basic cache" title="Ask ChatGPT about this section">💬</a>
+### Basic cache <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Basic%20cache'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Basic cache" title="Ask ChatGPT about this section">💬</a>
 
 ```java
 Cache<Key, Graph> cache = Caffeine.newBuilder()
@@ -40,7 +40,7 @@ Graph value = cache.get(key, k -> createExpensiveGraph(k));
 cache.invalidate(key);
 ```
 
-### Loading cache <a class="askgpt-btn" data-askgpt="Loading cache" title="Ask ChatGPT about this section">💬</a>
+### Loading cache <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Loading%20cache'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Loading cache" title="Ask ChatGPT about this section">💬</a>
 
 ```java
 LoadingCache<Key, Graph> cache = Caffeine.newBuilder()
@@ -52,7 +52,7 @@ LoadingCache<Key, Graph> cache = Caffeine.newBuilder()
 Graph value = cache.get(key);
 ```
 
-### Async loading <a class="askgpt-btn" data-askgpt="Async loading" title="Ask ChatGPT about this section">💬</a>
+### Async loading <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Async%20loading'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Async loading" title="Ask ChatGPT about this section">💬</a>
 
 ```java
 AsyncCache<Key, Graph> cache = Caffeine.newBuilder()
@@ -65,7 +65,7 @@ CompletableFuture<Graph> future = cache.get(key, k -> createExpensiveGraph(k));
 
 ## Configuration options
 
-### Size-based <a class="askgpt-btn" data-askgpt="Size-based" title="Ask ChatGPT about this section">💬</a>
+### Size-based <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Size-based'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Size-based" title="Ask ChatGPT about this section">💬</a>
 
 | Option | Description |
 |--------|-------------|
@@ -75,7 +75,7 @@ CompletableFuture<Graph> future = cache.get(key, k -> createExpensiveGraph(k));
 | `weakKeys()`, `weakValues()` | Use weak references |
 | `softValues()` | Use soft references |
 
-### Time-based <a class="askgpt-btn" data-askgpt="Time-based" title="Ask ChatGPT about this section">💬</a>
+### Time-based <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Time-based'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Time-based" title="Ask ChatGPT about this section">💬</a>
 
 | Option | Description |
 |--------|-------------|
@@ -85,7 +85,7 @@ CompletableFuture<Graph> future = cache.get(key, k -> createExpensiveGraph(k));
 | `refreshAfterWrite(Duration)` | Async refresh before expiry |
 | `refreshAfterAccess(Duration)` | Async refresh after read |
 
-### Population <a class="askgpt-btn" data-askgpt="Population" title="Ask ChatGPT about this section">💬</a>
+### Population <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Population'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Population" title="Ask ChatGPT about this section">💬</a>
 
 | Option | Description |
 |--------|-------------|
@@ -95,14 +95,14 @@ CompletableFuture<Graph> future = cache.get(key, k -> createExpensiveGraph(k));
 | `softValues()` | Soft references |
 | `recordStats()` | Enable statistics |
 
-### Eviction <a class="askgpt-btn" data-askgpt="Eviction" title="Ask ChatGPT about this section">💬</a>
+### Eviction <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Eviction'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Eviction" title="Ask ChatGPT about this section">💬</a>
 
 | Option | Description |
 |--------|-------------|
 | `removalListener(RemovalListener)` | Listen to eviction events |
 | `evictionListener(EvictionListener)` | Listen to evictions only |
 
-### Other <a class="askgpt-btn" data-askgpt="Other" title="Ask ChatGPT about this section">💬</a>
+### Other <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Other'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Other" title="Ask ChatGPT about this section">💬</a>
 
 | Option | Description |
 |--------|-------------|

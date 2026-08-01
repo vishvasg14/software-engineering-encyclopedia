@@ -89,23 +89,23 @@ graph TB
 
 ## 3. Five Ws + One H
 
-### What <a class="askgpt-btn" data-askgpt="What" title="Ask ChatGPT about this section">💬</a>
+### What <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'What'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="What" title="Ask ChatGPT about this section">💬</a>
 
 A **database** is a system that persists data, organizes it for retrieval, enforces integrity constraints, manages concurrent access, and provides recovery from failures. A **relational database** specifically organizes data into **relations** (tables) of **tuples** (rows) with **attributes** (columns), and queries it using the **relational algebra** expressed through **SQL**.
 
-### Why <a class="askgpt-btn" data-askgpt="Why" title="Ask ChatGPT about this section">💬</a>
+### Why <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Why'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Why" title="Ask ChatGPT about this section">💬</a>
 
 Databases exist because every application needs persistent state. Before databases, applications stored data in files managed by their own code — which meant each application reinvented concurrency control, indexing, crash recovery, and integrity constraints. Databases centralize these concerns.
 
-### When <a class="askgpt-btn" data-askgpt="When" title="Ask ChatGPT about this section">💬</a>
+### When <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'When'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="When" title="Ask ChatGPT about this section">💬</a>
 
 Databases have existed since the 1960s (hierarchical and network models). The relational model was proposed in 1970. SQL was standardized in 1986. Open-source RDBMSes (PostgreSQL, MySQL) became production-grade in the 2000s. The NoSQL wave (2009+) added alternatives for specific use cases. NewSQL (2010s+) brought horizontal scalability to the relational model.
 
-### Where <a class="askgpt-btn" data-askgpt="Where" title="Ask ChatGPT about this section">💬</a>
+### Where <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Where'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Where" title="Ask ChatGPT about this section">💬</a>
 
 Relational databases are used everywhere — web applications, financial systems, healthcare, government, ERP, CRM, banking. PostgreSQL specifically is used by Instagram, WhatsApp, Uber, GitLab, Stripe, Discord, Reddit, Notion, Apple, and many others.
 
-### Who <a class="askgpt-btn" data-askgpt="Who" title="Ask ChatGPT about this section">💬</a>
+### Who <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Who'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Who" title="Ask ChatGPT about this section">💬</a>
 
 - **Codd (1970)** — relational model.
 - **Chamberlin, Boyce (IBM, 1974)** — SQL (originally SEQUEL).
@@ -115,13 +115,13 @@ Relational databases are used everywhere — web applications, financial systems
 - **Sanfilippo (2009)** — Redis.
 - **PostgreSQL Global Development Group** — open-source maintainers of PostgreSQL.
 
-### How (one-paragraph preview) <a class="askgpt-btn" data-askgpt="How (one-paragraph preview)" title="Ask ChatGPT about this section">💬</a>
+### How (one-paragraph preview) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'How%20(one-paragraph%20preview)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="How (one-paragraph preview)" title="Ask ChatGPT about this section">💬</a>
 
 A SQL query reaches the database, is **parsed** into a parse tree, **analyzed** for semantic correctness and resolved names, **rewritten** to apply optimizations (e.g., flattening subqueries), **planned** to produce a tree of physical operators with cost estimates based on table statistics, and **executed** by iterating through the plan tree — fetching pages from the buffer pool or disk, evaluating predicates, joining tuples, applying aggregates, and returning results. Each step is governed by transactional semantics (ACID), MVCC visibility rules, and the storage engine's on-disk format.
 
 ## 4. History
 
-### 4.1 Origins (1960s–1970s) <a class="askgpt-btn" data-askgpt="4.1 Origins (1960s–1970s)" title="Ask ChatGPT about this section">💬</a>
+### 4.1 Origins (1960s–1970s) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'4.1%20Origins%20(1960s%E2%80%931970s)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="4.1 Origins (1960s–1970s)" title="Ask ChatGPT about this section">💬</a>
 
 - **1961** — Charles Bachman develops the Integrated Data Store (IDS), one of the first databases. Network (CODASYL) model.
 - **1968** — IBM's IMS (Information Management System), hierarchical model, ships in production.
@@ -129,21 +129,21 @@ A SQL query reaches the database, is **parsed** into a parse tree, **analyzed** 
 - **1973–1974** — IBM's System R project (Don Chamberlin, Ray Boyce) implements the first RDBMS and develops SQL (originally SEQUEL). System R proves the relational model works.
 - **1977** — Larry Ellison founds Software Development Laboratories (later Oracle); ships the first commercial RDBMS in 1979.
 
-### 4.2 The relational era (1980s) <a class="askgpt-btn" data-askgpt="4.2 The relational era (1980s)" title="Ask ChatGPT about this section">💬</a>
+### 4.2 The relational era (1980s) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'4.2%20The%20relational%20era%20(1980s)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="4.2 The relational era (1980s)" title="Ask ChatGPT about this section">💬</a>
 
 - **1986** — **SQL-86** is published as ANSI X3.135 and ISO 9075. The first SQL standard.
 - **1989** — **SQL-89** with integrity constraints.
 - **1989–1994** — Michael Stonebraker leads the Postgres project at UC Berkeley as the successor to Ingres. Adds many features missing from System R (user-defined types, functions, rules).
 - **1992** — **SQL-92** is a major rewrite; adds joins, subqueries, set operations, new types. The SQL most engineers recognize.
 
-### 4.3 The open-source era (1990s) <a class="askgpt-btn" data-askgpt="4.3 The open-source era (1990s)" title="Ask ChatGPT about this section">💬</a>
+### 4.3 The open-source era (1990s) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'4.3%20The%20open-source%20era%20(1990s)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="4.3 The open-source era (1990s)" title="Ask ChatGPT about this section">💬</a>
 
 - **1994–1995** — MySQL is created by Michael Widenius and David Axmark in Sweden.
 - **1995** — Postgres95 → **PostgreSQL 1.0** is released; the "95" is dropped in 1996 (PostgreSQL 6.0).
 - **1996** — **SQL-1996** adds integrity constraints, triggers.
 - **1999** — **SQL:1999** adds recursive queries, OLAP features, regular expressions, Java integration.
 
-### 4.4 The web era (2000s) <a class="askgpt-btn" data-askgpt="4.4 The web era (2000s)" title="Ask ChatGPT about this section">💬</a>
+### 4.4 The web era (2000s) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'4.4%20The%20web%20era%20(2000s)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="4.4 The web era (2000s)" title="Ask ChatGPT about this section">💬</a>
 
 - **2000–2010** — PostgreSQL matures: WAL (2001), GIN indexes, partitioning precursors.
 - **2003** — **SQL:2003** adds window functions, sequences, MERGE, XML.
@@ -151,7 +151,7 @@ A SQL query reaches the database, is **parsed** into a parse tree, **analyzed** 
 - **2008** — Google publishes the MapReduce paper; the data explosion begins.
 - **2009** — **Redis** and **MongoDB** are released. The "NoSQL" movement begins. CAP theorem formalized (Gilbert, Lynch).
 
-### 4.5 The scale era (2010s) <a class="askgpt-btn" data-askgpt="4.5 The scale era (2010s)" title="Ask ChatGPT about this section">💬</a>
+### 4.5 The scale era (2010s) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'4.5%20The%20scale%20era%20(2010s)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="4.5 The scale era (2010s)" title="Ask ChatGPT about this section">💬</a>
 
 - **2010** — **Cassandra** (originally Facebook, 2008) reaches 0.7.
 - **2010s** — NewSQL: **Spanner** (Google, 2012 paper), **CockroachDB** (2015), **TiDB** (2017).
@@ -160,7 +160,7 @@ A SQL query reaches the database, is **parsed** into a parse tree, **analyzed** 
 - **2016** — **SQL:2016** adds JSONPath, polymorphic table functions.
 - **2017** — **PostgreSQL 10** ships logical replication, declarative partitioning, native partitioning, SCRAM auth.
 
-### 4.6 The cloud-native era (2020s) <a class="askgpt-btn" data-askgpt="4.6 The cloud-native era (2020s)" title="Ask ChatGPT about this section">💬</a>
+### 4.6 The cloud-native era (2020s) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'4.6%20The%20cloud-native%20era%20(2020s)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="4.6 The cloud-native era (2020s)" title="Ask ChatGPT about this section">💬</a>
 
 - **2020** — **PostgreSQL 13** ships B-tree deduplication, incremental sorting.
 - **2021** — **PostgreSQL 14** adds multirange types.
@@ -169,7 +169,7 @@ A SQL query reaches the database, is **parsed** into a parse tree, **analyzed** 
 - **2023** — **SQL:2023** adds property graph queries (SQL/PGQ).
 - **2025–2026** — **PostgreSQL 18** in development; further OLTP/HTAP work; pg_stat_io improvements.
 
-### 4.7 Timeline <a class="askgpt-btn" data-askgpt="4.7 Timeline" title="Ask ChatGPT about this section">💬</a>
+### 4.7 Timeline <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'4.7%20Timeline'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="4.7 Timeline" title="Ask ChatGPT about this section">💬</a>
 
 ```mermaid
 timeline
@@ -193,7 +193,7 @@ timeline
 
 ## 5. Problem Statement
 
-### 5.1 What databases solve <a class="askgpt-btn" data-askgpt="5.1 What databases solve" title="Ask ChatGPT about this section">💬</a>
+### 5.1 What databases solve <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'5.1%20What%20databases%20solve'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="5.1 What databases solve" title="Ask ChatGPT about this section">💬</a>
 
 Every non-trivial application needs to:
 
@@ -204,7 +204,7 @@ Every non-trivial application needs to:
 5. **Recover from failures** — crashes, power loss, disk failures.
 6. **Scale** — to growing data volumes and query rates.
 
-### 5.2 Pre-database reality <a class="askgpt-btn" data-askgpt="5.2 Pre-database reality" title="Ask ChatGPT about this section">💬</a>
+### 5.2 Pre-database reality <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'5.2%20Pre-database%20reality'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="5.2 Pre-database reality" title="Ask ChatGPT about this section">💬</a>
 
 Before databases, applications stored data in files managed by application code. Each application reinvented:
 
@@ -215,7 +215,7 @@ Before databases, applications stored data in files managed by application code.
 
 This led to repeated bugs, poor performance, and unscalable systems. Databases centralize these concerns with decades of engineering investment.
 
-### 5.3 Why the relational model? <a class="askgpt-btn" data-askgpt="5.3 Why the relational model?" title="Ask ChatGPT about this section">💬</a>
+### 5.3 Why the relational model? <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'5.3%20Why%20the%20relational%20model%3F'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="5.3 Why the relational model?" title="Ask ChatGPT about this section">💬</a>
 
 Codd's relational model won over hierarchical (IMS) and network (CODASYL) models because:
 
@@ -224,7 +224,7 @@ Codd's relational model won over hierarchical (IMS) and network (CODASYL) models
 - **Mathematical foundation** — relational algebra provides a solid theoretical base for query optimization.
 - **Schema flexibility** — adding new attributes and tables doesn't break existing applications.
 
-### 5.4 Why not always relational? <a class="askgpt-btn" data-askgpt="5.4 Why not always relational?" title="Ask ChatGPT about this section">💬</a>
+### 5.4 Why not always relational? <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'5.4%20Why%20not%20always%20relational%3F'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="5.4 Why not always relational?" title="Ask ChatGPT about this section">💬</a>
 
 The relational model isn't a panacea. NoSQL emerged in the 2000s because:
 
@@ -233,7 +233,7 @@ The relational model isn't a panacea. NoSQL emerged in the 2000s because:
 - **In-memory caches** could answer queries in microseconds vs. milliseconds.
 - **Graph traversals** require recursive joins that are inefficient in SQL.
 
-### 5.5 Modern reality <a class="askgpt-btn" data-askgpt="5.5 Modern reality" title="Ask ChatGPT about this section">💬</a>
+### 5.5 Modern reality <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'5.5%20Modern%20reality'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="5.5 Modern reality" title="Ask ChatGPT about this section">💬</a>
 
 In 2026, most production systems use **a mix**:
 
@@ -246,7 +246,7 @@ The relational model remains the workhorse. Most "NoSQL" stores have added SQL-l
 
 ## 6. Real-World Motivation
 
-### 6.1 PostgreSQL at hyperscalers <a class="askgpt-btn" data-askgpt="6.1 PostgreSQL at hyperscalers" title="Ask ChatGPT about this section">💬</a>
+### 6.1 PostgreSQL at hyperscalers <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'6.1%20PostgreSQL%20at%20hyperscalers'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="6.1 PostgreSQL at hyperscalers" title="Ask ChatGPT about this section">💬</a>
 
 **Instagram** — famously runs PostgreSQL at extreme scale. Mike Stonebraker's Berkeley team and Instagram's engineering published detailed accounts of how they sharded PostgreSQL to handle billions of photos and trillions of relationships. Key tactics: schema design, FDW (foreign data wrappers), careful vacuum, custom replication.
 
@@ -264,7 +264,7 @@ The relational model remains the workhorse. Most "NoSQL" stores have added SQL-l
 
 **Cloudflare** — runs PostgreSQL at scale for analytics and configuration data. They've published about their use of `pgcat` and PostgreSQL in production.
 
-### 6.2 Other RDBMS in production <a class="askgpt-btn" data-askgpt="6.2 Other RDBMS in production" title="Ask ChatGPT about this section">💬</a>
+### 6.2 Other RDBMS in production <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'6.2%20Other%20RDBMS%20in%20production'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="6.2 Other RDBMS in production" title="Ask ChatGPT about this section">💬</a>
 
 **MySQL** — Wikipedia, Facebook (some workloads), YouTube (originally), GitHub (legacy), WordPress (default). MySQL remains the most deployed open-source RDBMS.
 
@@ -272,7 +272,7 @@ The relational model remains the workhorse. Most "NoSQL" stores have added SQL-l
 
 **SQL Server** — Microsoft ecosystem, enterprise Windows shops.
 
-### 6.3 NoSQL at scale <a class="askgpt-btn" data-askgpt="6.3 NoSQL at scale" title="Ask ChatGPT about this section">💬</a>
+### 6.3 NoSQL at scale <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'6.3%20NoSQL%20at%20scale'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="6.3 NoSQL at scale" title="Ask ChatGPT about this section">💬</a>
 
 **MongoDB** — EA, eBay, Coinbase, Forbes, Bosch.
 
@@ -280,7 +280,7 @@ The relational model remains the workhorse. Most "NoSQL" stores have added SQL-l
 
 **Cassandra** — Netflix (large-scale data), Discord (messages), Apple (large deployments).
 
-### 6.4 Economic motivation <a class="askgpt-btn" data-askgpt="6.4 Economic motivation" title="Ask ChatGPT about this section">💬</a>
+### 6.4 Economic motivation <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'6.4%20Economic%20motivation'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="6.4 Economic motivation" title="Ask ChatGPT about this section">💬</a>
 
 - **Storage costs** — efficient schemas, compression, partitioning reduce storage bills.
 - **Compute costs** — query optimization and indexing reduce CPU usage.
@@ -288,7 +288,7 @@ The relational model remains the workhorse. Most "NoSQL" stores have added SQL-l
 - **Developer velocity** — clear schema and good documentation reduce onboarding time.
 - **Compliance** — GDPR, HIPAA, PCI-DSS require data governance that databases help enforce.
 
-### 6.5 Why not alternatives? <a class="askgpt-btn" data-askgpt="6.5 Why not alternatives?" title="Ask ChatGPT about this section">💬</a>
+### 6.5 Why not alternatives? <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'6.5%20Why%20not%20alternatives%3F'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="6.5 Why not alternatives?" title="Ask ChatGPT about this section">💬</a>
 
 | Alternative | Why enterprises don't migrate wholesale |
 |-------------|------------------------------------------|
@@ -298,7 +298,7 @@ The relational model remains the workhorse. Most "NoSQL" stores have added SQL-l
 | Graph-only databases (Neo4j) | Useful for specific graph workloads; not general-purpose |
 | Blockchain | Throughput, latency, and consensus overhead make it unsuitable for OLTP |
 
-### 6.6 Performance motivation <a class="askgpt-btn" data-askgpt="6.6 Performance motivation" title="Ask ChatGPT about this section">💬</a>
+### 6.6 Performance motivation <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'6.6%20Performance%20motivation'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="6.6 Performance motivation" title="Ask ChatGPT about this section">💬</a>
 
 - **JIT and vectorization** in modern query engines — PostgreSQL added JIT in PG 11; HyPer and MemSQL pioneered vectorized execution.
 - **MVCC** allows readers and writers to not block each other, dramatically improving concurrency.
@@ -321,7 +321,7 @@ graph LR
 
 ## 7. Internal Working
 
-### 7.1 The lifecycle of a SQL query <a class="askgpt-btn" data-askgpt="7.1 The lifecycle of a SQL query" title="Ask ChatGPT about this section">💬</a>
+### 7.1 The lifecycle of a SQL query <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'7.1%20The%20lifecycle%20of%20a%20SQL%20query'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="7.1 The lifecycle of a SQL query" title="Ask ChatGPT about this section">💬</a>
 
 ```mermaid
 sequenceDiagram
@@ -347,7 +347,7 @@ sequenceDiagram
     Protocol-->>App: result set
 ```
 
-### 7.2 PostgreSQL process model <a class="askgpt-btn" data-askgpt="7.2 PostgreSQL process model" title="Ask ChatGPT about this section">💬</a>
+### 7.2 PostgreSQL process model <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'7.2%20PostgreSQL%20process%20model'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="7.2 PostgreSQL process model" title="Ask ChatGPT about this section">💬</a>
 
 ```mermaid
 graph TB
@@ -378,7 +378,7 @@ graph TB
 - Autovacuum runs VACUUM and ANALYZE in the background.
 - Background writer flushes dirty pages from buffer pool to disk.
 
-### 7.3 Subsystems that participate <a class="askgpt-btn" data-askgpt="7.3 Subsystems that participate" title="Ask ChatGPT about this section">💬</a>
+### 7.3 Subsystems that participate <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'7.3%20Subsystems%20that%20participate'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="7.3 Subsystems that participate" title="Ask ChatGPT about this section">💬</a>
 
 | Subsystem | Responsibility | Source location (PG) |
 |-----------|---------------|---------------------|
@@ -397,7 +397,7 @@ graph TB
 
 This section is the heart of the document. Each subsection treats a major subsystem in depth.
 
-### 8.1 The relational model <a class="askgpt-btn" data-askgpt="8.1 The relational model" title="Ask ChatGPT about this section">💬</a>
+### 8.1 The relational model <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.1%20The%20relational%20model'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.1 The relational model" title="Ask ChatGPT about this section">💬</a>
 
 Codd's relational model defines:
 
@@ -409,7 +409,7 @@ Codd's relational model defines:
 
 The model's key insight: **the physical storage layout is independent of the logical structure**. Applications interact with the model declaratively, and the engine handles the implementation.
 
-### 8.2 SQL anatomy <a class="askgpt-btn" data-askgpt="8.2 SQL anatomy" title="Ask ChatGPT about this section">💬</a>
+### 8.2 SQL anatomy <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.2%20SQL%20anatomy'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.2 SQL anatomy" title="Ask ChatGPT about this section">💬</a>
 
 A SQL statement has five major clause categories:
 
@@ -423,7 +423,7 @@ FROM from_clause                           -- source
 [LIMIT n [OFFSET m]]                       -- result limiting
 ```
 
-### 8.3 Joins <a class="askgpt-btn" data-askgpt="8.3 Joins" title="Ask ChatGPT about this section">💬</a>
+### 8.3 Joins <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.3%20Joins'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.3 Joins" title="Ask ChatGPT about this section">💬</a>
 
 | Join type | Returns |
 |-----------|---------|
@@ -446,7 +446,7 @@ FROM orders o
 INNER JOIN customers c ON o.customer_id = c.id;
 ```
 
-### 8.4 Set operations <a class="askgpt-btn" data-askgpt="8.4 Set operations" title="Ask ChatGPT about this section">💬</a>
+### 8.4 Set operations <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.4%20Set%20operations'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.4 Set operations" title="Ask ChatGPT about this section">💬</a>
 
 ```sql
 SELECT name FROM customers
@@ -466,14 +466,14 @@ EXCEPT                          -- in first but not second
 SELECT name FROM suppliers;
 ```
 
-### 8.5 Subqueries <a class="askgpt-btn" data-askgpt="8.5 Subqueries" title="Ask ChatGPT about this section">💬</a>
+### 8.5 Subqueries <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.5%20Subqueries'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.5 Subqueries" title="Ask ChatGPT about this section">💬</a>
 
 - **Scalar subquery** — returns a single value: `WHERE x = (SELECT MAX(y) FROM t)`.
 - **IN / NOT IN** — `WHERE x IN (SELECT ...)`.
 - **EXISTS** — `WHERE EXISTS (SELECT 1 FROM ...)` — checks for any row.
 - **Correlated** — subquery references outer query.
 
-### 8.6 Aggregates and GROUP BY <a class="askgpt-btn" data-askgpt="8.6 Aggregates and GROUP BY" title="Ask ChatGPT about this section">💬</a>
+### 8.6 Aggregates and GROUP BY <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.6%20Aggregates%20and%20GROUP%20BY'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.6 Aggregates and GROUP BY" title="Ask ChatGPT about this section">💬</a>
 
 ```sql
 SELECT
@@ -491,7 +491,7 @@ LIMIT 10;
 
 Important: in standard SQL, every column in SELECT must be in GROUP BY or inside an aggregate. PostgreSQL allows functional dependency inference (primary key determines other columns), so you don't need to group by every selected column when the primary key is in GROUP BY.
 
-### 8.7 Window functions <a class="askgpt-btn" data-askgpt="8.7 Window functions" title="Ask ChatGPT about this section">💬</a>
+### 8.7 Window functions <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.7%20Window%20functions'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.7 Window functions" title="Ask ChatGPT about this section">💬</a>
 
 SQL:2003 introduced window functions. They compute values across a set of rows related to the current row, **without collapsing** the result set like aggregates do.
 
@@ -534,7 +534,7 @@ FROM employees;
 | `SUM/AVG/MIN/MAX(x)` | Aggregates over window |
 | `PERCENT_RANK()`, `CUME_DIST()` | Distribution |
 
-### 8.8 CTEs (Common Table Expressions) <a class="askgpt-btn" data-askgpt="8.8 CTEs (Common Table Expressions)" title="Ask ChatGPT about this section">💬</a>
+### 8.8 CTEs (Common Table Expressions) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.8%20CTEs%20(Common%20Table%20Expressions)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.8 CTEs (Common Table Expressions)" title="Ask ChatGPT about this section">💬</a>
 
 CTEs (`WITH` clause) are named subqueries that make queries more readable:
 
@@ -569,7 +569,7 @@ WITH RECURSIVE subordinates AS (
 SELECT * FROM subordinates ORDER BY depth;
 ```
 
-### 8.9 MERGE <a class="askgpt-btn" data-askgpt="8.9 MERGE" title="Ask ChatGPT about this section">💬</a>
+### 8.9 MERGE <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.9%20MERGE'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.9 MERGE" title="Ask ChatGPT about this section">💬</a>
 
 SQL:2003 added `MERGE`. PostgreSQL finally added it in PG 15.
 
@@ -584,7 +584,7 @@ WHEN NOT MATCHED THEN
     INSERT (id, value) VALUES (s.id, s.value);
 ```
 
-### 8.10 Transactions and ACID <a class="askgpt-btn" data-askgpt="8.10 Transactions and ACID" title="Ask ChatGPT about this section">💬</a>
+### 8.10 Transactions and ACID <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.10%20Transactions%20and%20ACID'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.10 Transactions and ACID" title="Ask ChatGPT about this section">💬</a>
 
 **ACID** properties (Haerder & Reuter, 1983):
 
@@ -602,7 +602,7 @@ BEGIN;                        -- START TRANSACTION
 COMMIT;                       -- or ROLLBACK on error
 ```
 
-### 8.11 Isolation levels <a class="askgpt-btn" data-askgpt="8.11 Isolation levels" title="Ask ChatGPT about this section">💬</a>
+### 8.11 Isolation levels <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.11%20Isolation%20levels'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.11 Isolation levels" title="Ask ChatGPT about this section">💬</a>
 
 The SQL standard defines four isolation levels, each preventing a different set of phenomena:
 
@@ -634,7 +634,7 @@ BEGIN;
 COMMIT;
 ```
 
-### 8.12 MVCC — Multi-Version Concurrency Control <a class="askgpt-btn" data-askgpt="8.12 MVCC — Multi-Version Concurrency Control" title="Ask ChatGPT about this section">💬</a>
+### 8.12 MVCC — Multi-Version Concurrency Control <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.12%20MVCC%20%E2%80%94%20Multi-Version%20Concurrency%20Control'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.12 MVCC — Multi-Version Concurrency Control" title="Ask ChatGPT about this section">💬</a>
 
 MVCC lets readers not block writers and writers not block readers. Each row carries information about which transactions can see it.
 
@@ -681,7 +681,7 @@ graph LR
 
 This is fundamentally different from InnoDB (MySQL), which uses undo logs to reconstruct old versions of updated rows.
 
-### 8.13 VACUUM and tuple lifecycle <a class="askgpt-btn" data-askgpt="8.13 VACUUM and tuple lifecycle" title="Ask ChatGPT about this section">💬</a>
+### 8.13 VACUUM and tuple lifecycle <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.13%20VACUUM%20and%20tuple%20lifecycle'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.13 VACUUM and tuple lifecycle" title="Ask ChatGPT about this section">💬</a>
 
 Because PostgreSQL doesn't update rows in place, **dead tuples accumulate** and must be reclaimed. VACUUM does this.
 
@@ -708,7 +708,7 @@ ALTER TABLE accounts SET (
 );
 ```
 
-### 8.14 Transaction ID wraparound <a class="askgpt-btn" data-askgpt="8.14 Transaction ID wraparound" title="Ask ChatGPT about this section">💬</a>
+### 8.14 Transaction ID wraparound <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.14%20Transaction%20ID%20wraparound'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.14 Transaction ID wraparound" title="Ask ChatGPT about this section">💬</a>
 
 PostgreSQL uses a 32-bit transaction ID (`xid`). After ~2 billion transactions, the counter wraps around. Without protection, transactions would see rows from the "future" as visible.
 
@@ -716,7 +716,7 @@ PostgreSQL uses a 32-bit transaction ID (`xid`). After ~2 billion transactions, 
 
 If `autovacuum` falls behind or is disabled, the database will eventually **shut down** to prevent wraparound data corruption. Critical monitoring alert.
 
-### 8.15 The query planner <a class="askgpt-btn" data-askgpt="8.15 The query planner" title="Ask ChatGPT about this section">💬</a>
+### 8.15 The query planner <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.15%20The%20query%20planner'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.15 The query planner" title="Ask ChatGPT about this section">💬</a>
 
 The planner produces a tree of physical operators with cost estimates. Steps:
 
@@ -738,7 +738,7 @@ ANALYZE accounts;  -- refresh statistics
 
 **Without up-to-date statistics, the planner makes poor choices** — e.g., choosing a sequential scan when an index scan would be 1000× faster.
 
-### 8.16 Reading EXPLAIN ANALYZE <a class="askgpt-btn" data-askgpt="8.16 Reading EXPLAIN ANALYZE" title="Ask ChatGPT about this section">💬</a>
+### 8.16 Reading EXPLAIN ANALYZE <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.16%20Reading%20EXPLAIN%20ANALYZE'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.16 Reading EXPLAIN ANALYZE" title="Ask ChatGPT about this section">💬</a>
 
 ```sql
 EXPLAIN (ANALYZE, BUFFERS, VERBOSE)
@@ -780,7 +780,7 @@ Execution Time: 12.567 ms
 | **Aggregate** | Hash or group aggregate |
 | **Limit** | Stop after N rows |
 
-### 8.17 Indexes <a class="askgpt-btn" data-askgpt="8.17 Indexes" title="Ask ChatGPT about this section">💬</a>
+### 8.17 Indexes <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.17%20Indexes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.17 Indexes" title="Ask ChatGPT about this section">💬</a>
 
 PostgreSQL supports multiple index types:
 
@@ -810,7 +810,7 @@ CREATE INDEX users_data_gin ON users USING gin (data jsonb_path_ops);
 CREATE INDEX events_ts_brin ON events USING brin (created_at);
 ```
 
-### 8.18 B-tree internals <a class="askgpt-btn" data-askgpt="8.18 B-tree internals" title="Ask ChatGPT about this section">💬</a>
+### 8.18 B-tree internals <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.18%20B-tree%20internals'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.18 B-tree internals" title="Ask ChatGPT about this section">💬</a>
 
 B-trees are balanced trees where each page contains keys and child pointers. PostgreSQL B-trees:
 
@@ -822,7 +822,7 @@ B-trees are balanced trees where each page contains keys and child pointers. Pos
 
 **B-tree deduplication** (PG 13+) collapses duplicate keys, saving space.
 
-### 8.19 WAL (Write-Ahead Log) <a class="askgpt-btn" data-askgpt="8.19 WAL (Write-Ahead Log)" title="Ask ChatGPT about this section">💬</a>
+### 8.19 WAL (Write-Ahead Log) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.19%20WAL%20(Write-Ahead%20Log)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.19 WAL (Write-Ahead Log)" title="Ask ChatGPT about this section">💬</a>
 
 WAL is the mechanism for crash safety and replication:
 
@@ -854,7 +854,7 @@ sequenceDiagram
     Note over Disk: Later: background writer flushes<br/>data page to disk; WAL can be<br/>truncated after checkpoint
 ```
 
-### 8.20 Replication <a class="askgpt-btn" data-askgpt="8.20 Replication" title="Ask ChatGPT about this section">💬</a>
+### 8.20 Replication <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.20%20Replication'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.20 Replication" title="Ask ChatGPT about this section">💬</a>
 
 **Streaming replication** (PG 9.0+):
 
@@ -882,7 +882,7 @@ graph LR
 
 **Replication slots** track standby progress; required to prevent the primary from discarding WAL records the standby hasn't read yet.
 
-### 8.21 Partitioning <a class="askgpt-btn" data-askgpt="8.21 Partitioning" title="Ask ChatGPT about this section">💬</a>
+### 8.21 Partitioning <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.21%20Partitioning'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.21 Partitioning" title="Ask ChatGPT about this section">💬</a>
 
 PostgreSQL declarative partitioning (PG 10+):
 
@@ -921,7 +921,7 @@ CREATE TABLE users_hash PARTITION OF users
 - Foreign keys to partitioned tables have limitations.
 - Indexes must be created on each partition (or `CREATE INDEX ON parent` propagates).
 
-### 8.22 Configuration essentials <a class="askgpt-btn" data-askgpt="8.22 Configuration essentials" title="Ask ChatGPT about this section">💬</a>
+### 8.22 Configuration essentials <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.22%20Configuration%20essentials'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.22 Configuration essentials" title="Ask ChatGPT about this section">💬</a>
 
 `postgresql.conf` key parameters:
 
@@ -938,7 +938,7 @@ CREATE TABLE users_hash PARTITION OF users
 | `random_page_cost` | 4.0 | 1.1 for SSDs |
 | `effective_io_concurrency` | 1 | 200+ for SSDs |
 
-### 8.23 MySQL and InnoDB <a class="askgpt-btn" data-askgpt="8.23 MySQL and InnoDB" title="Ask ChatGPT about this section">💬</a>
+### 8.23 MySQL and InnoDB <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.23%20MySQL%20and%20InnoDB'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.23 MySQL and InnoDB" title="Ask ChatGPT about this section">💬</a>
 
 **InnoDB** is MySQL's default storage engine since 5.5. Its key differences from PostgreSQL:
 
@@ -986,7 +986,7 @@ graph TB
 - Cases where you need MyISAM-style behavior (rare).
 - Some specific replication topologies (MySQL Group Replication).
 
-### 8.24 MongoDB <a class="askgpt-btn" data-askgpt="8.24 MongoDB" title="Ask ChatGPT about this section">💬</a>
+### 8.24 MongoDB <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.24%20MongoDB'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.24 MongoDB" title="Ask ChatGPT about this section">💬</a>
 
 **Document model** — JSON-like BSON objects, schema-less.
 
@@ -1037,7 +1037,7 @@ graph TB
 - Complex joins.
 - Strict schema enforcement.
 
-### 8.25 Redis <a class="askgpt-btn" data-askgpt="8.25 Redis" title="Ask ChatGPT about this section">💬</a>
+### 8.25 Redis <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.25%20Redis'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.25 Redis" title="Ask ChatGPT about this section">💬</a>
 
 **In-memory data structure store.** Not a database in the traditional sense but commonly used as a primary store for specific workloads.
 
@@ -1081,7 +1081,7 @@ graph TB
 - ACID transactions (Redis transactions are not ACID).
 - Strong consistency.
 
-### 8.26 Theory: ACID, CAP, PACELC <a class="askgpt-btn" data-askgpt="8.26 Theory: ACID, CAP, PACELC" title="Ask ChatGPT about this section">💬</a>
+### 8.26 Theory: ACID, CAP, PACELC <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.26%20Theory%3A%20ACID%2C%20CAP%2C%20PACELC'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.26 Theory: ACID, CAP, PACELC" title="Ask ChatGPT about this section">💬</a>
 
 **ACID** (covered above).
 
@@ -1101,7 +1101,7 @@ Since network partitions are inevitable, CAP is really a choice between C and A 
 
 **BASE** (Basically Available, Soft state, Eventually consistent) — the alternative to ACID for distributed systems.
 
-### 8.27 Normalization <a class="askgpt-btn" data-askgpt="8.27 Normalization" title="Ask ChatGPT about this section">💬</a>
+### 8.27 Normalization <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.27%20Normalization'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.27 Normalization" title="Ask ChatGPT about this section">💬</a>
 
 Database normalization reduces redundancy and improves integrity.
 
@@ -1148,7 +1148,7 @@ In Customers: name and email both depend on customer_id (the key). OK.
 
 ## 9. Architecture
 
-### 9.1 PostgreSQL high-level architecture <a class="askgpt-btn" data-askgpt="9.1 PostgreSQL high-level architecture" title="Ask ChatGPT about this section">💬</a>
+### 9.1 PostgreSQL high-level architecture <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'9.1%20PostgreSQL%20high-level%20architecture'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="9.1 PostgreSQL high-level architecture" title="Ask ChatGPT about this section">💬</a>
 
 ```mermaid
 graph TB
@@ -1191,7 +1191,7 @@ graph TB
     BP <--> VM
 ```
 
-### 9.2 Storage hierarchy <a class="askgpt-btn" data-askgpt="9.2 Storage hierarchy" title="Ask ChatGPT about this section">💬</a>
+### 9.2 Storage hierarchy <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'9.2%20Storage%20hierarchy'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="9.2 Storage hierarchy" title="Ask ChatGPT about this section">💬</a>
 
 ```mermaid
 graph TB
@@ -1204,7 +1204,7 @@ graph TB
     Page --> Special["Special Space (index-specific)"]
 ```
 
-### 9.3 Buffer pool <a class="askgpt-btn" data-askgpt="9.3 Buffer pool" title="Ask ChatGPT about this section">💬</a>
+### 9.3 Buffer pool <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'9.3%20Buffer%20pool'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="9.3 Buffer pool" title="Ask ChatGPT about this section">💬</a>
 
 The buffer pool is a fixed-size cache of disk pages. Replacement is via clock-sweep algorithm (similar to second-chance). Shared across all backends.
 
@@ -1217,7 +1217,7 @@ graph LR
     Buf --> State
 ```
 
-### 9.4 MVCC implementation details <a class="askgpt-btn" data-askgpt="9.4 MVCC implementation details" title="Ask ChatGPT about this section">💬</a>
+### 9.4 MVCC implementation details <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'9.4%20MVCC%20implementation%20details'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="9.4 MVCC implementation details" title="Ask ChatGPT about this section">💬</a>
 
 Each row carries `xmin` and `xmax`. PostgreSQL uses **transaction IDs** (`xid`) — a 32-bit counter that wraps around every ~2 billion transactions.
 
@@ -1232,7 +1232,7 @@ A tuple is visible if:
 - `xmin` is committed and `xmin < snapshot.xmax` and `xmin` not in `active_xids` at snapshot time.
 - `xmax` is 0 OR `xmax` not committed OR `xmax` in `active_xids` OR `xmax >= snapshot.xmax`.
 
-### 9.5 Process vs thread model <a class="askgpt-btn" data-askgpt="9.5 Process vs thread model" title="Ask ChatGPT about this section">💬</a>
+### 9.5 Process vs thread model <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'9.5%20Process%20vs%20thread%20model'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="9.5 Process vs thread model" title="Ask ChatGPT about this section">💬</a>
 
 PostgreSQL uses a **process-per-backend** model (not threads). This has advantages:
 
@@ -1250,7 +1250,7 @@ In contrast, MySQL uses threads (one thread per connection).
 
 ## 10. Performance
 
-### 10.1 Time complexity of common operations <a class="askgpt-btn" data-askgpt="10.1 Time complexity of common operations" title="Ask ChatGPT about this section">💬</a>
+### 10.1 Time complexity of common operations <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'10.1%20Time%20complexity%20of%20common%20operations'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="10.1 Time complexity of common operations" title="Ask ChatGPT about this section">💬</a>
 
 | Operation | Complexity | Notes |
 |-----------|-----------|-------|
@@ -1263,7 +1263,7 @@ In contrast, MySQL uses threads (one thread per connection).
 | VACUUM | O(dead tuples) | Autovacuum runs incrementally |
 | ANALYZE | O(sample size) | Default 30,000 rows |
 
-### 10.2 Memory usage <a class="askgpt-btn" data-askgpt="10.2 Memory usage" title="Ask ChatGPT about this section">💬</a>
+### 10.2 Memory usage <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'10.2%20Memory%20usage'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="10.2 Memory usage" title="Ask ChatGPT about this section">💬</a>
 
 | Memory type | Tunable | Production note |
 |-------------|---------|----------------|
@@ -1273,14 +1273,14 @@ In contrast, MySQL uses threads (one thread per connection).
 | WAL buffers | `wal_buffers` | Auto-tuned since PG 13 |
 | Connection memory | OS process memory | ~10 MB per backend |
 
-### 10.3 CPU usage <a class="askgpt-btn" data-askgpt="10.3 CPU usage" title="Ask ChatGPT about this section">💬</a>
+### 10.3 CPU usage <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'10.3%20CPU%20usage'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="10.3 CPU usage" title="Ask ChatGPT about this section">💬</a>
 
 - **Query execution** scales with query complexity.
 - **VACUUM** CPU spike during heavy bloat.
 - **Autovacuum** workers can use significant CPU if not configured.
 - **Parallel workers** for queries (max `max_parallel_workers_per_gather`, default 2).
 
-### 10.4 Bottlenecks and optimization techniques <a class="askgpt-btn" data-askgpt="10.4 Bottlenecks and optimization techniques" title="Ask ChatGPT about this section">💬</a>
+### 10.4 Bottlenecks and optimization techniques <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'10.4%20Bottlenecks%20and%20optimization%20techniques'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="10.4 Bottlenecks and optimization techniques" title="Ask ChatGPT about this section">💬</a>
 
 | Bottleneck | Symptom | Technique |
 |------------|---------|-----------|
@@ -1293,7 +1293,7 @@ In contrast, MySQL uses threads (one thread per connection).
 | Replication lag | Stale reads on replicas | Tune `wal_compression`, network |
 | Inefficient joins | Slow joins | Better indexes; consider denormalization |
 
-### 10.5 Index selection <a class="askgpt-btn" data-askgpt="10.5 Index selection" title="Ask ChatGPT about this section">💬</a>
+### 10.5 Index selection <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'10.5%20Index%20selection'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="10.5 Index selection" title="Ask ChatGPT about this section">💬</a>
 
 | Query pattern | Index type |
 |---------------|-----------|
@@ -1309,14 +1309,14 @@ In contrast, MySQL uses threads (one thread per connection).
 | Time-series on huge tables | BRIN on time column |
 | Point lookups on equality | Hash index (rarely better than B-tree) |
 
-### 10.6 Caching <a class="askgpt-btn" data-askgpt="10.6 Caching" title="Ask ChatGPT about this section">💬</a>
+### 10.6 Caching <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'10.6%20Caching'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="10.6 Caching" title="Ask ChatGPT about this section">💬</a>
 
 - **Buffer pool** — pages cached in memory.
 - **OS page cache** — kernel page cache holds file pages.
 - **Application cache** — Memcached, Redis.
 - **Materialized views** — precomputed query results (PG 9.3+).
 
-### 10.7 Benchmarking <a class="askgpt-btn" data-askgpt="10.7 Benchmarking" title="Ask ChatGPT about this section">💬</a>
+### 10.7 Benchmarking <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'10.7%20Benchmarking'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="10.7 Benchmarking" title="Ask ChatGPT about this section">💬</a>
 
 - **pgbench** — built-in benchmark.
 - **sysbench** — generic.
@@ -1332,7 +1332,7 @@ In contrast, MySQL uses threads (one thread per connection).
 
 ## 11. Security
 
-### 11.1 OWASP relevance <a class="askgpt-btn" data-askgpt="11.1 OWASP relevance" title="Ask ChatGPT about this section">💬</a>
+### 11.1 OWASP relevance <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'11.1%20OWASP%20relevance'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="11.1 OWASP relevance" title="Ask ChatGPT about this section">💬</a>
 
 - **A01 Broken Access Control** — RBAC, row-level security, least privilege.
 - **A02 Cryptographic Failures** — TLS, encrypted backups, pgcrypto.
@@ -1341,7 +1341,7 @@ In contrast, MySQL uses threads (one thread per connection).
 - **A05 Security Misconfiguration** — default credentials, public DB ports.
 - **A07 Authentication Failures** — weak password storage; use SCRAM.
 
-### 11.2 SQL injection <a class="askgpt-btn" data-askgpt="11.2 SQL injection" title="Ask ChatGPT about this section">💬</a>
+### 11.2 SQL injection <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'11.2%20SQL%20injection'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="11.2 SQL injection" title="Ask ChatGPT about this section">💬</a>
 
 ```sql
 -- Vulnerable
@@ -1354,14 +1354,14 @@ EXECUTE stmt USING name;
 
 Always use parameterized queries. Modern libraries (psycopg, JDBC, node-postgres) provide parameterization.
 
-### 11.3 Authentication <a class="askgpt-btn" data-askgpt="11.3 Authentication" title="Ask ChatGPT about this section">💬</a>
+### 11.3 Authentication <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'11.3%20Authentication'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="11.3 Authentication" title="Ask ChatGPT about this section">💬</a>
 
 - **SCRAM-SHA-256** (default in PG 10+) — secure.
 - **MD5** — legacy; deprecated.
 - **Trust** — no auth; only for local development.
 - **LDAP, Kerberos, OAuth** — external auth (via extensions).
 
-### 11.4 Authorization <a class="askgpt-btn" data-askgpt="11.4 Authorization" title="Ask ChatGPT about this section">💬</a>
+### 11.4 Authorization <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'11.4%20Authorization'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="11.4 Authorization" title="Ask ChatGPT about this section">💬</a>
 
 - **Roles and grants** (`GRANT`, `REVOKE`).
 - **Row-level security (RLS)** — per-row access control (PG 9.5+).
@@ -1372,20 +1372,20 @@ CREATE POLICY user_owns_account ON accounts
     USING (user_id = current_user_id());
 ```
 
-### 11.5 Encryption <a class="askgpt-btn" data-askgpt="11.5 Encryption" title="Ask ChatGPT about this section">💬</a>
+### 11.5 Encryption <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'11.5%20Encryption'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="11.5 Encryption" title="Ask ChatGPT about this section">💬</a>
 
 - **TLS** for connections (`ssl = on` in `postgresql.conf`).
 - **pgcrypto** extension for column-level encryption.
 - **TDE (Transparent Data Encryption)** — not built-in; use disk-level encryption (LUKS, AWS RDS encryption).
 - **Password hashing** — `pgcrypto`'s `crypt()`, `gen_salt()`.
 
-### 11.6 Audit logging <a class="askgpt-btn" data-askgpt="11.6 Audit logging" title="Ask ChatGPT about this section">💬</a>
+### 11.6 Audit logging <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'11.6%20Audit%20logging'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="11.6 Audit logging" title="Ask ChatGPT about this section">💬</a>
 
 - **pgaudit** extension logs all queries (configurable).
 - **pg_stat_statements** records query stats.
 - **Log file monitoring** — structured logs to SIEM.
 
-### 11.7 Secure configuration checklist <a class="askgpt-btn" data-askgpt="11.7 Secure configuration checklist" title="Ask ChatGPT about this section">💬</a>
+### 11.7 Secure configuration checklist <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'11.7%20Secure%20configuration%20checklist'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="11.7 Secure configuration checklist" title="Ask ChatGPT about this section">💬</a>
 
 - [ ] No default `postgres` user password.
 - [ ] `pg_hba.conf` restrict to known IPs.
@@ -1399,7 +1399,7 @@ CREATE POLICY user_owns_account ON accounts
 
 ## 12. Production Engineering
 
-### 12.1 How PostgreSQL is used in production <a class="askgpt-btn" data-askgpt="12.1 How PostgreSQL is used in production" title="Ask ChatGPT about this section">💬</a>
+### 12.1 How PostgreSQL is used in production <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'12.1%20How%20PostgreSQL%20is%20used%20in%20production'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="12.1 How PostgreSQL is used in production" title="Ask ChatGPT about this section">💬</a>
 
 - **OLTP web services** — primary data store.
 - **OLAP** — analytical queries (often paired with a warehouse).
@@ -1408,7 +1408,7 @@ CREATE POLICY user_owns_account ON accounts
 - **Document store** — JSONB + GIN indexes.
 - **Geospatial** — PostGIS extension.
 
-### 12.2 Real architecture (typical Kubernetes + PostgreSQL) <a class="askgpt-btn" data-askgpt="12.2 Real architecture (typical Kubernetes + PostgreSQL)" title="Ask ChatGPT about this section">💬</a>
+### 12.2 Real architecture (typical Kubernetes + PostgreSQL) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'12.2%20Real%20architecture%20(typical%20Kubernetes%20%2B%20PostgreSQL)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="12.2 Real architecture (typical Kubernetes + PostgreSQL)" title="Ask ChatGPT about this section">💬</a>
 
 ```mermaid
 graph TB
@@ -1427,7 +1427,7 @@ graph TB
     S3["S3"] -.backups.-> PgPrimary
 ```
 
-### 12.3 Production configuration <a class="askgpt-btn" data-askgpt="12.3 Production configuration" title="Ask ChatGPT about this section">💬</a>
+### 12.3 Production configuration <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'12.3%20Production%20configuration'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="12.3 Production configuration" title="Ask ChatGPT about this section">💬</a>
 
 `postgresql.conf` for production:
 
@@ -1454,7 +1454,7 @@ autovacuum_max_workers = 4
 autovacuum_naptime = 30s
 ```
 
-### 12.4 High availability with Patroni <a class="askgpt-btn" data-askgpt="12.4 High availability with Patroni" title="Ask ChatGPT about this section">💬</a>
+### 12.4 High availability with Patroni <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'12.4%20High%20availability%20with%20Patroni'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="12.4 High availability with Patroni" title="Ask ChatGPT about this section">💬</a>
 
 Patroni is a popular HA orchestrator for PostgreSQL:
 
@@ -1477,7 +1477,7 @@ graph TB
 - Automatic failover if primary dies.
 - HAProxy routes traffic to current primary.
 
-### 12.5 Backup strategies <a class="askgpt-btn" data-askgpt="12.5 Backup strategies" title="Ask ChatGPT about this section">💬</a>
+### 12.5 Backup strategies <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'12.5%20Backup%20strategies'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="12.5 Backup strategies" title="Ask ChatGPT about this section">💬</a>
 
 | Type | Tool | Recovery point |
 |------|------|----------------|
@@ -1491,7 +1491,7 @@ graph TB
 2. Continuously archive WAL files.
 3. On failure, restore base backup + replay WAL up to desired time.
 
-### 12.6 Production monitoring <a class="askgpt-btn" data-askgpt="12.6 Production monitoring" title="Ask ChatGPT about this section">💬</a>
+### 12.6 Production monitoring <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'12.6%20Production%20monitoring'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="12.6 Production monitoring" title="Ask ChatGPT about this section">💬</a>
 
 - `pg_stat_statements` — query stats.
 - `pg_stat_activity` — active queries.
@@ -1507,7 +1507,7 @@ Tools:
 - **Datadog PostgreSQL integration**.
 - **Prometheus postgres_exporter**.
 
-### 12.7 Production debugging <a class="askgpt-btn" data-askgpt="12.7 Production debugging" title="Ask ChatGPT about this section">💬</a>
+### 12.7 Production debugging <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'12.7%20Production%20debugging'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="12.7 Production debugging" title="Ask ChatGPT about this section">💬</a>
 
 - `EXPLAIN ANALYZE` for slow queries.
 - `pg_stat_activity` for "what's running now?".
@@ -1516,21 +1516,21 @@ Tools:
 - `log_min_duration_statement` to log slow queries.
 - Heap dumps and core dumps on crash.
 
-### 12.8 Scaling <a class="askgpt-btn" data-askgpt="12.8 Scaling" title="Ask ChatGPT about this section">💬</a>
+### 12.8 Scaling <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'12.8%20Scaling'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="12.8 Scaling" title="Ask ChatGPT about this section">💬</a>
 
 - **Vertical** — bigger machine (limited).
 - **Horizontal** — read replicas, partitioning, sharding.
 - **Sharding** — Citus (PG extension), manual application-level, foreign data wrappers.
 - **OLAP offload** — replicate to ClickHouse, Snowflake, BigQuery.
 
-### 12.9 Failover and disaster recovery <a class="askgpt-btn" data-askgpt="12.9 Failover and disaster recovery" title="Ask ChatGPT about this section">💬</a>
+### 12.9 Failover and disaster recovery <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'12.9%20Failover%20and%20disaster%20recovery'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="12.9 Failover and disaster recovery" title="Ask ChatGPT about this section">💬</a>
 
 - **RPO** (Recovery Point Objective) — how much data can be lost.
 - **RTO** (Recovery Time Objective) — how long recovery takes.
 - WAL archive to S3 enables RPO near zero.
 - Patroni + etcd enables RTO in seconds.
 
-### 12.10 Cost optimization <a class="askgpt-btn" data-askgpt="12.10 Cost optimization" title="Ask ChatGPT about this section">💬</a>
+### 12.10 Cost optimization <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'12.10%20Cost%20optimization'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="12.10 Cost optimization" title="Ask ChatGPT about this section">💬</a>
 
 - Right-size instances (avoid over-provisioning).
 - Compression (TOAST, lz4/zstd on WAL).
@@ -1539,7 +1539,7 @@ Tools:
 
 ## 13. Production Case Studies
 
-### 13.1 Instagram — PostgreSQL at extreme scale <a class="askgpt-btn" data-askgpt="13.1 Instagram — PostgreSQL at extreme scale" title="Ask ChatGPT about this section">💬</a>
+### 13.1 Instagram — PostgreSQL at extreme scale <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'13.1%20Instagram%20%E2%80%94%20PostgreSQL%20at%20extreme%20scale'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="13.1 Instagram — PostgreSQL at extreme scale" title="Ask ChatGPT about this section">💬</a>
 
 Instagram famously scaled PostgreSQL to billions of photos. Their approach:
 
@@ -1551,7 +1551,7 @@ Instagram famously scaled PostgreSQL to billions of photos. Their approach:
 
 Their engineering blog and PGCon talks document specific techniques.
 
-### 13.2 WhatsApp — Erlang + PostgreSQL <a class="askgpt-btn" data-askgpt="13.2 WhatsApp — Erlang + PostgreSQL" title="Ask ChatGPT about this section">💬</a>
+### 13.2 WhatsApp — Erlang + PostgreSQL <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'13.2%20WhatsApp%20%E2%80%94%20Erlang%20%2B%20PostgreSQL'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="13.2 WhatsApp — Erlang + PostgreSQL" title="Ask ChatGPT about this section">💬</a>
 
 WhatsApp famously runs the world's largest Erlang deployment but uses PostgreSQL for the message store. Their engineering team has documented:
 
@@ -1559,7 +1559,7 @@ WhatsApp famously runs the world's largest Erlang deployment but uses PostgreSQL
 - Connection pooling (originally 1 million connections per server via Erlang's lightweight processes).
 - `pgBouncer` later for further pooling.
 
-### 13.3 Uber — schemaless to PostgreSQL <a class="askgpt-btn" data-askgpt="13.3 Uber — schemaless to PostgreSQL" title="Ask ChatGPT about this section">💬</a>
+### 13.3 Uber — schemaless to PostgreSQL <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'13.3%20Uber%20%E2%80%94%20schemaless%20to%20PostgreSQL'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="13.3 Uber — schemaless to PostgreSQL" title="Ask ChatGPT about this section">💬</a>
 
 Uber originally built a "schemaless" MySQL architecture (document-like rows). Their engineering blog documents the migration to PostgreSQL:
 
@@ -1567,7 +1567,7 @@ Uber originally built a "schemaless" MySQL architecture (document-like rows). Th
 - Better schema migration tools.
 - Improved JSONB usage for flexible schemas.
 
-### 13.4 Stripe — PostgreSQL as a service <a class="askgpt-btn" data-askgpt="13.4 Stripe — PostgreSQL as a service" title="Ask ChatGPT about this section">💬</a>
+### 13.4 Stripe — PostgreSQL as a service <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'13.4%20Stripe%20%E2%80%94%20PostgreSQL%20as%20a%20service'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="13.4 Stripe — PostgreSQL as a service" title="Ask ChatGPT about this section">💬</a>
 
 Stripe uses PostgreSQL for financial transactions. Their team has built and contributed:
 
@@ -1575,7 +1575,7 @@ Stripe uses PostgreSQL for financial transactions. Their team has built and cont
 - Schema design for multi-tenant financial data.
 - Custom replication and recovery tooling.
 
-### 13.5 GitLab — large-scale PG operations <a class="askgpt-btn" data-askgpt="13.5 GitLab — large-scale PG operations" title="Ask ChatGPT about this section">💬</a>
+### 13.5 GitLab — large-scale PG operations <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'13.5%20GitLab%20%E2%80%94%20large-scale%20PG%20operations'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="13.5 GitLab — large-scale PG operations" title="Ask ChatGPT about this section">💬</a>
 
 GitLab runs PostgreSQL at significant scale. Their handbook documents operational practices:
 
@@ -1583,11 +1583,11 @@ GitLab runs PostgreSQL at significant scale. Their handbook documents operationa
 - Backup strategies.
 - Performance monitoring.
 
-### 13.6 Cloudflare — PostgreSQL for analytics <a class="askgpt-btn" data-askgpt="13.6 Cloudflare — PostgreSQL for analytics" title="Ask ChatGPT about this section">💬</a>
+### 13.6 Cloudflare — PostgreSQL for analytics <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'13.6%20Cloudflare%20%E2%80%94%20PostgreSQL%20for%20analytics'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="13.6 Cloudflare — PostgreSQL for analytics" title="Ask ChatGPT about this section">💬</a>
 
 Cloudflare uses PostgreSQL for some analytics workloads. They built **pgcat**, a high-performance PostgreSQL proxy in Rust.
 
-### 13.7 Discord — trillions of messages <a class="askgpt-btn" data-askgpt="13.7 Discord — trillions of messages" title="Ask ChatGPT about this section">💬</a>
+### 13.7 Discord — trillions of messages <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'13.7%20Discord%20%E2%80%94%20trillions%20of%20messages'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="13.7 Discord — trillions of messages" title="Ask ChatGPT about this section">💬</a>
 
 Discord famously stores trillions of messages using:
 
@@ -1595,7 +1595,7 @@ Discord famously stores trillions of messages using:
 - PostgreSQL for everything else.
 - Their engineering blog documents the split.
 
-### 13.8 Notion — PostgreSQL as foundation <a class="askgpt-btn" data-askgpt="13.8 Notion — PostgreSQL as foundation" title="Ask ChatGPT about this section">💬</a>
+### 13.8 Notion — PostgreSQL as foundation <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'13.8%20Notion%20%E2%80%94%20PostgreSQL%20as%20foundation'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="13.8 Notion — PostgreSQL as foundation" title="Ask ChatGPT about this section">💬</a>
 
 Notion built their collaborative workspace on PostgreSQL. They document:
 
@@ -1607,7 +1607,7 @@ Notion built their collaborative workspace on PostgreSQL. They document:
 
 ## 14. Code Examples
 
-### 14.1 Basic SELECT <a class="askgpt-btn" data-askgpt="14.1 Basic SELECT" title="Ask ChatGPT about this section">💬</a>
+### 14.1 Basic SELECT <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'14.1%20Basic%20SELECT'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="14.1 Basic SELECT" title="Ask ChatGPT about this section">💬</a>
 
 ```sql
 SELECT id, name, email
@@ -1617,7 +1617,7 @@ ORDER BY created_at DESC
 LIMIT 10;
 ```
 
-### 14.2 Joins <a class="askgpt-btn" data-askgpt="14.2 Joins" title="Ask ChatGPT about this section">💬</a>
+### 14.2 Joins <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'14.2%20Joins'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="14.2 Joins" title="Ask ChatGPT about this section">💬</a>
 
 ```sql
 -- Inner join
@@ -1635,7 +1635,7 @@ LEFT JOIN orders o ON o.user_id = u.id
 GROUP BY u.id, u.name;
 ```
 
-### 14.3 Aggregates <a class="askgpt-btn" data-askgpt="14.3 Aggregates" title="Ask ChatGPT about this section">💬</a>
+### 14.3 Aggregates <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'14.3%20Aggregates'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="14.3 Aggregates" title="Ask ChatGPT about this section">💬</a>
 
 ```sql
 SELECT
@@ -1651,7 +1651,7 @@ HAVING COUNT(*) >= 5
 ORDER BY avg_salary DESC;
 ```
 
-### 14.4 Window functions <a class="askgpt-btn" data-askgpt="14.4 Window functions" title="Ask ChatGPT about this section">💬</a>
+### 14.4 Window functions <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'14.4%20Window%20functions'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="14.4 Window functions" title="Ask ChatGPT about this section">💬</a>
 
 ```sql
 WITH ranked AS (
@@ -1667,7 +1667,7 @@ WITH ranked AS (
 SELECT * FROM ranked WHERE dept_rank <= 3;
 ```
 
-### 14.5 CTEs and recursive queries <a class="askgpt-btn" data-askgpt="14.5 CTEs and recursive queries" title="Ask ChatGPT about this section">💬</a>
+### 14.5 CTEs and recursive queries <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'14.5%20CTEs%20and%20recursive%20queries'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="14.5 CTEs and recursive queries" title="Ask ChatGPT about this section">💬</a>
 
 ```sql
 -- Manager hierarchy (recursive)
@@ -1694,7 +1694,7 @@ WITH RECURSIVE reach AS (
 SELECT * FROM reach;
 ```
 
-### 14.6 Transactions and isolation <a class="askgpt-btn" data-askgpt="14.6 Transactions and isolation" title="Ask ChatGPT about this section">💬</a>
+### 14.6 Transactions and isolation <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'14.6%20Transactions%20and%20isolation'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="14.6 Transactions and isolation" title="Ask ChatGPT about this section">💬</a>
 
 ```sql
 -- Read committed (default)
@@ -1721,7 +1721,7 @@ COMMIT;
 -- ERROR: could not serialize access due to read/write dependencies
 ```
 
-### 14.7 MVCC visibility <a class="askgpt-btn" data-askgpt="14.7 MVCC visibility" title="Ask ChatGPT about this section">💬</a>
+### 14.7 MVCC visibility <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'14.7%20MVCC%20visibility'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="14.7 MVCC visibility" title="Ask ChatGPT about this section">💬</a>
 
 ```sql
 -- See row versions
@@ -1740,7 +1740,7 @@ SELECT xmin, xmax, ctid, balance FROM accounts WHERE id = 1;
 ROLLBACK;
 ```
 
-### 14.8 EXPLAIN ANALYZE <a class="askgpt-btn" data-askgpt="14.8 EXPLAIN ANALYZE" title="Ask ChatGPT about this section">💬</a>
+### 14.8 EXPLAIN ANALYZE <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'14.8%20EXPLAIN%20ANALYZE'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="14.8 EXPLAIN ANALYZE" title="Ask ChatGPT about this section">💬</a>
 
 ```sql
 EXPLAIN (ANALYZE, BUFFERS, VERBOSE)
@@ -1758,7 +1758,7 @@ SELECT * FROM accounts WHERE balance > 1000;
 -- Execution Time: 12.567 ms
 ```
 
-### 14.9 Indexes <a class="askgpt-btn" data-askgpt="14.9 Indexes" title="Ask ChatGPT about this section">💬</a>
+### 14.9 Indexes <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'14.9%20Indexes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="14.9 Indexes" title="Ask ChatGPT about this section">💬</a>
 
 ```sql
 -- B-tree
@@ -1785,7 +1785,7 @@ CREATE TABLE events (
 CREATE INDEX events_created_brin ON events USING brin (created_at);
 ```
 
-### 14.10 VACUUM and bloat <a class="askgpt-btn" data-askgpt="14.10 VACUUM and bloat" title="Ask ChatGPT about this section">💬</a>
+### 14.10 VACUUM and bloat <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'14.10%20VACUUM%20and%20bloat'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="14.10 VACUUM and bloat" title="Ask ChatGPT about this section">💬</a>
 
 ```sql
 -- Manual VACUUM
@@ -1811,7 +1811,7 @@ ALTER TABLE hot_table SET (
 );
 ```
 
-### 14.11 Replication setup <a class="askgpt-btn" data-askgpt="14.11 Replication setup" title="Ask ChatGPT about this section">💬</a>
+### 14.11 Replication setup <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'14.11%20Replication%20setup'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="14.11 Replication setup" title="Ask ChatGPT about this section">💬</a>
 
 ```sql
 -- On primary: enable WAL archiving
@@ -1831,7 +1831,7 @@ CREATE USER replicator WITH REPLICATION ENCRYPTED PASSWORD 'secret';
 -- $ touch /var/lib/pgsql/data/standby.signal
 ```
 
-### 14.12 Partitioning <a class="askgpt-btn" data-askgpt="14.12 Partitioning" title="Ask ChatGPT about this section">💬</a>
+### 14.12 Partitioning <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'14.12%20Partitioning'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="14.12 Partitioning" title="Ask ChatGPT about this section">💬</a>
 
 ```sql
 CREATE TABLE events (
@@ -1852,7 +1852,7 @@ CREATE INDEX events_payload_gin ON events USING gin (payload jsonb_path_ops);
 ALTER TABLE events DETACH PARTITION events_2026_q1;
 ```
 
-### 14.13 Bad, anti-pattern, refactored, secure, performance-optimized examples <a class="askgpt-btn" data-askgpt="14.13 Bad, anti-pattern, refactored, secure, performance-optimized examples" title="Ask ChatGPT about this section">💬</a>
+### 14.13 Bad, anti-pattern, refactored, secure, performance-optimized examples <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'14.13%20Bad%2C%20anti-pattern%2C%20refactored%2C%20secure%2C%20performance-optimized%20examples'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="14.13 Bad, anti-pattern, refactored, secure, performance-optimized examples" title="Ask ChatGPT about this section">💬</a>
 
 **Bad: SQL injection**
 
@@ -1913,7 +1913,7 @@ SELECT pg_try_advisory_xact_lock(12345);  -- returns false if held
 
 ## 15. Common Mistakes
 
-### 15.1 Beginner mistakes <a class="askgpt-btn" data-askgpt="15.1 Beginner mistakes" title="Ask ChatGPT about this section">💬</a>
+### 15.1 Beginner mistakes <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'15.1%20Beginner%20mistakes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="15.1 Beginner mistakes" title="Ask ChatGPT about this section">💬</a>
 
 - **Using `SELECT *`** — fetch only what you need.
 - **Not using indexes** — `WHERE column` requires an index on `column` for fast lookup.
@@ -1922,7 +1922,7 @@ SELECT pg_try_advisory_xact_lock(12345);  -- returns false if held
 - **Confusing `NULL` and empty string** — `NULL` is not equal to anything, including itself.
 - **Forgetting `GROUP BY` columns** — every non-aggregated column in SELECT must be in GROUP BY (or functionally dependent on it).
 
-### 15.2 Intermediate mistakes <a class="askgpt-btn" data-askgpt="15.2 Intermediate mistakes" title="Ask ChatGPT about this section">💬</a>
+### 15.2 Intermediate mistakes <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'15.2%20Intermediate%20mistakes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="15.2 Intermediate mistakes" title="Ask ChatGPT about this section">💬</a>
 
 - **N+1 queries** — fetching a list, then one query per item. Use JOINs or `IN (...)`.
 - **Missing `LIMIT`** on large result sets.
@@ -1931,7 +1931,7 @@ SELECT pg_try_advisory_xact_lock(12345);  -- returns false if held
 - **Long-running transactions** — blocks VACUUM, holds locks.
 - **Skipping `ANALYZE`** after bulk loads.
 
-### 15.3 Senior mistakes <a class="askgpt-btn" data-askgpt="15.3 Senior mistakes" title="Ask ChatGPT about this section">💬</a>
+### 15.3 Senior mistakes <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'15.3%20Senior%20mistakes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="15.3 Senior mistakes" title="Ask ChatGPT about this section">💬</a>
 
 - **Not monitoring vacuum** — leads to bloat and eventually wraparound.
 - **No connection pool** — high connection count degrades performance.
@@ -1940,7 +1940,7 @@ SELECT pg_try_advisory_xact_lock(12345);  -- returns false if held
 - **Missing partition key in unique constraints** — breaks partitioning.
 - **Not using `SKIP LOCKED`** for queue patterns.
 
-### 15.4 Production mistakes <a class="askgpt-btn" data-askgpt="15.4 Production mistakes" title="Ask ChatGPT about this section">💬</a>
+### 15.4 Production mistakes <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'15.4%20Production%20mistakes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="15.4 Production mistakes" title="Ask ChatGPT about this section">💬</a>
 
 - **Setting `shared_buffers` too high or too low** — tune per workload.
 - **Disabling autovacuum** — never; it leads to wraparound.
@@ -1950,7 +1950,7 @@ SELECT pg_try_advisory_xact_lock(12345);  -- returns false if held
 - **Running as root** — security risk.
 - **No firewall** — DB accessible from the internet.
 
-### 15.5 Migration mistakes <a class="askgpt-btn" data-askgpt="15.5 Migration mistakes" title="Ask ChatGPT about this section">💬</a>
+### 15.5 Migration mistakes <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'15.5%20Migration%20mistakes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="15.5 Migration mistakes" title="Ask ChatGPT about this section">💬</a>
 
 - **Online schema migration without `pg_repack`** — long locks.
 - **Adding NOT NULL columns without DEFAULT** — rewrites the table.
@@ -1958,14 +1958,14 @@ SELECT pg_try_advisory_xact_lock(12345);  -- returns false if held
 - **Adding indexes without `CONCURRENTLY`** — blocks writes.
 - **Forgetting to update statistics after bulk loads**.
 
-### 15.6 Configuration mistakes <a class="askgpt-btn" data-askgpt="15.6 Configuration mistakes" title="Ask ChatGPT about this section">💬</a>
+### 15.6 Configuration mistakes <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'15.6%20Configuration%20mistakes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="15.6 Configuration mistakes" title="Ask ChatGPT about this section">💬</a>
 
 - **`work_mem` too low** — sort spills to disk.
 - **`work_mem` too high** — memory blowups.
 - **`random_page_cost = 4` on SSDs** — planner avoids index scans.
 - **Default `max_connections = 100`** — too low for many applications; use pooling.
 
-### 15.7 Security mistakes <a class="askgpt-btn" data-askgpt="15.7 Security mistakes" title="Ask ChatGPT about this section">💬</a>
+### 15.7 Security mistakes <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'15.7%20Security%20mistakes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="15.7 Security mistakes" title="Ask ChatGPT about this section">💬</a>
 
 - **`trust` authentication in production**.
 - **`pg_hba.conf` allowing all hosts**.
@@ -1973,7 +1973,7 @@ SELECT pg_try_advisory_xact_lock(12345);  -- returns false if held
 - **Logging queries with sensitive data**.
 - **No TLS**.
 
-### 15.8 Performance mistakes <a class="askgpt-btn" data-askgpt="15.8 Performance mistakes" title="Ask ChatGPT about this section">💬</a>
+### 15.8 Performance mistakes <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'15.8%20Performance%20mistakes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="15.8 Performance mistakes" title="Ask ChatGPT about this section">💬</a>
 
 - **Missing indexes on foreign keys** — kills JOIN performance.
 - **Indexes on low-cardinality columns** — e.g., boolean.
@@ -1981,13 +1981,13 @@ SELECT pg_try_advisory_xact_lock(12345);  -- returns false if held
 - **Sequential scans on huge tables**.
 - **No `LIMIT` on exploratory queries**.
 
-### 15.9 Debugging mistakes <a class="askgpt-btn" data-askgpt="15.9 Debugging mistakes" title="Ask ChatGPT about this section">💬</a>
+### 15.9 Debugging mistakes <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'15.9%20Debugging%20mistakes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="15.9 Debugging mistakes" title="Ask ChatGPT about this section">💬</a>
 
 - **Restarting the database first** — capture `pg_stat_activity` first.
 - **Not using `EXPLAIN (ANALYZE, BUFFERS)`**.
 - **Looking at `EXPLAIN` cost as absolute** — costs are relative.
 
-### 15.10 Deployment mistakes <a class="askgpt-btn" data-askgpt="15.10 Deployment mistakes" title="Ask ChatGPT about this section">💬</a>
+### 15.10 Deployment mistakes <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'15.10%20Deployment%20mistakes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="15.10 Deployment mistakes" title="Ask ChatGPT about this section">💬</a>
 
 - **No health check endpoints** in app.
 - **No readiness probe** — Kubernetes sends traffic before DB is ready.
@@ -1997,7 +1997,7 @@ SELECT pg_try_advisory_xact_lock(12345);  -- returns false if held
 
 ## 16. Debugging
 
-### 16.1 How to identify problems <a class="askgpt-btn" data-askgpt="16.1 How to identify problems" title="Ask ChatGPT about this section">💬</a>
+### 16.1 How to identify problems <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'16.1%20How%20to%20identify%20problems'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="16.1 How to identify problems" title="Ask ChatGPT about this section">💬</a>
 
 | Symptom | First diagnostic step |
 |---------|----------------------|
@@ -2010,13 +2010,13 @@ SELECT pg_try_advisory_xact_lock(12345);  -- returns false if held
 | Bloated tables | `pg_stat_user_tables.n_dead_tup` |
 | Connection issues | `pg_stat_activity` count, `pg_hba.conf` |
 
-### 16.2 How to reproduce <a class="askgpt-btn" data-askgpt="16.2 How to reproduce" title="Ask ChatGPT about this section">💬</a>
+### 16.2 How to reproduce <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'16.2%20How%20to%20reproduce'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="16.2 How to reproduce" title="Ask ChatGPT about this section">💬</a>
 
 - Capture query from logs.
 - Run on a snapshot of production data (use `pg_dump` for schema + sample data, or restore from backup).
 - Reproduce on staging.
 
-### 16.3 Root cause analysis <a class="askgpt-btn" data-askgpt="16.3 Root cause analysis" title="Ask ChatGPT about this section">💬</a>
+### 16.3 Root cause analysis <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'16.3%20Root%20cause%20analysis'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="16.3 Root cause analysis" title="Ask ChatGPT about this section">💬</a>
 
 1. Capture state (`pg_stat_activity`, `pg_locks`, query, plan).
 2. Identify resource under pressure (CPU, I/O, locks).
@@ -2024,14 +2024,14 @@ SELECT pg_try_advisory_xact_lock(12345);  -- returns false if held
 4. Verify with focused experiment.
 5. Fix and validate.
 
-### 16.4 Logs <a class="askgpt-btn" data-askgpt="16.4 Logs" title="Ask ChatGPT about this section">💬</a>
+### 16.4 Logs <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'16.4%20Logs'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="16.4 Logs" title="Ask ChatGPT about this section">💬</a>
 
 - `postgresql.conf`: `log_destination`, `logging_collector`, `log_directory`, `log_filename`, `log_*` flags.
 - `log_min_duration_statement` — log slow queries.
 - `auto_explain` extension — log plan for slow queries.
 - `pgaudit` — log DDL, DML, login events.
 
-### 16.5 Metrics <a class="askgpt-btn" data-askgpt="16.5 Metrics" title="Ask ChatGPT about this section">💬</a>
+### 16.5 Metrics <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'16.5%20Metrics'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="16.5 Metrics" title="Ask ChatGPT about this section">💬</a>
 
 **PostgreSQL key metrics:**
 
@@ -2046,13 +2046,13 @@ SELECT pg_try_advisory_xact_lock(12345);  -- returns false if held
 | `pg_stat_user_tables.idx_scan` | `pg_stat_user_tables` | Index scans |
 | `pg_stat_user_tables.n_dead_tup` | `pg_stat_user_tables` | Dead tuples |
 
-### 16.6 Tracing <a class="askgpt-btn" data-askgpt="16.6 Tracing" title="Ask ChatGPT about this section">💬</a>
+### 16.6 Tracing <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'16.6%20Tracing'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="16.6 Tracing" title="Ask ChatGPT about this section">💬</a>
 
 - `pg_stat_statements` — query-level stats.
 - `pg_stat_statements` with `pg_stat_monitor` extension (Percona) — richer stats.
 - OpenTelemetry — `pgcat` and other proxies can export traces.
 
-### 16.7 Heap dump analysis <a class="askgpt-btn" data-askgpt="16.7 Heap dump analysis" title="Ask ChatGPT about this section">💬</a>
+### 16.7 Heap dump analysis <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'16.7%20Heap%20dump%20analysis'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="16.7 Heap dump analysis" title="Ask ChatGPT about this section">💬</a>
 
 PostgreSQL doesn't have a heap dump in the JVM sense, but for a frozen DB:
 
@@ -2061,7 +2061,7 @@ PostgreSQL doesn't have a heap dump in the JVM sense, but for a frozen DB:
 
 Analyze with `gdb` and `pg` source symbols.
 
-### 16.8 Lock analysis <a class="askgpt-btn" data-askgpt="16.8 Lock analysis" title="Ask ChatGPT about this section">💬</a>
+### 16.8 Lock analysis <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'16.8%20Lock%20analysis'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="16.8 Lock analysis" title="Ask ChatGPT about this section">💬</a>
 
 ```sql
 -- Find blocking queries
@@ -2086,13 +2086,13 @@ JOIN pg_catalog.pg_stat_activity blocking_activity ON blocking_activity.pid = bl
 WHERE NOT blocked_locks.granted;
 ```
 
-### 16.9 Flame graphs (PG-specific) <a class="askgpt-btn" data-askgpt="16.9 Flame graphs (PG-specific)" title="Ask ChatGPT about this section">💬</a>
+### 16.9 Flame graphs (PG-specific) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'16.9%20Flame%20graphs%20(PG-specific)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="16.9 Flame graphs (PG-specific)" title="Ask ChatGPT about this section">💬</a>
 
 - `perf` + `pgfincore` for I/O patterns.
 - `pg_stat_statements` for query-level hotspots.
 - `pg_stat_io` (PG 16+) for buffer-level I/O.
 
-### 16.10 Production troubleshooting checklist <a class="askgpt-btn" data-askgpt="16.10 Production troubleshooting checklist" title="Ask ChatGPT about this section">💬</a>
+### 16.10 Production troubleshooting checklist <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'16.10%20Production%20troubleshooting%20checklist'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="16.10 Production troubleshooting checklist" title="Ask ChatGPT about this section">💬</a>
 
 - [ ] Capture `pg_stat_activity` snapshot.
 - [ ] Capture `pg_locks` snapshot.
@@ -2107,7 +2107,7 @@ WHERE NOT blocked_locks.granted;
 
 ## 17. Monitoring & Observability
 
-### 17.1 Logging <a class="askgpt-btn" data-askgpt="17.1 Logging" title="Ask ChatGPT about this section">💬</a>
+### 17.1 Logging <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'17.1%20Logging'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="17.1 Logging" title="Ask ChatGPT about this section">💬</a>
 
 - `log_destination = 'csvlog'` — structured CSV.
 - `logging_collector = on` — capture to file.
@@ -2116,7 +2116,7 @@ WHERE NOT blocked_locks.granted;
 - `log_min_duration_statement = 1000` — log queries > 1s.
 - `auto_explain` extension — log plans for slow queries.
 
-### 17.2 Metrics <a class="askgpt-btn" data-askgpt="17.2 Metrics" title="Ask ChatGPT about this section">💬</a>
+### 17.2 Metrics <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'17.2%20Metrics'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="17.2 Metrics" title="Ask ChatGPT about this section">💬</a>
 
 Standard PostgreSQL metrics via Prometheus (`postgres_exporter`):
 
@@ -2136,13 +2136,13 @@ Key dashboards:
 - Vacuum progress (`pg_stat_progress_vacuum`).
 - Long-running queries.
 
-### 17.3 Distributed tracing <a class="askgpt-btn" data-askgpt="17.3 Distributed tracing" title="Ask ChatGPT about this section">💬</a>
+### 17.3 Distributed tracing <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'17.3%20Distributed%20tracing'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="17.3 Distributed tracing" title="Ask ChatGPT about this section">💬</a>
 
 - `pgcat` (Cloudflare) — Rust proxy that emits traces.
 - Application-level tracing — query in context of request.
 - OpenTelemetry SQL instrumentation (in JDBC drivers, node-postgres).
 
-### 17.4 Health checks <a class="askgpt-btn" data-askgpt="17.4 Health checks" title="Ask ChatGPT about this section">💬</a>
+### 17.4 Health checks <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'17.4%20Health%20checks'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="17.4 Health checks" title="Ask ChatGPT about this section">💬</a>
 
 - **Liveness** — is the database responsive?
 - **Readiness** — is the primary ready to accept writes?
@@ -2152,7 +2152,7 @@ Key dashboards:
 pg_isready -h localhost -p 5432
 ```
 
-### 17.5 Dashboards <a class="askgpt-btn" data-askgpt="17.5 Dashboards" title="Ask ChatGPT about this section">💬</a>
+### 17.5 Dashboards <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'17.5%20Dashboards'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="17.5 Dashboards" title="Ask ChatGPT about this section">💬</a>
 
 Sample Grafana dashboard for PostgreSQL:
 
@@ -2164,7 +2164,7 @@ Sample Grafana dashboard for PostgreSQL:
 - Index usage (table).
 - Lock waits (heatmap).
 
-### 17.6 Alerts <a class="askgpt-btn" data-askgpt="17.6 Alerts" title="Ask ChatGPT about this section">💬</a>
+### 17.6 Alerts <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'17.6%20Alerts'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="17.6 Alerts" title="Ask ChatGPT about this section">💬</a>
 
 Production-grade alerts:
 
@@ -2175,7 +2175,7 @@ Production-grade alerts:
 - Connection count > 80% of max.
 - Disk space < 20%.
 
-### 17.7 SLIs, SLOs, SLAs <a class="askgpt-btn" data-askgpt="17.7 SLIs, SLOs, SLAs" title="Ask ChatGPT about this section">💬</a>
+### 17.7 SLIs, SLOs, SLAs <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'17.7%20SLIs%2C%20SLOs%2C%20SLAs'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="17.7 SLIs, SLOs, SLAs" title="Ask ChatGPT about this section">💬</a>
 
 - **SLI** — query latency p99, error rate, replication lag.
 - **SLO** — `query p99 < 100ms`, `replication lag < 5s`.
@@ -2183,7 +2183,7 @@ Production-grade alerts:
 
 ## 18. Best Practices
 
-### 18.1 Industry best practices <a class="askgpt-btn" data-askgpt="18.1 Industry best practices" title="Ask ChatGPT about this section">💬</a>
+### 18.1 Industry best practices <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'18.1%20Industry%20best%20practices'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="18.1 Industry best practices" title="Ask ChatGPT about this section">💬</a>
 
 - Always specify columns in `SELECT`.
 - Use parameterized queries (no SQL injection).
@@ -2195,7 +2195,7 @@ Production-grade alerts:
 - Use partitioning for tables > 100M rows.
 - Use read replicas for read-heavy workloads.
 
-### 18.2 Enterprise practices <a class="askgpt-btn" data-askgpt="18.2 Enterprise practices" title="Ask ChatGPT about this section">💬</a>
+### 18.2 Enterprise practices <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'18.2%20Enterprise%20practices'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="18.2 Enterprise practices" title="Ask ChatGPT about this section">💬</a>
 
 - HA via Patroni or similar.
 - Offsite backups (S3, GCS, Azure Blob).
@@ -2203,21 +2203,21 @@ Production-grade alerts:
 - Schema migration tooling (Flyway, Liquibase, Sqitch).
 - Per-environment credentials.
 
-### 18.3 Schema design <a class="askgpt-btn" data-askgpt="18.3 Schema design" title="Ask ChatGPT about this section">💬</a>
+### 18.3 Schema design <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'18.3%20Schema%20design'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="18.3 Schema design" title="Ask ChatGPT about this section">💬</a>
 
 - Use appropriate data types (don't store dates as strings).
 - Add constraints (`NOT NULL`, `CHECK`, `FK`).
 - Avoid over-normalization for read-heavy workloads.
 - Use surrogate keys when natural keys are unstable.
 
-### 18.4 Reliability <a class="askgpt-btn" data-askgpt="18.4 Reliability" title="Ask ChatGPT about this section">💬</a>
+### 18.4 Reliability <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'18.4%20Reliability'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="18.4 Reliability" title="Ask ChatGPT about this section">💬</a>
 
 - Read replicas for HA.
 - PgBouncer for connection pooling.
 - Backups with point-in-time recovery.
 - Tested failover procedures.
 
-### 18.5 Security <a class="askgpt-btn" data-askgpt="18.5 Security" title="Ask ChatGPT about this section">💬</a>
+### 18.5 Security <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'18.5%20Security'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="18.5 Security" title="Ask ChatGPT about this section">💬</a>
 
 - SCRAM auth.
 - TLS for all connections.
@@ -2225,7 +2225,7 @@ Production-grade alerts:
 - Row-level security for multi-tenant data.
 - Encryption at rest (disk-level or pgcrypto).
 
-### 18.6 Performance <a class="askgpt-btn" data-askgpt="18.6 Performance" title="Ask ChatGPT about this section">💬</a>
+### 18.6 Performance <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'18.6%20Performance'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="18.6 Performance" title="Ask ChatGPT about this section">💬</a>
 
 - `EXPLAIN ANALYZE` before shipping queries.
 - `pg_stat_statements` in production.
@@ -2233,14 +2233,14 @@ Production-grade alerts:
 - Index-only scans where possible.
 - Avoid `SELECT *`.
 
-### 18.7 Testing <a class="askgpt-btn" data-askgpt="18.7 Testing" title="Ask ChatGPT about this section">💬</a>
+### 18.7 Testing <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'18.7%20Testing'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="18.7 Testing" title="Ask ChatGPT about this section">💬</a>
 
 - Test against production-like data.
 - pg_replay for traffic replay.
 - pgbench for synthetic load.
 - pg_stat_statements in CI for regression detection.
 
-### 18.8 Deployment <a class="askgpt-btn" data-askgpt="18.8 Deployment" title="Ask ChatGPT about this section">💬</a>
+### 18.8 Deployment <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'18.8%20Deployment'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="18.8 Deployment" title="Ask ChatGPT about this section">💬</a>
 
 - Online schema migrations (`pg_repack`, `pg-online-schema-change`).
 - Index creation with `CONCURRENTLY`.
@@ -2248,7 +2248,7 @@ Production-grade alerts:
 
 ## 19. Anti-Patterns
 
-### 19.1 ORM abuse <a class="askgpt-btn" data-askgpt="19.1 ORM abuse" title="Ask ChatGPT about this section">💬</a>
+### 19.1 ORM abuse <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'19.1%20ORM%20abuse'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="19.1 ORM abuse" title="Ask ChatGPT about this section">💬</a>
 
 ORMs generate SQL automatically. Common issues:
 
@@ -2257,7 +2257,7 @@ ORMs generate SQL automatically. Common issues:
 - **No `LIMIT`** — fetching entire result sets.
 - **No batching** — one INSERT/UPDATE per row instead of batch.
 
-### 19.2 JSONB for everything <a class="askgpt-btn" data-askgpt="19.2 JSONB for everything" title="Ask ChatGPT about this section">💬</a>
+### 19.2 JSONB for everything <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'19.2%20JSONB%20for%20everything'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="19.2 JSONB for everything" title="Ask ChatGPT about this section">💬</a>
 
 JSONB is useful but has trade-offs:
 
@@ -2266,7 +2266,7 @@ JSONB is useful but has trade-offs:
 - Slower than typed columns for some queries.
 - Use JSONB for genuinely flexible data; not because it's convenient.
 
-### 19.3 No constraints <a class="askgpt-btn" data-askgpt="19.3 No constraints" title="Ask ChatGPT about this section">💬</a>
+### 19.3 No constraints <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'19.3%20No%20constraints'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="19.3 No constraints" title="Ask ChatGPT about this section">💬</a>
 
 Skipping `NOT NULL`, `CHECK`, `FK` because "the app handles it" is risky:
 
@@ -2274,7 +2274,7 @@ Skipping `NOT NULL`, `CHECK`, `FK` because "the app handles it" is risky:
 - Other clients (BI tools, ad-hoc SQL) bypass the app.
 - Adding constraints later requires table rewrite.
 
-### 19.4 UUID as primary key <a class="askgpt-btn" data-askgpt="19.4 UUID as primary key" title="Ask ChatGPT about this section">💬</a>
+### 19.4 UUID as primary key <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'19.4%20UUID%20as%20primary%20key'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="19.4 UUID as primary key" title="Ask ChatGPT about this section">💬</a>
 
 UUIDs (v4) make poor primary keys:
 
@@ -2282,69 +2282,69 @@ UUIDs (v4) make poor primary keys:
 - 16 bytes vs 4-8 for bigint.
 - Better: `uuid v7` (time-ordered) or bigint with UUID as secondary.
 
-### 19.5 Ignoring deadlocks <a class="askgpt-btn" data-askgpt="19.5 Ignoring deadlocks" title="Ask ChatGPT about this section">💬</a>
+### 19.5 Ignoring deadlocks <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'19.5%20Ignoring%20deadlocks'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="19.5 Ignoring deadlocks" title="Ask ChatGPT about this section">💬</a>
 
 Deadlocks are normal. PostgreSQL detects and aborts one transaction. The error should be handled (retry).
 
-### 19.6 No connection pooling <a class="askgpt-btn" data-askgpt="19.6 No connection pooling" title="Ask ChatGPT about this section">💬</a>
+### 19.6 No connection pooling <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'19.6%20No%20connection%20pooling'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="19.6 No connection pooling" title="Ask ChatGPT about this section">💬</a>
 
 Direct connections from each app instance → connection storm → OOM. Use PgBouncer.
 
-### 19.7 Storing passwords in plain text <a class="askgpt-btn" data-askgpt="19.7 Storing passwords in plain text" title="Ask ChatGPT about this section">💬</a>
+### 19.7 Storing passwords in plain text <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'19.7%20Storing%20passwords%20in%20plain%20text'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="19.7 Storing passwords in plain text" title="Ask ChatGPT about this section">💬</a>
 
 Use `pgcrypto`'s `crypt()` and `gen_salt('bf', 12)`.
 
 ## 20. Edge Cases
 
-### 20.1 Transaction ID wraparound <a class="askgpt-btn" data-askgpt="20.1 Transaction ID wraparound" title="Ask ChatGPT about this section">💬</a>
+### 20.1 Transaction ID wraparound <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'20.1%20Transaction%20ID%20wraparound'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="20.1 Transaction ID wraparound" title="Ask ChatGPT about this section">💬</a>
 
 If autovacuum falls behind, `xid` approaches wraparound. PostgreSQL shuts down to prevent data corruption. Monitor `pg_stat_user_tables` and `age(datfrozenxid)`.
 
-### 20.2 OID exhaustion <a class="askgpt-btn" data-askgpt="20.2 OID exhaustion" title="Ask ChatGPT about this section">💬</a>
+### 20.2 OID exhaustion <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'20.2%20OID%20exhaustion'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="20.2 OID exhaustion" title="Ask ChatGPT about this section">💬</a>
 
 PostgreSQL uses 32-bit OIDs for system catalogs. Theoretically a problem with billions of tables, but in practice never happens.
 
-### 20.3 Locale/collation issues <a class="askgpt-btn" data-askgpt="20.3 Locale/collation issues" title="Ask ChatGPT about this section">💬</a>
+### 20.3 Locale/collation issues <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'20.3%20Locale%2Fcollation%20issues'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="20.3 Locale/collation issues" title="Ask ChatGPT about this section">💬</a>
 
 Database created with `en_US.UTF-8` may sort differently than expected. Use ICU collation for consistent behavior across versions.
 
-### 20.4 Time zones <a class="askgpt-btn" data-askgpt="20.4 Time zones" title="Ask ChatGPT about this section">💬</a>
+### 20.4 Time zones <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'20.4%20Time%20zones'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="20.4 Time zones" title="Ask ChatGPT about this section">💬</a>
 
 PostgreSQL has `timestamp` (no zone) and `timestamptz` (with zone). Always use `timestamptz` to avoid timezone confusion.
 
-### 20.5 Encoding mismatches <a class="askgpt-btn" data-askgpt="20.5 Encoding mismatches" title="Ask ChatGPT about this section">💬</a>
+### 20.5 Encoding mismatches <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'20.5%20Encoding%20mismatches'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="20.5 Encoding mismatches" title="Ask ChatGPT about this section">💬</a>
 
 Client encoding mismatch causes errors. Use `client_encoding = 'UTF8'` consistently.
 
-### 20.6 Prepared statement plan invalidation <a class="askgpt-btn" data-askgpt="20.6 Prepared statement plan invalidation" title="Ask ChatGPT about this section">💬</a>
+### 20.6 Prepared statement plan invalidation <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'20.6%20Prepared%20statement%20plan%20invalidation'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="20.6 Prepared statement plan invalidation" title="Ask ChatGPT about this section">💬</a>
 
 After schema changes, prepared statements may use stale plans. `DEALLOCATE` and re-prepare.
 
-### 20.7 TOAST overflow <a class="askgpt-btn" data-askgpt="20.7 TOAST overflow" title="Ask ChatGPT about this section">💬</a>
+### 20.7 TOAST overflow <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'20.7%20TOAST%20overflow'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="20.7 TOAST overflow" title="Ask ChatGPT about this section">💬</a>
 
 Single values > 2KB go to TOAST. Indexes can't index TOASTed values directly. Use expression indexes (`(data->>'key')`).
 
-### 20.8 Sequence gaps <a class="askgpt-btn" data-askgpt="20.8 Sequence gaps" title="Ask ChatGPT about this section">💬</a>
+### 20.8 Sequence gaps <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'20.8%20Sequence%20gaps'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="20.8 Sequence gaps" title="Ask ChatGPT about this section">💬</a>
 
 Sequences don't reuse IDs on rollback. Gaps are normal and expected.
 
-### 20.9 `MERGE` and concurrent updates <a class="askgpt-btn" data-askgpt="20.9 `MERGE` and concurrent updates" title="Ask ChatGPT about this section">💬</a>
+### 20.9 `MERGE` and concurrent updates <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'20.9%20%60MERGE%60%20and%20concurrent%20updates'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="20.9 `MERGE` and concurrent updates" title="Ask ChatGPT about this section">💬</a>
 
 PG 15+ `MERGE` behaves differently from the standard in some edge cases. Read the docs.
 
-### 20.10 Logical replication slot retention <a class="askgpt-btn" data-askgpt="20.10 Logical replication slot retention" title="Ask ChatGPT about this section">💬</a>
+### 20.10 Logical replication slot retention <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'20.10%20Logical%20replication%20slot%20retention'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="20.10 Logical replication slot retention" title="Ask ChatGPT about this section">💬</a>
 
 If a subscriber dies, the replication slot retains WAL. Disk fills up. Alert on `pg_replication_slots`.
 
-### 20.11 Partitioning with FK <a class="askgpt-btn" data-askgpt="20.11 Partitioning with FK" title="Ask ChatGPT about this section">💬</a>
+### 20.11 Partitioning with FK <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'20.11%20Partitioning%20with%20FK'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="20.11 Partitioning with FK" title="Ask ChatGPT about this section">💬</a>
 
 Foreign keys from non-partitioned tables to partitioned tables are limited. Avoid.
 
-### 20.12 Bloat on heavily-updated tables <a class="askgpt-btn" data-askgpt="20.12 Bloat on heavily-updated tables" title="Ask ChatGPT about this section">💬</a>
+### 20.12 Bloat on heavily-updated tables <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'20.12%20Bloat%20on%20heavily-updated%20tables'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="20.12 Bloat on heavily-updated tables" title="Ask ChatGPT about this section">💬</a>
 
 Tables with high UPDATE throughput bloat fast. Tune autovacuum aggressively.
 
-### 20.13 Hot updates vs cold <a class="askgpt-btn" data-askgpt="20.13 Hot updates vs cold" title="Ask ChatGPT about this section">💬</a>
+### 20.13 Hot updates vs cold <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'20.13%20Hot%20updates%20vs%20cold'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="20.13 Hot updates vs cold" title="Ask ChatGPT about this section">💬</a>
 
 HOT (Heap-Only Tuple) updates only work if no indexed columns are updated. Otherwise the new tuple needs new index entries.
 
@@ -2352,7 +2352,7 @@ HOT (Heap-Only Tuple) updates only work if no indexed columns are updated. Other
 
 ## 21. Comparisons
 
-### 21.1 PostgreSQL vs MySQL vs MongoDB vs Redis <a class="askgpt-btn" data-askgpt="21.1 PostgreSQL vs MySQL vs MongoDB vs Redis" title="Ask ChatGPT about this section">💬</a>
+### 21.1 PostgreSQL vs MySQL vs MongoDB vs Redis <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'21.1%20PostgreSQL%20vs%20MySQL%20vs%20MongoDB%20vs%20Redis'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="21.1 PostgreSQL vs MySQL vs MongoDB vs Redis" title="Ask ChatGPT about this section">💬</a>
 
 | Dimension | PostgreSQL | MySQL | MongoDB | Redis |
 |-----------|-----------|-------|---------|-------|
@@ -2367,7 +2367,7 @@ HOT (Heap-Only Tuple) updates only work if no indexed columns are updated. Other
 | Consistency | Strong (configurable) | Strong | Tunable | Eventual |
 | Best for | Complex queries, JSON, analytics | Read-heavy web, existing stack | Document data, scale | Cache, queue, leaderboard |
 
-### 21.2 SQL vs NoSQL <a class="askgpt-btn" data-askgpt="21.2 SQL vs NoSQL" title="Ask ChatGPT about this section">💬</a>
+### 21.2 SQL vs NoSQL <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'21.2%20SQL%20vs%20NoSQL'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="21.2 SQL vs NoSQL" title="Ask ChatGPT about this section">💬</a>
 
 | Dimension | SQL (RDBMS) | NoSQL |
 |-----------|-------------|-------|
@@ -2378,7 +2378,7 @@ HOT (Heap-Only Tuple) updates only work if no indexed columns are updated. Other
 | Scale | Vertical, then horizontal via replicas | Designed for horizontal |
 | Flexibility | Rigid schema | Flexible, evolving |
 
-### 21.3 OLTP vs OLAP vs HTAP <a class="askgpt-btn" data-askgpt="21.3 OLTP vs OLAP vs HTAP" title="Ask ChatGPT about this section">💬</a>
+### 21.3 OLTP vs OLAP vs HTAP <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'21.3%20OLTP%20vs%20OLAP%20vs%20HTAP'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="21.3 OLTP vs OLAP vs HTAP" title="Ask ChatGPT about this section">💬</a>
 
 | Dimension | OLTP | OLAP | HTAP |
 |-----------|------|------|------|
@@ -2388,7 +2388,7 @@ HOT (Heap-Only Tuple) updates only work if no indexed columns are updated. Other
 | Latency | Milliseconds | Seconds to minutes | Varies |
 | Throughput | High transaction rate | High analytical throughput | Both |
 
-### 21.4 Decision matrix <a class="askgpt-btn" data-askgpt="21.4 Decision matrix" title="Ask ChatGPT about this section">💬</a>
+### 21.4 Decision matrix <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'21.4%20Decision%20matrix'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="21.4 Decision matrix" title="Ask ChatGPT about this section">💬</a>
 
 | Workload | Recommended |
 |----------|------------|
@@ -2402,7 +2402,7 @@ HOT (Heap-Only Tuple) updates only work if no indexed columns are updated. Other
 | Horizontal scale of relational data | CockroachDB, TiDB, Citus on PG |
 | OLAP | Snowflake, BigQuery, Redshift, ClickHouse |
 
-### 21.5 Migration paths <a class="askgpt-btn" data-askgpt="21.5 Migration paths" title="Ask ChatGPT about this section">💬</a>
+### 21.5 Migration paths <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'21.5%20Migration%20paths'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="21.5 Migration paths" title="Ask ChatGPT about this section">💬</a>
 
 - **MySQL → PostgreSQL** — `pgloader`, manual schema conversion; some MySQL features (e.g., `AUTO_INCREMENT`) need translation.
 - **MongoDB → PostgreSQL** — manual data modeling to tables; JSONB can capture flexibility.
@@ -2413,7 +2413,7 @@ HOT (Heap-Only Tuple) updates only work if no indexed columns are updated. Other
 
 ## 22. Interview Preparation
 
-### 22.1 Beginner (0-1 years) <a class="askgpt-btn" data-askgpt="22.1 Beginner (0-1 years)" title="Ask ChatGPT about this section">💬</a>
+### 22.1 Beginner (0-1 years) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'22.1%20Beginner%20(0-1%20years)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="22.1 Beginner (0-1 years)" title="Ask ChatGPT about this section">💬</a>
 
 **Q1: What is a database?**
 **A:** A system that persists, organizes, and retrieves data, while managing concurrent access and providing recovery from failures.
@@ -2430,7 +2430,7 @@ HOT (Heap-Only Tuple) updates only work if no indexed columns are updated. Other
 **Q5: What is the difference between `WHERE` and `HAVING`?**
 **A:** `WHERE` filters rows before aggregation; `HAVING` filters aggregated rows after `GROUP BY`.
 
-### 22.2 Junior (1-2 years) <a class="askgpt-btn" data-askgpt="22.2 Junior (1-2 years)" title="Ask ChatGPT about this section">💬</a>
+### 22.2 Junior (1-2 years) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'22.2%20Junior%20(1-2%20years)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="22.2 Junior (1-2 years)" title="Ask ChatGPT about this section">💬</a>
 
 **Q6: What is an index and how does it work?**
 **A:** A data structure (typically B-tree) that allows the database to find rows matching a predicate without scanning the whole table. Indexes trade write speed (each write updates the index) for read speed.
@@ -2447,7 +2447,7 @@ HOT (Heap-Only Tuple) updates only work if no indexed columns are updated. Other
 **Q10: What is a transaction?**
 **A:** A sequence of SQL statements that execute as a single unit. All succeed or all roll back.
 
-### 22.3 Mid (2-4 years) <a class="askgpt-btn" data-askgpt="22.3 Mid (2-4 years)" title="Ask ChatGPT about this section">💬</a>
+### 22.3 Mid (2-4 years) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'22.3%20Mid%20(2-4%20years)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="22.3 Mid (2-4 years)" title="Ask ChatGPT about this section">💬</a>
 
 **Q11: What is MVCC?**
 **A:** Multi-Version Concurrency Control — a technique where readers see a consistent snapshot of data without blocking writers. PostgreSQL uses `xmin`/`xmax` in row headers; InnoDB uses undo logs.
@@ -2470,7 +2470,7 @@ HOT (Heap-Only Tuple) updates only work if no indexed columns are updated. Other
 **Q17: What is the query planner?**
 **A:** The component that converts a parsed query into a plan tree with cost estimates, picking the cheapest plan.
 
-### 22.4 Senior (4-6 years) <a class="askgpt-btn" data-askgpt="22.4 Senior (4-6 years)" title="Ask ChatGPT about this section">💬</a>
+### 22.4 Senior (4-6 years) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'22.4%20Senior%20(4-6%20years)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="22.4 Senior (4-6 years)" title="Ask ChatGPT about this section">💬</a>
 
 **Q18: How would you optimize a slow query?**
 **A:** (1) Get `EXPLAIN ANALYZE`. (2) Identify sequential scans and add indexes. (3) Check for index-only scan opportunities. (4) Look at row count estimates vs actual (if far off, run `ANALYZE`). (5) Check `work_mem` if sort is spilling. (6) Look at join order and types.
@@ -2490,7 +2490,7 @@ HOT (Heap-Only Tuple) updates only work if no indexed columns are updated. Other
 **Q23: How does PostgreSQL handle concurrent updates to the same row?**
 **A:** First writer wins. The second `UPDATE` blocks until the first transaction commits or rolls back. If the first commits, the second sees the new row version (MVCC) and updates it.
 
-### 22.5 Lead (6-8 years) <a class="askgpt-btn" data-askgpt="22.5 Lead (6-8 years)" title="Ask ChatGPT about this section">💬</a>
+### 22.5 Lead (6-8 years) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'22.5%20Lead%20(6-8%20years)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="22.5 Lead (6-8 years)" title="Ask ChatGPT about this section">💬</a>
 
 **Q24: Design a multi-tenant SaaS database schema.**
 **A:** Three common approaches: (1) Separate database per tenant (strong isolation, expensive). (2) Shared database, separate schema per tenant (medium isolation). (3) Shared schema with `tenant_id` column + row-level security (cheapest, weaker isolation). Combine with partitioning by tenant for scale.
@@ -2504,7 +2504,7 @@ HOT (Heap-Only Tuple) updates only work if no indexed columns are updated. Other
 **Q27: How do you debug a deadlock?**
 **A:** Capture `pg_locks` and `pg_stat_activity`. Identify blocking and blocked transactions. Look at the order of operations. Common fix: ensure all transactions acquire locks in the same order. Use `SELECT FOR UPDATE SKIP LOCKED` for queue patterns to reduce contention.
 
-### 22.6 Staff (8-12 years) <a class="askgpt-btn" data-askgpt="22.6 Staff (8-12 years)" title="Ask ChatGPT about this section">💬</a>
+### 22.6 Staff (8-12 years) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'22.6%20Staff%20(8-12%20years)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="22.6 Staff (8-12 years)" title="Ask ChatGPT about this section">💬</a>
 
 **Q28: Design a database architecture for a fintech with strict consistency requirements.**
 **A:** (1) Primary + synchronous replicas for durability. (2) Single-region to minimize latency. (3) Serializable isolation. (4) Read replicas for non-critical reads. (5) WAL archive to S3 for PITR. (6) Encrypted backups. (7) Audit logging (pgaudit). (8) Per-transaction statement timeout. (9) Tested failover procedure.
@@ -2518,7 +2518,7 @@ HOT (Heap-Only Tuple) updates only work if no indexed columns are updated. Other
 **Q31: How would you detect a slow query before users complain?**
 **A:** (1) `pg_stat_statements` with alerting on `mean_time` increases. (2) `pg_stat_activity` for queries running > threshold. (3) `auto_explain` with thresholds. (4) APM tools (Datadog, New Relic) for end-to-end tracing.
 
-### 22.7 Principal / Architect <a class="askgpt-btn" data-askgpt="22.7 Principal / Architect" title="Ask ChatGPT about this section">💬</a>
+### 22.7 Principal / Architect <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'22.7%20Principal%20%2F%20Architect'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="22.7 Principal / Architect" title="Ask ChatGPT about this section">💬</a>
 
 **Q32: How do you evaluate whether a NewSQL DB (CockroachDB, TiDB) makes sense for a project?**
 **A:** Consider: (1) Does the workload require horizontal scale beyond a single PG primary? (2) Does the application benefit from geographic distribution? (3) Can the team accept the operational overhead of a distributed system? (4) Does the application tolerate NewSQL's consistency/latency trade-offs? (5) Compare TCO of NewSQL vs PG with replicas + manual sharding.
@@ -2529,7 +2529,7 @@ HOT (Heap-Only Tuple) updates only work if no indexed columns are updated. Other
 **Q34: When would you choose a graph database?**
 **A:** When the workload is dominated by recursive graph traversals (social networks, fraud detection, knowledge graphs) and the relationships are first-class data, not just join keys.
 
-### 22.8 Scenario-based questions <a class="askgpt-btn" data-askgpt="22.8 Scenario-based questions" title="Ask ChatGPT about this section">💬</a>
+### 22.8 Scenario-based questions <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'22.8%20Scenario-based%20questions'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="22.8 Scenario-based questions" title="Ask ChatGPT about this section">💬</a>
 
 **Scenario 1:** A web app's `users` table has 100M rows. Login queries (`WHERE email = $1`) take 2 seconds. How do you fix it?
 **Answer:** Add an index: `CREATE UNIQUE INDEX users_email_idx ON users (email)`. Verify with `EXPLAIN ANALYZE SELECT * FROM users WHERE email = $1`. Should be < 10ms.
@@ -2547,7 +2547,7 @@ HOT (Heap-Only Tuple) updates only work if no indexed columns are updated. Other
 
 ## 23. References
 
-### 23.1 Official Documentation <a class="askgpt-btn" data-askgpt="23.1 Official Documentation" title="Ask ChatGPT about this section">💬</a>
+### 23.1 Official Documentation <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'23.1%20Official%20Documentation'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="23.1 Official Documentation" title="Ask ChatGPT about this section">💬</a>
 
 - **PostgreSQL 16 Documentation:** <https://www.postgresql.org/docs/16/>
 - **PostgreSQL Wiki:** <https://wiki.postgresql.org/>
@@ -2555,7 +2555,7 @@ HOT (Heap-Only Tuple) updates only work if no indexed columns are updated. Other
 - **MongoDB Manual:** <https://www.mongodb.com/docs/manual/>
 - **Redis Documentation:** <https://redis.io/docs/>
 
-### 23.2 Specifications <a class="askgpt-btn" data-askgpt="23.2 Specifications" title="Ask ChatGPT about this section">💬</a>
+### 23.2 Specifications <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'23.2%20Specifications'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="23.2 Specifications" title="Ask ChatGPT about this section">💬</a>
 
 - **SQL:2016 standard** (commercial, ISO/IEC 9075:2016).
 - **SQL:2023 standard** (commercial, ISO/IEC 9075:2023).
@@ -2563,7 +2563,7 @@ HOT (Heap-Only Tuple) updates only work if no indexed columns are updated. Other
 - **BSON spec:** <http://bsonspec.org/>
 - **Redis serialization protocol (RESP):** <https://redis.io/docs/reference/protocol-spec/>
 
-### 23.3 Foundational papers <a class="askgpt-btn" data-askgpt="23.3 Foundational papers" title="Ask ChatGPT about this section">💬</a>
+### 23.3 Foundational papers <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'23.3%20Foundational%20papers'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="23.3 Foundational papers" title="Ask ChatGPT about this section">💬</a>
 
 - **Codd, E. F. (1970). "A Relational Model of Data for Large Shared Data Banks":** <https://www.seas.upenn.edu/~zives/03f/cis550/codd.pdf>
 - **ARIES paper:** <https://www.cs.berkeley.edu/~brewer/cs262/Aries.pdf>
@@ -2571,7 +2571,7 @@ HOT (Heap-Only Tuple) updates only work if no indexed columns are updated. Other
 - **Bayer, McCreight (1972). "Organization and Maintenance of Large Ordered Indexes":** — B-tree.
 - **Gilbert, Lynch (2002). "Brewer's Conjecture and the Feasibility of Consistent, Available, Partition-Tolerant Web Services":** — CAP theorem.
 
-### 23.4 Books <a class="askgpt-btn" data-askgpt="23.4 Books" title="Ask ChatGPT about this section">💬</a>
+### 23.4 Books <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'23.4%20Books'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="23.4 Books" title="Ask ChatGPT about this section">💬</a>
 
 - *Database Internals: A Deep Dive into How Distributed Data Systems Work* — Alex Petrov (No Starch Press).
 - *Designing Data-Intensive Applications* — Martin Kleppmann (O'Reilly).
@@ -2587,7 +2587,7 @@ HOT (Heap-Only Tuple) updates only work if no indexed columns are updated. Other
 - *MongoDB: The Definitive Guide* — Bradshaw, Chodorow (O'Reilly).
 - *Redis in Action* — Josiah Carlson (Manning).
 
-### 23.5 Engineering blogs <a class="askgpt-btn" data-askgpt="23.5 Engineering blogs" title="Ask ChatGPT about this section">💬</a>
+### 23.5 Engineering blogs <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'23.5%20Engineering%20blogs'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="23.5 Engineering blogs" title="Ask ChatGPT about this section">💬</a>
 
 - **Citus Data / Microsoft:** <https://www.citusdata.com/blog/>
 - **Crunchy Data:** <https://www.crunchydata.com/blog>
@@ -2602,12 +2602,12 @@ HOT (Heap-Only Tuple) updates only work if no indexed columns are updated. Other
 - **Notion Engineering:** <https://www.notion.so/blog>
 - **AWS Database Blog:** <https://aws.amazon.com/blogs/database/>
 
-### 23.6 PostgreSQL internal documentation <a class="askgpt-btn" data-askgpt="23.6 PostgreSQL internal documentation" title="Ask ChatGPT about this section">💬</a>
+### 23.6 PostgreSQL internal documentation <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'23.6%20PostgreSQL%20internal%20documentation'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="23.6 PostgreSQL internal documentation" title="Ask ChatGPT about this section">💬</a>
 
 - **PostgreSQL Internals Through Pictures (Bruce Momjian):** <https://momjian.us/main/writings/pgsql/internalpics.pdf>
 - **PostgreSQL Documentation: Internals:** <https://www.postgresql.org/docs/16/internals.html>
 
-### 23.7 Tools and ecosystems <a class="askgpt-btn" data-askgpt="23.7 Tools and ecosystems" title="Ask ChatGPT about this section">💬</a>
+### 23.7 Tools and ecosystems <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'23.7%20Tools%20and%20ecosystems'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="23.7 Tools and ecosystems" title="Ask ChatGPT about this section">💬</a>
 
 - **pg_dump, pg_restore, pg_basebackup** — backup tools.
 - **pg_stat_statements** — query stats.
@@ -2622,14 +2622,14 @@ HOT (Heap-Only Tuple) updates only work if no indexed columns are updated. Other
 - **pgwatch2, pgDash** — monitoring.
 - **Flyway, Liquibase, Sqitch** — schema migrations.
 
-### 23.8 Conferences <a class="askgpt-btn" data-askgpt="23.8 Conferences" title="Ask ChatGPT about this section">💬</a>
+### 23.8 Conferences <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'23.8%20Conferences'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="23.8 Conferences" title="Ask ChatGPT about this section">💬</a>
 
 - **PostgresConf:** <https://postgresconf.org/>
 - **PGCon:** <https://www.pgcon.org/>
 - **Percona Live:** <https://www.percona.com/live/>
 - **SIGMOD, VLDB, ICDE, CIDR** — academic database conferences.
 
-### 23.9 Free online courses <a class="askgpt-btn" data-askgpt="23.9 Free online courses" title="Ask ChatGPT about this section">💬</a>
+### 23.9 Free online courses <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'23.9%20Free%20online%20courses'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="23.9 Free online courses" title="Ask ChatGPT about this section">💬</a>
 
 - **CMU 15-445: Database Systems** — Andy Pavlo (YouTube).
 - **Stanford CS 245** — Database Systems Principles.

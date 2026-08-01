@@ -53,7 +53,7 @@ The authoritative source for gRPC is the gRPC project at CNCF. This file catalog
 
 ## Topics referenced
 
-### Protocol Buffers <a class="askgpt-btn" data-askgpt="Protocol Buffers" title="Ask ChatGPT about this section">💬</a>
+### Protocol Buffers <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Protocol%20Buffers'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Protocol Buffers" title="Ask ChatGPT about this section">💬</a>
 
 ```proto
 syntax = "proto3";
@@ -100,7 +100,7 @@ message DeleteUserRequest {
 }
 ```
 
-### Streaming types <a class="askgpt-btn" data-askgpt="Streaming types" title="Ask ChatGPT about this section">💬</a>
+### Streaming types <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Streaming%20types'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Streaming types" title="Ask ChatGPT about this section">💬</a>
 
 | Type | Client | Server |
 |------|--------|--------|
@@ -109,7 +109,7 @@ message DeleteUserRequest {
 | **Client streaming** | Stream of requests | Single response |
 | **Bidirectional** | Stream of requests | Stream of responses |
 
-### Status codes <a class="askgpt-btn" data-askgpt="Status codes" title="Ask ChatGPT about this section">💬</a>
+### Status codes <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Status%20codes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Status codes" title="Ask ChatGPT about this section">💬</a>
 
 | Code | Number | Description |
 |------|--------|-------------|
@@ -131,7 +131,7 @@ message DeleteUserRequest {
 | `DATA_LOSS` | 15 | Data loss |
 | `UNAUTHENTICATED` | 16 | Auth required |
 
-### Interceptors <a class="askgpt-btn" data-askgpt="Interceptors" title="Ask ChatGPT about this section">💬</a>
+### Interceptors <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Interceptors'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Interceptors" title="Ask ChatGPT about this section">💬</a>
 
 ```java
 public class AuthInterceptor implements ClientInterceptor {
@@ -153,7 +153,7 @@ public class AuthInterceptor implements ClientInterceptor {
 }
 ```
 
-### Deadlines and cancellation <a class="askgpt-btn" data-askgpt="Deadlines and cancellation" title="Ask ChatGPT about this section">💬</a>
+### Deadlines and cancellation <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Deadlines%20and%20cancellation'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Deadlines and cancellation" title="Ask ChatGPT about this section">💬</a>
 
 ```java
 // Client sets deadline
@@ -163,7 +163,7 @@ User user = stub
     .getUser(request);
 ```
 
-### Server-side streaming example <a class="askgpt-btn" data-askgpt="Server-side streaming example" title="Ask ChatGPT about this section">💬</a>
+### Server-side streaming example <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Server-side%20streaming%20example'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Server-side streaming example" title="Ask ChatGPT about this section">💬</a>
 
 ```java
 @Override
@@ -177,7 +177,7 @@ public void listUsers(ListUsersRequest request,
 }
 ```
 
-### Client-side streaming example <a class="askgpt-btn" data-askgpt="Client-side streaming example" title="Ask ChatGPT about this section">💬</a>
+### Client-side streaming example <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Client-side%20streaming%20example'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Client-side streaming example" title="Ask ChatGPT about this section">💬</a>
 
 ```java
 @Override

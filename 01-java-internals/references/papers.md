@@ -4,7 +4,7 @@ This file lists the research papers, engineering write-ups, and foundational doc
 
 ## Foundational Papers
 
-### The Java Memory Model <a class="askgpt-btn" data-askgpt="The Java Memory Model" title="Ask ChatGPT about this section">💬</a>
+### The Java Memory Model <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'The%20Java%20Memory%20Model'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="The Java Memory Model" title="Ask ChatGPT about this section">💬</a>
 
 - **"The Java Memory Model"** — Jeremy Manson, William Pugh, Sarita Adve. *POPL 2005.*
   - The canonical description of JSR-133, the JMM that replaced the broken initial Java memory model.
@@ -14,7 +14,7 @@ This file lists the research papers, engineering write-ups, and foundational doc
   - The specification document itself.
   - <https://www.cs.umd.edu/~pugh/java/memoryModel/jsr-133.pdf>
 
-### Garbage Collection <a class="askgpt-btn" data-askgpt="Garbage Collection" title="Ask ChatGPT about this section">💬</a>
+### Garbage Collection <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Garbage%20Collection'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Garbage Collection" title="Ask ChatGPT about this section">💬</a>
 
 - **"Uniprocessor Garbage Collection Techniques"** — Wilson, Johnstone, Neely, Boles. *IWMM 1995.*
   - The classic survey of GC algorithms; many of the classifications used today come from this paper.

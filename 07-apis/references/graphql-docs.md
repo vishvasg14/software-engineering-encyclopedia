@@ -47,7 +47,7 @@ The authoritative source for GraphQL is the GraphQL Foundation and the GraphQL s
 
 ## Concepts
 
-### Type system <a class="askgpt-btn" data-askgpt="Type system" title="Ask ChatGPT about this section">💬</a>
+### Type system <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Type%20system'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Type system" title="Ask ChatGPT about this section">💬</a>
 
 | Type | Description |
 |------|-------------|
@@ -60,7 +60,7 @@ The authoritative source for GraphQL is the GraphQL Foundation and the GraphQL s
 | `List` | `[Type]` |
 | `NonNull` | `Type!` (required) |
 
-### Queries <a class="askgpt-btn" data-askgpt="Queries" title="Ask ChatGPT about this section">💬</a>
+### Queries <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Queries'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Queries" title="Ask ChatGPT about this section">💬</a>
 
 ```graphql
 query GetUser($id: ID!) {
@@ -75,7 +75,7 @@ query GetUser($id: ID!) {
 }
 ```
 
-### Mutations <a class="askgpt-btn" data-askgpt="Mutations" title="Ask ChatGPT about this section">💬</a>
+### Mutations <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Mutations'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Mutations" title="Ask ChatGPT about this section">💬</a>
 
 ```graphql
 mutation CreateUser($input: CreateUserInput!) {
@@ -86,7 +86,7 @@ mutation CreateUser($input: CreateUserInput!) {
 }
 ```
 
-### Subscriptions <a class="askgpt-btn" data-askgpt="Subscriptions" title="Ask ChatGPT about this section">💬</a>
+### Subscriptions <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Subscriptions'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Subscriptions" title="Ask ChatGPT about this section">💬</a>
 
 ```graphql
 subscription OnMessage($chatId: ID!) {
@@ -100,7 +100,7 @@ subscription OnMessage($chatId: ID!) {
 }
 ```
 
-### Fragments <a class="askgpt-btn" data-askgpt="Fragments" title="Ask ChatGPT about this section">💬</a>
+### Fragments <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Fragments'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Fragments" title="Ask ChatGPT about this section">💬</a>
 
 ```graphql
 fragment UserSummary on User {
@@ -116,7 +116,7 @@ query {
 }
 ```
 
-### Variables <a class="askgpt-btn" data-askgpt="Variables" title="Ask ChatGPT about this section">💬</a>
+### Variables <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Variables'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Variables" title="Ask ChatGPT about this section">💬</a>
 
 ```graphql
 query GetUsers($limit: Int = 10, $offset: Int = 0) {
@@ -126,7 +126,7 @@ query GetUsers($limit: Int = 10, $offset: Int = 0) {
 }
 ```
 
-### Aliases <a class="askgpt-btn" data-askgpt="Aliases" title="Ask ChatGPT about this section">💬</a>
+### Aliases <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Aliases'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Aliases" title="Ask ChatGPT about this section">💬</a>
 
 ```graphql
 query {
@@ -135,7 +135,7 @@ query {
 }
 ```
 
-### Directives <a class="askgpt-btn" data-askgpt="Directives" title="Ask ChatGPT about this section">💬</a>
+### Directives <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Directives'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Directives" title="Ask ChatGPT about this section">💬</a>
 
 GraphQL supports custom directives for cross-cutting concerns.
 

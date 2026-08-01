@@ -86,42 +86,42 @@ graph TB
 
 ## 3. Five Ws + One H
 
-### What <a class="askgpt-btn" data-askgpt="What" title="Ask ChatGPT about this section">💬</a>
+### What <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'What'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="What" title="Ask ChatGPT about this section">💬</a>
 
 Spring is an **application framework** that provides an Inversion of Control (IoC) container, aspect-oriented programming (AOP), transaction management, data access abstractions, and a web framework. Spring Boot adds auto-configuration, executable JARs, and production-ready features.
 
-### Why <a class="askgpt-btn" data-askgpt="Why" title="Ask ChatGPT about this section">💬</a>
+### Why <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Why'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Why" title="Ask ChatGPT about this section">💬</a>
 
 Spring was created to solve the **complexity of Java EE development** in the early 2000s. EJB (Enterprise JavaBeans) was heavy, required verbose XML, mandated specific inheritance patterns, and coupled applications tightly to application server APIs. Spring demonstrated that the same problems could be solved with plain Java objects (POJOs) and a lightweight container.
 
-### When <a class="askgpt-btn" data-askgpt="When" title="Ask ChatGPT about this section">💬</a>
+### When <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'When'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="When" title="Ask ChatGPT about this section">💬</a>
 
 Spring 1.0 shipped in 2004. Spring Boot 1.0 shipped in 2014. Spring 6.0 (Jakarta EE 9) shipped in 2022. Spring Boot 3.3 (Java 17+, Spring 6.1) shipped in 2024. Today, Spring is the default Java application framework for most enterprise and web workloads.
 
-### Where <a class="askgpt-btn" data-askgpt="Where" title="Ask ChatGPT about this section">💬</a>
+### Where <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Where'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Where" title="Ask ChatGPT about this section">💬</a>
 
 Backend web services, microservices, batch processing, integration, reactive web, finance, e-commerce, government, healthcare, banking, telecom. Spring is used by a large fraction of Java developers (Stack Overflow's most-used Java framework for many years).
 
-### Who <a class="askgpt-btn" data-askgpt="Who" title="Ask ChatGPT about this section">💬</a>
+### Who <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Who'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Who" title="Ask ChatGPT about this section">💬</a>
 
 - **Creator:** Rod Johnson (2002-2004).
 - **Origin:** The book "Expert One-on-One J2EE Design and Development" (2002) presented the ideas; Interface21 formed to build Spring.
 - **Current:** VMware (Broadcom) maintains commercial Spring; Pivotal→VMware stewardship began in 2013; Spring is now part of the Spring team under Broadcom.
 - **Major contributors:** VMware, individual contributors, partner organizations.
 
-### How (one-paragraph preview) <a class="askgpt-btn" data-askgpt="How (one-paragraph preview)" title="Ask ChatGPT about this section">💬</a>
+### How (one-paragraph preview) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'How%20(one-paragraph%20preview)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="How (one-paragraph preview)" title="Ask ChatGPT about this section">💬</a>
 
 A Spring application starts by creating an `ApplicationContext` — the IoC container. Bean definitions (from `@Configuration`, `@Component` scanning, XML, or auto-configuration) are read into `BeanDefinition` objects. The container instantiates beans, performs dependency injection, applies AOP proxies, and runs lifecycle callbacks. When a request arrives, Spring Web's `DispatcherServlet` routes it to a controller, executes the method, and serializes the response. JPA repositories use Hibernate to translate Java method calls into SQL, manage transactions, and cache entities. Spring Boot ties it all together with auto-configuration that detects libraries on the classpath and configures beans automatically.
 
 ## 4. History
 
-### 4.1 Origins (2002-2004) <a class="askgpt-btn" data-askgpt="4.1 Origins (2002-2004)" title="Ask ChatGPT about this section">💬</a>
+### 4.1 Origins (2002-2004) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'4.1%20Origins%20(2002-2004)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="4.1 Origins (2002-2004)" title="Ask ChatGPT about this section">💬</a>
 
 - **2002** — Rod Johnson publishes "Expert One-on-One J2EE Design and Development" (Wrox). The book demonstrates that EJB's heavyweight approach can be replaced with plain JavaBeans and a lightweight container. The 30,000-line example code base becomes the foundation for Spring.
 - **2003** — Interface21 is founded to develop Spring commercially.
 - **March 2004** — **Spring 1.0** is released under the Apache 2.0 license. Core features: IoC container, BeanFactory, ApplicationContext, AOP, JDBC abstraction, transaction management, MVC framework.
 
-### 4.2 The growth years (2004-2014) <a class="askgpt-btn" data-askgpt="4.2 The growth years (2004-2014)" title="Ask ChatGPT about this section">💬</a>
+### 4.2 The growth years (2004-2014) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'4.2%20The%20growth%20years%20(2004-2014)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="4.2 The growth years (2004-2014)" title="Ask ChatGPT about this section">💬</a>
 
 - **2006** — **Spring 2.0** introduces XML namespaces, AspectJ integration, and Spring Web Flow.
 - **2007** — **Spring 2.5** adds annotation-driven configuration (`@Autowired`, `@Component`).
@@ -130,7 +130,7 @@ A Spring application starts by creating an `ApplicationContext` — the IoC cont
 - **2012** — **Spring 3.2** adds `@ControllerAdvice`, async MVC, and Spring MVC improvements.
 - **2013** — **Spring 4.0** adapts to Java 8, supports JSR-310 (Date/Time), WebSocket.
 
-### 4.3 Spring Boot and the cloud era (2014-2022) <a class="askgpt-btn" data-askgpt="4.3 Spring Boot and the cloud era (2014-2022)" title="Ask ChatGPT about this section">💬</a>
+### 4.3 Spring Boot and the cloud era (2014-2022) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'4.3%20Spring%20Boot%20and%20the%20cloud%20era%20(2014-2022)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="4.3 Spring Boot and the cloud era (2014-2022)" title="Ask ChatGPT about this section">💬</a>
 
 - **April 2014** — **Spring Boot 1.0** is released. Just `java -jar` for production. Auto-configuration becomes the default. Starters replace manual `pom.xml` dependency wrangling.
 - **2014** — Pivotal founded (EMC + VMware), absorbs SpringSource.
@@ -142,14 +142,14 @@ A Spring application starts by creating an `ApplicationContext` — the IoC cont
 - **2020** — Spring Initializr hits 1M projects/month.
 - **2021** — Spring Boot 2.5, Spring Cloud 2020.x.
 
-### 4.4 The Jakarta era (2022-2024) <a class="askgpt-btn" data-askgpt="4.4 The Jakarta era (2022-2024)" title="Ask ChatGPT about this section">💬</a>
+### 4.4 The Jakarta era (2022-2024) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'4.4%20The%20Jakarta%20era%20(2022-2024)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="4.4 The Jakarta era (2022-2024)" title="Ask ChatGPT about this section">💬</a>
 
 - **November 2022** — **Spring Framework 6.0** and **Spring Boot 3.0** ship. Java 17+ baseline. **Jakarta EE 9** namespace (`jakarta.*` instead of `javax.*`). Migration: drop-replace `javax.*` to `jakarta.*` for servlet, JPA, validation, mail.
 - **2023** — **Spring Framework 6.1** and **Spring Boot 3.2**. Virtual threads support (Project Loom), `JdbcClient` API.
 - **2024** — **Spring Boot 3.3** (Spring Framework 6.1). CDS support, observability improvements, RestClient refinements.
 - **2024** — **Spring Boot 3.4** (Spring Framework 6.2). RestClient fluent API refinements.
 
-### 4.5 Governance <a class="askgpt-btn" data-askgpt="4.5 Governance" title="Ask ChatGPT about this section">💬</a>
+### 4.5 Governance <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'4.5%20Governance'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="4.5 Governance" title="Ask ChatGPT about this section">💬</a>
 
 - **Pivotal** (2013-2019) — created via SpringSource + Cloud Foundry + GemFire.
 - **VMware** acquires Pivotal (2019).
@@ -173,7 +173,7 @@ timeline
 
 ## 5. Problem Statement
 
-### 5.1 What Spring solved <a class="askgpt-btn" data-askgpt="5.1 What Spring solved" title="Ask ChatGPT about this section">💬</a>
+### 5.1 What Spring solved <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'5.1%20What%20Spring%20solved'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="5.1 What Spring solved" title="Ask ChatGPT about this section">💬</a>
 
 Before Spring, J2EE development required:
 
@@ -184,7 +184,7 @@ Before Spring, J2EE development required:
 - **Application server lock-in** — WebLogic, WebSphere, JBoss each had quirks.
 - **Heavy testing** — needed to run inside a container to test.
 
-### 5.2 Spring's approach <a class="askgpt-btn" data-askgpt="5.2 Spring's approach" title="Ask ChatGPT about this section">💬</a>
+### 5.2 Spring's approach <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'5.2%20Spring's%20approach'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="5.2 Spring's approach" title="Ask ChatGPT about this section">💬</a>
 
 Spring demonstrated that the same problems could be solved with:
 
@@ -195,7 +195,7 @@ Spring demonstrated that the same problems could be solved with:
 - **Good integration** — JDBC, JPA, JMS, transactions, security, web.
 - **Testability** — `ApplicationContext` can run in tests.
 
-### 5.3 Why this mattered <a class="askgpt-btn" data-askgpt="5.3 Why this mattered" title="Ask ChatGPT about this section">💬</a>
+### 5.3 Why this mattered <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'5.3%20Why%20this%20mattered'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="5.3 Why this mattered" title="Ask ChatGPT about this section">💬</a>
 
 Spring's approach:
 
@@ -205,7 +205,7 @@ Spring's approach:
 - Decoupled application code from infrastructure.
 - Allowed the same code to run in embedded containers (Tomcat) or full EE containers.
 
-### 5.4 Spring Boot's contribution <a class="askgpt-btn" data-askgpt="5.4 Spring Boot's contribution" title="Ask ChatGPT about this section">💬</a>
+### 5.4 Spring Boot's contribution <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'5.4%20Spring%20Boot's%20contribution'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="5.4 Spring Boot's contribution" title="Ask ChatGPT about this section">💬</a>
 
 Spring Boot further simplified by:
 
@@ -215,7 +215,7 @@ Spring Boot further simplified by:
 - **Executable JARs** — `java -jar app.jar` for production.
 - **Production features** — Actuator, metrics, health checks.
 
-### 5.5 What Spring didn't solve <a class="askgpt-btn" data-askgpt="5.5 What Spring didn't solve" title="Ask ChatGPT about this section">💬</a>
+### 5.5 What Spring didn't solve <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'5.5%20What%20Spring%20didn't%20solve'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="5.5 What Spring didn't solve" title="Ask ChatGPT about this section">💬</a>
 
 Spring had its own problems:
 
@@ -227,7 +227,7 @@ Spring had its own problems:
 
 ## 6. Real-World Motivation
 
-### 6.1 Production users <a class="askgpt-btn" data-askgpt="6.1 Production users" title="Ask ChatGPT about this section">💬</a>
+### 6.1 Production users <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'6.1%20Production%20users'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="6.1 Production users" title="Ask ChatGPT about this section">💬</a>
 
 Spring is used by:
 
@@ -242,20 +242,20 @@ Spring is used by:
 - **eBay** — internal services.
 - **Government** — IRS, NHS (UK), various defense agencies.
 
-### 6.2 Data <a class="askgpt-btn" data-askgpt="6.2 Data" title="Ask ChatGPT about this section">💬</a>
+### 6.2 Data <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'6.2%20Data'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="6.2 Data" title="Ask ChatGPT about this section">💬</a>
 
 - **Stack Overflow Developer Survey:** Spring Boot has consistently been the most-used Java framework (~50% of Java developers).
 - **Maven Central:** Spring artifacts are downloaded billions of times per month.
 - **GitHub:** Spring projects have >50K stars combined.
 
-### 6.3 Economic motivation <a class="askgpt-btn" data-askgpt="6.3 Economic motivation" title="Ask ChatGPT about this section">💬</a>
+### 6.3 Economic motivation <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'6.3%20Economic%20motivation'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="6.3 Economic motivation" title="Ask ChatGPT about this section">💬</a>
 
 - **Developer productivity** — Spring Boot reduces setup time from days to hours.
 - **Talent pool** — Java + Spring is the largest enterprise Java skill set.
 - **Ecosystem depth** — Spring has the most mature Java ecosystem (Spring Data, Security, Cloud, Batch, Integration).
 - **Operational maturity** — Spring Boot Actuator, Micrometer integration, Helm charts; production-ready.
 
-### 6.4 Why not alternatives? <a class="askgpt-btn" data-askgpt="6.4 Why not alternatives?" title="Ask ChatGPT about this section">💬</a>
+### 6.4 Why not alternatives? <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'6.4%20Why%20not%20alternatives%3F'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="6.4 Why not alternatives?" title="Ask ChatGPT about this section">💬</a>
 
 | Alternative | Why not dominant |
 |-------------|------------------|
@@ -267,7 +267,7 @@ Spring is used by:
 | .NET / Spring.NET | Cross-platform, but different ecosystem |
 | Node.js | Different runtime model; ecosystem mismatch for enterprise |
 
-### 6.5 Performance motivation <a class="askgpt-btn" data-askgpt="6.5 Performance motivation" title="Ask ChatGPT about this section">💬</a>
+### 6.5 Performance motivation <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'6.5%20Performance%20motivation'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="6.5 Performance motivation" title="Ask ChatGPT about this section">💬</a>
 
 - **Throughput** — Spring MVC can handle 100K+ requests/second on a single instance when configured correctly.
 - **Latency** — WebFlux handles backpressure natively; virtual threads (Java 21+) handle 10K+ concurrent requests per JVM.
@@ -289,7 +289,7 @@ graph LR
 
 ## 7. Internal Working
 
-### 7.1 The lifecycle of a Spring Boot application <a class="askgpt-btn" data-askgpt="7.1 The lifecycle of a Spring Boot application" title="Ask ChatGPT about this section">💬</a>
+### 7.1 The lifecycle of a Spring Boot application <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'7.1%20The%20lifecycle%20of%20a%20Spring%20Boot%20application'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="7.1 The lifecycle of a Spring Boot application" title="Ask ChatGPT about this section">💬</a>
 
 ```mermaid
 sequenceDiagram
@@ -318,7 +318,7 @@ sequenceDiagram
     SA-->>User: ready
 ```
 
-### 7.2 Subsystems that participate <a class="askgpt-btn" data-askgpt="7.2 Subsystems that participate" title="Ask ChatGPT about this section">💬</a>
+### 7.2 Subsystems that participate <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'7.2%20Subsystems%20that%20participate'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="7.2 Subsystems that participate" title="Ask ChatGPT about this section">💬</a>
 
 | Subsystem | Responsibility | Spring module |
 |-----------|---------------|---------------|
@@ -334,7 +334,7 @@ sequenceDiagram
 | **Boot** | Auto-config, starters | `spring-boot-autoconfigure` |
 | **Data** | Repositories over various stores | `spring-data-*` |
 
-### 7.3 Bean lifecycle <a class="askgpt-btn" data-askgpt="7.3 Bean lifecycle" title="Ask ChatGPT about this section">💬</a>
+### 7.3 Bean lifecycle <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'7.3%20Bean%20lifecycle'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="7.3 Bean lifecycle" title="Ask ChatGPT about this section">💬</a>
 
 ```mermaid
 graph TB
@@ -356,7 +356,7 @@ graph TB
 
 This section is the heart of the document. Each subsection is a focused, internals-level treatment of a major subsystem.
 
-### 8.1 IoC container <a class="askgpt-btn" data-askgpt="8.1 IoC container" title="Ask ChatGPT about this section">💬</a>
+### 8.1 IoC container <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.1%20IoC%20container'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.1 IoC container" title="Ask ChatGPT about this section">💬</a>
 
 The **Inversion of Control (IoC) container** is Spring's core. Instead of application code instantiating dependencies, the container does it.
 
@@ -386,7 +386,7 @@ public class AppConfig {
 
 When Spring reads this, it creates a `BeanDefinition` for `userService` with: class `UserService`, scope `singleton`, constructor argument `UserRepository` (which Spring will resolve).
 
-### 8.2 Bean scopes <a class="askgpt-btn" data-askgpt="8.2 Bean scopes" title="Ask ChatGPT about this section">💬</a>
+### 8.2 Bean scopes <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.2%20Bean%20scopes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.2 Bean scopes" title="Ask ChatGPT about this section">💬</a>
 
 | Scope | Description | Use case |
 |-------|-------------|----------|
@@ -405,7 +405,7 @@ public ShoppingCart cart() {
 }
 ```
 
-### 8.3 Bean lifecycle <a class="askgpt-btn" data-askgpt="8.3 Bean lifecycle" title="Ask ChatGPT about this section">💬</a>
+### 8.3 Bean lifecycle <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.3%20Bean%20lifecycle'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.3 Bean lifecycle" title="Ask ChatGPT about this section">💬</a>
 
 The full lifecycle (in order):
 
@@ -422,7 +422,7 @@ The full lifecycle (in order):
    - `DisposableBean.destroy()`.
    - Custom destroy-method.
 
-### 8.4 Autowiring <a class="askgpt-btn" data-askgpt="8.4 Autowiring" title="Ask ChatGPT about this section">💬</a>
+### 8.4 Autowiring <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.4%20Autowiring'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.4 Autowiring" title="Ask ChatGPT about this section">💬</a>
 
 Three autowiring modes:
 
@@ -452,7 +452,7 @@ public class OrderService {
 
 **Optional dependencies:** Use `@Autowired(required = false)` or `Optional<T>` parameter.
 
-### 8.5 AOP <a class="askgpt-btn" data-askgpt="8.5 AOP" title="Ask ChatGPT about this section">💬</a>
+### 8.5 AOP <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.5%20AOP'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.5 AOP" title="Ask ChatGPT about this section">💬</a>
 
 **Aspect-Oriented Programming** modularizes cross-cutting concerns (logging, transactions, security) into separate units called **aspects**.
 
@@ -497,7 +497,7 @@ public class LoggingAspect {
 - Only proxies beans from the container (not arbitrary objects).
 - Self-invocation doesn't go through the proxy.
 
-### 8.6 Spring Expression Language (SpEL) <a class="askgpt-btn" data-askgpt="8.6 Spring Expression Language (SpEL)" title="Ask ChatGPT about this section">💬</a>
+### 8.6 Spring Expression Language (SpEL) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.6%20Spring%20Expression%20Language%20(SpEL)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.6 Spring Expression Language (SpEL)" title="Ask ChatGPT about this section">💬</a>
 
 `#{expression}` syntax for runtime evaluation.
 
@@ -511,7 +511,7 @@ private String userName;
 @ConditionalOnExpression("'${app.mode}' == 'production'")
 ```
 
-### 8.7 Spring Boot autoconfiguration <a class="askgpt-btn" data-askgpt="8.7 Spring Boot autoconfiguration" title="Ask ChatGPT about this section">💬</a>
+### 8.7 Spring Boot autoconfiguration <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.7%20Spring%20Boot%20autoconfiguration'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.7 Spring Boot autoconfiguration" title="Ask ChatGPT about this section">💬</a>
 
 **Spring Boot's killer feature.** On startup, Spring Boot reads `META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports` (Boot 3.x) and evaluates each auto-configuration class against the classpath and existing beans.
 
@@ -545,7 +545,7 @@ public class DataSourceAutoConfiguration {
 
 **Inspecting autoconfig:** `actuator/conditions` endpoint shows which conditions matched.
 
-### 8.8 Spring Boot startup <a class="askgpt-btn" data-askgpt="8.8 Spring Boot startup" title="Ask ChatGPT about this section">💬</a>
+### 8.8 Spring Boot startup <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.8%20Spring%20Boot%20startup'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.8 Spring Boot startup" title="Ask ChatGPT about this section">💬</a>
 
 ```mermaid
 sequenceDiagram
@@ -572,7 +572,7 @@ sequenceDiagram
     SA-->>JVM: ApplicationContext ready
 ```
 
-### 8.9 External configuration <a class="askgpt-btn" data-askgpt="8.9 External configuration" title="Ask ChatGPT about this section">💬</a>
+### 8.9 External configuration <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.9%20External%20configuration'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.9 External configuration" title="Ask ChatGPT about this section">💬</a>
 
 **Sources** (in override order):
 
@@ -602,7 +602,7 @@ public class AppController {
 
 **Profiles:** activate with `@Profile("dev")` or `spring.profiles.active=dev`.
 
-### 8.10 Spring Boot Actuator <a class="askgpt-btn" data-askgpt="8.10 Spring Boot Actuator" title="Ask ChatGPT about this section">💬</a>
+### 8.10 Spring Boot Actuator <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.10%20Spring%20Boot%20Actuator'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.10 Spring Boot Actuator" title="Ask ChatGPT about this section">💬</a>
 
 Production-ready endpoints:
 
@@ -622,7 +622,7 @@ Production-ready endpoints:
 | `/actuator/heapdump` | Heap dump |
 | `/actuator/prometheus` | Prometheus metrics |
 
-### 8.11 Spring MVC <a class="askgpt-btn" data-askgpt="8.11 Spring MVC" title="Ask ChatGPT about this section">💬</a>
+### 8.11 Spring MVC <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.11%20Spring%20MVC'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.11 Spring MVC" title="Ask ChatGPT about this section">💬</a>
 
 **DispatcherServlet** is the front controller. It routes requests to handlers.
 
@@ -685,7 +685,7 @@ public class GlobalExceptionHandler {
 }
 ```
 
-### 8.12 Spring Data JPA <a class="askgpt-btn" data-askgpt="8.12 Spring Data JPA" title="Ask ChatGPT about this section">💬</a>
+### 8.12 Spring Data JPA <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.12%20Spring%20Data%20JPA'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.12 Spring Data JPA" title="Ask ChatGPT about this section">💬</a>
 
 **Repository abstraction:** Instead of writing DAO boilerplate, define an interface extending `JpaRepository` or `CrudRepository`.
 
@@ -732,7 +732,7 @@ public class UserSpecs {
 userRepository.findAll(Specification.where(hasName("Alice")).and(isActive()));
 ```
 
-### 8.13 JPA / Hibernate internals <a class="askgpt-btn" data-askgpt="8.13 JPA / Hibernate internals" title="Ask ChatGPT about this section">💬</a>
+### 8.13 JPA / Hibernate internals <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.13%20JPA%20%2F%20Hibernate%20internals'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.13 JPA / Hibernate internals" title="Ask ChatGPT about this section">💬</a>
 
 **EntityManager** is the JPA interface to the persistence context.
 
@@ -758,7 +758,7 @@ userRepository.findAll(Specification.where(hasName("Alice")).and(isActive()));
 - **`@EntityGraph`** — declarative fetch plan.
 - **Batch fetching** — `@BatchSize(N)` — loads N lazy collections per query.
 
-### 8.14 The N+1 problem <a class="askgpt-btn" data-askgpt="8.14 The N+1 problem" title="Ask ChatGPT about this section">💬</a>
+### 8.14 The N+1 problem <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.14%20The%20N%2B1%20problem'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.14 The N+1 problem" title="Ask ChatGPT about this section">💬</a>
 
 A classic Hibernate performance antipattern:
 
@@ -787,7 +787,7 @@ List<User> findAll();
 private List<Order> orders;
 ```
 
-### 8.15 Hibernate configuration <a class="askgpt-btn" data-askgpt="8.15 Hibernate configuration" title="Ask ChatGPT about this section">💬</a>
+### 8.15 Hibernate configuration <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.15%20Hibernate%20configuration'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.15 Hibernate configuration" title="Ask ChatGPT about this section">💬</a>
 
 ```properties
 # application.properties
@@ -802,7 +802,7 @@ spring.jpa.open-in-view=false
 
 **Connection pooling:** HikariCP (default in Spring Boot).
 
-### 8.16 Transactions <a class="askgpt-btn" data-askgpt="8.16 Transactions" title="Ask ChatGPT about this section">💬</a>
+### 8.16 Transactions <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.16%20Transactions'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.16 Transactions" title="Ask ChatGPT about this section">💬</a>
 
 `@Transactional` is implemented via AOP proxies.
 
@@ -854,7 +854,7 @@ public class OrderService {
 
 **Fix:** inject self or split into separate beans.
 
-### 8.17 Spring Security <a class="askgpt-btn" data-askgpt="8.17 Spring Security" title="Ask ChatGPT about this section">💬</a>
+### 8.17 Spring Security <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.17%20Spring%20Security'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.17 Spring Security" title="Ask ChatGPT about this section">💬</a>
 
 **Filter chain** with `SecurityFilterChain` bean (Spring Security 6.x):
 
@@ -888,7 +888,7 @@ public SecurityFilterChain jwtFilterChain(HttpSecurity http) throws Exception {
 
 **Password hashing:** `BCryptPasswordEncoder`.
 
-### 8.18 Spring Data Redis <a class="askgpt-btn" data-askgpt="8.18 Spring Data Redis" title="Ask ChatGPT about this section">💬</a>
+### 8.18 Spring Data Redis <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.18%20Spring%20Data%20Redis'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.18 Spring Data Redis" title="Ask ChatGPT about this section">💬</a>
 
 ```java
 @Service
@@ -911,7 +911,7 @@ public class CacheService {
 
 **Lettuce** is the default (since Spring Boot 2.x); **Jedis** is the alternative.
 
-### 8.19 Spring Cloud Gateway <a class="askgpt-btn" data-askgpt="8.19 Spring Cloud Gateway" title="Ask ChatGPT about this section">💬</a>
+### 8.19 Spring Cloud Gateway <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.19%20Spring%20Cloud%20Gateway'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.19 Spring Cloud Gateway" title="Ask ChatGPT about this section">💬</a>
 
 Gateway for routing and filtering in microservices architectures.
 
@@ -931,7 +931,7 @@ spring:
 
 **Built on Spring WebFlux** (non-blocking).
 
-### 8.20 Spring Batch <a class="askgpt-btn" data-askgpt="8.20 Spring Batch" title="Ask ChatGPT about this section">💬</a>
+### 8.20 Spring Batch <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.20%20Spring%20Batch'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.20 Spring Batch" title="Ask ChatGPT about this section">💬</a>
 
 Batch processing for large data:
 
@@ -954,7 +954,7 @@ public Step step(ItemReader<User> reader, ItemProcessor<User, User> processor, I
 
 Features: restart, skip, retry, parallel processing, partitioning.
 
-### 8.21 Testing <a class="askgpt-btn" data-askgpt="8.21 Testing" title="Ask ChatGPT about this section">💬</a>
+### 8.21 Testing <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.21%20Testing'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.21 Testing" title="Ask ChatGPT about this section">💬</a>
 
 ```java
 @SpringBootTest
@@ -990,7 +990,7 @@ class UserControllerTest {
 
 ## 9. Architecture
 
-### 9.1 Spring Framework module dependencies <a class="askgpt-btn" data-askgpt="9.1 Spring Framework module dependencies" title="Ask ChatGPT about this section">💬</a>
+### 9.1 Spring Framework module dependencies <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'9.1%20Spring%20Framework%20module%20dependencies'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="9.1 Spring Framework module dependencies" title="Ask ChatGPT about this section">💬</a>
 
 ```mermaid
 graph TB
@@ -1019,7 +1019,7 @@ graph TB
     Context --> Web
 ```
 
-### 9.2 Spring Boot architecture <a class="askgpt-btn" data-askgpt="9.2 Spring Boot architecture" title="Ask ChatGPT about this section">💬</a>
+### 9.2 Spring Boot architecture <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'9.2%20Spring%20Boot%20architecture'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="9.2 Spring Boot architecture" title="Ask ChatGPT about this section">💬</a>
 
 ```mermaid
 graph TB
@@ -1044,7 +1044,7 @@ Spring Boot is a thin layer over Spring Framework that ships:
 - CLI for project management.
 - Build plugins (Maven, Gradle).
 
-### 9.3 Spring Data architecture <a class="askgpt-btn" data-askgpt="9.3 Spring Data architecture" title="Ask ChatGPT about this section">💬</a>
+### 9.3 Spring Data architecture <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'9.3%20Spring%20Data%20architecture'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="9.3 Spring Data architecture" title="Ask ChatGPT about this section">💬</a>
 
 ```mermaid
 graph TB
@@ -1062,7 +1062,7 @@ graph TB
 
 Spring Data Commons provides the `Repository` interface and base classes. Each module (JPA, Redis, MongoDB, etc.) provides the technology-specific implementation.
 
-### 9.4 Bean lifecycle visualization <a class="askgpt-btn" data-askgpt="9.4 Bean lifecycle visualization" title="Ask ChatGPT about this section">💬</a>
+### 9.4 Bean lifecycle visualization <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'9.4%20Bean%20lifecycle%20visualization'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="9.4 Bean lifecycle visualization" title="Ask ChatGPT about this section">💬</a>
 
 ```mermaid
 graph TB
@@ -1082,7 +1082,7 @@ graph TB
 
 ## 10. Performance
 
-### 10.1 Performance considerations <a class="askgpt-btn" data-askgpt="10.1 Performance considerations" title="Ask ChatGPT about this section">💬</a>
+### 10.1 Performance considerations <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'10.1%20Performance%20considerations'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="10.1 Performance considerations" title="Ask ChatGPT about this section">💬</a>
 
 | Aspect | Impact |
 |--------|--------|
@@ -1097,7 +1097,7 @@ graph TB
 | JSON serialization | Jackson defaults; can be optimized |
 | WebFlux vs MVC | WebFlux scales better for slow I/O |
 
-### 10.2 JPA query performance <a class="askgpt-btn" data-askgpt="10.2 JPA query performance" title="Ask ChatGPT about this section">💬</a>
+### 10.2 JPA query performance <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'10.2%20JPA%20query%20performance'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="10.2 JPA query performance" title="Ask ChatGPT about this section">💬</a>
 
 - **N+1** — most common JPA perf issue.
 - **Eager loading** — fetches data you may not need.
@@ -1105,7 +1105,7 @@ graph TB
 - **No batch fetching** — `@BatchSize` helps.
 - **DTO projections** — avoid loading entire entities.
 
-### 10.3 Hibernate batching <a class="askgpt-btn" data-askgpt="10.3 Hibernate batching" title="Ask ChatGPT about this section">💬</a>
+### 10.3 Hibernate batching <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'10.3%20Hibernate%20batching'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="10.3 Hibernate batching" title="Ask ChatGPT about this section">💬</a>
 
 ```properties
 spring.jpa.properties.hibernate.jdbc.batch_size=50
@@ -1116,7 +1116,7 @@ spring.jpa.properties.hibernate.batch_versioned_data=true
 
 These dramatically reduce INSERT/UPDATE round-trips.
 
-### 10.4 Connection pooling <a class="askgpt-btn" data-askgpt="10.4 Connection pooling" title="Ask ChatGPT about this section">💬</a>
+### 10.4 Connection pooling <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'10.4%20Connection%20pooling'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="10.4 Connection pooling" title="Ask ChatGPT about this section">💬</a>
 
 HikariCP is the default. Key settings:
 
@@ -1130,7 +1130,7 @@ spring.datasource.hikari.max-lifetime=1800000
 
 **Sizing rule:** `pool_size = (core_count × 2) + effective_spindle_count` for HDD; for SSD, `pool_size = core_count × 4` is reasonable. Most production apps use 10-20.
 
-### 10.5 Statement caching <a class="askgpt-btn" data-askgpt="10.5 Statement caching" title="Ask ChatGPT about this section">💬</a>
+### 10.5 Statement caching <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'10.5%20Statement%20caching'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="10.5 Statement caching" title="Ask ChatGPT about this section">💬</a>
 
 ```properties
 spring.datasource.hikari.data-source-properties.prepareThreshold=5
@@ -1138,13 +1138,13 @@ spring.datasource.hikari.data-source-properties.prepareThreshold=5
 
 PostgreSQL JDBC driver caches PreparedStatement objects above this threshold.
 
-### 10.6 Caching <a class="askgpt-btn" data-askgpt="10.6 Caching" title="Ask ChatGPT about this section">💬</a>
+### 10.6 Caching <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'10.6%20Caching'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="10.6 Caching" title="Ask ChatGPT about this section">💬</a>
 
 - `@Cacheable` on methods.
 - `@EnableCaching` + cache provider (Caffeine, Ehcache, Redis).
 - JCache (JSR-107) standard.
 
-### 10.7 JVM tuning for Spring <a class="askgpt-btn" data-askgpt="10.7 JVM tuning for Spring" title="Ask ChatGPT about this section">💬</a>
+### 10.7 JVM tuning for Spring <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'10.7%20JVM%20tuning%20for%20Spring'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="10.7 JVM tuning for Spring" title="Ask ChatGPT about this section">💬</a>
 
 - **Heap**: 2-4 GB usually enough.
 - **GC**: G1GC default; ZGC for low-latency.
@@ -1155,7 +1155,7 @@ PostgreSQL JDBC driver caches PreparedStatement objects above this threshold.
 
 ## 11. Security
 
-### 11.1 Spring Security defaults <a class="askgpt-btn" data-askgpt="11.1 Spring Security defaults" title="Ask ChatGPT about this section">💬</a>
+### 11.1 Spring Security defaults <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'11.1%20Spring%20Security%20defaults'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="11.1 Spring Security defaults" title="Ask ChatGPT about this section">💬</a>
 
 By default, Spring Security (since 6.0):
 
@@ -1165,7 +1165,7 @@ By default, Spring Security (since 6.0):
 - Uses BCrypt for password hashing.
 - Adds common security headers (X-Frame-Options, X-Content-Type-Options, etc.).
 
-### 11.2 OWASP relevance <a class="askgpt-btn" data-askgpt="11.2 OWASP relevance" title="Ask ChatGPT about this section">💬</a>
+### 11.2 OWASP relevance <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'11.2%20OWASP%20relevance'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="11.2 OWASP relevance" title="Ask ChatGPT about this section">💬</a>
 
 - **A01 Broken Access Control** — Spring Security provides `@PreAuthorize`, role-based access, ACL.
 - **A02 Cryptographic Failures** — BCrypt password hashing; JWT signing.
@@ -1175,7 +1175,7 @@ By default, Spring Security (since 6.0):
 - **A07 Authentication Failures** — Spring Security has built-in session fixation protection.
 - **A09 Logging Failures** — Spring's audit events; Spring Authorization Server logs.
 
-### 11.3 Common attacks <a class="askgpt-btn" data-askgpt="11.3 Common attacks" title="Ask ChatGPT about this section">💬</a>
+### 11.3 Common attacks <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'11.3%20Common%20attacks'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="11.3 Common attacks" title="Ask ChatGPT about this section">💬</a>
 
 - **CSRF** — Cross-Site Request Forgery. Spring Security's `CsrfFilter` validates tokens.
 - **XSS** — Cross-Site Scripting. Spring's output escaping in JSP/Thymeleaf; JSON responses don't execute scripts.
@@ -1185,7 +1185,7 @@ By default, Spring Security (since 6.0):
 - **Open redirect** — unvalidated redirect targets after login.
 - **JWT attacks** — algorithm confusion (none/HS256/RS256); signature stripping; replay.
 
-### 11.4 OAuth2 and OIDC <a class="askgpt-btn" data-askgpt="11.4 OAuth2 and OIDC" title="Ask ChatGPT about this section">💬</a>
+### 11.4 OAuth2 and OIDC <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'11.4%20OAuth2%20and%20OIDC'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="11.4 OAuth2 and OIDC" title="Ask ChatGPT about this section">💬</a>
 
 Spring Security supports OAuth2 client (login via Google, GitHub, etc.), OAuth2 resource server (validating JWTs), and Spring Authorization Server (issuing tokens).
 
@@ -1201,7 +1201,7 @@ public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
 }
 ```
 
-### 11.5 JWT best practices <a class="askgpt-btn" data-askgpt="11.5 JWT best practices" title="Ask ChatGPT about this section">💬</a>
+### 11.5 JWT best practices <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'11.5%20JWT%20best%20practices'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="11.5 JWT best practices" title="Ask ChatGPT about this section">💬</a>
 
 - Use strong keys (RS256 with 2048-bit RSA, or ES256 with P-256).
 - Validate `iss`, `aud`, `exp`, `nbf` claims.
@@ -1210,14 +1210,14 @@ public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
 - Never put sensitive data in JWTs (tokens are not encrypted).
 - Use `kid` claim to handle key rotation.
 
-### 11.6 Secret management <a class="askgpt-btn" data-askgpt="11.6 Secret management" title="Ask ChatGPT about this section">💬</a>
+### 11.6 Secret management <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'11.6%20Secret%20management'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="11.6 Secret management" title="Ask ChatGPT about this section">💬</a>
 
 - Never commit secrets to source.
 - Use environment variables, secrets managers (Vault, AWS Secrets Manager).
 - Spring Boot has `spring.config.import` for external config.
 - Spring Cloud Config Server for centralized config.
 
-### 11.7 Secure configuration checklist <a class="askgpt-btn" data-askgpt="11.7 Secure configuration checklist" title="Ask ChatGPT about this section">💬</a>
+### 11.7 Secure configuration checklist <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'11.7%20Secure%20configuration%20checklist'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="11.7 Secure configuration checklist" title="Ask ChatGPT about this section">💬</a>
 
 - [ ] CSRF enabled (or explicitly disabled with reason).
 - [ ] HTTPS enforced.
@@ -1232,7 +1232,7 @@ public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
 
 ## 12. Production Engineering
 
-### 12.1 How Spring Boot is used in production <a class="askgpt-btn" data-askgpt="12.1 How Spring Boot is used in production" title="Ask ChatGPT about this section">💬</a>
+### 12.1 How Spring Boot is used in production <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'12.1%20How%20Spring%20Boot%20is%20used%20in%20production'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="12.1 How Spring Boot is used in production" title="Ask ChatGPT about this section">💬</a>
 
 - **Microservices** — most common deployment pattern.
 - **Monoliths** — Spring Boot enables modular monoliths.
@@ -1240,7 +1240,7 @@ public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
 - **Batch processing** — Spring Batch.
 - **Serverless** — Spring Cloud Function on AWS Lambda, etc.
 
-### 12.2 Real architecture (typical Spring Boot + Kubernetes) <a class="askgpt-btn" data-askgpt="12.2 Real architecture (typical Spring Boot + Kubernetes)" title="Ask ChatGPT about this section">💬</a>
+### 12.2 Real architecture (typical Spring Boot + Kubernetes) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'12.2%20Real%20architecture%20(typical%20Spring%20Boot%20%2B%20Kubernetes)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="12.2 Real architecture (typical Spring Boot + Kubernetes)" title="Ask ChatGPT about this section">💬</a>
 
 ```mermaid
 graph TB
@@ -1256,7 +1256,7 @@ graph TB
     App --> MQ[(Kafka)]
 ```
 
-### 12.3 Production configuration <a class="askgpt-btn" data-askgpt="12.3 Production configuration" title="Ask ChatGPT about this section">💬</a>
+### 12.3 Production configuration <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'12.3%20Production%20configuration'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="12.3 Production configuration" title="Ask ChatGPT about this section">💬</a>
 
 Typical `application.yml`:
 
@@ -1296,7 +1296,7 @@ management:
         http.server.requests: true
 ```
 
-### 12.4 Graceful shutdown <a class="askgpt-btn" data-askgpt="12.4 Graceful shutdown" title="Ask ChatGPT about this section">💬</a>
+### 12.4 Graceful shutdown <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'12.4%20Graceful%20shutdown'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="12.4 Graceful shutdown" title="Ask ChatGPT about this section">💬</a>
 
 ```yaml
 server:
@@ -1309,7 +1309,7 @@ spring:
 
 Spring Boot 2.3+ supports graceful shutdown: SIGTERM triggers drain, allowing in-flight requests to complete.
 
-### 12.5 Health checks <a class="askgpt-btn" data-askgpt="12.5 Health checks" title="Ask ChatGPT about this section">💬</a>
+### 12.5 Health checks <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'12.5%20Health%20checks'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="12.5 Health checks" title="Ask ChatGPT about this section">💬</a>
 
 - **Liveness** — `/actuator/health/liveness` — is the process alive?
 - **Readiness** — `/actuator/health/readiness` — ready to serve traffic?
@@ -1329,7 +1329,7 @@ management:
 
 Kubernetes uses these for pod lifecycle management.
 
-### 12.6 Production monitoring <a class="askgpt-btn" data-askgpt="12.6 Production monitoring" title="Ask ChatGPT about this section">💬</a>
+### 12.6 Production monitoring <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'12.6%20Production%20monitoring'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="12.6 Production monitoring" title="Ask ChatGPT about this section">💬</a>
 
 - **Micrometer** — metrics abstraction (Counter, Timer, Gauge, Distribution Summary).
 - **Prometheus** — `/actuator/prometheus` exposes Micrometer metrics.
@@ -1337,34 +1337,34 @@ Kubernetes uses these for pod lifecycle management.
 - **Spring Boot Admin** — UI for managing multiple Spring Boot apps.
 - **Datadog, New Relic, Dynatrace, Elastic APM** — commercial APMs.
 
-### 12.7 Production logging <a class="askgpt-btn" data-askgpt="12.7 Production logging" title="Ask ChatGPT about this section">💬</a>
+### 12.7 Production logging <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'12.7%20Production%20logging'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="12.7 Production logging" title="Ask ChatGPT about this section">💬</a>
 
 - **Structured logs** (JSON) for log aggregation.
 - Logback with `logstash-logback-encoder` or `ecs-logging`.
 - `logback-spring.xml` for Spring-specific configuration.
 - `log4j2` alternative.
 
-### 12.8 Production debugging <a class="askgpt-btn" data-askgpt="12.8 Production debugging" title="Ask ChatGPT about this section">💬</a>
+### 12.8 Production debugging <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'12.8%20Production%20debugging'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="12.8 Production debugging" title="Ask ChatGPT about this section">💬</a>
 
 - **Actuator endpoints** (`/beans`, `/conditions`, `/mappings`, `/env`, `/heapdump`, `/threaddump`).
 - **Java Flight Recorder** — low-overhead CPU profiling.
 - **async-profiler** — flame graphs.
 - **Heap dumps** — analyze with Eclipse MAT or VisualVM.
 
-### 12.9 Scaling strategy <a class="askgpt-btn" data-askgpt="12.9 Scaling strategy" title="Ask ChatGPT about this section">💬</a>
+### 12.9 Scaling strategy <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'12.9%20Scaling%20strategy'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="12.9 Scaling strategy" title="Ask ChatGPT about this section">💬</a>
 
 - **Vertical** — more CPU, memory. Limit: JVM heap, GC overhead.
 - **Horizontal** — Kubernetes HPA based on CPU/memory/custom metrics.
 - **Stateless** — Spring Boot apps should be stateless; state in DB/cache/external store.
 
-### 12.10 Failure handling <a class="askgpt-btn" data-askgpt="12.10 Failure handling" title="Ask ChatGPT about this section">💬</a>
+### 12.10 Failure handling <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'12.10%20Failure%20handling'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="12.10 Failure handling" title="Ask ChatGPT about this section">💬</a>
 
 - **Circuit breakers** — Resilience4j, Spring Cloud Circuit Breaker.
 - **Retries** — Spring Retry, Resilience4j.
 - **Timeouts** — explicit timeouts on all I/O.
 - **Bulkheads** — Resilience4j bulkhead pattern.
 
-### 12.11 High availability <a class="askgpt-btn" data-askgpt="12.11 High availability" title="Ask ChatGPT about this section">💬</a>
+### 12.11 High availability <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'12.11%20High%20availability'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="12.11 High availability" title="Ask ChatGPT about this section">💬</a>
 
 - Multi-zone deployment.
 - Load balancing.
@@ -1372,7 +1372,7 @@ Kubernetes uses these for pod lifecycle management.
 - Database HA (PostgreSQL with Patroni, etc.).
 - Graceful shutdown.
 
-### 12.12 Cost optimization <a class="askgpt-btn" data-askgpt="12.12 Cost optimization" title="Ask ChatGPT about this section">💬</a>
+### 12.12 Cost optimization <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'12.12%20Cost%20optimization'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="12.12 Cost optimization" title="Ask ChatGPT about this section">💬</a>
 
 - Right-size JVM heap (don't over-allocate).
 - Use HikariCP efficiently (no oversized pool).
@@ -1380,7 +1380,7 @@ Kubernetes uses these for pod lifecycle management.
 - Use compression (gzip responses).
 - Profile before optimizing.
 
-### 12.13 Upgrade strategy <a class="askgpt-btn" data-askgpt="12.13 Upgrade strategy" title="Ask ChatGPT about this section">💬</a>
+### 12.13 Upgrade strategy <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'12.13%20Upgrade%20strategy'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="12.13 Upgrade strategy" title="Ask ChatGPT about this section">💬</a>
 
 - **Test in staging** before production.
 - **Read release notes** for breaking changes.
@@ -1388,7 +1388,7 @@ Kubernetes uses these for pod lifecycle management.
 - **Spring Boot 3.x** moved from `javax.*` to `jakarta.*` — automated migration with OpenRewrite.
 - **LTS support** — Spring Boot provides commercial support via VMware Tanzu.
 
-### 12.14 Migration: Spring Boot 2.x → 3.x <a class="askgpt-btn" data-askgpt="12.14 Migration: Spring Boot 2.x → 3.x" title="Ask ChatGPT about this section">💬</a>
+### 12.14 Migration: Spring Boot 2.x → 3.x <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'12.14%20Migration%3A%20Spring%20Boot%202.x%20%E2%86%92%203.x'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="12.14 Migration: Spring Boot 2.x → 3.x" title="Ask ChatGPT about this section">💬</a>
 
 Key changes:
 
@@ -1407,7 +1407,7 @@ mvn -U org.openrewrite.maven:rewrite-maven-plugin:run \
 
 ## 13. Production Case Studies
 
-### 13.1 Netflix — Spring Cloud <a class="askgpt-btn" data-askgpt="13.1 Netflix — Spring Cloud" title="Ask ChatGPT about this section">💬</a>
+### 13.1 Netflix — Spring Cloud <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'13.1%20Netflix%20%E2%80%94%20Spring%20Cloud'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="13.1 Netflix — Spring Cloud" title="Ask ChatGPT about this section">💬</a>
 
 Netflix contributed many Spring Cloud components:
 
@@ -1418,11 +1418,11 @@ Netflix contributed many Spring Cloud components:
 
 Their microservices platform at scale uses Spring Cloud patterns.
 
-### 13.2 Alibaba — Spring Cloud Alibaba <a class="askgpt-btn" data-askgpt="13.2 Alibaba — Spring Cloud Alibaba" title="Ask ChatGPT about this section">💬</a>
+### 13.2 Alibaba — Spring Cloud Alibaba <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'13.2%20Alibaba%20%E2%80%94%20Spring%20Cloud%20Alibaba'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="13.2 Alibaba — Spring Cloud Alibaba" title="Ask ChatGPT about this section">💬</a>
 
 Alibaba's cloud-native stack (Nacos for discovery, Sentinel for flow control, RocketMQ for messaging) integrates as Spring Cloud Alibaba components.
 
-### 13.3 Target — Spring Boot migration <a class="askgpt-btn" data-askgpt="13.3 Target — Spring Boot migration" title="Ask ChatGPT about this section">💬</a>
+### 13.3 Target — Spring Boot migration <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'13.3%20Target%20%E2%80%94%20Spring%20Boot%20migration'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="13.3 Target — Spring Boot migration" title="Ask ChatGPT about this section">💬</a>
 
 Target migrated from Java EE to Spring Boot, reporting:
 
@@ -1430,23 +1430,23 @@ Target migrated from Java EE to Spring Boot, reporting:
 - Better development experience (auto-config).
 - Easier deployment (containers).
 
-### 13.4 British Airways <a class="askgpt-btn" data-askgpt="13.4 British Airways" title="Ask ChatGPT about this section">💬</a>
+### 13.4 British Airways <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'13.4%20British%20Airways'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="13.4 British Airways" title="Ask ChatGPT about this section">💬</a>
 
 BA's digital transformation included Spring Boot microservices for booking, customer management, etc.
 
-### 13.5 Zalando — Spring Boot at scale <a class="askgpt-btn" data-askgpt="13.5 Zalando — Spring Boot at scale" title="Ask ChatGPT about this section">💬</a>
+### 13.5 Zalando — Spring Boot at scale <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'13.5%20Zalando%20%E2%80%94%20Spring%20Boot%20at%20scale'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="13.5 Zalando — Spring Boot at scale" title="Ask ChatGPT about this section">💬</a>
 
 Zalando runs Spring Boot microservices for their e-commerce platform. They publish engineering blogs about Spring Boot patterns at scale.
 
-### 13.6 Capital One — financial services <a class="askgpt-btn" data-askgpt="13.6 Capital One — financial services" title="Ask ChatGPT about this section">💬</a>
+### 13.6 Capital One — financial services <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'13.6%20Capital%20One%20%E2%80%94%20financial%20services'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="13.6 Capital One — financial services" title="Ask ChatGPT about this section">💬</a>
 
 Capital One uses Spring Boot microservices for their banking platform, with strict security and audit requirements.
 
-### 13.7 eBay <a class="askgpt-btn" data-askgpt="13.7 eBay" title="Ask ChatGPT about this section">💬</a>
+### 13.7 eBay <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'13.7%20eBay'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="13.7 eBay" title="Ask ChatGPT about this section">💬</a>
 
 eBay has used Spring for many years, including Spring Cloud for their event-driven microservices.
 
-### 13.8 Common patterns <a class="askgpt-btn" data-askgpt="13.8 Common patterns" title="Ask ChatGPT about this section">💬</a>
+### 13.8 Common patterns <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'13.8%20Common%20patterns'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="13.8 Common patterns" title="Ask ChatGPT about this section">💬</a>
 
 Across case studies:
 
@@ -1460,7 +1460,7 @@ Across case studies:
 
 ## 14. Code Examples
 
-### 14.1 Basic: Spring Boot application <a class="askgpt-btn" data-askgpt="14.1 Basic: Spring Boot application" title="Ask ChatGPT about this section">💬</a>
+### 14.1 Basic: Spring Boot application <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'14.1%20Basic%3A%20Spring%20Boot%20application'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="14.1 Basic: Spring Boot application" title="Ask ChatGPT about this section">💬</a>
 
 ```java
 // App.java
@@ -1488,7 +1488,7 @@ public class UserController {
 }
 ```
 
-### 14.2 Bean definition with autowiring <a class="askgpt-btn" data-askgpt="14.2 Bean definition with autowiring" title="Ask ChatGPT about this section">💬</a>
+### 14.2 Bean definition with autowiring <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'14.2%20Bean%20definition%20with%20autowiring'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="14.2 Bean definition with autowiring" title="Ask ChatGPT about this section">💬</a>
 
 ```java
 @Service
@@ -1509,7 +1509,7 @@ public class UserService {
 }
 ```
 
-### 14.3 Bean scopes <a class="askgpt-btn" data-askgpt="14.3 Bean scopes" title="Ask ChatGPT about this section">💬</a>
+### 14.3 Bean scopes <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'14.3%20Bean%20scopes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="14.3 Bean scopes" title="Ask ChatGPT about this section">💬</a>
 
 ```java
 @Component
@@ -1520,7 +1520,7 @@ public class ShoppingCart {
 }
 ```
 
-### 14.4 Lifecycle callbacks <a class="askgpt-btn" data-askgpt="14.4 Lifecycle callbacks" title="Ask ChatGPT about this section">💬</a>
+### 14.4 Lifecycle callbacks <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'14.4%20Lifecycle%20callbacks'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="14.4 Lifecycle callbacks" title="Ask ChatGPT about this section">💬</a>
 
 ```java
 @Component
@@ -1537,7 +1537,7 @@ public class CacheWarmer {
 }
 ```
 
-### 14.5 AOP <a class="askgpt-btn" data-askgpt="14.5 AOP" title="Ask ChatGPT about this section">💬</a>
+### 14.5 AOP <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'14.5%20AOP'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="14.5 AOP" title="Ask ChatGPT about this section">💬</a>
 
 ```java
 @Aspect
@@ -1554,7 +1554,7 @@ public class LoggingAspect {
 }
 ```
 
-### 14.6 Configuration properties <a class="askgpt-btn" data-askgpt="14.6 Configuration properties" title="Ask ChatGPT about this section">💬</a>
+### 14.6 Configuration properties <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'14.6%20Configuration%20properties'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="14.6 Configuration properties" title="Ask ChatGPT about this section">💬</a>
 
 ```java
 @ConfigurationProperties(prefix = "app")
@@ -1570,7 +1570,7 @@ public record AppProperties(
 public class App { }
 ```
 
-### 14.7 JPA entity and repository <a class="askgpt-btn" data-askgpt="14.7 JPA entity and repository" title="Ask ChatGPT about this section">💬</a>
+### 14.7 JPA entity and repository <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'14.7%20JPA%20entity%20and%20repository'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="14.7 JPA entity and repository" title="Ask ChatGPT about this section">💬</a>
 
 ```java
 @Entity
@@ -1601,7 +1601,7 @@ public interface UserRepository extends JpaRepository<User, Long> {
 }
 ```
 
-### 14.8 Avoiding N+1 with JOIN FETCH <a class="askgpt-btn" data-askgpt="14.8 Avoiding N+1 with JOIN FETCH" title="Ask ChatGPT about this section">💬</a>
+### 14.8 Avoiding N+1 with JOIN FETCH <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'14.8%20Avoiding%20N%2B1%20with%20JOIN%20FETCH'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="14.8 Avoiding N+1 with JOIN FETCH" title="Ask ChatGPT about this section">💬</a>
 
 ```java
 public interface UserRepository extends JpaRepository<User, Long> {
@@ -1614,7 +1614,7 @@ public interface UserRepository extends JpaRepository<User, Long> {
 }
 ```
 
-### 14.9 Transactional service <a class="askgpt-btn" data-askgpt="14.9 Transactional service" title="Ask ChatGPT about this section">💬</a>
+### 14.9 Transactional service <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'14.9%20Transactional%20service'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="14.9 Transactional service" title="Ask ChatGPT about this section">💬</a>
 
 ```java
 @Service
@@ -1640,7 +1640,7 @@ public class OrderService {
 }
 ```
 
-### 14.10 Spring Security with JWT <a class="askgpt-btn" data-askgpt="14.10 Spring Security with JWT" title="Ask ChatGPT about this section">💬</a>
+### 14.10 Spring Security with JWT <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'14.10%20Spring%20Security%20with%20JWT'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="14.10 Spring Security with JWT" title="Ask ChatGPT about this section">💬</a>
 
 ```java
 @Bean
@@ -1658,7 +1658,7 @@ public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
 }
 ```
 
-### 14.11 REST controller with validation <a class="askgpt-btn" data-askgpt="14.11 REST controller with validation" title="Ask ChatGPT about this section">💬</a>
+### 14.11 REST controller with validation <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'14.11%20REST%20controller%20with%20validation'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="14.11 REST controller with validation" title="Ask ChatGPT about this section">💬</a>
 
 ```java
 @RestController
@@ -1683,7 +1683,7 @@ public record CreateUserRequest(
 ) {}
 ```
 
-### 14.12 Bad, anti-pattern, refactored, secure, performance-optimized examples <a class="askgpt-btn" data-askgpt="14.12 Bad, anti-pattern, refactored, secure, performance-optimized examples" title="Ask ChatGPT about this section">💬</a>
+### 14.12 Bad, anti-pattern, refactored, secure, performance-optimized examples <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'14.12%20Bad%2C%20anti-pattern%2C%20refactored%2C%20secure%2C%20performance-optimized%20examples'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="14.12 Bad, anti-pattern, refactored, secure, performance-optimized examples" title="Ask ChatGPT about this section">💬</a>
 
 **Bad: field injection**
 
@@ -1752,7 +1752,7 @@ public class IdempotentService {
 
 ## 15. Common Mistakes
 
-### 15.1 Beginner mistakes <a class="askgpt-btn" data-askgpt="15.1 Beginner mistakes" title="Ask ChatGPT about this section">💬</a>
+### 15.1 Beginner mistakes <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'15.1%20Beginner%20mistakes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="15.1 Beginner mistakes" title="Ask ChatGPT about this section">💬</a>
 
 - **Using field injection** — `@Autowired` on fields. Use constructor injection.
 - **Missing `@Transactional`** — service methods that should be transactional aren't.
@@ -1760,7 +1760,7 @@ public class IdempotentService {
 - **Putting `@Transactional` on an interface** — Spring uses class-based proxies; interface annotations are inherited but only via CGLIB.
 - **Not handling exceptions** — letting exceptions propagate without logging.
 
-### 15.2 Intermediate mistakes <a class="askgpt-btn" data-askgpt="15.2 Intermediate mistakes" title="Ask ChatGPT about this section">💬</a>
+### 15.2 Intermediate mistakes <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'15.2%20Intermediate%20mistakes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="15.2 Intermediate mistakes" title="Ask ChatGPT about this section">💬</a>
 
 - **Circular dependencies** — A depends on B, B depends on A. Fix by extracting a third bean or using setter injection (anti-pattern).
 - **Eager initialization of beans that need `@Lazy`** — sometimes beans can't be constructed lazily enough.
@@ -1768,7 +1768,7 @@ public class IdempotentService {
 - **Not closing resources** — Spring closes JDBC/HTTP resources via `@Cleanup` patterns; verify.
 - **Forgetting to set `OpenSessionInView=false`** — masks N+1.
 
-### 15.3 Senior mistakes <a class="askgpt-btn" data-askgpt="15.3 Senior mistakes" title="Ask ChatGPT about this section">💬</a>
+### 15.3 Senior mistakes <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'15.3%20Senior%20mistakes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="15.3 Senior mistakes" title="Ask ChatGPT about this section">💬</a>
 
 - **Self-invocation of `@Transactional`** — method calls bypass the proxy.
 - **Mixing transaction propagation incorrectly** — REQUIRES_NEW without thinking about commit ordering.
@@ -1776,7 +1776,7 @@ public class IdempotentService {
 - **N+1 in production** — not detected until load test.
 - **Auto-config disabled without understanding** — losing benefits of Spring Boot.
 
-### 15.4 Production mistakes <a class="askgpt-btn" data-askgpt="15.4 Production mistakes" title="Ask ChatGPT about this section">💬</a>
+### 15.4 Production mistakes <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'15.4%20Production%20mistakes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="15.4 Production mistakes" title="Ask ChatGPT about this section">💬</a>
 
 - **No Actuator** — no observability.
 - **No graceful shutdown** — in-flight requests dropped on SIGTERM.
@@ -1785,26 +1785,26 @@ public class IdempotentService {
 - **No statement caching** — prepared statements re-created.
 - **No JFR / profiler in production** — can't diagnose latency issues.
 
-### 15.5 Migration mistakes <a class="askgpt-btn" data-askgpt="15.5 Migration mistakes" title="Ask ChatGPT about this section">💬</a>
+### 15.5 Migration mistakes <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'15.5%20Migration%20mistakes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="15.5 Migration mistakes" title="Ask ChatGPT about this section">💬</a>
 
 - **From Spring Boot 2.x to 3.x** — `javax.*` to `jakarta.*` everywhere.
 - **From WebSecurityConfigurerAdapter** to SecurityFilterChain bean — major security config change.
 - **From Java 8/11 to 17+** — module system, sealed classes, pattern matching.
 
-### 15.6 Configuration mistakes <a class="askgpt-btn" data-askgpt="15.6 Configuration mistakes" title="Ask ChatGPT about this section">💬</a>
+### 15.6 Configuration mistakes <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'15.6%20Configuration%20mistakes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="15.6 Configuration mistakes" title="Ask ChatGPT about this section">💬</a>
 
 - **Using `spring.profiles.include` wrong order** — order matters.
 - **Setting `server.port` via env but expecting it in `application.properties`** — env wins.
 - **Mixing `@Value` and `@ConfigurationProperties`** — pick one.
 
-### 15.7 Security mistakes <a class="askgpt-btn" data-askgpt="15.7 Security mistakes" title="Ask ChatGPT about this section">💬</a>
+### 15.7 Security mistakes <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'15.7%20Security%20mistakes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="15.7 Security mistakes" title="Ask ChatGPT about this section">💬</a>
 
 - **Disabling CSRF without justification** — leaves the app vulnerable.
 - **PermitAll on `/api/**`** — easy mistake; debug-only.
 - **Hardcoded secrets** — in `application.properties` committed to git.
 - **JWT with `none` algorithm** — signature bypass.
 
-### 15.8 Performance mistakes <a class="askgpt-btn" data-askgpt="15.8 Performance mistakes" title="Ask ChatGPT about this section">💬</a>
+### 15.8 Performance mistakes <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'15.8%20Performance%20mistakes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="15.8 Performance mistakes" title="Ask ChatGPT about this section">💬</a>
 
 - **N+1 queries** — most common JPA perf issue.
 - **EAGER fetch on `@OneToMany`** — cartesian explosion.
@@ -1812,13 +1812,13 @@ public class IdempotentService {
 - **Hibernate batch size not set** — slow bulk inserts.
 - **Hikari pool too small** — connection exhaustion under load.
 
-### 15.9 Debugging mistakes <a class="askgpt-btn" data-askgpt="15.9 Debugging mistakes" title="Ask ChatGPT about this section">💬</a>
+### 15.9 Debugging mistakes <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'15.9%20Debugging%20mistakes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="15.9 Debugging mistakes" title="Ask ChatGPT about this section">💬</a>
 
 - **Restarting without capturing heap dump** — lose state.
 - **Looking at `System.out` instead of logs**.
 - **Reading CGLIB-generated class names** — confusing.
 
-### 15.10 Deployment mistakes <a class="askgpt-btn" data-askgpt="15.10 Deployment mistakes" title="Ask ChatGPT about this section">💬</a>
+### 15.10 Deployment mistakes <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'15.10%20Deployment%20mistakes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="15.10 Deployment mistakes" title="Ask ChatGPT about this section">💬</a>
 
 - **No readiness probe** — Kubernetes sends traffic before warmup.
 - **No JVM tuning** — relying on defaults.
@@ -1828,7 +1828,7 @@ public class IdempotentService {
 
 ## 16. Debugging
 
-### 16.1 How to identify problems <a class="askgpt-btn" data-askgpt="16.1 How to identify problems" title="Ask ChatGPT about this section">💬</a>
+### 16.1 How to identify problems <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'16.1%20How%20to%20identify%20problems'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="16.1 How to identify problems" title="Ask ChatGPT about this section">💬</a>
 
 | Symptom | First diagnostic step |
 |---------|----------------------|
@@ -1842,13 +1842,13 @@ public class IdempotentService {
 | 500 errors | Check application logs; `/actuator/loggers` for log level |
 | Auth failure | Spring Security debug logging: `logging.level.org.springframework.security=DEBUG` |
 
-### 16.2 How to reproduce <a class="askgpt-btn" data-askgpt="16.2 How to reproduce" title="Ask ChatGPT about this section">💬</a>
+### 16.2 How to reproduce <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'16.2%20How%20to%20reproduce'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="16.2 How to reproduce" title="Ask ChatGPT about this section">💬</a>
 
 - Capture JFR recording.
 - Use Testcontainers to spin up real DB.
 - Local Docker Compose with the same DB.
 
-### 16.3 Root cause analysis <a class="askgpt-btn" data-askgpt="16.3 Root cause analysis" title="Ask ChatGPT about this section">💬</a>
+### 16.3 Root cause analysis <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'16.3%20Root%20cause%20analysis'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="16.3 Root cause analysis" title="Ask ChatGPT about this section">💬</a>
 
 1. Capture state (heap dump, thread dump, JFR, logs).
 2. Identify resource under pressure.
@@ -1856,13 +1856,13 @@ public class IdempotentService {
 4. Verify with focused experiment.
 5. Fix and validate.
 
-### 16.4 Logs <a class="askgpt-btn" data-askgpt="16.4 Logs" title="Ask ChatGPT about this section">💬</a>
+### 16.4 Logs <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'16.4%20Logs'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="16.4 Logs" title="Ask ChatGPT about this section">💬</a>
 
 - Spring Boot defaults to console.
 - Structured logging with `logstash-logback-encoder`.
 - Spring Boot 3 supports `logging.structured.format.console=ecs` for Elastic Common Schema.
 
-### 16.5 Metrics <a class="askgpt-btn" data-askgpt="16.5 Metrics" title="Ask ChatGPT about this section">💬</a>
+### 16.5 Metrics <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'16.5%20Metrics'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="16.5 Metrics" title="Ask ChatGPT about this section">💬</a>
 
 **Standard Spring Boot metrics via Micrometer:**
 
@@ -1877,13 +1877,13 @@ public class IdempotentService {
 | `spring.data.repository.invocations` | Repository calls |
 | `executor.completed` | Async task execution |
 
-### 16.6 Tracing <a class="askgpt-btn" data-askgpt="16.6 Tracing" title="Ask ChatGPT about this section">💬</a>
+### 16.6 Tracing <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'16.6%20Tracing'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="16.6 Tracing" title="Ask ChatGPT about this section">💬</a>
 
 - **Micrometer Tracing** — OpenTelemetry integration.
 - **Spring Cloud Sleuth** (deprecated in 3.x; replaced by Micrometer Tracing).
 - **OpenTelemetry Java agent** — auto-instrumentation.
 
-### 16.7 Heap dump analysis <a class="askgpt-btn" data-askgpt="16.7 Heap dump analysis" title="Ask ChatGPT about this section">💬</a>
+### 16.7 Heap dump analysis <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'16.7%20Heap%20dump%20analysis'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="16.7 Heap dump analysis" title="Ask ChatGPT about this section">💬</a>
 
 ```bash
 # Get heap dump via Actuator
@@ -1894,7 +1894,7 @@ jcmd <pid> GC.heap_dump heap.hprof
 
 Analyze with Eclipse MAT or VisualVM.
 
-### 16.8 Thread dump analysis <a class="askgpt-btn" data-askgpt="16.8 Thread dump analysis" title="Ask ChatGPT about this section">💬</a>
+### 16.8 Thread dump analysis <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'16.8%20Thread%20dump%20analysis'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="16.8 Thread dump analysis" title="Ask ChatGPT about this section">💬</a>
 
 ```bash
 # Via Actuator
@@ -1909,7 +1909,7 @@ Look for:
 - **WAITING** — normal or deadlock.
 - **RUNNABLE** doing CPU work.
 
-### 16.9 Flame graphs <a class="askgpt-btn" data-askgpt="16.9 Flame graphs" title="Ask ChatGPT about this section">💬</a>
+### 16.9 Flame graphs <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'16.9%20Flame%20graphs'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="16.9 Flame graphs" title="Ask ChatGPT about this section">💬</a>
 
 ```bash
 # async-profiler
@@ -1918,7 +1918,7 @@ Look for:
 ./profiler.sh -e lock -d 30 -f lock.html <pid>
 ```
 
-### 16.10 Common debugging commands <a class="askgpt-btn" data-askgpt="16.10 Common debugging commands" title="Ask ChatGPT about this section">💬</a>
+### 16.10 Common debugging commands <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'16.10%20Common%20debugging%20commands'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="16.10 Common debugging commands" title="Ask ChatGPT about this section">💬</a>
 
 ```bash
 # Check autoconfig decisions
@@ -1936,7 +1936,7 @@ curl -X POST -H "Content-Type: application/json" \
   localhost:8080/actuator/loggers/org.springframework.security
 ```
 
-### 16.11 Production troubleshooting checklist <a class="askgpt-btn" data-askgpt="16.11 Production troubleshooting checklist" title="Ask ChatGPT about this section">💬</a>
+### 16.11 Production troubleshooting checklist <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'16.11%20Production%20troubleshooting%20checklist'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="16.11 Production troubleshooting checklist" title="Ask ChatGPT about this section">💬</a>
 
 - [ ] Capture heap dump (Actuator `/heapdump`).
 - [ ] Capture thread dump (Actuator `/threaddump`).
@@ -1949,13 +1949,13 @@ curl -X POST -H "Content-Type: application/json" \
 
 ## 17. Monitoring & Observability
 
-### 17.1 Logging <a class="askgpt-btn" data-askgpt="17.1 Logging" title="Ask ChatGPT about this section">💬</a>
+### 17.1 Logging <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'17.1%20Logging'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="17.1 Logging" title="Ask ChatGPT about this section">💬</a>
 
 - **Logback** default in Spring Boot.
 - `logback-spring.xml` for Spring-specific config (profile-aware).
 - `log4j2` alternative (better async performance in some cases).
 
-### 17.2 Metrics <a class="askgpt-btn" data-askgpt="17.2 Metrics" title="Ask ChatGPT about this section">💬</a>
+### 17.2 Metrics <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'17.2%20Metrics'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="17.2 Metrics" title="Ask ChatGPT about this section">💬</a>
 
 Micrometer is Spring Boot's metrics facade. It auto-instruments:
 
@@ -1975,13 +1975,13 @@ Micrometer is Spring Boot's metrics facade. It auto-instruments:
 - CloudWatch.
 - OTLP.
 
-### 17.3 Distributed tracing <a class="askgpt-btn" data-askgpt="17.3 Distributed tracing" title="Ask ChatGPT about this section">💬</a>
+### 17.3 Distributed tracing <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'17.3%20Distributed%20tracing'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="17.3 Distributed tracing" title="Ask ChatGPT about this section">💬</a>
 
 - **Micrometer Tracing** (Spring Boot 3.x): OpenTelemetry, Zipkin, Wavefront.
 - **Auto-instrumentation** via Java agent or Spring AOP.
 - Span propagation via W3C Trace Context.
 
-### 17.4 Health checks <a class="askgpt-btn" data-askgpt="17.4 Health checks" title="Ask ChatGPT about this section">💬</a>
+### 17.4 Health checks <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'17.4%20Health%20checks'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="17.4 Health checks" title="Ask ChatGPT about this section">💬</a>
 
 ```yaml
 management:
@@ -2010,7 +2010,7 @@ public class MyServiceHealthIndicator implements HealthIndicator {
 }
 ```
 
-### 17.5 Dashboards <a class="askgpt-btn" data-askgpt="17.5 Dashboards" title="Ask ChatGPT about this section">💬</a>
+### 17.5 Dashboards <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'17.5%20Dashboards'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="17.5 Dashboards" title="Ask ChatGPT about this section">💬</a>
 
 Sample Grafana dashboard for Spring Boot:
 
@@ -2021,7 +2021,7 @@ Sample Grafana dashboard for Spring Boot:
 - Bean count (gauge).
 - Health (status).
 
-### 17.6 Alerts <a class="askgpt-btn" data-askgpt="17.6 Alerts" title="Ask ChatGPT about this section">💬</a>
+### 17.6 Alerts <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'17.6%20Alerts'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="17.6 Alerts" title="Ask ChatGPT about this section">💬</a>
 
 - JVM heap > 80% for 5 minutes.
 - GC pause > 1s.
@@ -2030,7 +2030,7 @@ Sample Grafana dashboard for Spring Boot:
 - DB connection pool exhausted.
 - Health check failing.
 
-### 17.7 SLIs, SLOs, SLAs <a class="askgpt-btn" data-askgpt="17.7 SLIs, SLOs, SLAs" title="Ask ChatGPT about this section">💬</a>
+### 17.7 SLIs, SLOs, SLAs <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'17.7%20SLIs%2C%20SLOs%2C%20SLAs'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="17.7 SLIs, SLOs, SLAs" title="Ask ChatGPT about this section">💬</a>
 
 - **SLI** — request latency p99, error rate, availability.
 - **SLO** — `p99 latency < 200ms`, `availability > 99.95%`.
@@ -2038,7 +2038,7 @@ Sample Grafana dashboard for Spring Boot:
 
 ## 18. Best Practices
 
-### 18.1 Industry best practices <a class="askgpt-btn" data-askgpt="18.1 Industry best practices" title="Ask ChatGPT about this section">💬</a>
+### 18.1 Industry best practices <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'18.1%20Industry%20best%20practices'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="18.1 Industry best practices" title="Ask ChatGPT about this section">💬</a>
 
 - **Constructor injection** — never field injection.
 - **Use `@ConfigurationProperties`** for type-safe config.
@@ -2050,7 +2050,7 @@ Sample Grafana dashboard for Spring Boot:
 - **Graceful shutdown** for in-flight requests.
 - **Virtual threads** (Spring 6.1+) for high-concurrency I/O.
 
-### 18.2 Enterprise practices <a class="askgpt-btn" data-askgpt="18.2 Enterprise practices" title="Ask ChatGPT about this section">💬</a>
+### 18.2 Enterprise practices <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'18.2%20Enterprise%20practices'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="18.2 Enterprise practices" title="Ask ChatGPT about this section">💬</a>
 
 - **External config** (Spring Cloud Config, Vault).
 - **Service discovery** (Eureka, Consul).
@@ -2058,28 +2058,28 @@ Sample Grafana dashboard for Spring Boot:
 - **Distributed tracing** (Micrometer Tracing / OpenTelemetry).
 - **Centralized logging** (ELK, Splunk, Loki).
 
-### 18.3 Clean code <a class="askgpt-btn" data-askgpt="18.3 Clean code" title="Ask ChatGPT about this section">💬</a>
+### 18.3 Clean code <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'18.3%20Clean%20code'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="18.3 Clean code" title="Ask ChatGPT about this section">💬</a>
 
 - Constructor injection.
 - Immutable beans where possible.
 - Single Responsibility (one service per concern).
 - Constructor-based dependency injection (no field/setter injection).
 
-### 18.4 Reliability <a class="askgpt-btn" data-askgpt="18.4 Reliability" title="Ask ChatGPT about this section">💬</a>
+### 18.4 Reliability <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'18.4%20Reliability'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="18.4 Reliability" title="Ask ChatGPT about this section">💬</a>
 
 - Circuit breakers (Resilience4j).
 - Timeouts on all I/O.
 - Retries with exponential backoff.
 - Health checks for dependencies.
 
-### 18.5 Security <a class="askgpt-btn" data-askgpt="18.5 Security" title="Ask ChatGPT about this section">💬</a>
+### 18.5 Security <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'18.5%20Security'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="18.5 Security" title="Ask ChatGPT about this section">💬</a>
 
 - Spring Security with sensible defaults.
 - HTTPS enforced.
 - Secrets externalized.
 - Actuator restricted to internal networks.
 
-### 18.6 Performance <a class="askgpt-btn" data-askgpt="18.6 Performance" title="Ask ChatGPT about this section">💬</a>
+### 18.6 Performance <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'18.6%20Performance'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="18.6 Performance" title="Ask ChatGPT about this section">💬</a>
 
 - HikariCP tuned.
 - Hibernate batch_size.
@@ -2087,7 +2087,7 @@ Sample Grafana dashboard for Spring Boot:
 - JOIN FETCH to avoid N+1.
 - `@Cacheable` on hot reads.
 
-### 18.7 Testing <a class="askgpt-btn" data-askgpt="18.7 Testing" title="Ask ChatGPT about this section">💬</a>
+### 18.7 Testing <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'18.7%20Testing'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="18.7 Testing" title="Ask ChatGPT about this section">💬</a>
 
 - Unit tests for service logic.
 - Integration tests for repos (Testcontainers).
@@ -2095,7 +2095,7 @@ Sample Grafana dashboard for Spring Boot:
 - Full stack tests (`@SpringBootTest`).
 - Performance tests (JMH, Gatling).
 
-### 18.8 Deployment <a class="askgpt-btn" data-askgpt="18.8 Deployment" title="Ask ChatGPT about this section">💬</a>
+### 18.8 Deployment <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'18.8%20Deployment'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="18.8 Deployment" title="Ask ChatGPT about this section">💬</a>
 
 - Container images with Buildpacks.
 - Graceful shutdown.
@@ -2104,7 +2104,7 @@ Sample Grafana dashboard for Spring Boot:
 
 ## 19. Anti-Patterns
 
-### 19.1 Field injection <a class="askgpt-btn" data-askgpt="19.1 Field injection" title="Ask ChatGPT about this section">💬</a>
+### 19.1 Field injection <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'19.1%20Field%20injection'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="19.1 Field injection" title="Ask ChatGPT about this section">💬</a>
 
 ```java
 @Service
@@ -2118,13 +2118,13 @@ public class BadService {
 
 **Fix:** Constructor injection.
 
-### 19.2 God services <a class="askgpt-btn" data-askgpt="19.2 God services" title="Ask ChatGPT about this section">💬</a>
+### 19.2 God services <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'19.2%20God%20services'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="19.2 God services" title="Ask ChatGPT about this section">💬</a>
 
 Services with 50+ methods that "do everything." Violates SRP.
 
 **Fix:** Split into smaller, focused services.
 
-### 19.3 Repository abuse <a class="askgpt-btn" data-askgpt="19.3 Repository abuse" title="Ask ChatGPT about this section">💬</a>
+### 19.3 Repository abuse <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'19.3%20Repository%20abuse'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="19.3 Repository abuse" title="Ask ChatGPT about this section">💬</a>
 
 Using repositories for business logic:
 
@@ -2136,7 +2136,7 @@ void incrementBalance(@Param("id") Long id, @Param("amount") BigDecimal amount);
 
 **Fix:** Repository for data access; service for business logic.
 
-### 19.4 Missing transactions <a class="askgpt-btn" data-askgpt="19.4 Missing transactions" title="Ask ChatGPT about this section">💬</a>
+### 19.4 Missing transactions <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'19.4%20Missing%20transactions'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="19.4 Missing transactions" title="Ask ChatGPT about this section">💬</a>
 
 Service methods that do multiple writes without `@Transactional`:
 
@@ -2149,13 +2149,13 @@ public void transfer(Long fromId, Long toId, BigDecimal amount) {
 
 **Fix:** Add `@Transactional`.
 
-### 19.5 `OpenSessionInView=true` <a class="askgpt-btn" data-askgpt="19.5 `OpenSessionInView=true`" title="Ask ChatGPT about this section">💬</a>
+### 19.5 `OpenSessionInView=true` <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'19.5%20%60OpenSessionInView%3Dtrue%60'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="19.5 `OpenSessionInView=true`" title="Ask ChatGPT about this section">💬</a>
 
 Default in Spring Boot. Hides N+1 problems by extending the persistence context to the web layer.
 
 **Fix:** Set `spring.jpa.open-in-view=false`. Force explicit fetching decisions.
 
-### 19.6 Raw SQL in repositories <a class="askgpt-btn" data-askgpt="19.6 Raw SQL in repositories" title="Ask ChatGPT about this section">💬</a>
+### 19.6 Raw SQL in repositories <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'19.6%20Raw%20SQL%20in%20repositories'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="19.6 Raw SQL in repositories" title="Ask ChatGPT about this section">💬</a>
 
 ```java
 @Query(value = "SELECT * FROM users WHERE ...", nativeQuery = true)
@@ -2166,13 +2166,13 @@ List<User> findAll(...);
 
 **Fix:** Use JPQL or Specifications.
 
-### 19.7 Mixing JPA and JDBC <a class="askgpt-btn" data-askgpt="19.7 Mixing JPA and JDBC" title="Ask ChatGPT about this section">💬</a>
+### 19.7 Mixing JPA and JDBC <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'19.7%20Mixing%20JPA%20and%20JDBC'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="19.7 Mixing JPA and JDBC" title="Ask ChatGPT about this section">💬</a>
 
 Two different transaction managers. Hard to reason about.
 
 **Fix:** Pick one; use `JdbcTemplate` for batch operations only.
 
-### 19.8 Singleton scope for stateful beans <a class="askgpt-btn" data-askgpt="19.8 Singleton scope for stateful beans" title="Ask ChatGPT about this section">💬</a>
+### 19.8 Singleton scope for stateful beans <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'19.8%20Singleton%20scope%20for%20stateful%20beans'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="19.8 Singleton scope for stateful beans" title="Ask ChatGPT about this section">💬</a>
 
 ```java
 @Service
@@ -2186,7 +2186,7 @@ public class ShoppingCart {
 
 ## 20. Edge Cases
 
-### 20.1 Circular dependencies <a class="askgpt-btn" data-askgpt="20.1 Circular dependencies" title="Ask ChatGPT about this section">💬</a>
+### 20.1 Circular dependencies <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'20.1%20Circular%20dependencies'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="20.1 Circular dependencies" title="Ask ChatGPT about this section">💬</a>
 
 A → B → A.
 
@@ -2198,19 +2198,19 @@ A → B → A.
 - Use `@Lazy` on one side.
 - Re-architect.
 
-### 20.2 Lazy initialization errors <a class="askgpt-btn" data-askgpt="20.2 Lazy initialization errors" title="Ask ChatGPT about this section">💬</a>
+### 20.2 Lazy initialization errors <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'20.2%20Lazy%20initialization%20errors'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="20.2 Lazy initialization errors" title="Ask ChatGPT about this section">💬</a>
 
 A lazy bean fails on first access (e.g., repository called outside a Spring-managed transaction).
 
 **Fix:** Ensure the lazy bean is accessed in a Spring-managed context.
 
-### 20.3 Transaction propagation traps <a class="askgpt-btn" data-askgpt="20.3 Transaction propagation traps" title="Ask ChatGPT about this section">💬</a>
+### 20.3 Transaction propagation traps <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'20.3%20Transaction%20propagation%20traps'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="20.3 Transaction propagation traps" title="Ask ChatGPT about this section">💬</a>
 
 `REQUIRES_NEW` in a method called from a transactional method creates a new transaction. The new tx commits independently of the outer.
 
 **Gotcha:** If the outer rolls back after the inner commits, the inner's work is still committed. Use `NESTED` (savepoints) for atomicity, or `MANDATORY` to enforce.
 
-### 20.4 `@Transactional` self-invocation <a class="askgpt-btn" data-askgpt="20.4 `@Transactional` self-invocation" title="Ask ChatGPT about this section">💬</a>
+### 20.4 `@Transactional` self-invocation <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'20.4%20%60%40Transactional%60%20self-invocation'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="20.4 `@Transactional` self-invocation" title="Ask ChatGPT about this section">💬</a>
 
 ```java
 @Service
@@ -2226,7 +2226,7 @@ public class OrderService {
 
 **Fix:** Inject self or split into separate beans.
 
-### 20.5 Lock contention <a class="askgpt-btn" data-askgpt="20.5 Lock contention" title="Ask ChatGPT about this section">💬</a>
+### 20.5 Lock contention <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'20.5%20Lock%20contention'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="20.5 Lock contention" title="Ask ChatGPT about this section">💬</a>
 
 Two transactions trying to lock the same row. One waits.
 
@@ -2234,12 +2234,12 @@ Two transactions trying to lock the same row. One waits.
 
 **Fixes:** Reduce transaction size; use optimistic locking (`@Version`); use SKIP LOCKED for queue patterns.
 
-### 20.6 Optimistic vs pessimistic locking <a class="askgpt-btn" data-askgpt="20.6 Optimistic vs pessimistic locking" title="Ask ChatGPT about this section">💬</a>
+### 20.6 Optimistic vs pessimistic locking <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'20.6%20Optimistic%20vs%20pessimistic%20locking'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="20.6 Optimistic vs pessimistic locking" title="Ask ChatGPT about this section">💬</a>
 
 - **Optimistic** (`@Version`) — version check at commit; throws `OptimisticLockException` on conflict. Good for low-contention.
 - **Pessimistic** (`SELECT FOR UPDATE`) — row lock; blocks other transactions. Good for high-contention.
 
-### 20.7 EAGER fetch cartesian explosion <a class="askgpt-btn" data-askgpt="20.7 EAGER fetch cartesian explosion" title="Ask ChatGPT about this section">💬</a>
+### 20.7 EAGER fetch cartesian explosion <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'20.7%20EAGER%20fetch%20cartesian%20explosion'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="20.7 EAGER fetch cartesian explosion" title="Ask ChatGPT about this section">💬</a>
 
 ```java
 @Entity
@@ -2256,15 +2256,15 @@ A query for users loads orders × addresses per user.
 
 **Fix:** LAZY + explicit fetching.
 
-### 20.8 `@TransactionalEventListener` quirks <a class="askgpt-btn" data-askgpt="20.8 `@TransactionalEventListener` quirks" title="Ask ChatGPT about this section">💬</a>
+### 20.8 `@TransactionalEventListener` quirks <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'20.8%20%60%40TransactionalEventListener%60%20quirks'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="20.8 `@TransactionalEventListener` quirks" title="Ask ChatGPT about this section">💬</a>
 
 Events are published within the transaction by default. After-commit listeners fire after the transaction commits.
 
-### 20.9 Bean scope in async tasks <a class="askgpt-btn" data-askgpt="20.9 Bean scope in async tasks" title="Ask ChatGPT about this section">💬</a>
+### 20.9 Bean scope in async tasks <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'20.9%20Bean%20scope%20in%20async%20tasks'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="20.9 Bean scope in async tasks" title="Ask ChatGPT about this section">💬</a>
 
 Beans injected into `@Async` methods are resolved in the calling thread's context. Configure `TaskExecutor` carefully.
 
-### 20.10 Memory leak in singleton bean <a class="askgpt-btn" data-askgpt="20.10 Memory leak in singleton bean" title="Ask ChatGPT about this section">💬</a>
+### 20.10 Memory leak in singleton bean <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'20.10%20Memory%20leak%20in%20singleton%20bean'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="20.10 Memory leak in singleton bean" title="Ask ChatGPT about this section">💬</a>
 
 A singleton with a `@PostConstruct` that registers a listener that holds a reference back: GC can't collect the listener.
 
@@ -2274,7 +2274,7 @@ A singleton with a `@PostConstruct` that registers a listener that holds a refer
 
 ## 21. Comparisons
 
-### 21.1 Spring MVC vs WebFlux <a class="askgpt-btn" data-askgpt="21.1 Spring MVC vs WebFlux" title="Ask ChatGPT about this section">💬</a>
+### 21.1 Spring MVC vs WebFlux <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'21.1%20Spring%20MVC%20vs%20WebFlux'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="21.1 Spring MVC vs WebFlux" title="Ask ChatGPT about this section">💬</a>
 
 | Dimension | Spring MVC | Spring WebFlux |
 |-----------|-----------|----------------|
@@ -2292,7 +2292,7 @@ A singleton with a `@PostConstruct` that registers a listener that holds a refer
 
 **When to choose WebFlux:** Many concurrent slow I/O calls per request, streaming responses, backpressure needed.
 
-### 21.2 Spring Data JPA vs JDBC vs MyBatis <a class="askgpt-btn" data-askgpt="21.2 Spring Data JPA vs JDBC vs MyBatis" title="Ask ChatGPT about this section">💬</a>
+### 21.2 Spring Data JPA vs JDBC vs MyBatis <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'21.2%20Spring%20Data%20JPA%20vs%20JDBC%20vs%20MyBatis'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="21.2 Spring Data JPA vs JDBC vs MyBatis" title="Ask ChatGPT about this section">💬</a>
 
 | Dimension | Spring Data JPA | JdbcTemplate | MyBatis |
 |-----------|-----------------|--------------|--------|
@@ -2303,7 +2303,7 @@ A singleton with a `@PostConstruct` that registers a listener that holds a refer
 | Performance tuning | Hibernate-level | Direct SQL | Direct SQL |
 | Best for | Standard CRUD | Complex queries, batch | Complex queries, dynamic SQL |
 
-### 21.3 Spring Security vs Apache Shiro <a class="askgpt-btn" data-askgpt="21.3 Spring Security vs Apache Shiro" title="Ask ChatGPT about this section">💬</a>
+### 21.3 Spring Security vs Apache Shiro <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'21.3%20Spring%20Security%20vs%20Apache%20Shiro'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="21.3 Spring Security vs Apache Shiro" title="Ask ChatGPT about this section">💬</a>
 
 | Dimension | Spring Security | Apache Shiro |
 |-----------|-----------------|--------------|
@@ -2316,7 +2316,7 @@ A singleton with a `@PostConstruct` that registers a listener that holds a refer
 
 **When to choose Shiro:** Non-Spring stack, simpler needs, smaller app.
 
-### 21.4 Spring Cloud Gateway vs Kong <a class="askgpt-btn" data-askgpt="21.4 Spring Cloud Gateway vs Kong" title="Ask ChatGPT about this section">💬</a>
+### 21.4 Spring Cloud Gateway vs Kong <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'21.4%20Spring%20Cloud%20Gateway%20vs%20Kong'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="21.4 Spring Cloud Gateway vs Kong" title="Ask ChatGPT about this section">💬</a>
 
 | Dimension | Spring Cloud Gateway | Kong |
 |-----------|---------------------|------|
@@ -2328,7 +2328,7 @@ A singleton with a `@PostConstruct` that registers a listener that holds a refer
 | Operational | Spring Boot | NGINX/Lua |
 | Best for | Spring microservices | Mixed stack, high throughput |
 
-### 21.5 Spring Boot vs Quarkus vs Micronaut <a class="askgpt-btn" data-askgpt="21.5 Spring Boot vs Quarkus vs Micronaut" title="Ask ChatGPT about this section">💬</a>
+### 21.5 Spring Boot vs Quarkus vs Micronaut <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'21.5%20Spring%20Boot%20vs%20Quarkus%20vs%20Micronaut'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="21.5 Spring Boot vs Quarkus vs Micronaut" title="Ask ChatGPT about this section">💬</a>
 
 | Dimension | Spring Boot | Quarkus | Micronaut |
 |-----------|-----------|---------|-----------|
@@ -2341,7 +2341,7 @@ A singleton with a `@PostConstruct` that registers a listener that holds a refer
 | DI | Runtime | Build-time | Build-time |
 | Best for | Long-running, JVM-friendly | Serverless, fast startup | Serverless, fast startup |
 
-### 21.6 Decision matrix <a class="askgpt-btn" data-askgpt="21.6 Decision matrix" title="Ask ChatGPT about this section">💬</a>
+### 21.6 Decision matrix <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'21.6%20Decision%20matrix'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="21.6 Decision matrix" title="Ask ChatGPT about this section">💬</a>
 
 | Workload | Recommended |
 |----------|------------|
@@ -2354,7 +2354,7 @@ A singleton with a `@PostConstruct` that registers a listener that holds a refer
 | Enterprise Java EE migration | Spring Boot |
 | Lightweight, low-memory | Quarkus or Micronaut |
 
-### 21.7 Migration paths <a class="askgpt-btn" data-askgpt="21.7 Migration paths" title="Ask ChatGPT about this section">💬</a>
+### 21.7 Migration paths <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'21.7%20Migration%20paths'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="21.7 Migration paths" title="Ask ChatGPT about this section">💬</a>
 
 - **Java EE / Jakarta EE → Spring Boot** — manual, mostly straightforward. Replace `@Inject` with `@Autowired`; CDI beans → `@Component`.
 - **Spring Boot 2 → 3** — `javax.*` → `jakarta.*`; WebSecurityConfigurerAdapter → SecurityFilterChain.
@@ -2365,7 +2365,7 @@ A singleton with a `@PostConstruct` that registers a listener that holds a refer
 
 ## 22. Interview Preparation
 
-### 22.1 Beginner (0-1 years) <a class="askgpt-btn" data-askgpt="22.1 Beginner (0-1 years)" title="Ask ChatGPT about this section">💬</a>
+### 22.1 Beginner (0-1 years) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'22.1%20Beginner%20(0-1%20years)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="22.1 Beginner (0-1 years)" title="Ask ChatGPT about this section">💬</a>
 
 **Q1: What is Spring?**
 **A:** An application framework for Java providing IoC, AOP, transaction management, data access, and web framework. Spring Boot adds auto-configuration and production features.
@@ -2382,7 +2382,7 @@ A singleton with a `@PostConstruct` that registers a listener that holds a refer
 **Q5: What is `@Autowired`?**
 **A:** Annotation telling Spring to inject a dependency. Best practice is constructor injection.
 
-### 22.2 Junior (1-2 years) <a class="askgpt-btn" data-askgpt="22.2 Junior (1-2 years)" title="Ask ChatGPT about this section">💬</a>
+### 22.2 Junior (1-2 years) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'22.2%20Junior%20(1-2%20years)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="22.2 Junior (1-2 years)" title="Ask ChatGPT about this section">💬</a>
 
 **Q6: What is bean scope?**
 **A:** The lifecycle of a bean: singleton (one per container), prototype (new each time), request/session/application (web scopes).
@@ -2399,7 +2399,7 @@ A singleton with a `@PostConstruct` that registers a listener that holds a refer
 **Q10: What is the difference between `@RestController` and `@Controller`?**
 **A:** `@RestController` is `@Controller` + `@ResponseBody` on every method. Returns data (JSON) directly. `@Controller` typically returns view names.
 
-### 22.3 Mid (2-4 years) <a class="askgpt-btn" data-askgpt="22.3 Mid (2-4 years)" title="Ask ChatGPT about this section">💬</a>
+### 22.3 Mid (2-4 years) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'22.3%20Mid%20(2-4%20years)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="22.3 Mid (2-4 years)" title="Ask ChatGPT about this section">💬</a>
 
 **Q11: How does Spring implement transactions?**
 **A:** Via AOP proxies. When a `@Transactional` method is called via the proxy, the proxy starts a transaction (via PlatformTransactionManager) before the method runs, and commits/rolls back after. The proxy wraps the actual method invocation.
@@ -2422,7 +2422,7 @@ A singleton with a `@PostConstruct` that registers a listener that holds a refer
 **Q17: What is Spring Security's filter chain?**
 **A:** A configurable chain of servlet filters that process requests for authentication, authorization, CSRF, headers, CORS, session management, etc. Customizable via `SecurityFilterChain` bean (since Spring Security 6.x).
 
-### 22.4 Senior (4-6 years) <a class="askgpt-btn" data-askgpt="22.4 Senior (4-6 years)" title="Ask ChatGPT about this section">💬</a>
+### 22.4 Senior (4-6 years) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'22.4%20Senior%20(4-6%20years)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="22.4 Senior (4-6 years)" title="Ask ChatGPT about this section">💬</a>
 
 **Q18: How does Spring Boot's autoconfiguration work?**
 **A:** On startup, Spring Boot reads `META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports`, evaluates each auto-config class against the classpath and existing beans. Each auto-config uses `@ConditionalOn*` annotations to decide whether to apply.
@@ -2442,7 +2442,7 @@ A singleton with a `@PostConstruct` that registers a listener that holds a refer
 **Q23: How would you secure a Spring Boot REST API?**
 **A:** (1) Spring Security with `SecurityFilterChain` bean. (2) HTTPS enforced. (3) Authentication: JWT or OAuth2 resource server. (4) Authorization: `@PreAuthorize` or URL-based. (5) CSRF disabled for stateless APIs. (6) CORS configured minimally. (7) Rate limiting (Bucket4j or gateway-level). (8) Actuator restricted to internal networks.
 
-### 22.5 Lead (6-8 years) <a class="askgpt-btn" data-askgpt="22.5 Lead (6-8 years)" title="Ask ChatGPT about this section">💬</a>
+### 22.5 Lead (6-8 years) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'22.5%20Lead%20(6-8%20years)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="22.5 Lead (6-8 years)" title="Ask ChatGPT about this section">💬</a>
 
 **Q24: How would you design a Spring Boot microservice from scratch?**
 **A:** (1) Spring Initializr with chosen dependencies. (2) Domain layer (entities, repositories). (3) Service layer (business logic, `@Transactional`). (4) Web layer (`@RestController`). (5) Security. (6) Configuration (ConfigProperties for typed config). (7) Observability (Actuator + Micrometer). (8) Testing (unit, integration, contract). (9) Container build (Buildpacks). (10) Helm chart for Kubernetes.
@@ -2456,7 +2456,7 @@ A singleton with a `@PostConstruct` that registers a listener that holds a refer
 **Q27: How would you handle Spring's circular dependency at scale?**
 **A:** (1) Restructure: extract a third bean. (2) Re-architect to break the cycle (e.g., events instead of direct calls). (3) Use `@Lazy` on one side. (4) Use `ObjectFactory<T>` for lazy resolution. Avoid setter injection as a workaround.
 
-### 22.6 Staff (8-12 years) <a class="askgpt-btn" data-askgpt="22.6 Staff (8-12 years)" title="Ask ChatGPT about this section">💬</a>
+### 22.6 Staff (8-12 years) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'22.6%20Staff%20(8-12%20years)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="22.6 Staff (8-12 years)" title="Ask ChatGPT about this section">💬</a>
 
 **Q28: Design a multi-tenant SaaS using Spring Boot.**
 **A:** (1) Tenant identification (subdomain, header, JWT claim). (2) TenantContext (ThreadLocal). (3) Hibernate filters or `@FilterDef` for row-level isolation. (4) Schema-per-tenant via multi-datasource routing (AbstractRoutingDataSource). (5) Connection pooling per tenant. (6) Async tenants via thread pools. (7) Audit logging for compliance.
@@ -2467,7 +2467,7 @@ A singleton with a `@PostConstruct` that registers a listener that holds a refer
 **Q30: How would you design a Spring Boot app for high availability?**
 **A:** (1) Stateless (state in DB/cache). (2) Multi-zone deployment. (3) Load balancing. (4) Graceful shutdown. (5) Health checks (liveness/readiness). (6) Circuit breakers on dependencies. (7) Database HA (Patroni for PG). (8) Pod disruption budgets.
 
-### 22.7 Principal / Architect <a class="askgpt-btn" data-askgpt="22.7 Principal / Architect" title="Ask ChatGPT about this section">💬</a>
+### 22.7 Principal / Architect <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'22.7%20Principal%20%2F%20Architect'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="22.7 Principal / Architect" title="Ask ChatGPT about this section">💬</a>
 
 **Q31: When would you recommend NOT using Spring Boot?**
 **A:** (1) Resource-constrained environments where memory matters most (use Quarkus Native). (2) Serverless functions where startup dominates (Quarkus Native, custom). (3) Polyglot systems where Python, Go, or Rust better fit the team. (4) Embedded/microcontroller environments (too heavy). (5) When the team lacks Java expertise.
@@ -2475,7 +2475,7 @@ A singleton with a `@PostConstruct` that registers a listener that holds a refer
 **Q32: How do you evaluate Spring Boot for a new project?**
 **A:** (1) Team Java/Spring expertise. (2) Ecosystem requirements (existing libraries). (3) Performance constraints (startup, memory). (4) Operational tooling (Spring Boot Admin, Actuator integration). (5) Long-term maintenance (vendor support). (6) Migration cost from existing stack.
 
-### 22.8 Scenario-based questions <a class="askgpt-btn" data-askgpt="22.8 Scenario-based questions" title="Ask ChatGPT about this section">💬</a>
+### 22.8 Scenario-based questions <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'22.8%20Scenario-based%20questions'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="22.8 Scenario-based questions" title="Ask ChatGPT about this section">💬</a>
 
 **Scenario 1:** App starts but `/users/1` returns 500. How do you debug?
 **Answer:** (1) Check application logs. (2) `/actuator/health` for service health. (3) Reproduce locally. (4) Common causes: DB connection failed, missing transaction, lazy initialization exception (OpenSessionInView), NullPointerException in service.
@@ -2493,7 +2493,7 @@ A singleton with a `@PostConstruct` that registers a listener that holds a refer
 
 ## 23. References
 
-### 23.1 Official Documentation <a class="askgpt-btn" data-askgpt="23.1 Official Documentation" title="Ask ChatGPT about this section">💬</a>
+### 23.1 Official Documentation <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'23.1%20Official%20Documentation'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="23.1 Official Documentation" title="Ask ChatGPT about this section">💬</a>
 
 - **Spring Framework 6.1:** <https://docs.spring.io/spring-framework/reference/>
 - **Spring Boot 3.3:** <https://docs.spring.io/spring-boot/reference/>
@@ -2502,7 +2502,7 @@ A singleton with a `@PostConstruct` that registers a listener that holds a refer
 - **Spring Initializr:** <https://start.spring.io/>
 - **Hibernate ORM 6.x:** <https://docs.jboss.org/hibernate/orm/6.4/userguide/html_single/Hibernate_User_Guide.html>
 
-### 23.2 Specifications <a class="askgpt-btn" data-askgpt="23.2 Specifications" title="Ask ChatGPT about this section">💬</a>
+### 23.2 Specifications <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'23.2%20Specifications'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="23.2 Specifications" title="Ask ChatGPT about this section">💬</a>
 
 - **JSR-330** (Dependency Injection): <https://jcp.org/en/jsr/detail?id=330>
 - **JSR-303** (Bean Validation): <https://jcp.org/en/jsr/detail?id=303>
@@ -2511,12 +2511,12 @@ A singleton with a `@PostConstruct` that registers a listener that holds a refer
 - **JPA 3.0 (Jakarta Persistence):** <https://jakarta.ee/specifications/persistence/3.0/>
 - **Servlet 5.0 (Jakarta Servlet):** <https://jakarta.ee/specifications/servlet/5.0/>
 
-### 23.3 Foundational papers and references <a class="askgpt-btn" data-askgpt="23.3 Foundational papers and references" title="Ask ChatGPT about this section">💬</a>
+### 23.3 Foundational papers and references <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'23.3%20Foundational%20papers%20and%20references'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="23.3 Foundational papers and references" title="Ask ChatGPT about this section">💬</a>
 
 - *J2EE Development without EJB* — Rod Johnson, Juergen Hoeller (2004).
 - *Expert One-on-One J2EE Design and Development* — Rod Johnson (Wrox, 2002).
 
-### 23.4 Books <a class="askgpt-btn" data-askgpt="23.4 Books" title="Ask ChatGPT about this section">💬</a>
+### 23.4 Books <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'23.4%20Books'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="23.4 Books" title="Ask ChatGPT about this section">💬</a>
 
 - *Spring in Action* — Craig Walls (Manning).
 - *Spring Boot in Action* — Craig Walls (Manning).
@@ -2531,7 +2531,7 @@ A singleton with a `@PostConstruct` that registers a listener that holds a refer
 - *High-Performance Java Persistence* — Vlad Mihalcea (Leanpub).
 - *Cloud Native Spring in Action* — Thomas Vitale (Manning).
 
-### 23.5 Engineering blogs <a class="askgpt-btn" data-askgpt="23.5 Engineering blogs" title="Ask ChatGPT about this section">💬</a>
+### 23.5 Engineering blogs <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'23.5%20Engineering%20blogs'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="23.5 Engineering blogs" title="Ask ChatGPT about this section">💬</a>
 
 - **Spring Blog:** <https://spring.io/blog>
 - **Spring Guides:** <https://spring.io/guides>
@@ -2542,7 +2542,7 @@ A singleton with a `@PostConstruct` that registers a listener that holds a refer
 - **Netflix Tech Blog:** <https://netflixtechblog.com/> (Spring Cloud)
 - **Alibaba Cloud blog:** <https://www.alibabacloud.com/blog>
 
-### 23.6 Tools and ecosystem <a class="askgpt-btn" data-askgpt="23.6 Tools and ecosystem" title="Ask ChatGPT about this section">💬</a>
+### 23.6 Tools and ecosystem <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'23.6%20Tools%20and%20ecosystem'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="23.6 Tools and ecosystem" title="Ask ChatGPT about this section">💬</a>
 
 - **Spring Initializr:** <https://start.spring.io/>
 - **Spring Tools (Eclipse):** <https://spring.io/tools>
@@ -2554,13 +2554,13 @@ A singleton with a `@PostConstruct` that registers a listener that holds a refer
 - **OpenRewrite:** <https://docs.openrewrite.org/>
 - **Testcontainers:** <https://java.testcontainers.org/>
 
-### 23.7 Conferences <a class="askgpt-btn" data-askgpt="23.7 Conferences" title="Ask ChatGPT about this section">💬</a>
+### 23.7 Conferences <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'23.7%20Conferences'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="23.7 Conferences" title="Ask ChatGPT about this section">💬</a>
 
 - **Spring I/O:** <https://springio.net/>
 - **SpringOne:** <https://springone.io/>
 - **JConf:** various JVM-language conferences.
 
-### 23.8 Free online courses <a class="askgpt-btn" data-askgpt="23.8 Free online courses" title="Ask ChatGPT about this section">💬</a>
+### 23.8 Free online courses <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'23.8%20Free%20online%20courses'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="23.8 Free online courses" title="Ask ChatGPT about this section">💬</a>
 
 - **Spring Academy (VMware Tanzu):** <https://spring.academy/>
 - **Baeldung Spring tutorials:** <https://www.baeldung.com/spring>

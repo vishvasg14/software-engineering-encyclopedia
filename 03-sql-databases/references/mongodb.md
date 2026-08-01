@@ -66,7 +66,7 @@ WiredTiger supports:
 
 ## Replication
 
-### Replica sets <a class="askgpt-btn" data-askgpt="Replica sets" title="Ask ChatGPT about this section">💬</a>
+### Replica sets <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Replica%20sets'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Replica sets" title="Ask ChatGPT about this section">💬</a>
 
 A replica set is a group of mongod instances that maintain the same data set. Primary receives writes, secondaries replicate.
 
@@ -78,15 +78,15 @@ graph LR
     Secondary2 -.->|async replication| Primary
 ```
 
-### Oplog <a class="askgpt-btn" data-askgpt="Oplog" title="Ask ChatGPT about this section">💬</a>
+### Oplog <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Oplog'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Oplog" title="Ask ChatGPT about this section">💬</a>
 
 The operations log (`oplog.rs`) is a capped collection that records all writes. Secondaries tail the primary's oplog to replicate.
 
-### Election <a class="askgpt-btn" data-askgpt="Election" title="Ask ChatGPT about this section">💬</a>
+### Election <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Election'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Election" title="Ask ChatGPT about this section">💬</a>
 
 When the primary becomes unavailable, the remaining secondaries hold an election using Raft-like consensus. By default, writes are acknowledged only after the primary commits.
 
-### Write concern <a class="askgpt-btn" data-askgpt="Write concern" title="Ask ChatGPT about this section">💬</a>
+### Write concern <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Write%20concern'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Write concern" title="Ask ChatGPT about this section">💬</a>
 
 | Level | Behavior |
 |-------|----------|
@@ -95,7 +95,7 @@ When the primary becomes unavailable, the remaining secondaries hold an election
 | `{w: "majority"}` | Acknowledged by majority of replica set members |
 | `{w: 2}` | Acknowledged by primary + 1 secondary |
 
-### Read concern <a class="askgpt-btn" data-askgpt="Read concern" title="Ask ChatGPT about this section">💬</a>
+### Read concern <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Read%20concern'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Read concern" title="Ask ChatGPT about this section">💬</a>
 
 | Level | Behavior |
 |-------|----------|

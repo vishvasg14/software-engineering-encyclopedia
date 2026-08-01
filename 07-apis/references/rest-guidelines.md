@@ -13,14 +13,14 @@ This file catalogs the canonical REST API design guidelines referenced in the AP
 
 ## Key recommendations
 
-### Resource modeling <a class="askgpt-btn" data-askgpt="Resource modeling" title="Ask ChatGPT about this section">💬</a>
+### Resource modeling <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Resource%20modeling'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Resource modeling" title="Ask ChatGPT about this section">💬</a>
 
 - **Resources** — nouns, not verbs. `/users/123`, not `/getUser`.
 - **Collections** — `/users`, `/orders`.
 - **Sub-resources** — `/users/123/orders`.
 - **Actions that don't fit CRUD** — `/users/123/activate` (verb on sub-resource).
 
-### HTTP methods <a class="askgpt-btn" data-askgpt="HTTP methods" title="Ask ChatGPT about this section">💬</a>
+### HTTP methods <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'HTTP%20methods'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="HTTP methods" title="Ask ChatGPT about this section">💬</a>
 
 - `GET` — safe, idempotent.
 - `POST` — create, non-idempotent.
@@ -30,47 +30,47 @@ This file catalogs the canonical REST API design guidelines referenced in the AP
 - `OPTIONS` — describe capabilities.
 - `HEAD` — same as GET but no body.
 
-### URL design <a class="askgpt-btn" data-askgpt="URL design" title="Ask ChatGPT about this section">💬</a>
+### URL design <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'URL%20design'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="URL design" title="Ask ChatGPT about this section">💬</a>
 
 - Plural nouns: `/users`, not `/user`.
 - Lowercase, kebab-case.
 - No verbs in URLs.
 - Hierarchical: `/users/123/orders/456`.
 
-### Status codes <a class="askgpt-btn" data-askgpt="Status codes" title="Ask ChatGPT about this section">💬</a>
+### Status codes <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Status%20codes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Status codes" title="Ask ChatGPT about this section">💬</a>
 
 - Use the right code (`200`, `201`, `204`, `400`, `404`, `409`, `422`).
 - `5xx` for server errors, `4xx` for client errors.
 - Return Problem Details (RFC 7807) for error responses.
 
-### Versioning <a class="askgpt-btn" data-askgpt="Versioning" title="Ask ChatGPT about this section">💬</a>
+### Versioning <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Versioning'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Versioning" title="Ask ChatGPT about this section">💬</a>
 
 - **URI version:** `/v1/users` (clear, visible).
 - **Header version:** `Accept-Version: v1` (clean URLs).
 - **Media type version:** `Accept: application/vnd.myapi.v1+json`.
 
-### Pagination <a class="askgpt-btn" data-askgpt="Pagination" title="Ask ChatGPT about this section">💬</a>
+### Pagination <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Pagination'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Pagination" title="Ask ChatGPT about this section">💬</a>
 
 - **Offset-based:** `?offset=20&limit=10` (simple, slow for large offsets).
 - **Cursor-based:** `?cursor=abc&limit=10` (efficient, opaque).
 - **Keyset pagination:** `?after_id=100&limit=10`.
 
-### Filtering and sorting <a class="askgpt-btn" data-askgpt="Filtering and sorting" title="Ask ChatGPT about this section">💬</a>
+### Filtering and sorting <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Filtering%20and%20sorting'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Filtering and sorting" title="Ask ChatGPT about this section">💬</a>
 
 - `?status=active&sort=-createdAt,name`.
 
-### Idempotency <a class="askgpt-btn" data-askgpt="Idempotency" title="Ask ChatGPT about this section">💬</a>
+### Idempotency <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Idempotency'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Idempotency" title="Ask ChatGPT about this section">💬</a>
 
 - `Idempotency-Key` header for POST requests.
 - Server stores the result for 24 hours.
 - Same key returns same result.
 
-### Caching <a class="askgpt-btn" data-askgpt="Caching" title="Ask ChatGPT about this section">💬</a>
+### Caching <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Caching'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Caching" title="Ask ChatGPT about this section">💬</a>
 
 - `Cache-Control: public, max-age=300` — cacheable.
 - `ETag` — client can revalidate.
 
-### Security <a class="askgpt-btn" data-askgpt="Security" title="Ask ChatGPT about this section">💬</a>
+### Security <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Security'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Security" title="Ask ChatGPT about this section">💬</a>
 
 - TLS everywhere.
 - Authentication: Bearer token / OAuth2.
@@ -80,12 +80,12 @@ This file catalogs the canonical REST API design guidelines referenced in the AP
 - CORS for browser APIs.
 - CSP headers.
 
-### Hypermedia (HATEOAS) <a class="askgpt-btn" data-askgpt="Hypermedia (HATEOAS)" title="Ask ChatGPT about this section">💬</a>
+### Hypermedia (HATEOAS) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Hypermedia%20(HATEOAS)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Hypermedia (HATEOAS)" title="Ask ChatGPT about this section">💬</a>
 
 - Resources include links to related resources.
 - `links: [{ "rel": "self", "href": "/users/123" }]`.
 
-### Asynchronous operations <a class="askgpt-btn" data-askgpt="Asynchronous operations" title="Ask ChatGPT about this section">💬</a>
+### Asynchronous operations <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Asynchronous%20operations'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Asynchronous operations" title="Ask ChatGPT about this section">💬</a>
 
 - Accept POST, return 202.
 - Return a status URL: `Location: /jobs/456`.
@@ -108,7 +108,7 @@ This file catalogs the canonical REST API design guidelines referenced in the AP
 
 ## Pagination examples
 
-### Offset-based <a class="askgpt-btn" data-askgpt="Offset-based" title="Ask ChatGPT about this section">💬</a>
+### Offset-based <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Offset-based'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Offset-based" title="Ask ChatGPT about this section">💬</a>
 
 ```
 GET /users?offset=20&limit=10
@@ -123,7 +123,7 @@ GET /users?offset=20&limit=10
 }
 ```
 
-### Cursor-based <a class="askgpt-btn" data-askgpt="Cursor-based" title="Ask ChatGPT about this section">💬</a>
+### Cursor-based <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Cursor-based'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Cursor-based" title="Ask ChatGPT about this section">💬</a>
 
 ```
 GET /users?cursor=eyJpZCI6MTAwfQ==&limit=10

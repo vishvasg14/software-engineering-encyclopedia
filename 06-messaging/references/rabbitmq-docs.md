@@ -23,7 +23,7 @@ The authoritative source for RabbitMQ is the official documentation. This file c
 
 ## Key sections referenced in this document
 
-### Concepts <a class="askgpt-btn" data-askgpt="Concepts" title="Ask ChatGPT about this section">💬</a>
+### Concepts <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Concepts'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Concepts" title="Ask ChatGPT about this section">💬</a>
 
 | Topic | URL |
 |-------|-----|
@@ -36,7 +36,7 @@ The authoritative source for RabbitMQ is the official documentation. This file c
 | Virtual Hosts | <https://www.rabbitmq.com/docs/vhosts> |
 | Connections | <https://www.rabbitmq.com/docs/connections> |
 
-### Exchange types <a class="askgpt-btn" data-askgpt="Exchange types" title="Ask ChatGPT about this section">💬</a>
+### Exchange types <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Exchange%20types'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Exchange types" title="Ask ChatGPT about this section">💬</a>
 
 | Exchange | URL |
 |----------|-----|
@@ -45,7 +45,7 @@ The authoritative source for RabbitMQ is the official documentation. This file c
 | Topic | <https://www.rabbitmq.com/docs/exchanges#topic> |
 | Headers | <https://www.rabbitmq.com/docs/exchanges#headers> |
 
-### Patterns <a class="askgpt-btn" data-askgpt="Patterns" title="Ask ChatGPT about this section">💬</a>
+### Patterns <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Patterns'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Patterns" title="Ask ChatGPT about this section">💬</a>
 
 | Topic | URL |
 |-------|-----|
@@ -57,7 +57,7 @@ The authoritative source for RabbitMQ is the official documentation. This file c
 | Quorum Queues | <https://www.rabbitmq.com/docs/quorum-queues> |
 | Streams | <https://www.rabbitmq.com/docs/streams> |
 
-### Reliability <a class="askgpt-btn" data-askgpt="Reliability" title="Ask ChatGPT about this section">💬</a>
+### Reliability <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Reliability'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Reliability" title="Ask ChatGPT about this section">💬</a>
 
 | Topic | URL |
 |-------|-----|
@@ -68,7 +68,7 @@ The authoritative source for RabbitMQ is the official documentation. This file c
 | Consumer Priority | <https://www.rabbitmq.com/docs/priority> |
 | Persistence | <https://www.rabbitmq.com/docs/persistence-conf> |
 
-### Operations <a class="askgpt-btn" data-askgpt="Operations" title="Ask ChatGPT about this section">💬</a>
+### Operations <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Operations'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Operations" title="Ask ChatGPT about this section">💬</a>
 
 | Topic | URL |
 |-------|-----|
@@ -80,7 +80,7 @@ The authoritative source for RabbitMQ is the official documentation. This file c
 | High Availability | <https://www.rabbitmq.com/docs/ha> |
 | Backup | <https://www.rabbitmq.com/docs/backup> |
 
-### Security <a class="askgpt-btn" data-askgpt="Security" title="Ask ChatGPT about this section">💬</a>
+### Security <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Security'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Security" title="Ask ChatGPT about this section">💬</a>
 
 | Topic | URL |
 |-------|-----|
@@ -89,7 +89,7 @@ The authoritative source for RabbitMQ is the official documentation. This file c
 | TLS | <https://www.rabbitmq.com/docs/ssl> |
 | LDAP | <https://www.rabbitmq.com/docs/ldap> |
 
-### Clients <a class="askgpt-btn" data-askgpt="Clients" title="Ask ChatGPT about this section">💬</a>
+### Clients <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Clients'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Clients" title="Ask ChatGPT about this section">💬</a>
 
 | Language | Client |
 |----------|--------|

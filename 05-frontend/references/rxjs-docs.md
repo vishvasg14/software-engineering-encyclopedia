@@ -32,7 +32,7 @@ The authoritative source for RxJS is the official documentation. This file catal
 
 ## Operator categories
 
-### Creation operators <a class="askgpt-btn" data-askgpt="Creation operators" title="Ask ChatGPT about this section">💬</a>
+### Creation operators <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Creation%20operators'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Creation operators" title="Ask ChatGPT about this section">💬</a>
 
 | Operator | Purpose |
 |----------|---------|
@@ -48,7 +48,7 @@ The authoritative source for RxJS is the official documentation. This file catal
 | `throwError` | Error immediately |
 | `never` | Never emits or completes |
 
-### Transformation operators <a class="askgpt-btn" data-askgpt="Transformation operators" title="Ask ChatGPT about this section">💬</a>
+### Transformation operators <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Transformation%20operators'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Transformation operators" title="Ask ChatGPT about this section">💬</a>
 
 | Operator | Purpose |
 |----------|---------|
@@ -68,7 +68,7 @@ The authoritative source for RxJS is the official documentation. This file catal
 | `partition` | Split by predicate |
 | `toArray` | Collect into array on complete |
 
-### Filtering operators <a class="askgpt-btn" data-askgpt="Filtering operators" title="Ask ChatGPT about this section">💬</a>
+### Filtering operators <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Filtering%20operators'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Filtering operators" title="Ask ChatGPT about this section">💬</a>
 
 | Operator | Purpose |
 |----------|---------|
@@ -91,7 +91,7 @@ The authoritative source for RxJS is the official documentation. This file catal
 | `single` | Single value or error |
 | `find` / `findIndex` | First match |
 
-### Combination operators <a class="askgpt-btn" data-askgpt="Combination operators" title="Ask ChatGPT about this section">💬</a>
+### Combination operators <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Combination%20operators'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Combination operators" title="Ask ChatGPT about this section">💬</a>
 
 | Operator | Purpose |
 |----------|---------|
@@ -109,7 +109,7 @@ The authoritative source for RxJS is the official documentation. This file catal
 | `pairwise` | Current and previous |
 | `withLatestFrom` | Combine with second source |
 
-### Error handling operators <a class="askgpt-btn" data-askgpt="Error handling operators" title="Ask ChatGPT about this section">💬</a>
+### Error handling operators <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Error%20handling%20operators'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Error handling operators" title="Ask ChatGPT about this section">💬</a>
 
 | Operator | Purpose |
 |----------|---------|
@@ -119,7 +119,7 @@ The authoritative source for RxJS is the official documentation. This file catal
 | `retryUntil` | Retry until condition |
 | `retryConfig` (with delay) | Configurable retry |
 
-### Multicasting operators <a class="askgpt-btn" data-askgpt="Multicasting operators" title="Ask ChatGPT about this section">💬</a>
+### Multicasting operators <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Multicasting%20operators'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Multicasting operators" title="Ask ChatGPT about this section">💬</a>
 
 | Operator | Purpose |
 |----------|---------|
@@ -128,7 +128,7 @@ The authoritative source for RxJS is the official documentation. This file catal
 | `publish` | Multicast via connect |
 | `publishBehavior`, `publishLast`, `publishReplay` | Variants |
 
-### Utility operators <a class="askgpt-btn" data-askgpt="Utility operators" title="Ask ChatGPT about this section">💬</a>
+### Utility operators <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Utility%20operators'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Utility operators" title="Ask ChatGPT about this section">💬</a>
 
 | Operator | Purpose |
 |----------|---------|
