@@ -32,16 +32,46 @@
     // Auto-submit is NOT a real URL parameter — chatgpt.com does not honor
     // any query string that triggers the Send button. The "auto-submit"
     // checkbox is therefore a UI affordance: when checked, the prompt is
-    // prepended with a clear instruction asking ChatGPT to begin
-    // immediately, and a copy is also placed on the clipboard so the user
-    // can paste + Enter if ChatGPT fails to send on its own.
+    // also copied to the clipboard so the user can paste + Enter manually
+    // (especially useful on the mobile app or another device).
     var url = 'https://chatgpt.com/?prompt=' + encodeURIComponent(prompt);
     if (autoSubmit) {
-      try {
-        navigator.clipboard.writeText(prompt);
-      } catch (e) { /* clipboard unavailable, fall back silently */ }
+      copyToClipboard(prompt, null);
     }
     window.open(url, '_blank', 'noopener');
+  }
+
+  function copyToClipboard(text, buttonEl) {
+    var done = function () {
+      if (buttonEl) {
+        var orig = buttonEl.textContent;
+        buttonEl.textContent = 'Copied ✓';
+        setTimeout(function () { buttonEl.textContent = orig; }, 1500);
+      }
+    };
+    var fail = function () {
+      if (buttonEl) {
+        var orig = buttonEl.textContent;
+        buttonEl.textContent = 'Copy failed — select & copy manually';
+        setTimeout(function () { buttonEl.textContent = orig; }, 2500);
+      }
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(done).catch(function () {
+        // Fallback: select the preview <pre> element so user can Ctrl+C.
+        var previewEl = document.querySelector('#askgpt-modal .askgpt-preview');
+        if (previewEl) {
+          var range = document.createRange();
+          range.selectNodeContents(previewEl);
+          var sel = window.getSelection();
+          sel.removeAllRanges();
+          sel.addRange(range);
+        }
+        fail();
+      });
+    } else {
+      fail();
+    }
   }
 
   function closeModal() {
@@ -191,6 +221,16 @@
     // Buttons row
     var btnRow = document.createElement('div');
     btnRow.className = 'askgpt-actions';
+
+    var copy = document.createElement('button');
+    copy.type = 'button';
+    copy.className = 'askgpt-copy';
+    copy.textContent = 'Copy prompt';
+    copy.addEventListener('click', function () {
+      var p = buildPrompt(url, section, selectedPreset, textArea.value, autoSubmit);
+      copyToClipboard(p, copy);
+    });
+    btnRow.appendChild(copy);
 
     var cancel = document.createElement('button');
     cancel.type = 'button';
