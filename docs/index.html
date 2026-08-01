@@ -154,22 +154,9 @@
   }
 
   function mdToHtml(md) {
-    // PRE-PROCESS: split out the inline <a class="askgpt-btn"> that follows
-    // each `### heading` and put it on its own line below the heading.
-    // marked's lexer tokenizes `<a href="https://...?prompt=...long-url...">`
-    // and the long URL-encoded value confuses it, leading to the entire `<a>`
-    // being swallowed into literal text. Splitting the heading and button
-    // onto separate lines makes marked render the heading cleanly and the
-    // button as a standalone HTML block.
-    md = md.replace(
-      /^(#{1,6}\s+.+?)\s+<a class=(["'])askgpt-btn\2[^>]*>\s*💬\s*<\/a>\s*$/gm,
-      function (_, headingLine) {
-        const buttonMatch = headingLine.match(/(<a class=(["'])askgpt-btn\2[^>]*>\s*💬\s*<\/a>)$/);
-        if (!buttonMatch) return _;
-        const headingOnly = headingLine.slice(0, headingLine.length - buttonMatch[0].length).replace(/\s+$/, '');
-        return headingOnly + '\n\n' + buttonMatch[0];
-      }
-    );
+    // The AskGPT button is placed on its own line below each heading in the
+    // source markdown (see tools/...), so marked sees a clean heading line
+    // and a standalone HTML block — no preprocessing needed.
 
     const renderer = new marked.Renderer();
 
