@@ -77,3 +77,26 @@ Topics link to one another liberally. Java internals reference Spring, which ref
 ## Contributing
 
 This is an evolving project. Each topic is produced topic-by-topic in full depth rather than skimming the surface. A topic isn't marked complete until the entire template is filled, every JEP/spec/flag is verified, and every code example compiles on its target runtime.
+
+## Reading online
+
+### GitHub Pages reader (recommended)
+
+A reader page lives at `docs/index.html`. To enable GitHub Pages:
+
+1. Visit https://github.com/vishvasg14/software-engineering-encyclopedia/settings/pages
+2. **Source:** Deploy from a branch
+3. **Branch:** `main` &nbsp;·&nbsp; **Folder:** `/docs`
+4. Click **Save**
+
+After ~1 minute, the reader will be live at:
+
+```
+https://vishvasg14.github.io/software-engineering-encyclopedia/
+```
+
+The reader renders every chapter through `marked.js`, runs `mermaid.js` on diagrams, and loads `docs/assets/askgpt.js` so the AskGPT modal **actually fires** when you click a button.
+
+### github.com (no JS)
+
+Viewing a chapter on github.com (e.g. `blob/main/01-java-internals/jvm-internals.md`) shows the AskGPT buttons as visible but **inert** — GitHub strips `<script>` tags from rendered markdown, so the modal handler never runs. Clicking a button opens `chatgpt.com/?prompt=…` directly in a new tab with the prompt (and the section URL) pre-filled. Use the reader above for the picker modal UX.
