@@ -6,6 +6,11 @@ ruvector.db
 # Claude Code local settings
 .claude/settings.local.json
 
+# Local-only scratch from SDD workflow and other AI-assisted tooling
+.superpowers/
+.ruflo/
+.ruvector/
+
 # OS / editor cruft
 .DS_Store
 Thumbs.db
