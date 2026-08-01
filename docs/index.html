@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Software Engineering Encyclopedia — Reader</title>
+  <link rel="stylesheet" href="assets/askgpt.css">
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      max-width: 56rem;
+      margin: 0 auto;
+      padding: 1.5rem 1.25rem 6rem;
+      line-height: 1.55;
+      color: #1a1a1a;
+      background: #fafafa;
+    }
+    @media (prefers-color-scheme: dark) {
+      body { background: #0f0f0f; color: #e6e6e6; }
+      a { color: #7ec7ff; }
+      pre, code { background: #1c1c1c; color: #e6e6e6; }
+      table { border-color: #333; }
+      th, td { border-color: #333; }
+      blockquote { border-color: #444; color: #ccc; }
+    }
+    nav.topbar {
+      background: #fff;
+      border: 1px solid #e6e6e6;
+      border-radius: 6px;
+      padding: 0.75rem 1rem;
+      margin-bottom: 1.5rem;
+      font-size: 0.9rem;
+    }
+    @media (prefers-color-scheme: dark) {
+      nav.topbar { background: #1a1a1a; border-color: #333; }
+    }
+    nav.topbar select {
+      font-size: 0.95rem;
+      padding: 0.3rem 0.5rem;
+      margin-left: 0.5rem;
+    }
+    nav.topbar a { margin-right: 0.8rem; }
+    article {
+      background: #ffffff;
+      border: 1px solid #e6e6e6;
+      border-radius: 8px;
+      padding: 1.5rem 2rem;
+    }
+    @media (prefers-color-scheme: dark) {
+      article { background: #1a1a1a; border-color: #333; }
+    }
+    h1, h2, h3, h4, h5, h6 { line-height: 1.25; }
+    h1 { font-size: 1.75rem; margin-top: 0; }
+    h2 { font-size: 1.4rem; border-bottom: 1px solid #eee; padding-bottom: 0.3rem; margin-top: 2rem; }
+    @media (prefers-color-scheme: dark) {
+      h2 { border-bottom-color: #333; }
+    }
+    h3 { font-size: 1.15rem; margin-top: 1.5rem; }
+    pre {
+      background: #f4f4f4;
+      border-radius: 4px;
+      padding: 0.7rem 0.9rem;
+      overflow-x: auto;
+      font-size: 0.85rem;
+    }
+    code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    p > code, li > code { background: #f0f0f0; padding: 0.05rem 0.3rem; border-radius: 3px; font-size: 0.9em; }
+    @media (prefers-color-scheme: dark) {
+      p > code, li > code { background: #2a2a2a; }
+    }
+    table { border-collapse: collapse; margin: 1rem 0; }
+    th, td { border: 1px solid #ddd; padding: 0.4rem 0.7rem; }
+    blockquote {
+      border-left: 3px solid #ddd;
+      margin-left: 0;
+      padding-left: 1rem;
+      color: #555;
+    }
+    .loading, .error {
+      text-align: center;
+      padding: 2rem;
+      color: #888;
+    }
+    .error { color: #c00; }
+    .mermaid {
+      background: #fff;
+      border: 1px solid #eee;
+      border-radius: 6px;
+      padding: 1rem;
+      margin: 1rem 0;
+      text-align: center;
+    }
+    @media (prefers-color-scheme: dark) {
+      .mermaid { background: #1a1a1a; border-color: #333; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="topbar">
+  <strong>Software Engineering Encyclopedia</strong>
+  <span style="color:#888; margin-left:0.5rem;">(reader)</span>
+  &nbsp;|&nbsp;
+  <label for="chapter-picker">Chapter:
+    <select id="chapter-picker"></select>
+  </label>
+  &nbsp;|&nbsp;
+  <a href="../README.html">Index</a>
+</nav>
+
+<article id="content">
+  <div class="loading">Loading…</div>
+</article>
+
+<script>
+  // Tiny chapter index — kept in sync with the repo's chapters/ top-level.
+  // If you add a new chapter dir, add an entry here.
+  const CHAPTERS = [
+    { num: '01', slug: 'java-internals',       title: 'Java Internals' },
+    { num: '02', slug: 'javascript-typescript',title: 'JavaScript & TypeScript' },
+    { num: '03', slug: 'sql-databases',        title: 'SQL & Databases' },
+    { num: '04', slug: 'spring-ecosystem',     title: 'Spring Ecosystem' },
+    { num: '05', slug: 'frontend',             title: 'Frontend (Angular, Signals, RxJS)' },
+    { num: '06', slug: 'messaging',            title: 'Messaging (Kafka, RabbitMQ, Pulsar)' },
+    { num: '07', slug: 'apis',                 title: 'APIs (REST, GraphQL, gRPC, WebSocket)' },
+    { num: '08', slug: 'caching',              title: 'Caching (Redis, Caffeine, Memcached)' },
+    { num: '09', slug: 'system-design',        title: 'System Design & Distributed Systems' },
+    { num: '10', slug: 'devops',               title: 'DevOps (Docker, Kubernetes, Helm, Istio)' },
+    { num: '11', slug: 'cloud',                title: 'Cloud (AWS, Azure, GCP)' },
+    { num: '12', slug: 'observability',        title: 'Observability (Prometheus, Grafana, OpenTelemetry)' },
+    { num: '13', slug: 'security',             title: 'Security (OWASP, OAuth2, JWT, Encryption)' },
+    { num: '14', slug: 'testing',              title: 'Testing (Unit, Integration, Contract, Chaos)' },
+    { num: '15', slug: 'git',                  title: 'Git & Versioning' },
+    { num: '16', slug: 'software-engineering', title: 'Software Engineering (SOLID, Patterns, Refactoring)' },
+  ];
+
+  // Populate the chapter picker
+  const picker = document.getElementById('chapter-picker');
+  CHAPTERS.forEach(c => {
+    const opt = document.createElement('option');
+    opt.value = c.num;
+    opt.textContent = `${c.num}. ${c.title}`;
+    picker.appendChild(opt);
+  });
+
+  // Pick chapter from URL hash, e.g. #04
+  function currentChapterNum() {
+    const m = location.hash.match(/^#(\d{2})/);
+    return m ? m[1] : '01';
+  }
+  function basename(num) {
+    const c = CHAPTERS.find(x => x.num === num);
+    return c ? `${num}-${c.slug}/${c.slug}.md` : null;
+  }
+
+  function mdToHtml(md) {
+    // Use GitHub-flavored markdown via marked (CDN).
+    const renderer = new marked.Renderer();
+    // Replace ```mermaid blocks with <div class="mermaid">…</div> for mermaid.js.
+    renderer.code = function (code, lang) {
+      if (lang === 'mermaid') {
+        return '<div class="mermaid">' + code + '</div>';
+      }
+      return '<pre><code>' + escapeHtml(code) + '</code></pre>';
+    };
+    marked.setOptions({ renderer, gfm: true, breaks: false });
+    return marked.parse(md);
+  }
+  function escapeHtml(s) {
+    return s.replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  }
+
+  async function loadChapter(num) {
+    const path = basename(num);
+    const article = document.getElementById('content');
+    if (!path) {
+      article.innerHTML = `<div class="error">Unknown chapter: ${num}</div>`;
+      return;
+    }
+    article.innerHTML = '<div class="loading">Loading…</div>';
+    try {
+      // Pages serves the repo at /<repo-name>/... — fetch by relative path
+      // using the chapter's markdown file as the URL.
+      const url = path;
+      const res = await fetch(url);
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const md = await res.text();
+      article.innerHTML = mdToHtml(md);
+      // Re-trigger askgpt init for the freshly-injected buttons.
+      if (window.askgptInit) window.askgptInit();
+      else initAskGPT();
+      location.hash = '#' + num;
+    } catch (err) {
+      article.innerHTML = `<div class="error">Failed to load <code>${path}</code>: ${err.message}</div>`;
+    }
+  }
+
+  // Expose a re-init function so askgpt.js can hook into it.
+  // We expose askgptInit on window; askgpt.js IIFE assigns it.
+  window.askgptInit = function () {};
+
+  function initAskGPT() {
+    const buttons = document.querySelectorAll('a.askgpt-btn');
+    buttons.forEach(btn => {
+      if (btn.dataset.askgptBound) return;  // idempotent
+      btn.dataset.askgptBound = '1';
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const section = btn.getAttribute('data-askgpt') || 'this section';
+        const url = btn.getAttribute('data-askgpt-url') || btn.getAttribute('href') || '';
+        if (window.askgptShowModal) {
+          window.askgptShowModal(section, url);
+        } else {
+          // Fallback if askgpt.js IIFE hasn't exposed the helper yet:
+          window.open(btn.getAttribute('href'), '_blank', 'noopener');
+        }
+      });
+    });
+  }
+
+  picker.addEventListener('change', () => loadChapter(picker.value));
+  window.addEventListener('hashchange', () => {
+    const num = currentChapterNum();
+    picker.value = num;
+    loadChapter(num);
+  });
+
+  // Initial load
+  picker.value = currentChapterNum();
+  loadChapter(currentChapterNum());
+</script>
+
+<!-- Markdown parser: marked.js (vendored as a pinned version for Pages reliability) -->
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+
+<!-- Mermaid renderer (only runs against <div class="mermaid"> blocks) -->
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10.9.1/dist/mermaid.min.js"></script>
+<script>
+  if (window.mermaid) mermaid.initialize({ startOnLoad: true, securityLevel: 'loose', theme: document.documentElement.dataset.theme || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default') });
+</script>
+
+<!-- AskGPT click handler + modal -->
+<script src="assets/askgpt.js"></script>
+<script>
+  // After askgpt.js has run its IIFE, expose a re-init so we can re-bind
+  // buttons whenever a new chapter is loaded.
+  (function rebind() {
+    const buttons = document.querySelectorAll('a.askgpt-btn');
+    buttons.forEach(btn => {
+      // askgpt.js already bound these (it runs init() on DOMContentLoaded
+      // or immediately if the doc is already parsed). Nothing more to do.
+    });
+  })();
+</script>
+
+</body>
+</html>

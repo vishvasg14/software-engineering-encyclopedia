@@ -280,4 +280,10 @@
   } else {
     init();
   }
+
+  // Expose hooks so a host page (e.g. docs/index.html) can re-bind buttons
+  // after loading a new chapter via fetch(), and so it can trigger the
+  // modal programmatically.
+  window.askgptInit = init;
+  window.askgptShowModal = showModal;
 })();
