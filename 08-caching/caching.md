@@ -298,12 +298,13 @@ graph TB
 sequenceDiagram
     participant C as Client
     participant Loop as Event Loop
-    Loop->>Loop: epoll_wait / kqueue / select
+    Loop->>Loop: epoll_wait, kqueue or select
     C->>Loop: send command
     Loop->>Loop: parse
     Loop->>Loop: execute (single-threaded)
     Loop-->>C: response
-    Note over Loop: Memory access is the bottleneck;<br/>single-threading avoids locks
+    Note over Loop: Memory access is the bottleneck.<br/>Single-threading avoids locks.
+
 ```
 
 ## 8. Deep Dive

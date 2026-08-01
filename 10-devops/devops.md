@@ -559,16 +559,17 @@ Istio deploys an **Envoy sidecar proxy** alongside each service. The control pla
 ```mermaid
 graph TB
     subgraph "Service A pod"
-        AppA[App container]
-        SidecarA[Istio sidecar (Envoy)]
+        AppA["App container"]
+        SidecarA["Istio sidecar Envoy"]
     end
     subgraph "Service B pod"
-        AppB[App container]
-        SidecarB[Istio sidecar (Envoy)]
+        AppB["App container"]
+        SidecarB["Istio sidecar Envoy"]
     end
     AppA <--> SidecarA
     SidecarA <--> SidecarB
     SidecarB <--> AppB
+
 ```
 
 **Features:**
@@ -815,14 +816,14 @@ graph TB
 
 ```mermaid
 graph TB
-    Dev[Developer]
-    Git[(Git repo)]
-    CI[CI: build & test]
-    Registry[(Container registry)]
-    Argo[ArgoCD]
-    K8s[Kubernetes cluster]
-    Prometheus[Prometheus]
-    Grafana[Grafana]
+    Dev["Developer"]
+    Git[("Git repo")]
+    CI["CI: build and test"]
+    Registry[("Container registry")]
+    Argo["ArgoCD"]
+    K8s["Kubernetes cluster"]
+    Prometheus["Prometheus"]
+    Grafana["Grafana"]
 
     Dev ->|git push| Git
     Git -> CI
@@ -833,6 +834,7 @@ graph TB
     Argo ->|apply manifests| K8s
     K8s -> Prometheus
     Prometheus -> Grafana
+
 ```
 
 ### 9.3 Service mesh with Istio <a class='askgpt-btn' href='https://chatgpt.com/?prompt=Read%20this%20section%20of%20my%20encyclopedia%20and%20explain%20it%20in%20depth%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know%3A%0A%0Ahttps%3A%2F%2Fgithub.com%2Fvishvasg14%2Fsoftware-engineering-encyclopedia%2Fblob%2Fmain%2F10-devops%2Fdevops.md%2393-service-mesh-with-istio%0A%0ASection%20title%3A%209.3%20Service%20mesh%20with%20Istio' target='_blank' rel='noopener' data-askgpt='9.3 Service mesh with Istio' data-askgpt-url='https://github.com/vishvasg14/software-engineering-encyclopedia/blob/main/10-devops/devops.md#93-service-mesh-with-istio' data-askgpt-prompt-depth='Read%20this%20section%20of%20my%20encyclopedia%20and%20explain%20it%20in%20depth%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know%3A%0A%0Ahttps%3A%2F%2Fgithub.com%2Fvishvasg14%2Fsoftware-engineering-encyclopedia%2Fblob%2Fmain%2F10-devops%2Fdevops.md%2393-service-mesh-with-istio%0A%0ASection%20title%3A%209.3%20Service%20mesh%20with%20Istio' data-askgpt-prompt-examples='Read%20this%20section%20of%20my%20encyclopedia%20and%20give%20me%202-3%20real-world%20production%20examples%20for%20it.%20For%20each%3A%20what%20went%20right%2C%20what%20went%20wrong%2C%20and%20the%20lessons%20learned.%20Include%20company%20%2F%20project%20names%20if%20relevant.%0A%0Ahttps%3A%2F%2Fgithub.com%2Fvishvasg14%2Fsoftware-engineering-encyclopedia%2Fblob%2Fmain%2F10-devops%2Fdevops.md%2393-service-mesh-with-istio%0A%0ASection%20title%3A%209.3%20Service%20mesh%20with%20Istio' title='Ask ChatGPT about this section'>💬</a>

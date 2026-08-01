@@ -696,13 +696,14 @@ graph TB
 ```mermaid
 stateDiagram-v2
     [*] --> Unlocked
-    Unlocked --> Biased: first lock by thread T — flag +XX:+UseBiasedLocking (default pre-15)
+    Unlocked --> Biased: first lock by thread T, flag UseBiasedLocking (default pre-15)
     Biased --> Unlocked: lock released
-    Biased --> Lightweight: another thread CAS's the lock word — bulk rebias available
+    Biased --> Lightweight: another thread CAS on the lock word, bulk rebias available
     Lightweight --> Unlocked: lock released
-    Lightweight --> Inflated: contention detected — spinning exhausted
+    Lightweight --> Inflated: contention detected, spinning exhausted
     Inflated --> Unlocked: lock released
     Unlocked --> Lightweight: CAS the lock word directly
+
 ```
 
 **Biased locking** (deprecated in Java 15, removed in Java 18) — when a lock is uncontended and held by only one thread, the lock word stores the thread ID. Subsequent acquisitions by the same thread are free. Revocation cost is incurred when another thread tries to acquire.

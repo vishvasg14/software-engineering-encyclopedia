@@ -165,12 +165,12 @@ timeline
     title Git history
     2005 : Linus creates Git (April)
     2005 : Linux kernel moves to Git
+    2020 : Git 2.30 adds sparse-checkout
     2005 : Git 1.0 (December)
     2008 : GitHub launches
     2011 : GitLab launches
     2018 : Microsoft acquires GitHub
-    2020 : Git 2.30; sparse-checkout
-    2024 : Git 2.45
+
 ```
 
 ## 5. Problem Statement
