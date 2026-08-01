@@ -12,7 +12,7 @@ The authoritative source for Kubernetes is the official documentation. This file
 
 ## Topics referenced in the document
 
-### Concepts
+### Concepts <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Concepts'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Concepts" title="Ask ChatGPT about this section">💬</a>
 
 | Topic | URL |
 |-------|-----|
@@ -27,7 +27,7 @@ The authoritative source for Kubernetes is the official documentation. This file
 | Policies | <https://kubernetes.io/docs/concepts/policy/> |
 | Scheduling | <https://kubernetes.io/docs/concepts/scheduling-eviction/> |
 
-### Workload resources
+### Workload resources <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Workload%20resources'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Workload resources" title="Ask ChatGPT about this section">💬</a>
 
 | Resource | URL |
 |----------|-----|
@@ -39,7 +39,7 @@ The authoritative source for Kubernetes is the official documentation. This file
 | CronJobs | <https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/> |
 | ReplicaSets | <https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/> |
 
-### Networking
+### Networking <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Networking'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Networking" title="Ask ChatGPT about this section">💬</a>
 
 | Topic | URL |
 |-------|-----|
@@ -49,7 +49,7 @@ The authoritative source for Kubernetes is the official documentation. This file
 | DNS | <https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/> |
 | CNI | <https://kubernetes.io/docs/concepts/extend-kubernetes/compute-storage-net/network-plugins/> |
 
-### Storage
+### Storage <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Storage'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Storage" title="Ask ChatGPT about this section">💬</a>
 
 | Topic | URL |
 |-------|-----|
@@ -58,7 +58,7 @@ The authoritative source for Kubernetes is the official documentation. This file
 | StorageClasses | <https://kubernetes.io/docs/concepts/storage/storage-classes/> |
 | CSI | <https://kubernetes.io/docs/concepts/storage/csi/> |
 
-### Configuration
+### Configuration <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Configuration'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Configuration" title="Ask ChatGPT about this section">💬</a>
 
 | Topic | URL |
 |-------|-----|
@@ -66,7 +66,7 @@ The authoritative source for Kubernetes is the official documentation. This file
 | Secrets | <https://kubernetes.io/docs/concepts/configuration/secret/> |
 | Resource Quotas | <https://kubernetes.io/docs/concepts/policy/resource-quotas/> |
 
-### Security
+### Security <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Security'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Security" title="Ask ChatGPT about this section">💬</a>
 
 | Topic | URL |
 |-------|-----|
@@ -75,7 +75,7 @@ The authoritative source for Kubernetes is the official documentation. This file
 | Pod Security Standards | <https://kubernetes.io/docs/concepts/security/pod-security-standards/> |
 | Network Policies | <https://kubernetes.io/docs/concepts/services-networking/network-policies/> |
 
-### Tasks
+### Tasks <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Tasks'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Tasks" title="Ask ChatGPT about this section">💬</a>
 
 | Topic | URL |
 |-------|-----|

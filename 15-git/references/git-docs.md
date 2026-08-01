@@ -13,7 +13,7 @@ The authoritative source for Git is the official documentation. This file catalo
 
 ## Git command reference (selected)
 
-### Setup
+### Setup <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Setup'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Setup" title="Ask ChatGPT about this section">💬</a>
 
 | Command | Description |
 |---------|-------------|
@@ -22,7 +22,7 @@ The authoritative source for Git is the official documentation. This file catalo
 | `git init` | Initialize a repo |
 | `git clone <url>` | Clone a repo |
 
-### Local changes
+### Local changes <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Local%20changes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Local changes" title="Ask ChatGPT about this section">💬</a>
 
 | Command | Description |
 |---------|-------------|
@@ -37,7 +37,7 @@ The authoritative source for Git is the official documentation. This file catalo
 | `git stash` | Stash changes |
 | `git stash pop` | Restore stashed changes |
 
-### Branches
+### Branches <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Branches'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Branches" title="Ask ChatGPT about this section">💬</a>
 
 | Command | Description |
 |---------|-------------|
@@ -50,7 +50,7 @@ The authoritative source for Git is the official documentation. This file catalo
 | `git switch <name>` | Switch (newer) |
 | `git switch -c <name>` | Create + switch (newer) |
 
-### Merging and rebasing
+### Merging and rebasing <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Merging%20and%20rebasing'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Merging and rebasing" title="Ask ChatGPT about this section">💬</a>
 
 | Command | Description |
 |---------|-------------|
@@ -61,7 +61,7 @@ The authoritative source for Git is the official documentation. This file catalo
 | `git rebase --autosquash` | Auto-squash fixup commits |
 | `git pull --rebase` | Pull and rebase |
 
-### Remote
+### Remote <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Remote'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Remote" title="Ask ChatGPT about this section">💬</a>
 
 | Command | Description |
 |---------|-------------|
@@ -72,7 +72,7 @@ The authoritative source for Git is the official documentation. This file catalo
 | `git push` | Push to remote |
 | `git push --force-with-lease` | Safer force push |
 
-### Stashing and cleanup
+### Stashing and cleanup <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Stashing%20and%20cleanup'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Stashing and cleanup" title="Ask ChatGPT about this section">💬</a>
 
 | Command | Description |
 |---------|-------------|
@@ -83,7 +83,7 @@ The authoritative source for Git is the official documentation. This file catalo
 | `git stash drop` | Delete a stash |
 | `git gc` | Garbage collect |
 
-### Tags and releases
+### Tags and releases <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Tags%20and%20releases'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Tags and releases" title="Ask ChatGPT about this section">💬</a>
 
 | Command | Description |
 |---------|-------------|
@@ -94,7 +94,7 @@ The authoritative source for Git is the official documentation. This file catalo
 | `git tag -d v1.0.0` | Delete local tag |
 | `git push origin :v1.0.0` | Delete remote tag |
 
-### Inspect and debug
+### Inspect and debug <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Inspect%20and%20debug'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Inspect and debug" title="Ask ChatGPT about this section">💬</a>
 
 | Command | Description |
 |---------|-------------|

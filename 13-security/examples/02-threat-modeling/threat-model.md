@@ -21,7 +21,7 @@ A microservice that handles user registration, login, profile management, and pa
 
 ## STRIDE analysis
 
-### Spoofing (S)
+### Spoofing (S) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Spoofing%20(S)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Spoofing (S)" title="Ask ChatGPT about this section">💬</a>
 
 | Threat | Mitigation |
 |--------|-----------|
@@ -30,7 +30,7 @@ A microservice that handles user registration, login, profile management, and pa
 | Session hijacking | Secure session cookies, IP binding |
 | Impersonation via JWT | Validate iss, aud, exp, signature |
 
-### Tampering (T)
+### Tampering (T) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Tampering%20(T)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Tampering (T)" title="Ask ChatGPT about this section">💬</a>
 
 | Threat | Mitigation |
 |--------|-----------|
@@ -38,7 +38,7 @@ A microservice that handles user registration, login, profile management, and pa
 | Modify email content | TLS, DKIM/SPF/DMARC for email |
 | Modify password hash | Hashing with salt (Argon2id) |
 
-### Repudiation (R)
+### Repudiation (R) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Repudiation%20(R)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Repudiation (R)" title="Ask ChatGPT about this section">💬</a>
 
 | Threat | Mitigation |
 |--------|-----------|
@@ -46,7 +46,7 @@ A microservice that handles user registration, login, profile management, and pa
 | Admin denies data change | Immutable audit log |
 | API denies data access | Application logs with trace ID |
 
-### Information Disclosure (I)
+### Information Disclosure (I) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Information%20Disclosure%20(I)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Information Disclosure (I)" title="Ask ChatGPT about this section">💬</a>
 
 | Threat | Mitigation |
 |--------|-----------|
@@ -56,7 +56,7 @@ A microservice that handles user registration, login, profile management, and pa
 | Timing attacks | Constant-time comparison for tokens |
 | Backup data leak | Encrypted backups; access controls |
 
-### Denial of Service (D)
+### Denial of Service (D) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Denial%20of%20Service%20(D)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Denial of Service (D)" title="Ask ChatGPT about this section">💬</a>
 
 | Threat | Mitigation |
 |--------|-----------|
@@ -65,7 +65,7 @@ A microservice that handles user registration, login, profile management, and pa
 | Large payload DoS | Request size limits; rate limits |
 | Database connection storm | Connection pool with backpressure |
 
-### Elevation of Privilege (E)
+### Elevation of Privilege (E) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Elevation%20of%20Privilege%20(E)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Elevation of Privilege (E)" title="Ask ChatGPT about this section">💬</a>
 
 | Threat | Mitigation |
 |--------|-----------|

@@ -13,7 +13,7 @@ The authoritative source for AWS is the official documentation. This file catalo
 
 ## Key services referenced in the document
 
-### Compute
+### Compute <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Compute'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Compute" title="Ask ChatGPT about this section">💬</a>
 
 | Service | URL |
 |---------|-----|
@@ -26,7 +26,7 @@ The authoritative source for AWS is the official documentation. This file catalo
 | **Lightsail** | <https://docs.aws.amazon.com/lightsail/> |
 | **Batch** | <https://docs.aws.amazon.com/batch/> |
 
-### Storage
+### Storage <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Storage'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Storage" title="Ask ChatGPT about this section">💬</a>
 
 | Service | URL |
 |---------|-----|
@@ -37,7 +37,7 @@ The authoritative source for AWS is the official documentation. This file catalo
 | **Glacier** | <https://docs.aws.amazon.com/glacier/> |
 | **Storage Gateway** | <https://docs.aws.amazon.com/storagegateway/> |
 
-### Database
+### Database <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Database'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Database" title="Ask ChatGPT about this section">💬</a>
 
 | Service | URL |
 |---------|-----|
@@ -50,7 +50,7 @@ The authoritative source for AWS is the official documentation. This file catalo
 | **DocumentDB** | <https://docs.aws.amazon.com/documentdb/> |
 | **Timestream** | <https://docs.aws.amazon.com/timestream/> |
 
-### Networking
+### Networking <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Networking'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Networking" title="Ask ChatGPT about this section">💬</a>
 
 | Service | URL |
 |---------|-----|
@@ -63,7 +63,7 @@ The authoritative source for AWS is the official documentation. This file catalo
 | **PrivateLink** | <https://docs.aws.amazon.com/privatelink/> |
 | **Route 53 Resolver** | <https://docs.aws.amazon.com/route53/latest/dnsresolver/> |
 
-### Security
+### Security <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Security'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Security" title="Ask ChatGPT about this section">💬</a>
 
 | Service | URL |
 |---------|-----|
@@ -76,7 +76,7 @@ The authoritative source for AWS is the official documentation. This file catalo
 | **Macie** | <https://docs.aws.amazon.com/macie/> |
 | **Cognito** | <https://docs.aws.amazon.com/cognito/> |
 
-### Messaging
+### Messaging <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Messaging'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Messaging" title="Ask ChatGPT about this section">💬</a>
 
 | Service | URL |
 |---------|-----|
@@ -88,14 +88,14 @@ The authoritative source for AWS is the official documentation. This file catalo
 | **MSK (Managed Kafka)** | <https://docs.aws.amazon.com/msk/> |
 | **Kinesis** | <https://docs.aws.amazon.com/kinesis/> |
 
-### API Gateway
+### API Gateway <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'API%20Gateway'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="API Gateway" title="Ask ChatGPT about this section">💬</a>
 
 | Service | URL |
 |---------|-----|
 | **API Gateway** | <https://docs.aws.amazon.com/apigateway/> |
 | **API Gateway HTTP API** | (within API Gateway docs) |
 
-### Observability
+### Observability <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Observability'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Observability" title="Ask ChatGPT about this section">💬</a>
 
 | Service | URL |
 |---------|-----|
@@ -105,7 +105,7 @@ The authoritative source for AWS is the official documentation. This file catalo
 | **CloudTrail** | <https://docs.aws.amazon.com/cloudtrail/> |
 | **Config** | <https://docs.aws.amazon.com/config/> |
 
-### Serverless
+### Serverless <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Serverless'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Serverless" title="Ask ChatGPT about this section">💬</a>
 
 | Service | URL |
 |---------|-----|
@@ -113,7 +113,7 @@ The authoritative source for AWS is the official documentation. This file catalo
 | **Step Functions** | <https://docs.aws.amazon.com/step-functions/> |
 | **Fargate** | <https://docs.aws.amazon.com/fargate/> |
 
-### Containers
+### Containers <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Containers'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Containers" title="Ask ChatGPT about this section">💬</a>
 
 | Service | URL |
 |---------|-----|
@@ -121,7 +121,7 @@ The authoritative source for AWS is the official documentation. This file catalo
 | **EKS** | <https://docs.aws.amazon.com/eks/> |
 | **ECR** | <https://docs.aws.amazon.com/ecr/> |
 
-### Cost management
+### Cost management <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Cost%20management'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Cost management" title="Ask ChatGPT about this section">💬</a>
 
 | Service | URL |
 |---------|-----|

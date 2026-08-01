@@ -119,15 +119,15 @@ graph TB
 
 ## 3. Five Ws + One H
 
-### What
+### What <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'What'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="What" title="Ask ChatGPT about this section">💬</a>
 
 Software engineering is the disciplined study and practice of designing, building, testing, and maintaining software systems. The discipline combines **principles** (what good design looks like), **patterns** (reusable solutions to recurring problems), **practices** (how teams actually work), and **architecture** (the structural decisions that constrain the whole system).
 
-### Why
+### Why <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Why'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Why" title="Ask ChatGPT about this section">💬</a>
 
 Software systems rot. Without discipline, codebases accumulate complexity, dependencies, and shortcuts until change becomes impossible. Patterns and principles are the load-bearing walls that prevent collapse. They are also the shared vocabulary that lets teams talk about design.
 
-### When
+### When <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'When'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="When" title="Ask ChatGPT about this section">💬</a>
 
 - **1968 — NATO Software Engineering Conference** coins the term "software engineering" in response to the "software crisis."
 - **1987 — Liskov Substitution Principle** published by Barbara Liskov.
@@ -142,15 +142,15 @@ Software systems rot. Without discipline, codebases accumulate complexity, depen
 - **2008 — Onion Architecture** by Jeffrey Palermo.
 - **2012/2017 — Clean Architecture** by Robert C. Martin.
 
-### Where
+### Where <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Where'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Where" title="Ask ChatGPT about this section">💬</a>
 
 Every software system, from embedded firmware to planet-scale distributed services. The vocabulary is universal; the application varies by language, scale, and domain.
 
-### Who
+### Who <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Who'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Who" title="Ask ChatGPT about this section">💬</a>
 
 Engineers, architects, technical leads. Read by everyone who writes code or designs systems. Patterns are not the exclusive domain of senior engineers — they are tools every engineer should recognize.
 
-### How
+### How <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'How'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="How" title="Ask ChatGPT about this section">💬</a>
 
 **Apply principles to evaluate design.** When designing a class, ask the SOLID questions: one responsibility? extensible without modification? substitutable? interface minimal? abstractions concrete? When designing a system, ask the architectural questions: where do dependencies point? what is the innermost layer? how do outer layers communicate with inner? **Apply patterns to solve recurring problems** — but only when the problem matches the pattern's intent, never for its own sake. **Refactor continuously** to keep code aligned with principles as understanding evolves.
 
@@ -158,27 +158,27 @@ Engineers, architects, technical leads. Read by everyone who writes code or desi
 
 ## 4. History
 
-### 4.1 The software crisis (1968)
+### 4.1 The software crisis (1968) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'4.1%20The%20software%20crisis%20(1968)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="4.1 The software crisis (1968)" title="Ask ChatGPT about this section">💬</a>
 
 The 1968 NATO Software Engineering Conference in Garmisch, Germany, coined the term **software engineering** to address the "software crisis" — projects running over budget, behind schedule, and producing unreliable code. The conference called for disciplined practices analogous to civil engineering.
 
-### 4.2 Structured programming and design (1970s–1980s)
+### 4.2 Structured programming and design (1970s–1980s) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'4.2%20Structured%20programming%20and%20design%20(1970s%E2%80%931980s)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="4.2 Structured programming and design (1970s–1980s)" title="Ask ChatGPT about this section">💬</a>
 
 Edsger Dijkstra's *Notes on Structured Programming* (1970) established that programs should be constructed from a small set of control structures. The 1970s and 1980s saw the rise of structured analysis (DeMarco, Yourdon) and structured design (Constantine, Yourdon), which introduced concepts like coupling and cohesion that prefigured SOLID.
 
-### 4.3 Object-orientation and the birth of patterns (1980s–1990s)
+### 4.3 Object-orientation and the birth of patterns (1980s–1990s) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'4.3%20Object-orientation%20and%20the%20birth%20of%20patterns%20(1980s%E2%80%931990s)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="4.3 Object-orientation and the birth of patterns (1980s–1990s)" title="Ask ChatGPT about this section">💬</a>
 
 Smalltalk (1980) and C++ (1985) brought object-orientation to the mainstream. The "Gang of Four" — Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides — began cataloging reusable OO patterns in the late 1980s. Their 1994 book codified 23 patterns organized into creational, structural, and behavioral categories.
 
-### 4.4 SOLID and the agile turn (2000s)
+### 4.4 SOLID and the agile turn (2000s) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'4.4%20SOLID%20and%20the%20agile%20turn%20(2000s)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="4.4 SOLID and the agile turn (2000s)" title="Ask ChatGPT about this section">💬</a>
 
 Robert C. Martin consolidated decades of OO design wisdom into five principles, abbreviated by Michael Feathers as **SOLID**. *Agile Software Development: Principles, Patterns, and Practices* (2003) and later *Clean Code* (2008) and *Clean Architecture* (2017) extended these ideas into team practices and system architecture.
 
-### 4.5 Enterprise patterns and DDD (2000s)
+### 4.5 Enterprise patterns and DDD (2000s) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'4.5%20Enterprise%20patterns%20and%20DDD%20(2000s)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="4.5 Enterprise patterns and DDD (2000s)" title="Ask ChatGPT about this section">💬</a>
 
 Martin Fowler's *Patterns of Enterprise Application Architecture* (2002) addressed the recurring problems of building business applications on relational databases. Eric Evans's *Domain-Driven Design* (2003) introduced the strategic patterns — Bounded Context, Context Map, Aggregate — that govern how large systems are decomposed.
 
-### 4.6 The architectural turn (2010s)
+### 4.6 The architectural turn (2010s) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'4.6%20The%20architectural%20turn%20(2010s)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="4.6 The architectural turn (2010s)" title="Ask ChatGPT about this section">💬</a>
 
 The 2010s saw the convergence of Clean, Hexagonal, and Onion architectures. All three share a single principle — **the Dependency Rule** — and differ mainly in vocabulary and diagram conventions. Microservices, DevOps, and cloud-native architecture revived interest in patterns at the system level (circuit breaker, saga, outbox, CQRS, event sourcing).
 
@@ -188,31 +188,31 @@ The 2010s saw the convergence of Clean, Hexagonal, and Onion architectures. All 
 
 Software systems fail in characteristic ways. Without disciplined application of principles and patterns, every codebase accumulates the same pathologies:
 
-### 5.1 Rigidity
+### 5.1 Rigidity <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'5.1%20Rigidity'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="5.1 Rigidity" title="Ask ChatGPT about this section">💬</a>
 
 A change to one module cascades into changes throughout the system. Adding a feature requires touching dozens of files for reasons unrelated to the feature itself. The cost of change grows super-linearly over time.
 
-### 5.2 Fragility
+### 5.2 Fragility <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'5.2%20Fragility'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="5.2 Fragility" title="Ask ChatGPT about this section">💬</a>
 
 Changes break unrelated parts of the system. A bug fix in module A causes failures in module Z, which has no apparent relationship to A. The system becomes a minefield where any change might detonate an unrelated component.
 
-### 5.3 Immobility
+### 5.3 Immobility <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'5.3%20Immobility'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="5.3 Immobility" title="Ask ChatGPT about this section">💬</a>
 
 Code that should be reusable cannot be extracted. A component that would be useful in another system is entangled with so many domain-specific dependencies that extracting it is harder than rewriting it.
 
-### 5.4 Viscosity
+### 5.4 Viscosity <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'5.4%20Viscosity'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="5.4 Viscosity" title="Ask ChatGPT about this section">💬</a>
 
 Doing things right is harder than doing things wrong. The "design-preserving" path through the code is so convoluted that developers take hacks to make progress. Each hack makes the next hack more likely.
 
-### 5.5 Needless complexity
+### 5.5 Needless complexity <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'5.5%20Needless%20complexity'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="5.5 Needless complexity" title="Ask ChatGPT about this section">💬</a>
 
 The system contains infrastructure for capabilities that aren't currently required. YAGNI violations accumulate. The code anticipates change that never comes, and the anticipated change never matches the actual change.
 
-### 5.6 Needless repetition
+### 5.6 Needless repetition <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'5.6%20Needless%20repetition'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="5.6 Needless repetition" title="Ask ChatGPT about this section">💬</a>
 
 The same expression of a concept appears in multiple places. Changing the concept requires finding and changing every occurrence. Bugs that should be impossible (because they live in one place) appear in many places.
 
-### 5.7 Opacity
+### 5.7 Opacity <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'5.7%20Opacity'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="5.7 Opacity" title="Ask ChatGPT about this section">💬</a>
 
 Code is hard to read and understand. The intent is obscured by convoluted control flow, cryptic names, and entangled responsibilities. New engineers take months to become productive.
 
@@ -222,27 +222,27 @@ These seven pathologies map directly to the principles that prevent them. Rigidi
 
 ## 6. Real-World Motivation
 
-### 6.1 Amazon
+### 6.1 Amazon <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'6.1%20Amazon'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="6.1 Amazon" title="Ask ChatGPT about this section">💬</a>
 
 Amazon's shift from a monolithic application to service-oriented architecture (2001–2002) was driven by exactly the pathologies above. Jeff Bezos's famous API mandate ("all teams will henceforth expose their data and functionality through service interfaces") was an architectural-level application of DIP and ISP. The mandate enabled independent deployability and parallel team velocity.
 
-### 6.2 Google
+### 6.2 Google <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'6.2%20Google'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="6.2 Google" title="Ask ChatGPT about this section">💬</a>
 
 Google's monorepo and strict code review culture operationalize the principle that code is read more than written. Their testing infrastructure enforces test coverage at scale; their style guides (especially the C++ style guide) are an attempt to enforce the patterns that prevent the pathologies.
 
-### 6.3 Microsoft
+### 6.3 Microsoft <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'6.3%20Microsoft'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="6.3 Microsoft" title="Ask ChatGPT about this section">💬</a>
 
 .NET, C#, and the .NET runtime are designed around patterns: dependency injection is built into the framework, ASP.NET Core's middleware pipeline is a chain-of-responsibility implementation, and Entity Framework is built on Unit of Work and Repository.
 
-### 6.4 Netflix
+### 6.4 Netflix <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'6.4%20Netflix'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="6.4 Netflix" title="Ask ChatGPT about this section">💬</a>
 
 Netflix's Hystrix (now replaced by Resilience4j) was the production reference for the Circuit Breaker pattern at scale. Their migration from a monolithic DVD-rental system to a cloud-native microservices architecture is one of the most-studied applications of clean architecture and dependency inversion at scale.
 
-### 6.5 Meta (Facebook)
+### 6.5 Meta (Facebook) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'6.5%20Meta%20(Facebook)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="6.5 Meta (Facebook)" title="Ask ChatGPT about this section">💬</a>
 
 Meta's "Move fast with stable infrastructure" culture combines YAGNI (move fast) with disciplined architectural patterns (stable infrastructure). Their HHVM, Hack language, and React are all attempts to provide patterns and primitives that prevent the pathologies at the language level.
 
-### 6.6 Stripe
+### 6.6 Stripe <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'6.6%20Stripe'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="6.6 Stripe" title="Ask ChatGPT about this section">💬</a>
 
 Stripe's API design is a master class in Interface Segregation. Their API surface is decomposed into many small, focused resources (Charges, Customers, PaymentIntents, SetupIntents) rather than one large "Payment" interface. This permits evolution without breaking the world.
 
@@ -250,7 +250,7 @@ Stripe's API design is a master class in Interface Segregation. Their API surfac
 
 ## 7. Internal Working
 
-### 7.1 How principles interact
+### 7.1 How principles interact <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'7.1%20How%20principles%20interact'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="7.1 How principles interact" title="Ask ChatGPT about this section">💬</a>
 
 Principles are not independent. They reinforce each other:
 
@@ -275,7 +275,7 @@ graph LR
 - **DIP requires ISP.** Dependency inversion means depending on abstractions. Useful abstractions are small and focused (ISP), so high-level modules depend only on what they need.
 - **LSP requires DIP.** Substitutability is testable only when the abstraction is stable (DIP). Without DIP, the "base type" is concrete and LSP violations are hard to detect.
 
-### 7.2 How patterns relate to principles
+### 7.2 How patterns relate to principles <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'7.2%20How%20patterns%20relate%20to%20principles'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="7.2 How patterns relate to principles" title="Ask ChatGPT about this section">💬</a>
 
 Patterns are not principles; they are solutions. Each pattern embodies several principles:
 
@@ -295,7 +295,7 @@ Patterns are not principles; they are solutions. Each pattern embodies several p
 | **Unit of Work** | SRP | DIP |
 | **Service Layer** | SRP, DIP | ISP |
 
-### 7.3 How refactoring operates
+### 7.3 How refactoring operates <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'7.3%20How%20refactoring%20operates'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="7.3 How refactoring operates" title="Ask ChatGPT about this section">💬</a>
 
 Refactoring is a process, not an event. The discipline:
 
@@ -311,7 +311,7 @@ graph LR
 
 The key discipline: **separate refactoring from feature work**. A "refactor + add feature" change is two changes in one commit, and when tests fail, you cannot tell which change broke things.
 
-### 7.4 Architecture layering
+### 7.4 Architecture layering <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'7.4%20Architecture%20layering'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="7.4 Architecture layering" title="Ask ChatGPT about this section">💬</a>
 
 Architectural patterns (Clean, Hexagonal, Onion) share the same internal structure:
 
@@ -334,7 +334,7 @@ The Dependency Rule: source code dependencies point only inward. Inner circles k
 
 ## 8. Deep Dive
 
-### 8.1 SOLID principles
+### 8.1 SOLID principles <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.1%20SOLID%20principles'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.1 SOLID principles" title="Ask ChatGPT about this section">💬</a>
 
 #### 8.1.1 Single Responsibility Principle (SRP)
 
@@ -483,7 +483,7 @@ class AppConfig {
 
 **The "new" keyword is a glue smell.** Every `new` of a concrete class creates a hard dependency. In production code, `new` should appear only at composition roots (main methods, DI containers, factories).
 
-### 8.2 Gang of Four patterns (23 patterns)
+### 8.2 Gang of Four patterns (23 patterns) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.2%20Gang%20of%20Four%20patterns%20(23%20patterns)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.2 Gang of Four patterns (23 patterns)" title="Ask ChatGPT about this section">💬</a>
 
 The GoF book organizes 23 patterns into three categories. Each pattern has a structure, a problem it solves, a solution, and consequences. Here is a production-grade summary.
 
@@ -525,7 +525,7 @@ The GoF book organizes 23 patterns into three categories. Each pattern has a str
 | **Template Method** | Define the skeleton of an algorithm in an operation, deferring some steps to subclasses |
 | **Visitor** | Represent an operation to be performed on the elements of an object structure |
 
-### 8.3 Enterprise patterns (Fowler)
+### 8.3 Enterprise patterns (Fowler) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.3%20Enterprise%20patterns%20(Fowler)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.3 Enterprise patterns (Fowler)" title="Ask ChatGPT about this section">💬</a>
 
 #### 8.3.1 Repository
 
@@ -602,7 +602,7 @@ interface Specification<T> {
 }
 ```
 
-### 8.4 Refactoring catalog
+### 8.4 Refactoring catalog <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.4%20Refactoring%20catalog'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.4 Refactoring catalog" title="Ask ChatGPT about this section">💬</a>
 
 #### 8.4.1 Composing methods
 
@@ -653,7 +653,7 @@ The heart of refactoring: long methods are the most common smell. The cure is to
 | **Introduce Null Object** | Replace null checks with a NullObject |
 | **Introduce Assertion** | Make assumptions explicit |
 
-### 8.5 Code smells catalog
+### 8.5 Code smells catalog <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.5%20Code%20smells%20catalog'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.5 Code smells catalog" title="Ask ChatGPT about this section">💬</a>
 
 Code smells are surface indications of deeper problems. The Fowler taxonomy has 22 smells in 5 categories.
 
@@ -705,7 +705,7 @@ Code smells are surface indications of deeper problems. The Fowler taxonomy has 
 | **Message Chains** | a.b().c().d() | Hide Delegate |
 | **Middle Man** | Class exists only to delegate | Remove Middle Man, Inline Method |
 
-### 8.6 Clean Architecture
+### 8.6 Clean Architecture <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.6%20Clean%20Architecture'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.6 Clean Architecture" title="Ask ChatGPT about this section">💬</a>
 
 The Clean Architecture is Robert C. Martin's unification of the inward-pointing-dependency idea across Hexagonal, Onion, and his own earlier work.
 
@@ -756,7 +756,7 @@ class StripePaymentGateway implements PaymentGateway { /* ... */ }
 
 This is **Dependency Inversion applied at the architectural level**. The high-level policy (use case) defines the interface; the low-level mechanism (Stripe adapter) implements it.
 
-### 8.7 Hexagonal Architecture (Ports & Adapters)
+### 8.7 Hexagonal Architecture (Ports & Adapters) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.7%20Hexagonal%20Architecture%20(Ports%20%26amp%3B%20Adapters)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.7 Hexagonal Architecture (Ports &amp; Adapters)" title="Ask ChatGPT about this section">💬</a>
 
 Alistair Cockburn, 2005. The application has a single conceptual "inside" — the business logic. The "outside" is everything that interacts with it: databases, UIs, message queues, external services. The boundary is crossed through **ports** (interfaces defined inside) and **adapters** (implementations outside).
 
@@ -768,7 +768,7 @@ Alistair Cockburn, 2005. The application has a single conceptual "inside" — th
 | Driving side | UI / API consumers (left side) |
 | Driven side | DB, queues, external services (right side) |
 
-### 8.8 Onion Architecture
+### 8.8 Onion Architecture <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.8%20Onion%20Architecture'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.8 Onion Architecture" title="Ask ChatGPT about this section">💬</a>
 
 Jeffrey Palermo, 2008. The same idea with more explicit layering:
 
@@ -781,17 +781,17 @@ Jeffrey Palermo, 2008. The same idea with more explicit layering:
 
 ## 9. Architecture
 
-### 9.1 Layered architecture vs Clean/Hexagonal/Onion
+### 9.1 Layered architecture vs Clean/Hexagonal/Onion <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'9.1%20Layered%20architecture%20vs%20Clean%2FHexagonal%2FOnion'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="9.1 Layered architecture vs Clean/Hexagonal/Onion" title="Ask ChatGPT about this section">💬</a>
 
 Traditional **layered architecture** (Presentation → Business → Persistence → Database) is the most common but also the most abused. The failure mode: dependencies flow downward in theory but creep upward in practice, because the persistence layer calls into the business layer for "convenience," and the business layer reaches into the presentation layer for "just one thing."
 
 Clean/Hexagonal/Onion fix this with the Dependency Rule. The compromise: package structure must enforce the rule (using tools like ArchUnit in Java, dependency-cruiser in JavaScript).
 
-### 9.2 Bounded Contexts and microservices
+### 9.2 Bounded Contexts and microservices <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'9.2%20Bounded%20Contexts%20and%20microservices'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="9.2 Bounded Contexts and microservices" title="Ask ChatGPT about this section">💬</a>
 
 Eric Evans's Bounded Context is the boundary within which a domain model is consistent. Above that boundary, the same word may mean different things ("Account" in billing ≠ "Account" in support). Microservices are one realization of Bounded Contexts at the deployment level. The Clean Architecture applies *within* each Bounded Context.
 
-### 9.3 Event-driven architecture
+### 9.3 Event-driven architecture <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'9.3%20Event-driven%20architecture'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="9.3 Event-driven architecture" title="Ask ChatGPT about this section">💬</a>
 
 When the use case produces a domain event, that event can be consumed by other contexts. Event-driven architectures enable loose coupling at the system level: the producer doesn't know who consumes. Common patterns: Outbox (transactional event publishing), Saga (long-running business process), CQRS (separating read and write models), Event Sourcing (storing events as the source of truth).
 
@@ -813,7 +813,7 @@ The **performance anti-pattern**: applying patterns speculatively because "they 
 
 ## 11. Security
 
-### 11.1 Security implications of patterns
+### 11.1 Security implications of patterns <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'11.1%20Security%20implications%20of%20patterns'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="11.1 Security implications of patterns" title="Ask ChatGPT about this section">💬</a>
 
 - **Singleton** holding credentials: a single global point of compromise. Prefer dependency injection with named instances.
 - **Observer** with insecure subjects: a compromised publisher can push malicious state. Validate at the subject.
@@ -821,7 +821,7 @@ The **performance anti-pattern**: applying patterns speculatively because "they 
 - **Decorator** that wraps a security check: if the wrapper can be bypassed (e.g., by calling the wrapped object directly), the security boundary is illusory.
 - **Repository** preventing SQL injection: the Repository is the natural place to centralize parameter binding. Never construct SQL via string concatenation.
 
-### 11.2 Security implications of SOLID
+### 11.2 Security implications of SOLID <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'11.2%20Security%20implications%20of%20SOLID'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="11.2 Security implications of SOLID" title="Ask ChatGPT about this section">💬</a>
 
 - **DIP** enables testing security-critical code with deterministic mocks — invaluable.
 - **SRP** means a security review can focus on one concern at a time.
@@ -833,7 +833,7 @@ The **performance anti-pattern**: applying patterns speculatively because "they 
 
 ## 12. Production Engineering
 
-### 12.1 Refactoring legacy code
+### 12.1 Refactoring legacy code <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'12.1%20Refactoring%20legacy%20code'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="12.1 Refactoring legacy code" title="Ask ChatGPT about this section">💬</a>
 
 Michael Feathers' *Working Effectively with Legacy Code* defines legacy code as "code without tests." The refactoring workflow for legacy systems:
 
@@ -843,7 +843,7 @@ Michael Feathers' *Working Effectively with Legacy Code* defines legacy code as 
 4. **Refactor in small steps** — extract methods, move fields, rename — running tests after each step.
 5. **Add new tests** — once the code is testable, add behavior tests.
 
-### 12.2 Code review for SOLID violations
+### 12.2 Code review for SOLID violations <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'12.2%20Code%20review%20for%20SOLID%20violations'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="12.2 Code review for SOLID violations" title="Ask ChatGPT about this section">💬</a>
 
 A code review checklist:
 
@@ -853,7 +853,7 @@ A code review checklist:
 - **ISP:** Does the implementation stub out any interface methods?
 - **DIP:** Does this class `new` up a concrete dependency? Is the dependency injected?
 
-### 12.3 Dependency injection in practice
+### 12.3 Dependency injection in practice <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'12.3%20Dependency%20injection%20in%20practice'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="12.3 Dependency injection in practice" title="Ask ChatGPT about this section">💬</a>
 
 Three styles:
 
@@ -865,7 +865,7 @@ Three styles:
 
 Production default: **constructor injection**. Reserve service locator for legacy integration where you can't change constructors.
 
-### 12.4 Applying patterns in a microservices world
+### 12.4 Applying patterns in a microservices world <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'12.4%20Applying%20patterns%20in%20a%20microservices%20world'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="12.4 Applying patterns in a microservices world" title="Ask ChatGPT about this section">💬</a>
 
 | Pattern | Where it applies |
 |---------|----------------|
@@ -884,19 +884,19 @@ Production default: **constructor injection**. Reserve service locator for legac
 
 ## 13. Production Case Studies
 
-### 13.1 Amazon: API mandate
+### 13.1 Amazon: API mandate <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'13.1%20Amazon%3A%20API%20mandate'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="13.1 Amazon: API mandate" title="Ask ChatGPT about this section">💬</a>
 
 In 2002, Bezos circulated the API mandate: "All teams will henceforth expose their data and functionality through service interfaces." Teams that didn't comply would be fired. The mandate enforced DIP at the company level: any team's functionality was accessible only through an interface, never through direct calls. The result: independent deployability, parallel team velocity, and the architecture that supported the AWS era.
 
-### 13.2 Netflix: Chaos and resilience patterns
+### 13.2 Netflix: Chaos and resilience patterns <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'13.2%20Netflix%3A%20Chaos%20and%20resilience%20patterns'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="13.2 Netflix: Chaos and resilience patterns" title="Ask ChatGPT about this section">💬</a>
 
 Netflix's migration to AWS (2008–2010) drove the development of the **circuit breaker** pattern (Hystrix, 2012), **bulkhead** isolation, and chaos engineering (Chaos Monkey, 2011). The patterns operate at the integration level: when one downstream service is unhealthy, the calling service fails fast, isolates its impact via a separate thread pool, and degrades gracefully.
 
-### 13.3 Shopify: Modular monolith
+### 13.3 Shopify: Modular monolith <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'13.3%20Shopify%3A%20Modular%20monolith'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="13.3 Shopify: Modular monolith" title="Ask ChatGPT about this section">💬</a>
 
 Shopify runs a modular monolith with explicit module boundaries enforced by a "polaris" gem that uses Ruby's module system to declare each module's allowed dependencies. Violations are CI failures. The approach is Clean Architecture applied to a Rails app: the application has internal modules with enforced dependency direction.
 
-### 13.4 Basecamp: DHH's "vanilla Rails" anti-case
+### 13.4 Basecamp: DHH's "vanilla Rails" anti-case <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'13.4%20Basecamp%3A%20DHH's%20%26quot%3Bvanilla%20Rails%26quot%3B%20anti-case'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="13.4 Basecamp: DHH's &quot;vanilla Rails&quot; anti-case" title="Ask ChatGPT about this section">💬</a>
 
 DHH (Rails creator) famously argued against microservices and complex architecture, favoring "vanilla Rails" with Active Record. This is a legitimate choice for small teams and CRUD-heavy applications. The anti-pattern is applying this style to a complex domain with many aggregate boundaries — the monolith becomes a ball of mud.
 
@@ -927,7 +927,7 @@ The complete code for this chapter lives in `examples/`. Each example directory 
 
 ## 15. Common Mistakes
 
-### 15.1 SOLID misapplications
+### 15.1 SOLID misapplications <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'15.1%20SOLID%20misapplications'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="15.1 SOLID misapplications" title="Ask ChatGPT about this section">💬</a>
 
 | Mistake | Why it's wrong |
 |---------|---------------|
@@ -937,7 +937,7 @@ The complete code for this chapter lives in `examples/`. Each example directory 
 | **ISP by splitting every interface** | Sometimes a fat interface is the right abstraction. ISP says "don't force clients to depend on what they don't use" — not "minimize interface size." |
 | **DIP as DI alone** | Dependency injection is the *mechanism*; abstraction is the *principle*. You can use DI and still violate DIP by depending on concrete classes that happen to be injected. |
 
-### 15.2 Pattern misapplications
+### 15.2 Pattern misapplications <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'15.2%20Pattern%20misapplications'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="15.2 Pattern misapplications" title="Ask ChatGPT about this section">💬</a>
 
 | Mistake | Why it's wrong |
 |---------|---------------|
@@ -948,7 +948,7 @@ The complete code for this chapter lives in `examples/`. Each example directory 
 | **Decorator at three levels** | Three layers of decoration is hard to follow. Prefer composition over decoration chains. |
 | **Adapter when both sides are yours** | Adapter is for adapting a third-party interface you don't control. If you control both, change one. |
 
-### 15.3 Refactoring mistakes
+### 15.3 Refactoring mistakes <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'15.3%20Refactoring%20mistakes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="15.3 Refactoring mistakes" title="Ask ChatGPT about this section">💬</a>
 
 | Mistake | Why it's wrong |
 |---------|---------------|
@@ -962,7 +962,7 @@ The complete code for this chapter lives in `examples/`. Each example directory 
 
 ## 16. Debugging
 
-### 16.1 Symptom → root cause
+### 16.1 Symptom → root cause <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'16.1%20Symptom%20%E2%86%92%20root%20cause'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="16.1 Symptom → root cause" title="Ask ChatGPT about this section">💬</a>
 
 Patterns interact in subtle ways. Common failure modes:
 
@@ -975,7 +975,7 @@ Patterns interact in subtle ways. Common failure modes:
 | **Wrong strategy used at runtime** | DI container ambiguity; multiple bindings for the same interface |
 | **Tests pass in isolation but fail together** | Shared mutable state (Singleton) leaking between tests |
 
-### 16.2 Tools
+### 16.2 Tools <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'16.2%20Tools'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="16.2 Tools" title="Ask ChatGPT about this section">💬</a>
 
 - **IDE refactoring features** (IntelliJ, VSCode): mechanical refactorings like Rename, Extract Method, Move Class are safer than hand edits.
 - **jscodeshift** (JavaScript), **clang-tidy** (C++), **ErrorProne** (Java): automated refactoring at scale.
@@ -1003,7 +1003,7 @@ Recommended metrics:
 
 ## 18. Best Practices
 
-### 18.1 Naming conventions for patterns
+### 18.1 Naming conventions for patterns <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'18.1%20Naming%20conventions%20for%20patterns'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="18.1 Naming conventions for patterns" title="Ask ChatGPT about this section">💬</a>
 
 The pattern names should appear in the code:
 
@@ -1013,17 +1013,17 @@ The pattern names should appear in the code:
 
 This makes the code self-documenting. New engineers can see "this is a Strategy" without reading documentation.
 
-### 18.2 Composition roots
+### 18.2 Composition roots <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'18.2%20Composition%20roots'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="18.2 Composition roots" title="Ask ChatGPT about this section">💬</a>
 
 A composition root is the place where the application wires its dependencies. In a typical Java app: `main()`. In Spring: `@Configuration` classes. In a function-as-a-service: the handler factory.
 
 **Best practice: one composition root per application.** Scattered `new` calls in business code are a smell.
 
-### 18.3 Package by feature, not by layer
+### 18.3 Package by feature, not by layer <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'18.3%20Package%20by%20feature%2C%20not%20by%20layer'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="18.3 Package by feature, not by layer" title="Ask ChatGPT about this section">💬</a>
 
 The traditional "package by layer" structure (`controllers/`, `services/`, `repositories/`) couples unrelated features together. Package by feature (`order/`, `customer/`, `payment/`) groups all classes for one feature, enabling clean module boundaries.
 
-### 18.4 When NOT to apply a pattern
+### 18.4 When NOT to apply a pattern <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'18.4%20When%20NOT%20to%20apply%20a%20pattern'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="18.4 When NOT to apply a pattern" title="Ask ChatGPT about this section">💬</a>
 
 - **Don't apply a pattern until you have the second instance.** Rule of Three for abstractions.
 - **Don't apply Singleton for stateless services** — use a single bean in the DI container.
@@ -1031,7 +1031,7 @@ The traditional "package by layer" structure (`controllers/`, `services/`, `repo
 - **Don't apply Decorator for orthogonal concerns** — AOP (aspect-oriented programming) is sometimes better.
 - **Don't apply Repository over Active Record** if Active Record already exists and fits.
 
-### 18.5 Pattern languages
+### 18.5 Pattern languages <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'18.5%20Pattern%20languages'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="18.5 Pattern languages" title="Ask ChatGPT about this section">💬</a>
 
 A "pattern language" (Christopher Alexander, 1977; applied to software by GoF) is a collection of patterns that work together. Don't apply patterns in isolation — they form systems.
 
@@ -1046,7 +1046,7 @@ Examples of pattern languages:
 
 ## 19. Anti-Patterns
 
-### 19.1 Architecture anti-patterns
+### 19.1 Architecture anti-patterns <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'19.1%20Architecture%20anti-patterns'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="19.1 Architecture anti-patterns" title="Ask ChatGPT about this section">💬</a>
 
 | Anti-pattern | Description | Cure |
 |--------------|-------------|------|
@@ -1057,7 +1057,7 @@ Examples of pattern languages:
 | **Vendor Lock-in by Architecture** | Architecture assumes a specific framework | Apply Dependency Inversion; framework as detail |
 | **Distributed Monolith** | Microservices with shared database and tight coupling | Apply Bounded Contexts; one service owns its data |
 
-### 19.2 Design anti-patterns
+### 19.2 Design anti-patterns <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'19.2%20Design%20anti-patterns'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="19.2 Design anti-patterns" title="Ask ChatGPT about this section">💬</a>
 
 | Anti-pattern | Description |
 |--------------|-------------|
@@ -1067,7 +1067,7 @@ Examples of pattern languages:
 | **Sequential Coupling** | Method A must be called before Method B (state machine in disguise) |
 | **Yo-Yo Problem** | Class hierarchy so deep you scroll up and down to understand |
 
-### 19.3 Anti-patterns named by Fowler
+### 19.3 Anti-patterns named by Fowler <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'19.3%20Anti-patterns%20named%20by%20Fowler'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="19.3 Anti-patterns named by Fowler" title="Ask ChatGPT about this section">💬</a>
 
 | Anti-pattern | Description |
 |--------------|-------------|
@@ -1080,27 +1080,27 @@ Examples of pattern languages:
 
 ## 20. Edge Cases
 
-### 20.1 SRP and tightly-coupled subdomains
+### 20.1 SRP and tightly-coupled subdomains <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'20.1%20SRP%20and%20tightly-coupled%20subdomains'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="20.1 SRP and tightly-coupled subdomains" title="Ask ChatGPT about this section">💬</a>
 
 In a tightly-coupled subdomain (e.g., financial calculations in trading), separating responsibilities into multiple classes can fragment understanding. Some classes are better off cohesive, even if they "do two things" by the strict SRP reading. The fix: use Actor-based reasoning. If both responsibilities change for the same actor, they can be in the same class.
 
-### 20.2 LSP and design-by-contract
+### 20.2 LSP and design-by-contract <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'20.2%20LSP%20and%20design-by-contract'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="20.2 LSP and design-by-contract" title="Ask ChatGPT about this section">💬</a>
 
 Barbara Liskov's original formulation assumes formal contracts (preconditions, postconditions, invariants). Most languages don't enforce them. The practical LSP test: write tests for the base class, run them against subclasses; if they fail, LSP is violated.
 
-### 20.3 DIP and frameworks
+### 20.3 DIP and frameworks <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'20.3%20DIP%20and%20frameworks'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="20.3 DIP and frameworks" title="Ask ChatGPT about this section">💬</a>
 
 Frameworks (Spring, Django, Rails) often pull concrete dependencies into the high-level code via inheritance (controllers extend framework classes). The cure: framework as a library, not a parent class. Or: isolate framework-specific code in the outermost layer (Frameworks & Drivers in Clean).
 
-### 20.4 Repository and aggregate boundaries
+### 20.4 Repository and aggregate boundaries <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'20.4%20Repository%20and%20aggregate%20boundaries'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="20.4 Repository and aggregate boundaries" title="Ask ChatGPT about this section">💬</a>
 
 A Repository should be per Aggregate (DDD), not per Entity. The aggregate is the unit of consistency; its Repository should provide find/save for the whole aggregate. Trying to update child entities independently violates aggregate boundaries and creates consistency bugs.
 
-### 20.5 Saga compensation and eventual consistency
+### 20.5 Saga compensation and eventual consistency <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'20.5%20Saga%20compensation%20and%20eventual%20consistency'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="20.5 Saga compensation and eventual consistency" title="Ask ChatGPT about this section">💬</a>
 
 A saga's compensating actions may themselves fail. Production sagas must be idempotent, retry-safe, and observable. The Saga log (event-sourced) is the operational source of truth.
 
-### 20.6 Circuit breaker timing
+### 20.6 Circuit breaker timing <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'20.6%20Circuit%20breaker%20timing'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="20.6 Circuit breaker timing" title="Ask ChatGPT about this section">💬</a>
 
 A circuit breaker that opens too aggressively causes cascading failures. A circuit breaker that opens too slowly allows every caller to time out. The parameters (failure threshold, sleep window, half-open trial count) require empirical tuning.
 
@@ -1108,7 +1108,7 @@ A circuit breaker that opens too aggressively causes cascading failures. A circu
 
 ## 21. Comparisons
 
-### 21.1 SOLID principles vs GRASP
+### 21.1 SOLID principles vs GRASP <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'21.1%20SOLID%20principles%20vs%20GRASP'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="21.1 SOLID principles vs GRASP" title="Ask ChatGPT about this section">💬</a>
 
 **GRASP** (General Responsibility Assignment Software Patterns, Craig Larman, 1997) is a related set of patterns:
 
@@ -1124,7 +1124,7 @@ A circuit breaker that opens too aggressively causes cascading failures. A circu
 | **Indirection** | Adapter, Facade, Proxy |
 | **Protected Variations** | OCP, DIP |
 
-### 21.2 Architectural styles
+### 21.2 Architectural styles <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'21.2%20Architectural%20styles'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="21.2 Architectural styles" title="Ask ChatGPT about this section">💬</a>
 
 | Architecture | Focus | Layers | Dependency rule |
 |--------------|-------|--------|-----------------|
@@ -1134,7 +1134,7 @@ A circuit breaker that opens too aggressively causes cascading failures. A circu
 | **Layered (traditional)** | Technical layers | UI, Business, Persistence, DB | Often violated |
 | **Microservices** | Independent deployability | Service per Bounded Context | Each service applies inward rule |
 
-### 21.3 Persistence patterns
+### 21.3 Persistence patterns <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'21.3%20Persistence%20patterns'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="21.3 Persistence patterns" title="Ask ChatGPT about this section">💬</a>
 
 | Pattern | When to use |
 |---------|-------------|
@@ -1144,7 +1144,7 @@ A circuit breaker that opens too aggressively causes cascading failures. A circu
 | **DAO (Data Access Object)** | Lower-level; tightly coupled to DB |
 | **Query Object** | Dynamic queries built programmatically |
 
-### 21.4 Distribution patterns
+### 21.4 Distribution patterns <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'21.4%20Distribution%20patterns'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="21.4 Distribution patterns" title="Ask ChatGPT about this section">💬</a>
 
 | Pattern | Solves |
 |---------|--------|
@@ -1163,7 +1163,7 @@ A circuit breaker that opens too aggressively causes cascading failures. A circu
 
 ## 22. Interview Preparation
 
-### 22.1 Core questions
+### 22.1 Core questions <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'22.1%20Core%20questions'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="22.1 Core questions" title="Ask ChatGPT about this section">💬</a>
 
 **Q1. What are the SOLID principles?**
 
@@ -1203,7 +1203,7 @@ A DAO is a low-level data access abstraction, often 1:1 with a table. A Reposito
 
 It enables the business logic to be independent of frameworks, databases, and UIs. The inner circles know nothing about the outer; the outer depends on the inner via interfaces (DIP). The result: the business logic is testable without infrastructure, swappable across frameworks, and durable across technology changes.
 
-### 22.2 System design questions
+### 22.2 System design questions <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'22.2%20System%20design%20questions'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="22.2 System design questions" title="Ask ChatGPT about this section">💬</a>
 
 **Q9. How would you decompose a monolith into microservices?**
 
@@ -1226,7 +1226,7 @@ There are no distributed transactions. The options:
 
 The Outbox pattern. The business transaction writes both the state change and an outbox row in the same database transaction. A separate process polls the outbox and publishes to the message broker. Idempotency on the consumer side handles duplicates.
 
-### 22.3 Behavioral questions
+### 22.3 Behavioral questions <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'22.3%20Behavioral%20questions'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="22.3 Behavioral questions" title="Ask ChatGPT about this section">💬</a>
 
 **Q12. Tell me about a time you had to refactor a system.**
 
@@ -1240,7 +1240,7 @@ YAGNI is a heuristic, not a law. When the cost of adding an abstraction later is
 
 ## 23. References
 
-### 23.1 Foundational books
+### 23.1 Foundational books <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'23.1%20Foundational%20books'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="23.1 Foundational books" title="Ask ChatGPT about this section">💬</a>
 
 - *Design Patterns: Elements of Reusable Object-Oriented Software* — Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides (Gang of Four). Addison-Wesley, 1994. ISBN 0-201-63361-2.
 - *Refactoring: Improving the Design of Existing Code* — Martin Fowler (1st ed. 1999, 2nd ed. 2018 with Kent Beck). Addison-Wesley.
@@ -1251,7 +1251,7 @@ YAGNI is a heuristic, not a law. When the cost of adding an abstraction later is
 - *Agile Software Development: Principles, Patterns, and Practices* — Robert C. Martin. Prentice Hall, 2003. ISBN 0-13-597444-5.
 - *Working Effectively with Legacy Code* — Michael Feathers. Prentice Hall, 2004. ISBN 0-13-117705-2.
 
-### 23.2 Online references
+### 23.2 Online references <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'23.2%20Online%20references'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="23.2 Online references" title="Ask ChatGPT about this section">💬</a>
 
 - **Refactoring.Guru:** <https://refactoring.guru/design-patterns>
 - **SourceMaking:** <https://sourcemaking.com/design_patterns>
@@ -1261,12 +1261,12 @@ YAGNI is a heuristic, not a law. When the cost of adding an abstraction later is
 - **Hexagonal Architecture (Alistair Cockburn):** <https://alistair.cockburn.us/hexagonal-architecture/>
 - **Onion Architecture (Jeffrey Palermo):** <https://jeffreypalermo.com/2008/07/the-onion-architecture-part-1/>
 
-### 23.3 Specifications and standards
+### 23.3 Specifications and standards <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'23.3%20Specifications%20and%20standards'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="23.3 Specifications and standards" title="Ask ChatGPT about this section">💬</a>
 
 - **Unified Modeling Language (UML):** OMG, current standard for pattern diagrams.
 - **POSA (Pattern-Oriented Software Architecture):** Buschmann, Meunier, Rohnert, Sommerlad, Stal. Wiley.
 
-### 23.4 Related chapters
+### 23.4 Related chapters <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'23.4%20Related%20chapters'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="23.4 Related chapters" title="Ask ChatGPT about this section">💬</a>
 
 - [01 — Java Internals](../01-java-internals/README.md) — Implementation patterns in Java.
 - [04 — Spring Ecosystem](../04-spring-ecosystem/README.md) — Spring's patterns (DI, MVC, AOP).
@@ -1274,7 +1274,7 @@ YAGNI is a heuristic, not a law. When the cost of adding an abstraction later is
 - [14 — Testing (Unit, Integration, Contract, Chaos)](../14-testing/README.md) — Test patterns; refactoring for testability.
 - [15 — Git & Versioning](../15-git/README.md) — Workflow supporting good code.
 
-### 23.5 Folder references
+### 23.5 Folder references <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'23.5%20Folder%20references'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="23.5 Folder references" title="Ask ChatGPT about this section">💬</a>
 
 - [Design Patterns Reference](./references/design-patterns.md) — Quick reference of GoF + modern patterns.
 - [Clean Architecture Reference](./references/clean-architecture.md) — SOLID + Clean Architecture details.

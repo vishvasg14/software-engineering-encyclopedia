@@ -12,7 +12,7 @@ The authoritative source for GCP is the official documentation. This file catalo
 
 ## Key services referenced in the document
 
-### Compute
+### Compute <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Compute'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Compute" title="Ask ChatGPT about this section">💬</a>
 
 | Service | AWS equivalent | URL |
 |---------|----------------|-----|
@@ -23,7 +23,7 @@ The authoritative source for GCP is the official documentation. This file catalo
 | **App Engine** | Elastic Beanstalk | <https://cloud.google.com/appengine/ |
 | **Batch** | AWS Batch | <https://cloud.google.com/batch/ |
 
-### Storage
+### Storage <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Storage'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Storage" title="Ask ChatGPT about this section">💬</a>
 
 | Service | AWS equivalent | URL |
 |---------|----------------|-----|
@@ -32,7 +32,7 @@ The authoritative source for GCP is the official documentation. This file catalo
 | **Filestore** | EFS | <https://cloud.google.com/filestore/ |
 | **Archive Storage** | Glacier | <https://cloud.google.com/storage/archiving/ |
 
-### Database
+### Database <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Database'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Database" title="Ask ChatGPT about this section">💬</a>
 
 | Service | AWS equivalent | URL |
 |---------|----------------|-----|
@@ -43,7 +43,7 @@ The authoritative source for GCP is the official documentation. This file catalo
 | **Memorystore** | ElastiCache | <https://cloud.google.com/memorystore/ |
 | **AlloyDB** | RDS Aurora | <https://cloud.google.com/alloydb/ |
 
-### Networking
+### Networking <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Networking'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Networking" title="Ask ChatGPT about this section">💬</a>
 
 | Service | AWS equivalent | URL |
 |---------|----------------|-----|
@@ -55,7 +55,7 @@ The authoritative source for GCP is the official documentation. This file catalo
 | **Cloud Router** | Transit Gateway | <https://cloud.google.com/network-connectivity/docs/concepts/network-overview> |
 | **Private Service Connect** | PrivateLink | <https://cloud.google.com/private-service-connect/ |
 
-### Security
+### Security <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Security'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Security" title="Ask ChatGPT about this section">💬</a>
 
 | Service | AWS equivalent | URL |
 |---------|----------------|-----|
@@ -67,7 +67,7 @@ The authoritative source for GCP is the official documentation. This file catalo
 | **Cloud Armor** | Shield / WAF | <https://cloud.google.com/armor/ |
 | **Identity Platform** | Cognito | <https://cloud.google.com/identity-platform/ |
 
-### Messaging
+### Messaging <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Messaging'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Messaging" title="Ask ChatGPT about this section">💬</a>
 
 | Service | AWS equivalent | URL |
 |---------|----------------|-----|
@@ -76,7 +76,7 @@ The authoritative source for GCP is the official documentation. This file catalo
 | **Cloud Tasks** | SQS | <https://cloud.google.com/tasks/ |
 | **Confluent Cloud** | MSK | <https://cloud.google.com/architecture/stream-messaging-with-confluent-kafka |
 
-### API
+### API <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'API'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="API" title="Ask ChatGPT about this section">💬</a>
 
 | Service | AWS equivalent | URL |
 |---------|----------------|-----|
@@ -84,7 +84,7 @@ The authoritative source for GCP is the official documentation. This file catalo
 | **Apigee** | Apigee | <https://cloud.google.com/apigee/ |
 | **Cloud Endpoints** | (legacy) | <https://cloud.google.com/endpoints/ |
 
-### Observability
+### Observability <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Observability'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Observability" title="Ask ChatGPT about this section">💬</a>
 
 | Service | AWS equivalent | URL |
 |---------|----------------|-----|
@@ -94,7 +94,7 @@ The authoritative source for GCP is the official documentation. This file catalo
 | **Cloud Profiler** | (no equivalent) | <https://cloud.google.com/profiler/ |
 | **Cloud Debugger** | (no equivalent) | <https://cloud.google.com/debugger/ |
 
-### Serverless
+### Serverless <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Serverless'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Serverless" title="Ask ChatGPT about this section">💬</a>
 
 | Service | URL |
 |---------|-----|
@@ -103,7 +103,7 @@ The authoritative source for GCP is the official documentation. This file catalo
 | **Workflows** | <https://cloud.google.com/workflows/ |
 | **Eventarc** | <https://cloud.google.com/eventarc/ |
 
-### Containers
+### Containers <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Containers'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Containers" title="Ask ChatGPT about this section">💬</a>
 
 | Service | AWS equivalent | URL |
 |---------|----------------|-----|
@@ -111,7 +111,7 @@ The authoritative source for GCP is the official documentation. This file catalo
 | **Cloud Run** | Fargate | <https://cloud.google.com/run/ |
 | **Artifact Registry** | ECR | <https://cloud.google.com/artifact-registry/ |
 
-### Cost management
+### Cost management <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Cost%20management'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Cost management" title="Ask ChatGPT about this section">💬</a>
 
 | Service | URL |
 |---------|-----|
