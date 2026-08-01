@@ -154,6 +154,24 @@
   }
 
   function mdToHtml(md) {
+    // PRE-PROCESS: split out the inline <a class="askgpt-btn"> that follows
+    // each `### heading` and put it on its own line below the heading.
+    // marked's lexer tokenizes `<a href="https://...?prompt=...long-url...">`
+    // and the long URL-encoded value confuses it, leading to the entire `<a>`
+    // being swallowed into literal text. Splitting the heading and button
+    // onto separate lines makes marked render the heading cleanly and the
+    // button as a standalone HTML block.
+    md = md.replace(
+      /^(#{1,6}\s+.+?)\s+<a class="askgpt-btn"[^>]*>\s*💬\s*<\/a>\s*$/gm,
+      function (_, headingLine) {
+        const buttonMatch = headingLine.match(/(<a class="askgpt-btn"[^>]*>\s*💬\s*<\/a>)$/);
+        if (!buttonMatch) return _;
+        // Strip the button off the heading
+        const headingOnly = headingLine.slice(0, headingLine.length - buttonMatch[0].length).replace(/\s+$/, '');
+        return headingOnly + '\n\n' + buttonMatch[0];
+      }
+    );
+
     const renderer = new marked.Renderer();
 
     // Mermaid code blocks → <div class="mermaid">…</div>
@@ -165,39 +183,7 @@
     };
 
     marked.setOptions({ renderer: renderer, gfm: true, breaks: false });
-    let html = marked.parse(md);
-
-    // marked v12 escapes the embedded <a class='askgpt-btn'>…</a> in
-    // headings because it tokenizes HTML before reaching the renderer.
-    // The escape turns the live button into literal text "a class='...'".
-    // Fix it post-hoc by reversing the escape on the specific pattern.
-    html = html.replace(
-      /(<h[1-6]>)((?:(?!<\/h[1-6]>).)*?)(&lt;a class=&#39;askgpt-btn&#39;[\s\S]*?&lt;\/a&gt;)((?:(?!<\/h[1-6]>).)*?)(<\/h[1-6]>)/g,
-      function (match, open, before, escapedAnchor, after, close) {
-        // Re-encode the surrounding text as proper HTML; restore the anchor.
-        const beforeHtml = before
-          .replace(/&amp;/g, '&')
-          .replace(/&lt;/g, '<')
-          .replace(/&gt;/g, '>')
-          .replace(/&quot;/g, '"')
-          .replace(/&#39;/g, "'");
-        const afterHtml = after
-          .replace(/&amp;/g, '&')
-          .replace(/&lt;/g, '<')
-          .replace(/&gt;/g, '>')
-          .replace(/&quot;/g, '"')
-          .replace(/&#39;/g, "'");
-        // Unescape the anchor tag back to a real <a>.
-        const anchorHtml = escapedAnchor
-          .replace(/&lt;/g, '<')
-          .replace(/&gt;/g, '>')
-          .replace(/&amp;/g, '&')
-          .replace(/&#39;/g, "'")
-          .replace(/&quot;/g, '"');
-        return open + beforeHtml + ' ' + anchorHtml + afterHtml + close;
-      }
-    );
-    return html;
+    return marked.parse(md);
   }
   function escapeHtml(s) {
     return s.replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
