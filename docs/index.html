@@ -116,22 +116,22 @@
   // Tiny chapter index — kept in sync with the repo's chapters/ top-level.
   // If you add a new chapter dir, add an entry here.
   const CHAPTERS = [
-    { num: '01', slug: 'java-internals',       title: 'Java Internals' },
-    { num: '02', slug: 'javascript-typescript',title: 'JavaScript & TypeScript' },
-    { num: '03', slug: 'sql-databases',        title: 'SQL & Databases' },
-    { num: '04', slug: 'spring-ecosystem',     title: 'Spring Ecosystem' },
-    { num: '05', slug: 'frontend',             title: 'Frontend (Angular, Signals, RxJS)' },
-    { num: '06', slug: 'messaging',            title: 'Messaging (Kafka, RabbitMQ, Pulsar)' },
-    { num: '07', slug: 'apis',                 title: 'APIs (REST, GraphQL, gRPC, WebSocket)' },
-    { num: '08', slug: 'caching',              title: 'Caching (Redis, Caffeine, Memcached)' },
-    { num: '09', slug: 'system-design',        title: 'System Design & Distributed Systems' },
-    { num: '10', slug: 'devops',               title: 'DevOps (Docker, Kubernetes, Helm, Istio)' },
-    { num: '11', slug: 'cloud',                title: 'Cloud (AWS, Azure, GCP)' },
-    { num: '12', slug: 'observability',        title: 'Observability (Prometheus, Grafana, OpenTelemetry)' },
-    { num: '13', slug: 'security',             title: 'Security (OWASP, OAuth2, JWT, Encryption)' },
-    { num: '14', slug: 'testing',              title: 'Testing (Unit, Integration, Contract, Chaos)' },
-    { num: '15', slug: 'git',                  title: 'Git & Versioning' },
-    { num: '16', slug: 'software-engineering', title: 'Software Engineering (SOLID, Patterns, Refactoring)' },
+    { num: '01', slug: 'java-internals',        dir: '01-java-internals',        file: 'jvm-internals.md',           title: 'Java Internals' },
+    { num: '02', slug: 'javascript-typescript', dir: '02-javascript-typescript', file: 'javascript-typescript.md',    title: 'JavaScript & TypeScript' },
+    { num: '03', slug: 'sql-databases',         dir: '03-sql-databases',         file: 'sql-databases.md',           title: 'SQL & Databases' },
+    { num: '04', slug: 'spring-ecosystem',      dir: '04-spring-ecosystem',      file: 'spring-ecosystem.md',        title: 'Spring Ecosystem' },
+    { num: '05', slug: 'frontend',              dir: '05-frontend',              file: 'frontend.md',                title: 'Frontend (Angular, Signals, RxJS)' },
+    { num: '06', slug: 'messaging',             dir: '06-messaging',             file: 'messaging.md',               title: 'Messaging (Kafka, RabbitMQ, Pulsar)' },
+    { num: '07', slug: 'apis',                  dir: '07-apis',                  file: 'apis.md',                    title: 'APIs (REST, GraphQL, gRPC, WebSocket)' },
+    { num: '08', slug: 'caching',               dir: '08-caching',               file: 'caching.md',                 title: 'Caching (Redis, Caffeine, Memcached)' },
+    { num: '09', slug: 'system-design',         dir: '09-system-design',         file: 'system-design.md',           title: 'System Design & Distributed Systems' },
+    { num: '10', slug: 'devops',                dir: '10-devops',                file: 'devops.md',                  title: 'DevOps (Docker, Kubernetes, Helm, Istio)' },
+    { num: '11', slug: 'cloud',                 dir: '11-cloud',                 file: 'cloud.md',                   title: 'Cloud (AWS, Azure, GCP)' },
+    { num: '12', slug: 'observability',         dir: '12-observability',         file: 'observability.md',           title: 'Observability (Prometheus, Grafana, OpenTelemetry)' },
+    { num: '13', slug: 'security',              dir: '13-security',              file: 'security.md',                title: 'Security (OWASP, OAuth2, JWT, Encryption)' },
+    { num: '14', slug: 'testing',               dir: '14-testing',               file: 'testing.md',                 title: 'Testing (Unit, Integration, Contract, Chaos)' },
+    { num: '15', slug: 'git',                   dir: '15-git',                   file: 'git.md',                     title: 'Git & Versioning' },
+    { num: '16', slug: 'software-engineering',  dir: '16-software-engineering',  file: 'software-engineering.md',    title: 'Software Engineering (SOLID, Patterns, Refactoring)' },
   ];
 
   // Populate the chapter picker
@@ -150,7 +150,7 @@
   }
   function basename(num) {
     const c = CHAPTERS.find(x => x.num === num);
-    return c ? `${num}-${c.slug}/${c.slug}.md` : null;
+    return c ? `${c.dir}/${c.file}` : null;
   }
 
   function mdToHtml(md) {
