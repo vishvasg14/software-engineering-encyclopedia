@@ -1,0 +1,75 @@
+# 13 — AWS CloudWatch (CloudFormation)
+
+Resources:
+  # Log group for application
+  AppLogGroup:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName: /aws/application/my-app
+      RetentionInDays: 30
+      KmsKeyId: alias/aws/logs
+
+  # Metric filter: extract error count
+  ErrorMetricFilter:
+    Type: AWS::Logs::MetricFilter
+    Properties:
+      LogGroupName: !Ref AppLogGroup
+      FilterPattern: '{ $.level = "ERROR" }'
+      MetricTransformations:
+        - MetricValue: '1'
+          MetricNamespace: MyApp
+          MetricName: ErrorCount
+
+  # Alarm: alert if errors > 10 in 5 minutes
+  ErrorAlarm:
+    Type: AWS::CloudWatch::Alarm
+    Properties:
+      AlarmName: my-app-high-errors
+      AlarmDescription: Alert when error rate spikes
+      Namespace: MyApp
+      MetricName: ErrorCount
+      Statistic: Sum
+      Period: 300
+      EvaluationPeriods: 1
+      Threshold: 10
+      ComparisonOperator: GreaterThanThreshold
+      TreatMissingData: notBreaching
+      AlarmActions:
+        - !Ref SNSTopic
+
+  # SNS topic for alarm notifications
+  SNSTopic:
+    Type: AWS::SNS::Topic
+    Properties:
+      TopicName: my-app-alarms
+      Subscription:
+        - Endpoint: ops@example.com
+          Protocol: email
+
+  # Dashboard
+  Dashboard:
+    Type: AWS::CloudWatch::Dashboard
+    Properties:
+      DashboardName: my-app
+      DashboardBody: |
+        {
+          "widgets": [
+            {
+              "type": "metric",
+              "properties": {
+                "metrics": [
+                  ["AWS/EC2", "CPUUtilization", "InstanceId", "i-12345"]
+                ],
+                "period": 300,
+                "stat": "Average"
+              }
+            },
+            {
+              "type": "log",
+              "properties": {
+                "query": "SOURCE '/aws/application/my-app' | fields @timestamp, @message | filter @message like /ERROR/",
+                "region": "us-east-1"
+              }
+            }
+          ]
+        }

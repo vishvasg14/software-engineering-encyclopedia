@@ -1,0 +1,61 @@
+# 08 — AWS API Gateway (OpenAPI 3)
+
+openapi: 3.0.3
+info:
+  title: User API
+  version: 1.0.0
+paths:
+  /users/{id}:
+    get:
+      summary: Get user by ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      x-amazon-apigateway-integration:
+        type: aws_proxy
+        httpMethod: POST
+        uri: arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/${MyFunctionArn}/invocations
+        credentials: arn:aws:iam::ACCOUNT:role/MyRole
+        requestTemplates:
+          application/json: |
+            {
+              "userId": "$input.params('id')"
+            }
+        responses:
+          default:
+            statusCode: '200'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+        '404':
+          description: Not found
+
+components:
+  schemas:
+    User:
+      type: object
+      properties:
+        id: { type: string }
+        name: { type: string }
+        email: { type: string, format: email }
+
+x-amazon-apigateway-gateway-responses:
+  DEFAULT_4XX:
+    responseParameters:
+      gatewayresponse.header.Access-Control-Allow-Origin: "'*'"
+  DEFAULT_5XX:
+    responseParameters:
+      gatewayresponse.header.Access-Control-Allow-Origin: "'*'"
+
+x-amazon-apigateway-cors:
+  allowMethods:
+    - GET
+  allowOrigins:
+    - "*"

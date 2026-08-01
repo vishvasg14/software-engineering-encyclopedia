@@ -1,0 +1,112 @@
+# 10 — TLS 1.3 configuration examples
+
+# === NGINX ===
+server {
+    listen 443 ssl;
+    http2;
+    server_name example.com;
+
+    # TLS 1.3 only
+    ssl_protocols TLSv1.3;
+    ssl_prefer_server_ciphers on;
+    ssl_ciphersuites TLS_AES_128_GCM_SHA256:TLS_AES_256_GCM_SHA384:TLS_CHACHA20_POLY1305_SHA256;
+
+    # Certificates
+    ssl_certificate /etc/ssl/certs/example.com.crt;
+    ssl_certificate_key /etc/ssl/private/example.com.key;
+
+    # OCSP stapling
+    ssl_stapling on;
+    ssl_stapling_verify on;
+
+    # Session resumption (0-RTT)
+    ssl_early_data on;
+
+    # HSTS (1 year, include subdomains, preload)
+    add_header Strict-Transport-Security "max-age=31536000; includeSubDomains; preload" always;
+
+    # Security headers
+    add_header X-Content-Type-Options "nosniff" always;
+    add_header X-Frame-Options "DENY" always;
+    add_header Referrer-Policy "strict-origin-when-cross-origin" always;
+}
+
+# === Apache ===
+<VirtualHost *:443>
+    ServerName example.com
+
+    # TLS 1.3
+    SSLProtocol -all +TLSv1.3
+    SSLCipherSuite TLS_AES_128_GCM_SHA256:TLS_AES_256_GCM_SHA384:TLS_CHACHA20_POLY1305_SHA256
+    SSLHonorCipherOrder on
+
+    # Certificates
+    SSLCertificateFile /etc/ssl/certs/example.com.crt
+    SSLCertificateKeyFile /etc/ssl/private/example.com.key
+
+    # HSTS
+    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+</VirtualHost>
+
+# === HAProxy ===
+frontend https
+    bind *:443 ssl crt /etc/ssl/certs/example.com.pem
+    ssl-options force-tlsv13
+    ssl-ciphersuites TLS_AES_128_GCM_SHA256:TLS_AES_256_GCM_SHA384
+
+    # HSTS
+    http-response set-header Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+
+    default_backend servers
+
+# === Node.js (with TLS 1.3) ===
+# import https from 'node:https';
+# import fs from 'node:fs';
+#
+# const server = https.createServer({
+#   cert: fs.readFileSync('cert.pem'),
+#   key: fs.readFileSync('key.pem'),
+#   minVersion: 'TLSv1.3',
+#   maxVersion: 'TLSv1.3',
+#   ciphers: 'TLS_AES_128_GCM_SHA256:TLS_AES_256_GCM_SHA384',
+#   honorCipherOrder: true,
+# }, app);
+
+# === Go (with TLS 1.3) ===
+# import (
+#   "crypto/tls"
+#   "net/http"
+# )
+#
+# server := &http.Server{
+#   Addr: ":443",
+#   TLSConfig: &tls.Config{
+#     MinVersion: tls.VersionTLS13,
+#     MaxVersion: tls.VersionTLS13,
+#     CipherSuites: []uint16{
+#       tls.TLS_AES_128_GCM_SHA256,
+#       tls.TLS_AES_256_GCM_SHA384,
+#       tls.TLS_CHACHA20_POLY1305_SHA256,
+#     },
+#   },
+# }
+# server.ListenAndServeTLS("cert.pem", "key.pem")
+
+# === Test with openssl ===
+# openssl s_client -connect example.com:443 -tls1_3
+# openssl s_client -connect example.com:443 -tls1_2  # should fail
+# openssl s_client -connect example.com:443 -showcerts
+
+# === Generate self-signed cert (dev) ===
+# openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -days 365 -nodes -subj "/CN=localhost"
+
+# === Generate CSR for Let's Encrypt ===
+# openssl req -new -newkey rsa:2048 -nodes -keyout key.pem -out csr.pem -subj "/CN=example.com"
+# certbot certonly --webroot -w /var/www/html -d example.com
+
+# === Test SSL configuration ===
+# testssl.sh example.com
+# sslyze --regular example.com
+
+# === HSTS preload ===
+# Submit to https://hstspreload.org/

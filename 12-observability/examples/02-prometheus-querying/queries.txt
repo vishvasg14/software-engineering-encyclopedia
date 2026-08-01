@@ -1,0 +1,66 @@
+# 02 — PromQL queries
+
+# Request rate per second
+rate(http_requests_total[5m])
+
+# Request rate per service
+sum by (service) (rate(http_requests_total[5m]))
+
+# Error rate
+sum(rate(http_requests_total{status=~"5.."}[5m]))
+  / sum(rate(http_requests_total[5m]))
+  * 100
+
+# p99 latency
+histogram_quantile(0.99, sum by (le) (rate(http_request_duration_seconds_bucket[5m])))
+
+# Memory usage by pod
+sum by (pod) (container_memory_usage_bytes{namespace="production"})
+
+# CPU usage by pod
+sum by (pod) (rate(container_cpu_usage_seconds_total[5m]))
+
+# Kubernetes pod restarts
+sum by (namespace, pod) (kube_pod_container_status_restarts_total)
+
+# Number of running pods
+count(kube_pod_status_phase{phase="Running"})
+
+# Top 5 endpoints by error rate
+topk(5,
+  sum by (path) (rate(http_requests_total{status=~"5.."}[5m]))
+  / sum by (path) (rate(http_requests_total[5m]))
+)
+
+# Memory usage by namespace
+sum by (namespace) (container_memory_usage_bytes)
+
+# Network I/O
+sum(rate(container_network_receive_bytes_total[5m])) by (pod)
+
+# Disk usage
+100 - (sum by (instance) (node_filesystem_avail_bytes) / sum by (instance) (node_filesystem_size_bytes)) * 100
+
+# CPU saturation (load)
+sum by (instance) (rate(node_cpu_seconds_total{mode!="idle"}[5m]))
+  / sum by (instance) (count without(cpu)(node_cpu_seconds_total{mode="idle"}))
+
+# Active connections
+sum by (service) (net_conntrack_connections)
+
+# JVM GC time
+rate(jvm_gc_pause_seconds_sum[5m])
+
+# Latency SLA compliance
+sum(rate(http_request_duration_seconds_bucket{le="0.1"}[5m]))
+  / sum(rate(http_request_duration_seconds_count[5m]))
+  * 100
+
+# Histogram median
+histogram_quantile(0.5, sum by (le) (rate(http_request_duration_seconds_bucket[5m])))
+
+# Per-second request growth (predict next 1h)
+predict_linear(http_requests_total[1h], 4 * 3600) - rate(http_requests_total[1h])
+
+# Total requests last 24h
+sum(increase(http_requests_total[24h]))

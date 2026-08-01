@@ -1,0 +1,58 @@
+# 09 — AWS SQS / SNS (CloudFormation)
+
+Resources:
+  # SNS topic
+  EventsTopic:
+    Type: AWS::SNS::Topic
+    Properties:
+      TopicName: events
+      DisplayName: Application Events
+      KmsMasterKeyId: alias/aws/sns
+
+  # SQS queue (subscribed to SNS topic)
+  EventsQueue:
+    Type: AWS::SQS::Queue
+    Properties:
+      QueueName: events-queue
+      VisibilityTimeout: 60
+      MessageRetentionPeriod: 1209600  # 14 days
+      RedrivePolicy:
+        deadLetterTargetArn: !GetAtt DeadLetterQueue.Arn
+        maxReceiveCount: 5
+      KmsMasterKeyId: alias/aws/sqs
+      KmsDataKeyReusePeriodSeconds: 300
+
+  # Dead-letter queue
+  DeadLetterQueue:
+    Type: AWS::SQS::Queue
+    Properties:
+      QueueName: events-dlq
+      MessageRetentionPeriod: 1209600
+
+  # SQS queue policy (allow SNS to send)
+  EventsQueuePolicy:
+    Type: AWS::SQS::QueuePolicy
+    Properties:
+      Queues:
+        - !Ref EventsQueue
+      PolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: sns.amazonaws.com
+            Action: sqs:SendMessage
+            Resource: !GetAtt EventsQueue.Arn
+            Condition:
+              ArnEquals:
+                aws:SourceArn: !Ref EventsTopic
+
+  # SNS subscription
+  EventsSubscription:
+    Type: AWS::SNS::Subscription
+    Properties:
+      TopicArn: !Ref EventsTopic
+      Protocol: sqs
+      Endpoint: !GetAtt EventsQueue.Arn
+      RawMessageDelivery: true
+      FilterPolicy: '{"anything-but":{"numeric":[">=",100]}}'

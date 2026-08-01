@@ -1,0 +1,45 @@
+# 18 — Redis data structures
+
+# Strings
+SET user:1:name "Alice"
+GET user:1:name
+INCR user:1:visits
+
+# Hashes (objects)
+HSET user:1 name "Alice" email "alice@example.com" age 30
+HGETALL user:1
+HINCRBY user:1 age 1
+
+# Lists (queues, recent activity)
+LPUSH recent:activity "login:alice" "view:home" "click:button"
+LRANGE recent:activity 0 -1
+LPOP recent:activity
+
+# Sets (unique items)
+SADD tags:1 "admin" "active" "verified"
+SMEMBERS tags:1
+SINTER tags:1 tags:2
+
+# Sorted sets (leaderboards)
+ZADD leaderboard 100 "alice" 200 "bob" 150 "carol"
+ZREVRANGE leaderboard 0 -1 WITHSCORES
+ZINCRBY leaderboard 50 "alice"
+
+# Streams (event log)
+XADD events:1 * type "click" user "alice"
+XLEN events:1
+XRANGE events:1 - +
+
+# HyperLogLog (cardinality estimation)
+PFADD pageviews:2026-01-01 "user1" "user2" "user3"
+PFCOUNT pageviews:2026-01-01
+
+# Pipelining (batch operations)
+MULTI
+SET key1 "value1"
+INCR counter
+LPUSH queue "task1"
+EXEC
+
+# Cleanup
+FLUSHDB

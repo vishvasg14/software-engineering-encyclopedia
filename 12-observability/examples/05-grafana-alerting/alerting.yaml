@@ -1,0 +1,119 @@
+apiVersion: 1
+
+# Grafana 10+ alerting (file provisioning)
+groups:
+  - orgId: 1
+    name: api
+    folder: API
+    interval: 1m
+    rules:
+      # Critical: error rate
+      - uid: error-rate-critical
+        title: HighErrorRate
+        condition: A
+        data:
+          - refId: A
+            relativeTimeRange:
+              from: 300
+              to: 0
+            datasourceUid: prometheus
+            model:
+              expr: |
+                sum(rate(http_requests_total{status=~"5.."}[5m]))
+                  / sum(rate(http_requests_total[5m]))
+              instant: true
+              refId: A
+        noDataState: NoData
+        execErrState: Error
+        for: 5m
+        labels:
+          severity: critical
+          team: platform
+        annotations:
+          summary: "API error rate is {{ $value | humanizePercentage }}"
+          runbook_url: "https://runbooks.example.com/api-error-rate"
+
+      # Warning: high latency
+      - uid: latency-warning
+        title: HighLatency
+        condition: A
+        data:
+          - refId: A
+            relativeTimeRange: {from: 600, to: 0}
+            datasourceUid: prometheus
+            model:
+              expr: |
+                histogram_quantile(0.99,
+                  sum by (le) (rate(http_request_duration_seconds_bucket[10m]))
+                ) > 1
+              instant: true
+              refId: A
+        for: 10m
+        labels:
+          severity: warning
+        annotations:
+          summary: "p99 latency > 1s on {{ $labels.instance }}"
+
+      # SLO burn rate
+      - uid: slo-burn-rate
+        title: HighSLOBurnRate
+        condition: A
+        data:
+          - refId: A
+            relativeTimeRange: {from: 3600, to: 0}
+            datasourceUid: prometheus
+            model:
+              expr: |
+                sum(rate(http_requests_total{status=~"5.."}[1h]))
+                  / sum(rate(http_requests_total[1h]))
+                  > (1 - 0.999) * 14.4
+              instant: true
+              refId: A
+        for: 2m
+        labels:
+          severity: critical
+          slo: api-availability
+        annotations:
+          summary: "SLO burn rate (1h) too high"
+
+# Contact points
+contactPoints:
+  - orgId: 1
+    name: pagerduty-critical
+    receivers:
+      - uid: pd-receiver
+        type: pagerduty
+        settings:
+          integrationKey: <PD_INTEGRATION_KEY>
+          severity: critical
+          class: api
+  - orgId: 1
+    name: slack-warnings
+    receivers:
+      - uid: slack-receiver
+        type: slack
+        settings:
+          url: https://hooks.slack.com/services/...
+          channel: "#alerts"
+
+# Notification policies
+policies:
+  - orgId: 1
+    receiver: pagerduty-critical
+    group_by: [grafana_folder, alertname, cluster]
+    group_wait: 30s
+    group_interval: 5m
+    repeat_interval: 4h
+    routes:
+      - receiver: slack-warnings
+        object_matchers:
+          - ["severity", "=", "warning"]
+
+# Mute timings
+muteTimeIntervals:
+  - orgId: 1
+    name: planned-maintenance
+    time_intervals:
+      - name: business_hours
+        start_time: "2026-01-01T00:00:00Z"
+        end_time: "2026-01-01T08:00:00Z"

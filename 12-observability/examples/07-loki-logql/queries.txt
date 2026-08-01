@@ -1,0 +1,47 @@
+# 07 — Loki LogQL queries
+
+# All logs from my-app
+{job="my-app"}
+
+# Filter by content
+{job="my-app"} |= "error"
+{job="my-app"} |~ "timeout|deadline"
+
+# JSON parsing
+{job="my-app"} | json | level="error"
+{job="my-app"} | json | status_code >= 500
+{job="my-app"} | json | latency > 1.0
+
+# Label filtering
+{job="my-app", level="error", env="prod"}
+
+# Regex
+{job="my-app"} |~ "user_id=\\d+"
+
+# Line filter (positive and negative)
+{job="my-app"} |~ "GET|POST" != "DEBUG"
+
+# Parser
+{job="my-app"} | logfmt
+
+# Pipeline
+{job="my-app"}
+  | json
+  | level="error"
+  | line_format "{{.status_code}} {{.method}} {{.path}}"
+
+# Aggregation
+sum(rate({job="my-app"} |= "error" [5m]))
+sum by (level) (count_over_time({job="my-app"}[1h]))
+
+# Top K
+topk(5, sum by (path) (count_over_time({job="my-app"} |= "error" [1h])))
+
+# Quantile over logs
+quantile_over_time(0.99, 5m, {job="myapp"} | json | unwrap duration [5m])
+
+# Drop fields
+{job="my-app"} | json | drop __error__
+
+# Line sampling (1%)
+{job="my-app"} | line_sampler "1/10"

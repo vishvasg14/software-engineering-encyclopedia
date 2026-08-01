@@ -1,0 +1,68 @@
+# 07 — Kubernetes Services
+
+# ClusterIP: internal only (default)
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-app
+  labels:
+    app: my-app
+spec:
+  type: ClusterIP
+  selector:
+    app: my-app
+  ports:
+    - name: http
+      port: 80
+      targetPort: 8080
+      protocol: TCP
+  # sessionAffinity: ClientIP  # for sticky sessions
+
+---
+
+# Headless Service: stable DNS, no ClusterIP (for StatefulSets)
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-db
+spec:
+  clusterIP: None  # headless
+  selector:
+    app: my-db
+  ports:
+    - port: 5432
+      targetPort: 5432
+
+---
+
+# NodePort: exposed on each node's port (for dev)
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-app-nodeport
+spec:
+  type: NodePort
+  selector:
+    app: my-app
+  ports:
+    - port: 80
+      targetPort: 8080
+      nodePort: 30080  # 30000-32767
+
+---
+
+# LoadBalancer: cloud-provider LB
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-app-lb
+spec:
+  type: LoadBalancer
+  selector:
+    app: my-app
+  ports:
+    - port: 80
+      targetPort: 8080
+  # AWS-specific annotations
+  annotations:
+    service.beta.kubernetes.io/aws-load-balancer-type: nlb

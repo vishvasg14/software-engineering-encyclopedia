@@ -1,0 +1,92 @@
+# 08 — Elasticsearch log index template
+
+PUT _index_template/logs-template
+{
+  "index_patterns": ["logs-*"],
+  "template": {
+    "settings": {
+      "index": {
+        "number_of_shards": 1,
+        "number_of_replicas": 1,
+        "lifecycle": {
+          "name": "logs-lifecycle",
+          "rollover_alias": "logs"
+        }
+      }
+    },
+    "mappings": {
+      "properties": {
+        "@timestamp": {"type": "date"},
+        "level": {"type": "keyword"},
+        "service": {"type": "keyword"},
+        "env": {"type": "keyword"},
+        "message": {"type": "text"},
+        "trace_id": {"type": "keyword"},
+        "span_id": {"type": "keyword"},
+        "host": {"type": "keyword"},
+        "duration_ms": {"type": "long"},
+        "status_code": {"type": "integer"}
+      }
+    }
+  }
+}
+
+# ILM policy
+PUT _ilm/policy/logs-lifecycle
+{
+  "policy": {
+    "phases": {
+      "hot": {
+        "min_age": "0ms",
+        "actions": {}
+      },
+      "warm": {
+        "min_age": "7d",
+        "actions": {
+          "shrink": {"number_of_shards": 1},
+          "forcemerge": {"max_num_segments": 1}
+        }
+      },
+      "cold": {
+        "min_age": "30d",
+        "actions": {
+          "freeze": {},
+          "searchable_snapshot": {}
+        }
+      },
+      "delete": {
+        "min_age": "90d",
+        "actions": {
+          "delete": {}
+        }
+      }
+    }
+  }
+}
+
+# Ingest pipeline (parse JSON)
+PUT _ingest/pipeline/logs-pipeline
+{
+  "description": "Parse log JSON",
+  "processors": [
+    {
+      "json": {
+        "field": "message",
+        "target_field": "parsed",
+        "add_to_root": true
+      }
+    },
+    {
+      "rename": {
+        "field": "parsed.level",
+        "target_field": "level"
+      }
+    },
+    {
+      "set": {
+        "field": "ingestion_time",
+        "value": "{{_ingest.timestamp}}"
+      }
+    }
+  ]
+}

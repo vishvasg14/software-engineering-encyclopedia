@@ -1,0 +1,32 @@
+# 17 — Prometheus configuration for Kafka monitoring
+
+global:
+  scrape_interval: 15s
+
+scrape_configs:
+  - job_name: kafka_broker
+    static_configs:
+      - targets: ['kafka-exporter:9308']
+
+  - job_name: kafka_consumer_lag
+    static_configs:
+      - targets: ['burrow:8000']
+
+# Alerting rules
+rule_files:
+  - alerts.yml
+
+# alerts.yml:
+# groups:
+#   - name: kafka
+#     rules:
+#       - alert: KafkaUnderReplicated
+#         expr: kafka_server_replica_manager_under_replicated_partitions > 0
+#         for: 5m
+#         labels:
+#           severity: warning
+#       - alert: KafkaConsumerLag
+#         expr: kafka_consumergroup_lag > 10000
+#         for: 5m
+#         labels:
+#           severity: warning

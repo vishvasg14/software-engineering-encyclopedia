@@ -1,0 +1,62 @@
+# 05 — AWS RDS (CloudFormation)
+
+Resources:
+  # DB subnet group
+  DBSubnetGroup:
+    Type: AWS::RDS::DBSubnetGroup
+    Properties:
+      DBSubnetGroupDescription: Subnets for RDS
+      SubnetIds:
+        - !Ref PrivateSubnet1
+        - !Ref PrivateSubnet2
+
+  # Security group: only app SG can access
+  DBSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: Allow app to access RDS
+      VpcId: !Ref VPC
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: 5432
+          ToPort: 5432
+          SourceSecurityGroupId: !Ref AppSecurityGroup
+
+  # RDS instance
+  PostgresDB:
+    Type: AWS::RDS::DBInstance
+    Properties:
+      DBInstanceClass: db.r6g.large
+      Engine: postgres
+      EngineVersion: '16.4'
+      AllocatedStorage: '100'
+      StorageType: gp3
+      DBName: appdb
+      MasterUsername: admin
+      MasterUserPassword: '{{resolve:secretsmanager:db-password:SecretString:password}}'
+      DBSubnetGroupName: !Ref DBSubnetGroup
+      VPCSecurityGroups:
+        - !Ref DBSecurityGroup
+      MultiAZ: true
+      StorageEncrypted: true
+      KmsKeyId: alias/aws/rds
+      BackupRetentionPeriod: 7
+      BackupWindow: '03:00-04:00'
+      PreferredBackupWindow: '03:00-04:00'
+      PreferredMaintenanceWindow: 'sun:04:00-sun:05:00'
+      EnableCloudwatchLogsExports:
+        - postgresql
+      DeletionProtection: true
+      AutoMinorVersionUpgrade: true
+
+  # Aurora read replica (cross-region DR)
+  PostgresReadReplica:
+    Type: AWS::RDS::DBInstance
+    Properties:
+      SourceDBInstanceIdentifier: !Ref PostgresDB
+      DBInstanceClass: db.r6g.large
+      Engine: postgres
+      PubliclyAccessible: false
+      AutoMinorVersionUpgrade: true
+      # Source region: us-east-1; replica in us-west-2 (cross-region)
+      # Note: read replicas in same region; for cross-region use cross-region replicas or Global Database

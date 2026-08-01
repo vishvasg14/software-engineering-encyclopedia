@@ -1,0 +1,57 @@
+# 12 — AWS MSK (CloudFormation)
+
+Resources:
+  # MSK cluster
+  KafkaCluster:
+    Type: AWS::MSK::Cluster
+    Properties:
+      ClusterName: my-kafka
+      KafkaVersion: 3.6.0
+      NumberOfBrokerNodes: 3
+      EnhancedMonitoring: PER_BROKER
+      BrokerNodeGroupInfo:
+        InstanceType: kafka.m5.large
+        ClientSubnets:
+          - !Ref PrivateSubnet1
+          - !Ref PrivateSubnet2
+          - !Ref PrivateSubnet3
+        StorageInfo:
+          EbsStorageInfo:
+            VolumeSize: 100
+            ProvisionedThroughput:
+              Enabled: true
+              VolumeThroughput: 250
+      EncryptionInfo:
+        EncryptionAtRest:
+          DataVolumeKMSKeyId: alias/aws/kafka
+        EncryptionInTransit:
+          ClientBroker: TLS
+      LoggingInfo:
+        BrokerLogs:
+          CloudWatchLogs:
+            Enabled: true
+            LogGroup: /aws/msk/my-kafka
+        Firehose:
+          Enabled: false
+      ConfigurationInfo:
+        Arn: !GetAtt KafkaConfig.Arn
+        Revision: 1
+
+  # MSK Configuration (Kafka properties)
+  KafkaConfig:
+    Type: AWS::MSK::Configuration
+    Properties:
+      Name: my-kafka-config
+      ServerProperties: |
+        auto.create.topics.enable = true
+        default.replication.factor = 3
+        min.insync.replicas = 2
+        num.partitions = 10
+
+Outputs:
+  KafkaClusterArn:
+    Value: !GetAtt KafkaCluster.Arn
+    Export:
+      Name: KafkaClusterArn
+  KafkaBootstrapBrokers:
+    Value: !GetAtt KafkaCluster.BootstrapBrokers

@@ -1,0 +1,25 @@
+# HELP http_requests_total Total number of HTTP requests
+# TYPE http_requests_total counter
+http_requests_total{method="GET", path="/api/users", status="200"} 1234
+http_requests_total{method="POST", path="/api/users", status="201"} 56
+http_requests_total{method="GET", path="/api/users", status="404"} 12
+http_requests_total{method="GET", path="/api/users", status="500"} 2
+
+# HELP http_request_duration_seconds HTTP request duration
+# TYPE http_request_duration_seconds histogram
+http_request_duration_seconds_bucket{method="GET",le="0.005"} 24054
+http_request_duration_seconds_bucket{method="GET",le="0.01"} 33444
+http_request_duration_seconds_bucket{method="GET",le="0.025"} 100392
+http_request_duration_seconds_bucket{method="GET",le="0.05"} 129389
+http_request_duration_seconds_bucket{method="GET",le="0.1"} 144320
+http_request_duration_seconds_bucket{method="GET",le="+Inf"} 144612
+http_request_duration_seconds_sum{method="GET"} 53423
+http_request_duration_seconds_count{method="GET"} 144612
+
+# HELP jvm_memory_used_bytes Used memory in bytes
+# TYPE jvm_memory_used_bytes gauge
+jvm_memory_used_bytes{area="heap"} 1234567890
+
+# HELP process_cpu_seconds_total Total user and system CPU time
+# TYPE process_cpu_seconds_total counter
+process_cpu_seconds_total 42.5

@@ -1,0 +1,62 @@
+# 09 — ConfigMap and Secret
+
+# ConfigMap for non-sensitive configuration
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: app-config
+  labels:
+    app: my-app
+data:
+  LOG_LEVEL: info
+  DATABASE_URL: postgres://db:5432/app
+  CACHE_TTL_SECONDS: "300"
+  FEATURE_FLAGS: "new-search,recommendations"
+
+---
+
+# Secret for sensitive data
+apiVersion: v1
+kind: Secret
+metadata:
+  name: app-secret
+type: Opaque
+stringData:
+  DATABASE_PASSWORD: my-secret-password
+  API_KEY: abc123def456
+
+---
+
+# Use in Deployment via envFrom
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-app
+spec:
+  template:
+    spec:
+      containers:
+        - name: app
+          env:
+            - name: DB_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: app-secret
+                  key: DATABASE_PASSWORD
+          envFrom:
+            - configMapRef:
+                name: app-config
+
+---
+
+# Mount as files
+spec:
+  containers:
+    - name: app
+      volumeMounts:
+        - name: config
+          mountPath: /etc/config
+      volumes:
+        - name: config
+          configMap:
+            name: app-config

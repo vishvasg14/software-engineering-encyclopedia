@@ -1,0 +1,69 @@
+# 10 — Tempo configuration (YAML)
+
+server:
+  http_listen_port: 3200
+  log_level: info
+
+distributor:
+  receivers:
+    otlp:
+      protocols:
+        grpc:
+          endpoint: 0.0.0.0:4317
+        http:
+          endpoint: 0.0.0.0:4318
+    jaeger:
+      protocols:
+        grpc:
+          endpoint: 0.0.0.0:14250
+        thrift_http:
+          endpoint: 0.0.0.0:14268
+    zipkin:
+      endpoint: 0.0.0.0:9411
+  receivers:
+    kafka:
+      enabled: false
+
+ingester:
+  max_block_duration: 500ms
+  trace_idle_period: 10s
+  max_traces_per_block: 100000
+
+compactor:
+  compaction:
+    block_retention: 48h
+
+storage:
+  trace:
+    backend: s3
+    s3:
+      bucket: tempo-traces
+      region: us-east-1
+    wal:
+      path: /var/tempo/wal
+    local:
+      path: /var/tempo/blocks
+
+querier:
+  frontend_worker:
+    frontend_address: tempo-query-frontend:9095
+
+query_frontend:
+  search:
+    max_duration: 0
+  trace_by_id:
+    query_timeout: 10s
+
+# Compactor for block compaction
+compactor:
+  workers: 4
+  retention_enabled: true
+  retention_loops: 2
+  block_retention: 48h
+  compacted_block_retention: 1h
+  max_block_duration: 10m
+  max_block_bytes: 100_000_000
+  chunk_size_bytes: 1_000_000
+
+# Multitenancy
+multitenancy_enabled: true

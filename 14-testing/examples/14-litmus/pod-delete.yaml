@@ -1,0 +1,91 @@
+# 14 — Litmus chaos engineering for Kubernetes (YAML)
+
+# Install Litmus:
+# $ helm install chaos litmuschaos/litmus --namespace=chaos-engineering --create-namespace
+
+# Experiment 1: Pod Delete
+apiVersion: litmuschaos.io/v1alpha1
+kind: ChaosEngine
+metadata:
+  name: pod-delete-chaos
+  namespace: chaos-engineering
+spec:
+  appType: deployment
+  appInfo:
+    appns: default
+    applabel: app=myapp
+  chaosType: litmuschaos.io
+  experiments:
+  - name: pod-delete
+    spec:
+      components:
+        experimentInfo:
+          name: pod-delete
+        chaosParams:
+          chaosParams:
+            duration: 30s
+        probe:
+        - name: http-check
+          spec:
+            httpProbe/inputs:
+              url: https://myapp.example.com/health
+      type: podChaos
+      mode: oneOf
+
+# Experiment 2: Network Latency
+apiVersion: litmuschaos.io/v1alpha1
+kind: ChaosEngine
+metadata:
+  name: network-latency
+  namespace: chaos-engineering
+spec:
+  appType: deployment
+  appInfo:
+    appns: default
+    applabel: app=myapp
+  chaosType: litmuschaos.io
+  experiments:
+  - name: pod-network-latency
+    spec:
+      components:
+        experimentInfo:
+          name: pod-network-latency
+        chaosParams:
+          chaosParams:
+            duration: 60s
+            latency: 200
+            jitter: 50
+      type: networkChaos
+
+# Experiment 3: CPU Stress
+apiVersion: litmuschaos.io/v1alpha1
+kind: ChaosEngine
+metadata:
+  name: cpu-stress
+  namespace: chaos-engineering
+spec:
+  appType: deployment
+  appInfo:
+    appns: default
+    applabel: app=myapp
+  chaosType: litmuschaos.io
+  experiments:
+  - name: pod-cpu-hog
+    spec:
+      components:
+        experimentInfo:
+          name: pod-cpu-hog
+        chaosParams:
+          chaosParams:
+            duration: 30s
+            cores: 1
+      type: podChaos
+
+# Game day runbook:
+# 1. Schedule game day
+# 2. Define steady state hypothesis
+# 3. Run chaos experiments in staging first
+# 4. Run in production with blast radius limits
+# 5. Observe system behavior
+# 6. Document findings
+# 7. Fix any weaknesses

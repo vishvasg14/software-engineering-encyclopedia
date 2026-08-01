@@ -1,0 +1,7 @@
+git commit -m "feat(api): add user login"
+git commit -m "fix(auth): handle expired tokens"
+git commit -m "feat(api)!: remove deprecated endpoints"
+git commit -m "BREAKING CHANGE: API v2 requires auth header"
+git tag -a v1.0.0 -m "Release 1.0.0"
+git tag -a v2.0.0 -m "Release 2.0.0 (breaking)"
+git tag -a v1.0.0-rc.1 -m "Release candidate"

@@ -1,0 +1,106 @@
+# 03 — Prometheus alerting rules (YAML)
+
+groups:
+  - name: api
+    interval: 30s
+    rules:
+      # Error rate > 5% for 5 min
+      - alert: HighErrorRate
+        expr: |
+          sum(rate(http_requests_total{status=~"5.."}[5m]))
+            /
+          sum(rate(http_requests_total[5m]))
+            > 0.05
+        for: 5m
+        labels:
+          severity: critical
+        annotations:
+          summary: "High error rate ({{ $value | humanizePercentage }})"
+          description: "Error rate above 5% for 5 minutes on {{ $labels.instance }}."
+
+      # p99 latency > 1s for 10 min
+      - alert: HighLatency
+        expr: |
+          histogram_quantile(0.99,
+            sum by (le, service) (rate(http_request_duration_seconds_bucket[10m]))
+          ) > 1
+        for: 10m
+        labels:
+          severity: warning
+        annotations:
+          summary: "High p99 latency on {{ $labels.service }}"
+          description: "p99 latency is {{ $value }}s on {{ $labels.service }}."
+
+      # Pod restart loop
+      - alert: PodCrashLooping
+        expr: |
+          rate(kube_pod_container_status_restarts_total[15m]) > 0
+        for: 5m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Pod {{ $labels.pod }} is crash looping"
+          description: "Pod has restarted {{ $value }} times in 15 minutes."
+
+      # Pod not ready
+      - alert: PodNotReady
+        expr: |
+          sum by (namespace, pod) (kube_pod_status_phase{phase=~"Pending|Unknown"})
+            > 0
+        for: 15m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Pod {{ $labels.pod }} not ready for 15m"
+
+      # Deployment replicas mismatch
+      - alert: DeploymentReplicasMismatch
+        expr: |
+          kube_deployment_spec_replicas
+            !=
+          kube_deployment_status_replicas_available
+        for: 15m
+        labels:
+          severity: warning
+
+      # High memory
+      - alert: HighMemoryUsage
+        expr: |
+          (
+            container_memory_usage_bytes{container!="",container!="POD"}
+            / container_spec_memory_limit_bytes{container!="",container!="POD"}
+          ) > 0.85
+        for: 10m
+        labels:
+          severity: warning
+
+      # SLO burn rate (1h window, 14.4x monthly budget)
+      - alert: HighSLOBurnRate1h
+        expr: |
+          sum(rate(http_requests_total{status=~"5.."}[1h]))
+            /
+          sum(rate(http_requests_total[1h]))
+            > (1 - 0.999) * 14.4
+        for: 2m
+        labels:
+          severity: critical
+          slo: api-availability
+        annotations:
+          summary: "API SLO burn rate too high (1h window)"
+
+# Recording rules
+  - name: api-recording
+    interval: 30s
+    rules:
+      - record: api:request_rate:5m
+        expr: sum by (service) (rate(http_requests_total[5m]))
+      - record: api:error_rate:5m
+        expr: |
+          sum by (service) (rate(http_requests_total{status=~"5.."}[5m]))
+            /
+          sum by (service) (rate(http_requests_total[5m]))
+      - record: api:p99_latency:5m
+        expr: |
+          histogram_quantile(0.99,
+            sum by (le, service) (rate(http_request_duration_seconds_bucket[5m]))
+          )

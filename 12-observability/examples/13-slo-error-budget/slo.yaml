@@ -1,0 +1,79 @@
+# 13 — SLO definition and error budget (YAML)
+
+groups:
+  - name: api_slo
+    interval: 30s
+    rules:
+      # === SLI recording rules ===
+      - record: api:sli_availability:5m
+        expr: |
+          sum(rate(http_requests_total{status!~"5.."}[5m]))
+            /
+          sum(rate(http_requests_total[5m]))
+
+      - record: api:sli_latency:5m
+        expr: |
+          histogram_quantile(0.99,
+            sum by (le) (rate(http_request_duration_seconds_bucket[5m]))
+          )
+
+      # === Error budget calculations ===
+      - record: api:error_budget_remaining:30d
+        expr: |
+          (
+            1 - (
+              sum(increase(http_requests_total{status=~"5.."}[30d]))
+                /
+              sum(increase(http_requests_total[30d]))
+            )
+            / 0.001  # 99.9% SLO -> 0.1% error budget
+          )
+
+      # === Multi-window burn rate alerts (Google SRE) ===
+      # Page: 2% budget consumed in 1h (14.4x burn rate over monthly)
+      - alert: SLOPageBurnRateFast
+        expr: |
+          (1 - api:sli_availability:5m)
+            > (1 - 0.999) * 14.4
+        for: 2m
+        labels:
+          severity: critical
+          slo: api-availability
+        annotations:
+          summary: "API SLO burning 14.4x over 1h window"
+          runbook: "https://runbooks.example.com/slo-burn"
+
+      # Page: 5% budget consumed in 6h (6x burn rate)
+      - alert: SLOPageBurnRateMed
+        expr: |
+          (1 - api:sli_availability:30m)
+            > (1 - 0.999) * 6
+        for: 5m
+        labels:
+          severity: critical
+          slo: api-availability
+        annotations:
+          summary: "API SLO burning 6x over 30m window"
+
+      # Ticket: 10% consumed in 3d (1x burn rate)
+      - alert: SLOTicketBurnRate
+        expr: |
+          (1 - api:sli_availability:3h)
+            > (1 - 0.999) * 1
+        for: 1h
+        labels:
+          severity: warning
+        annotations:
+          summary: "API SLO burning 1x over 3h window - investigate"
+
+      # === Latency SLO ===
+      - alert: SLOLatencyBreach
+        expr: |
+          histogram_quantile(0.99, sum by (le) (rate(http_request_duration_seconds_bucket[5m])))
+            > 0.5
+        for: 10m
+        labels:
+          severity: warning
+          slo: api-latency
+        annotations:
+          summary: "p99 latency exceeds SLO of 500ms"

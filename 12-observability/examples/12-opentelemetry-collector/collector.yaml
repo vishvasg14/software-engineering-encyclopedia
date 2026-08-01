@@ -1,0 +1,124 @@
+# 12 — OpenTelemetry Collector configuration (YAML)
+
+receivers:
+  otlp:
+    protocols:
+      grpc:
+        endpoint: 0.0.0.0:4317
+      http:
+        endpoint: 0.0.0.0:4318
+
+  prometheus:
+    config:
+      scrape:
+        configs:
+          - job_name: otel-collector
+            scrape_interval: 10s
+            static_configs:
+              - targets: [localhost:8888]
+
+  jaeger:
+    protocols:
+      grpc:
+        endpoint: 0.0.0.0:14250
+      thrift_http:
+        endpoint: 0.0.0.0:14268
+
+processors:
+  # Batch before exporting
+  batch:
+    timeout: 5s
+    send_batch_size: 1000
+
+  # Memory limiter
+  memory_limiter:
+    check_interval: 1s
+    limit_percentage: 80
+    spike_limit_percentage: 25
+
+  # Tail-based sampling
+  tail_sampling:
+    decision_wait: 10s
+    num_traces: 50000
+    expected_new_traces_per_sec: 100
+    policies:
+      - name: errors
+        type: status_code
+        status_code:
+          status_codes: [ERROR, UNSET]
+      - name: latency
+        type: latency
+        latency:
+          threshold_ms: 1000
+      - name: probabilistic
+        type: probabilistic
+        probabilistic:
+          sampling_percentage: 1
+
+  # Resource detection
+  resourcedetection:
+    detectors: [env, system, gcp, ec2, azure]
+    timeout: 5s
+
+  # Add environment labels
+  attributes:
+    actions:
+      - key: environment
+        value: production
+        action: upsert
+      - key: team
+        value: platform
+        action: upsert
+
+exporters:
+  prometheus:
+    endpoint: 0.0.0.0:8889
+    const_labels:
+      label1: value1
+
+  otlphttp/prometheus:
+    endpoint: http://mimir:8080/otlp
+
+  otlp/jaeger:
+    endpoint: jaeger:4317
+    tls:
+      insecure: true
+
+  otlp/loki:
+    endpoint: http://loki:3100/otlp/v1/logs
+    tls:
+      insecure: true
+
+  otlp/tempo:
+    endpoint: tempo:4317
+    tls:
+      insecure: true
+
+  logging:
+    verbosity: detailed
+
+extensions:
+  health_check:
+    endpoint: 0.0.0.0:13133
+  pprof:
+    endpoint: 0.0.0.0:1777
+  zpages:
+    endpoint: 0.0.0.0:55679
+
+service:
+  extensions: [health_check, pprof, zpages]
+  pipelines:
+    metrics:
+      receivers: [otlp, prometheus]
+      processors: [memory_limiter, batch, resourcedetection, attributes]
+      exporters: [prometheus, otlphttp/prometheus]
+
+    traces:
+      receivers: [otlp, jaeger]
+      processors: [memory_limiter, tail_sampling, batch, resourcedetection, attributes]
+      exporters: [otlp/jaeger, otlp/tempo]
+
+    logs:
+      receivers: [otlp]
+      processors: [memory_limiter, batch, resourcedetection, attributes]
+      exporters: [otlp/loki, logging]

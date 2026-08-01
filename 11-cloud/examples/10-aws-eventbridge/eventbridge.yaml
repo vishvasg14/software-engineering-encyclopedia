@@ -1,0 +1,87 @@
+# 10 — AWS EventBridge (CloudFormation)
+
+Resources:
+  # Custom event bus
+  AppEventBus:
+    Type: AWS::Events::EventBus
+    Properties:
+      Name: app-events
+
+  # Rule: capture S3 events and forward to Lambda
+  S3ToLambdaRule:
+    Type: AWS::Events::Rule
+    Properties:
+      Name: s3-to-lambda
+      EventBusName: !Ref AppEventBus
+      EventPattern:
+        source:
+          - aws.s3
+        detail-type:
+          - Object Created
+        detail:
+          bucket:
+            name:
+              - my-bucket
+      Targets:
+        - Id: lambda
+          Arn: !GetAtt ProcessLambda.Arn
+          DeadLetterConfig:
+            Arn: !GetAtt EventDLQ.Arn
+
+  # Rule: schedule Lambda every 5 minutes
+  ScheduledRule:
+    Type: AWS::Events::Rule
+    Properties:
+      Name: scheduled-task
+      ScheduleExpression: 'cron(0/5 * * * ? *)'  # every 5 min
+      Targets:
+        - Id: target
+          Arn: !GetAtt ProcessLambda.Arn
+          Input: |
+            {"action": "cleanup", "timestamp": "<aws.events.rule.arn>"}
+
+  # Lambda function
+  ProcessLambda:
+    Type: AWS::Lambda::Function
+    Properties:
+      FunctionName: process-events
+      Runtime: nodejs20.x
+      Handler: index.handler
+      Role: !GetAtt LambdaRole.Arn
+      Code:
+        ZipFile: |
+          exports.handler = async (event) => {
+            console.log('Event:', JSON.stringify(event));
+            return { statusCode: 200 };
+          };
+      MemorySize: 256
+      Timeout: 30
+
+  # IAM role for Lambda
+  LambdaRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: lambda.amazonaws.com
+            Action: sts:AssumeRole
+      Policies:
+        - PolicyName: logs
+          PolicyDocument:
+            Version: '2012-10-17'
+            Statement:
+              - Effect: Allow
+                Action:
+                  - logs:CreateLogGroup
+                  - logs:CreateLogStream
+                  - logs:PutLogEvents
+                Resource: arn:aws:logs:*:*:*
+
+  # DLQ for failed events
+  EventDLQ:
+    Type: AWS::SQS::Queue
+    Properties:
+      QueueName: event-dlq
+      MessageRetentionPeriod: 1209600

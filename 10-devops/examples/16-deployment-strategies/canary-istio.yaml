@@ -1,0 +1,85 @@
+# 16 — Deployment strategies
+
+# === Canary with Istio ===
+# 95% traffic to v1, 5% to v2 (canary)
+apiVersion: networking.istio.io/v1beta1
+kind: VirtualService
+metadata:
+  name: my-app
+spec:
+  hosts:
+    - my-app
+  http:
+    - route:
+        - destination:
+            host: my-app
+            subset: v1
+          weight: 95
+        - destination:
+            host: my-app
+            subset: v2
+          weight: 5
+
+---
+
+# === Blue-green with Argo Rollouts ===
+apiVersion: argoproj.io/v1alpha1
+kind: Rollout
+metadata:
+  name: my-app
+spec:
+  replicas: 5
+  strategy:
+    blueGreen:
+      activeService: my-app
+      previewService: my-app-preview
+      autoPromotionEnabled: false
+      scaleDownDelaySeconds: 30
+  selector:
+    matchLabels:
+      app: my-app
+  template:
+    metadata:
+      labels:
+        app: my-app
+    spec:
+      containers:
+        - name: my-app
+          image: myorg/my-app:1.0.0
+
+---
+
+# === Rolling update (default in K8s) ===
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-app
+spec:
+  replicas: 10
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 2
+      maxUnavailable: 1
+  template:
+    spec:
+      containers:
+        - name: my-app
+          image: myorg/my-app:1.0.0
+
+---
+
+# === Recreate (downtime, simple) ===
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-app
+spec:
+  replicas: 5
+  strategy:
+    type: Recreate
+  template:
+    spec:
+      containers:
+        - name: my-app
+          image: myorg/my-app:1.0.0

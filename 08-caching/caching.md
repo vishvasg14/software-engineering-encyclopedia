@@ -1,0 +1,1986 @@
+# Caching (Redis, Caffeine, Memcached)
+
+> A comprehensive, production-grade treatment of Redis (deep), Caffeine (deep), Memcached (brief), caching patterns, and CDN — from data structures to eviction algorithms to invalidation strategies.
+
+---
+
+## Table of Contents
+
+1. [Overview](#1-overview)
+2. [Definition](#2-definition)
+3. [Five Ws + One H](#3-five-ws--one-h)
+4. [History](#4-history)
+5. [Problem Statement](#5-problem-statement)
+6. [Real-World Motivation](#6-real-world-motivation)
+7. [Internal Working](#7-internal-working)
+8. [Deep Dive](#8-deep-dive)
+9. [Architecture](#9-architecture)
+10. [Performance](#10-performance)
+11. [Security](#11-security)
+12. [Production Engineering](#12-production-engineering)
+13. [Production Case Studies](#13-production-case-studies)
+14. [Code Examples](#14-code-examples)
+15. [Common Mistakes](#15-common-mistakes)
+16. [Debugging](#16-debugging)
+17. [Monitoring & Observability](#17-monitoring--observability)
+18. [Best Practices](#18-best-practices)
+19. [Anti-Patterns](#19-anti-patterns)
+20. [Edge Cases](#20-edge-cases)
+21. [Comparisons](#21-comparisons)
+22. [Interview Preparation](#22-interview-preparation)
+23. [References](#23-references)
+
+---
+
+## 1. Overview
+
+A **cache** is a high-speed storage layer that serves a subset of data, typically transient, so that future requests for that data are served faster than accessing the primary storage. Caching is one of the most effective performance optimizations: a hit can make a request 10×–1000× faster than going to the source of truth.
+
+This document treats **Redis** (deep) as the dominant distributed cache, **Caffeine** (deep) as the dominant in-JVM cache for Java applications, and **Memcached** (brief) as a legacy alternative. It explains caching patterns (cache-aside, write-through, etc.), invalidation strategies, common pitfalls, and the role of CDNs in the broader caching landscape.
+
+**Scope.** This is not a Redis tutorial. It assumes you have used caches in production. It focuses on **how caches work internally**, how to choose the right cache for a workload, and how to operate caches at scale.
+
+**Version baselines.** Redis 7+, Caffeine 3.x, Memcached 1.6.
+
+## 2. Definition
+
+The caching ecosystem uses overlapping terminology. Here's a precise taxonomy:
+
+| Term | Type | Authoritative source |
+|------|------|---------------------|
+| **Cache** | High-speed storage that serves a subset of data | General term |
+| **Cache hit** | Request served from cache | — |
+| **Cache miss** | Request not in cache; goes to source of truth | — |
+| **Hot key** | Frequently accessed key, often a bottleneck | Redis/Caffeine |
+| **TTL (Time-To-Live)** | Duration before cache entry expires | — |
+| **LRU** | Least Recently Used — eviction policy | General algorithm |
+| **LFU** | Least Frequently Used — eviction policy | Memcached, Caffeine |
+| **W-TinyLFU** | Windowed TinyLFU — Caffeine's eviction algorithm | Caffeine |
+| **Cache-aside** | Pattern where the application manages the cache | Pattern |
+| **Read-through** | Pattern where the cache library manages load | Pattern |
+| **Write-through** | Pattern where writes go to cache and DB synchronously | Pattern |
+| **Write-behind** | Pattern where writes go to cache first, async to DB | Pattern |
+| **Refresh-ahead** | Pattern where the cache auto-refreshes before expiry | Pattern |
+| **Cache stampede** | Many requests miss simultaneously, all hit the source | Anti-pattern |
+| **Cache invalidation** | Process of removing stale entries | — |
+| **TTL-based invalidation** | Entries expire automatically | — |
+| **Event-based invalidation** | Entries removed on event | — |
+| **Versioning** | Compare-and-swap on versioned keys | — |
+| **Redis** | In-memory data structure store, used as cache | redis.io |
+| **Caffeine** | High-performance Java caching library | github.com/ben-manes/caffeine |
+| **Memcached** | Distributed in-memory cache | memcached.org |
+| **Hazelcast** | Distributed in-memory data grid | hazelcast.com |
+| **CDN** | Content Delivery Network | — |
+
+The standard cache stack:
+
+```mermaid
+graph TB
+    subgraph "Client Tier"
+        App[Application]
+    end
+    subgraph "Cache Tier"
+        Caffeine["Caffeine (in-JVM)"]
+        Redis["Redis (distributed)"]
+        CDN["CDN (edge)"]
+    end
+    subgraph "Backend"
+        DB[(Primary DB)]
+    end
+    App --> Caffeine
+    App --> Redis
+    App --> CDN
+    Caffeine --> DB
+    Redis --> DB
+    CDN --> App
+```
+
+## 3. Five Ws + One H
+
+### What
+
+**Redis** is an in-memory data structure server that can be used as a cache, database, message broker, or streaming engine. **Caffeine** is a high-performance in-JVM caching library for Java. **Memcached** is a simple distributed in-memory cache.
+
+### Why
+
+Caching exists because applications have hot data — data that's accessed far more often than the rest. By storing hot data in memory (Redis, Caffeine) or at the edge (CDN), we avoid slow disk accesses to the primary database.
+
+### When
+
+Memcached (2003) was the original open-source distributed cache. Redis (2009) extended the model to a multi-data-structure server. Caffeine (2014) became the standard in-JVM cache for Java after Guava Cache. The pattern of "cache everything you can" matured in the 2010s.
+
+### Where
+
+- **Twitter:** Redis for timelines and counters.
+- **GitHub:** Redis for rate limiting and session state.
+- **Facebook/Meta:** Memcached and TAO for social graph.
+- **Pinterest:** Redis for feed generation.
+- **Stack Overflow, GitLab, Discourse:** Redis for session, rate limiting, queue.
+
+### Who
+
+- **Memcached:** Brad Fitzpatrick (LiveJournal), 2003.
+- **Redis:** Salvatore Sanfilippo (antirez), 2009. Now part of Redis Inc.
+- **Caffeine:** Ben Manes (discontinued Guava Cache author).
+- **Hazelcast:** Hazelcast company.
+
+### How (one-paragraph preview)
+
+A client application checks the cache before going to the source of truth. On a hit, it serves the cached value. On a miss, it fetches from the source, stores it in the cache (typically with a TTL), and serves it. The cache uses an eviction algorithm (LRU, LFU, W-TinyLFU) to bound memory. On writes, the pattern (cache-aside, write-through, write-behind) determines whether the cache is updated synchronously or async. Invalidation ensures stale data doesn't linger.
+
+## 4. History
+
+### 4.1 Origins (2003-2009)
+
+- **2003** — Brad Fitzpatrick creates **Memcached** at LiveJournal to scale reads.
+- **2003-2008** — Memcached becomes the standard distributed cache (Facebook, Twitter, Wikipedia).
+- **2009** — Salvatore Sanfilippo creates **Redis** in Italy. Originally for real-time web analytics.
+
+### 4.2 Growth (2009-2014)
+
+- **2009** — Redis 1.0 released.
+- **2010** — Redis adds replication.
+- **2012** — Redis adds Lua scripting.
+- **2014** — Caffeine (originally Guava Cache) becomes standard for Java. Spring Boot begins using it.
+- **2015** — Redis Cluster GA.
+- **2016** — Redis 3.2 adds LFU eviction and Streams (preview).
+
+### 4.3 Modern era (2017-2026)
+
+- **2017** — Redis 4.0: modules (RediSearch, RedisJSON).
+- **2018** — Redis 5.0: Streams GA.
+- **2020** — Redis 6.0: ACL, RESP3, client-side caching.
+- **2021** — Caffeine 3.0 (Java 11+).
+- **2023** — Redis 7.0: functions, ACLv2.
+- **2024** — Redis 7.2: improvements.
+- **2025** — Caffeine 3.2 (Java 17+).
+
+### 4.4 Governance
+
+- **Redis:** Originally BSD-licensed; Redis Inc. relicensed some modules (RSAL/SSPLv1) in 2024. The open-source Redis fork is **Valkey** (Linux Foundation) since 2024.
+- **Caffeine:** Apache 2.0.
+- **Memcached:** BSD.
+- **Hazelcast:** Apache 2.0.
+
+```mermaid
+timeline
+    title Caching milestones
+    2003 : Memcached (LiveJournal)
+    2009 : Redis 1.0 (antirez)
+    2012 : Redis adds Lua
+    2014 : Caffeine (Guava Cache)
+    2015 : Redis Cluster GA
+    2018 : Redis 5.0 Streams GA
+    2020 : Redis 6.0 ACL
+    2023 : Redis 7.0 functions
+    2024 : Valkey fork (Redis relicensing)
+```
+
+## 5. Problem Statement
+
+### 5.1 What caching solves
+
+Caching addresses:
+
+- **Read latency** — in-memory access is 1000× faster than disk.
+- **Read load** — a cache can absorb 90%+ of reads, freeing the database.
+- **Compute** — expensive computations can be cached.
+- **Cost** — fewer database queries = lower CPU/IO cost.
+
+### 5.2 What caching doesn't solve
+
+- **Consistency** — cached data can become stale.
+- **Single source of truth** — the database is still authoritative.
+- **Write scaling** — caching helps reads, not writes.
+- **Real-time data** — unless TTL is very short, cache lags reality.
+
+### 5.3 Why not cache everything?
+
+- Memory is finite.
+- Cache invalidation is hard.
+- Cold cache (cold start) causes thundering herd.
+- Stale data causes correctness bugs.
+
+## 6. Real-World Motivation
+
+### 6.1 Twitter / X
+
+Twitter uses Redis extensively for timelines (home_timeline, user_timeline), counters, and rate limiting. Their engineering has published several influential posts on Redis at scale.
+
+### 6.2 Pinterest
+
+Pinterest uses Redis as a cache layer for their feed generation. They've published on caching patterns and Redis operations.
+
+### 6.3 Facebook / Meta
+
+Meta uses Memcached at massive scale (thousands of servers) for their social graph cache. They pioneered many caching patterns (leases, "thundering herd protection").
+
+### 6.4 GitHub
+
+GitHub uses Redis for session storage and rate limiting. They built Haystack on top of it for blob storage.
+
+### 6.5 Economic motivation
+
+- **Latency** — Caffeine in-JVM cache: sub-microsecond. Redis: sub-millisecond.
+- **Cost** — fewer database queries = lower database cost.
+- **Throughput** — a single Redis instance can handle 100K+ ops/s.
+
+```mermaid
+graph LR
+    subgraph "Production motivations"
+        A[Read latency] --> Drivers
+        B[Read load] --> Drivers
+        C[Compute cost] --> Drivers
+        D[Throughput] --> Drivers
+    end
+    Drivers --> Cache["Caching layers critical<br/>for production scale"]
+```
+
+---
+
+## 7. Internal Working
+
+### 7.1 The lifecycle of a cache read
+
+```mermaid
+sequenceDiagram
+    participant App
+    participant Cache
+    participant DB
+
+    App->>Cache: GET(key)
+    alt Cache hit
+        Cache-->>App: value
+    else Cache miss
+        Cache-->>App: miss
+        App->>DB: SELECT ...
+        DB-->>App: value
+        App->>Cache: SET(key, value, TTL)
+    end
+```
+
+### 7.2 Subsystems that participate
+
+| Subsystem | Responsibility |
+|-----------|---------------|
+| **Client** | Reads/writes via cached library |
+| **Cache library** (Caffeine) | In-JVM cache: eviction, expiration |
+| **Cache server** (Redis, Memcached) | Networked key-value store |
+| **CDN** | Edge cache for HTTP responses |
+| **Source of truth** (DB) | Authoritative store |
+| **Observability** | Metrics, traces |
+
+### 7.3 Caffeine architecture
+
+```mermaid
+graph TB
+    subgraph "JVM"
+        subgraph "Caffeine Cache"
+            BoundedQueue["Bounded Local Cache<br/>(LRU/TinyLFU)"]
+            AsyncLoader["Async Loader"]
+            Stats["Statistics"]
+        end
+        App[Application Code]
+    end
+    subgraph "Backend"
+        DB[(Database)]
+    end
+    App --> BoundedQueue
+    App --> AsyncLoader
+    AsyncLoader --> DB
+    BoundedQueue -.eviction.-> App
+    Stats -.metrics.-> Prometheus
+```
+
+### 7.4 Redis event loop
+
+```mermaid
+sequenceDiagram
+    participant C as Client
+    participant Loop as Event Loop
+    Loop->>Loop: epoll_wait / kqueue / select
+    C->>Loop: send command
+    Loop->>Loop: parse
+    Loop->>Loop: execute (single-threaded)
+    Loop-->>C: response
+    Note over Loop: Memory access is the bottleneck;<br/>single-threading avoids locks
+```
+
+## 8. Deep Dive
+
+This section is the heart of the document.
+
+### 8.1 Redis data structures
+
+**Strings:**
+
+```bash
+SET user:1:name "Alice"
+SET user:1:visits 0
+INCR user:1:visits
+GET user:1:visits
+MSET user:1:name "Alice" user:1:email "alice@example.com"
+```
+
+Max 512 MB. Used for caching, counters, sessions, locking (SETNX).
+
+**Hashes:**
+
+```bash
+HSET user:1 name "Alice" email "alice@..." active true
+HGETALL user:1
+HINCRBY user:1 visits 1
+```
+
+Map of fields to values. Used for object caching. Avoids JSON serialization overhead.
+
+**Lists:**
+
+```bash
+LPUSH recent:activity "user1:login" "user2:click"
+LRANGE recent:activity 0 9
+LPOP recent:activity
+RPOP recent:activity
+```
+
+Doubly-linked list. Used for queues, recent activity, pub/sub primitives.
+
+**Sets:**
+
+```bash
+SADD tags:article:1 "tech" "redis"
+SMEMBERS tags:article:1
+SINTER tags:article:1 tags:article:2
+SUNION tags:article:1 tags:article:2
+```
+
+Unordered collection of unique strings. Used for tags, members, deduplication.
+
+**Sorted sets:**
+
+```bash
+ZADD leaderboard 1000 "alice"
+ZADD leaderboard 950 "bob"
+ZREVRANGE leaderboard 0 9
+ZINCRBY leaderboard 100 "alice"
+```
+
+Score-ordered set. Used for leaderboards, time-series (score = timestamp), priority queues.
+
+**Streams:**
+
+```bash
+XADD events:user * type "click" user "alice"
+XLEN events:user
+XRANGE events:user - +
+XREAD BLOCK 10000 STREAMS events:user $
+```
+
+Append-only log with consumer groups. Used for event streaming, message queues, activity feeds.
+
+**HyperLogLog (HLL):**
+
+```bash
+PFADD unique:visitors "user1" "user2" "user3"
+PFCOUNT unique:visitors
+```
+
+Approximate distinct count with ~0.81% error. Fixed memory (12 KB). Used for "DAU" metrics.
+
+**Geospatial:**
+
+```bash
+GEOADD locations 13.361389 38.115556 "Palermo"
+GEODIST locations "Palermo" "Catania"
+GEOSEARCH locations FROMLONLAT 15 LAT 37 RADIUS 200 km
+```
+
+Lat/long. Used for "find nearby", location-based services.
+
+**Bitmaps:**
+
+```bash
+SETBIT daily:active:2024-01-15 12345 1
+BITCOUNT daily:active:2024-01-15
+BITOP OR daily:active:7d daily:active:2024-01-09 daily:active:2024-01-08
+```
+
+Bit operations on strings. Used for daily/monthly active user tracking.
+
+### 8.2 Redis persistence
+
+Redis offers two persistence options (configurable per instance):
+
+**RDB (Redis Database):**
+- Point-in-time snapshots.
+- Configurable: `save 3600 1000` (snapshot every hour if 1000+ keys changed).
+- Format: `dump.rdb` file.
+- Fast to load, but data loss between snapshots.
+
+**AOF (Append Only File):**
+- Log every write operation.
+- Configurable fsync policy: `everysec`, `always`, `no`.
+- Replay on startup to restore state.
+- Larger than RDB; some performance overhead.
+
+**Best practice:** Use RDB for backups and AOF with `everysec` for durability. Redis 4.0+ supports RDB + AOF hybrid mode where AOF is rewritten as RDB snapshots.
+
+### 8.3 Redis replication
+
+Redis uses async leader-replica replication:
+
+```mermaid
+graph LR
+    Client[Client]
+    Leader["Leader<br/>(primary)"]
+    R1["Replica 1<br/>(secondary)"]
+    R2["Replica 2<br/>(secondary)"]
+    Client --> Leader
+    Leader -.replicates asynchronously.-> R1
+    Leader -.replicates asynchronously.-> R2
+```
+
+- Replicas connect to leader.
+- Leader sends write commands to replicas.
+- Async by default; can be configured for sync replication.
+
+**Use cases:**
+- Read scaling (reads go to replicas).
+- High availability (failover to replica).
+- Geographic distribution.
+
+**Consistency:** Async replication means replicas may lag. Reads from replicas can return stale data. Tunable via `WAIT` for stronger guarantees.
+
+### 8.4 Redis Sentinel
+
+Sentinel provides automatic failover:
+
+```mermaid
+graph TB
+    subgraph "Sentinel Cluster"
+        S1["Sentinel 1"]
+        S2["Sentinel 2"]
+        S3["Sentinel 3"]
+    end
+    Leader[("Primary")]
+    R1[("Replica 1")]
+    R2[("Replica 2")]
+    S1 -.monitors.-> Leader
+    S2 -.monitors.-> Leader
+    S3 -.monitors.-> Leader
+    S1 -.monitors.-> R1
+    S2 -.monitors.-> R1
+    S3 -.monitors.-> R1
+    Client[Client]
+    S1 --> Client
+    Client --> Leader
+```
+
+- Multiple sentinels monitor the master.
+- If majority of sentinels agree master is down, elect new master from replicas.
+- Client connects via sentinel, gets current master address.
+- Quorum: typically 3 sentinels, 2+ agreement required.
+
+### 8.5 Redis Cluster
+
+For horizontal scaling, Redis Cluster shards data across nodes:
+
+```mermaid
+graph TB
+    subgraph "Redis Cluster"
+        N1["Master 1<br/>slots 0-5460"]
+        N2["Master 2<br/>slots 5461-10922"]
+        N3["Master 3<br/>slots 10923-16383"]
+    end
+    R1["Replica 1"]
+    R2["Replica 2"]
+    R3["Replica 3"]
+    N1 -.replicates.-> R1
+    N2 -.replicates.-> R2
+    N3 -.replicates.-> R3
+```
+
+**Hash slots:** 16,384 slots; key `foo` hashes to `CRC16(key) mod 16384`. Each master owns slots.
+
+**Hash tags:** `{user:123}.profile` and `{user:123}.sessions` use the same hash because the tag `user:123` is what gets hashed. This enables multi-key operations.
+
+**Resharding:** Move slots from one node to another without downtime.
+
+**Limitations:**
+- Multi-key operations require keys in the same slot.
+- No multi-database.
+- Lua scripts must touch keys in one slot.
+
+### 8.6 Redis transactions
+
+Redis supports MULTI/EXEC transactions:
+
+```bash
+MULTI
+INCR user:1:balance
+DECR user:2:balance
+INCR transfers:count
+EXEC
+```
+
+- Commands queued, executed atomically.
+- Other clients see no intermediate state.
+- No rollback on failure.
+
+**Optimistic locking via WATCH:**
+
+```bash
+WATCH user:1:balance
+val = GET user:1:balance
+if val > 100:
+    MULTI
+    DECRBY user:1:balance 100
+    INCRBY user:2:balance 100
+    EXEC
+else:
+    UNWATCH
+```
+
+- WATCH monitors keys; if any change before EXEC, the transaction is aborted.
+
+### 8.7 Redis Streams (consumer groups)
+
+```bash
+# Producer
+XADD events:user * type "click" user "alice"
+
+# Consumer group
+XGROUP CREATE events:user consumer1 $
+XREADGROUP GROUP consumer1 alice COUNT 10 BLOCK 5000 STREAMS events:user >
+XACK events:user consumer1 <id>
+```
+
+- Consumer groups: multiple consumers share work.
+- Pending entries: list (PEL) tracks unacked messages.
+- `>` (new), `0` (from start), `$` (from end).
+- Re-delivery via XCLAIM/XAUTOCLAIM.
+
+### 8.8 Redis Lua scripting
+
+```lua
+-- Increment and return new value, atomically
+local val = redis.call('INCR', KEYS[1])
+if val == 1 then
+    redis.call('EXPIRE', KEYS[1], ARGV[1])
+end
+return val
+```
+
+Called via `EVAL "..." 1 key arg` or `EVALSHA`. Atomic execution — no other commands run during the script.
+
+### 8.9 Caffeine
+
+**Basic cache:**
+
+```java
+Cache<String, User> cache = Caffeine.newBuilder()
+    .maximumSize(10_000)
+    .expireAfterWrite(Duration.ofMinutes(5))
+    .build();
+
+User user = cache.get("user:1", key -> userRepository.findById(1L).orElseThrow());
+cache.put("user:1", user);
+cache.invalidate("user:1");
+```
+
+**Loading cache (automatic loading):**
+
+```java
+LoadingCache<String, User> cache = Caffeine.newBuilder()
+    .maximumSize(10_000)
+    .expireAfterWrite(Duration.ofMinutes(5))
+    .build(key -> userRepository.findById(Long.parseLong(key.substring(5))).orElseThrow());
+
+User user = cache.get("user:1");  // auto-loads if missing
+```
+
+**Async loading:**
+
+```java
+AsyncCache<String, User> cache = Caffeine.newBuilder()
+    .maximumSize(10_000)
+    .buildAsync();
+
+CompletableFuture<User> future = cache.get("user:1", key ->
+    CompletableFuture.supplyAsync(() -> userRepository.findById(...).orElseThrow())
+);
+```
+
+### 8.10 Caffeine eviction: W-TinyLFU
+
+Caffeine uses **W-TinyLFU** (Windowed TinyLFU), a hybrid eviction policy:
+
+```mermaid
+graph TB
+    Candidate["Candidate Entry<br/>(new)"]
+    Window["Window LRU<br/>(1% of cache)"]
+    Main["Main Space<br/>(TinyLFU, 99%)"]
+    Victim["Victim from Main"]
+    Candidate --> Window
+    Window -->|"eviction"| Victim
+    Victim -->|"compare with candidate"| Decision
+    Decision -->|"winner"| Main
+    Decision -->|"loser"| Out[Evicted]
+```
+
+- **TinyLFU** uses a counting sketch (frequency estimation).
+- **Window** (1% of size) catches recent items; **Main** (99%) holds frequently-accessed items.
+- New candidates must compete against main-space victims.
+- Outperforms pure LRU at typical cache sizes.
+
+**Why W-TinyLFU beats LRU:**
+- LRU misses high-frequency scan patterns (a scan evicts useful items).
+- LFU penalties are too high (stale counts).
+- W-TinyLFU combines recency (window) with frequency (main).
+
+### 8.11 Caffeine Spring integration
+
+```java
+@Configuration
+@EnableCaching
+public class CacheConfig {
+
+    @Bean
+    public CaffeineCacheManager cacheManager() {
+        CaffeineCacheManager manager = new CaffeineCacheManager();
+        manager.setCaffeine(Caffeine.newBuilder()
+            .maximumSize(10_000)
+            .expireAfterWrite(Duration.ofMinutes(5))
+            .recordStats());
+        return manager;
+    }
+}
+
+@Service
+public class UserService {
+    private final UserRepository userRepository;
+
+    public UserService(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
+
+    @Cacheable(value = "users", key = "#id")
+    public User findById(Long id) {
+        return userRepository.findById(id).orElseThrow();
+    }
+}
+```
+
+### 8.12 Memcached
+
+Memcached is simpler than Redis:
+
+- **Pure cache**: no persistence, no replication built in.
+- **Slab allocator**: memory pre-partitioned into 1MB slabs, each with LRU.
+- **Multi-threaded**: scales with cores.
+- **Distributed hashing**: client hashes keys to determine which server.
+
+```bash
+# Set
+set user:1 0 60 5
+alice
+STORED
+
+# Get
+get user:1
+VALUE user:1 0 5
+alice
+END
+
+# Delete
+delete user:1
+DELETED
+```
+
+When to choose Memcached over Redis:
+- Pure cache (no persistence needed).
+- Massive scale (>1 TB cache).
+- Already in your stack.
+
+### 8.13 Caching patterns
+
+**Cache-aside (lazy loading):**
+
+```mermaid
+sequenceDiagram
+    participant App
+    participant Cache
+    participant DB
+
+    App->>Cache: GET(key)
+    alt Hit
+        Cache-->>App: value
+    else Miss
+        Cache-->>App: null
+        App->>DB: SELECT
+        DB-->>App: value
+        App->>Cache: SET(key, value, TTL)
+        App-->>App: returns value
+    end
+```
+
+The application manages the cache. Most common pattern. Risk: cache stampede on miss.
+
+**Read-through:**
+
+```mermaid
+sequenceDiagram
+    participant App
+    participant Cache
+
+    App->>Cache: get(key)
+    alt Hit
+        Cache-->>App: value
+    else Miss
+        Cache->>Cache: load via CacheLoader
+        Cache-->>App: value
+    end
+```
+
+The cache library (Caffeine's LoadingCache) handles loading. Cleaner code.
+
+**Write-through:**
+
+```mermaid
+sequenceDiagram
+    participant App
+    participant Cache
+    participant DB
+
+    App->>Cache: write(key, value)
+    Cache->>DB: write(key, value)
+    DB-->>Cache: ack
+    Cache-->>App: ack
+```
+
+Both cache and DB updated synchronously. Cache and DB always consistent (until eviction).
+
+**Write-behind (write-back):**
+
+```mermaid
+sequenceDiagram
+    participant App
+    participant Cache
+    participant DB
+
+    App->>Cache: write(key, value)
+    Cache-->>App: ack
+    Note over Cache: async write to DB<br/>(batched / delayed)
+    Cache->>DB: write(key, value)
+```
+
+Cache writes fast; DB writes async. Risk: data loss if cache fails before DB write.
+
+**Refresh-ahead:**
+
+```mermaid
+sequenceDiagram
+    participant App
+    participant Cache
+    participant DB
+
+    App->>Cache: get(key)
+    Cache-->>App: value
+    Note over Cache: TTL approaching;<br/>async refresh
+    Cache->>DB: SELECT
+    Cache: update value
+```
+
+Cache refreshes in background before expiry. Avoids sync misses.
+
+### 8.14 Cache invalidation
+
+Two-philosophy problem per Phil Karlton: "There are only two hard things in Computer Science: cache invalidation and naming things."
+
+**TTL-based:** Entries expire after a fixed duration. Simple, but can serve stale data within TTL.
+
+**Event-based:** On DB write, publish a "cache invalidate" event. Consumer deletes cache entry. Strong consistency.
+
+```java
+@CacheEvict(value = "users", key = "#user.id")
+public void updateUser(User user) {
+    userRepository.save(user);
+    // Cache evicted; next read repopulates.
+}
+```
+
+**Versioning:** Store a version per entity. Cache key includes version. Update bumps version.
+
+### 8.15 Cache pitfalls
+
+**Cache stampede:**
+- All instances miss simultaneously → all hit DB → DB overload.
+- **Solutions:**
+  - Probabilistic early expiration (XFetch).
+  - Single-flight (only one request loads; others wait).
+  - Background refresh.
+
+**Thundering herd (CDN invalidation):**
+- All CDN edges miss after invalidation → all hit origin.
+- Solution: stale-while-revalidate, versioned URLs.
+
+**Cold cache:**
+- After restart, all requests miss.
+- Solution: cache warming, lazy loading, prefetching.
+
+**Hot key:**
+- One key gets 90% of requests.
+- Solution: local cache on application server, replicated cache.
+
+**Large value:**
+- Single 1MB value blocks the network.
+- Solution: store references, compress, break up.
+
+### 8.16 CDN
+
+A **CDN** (Content Delivery Network) caches HTTP responses at edge locations worldwide:
+
+```mermaid
+graph TB
+    User[User in Tokyo]
+    Edge1["CDN Edge<br/>(Tokyo)"]
+    Edge2["CDN Edge<br/>(Frankfurt)"]
+    Edge3["CDN Edge<br/>(Virginia)"]
+    Origin["Origin Server"]
+    User --> Edge1
+    Edge1 -->|miss| Origin
+    Origin -.replicates.-> Edge2
+    Origin -.replicates.-> Edge3
+```
+
+CDN caching strategies:
+- **Static content:** CSS, JS, images, fonts. TTL: days.
+- **HTML:** Page-level. TTL: seconds.
+- **API responses:** Per-endpoint. Varies.
+
+Popular CDNs:
+- Cloudflare.
+- AWS CloudFront.
+- Fastly.
+- Akamai.
+- Vercel Edge Network.
+
+CDN + cache headers:
+```http
+Cache-Control: public, max-age=300, s-maxage=3600
+CDN-Cache-Control: public, max-age=86400
+```
+
+(See [APIs doc](../07-apis/apis.md) for HTTP caching details.)
+
+### 8.17 Distributed caches: Hazelcast, Ignite
+
+**Hazelcast** — distributed in-memory data grid. Distributed maps, queues, topics. Used in trading and gaming.
+
+**Apache Ignite** — distributed in-memory database. SQL support, key-value, computation.
+
+These offer data grid features beyond cache (transactions, distributed compute). Choose when you need multi-region consistency or computation near data.
+
+---
+
+## 9. Architecture
+
+### 9.1 Redis server architecture
+
+```mermaid
+graph TB
+    Client[Client]
+    subgraph "Redis Server"
+        EventLoop[Event Loop single-threaded]
+        DataStore[In-Memory Data Store]
+        Persist[Persistence RDB AOF]
+        Repl[Replication]
+    end
+    Replica[Replica]
+    ClusterNode[Other Cluster Node]
+    Client --> EventLoop
+    EventLoop --> DataStore
+    EventLoop --> Persist
+    EventLoop --> Repl
+    Repl -.-> Replica
+    EventLoop -.-> ClusterNode
+```
+
+### 9.2 Cache patterns compared
+
+| Pattern | Read path | Write path | Consistency | Use case |
+|---------|-----------|-----------|-------------|----------|
+| Cache-aside | App checks cache | App invalidates | Eventual | Common pattern |
+| Read-through | Cache library | App writes DB | Eventual | Cleaner code |
+| Write-through | App updates cache | Cache writes DB synchronously | Strong (until eviction) | Strong consistency |
+| Write-behind | App updates cache | Cache writes DB async | Weak (data loss risk) | High write throughput |
+| Refresh-ahead | Cache auto-refreshes | App updates DB; cache reloads | Strong (continuous) | Latency-sensitive |
+
+## 10. Performance
+
+### 10.1 Redis performance
+
+| Lever | Effect |
+|-------|--------|
+| Pipeline commands | Reduce RTT, 5-10× throughput |
+| Lua scripting | Atomic batch on server |
+| Pipelining + multi-threading | 100K+ ops/s per instance |
+| Cluster sharding | Linear scaling |
+| Client-side caching (RESP3) | Reduce network |
+| Compression (`--compress` in redis-cli) | Reduce bytes |
+| Memory tuning (`maxmemory-policy`) | Avoid OOM |
+
+### 10.2 Caffeine performance
+
+- **Caffeine is one of the fastest Java caches** (often faster than Guava Cache, ConcurrentHashMap).
+- Common throughput: 10M+ reads/s per JVM.
+- Latency: < 1 µs for hits.
+
+**Tuning:**
+- `maximumSize` vs `maximumWeight` — weight allows variable-cost items.
+- `initialCapacity` — pre-allocate to avoid resizing.
+- `concurrencyLevel` (removed in 3.x) — replaced by lock striping.
+
+### 10.3 Hot keys
+
+One key gets 90% of requests. Symptoms:
+- Redis CPU pegged on one key.
+- Network bottleneck on one key.
+
+**Solutions:**
+- **Local in-JVM cache** (Caffeine) for hot keys, Redis for the rest.
+- **Random suffix** for write-only hot keys (e.g., counters): `counter:user:123:0`, `counter:user:123:1`; aggregate on read.
+- **Key splitting** with consistent hashing.
+
+### 10.4 Large keys/values
+
+- Redis string max 512 MB.
+- Memcached max 1 MB.
+- Kafka max 1 MB (default).
+
+**Solutions:**
+- Compress.
+- Store references (e.g., S3 URL) instead of content.
+- Break into multiple keys.
+
+### 10.5 Eviction tuning
+
+**Redis:**
+
+```
+maxmemory 4gb
+maxmemory-policy allkeys-lfu   # preferred for caches
+# or volatile-lru, volatile-lfu, allkeys-lru, allkeys-lfu
+```
+
+**Caffeine:**
+
+```java
+Caffeine.newBuilder()
+    .maximumSize(10_000)
+    .expireAfterWrite(Duration.ofMinutes(5))
+    .recordStats();
+```
+
+**Memcached:**
+
+```
+-vm      # max memory (MB)
+-m       # mlock all pages (avoid swap)
+```
+
+## 11. Security
+
+### 11.1 Redis security
+
+- **AUTH** — password.
+- **ACL** (since 6.0) — users, permissions, key patterns.
+- **TLS** — encrypt in transit.
+- **bind** to specific interfaces.
+- **rename-command` CONFIG``** etc. to disable dangerous commands.
+- **protected-mode** (no bind, no password = refuse external connections).
+
+```bash
+# Enable TLS, ACL, bind to specific interface
+bind 0.0.0.0
+requirepass "..."
+tls-port 6380
+tls-cert-file /path/to/redis.crt
+tls-key-file /path/to/redis.key
+```
+
+### 11.2 Caffeine security
+
+- Cache lives in JVM heap; subject to JVM security.
+- Don't put secrets in cache (memory dumps can leak).
+- Use `weakValues()` for sensitive data with short TTLs.
+
+### 11.3 Memcached security
+
+- Built-in authentication removed in 1.4.3 (was insecure).
+- Use SASL authentication (binary protocol).
+- Bind to localhost; never expose directly to internet.
+- Use a VPN or SSH tunnel for cross-host access.
+- Use TLS for transit.
+
+### 11.4 Secure configuration checklist
+
+- [ ] Redis ACL enabled with least-privilege users.
+- [ ] Redis TLS for transit.
+- [ ] Network segmentation (cache not exposed to internet).
+- [ ] No secrets in cache.
+- [ ] Audit log of cache operations.
+- [ ] Backups encrypted at rest.
+
+## 12. Production Engineering
+
+### 12.1 Redis in production
+
+- Sentinel for HA (single-region).
+- Cluster for horizontal scale.
+- Backup RDB to S3.
+- Slow log: `SLOWLOG GET 10`.
+- Latency monitoring: `redis-cli --latency`.
+- Memory pressure: `INFO memory`, eviction count.
+
+### 12.2 Caffeine in production
+
+- Set realistic `maximumSize` (don't OOM heap).
+- Monitor hit rate via `recordStats()`.
+- Use async loader for slow backends.
+- Spring Boot Actuator exposes Caffeine metrics.
+
+### 12.3 CDN in production
+
+- **Cache-Control headers** on origin.
+- **Stale-while-revalidate** for static.
+- **Versioned URLs** for cache busting.
+- **Geographic distribution** matters.
+
+### 12.4 Cache warming
+
+On cold start, cache is empty. Two strategies:
+
+- **Lazy**: load on demand.
+- **Eager**: pre-populate from DB.
+
+```java
+@PostConstruct
+public void warmUp() {
+    for (Long id : popularUserIds) {
+        cache.get(id, this::loadUser);
+    }
+}
+```
+
+### 12.5 Multi-tier caching
+
+```mermaid
+graph TB
+    Client
+    L1["L1: Caffeine<br/>(in-JVM)"]
+    L2["L2: Redis<br/>(distributed)"]
+    DB[(Database)]
+    Client --> L1
+    L1 -->|miss| L2
+    L2 -->|miss| DB
+```
+
+L1 catches most reads (microseconds). L2 catches reads missed by L1. DB only when both miss.
+
+### 12.6 Cost optimization
+
+- Right-size cache to memory budget.
+- Use eviction policy that matches access pattern.
+- Use CDN for static content.
+- Offload to object storage for cold data.
+
+## 13. Production Case Studies
+
+### 13.1 Twitter / X
+
+Twitter uses Redis for home timeline caching, user sessions, and rate limiting. They published influential posts on Redis at scale.
+
+### 13.2 Pinterest
+
+Pinterest uses Redis as a cache layer for their feed generation. They documented their migration to Redis 3.2 and use of LFU eviction.
+
+### 13.3 Facebook / Meta
+
+Meta uses Memcached at scale (thousands of servers) with custom innovations like leases and "thundering herd protection."
+
+### 13.4 GitHub
+
+GitHub uses Redis for session storage, rate limiting, and background job queue (Resque).
+
+### 13.5 Stack Overflow
+
+Stack Overflow uses Redis for session storage and rate limiting; document cache and object cache primarily via local caches.
+
+## 14. Code Examples
+
+### 14.1 Basic: Redis client (Python)
+
+```python
+import redis
+
+r = redis.Redis(host="localhost", port=6379)
+
+# Strings
+r.set("user:1:name", "Alice", ex=60)  # 60s TTL
+name = r.get("user:1:name")
+
+# Hashes
+r.hset("user:1", mapping={"name": "Alice", "email": "alice@..."})
+user = r.hgetall("user:1")
+
+# Atomic counter
+r.incr("user:1:visits")
+
+# TTL operations
+r.expire("user:1:name", 30)
+ttl = r.ttl("user:1:name")
+```
+
+### 14.2 Basic: Caffeine (Java)
+
+```java
+import com.github.benmanes.caffeine.cache.Caffeine;
+import com.github.benmanes.caffeine.cache.Cache;
+
+Cache<String, User> cache = Caffeine.newBuilder()
+    .maximumSize(10_000)
+    .expireAfterWrite(Duration.ofMinutes(5))
+    .build();
+
+User user = cache.get("user:1", key -> userRepository.findById(...).orElseThrow());
+```
+
+### 14.3 Cache-aside pattern
+
+```java
+@Service
+public class UserService {
+
+    private final UserRepository userRepository;
+    private final Cache<String, User> cache;
+
+    public UserService(UserRepository userRepository, Cache<String, User> cache) {
+        this.userRepository = userRepository;
+        this.cache = cache;
+    }
+
+    public User findById(Long id) {
+        String key = "user:" + id;
+        User user = cache.get(key, k -> userRepository.findById(id).orElse(null));
+        if (user == null) throw new NotFoundException();
+        return user;
+    }
+
+    public void updateUser(User user) {
+        userRepository.save(user);
+        cache.invalidate("user:" + user.getId());
+    }
+}
+```
+
+### 14.4 Write-through pattern
+
+```java
+@Service
+public class UserCacheService {
+    private final UserRepository userRepository;
+    private final Cache<String, User> cache;
+
+    public void save(User user) {
+        // Write to DB
+        userRepository.save(user);
+        // Update cache
+        cache.put("user:" + user.getId(), user);
+    }
+}
+```
+
+### 14.5 Spring Cache with Caffeine
+
+```java
+@Configuration
+@EnableCaching
+public class CacheConfig {
+
+    @Bean
+    public CacheManager cacheManager() {
+        CaffeineCacheManager manager = new CaffeineCacheManager();
+        manager.setCaffeine(Caffeine.newBuilder()
+            .maximumSize(10_000)
+            .expireAfterWrite(Duration.ofMinutes(5)));
+        return manager;
+    }
+}
+
+@Service
+public class ProductService {
+
+    @Cacheable(value = "products", key = "#id")
+    public Product getProduct(Long id) {
+        return productRepository.findById(id).orElseThrow();
+    }
+
+    @CacheEvict(value = "products", key = "#product.id")
+    public void updateProduct(Product product) {
+        productRepository.save(product);
+    }
+}
+```
+
+### 14.6 Bad, anti-pattern, refactored, secure, performance-optimized examples
+
+**Bad: no TTL**
+
+```java
+cache.put("user:1", user);  // never expires!
+```
+
+**Anti-pattern: cache DB rows that change often**
+
+```java
+// Bad: counter changes every request
+cache.put("counter", counter);
+```
+
+**Refactored: TTL always**
+
+```java
+cache.put("user:1", user, Duration.ofMinutes(5));
+```
+
+**Secure: don't put secrets in cache**
+
+```java
+// Bad
+cache.put("user:" + id + ":token", jwtToken);
+// Good
+// Use a server-side session store, not cache
+```
+
+**Performance-optimized: local in-JVM cache for hot keys**
+
+```java
+CaffeineCacheManager + RedisTemplate
+// L1: Caffeine (in-JVM, microseconds)
+// L2: Redis (distributed, milliseconds)
+```
+
+## 15. Common Mistakes
+
+### 15.1 Beginner mistakes
+
+- **No TTL** — entries never expire; memory blows up.
+- **Cache without invalidation** — stale data forever.
+- **Cache DB writes** — caching a write doesn't mean it persisted.
+- **Don't monitor** — discover problems only when OOM.
+- **Single huge value** — blocks network.
+
+### 15.2 Intermediate mistakes
+
+- **No cache stampede protection** — DB overload on miss.
+- **Eager caching of entire tables** — wastes memory.
+- **Hot key unmitigated** — single point of failure.
+- **Cache inconsistent with DB schema** — old data after migration.
+- **Wrong eviction policy** — LRU evicts hot items under scan.
+
+### 15.3 Senior mistakes
+
+- **Using Redis as primary store** — Redis is fast but not durable (without AOF).
+- **No cache warming** — cold cache = thundering herd.
+- **Multi-tier without invalidation** — L1 and L2 diverge.
+- **No size limits** — OOM.
+- **Caching the wrong thing** — caching doesn't fix broken schemas.
+
+### 15.4 Production mistakes
+
+- **No monitoring** — discover problems too late.
+- **Single point of failure** — Redis Sentinel/Cluster not configured.
+- **Memory pressure** — eviction = data loss; OOM = crash.
+- **Network saturation** — too many cache calls.
+- **Cold cache after restart** — all requests miss.
+
+### 15.5 Migration mistakes
+
+- **In-memory to Redis** — assumes single-machine suffices.
+- **Redis to Cluster** — keys not in same slot; multi-key ops break.
+- **No rollback plan** — when something goes wrong, can't revert.
+
+### 15.6 Configuration mistakes
+
+- **Default eviction with mixed access** — LRU for hot-and-cold mix.
+- **`maxmemory 0` in production** — no limit = OOM.
+- **`save ""` (no RDB)** — no durability.
+- **`appendonly no`** — no AOF.
+
+### 15.7 Security mistakes
+
+- **Redis exposed to internet with weak auth** — data leak.
+- **Secrets in cache** — memory dumps leak.
+- **Memcached on internet** — DOS via amplification attacks.
+
+### 15.8 Performance mistakes
+
+- **No pipelining** — round-trip per command.
+- **Big keys** — block the event loop.
+- **Many small keys in one slot** — Redis Cluster hot slot.
+
+### 15.9 Debugging mistakes
+
+- **No key TTL info** — debugging "where did this come from?".
+- **No monitoring** — don't know hit rate.
+- **No tracing** — can't correlate cache miss with downstream.
+
+### 15.10 Deployment mistakes
+
+- **Single Redis without Sentinel** — SPOF.
+- **No backup** — data loss on hardware failure.
+- **No monitoring** — discover problems too late.
+
+---
+
+## 16. Debugging
+
+### 16.1 Redis debugging
+
+```bash
+# SLOWLOG — find slow queries
+SLOWLOG GET 10
+
+# MONITOR — see all commands in real-time (CAUTION: production impact)
+MONITOR
+
+# INFO — server stats
+INFO memory
+INFO replication
+INFO stats
+
+# Latency check
+redis-cli --latency -h localhost -p 6379
+
+# CLIENT LIST — see connected clients
+CLIENT LIST
+
+# MEMORY DOCTOR — recommendations
+MEMORY DOCTOR
+
+# DEBUG OBJECT on key — internal info
+DEBUG OBJECT mykey
+
+# Big keys scan
+redis-cli --bigkeys
+
+# Hot keys
+redis-cli --hotkeys
+
+# MEMORY USAGE for a key
+MEMORY USAGE mykey
+```
+
+### 16.2 Caffeine debugging
+
+```java
+Cache<Key, Value> cache = Caffeine.newBuilder()
+    .recordStats()
+    .build();
+
+CacheStats stats = cache.stats();
+log.info("hits={} misses={} hitRate={}",
+    stats.hitCount(), stats.missCount(), stats.hitRate());
+```
+
+JMX beans also exposed (default). Spring Boot Actuator includes Caffeine metrics.
+
+### 16.3 Cache key inspection
+
+Tag cache keys with versioned prefixes for easier inspection:
+
+```java
+String key = "v2:user:" + id;  // versioned namespace
+```
+
+### 16.4 Production troubleshooting checklist
+
+- [ ] Capture hit rate metrics.
+- [ ] Capture eviction count.
+- [ ] Capture memory pressure.
+- [ ] Check replication lag (if Redis).
+- [ ] Check Sentinel state (if HA).
+- [ ] Capture slow log.
+- [ ] Capture thread dump (if Caffeine).
+- [ ] Capture application metrics.
+
+## 17. Monitoring & Observability
+
+### 17.1 Redis metrics
+
+| Metric | Source | Meaning |
+|--------|--------|---------|
+| `redis_used_memory_bytes` | INFO memory | Memory used |
+| `redis_connected_clients` | INFO clients | Active connections |
+| `redis_evicted_keys_total` | INFO stats | Evictions (memory pressure) |
+| `redis_keyspace_hits_total` | INFO stats | Cache hits |
+| `redis_keyspace_misses_total` | INFO stats | Cache misses |
+| `redis_commands_processed_total` | INFO stats | Throughput |
+| `redis_replication_lag_bytes` | INFO replication | Replica lag |
+| `redis_slowlog_length` | SLOWLOG LEN | Slow query count |
+
+**Tools:** Redis Exporter (Prometheus), Datadog, New Relic.
+
+### 17.2 Caffeine metrics
+
+Via `recordStats()`:
+
+```java
+CacheStats {
+    hitCount()       // total cache hits
+    missCount()      // total cache misses
+    hitRate()        // hit / (hit + miss)
+    loadCount()      // load() invocations
+    loadFailureCount()
+    evictionCount()  // evictions
+    totalLoadTime()  // sum of load times
+    averageLoadPenalty()
+}
+```
+
+Spring Boot Actuator exposes these at `/actuator/metrics/`.
+
+### 17.3 CDN metrics
+
+- Cache hit rate.
+- Origin request rate.
+- Bandwidth served.
+- Latency (TTFB).
+
+## 18. Best Practices
+
+### 18.1 Industry best practices
+
+- **Always set TTL** — even on writes.
+- **Key naming** — use versioned prefixes (`v2:user:1`).
+- **Cache invalidation on writes** — `@CacheEvict` or pub/sub.
+- **Monitor hit rate** — below 80%, investigate.
+- **Right-size caches** — don't OOM.
+- **Multi-tier caching** — Caffeine in-JVM + Redis distributed.
+- **Use Lua scripts for atomic operations** — Redis.
+- **Use `@Cacheable` for declarative caching** — Spring.
+- **Plan for cold start** — cache warming.
+- **CDN for static content** — always.
+- **Compress large values**.
+
+### 18.2 Enterprise practices
+
+- **Redis Sentinel for HA**, Cluster for scale.
+- **TLS for cache traffic**.
+- **Audit log of cache operations**.
+- **Backups for Redis (RDB to S3)**.
+- **Capacity planning** for cache memory.
+
+### 18.3 Clean code
+
+- **Clear key naming** — `service:entity:id`.
+- **Type-safe cache values** — generic types.
+- **Cache interface** — abstract over Caffeine/Redis.
+- **Documented TTL strategy**.
+
+### 18.4 Reliability
+
+- **Multi-tier caching** — L1 (Caffeine) + L2 (Redis).
+- **Cache stampede protection** — early expiration, single-flight.
+- **Health checks** for cache layer.
+- **Graceful degradation** — fall through to DB on cache failure.
+
+### 18.5 Security
+
+- **Redis ACL** for fine-grained access.
+- **TLS** for transit.
+- **Network segmentation** — cache not exposed to internet.
+- **No secrets in cache**.
+
+### 18.6 Performance
+
+- **Use pipelining** for batch operations.
+- **Use Lua scripts** for atomic operations.
+- **Right-size eviction policy** to access pattern.
+- **Compress** large values.
+- **CDN** for static content.
+
+### 18.7 Testing
+
+- **Unit tests for cache behavior**.
+- **Integration tests with Testcontainers** (Redis).
+- **Load tests** (JMH, k6, Gatling).
+- **Chaos tests** — kill cache, see fallback.
+
+### 18.8 Deployment
+
+- **Cache warming** on startup.
+- **Health check endpoint**.
+- **Versioned cache keys** for safe deployments.
+
+## 19. Anti-Patterns
+
+### 19.1 Cache as primary store
+
+Using Redis without AOF as the source of truth. Cache eviction = data loss.
+
+**Fix:** Use Redis with AOF or a real database.
+
+### 19.2 No TTL
+
+```java
+cache.put("user:1", user);  // never expires
+```
+
+Memory grows unbounded.
+
+**Fix:** Always set TTL.
+
+### 19.3 Cache without invalidation
+
+Write to DB but don't update cache. Stale forever (until TTL).
+
+**Fix:** `@CacheEvict` on writes.
+
+### 19.4 Caching the entire result of expensive query
+
+```java
+@Cacheable("users")
+public List<User> findAll() {
+    return userRepository.findAll();  // 1M users cached!
+}
+```
+
+**Fix:** Paginate; cache only what you need.
+
+### 19.5 Hot key unmitigated
+
+One key gets 90% of requests. Single Redis CPU bottleneck.
+
+**Fix:** Local in-JVM cache (Caffeine) for hot keys.
+
+### 19.6 Caching 1MB+ values
+
+```python
+cache.set("big:object", pickle.dumps(big_object))  # 5MB
+```
+
+Blocks Redis event loop.
+
+**Fix:** Compress or store reference (S3 URL).
+
+### 19.7 No cache stampede protection
+
+```java
+public User findById(Long id) {
+    if (cache.get(id) == null) {
+        return cache.put(id, userRepository.findById(id));  // thundering herd!
+    }
+    return cache.get(id);
+}
+```
+
+**Fix:** Single-flight or XFetch.
+
+## 20. Edge Cases
+
+### 20.1 Cache stampede
+
+Many concurrent misses → DB overload.
+
+**Solutions:**
+- **Single-flight:** `synchronized(cacheLoader)` so only one thread loads.
+- **Early expiration (XFetch):** probabilistically refresh before TTL.
+- **Background refresh:** `refreshAfterWrite()` in Caffeine.
+- **Locking:** distribute `SETNX` lock for "this key is being loaded".
+
+### 20.2 Hot key
+
+One key gets 90% of requests → Redis CPU bottleneck.
+
+**Solutions:**
+- **Local in-JVM cache** for hot keys.
+- **Random suffix** for write-only hot keys (counter, recent list).
+- **Multi-get with field selection** instead of single hot key.
+
+### 20.3 Large value
+
+Single value > 1 MB blocks Redis event loop (Redis is single-threaded).
+
+**Solutions:**
+- Compress (gzip, lz4).
+- Store reference (S3 URL).
+- Break into multiple keys.
+
+### 20.4 Memory pressure
+
+Cache fills memory; OOM risk.
+
+**Solutions:**
+- `maxmemory` and `maxmemory-policy`.
+- Caffeine `maximumSize`.
+- Monitor eviction count.
+- Alert on memory > 80%.
+
+### 20.5 Cluster resharding
+
+Adding a node requires moving slots. Brief latency during migration.
+
+**Mitigation:** Use `redis-cli --cluster reshard` during low-traffic period.
+
+### 20.6 Connection pool exhaustion
+
+Too many clients → Redis can't accept new connections.
+
+**Mitigation:** Connection pooling (Lettuce in Spring, hiredis in Node).
+
+### 20.7 Cache poisoning
+
+Malicious input triggers expensive cache key (e.g., unbounded cardinality).
+
+**Mitigation:** Key validation; bounded key space.
+
+---
+
+## 21. Comparisons
+
+### 21.1 Redis vs Memcached
+
+| Dimension | Redis | Memcached |
+|-----------|-------|-----------|
+| Data structures | Strings, hashes, lists, sets, sorted sets, streams, etc. | Strings (binary blobs) only |
+| Persistence | RDB + AOF | None |
+| Replication | Async, Sentinel, Cluster | None (client-side hashing) |
+| Threads | Single-threaded (commands) | Multi-threaded |
+| Memory | 100+ GB typical | Multi-TB possible |
+| Transactions | MULTI/EXEC, WATCH | None |
+| Pub/Sub | Yes | No |
+| Streams | Yes | No |
+| Lua scripting | Yes | No |
+| Latency | Sub-millisecond | Sub-millisecond |
+| Throughput | 100K+ ops/s | 1M+ ops/s per server |
+| Best for | Caching, sessions, queues, leaderboards, pub/sub | Pure cache, large memory |
+
+**When to choose Redis:**
+- Need persistence.
+- Need complex data structures.
+- Need replication / HA.
+- Need pub/sub or streams.
+- Need atomic transactions.
+
+**When to choose Memcached:**
+- Pure cache (no persistence needed).
+- Multi-threaded server.
+- Multi-TB cache size.
+- Existing in your stack.
+
+### 21.2 Redis vs Caffeine
+
+| Dimension | Redis | Caffeine |
+|-----------|-------|----------|
+| Location | Distributed (network) | In-JVM (memory) |
+| Latency | ~1 ms (network round-trip) | < 1 µs (no network) |
+| Capacity | Limited by Redis memory | Limited by JVM heap |
+| Persistence | Yes (RDB/AOF) | No (in-memory only) |
+| Data structures | Rich | Generic Key→Value |
+| Best for | Distributed cache, multi-instance | Single-JVM cache, hot key |
+
+**Multi-tier pattern:** Caffeine (L1) for hot keys, Redis (L2) for the rest.
+
+### 21.3 LRU vs LFU
+
+| Algorithm | Pros | Cons |
+|-----------|------|------|
+| **LRU** | Simple, well-understood | Bad for scan-heavy workloads (evicts hot items) |
+| **LFU** | Keeps frequent items | Stale frequency counts |
+| **W-TinyLFU** (Caffeine) | Best of both | Slightly more memory |
+| **TinyLFU** | Compact sketch | Scan-resistant |
+| **SLRU** (Segmented LRU) | Adapts to scan | More complex |
+| **ARC** (Adaptive Replacement Cache) | Self-tuning | Complex |
+
+W-TinyLFU (Caffeine) wins benchmarks in most realistic workloads.
+
+### 21.4 CDN providers
+
+| Provider | Notable features |
+|----------|------------------|
+| **Cloudflare** | DDoS protection, free tier, Workers |
+| **AWS CloudFront** | Lambda@Edge, deep AWS integration |
+| **Fastly** | Real-time purging, VCL, edge compute |
+| **Akamai** | Largest network, enterprise |
+| **Vercel Edge** | Next.js integration, simple |
+| **BunnyCDN** | Cost-effective, simple |
+
+### 21.5 Hazelcast vs Ignite vs Redis
+
+| Dimension | Hazelcast | Ignite | Redis |
+|-----------|-----------|--------|-------|
+| Data structures | Distributed maps, queues, topics | SQL + key-value | Many (see 8.1) |
+| Compute | Entry processors | Distributed compute | Lua scripts |
+| SQL | Limited | Yes (full SQL) | No |
+| Best for | Low-latency data grid | In-memory DB | Cache, queue |
+
+### 21.6 Decision matrix
+
+| Workload | Recommended |
+|----------|------------|
+| In-JVM hot key cache | Caffeine |
+| Distributed cache (general) | Redis |
+| Massive (>1 TB) cache | Memcached |
+| Session storage | Redis (TTL + atomic ops) |
+| Distributed data grid | Hazelcast |
+| SQL over in-memory | Apache Ignite |
+| Static asset delivery | CDN (Cloudflare, Fastly) |
+
+---
+
+## 22. Interview Preparation
+
+### 22.1 Beginner (0-1 years)
+
+**Q1: What is caching?**
+**A:** Storing frequently-accessed data in a fast storage layer (in-memory) to reduce latency and load on the primary data store.
+
+**Q2: What is TTL?**
+**A:** Time-to-live — the duration a cache entry remains valid before being evicted or expired.
+
+**Q3: What is the difference between Redis and Memcached?**
+**A:** Redis is a multi-data-structure server with persistence, replication, transactions, and pub/sub. Memcached is a simple distributed cache with no persistence.
+
+**Q4: What is a cache hit? A cache miss?**
+**A:** Hit: data is in cache, served from cache. Miss: data not in cache, fetched from source of truth.
+
+**Q5: What is LRU?**
+**A:** Least Recently Used — eviction policy that removes the entry accessed least recently when memory is full.
+
+### 22.2 Junior (1-2 years)
+
+**Q6: What is the cache-aside pattern?**
+**A:** Application checks cache first; on miss, fetches from DB and updates cache. On writes, application invalidates cache.
+
+**Q7: What is a cache stampede?**
+**A:** When a hot key expires, many concurrent requests miss simultaneously and overwhelm the database.
+
+**Q8: How do you prevent cache stampedes?**
+**A:** (1) Single-flight: only one thread loads. (2) Early expiration (XFetch). (3) Background refresh. (4) Stale-while-revalidate.
+
+**Q9: What is the difference between in-JVM and distributed cache?**
+**A:** In-JVM (Caffeine) lives in the application's heap; no network. Distributed (Redis) is a separate server; requires network round-trip. Use both: Caffeine as L1, Redis as L2.
+
+**Q10: What is W-TinyLFU?**
+**A:** Caffeine's eviction algorithm. Combines a 1% window (LRU) with 99% main space (TinyLFU, a frequency-based sketch). Outperforms pure LRU.
+
+### 22.3 Mid (2-4 years)
+
+**Q11: How do you handle cache invalidation?**
+**A:** (1) TTL: expire after fixed duration. (2) Event-based: emit "cache invalidate" event on writes. (3) Versioning: include version in key; bump version on update.
+
+**Q12: How do you choose cache size?**
+**A:** Workload analysis. Measure hit rate vs size. Goal: 80%+ hit rate. Monitor eviction count.
+
+**Q13: What is a hot key? How do you handle it?**
+**A:** A key that gets a disproportionately high fraction of requests. Causes single-node bottleneck in distributed cache. Mitigations: local in-JVM cache for hot keys; random suffix for write-only hot keys; replication.
+
+**Q14: Compare Redis persistence options.**
+**A:** RDB (point-in-time snapshots; fast to load; data loss between snapshots). AOF (log every write; replay on startup; configurable fsync). Hybrid mode (since 4.0) combines both.
+
+**Q15: What is the difference between Redis Cluster and Redis Sentinel?**
+**A:** Sentinel: HA + automatic failover. Single primary. Cluster: horizontal scale + HA. Hash slots distributed across nodes.
+
+**Q16: How do you monitor cache effectiveness?**
+**A:** Hit rate (hits / total requests). Eviction count (memory pressure). Latency (cache miss penalty). Caffeine exposes via `recordStats()`. Redis via INFO command.
+
+### 22.4 Senior (4-6 years)
+
+**Q17: How would you design a multi-tier caching strategy?**
+**A:** L1: Caffeine (in-JVM, hot keys, microseconds). L2: Redis (distributed, milliseconds). L3: DB (slowest). Read path: L1 → L2 → L3. Write path: invalidate L1 (invalidate by topic for multi-instance); invalidate L2; write to DB. Use versioned keys for safe deployment.
+
+**Q18: How do you migrate from no-cache to cache?**
+**A:** (1) Identify hot data (slow queries, frequent reads). (2) Add cache layer for hot data only. (3) Monitor hit rate; tune. (4) Add invalidation. (5) Expand scope. (6) Multi-tier for scale.
+
+**Q19: How do you prevent thundering herd after cache invalidation?**
+**A:** (1) Single-flight (only one thread loads). (2) Locking (SETNX with TTL). (3) Early expiration. (4) Background refresh. (5) Stale-while-revalidate.
+
+**Q20: How do you debug "data is stale in cache"?**
+**A:** (1) Check TTL — maybe longer than expected. (2) Check invalidation — is it firing? (3) Check multi-tier — L1 might be ahead of L2. (4) Check replication lag (Redis async). (5) Trace the request end-to-end.
+
+**Q21: How do you handle Redis Sentinel failover?**
+**A:** (1) Configure Sentinel with 3-5 nodes. (2) Quorum: 2 of 3 agreement. (3) Application uses Sentinel-aware client. (4) Test failover regularly. (5) Monitor Sentinel health.
+
+### 22.5 Lead (6-8 years)
+
+**Q22: How would you scale caching globally?**
+**A:** (1) Regional Redis clusters per region. (2) Read from local region. (3) Writes through to home region (or async replication). (4) CDN for static content. (5) Local in-JVM cache for hot keys per region. (6) Handle stale reads during region failover.
+
+**Q23: How would you migrate from Caffeine-only to Caffeine + Redis?**
+**A:** (1) Add Redis as L2 (Caffeine as L1). (2) Multi-tier: check L1, on miss check L2, on miss hit DB. (3) On write, invalidate both. (4) Monitor hit rate at both layers. (5) Tune L1 size based on hot data.
+
+**Q24: How do you evaluate Redis vs Memcached for a new project?**
+**A:** Redis if you need persistence, complex data structures, replication, or pub/sub. Memcached if pure cache, large memory, multi-threaded server. Consider: existing stack, team familiarity, operational complexity.
+
+### 22.6 Staff (8-12 years)
+
+**Q25: Design a globally distributed caching platform for a SaaS product.**
+**A:** (1) Regional Redis clusters per region. (2) In-JVM Caffeine as L1. (3) Active-active writes; last-writer-wins or CRDTs. (4) Conflict resolution: version-based. (5) Cache invalidation via Kafka pub/sub. (6) CDN for static. (7) Observability: tracing, metrics. (8) Cost: right-size; use tiered storage for cold.
+
+**Q26: How do you handle cache invalidation in event-sourced systems?**
+**A:** (1) Subscribe to event log (Kafka). (2) On relevant event, invalidate cache. (3) Eventually consistent. (4) Trade-off: invalidation latency vs staleness. (5) Versioned keys for safe deployment.
+
+### 22.7 Principal / Architect
+
+**Q27: When would you choose NOT to use a cache?**
+**A:** (1) Data is highly dynamic (changes constantly). (2) Strong consistency required. (3) Single user (no scaling benefit). (4) Compliance: data must not be cached for security reasons.
+
+**Q28: How do you evaluate Caffeine vs other JVM caching libraries?**
+**A:** Caffeine is the modern choice (W-TinyLFU wins benchmarks). Guava Cache is older; Caffeine replaced it in many codebases. EhCache is feature-rich but more complex. ConcurrentHashMap: no expiration, no eviction. Compare: hit rate, throughput, latency, memory, integration.
+
+### 22.8 Scenario-based questions
+
+**Scenario 1:** Hit rate drops from 95% to 60% overnight. What's wrong?
+**Answer:** (1) Check eviction count (memory pressure). (2) Check key distribution (hot key). (3) Check if any bulk operations are invalidating. (4) Check TTL changes. (5) Check traffic pattern changes (new code path).
+
+**Scenario 2:** Redis is using too much memory.
+**Answer:** (1) `INFO memory` to see breakdown. (2) `redis-cli --bigkeys` to find large keys. (3) Check `evicted_keys` (memory pressure). (4) Set `maxmemory` and `maxmemory-policy`. (5) Use shorter TTLs or evict sooner.
+
+**Scenario 3:** Cache hit, but data is stale.
+**Answer:** (1) TTL too long. (2) Invalidation not firing. (3) Multi-tier divergence (L1 ahead of L2). (4) Replication lag (if reading from replica). (5) Application bug — caching the wrong key.
+
+**Scenario 4:** Cache miss storm after deployment.
+**Answer:** (1) Cold cache after restart. (2) Cache warming not configured. (3) New code path bypasses cache. (4) TTL too short. (5) Cache invalidation event fired in bulk. Solution: cache warming, gradual rollout, longer TTLs.
+
+---
+
+## 23. References
+
+### 23.1 Official documentation
+
+- **Redis Documentation:** <https://redis.io/docs/>
+- **Caffeine GitHub:** <https://github.com/ben-manes/caffeine>
+- **Memcached:** <https://github.com/memcached/memcached/wiki>
+- **Spring Cache:** <https://docs.spring.io/spring-framework/reference/integration/cache.html>
+- **Valkey (Redis fork):** <https://valkey.io/>
+
+### 23.2 Specifications
+
+- **Memcached protocol:** <https://github.com/memcached/memcached/blob/master/doc/protocol.txt>
+- **RESP (Redis Serialization Protocol):** <https://redis.io/docs/reference/protocol-spec/>
+- **RESP3:** <https://github.com/redis/redis-specifications/blob/master/protocol/RESP3.md>
+
+### 23.3 Foundational papers and posts
+
+- **"Caching at Reddit"** — <https://redditblog.com/>
+- **"Redis at Pinterest"** — <https://medium.com/pinterest-engineering/>
+- **"Memcached at Facebook"** — multiple engineering posts.
+- **"W-TinyLFU: a modern cache eviction policy"** — Ben Manes.
+- **"TinyLFU: a highly efficient cache admission policy"** — Einziger, Friedman, Manes.
+
+### 23.4 Books
+
+- *Redis in Action* — Josiah Carlson (Manning).
+- *Designing Data-Intensive Applications* — Martin Kleppmann (O'Reilly). Free online.
+- *High Performance MySQL* — Schwartz et al. (O'Reilly). Has Redis comparison.
+- *Java Performance: The Definitive Guide* — Scott Oaks (O'Reilly). Covers in-memory caching.
+- *Caching at Scale* — various.
+
+### 23.5 Engineering blogs
+
+- **Twitter Engineering:** <https://blog.twitter.com/engineering>
+- **Pinterest Engineering:** <https://medium.com/pinterest-engineering/>
+- **GitHub Engineering:** <https://github.blog/engineering/>
+- **Redis Blog:** <https://redis.com/blog/>
+- **Meta Engineering (Memcached):** <https://engineering.fb.com/>
+
+### 23.6 Tools
+
+- **Redis CLI:** <https://redis.io/docs/manual/cli/>
+- **Redis Exporter (Prometheus):** <https://github.com/oliver006/redis_exporter>
+- **RedisInsight:** Redis GUI.
+- **Caffeine JCache adapter:** <https://github.com/ben-manes/caffeine/wiki/JCache>
+
+### 23.7 Conferences
+
+- **RedisConf:** annual.
+- **StrangeLoop:** distributed caching talks.
+- **QCon:** distributed systems track.
+
+### 23.8 Free online resources
+
+- **Redis University:** <https://university.redis.io/>
+- **Caffeine wiki:** <https://github.com/ben-manes/caffeine/wiki>
+- **Spring Cache reference:** <https://docs.spring.io/spring-framework/reference/integration/cache.html>
+
+---
+
+## Appendix A: Caffeine Configuration Quick Reference
+
+These configs are anchored to Caffeine 3.x.
+
+| Option | Default | Purpose |
+|--------|---------|---------|
+| `maximumSize(long)` | unlimited | Max entries (size-based) |
+| `maximumWeight(long)` | unlimited | Max weight (custom) |
+| `expireAfterWrite(Duration)` | never | Expire after write |
+| `expireAfterAccess(Duration)` | never | Expire after access |
+| `refreshAfterWrite(Duration)` | never | Async refresh |
+| `initialCapacity(int)` | 16 | Initial size |
+| `recordStats()` | false | Enable statistics |
+| `softValues()` | false | Use soft references |
+| `weakKeys()` / `weakValues()` | false | Use weak references |
+| `removalListener(RemovalListener)` | none | Listen to evictions |
+
+---
+
+## Appendix B: Redis Configuration Quick Reference
+
+Anchor: Redis 7.x.
+
+| Config | Default | Purpose |
+|--------|---------|---------|
+| `maxmemory` | unlimited | Max memory |
+| `maxmemory-policy` | `noeviction` | `volatile-lru`, `allkeys-lfu`, etc. |
+| `maxmemory-samples` | 5 | LRU/TTL samples |
+| `appendonly` | no | Enable AOF |
+| `appendfsync` | everysec | AOF fsync policy |
+| `save` | "" | RDB snapshot policy |
+| `repl-backlog-size` | 1mb | Replication buffer |
+| `cluster-enabled` | no | Enable Cluster mode |
+| `requirepass` | "" | AUTH password |
+| `tls-port` | 0 | TLS port |
+
+---
+
+## Appendix C: Glossary
+
+| Term | Definition |
+|------|-----------|
+| **ACID** | Atomicity, Consistency, Isolation, Durability |
+| **ARC** | Adaptive Replacement Cache (IBM) |
+| **CDN** | Content Delivery Network |
+| **HLL** | HyperLogLog |
+| **LFU** | Least Frequently Used |
+| **LRU** | Least Recently Used |
+| **OSIV** | Open Session In View |
+| **RDB** | Redis Database file (snapshot) |
+| **RTT** | Round-Trip Time |
+| **SLO** | Service Level Objective |
+| **SLRU** | Segmented LRU |
+| **SOA** | Service-Oriented Architecture |
+| **W-TinyLFU** | Windowed TinyLFU (Caffeine's algorithm) |
+| **XA** | eXtended Architecture (distributed transactions) |
+
+---
+
+*End of document. Total: 23 sections + 3 appendices.*
+
+*Companion resources:*
+- *Source: [`caching.md`](./caching.md)*
+- *Redis docs: [`references/redis-docs.md`](./references/redis-docs.md)*
+- *Caffeine docs: [`references/caffeine-docs.md`](./references/caffeine-docs.md)*
+- *Memcached docs: [`references/memcached-docs.md`](./references/memcached-docs.md)*
+- *Code examples: [`examples/`](./examples/) (14 caching examples)*

@@ -1,0 +1,102 @@
+# 14 — Istio configurations
+
+# Gateway (entry point)
+apiVersion: networking.istio.io/v1beta1
+kind: Gateway
+metadata:
+  name: my-app-gateway
+spec:
+  selector:
+    istio: ingressgateway
+  servers:
+    - port:
+        number: 80
+        name: http
+      hosts:
+        - example.com
+    - port:
+        number: 443
+        name: https
+      tls:
+        mode: SIMPLE
+        credentialName: my-cert
+
+---
+
+# VirtualService: routing rules + canary
+apiVersion: networking.istio.io/v1beta1
+kind: VirtualService
+metadata:
+  name: my-app
+spec:
+  hosts:
+    - my-app
+  http:
+    - match:
+        - uri:
+            prefix: /
+      route:
+        - destination:
+            host: my-app
+            subset: v1
+          weight: 90
+        - destination:
+            host: my-app
+            subset: v2
+          weight: 10
+      timeout: 30s
+      retries:
+        attempts: 3
+        perTryTimeout: 2s
+        retryOn: 5xx,reset,connect-failure
+
+---
+
+# DestinationRule: subsets + load balancing
+apiVersion: networking.istio.io/v1beta1
+kind: DestinationRule
+metadata:
+  name: my-app
+spec:
+  host: my-app
+  trafficPolicy:
+    connectionPool:
+      http:
+        h2UpgradePolicy: UPGRADE
+        maxRequestsPerConnection: 100
+      tcp:
+        maxConnections: 100
+    loadBalancer:
+      simple: LEAST_REQUEST
+    outlierDetection:
+      consecutive5xxErrors: 5
+      interval: 30s
+      baseEjectionTime: 60s
+  subsets:
+    - name: v1
+      labels:
+        version: v1
+    - name: v2
+      labels:
+        version: v2
+
+---
+
+# AuthorizationPolicy: deny all by default, allow specific
+apiVersion: security.istio.io/v1beta1
+kind: AuthorizationPolicy
+metadata:
+  name: my-app-authz
+  namespace: default
+spec:
+  selector:
+    matchLabels:
+      app: my-app
+  rules:
+    - from:
+        - source:
+            principals: [cluster.local/ns/default/sa/my-app]
+      to:
+        - operation:
+            methods: ["GET", "POST"]
+            paths: ["/api/*"]
