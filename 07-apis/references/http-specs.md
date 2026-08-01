@@ -55,7 +55,7 @@ The authoritative source for HTTP is the IETF (Internet Engineering Task Force).
 
 ## HTTP semantics basics
 
-### Methods <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Methods'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Methods" title="Ask ChatGPT about this section">💬</a>
+### Methods <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Methods'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Methods" title="Ask ChatGPT about this section">💬</a>
 
 | Method | Idempotent | Safe | Description |
 |--------|-----------|------|-------------|
@@ -68,7 +68,7 @@ The authoritative source for HTTP is the IETF (Internet Engineering Task Force).
 | OPTIONS | Yes | Yes | Describe communication options |
 | TRACE | Yes | Yes | Echo back received request |
 
-### Status codes <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Status%20codes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Status codes" title="Ask ChatGPT about this section">💬</a>
+### Status codes <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Status%20codes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Status codes" title="Ask ChatGPT about this section">💬</a>
 
 | Class | Range | Meaning |
 |-------|-------|---------|
@@ -102,7 +102,7 @@ The authoritative source for HTTP is the IETF (Internet Engineering Task Force).
 | 503 | Service Unavailable | Maintenance / overload |
 | 504 | Gateway Timeout | |
 
-### Headers <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Headers'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Headers" title="Ask ChatGPT about this section">💬</a>
+### Headers <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Headers'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Headers" title="Ask ChatGPT about this section">💬</a>
 
 **Request headers:**
 

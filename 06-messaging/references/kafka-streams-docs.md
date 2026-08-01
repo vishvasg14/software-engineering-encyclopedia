@@ -10,7 +10,7 @@ The authoritative source for Kafka Streams is the official documentation. This f
 
 ## Architecture
 
-### Core concepts <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Core%20concepts'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Core concepts" title="Ask ChatGPT about this section">💬</a>
+### Core concepts <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Core%20concepts'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Core concepts" title="Ask ChatGPT about this section">💬</a>
 
 | Concept | URL |
 |---------|-----|
@@ -25,7 +25,7 @@ The authoritative source for Kafka Streams is the official documentation. This f
 | Time | <https://kafka.apache.org/documentation/streams/core-concepts#streams_concepts_time> |
 | Processor API | <https://kafka.apache.org/documentation/streams/core-concepts#streams_concepts_processor_api> |
 
-### Architecture <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Architecture'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Architecture" title="Ask ChatGPT about this section">💬</a>
+### Architecture <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Architecture'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Architecture" title="Ask ChatGPT about this section">💬</a>
 
 | Topic | URL |
 |-------|-----|
@@ -38,7 +38,7 @@ The authoritative source for Kafka Streams is the official documentation. This f
 | Exactly-Once Semantics | <https://kafka.apache.org/documentation/streams/architecture#streams_architecture_eos> |
 | Interactive Queries | <https://kafka.apache.org/documentation/streams/architecture#streams_architecture_interactive_queries> |
 
-### Developer Guide <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Developer%20Guide'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Developer Guide" title="Ask ChatGPT about this section">💬</a>
+### Developer Guide <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Developer%20Guide'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Developer Guide" title="Ask ChatGPT about this section">💬</a>
 
 | Topic | URL |
 |-------|-----|
@@ -53,7 +53,7 @@ The authoritative source for Kafka Streams is the official documentation. This f
 | Running Streams Application | <https://kafka.apache.org/documentation/streams/developer-guide/running-app> |
 | Schema Evolution | <https://kafka.apache.org/documentation/streams/developer-guide/serdes> |
 
-### KStream DSL <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'KStream%20DSL'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="KStream DSL" title="Ask ChatGPT about this section">💬</a>
+### KStream DSL <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'KStream%20DSL'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="KStream DSL" title="Ask ChatGPT about this section">💬</a>
 
 | Method | Purpose |
 |--------|---------|
@@ -71,7 +71,7 @@ The authoritative source for Kafka Streams is the official documentation. This f
 | `windowedBy` | Windowing |
 | `to` / `toStream` | Output |
 
-### KTable DSL <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'KTable%20DSL'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="KTable DSL" title="Ask ChatGPT about this section">💬</a>
+### KTable DSL <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'KTable%20DSL'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="KTable DSL" title="Ask ChatGPT about this section">💬</a>
 
 | Method | Purpose |
 |--------|---------|
@@ -82,7 +82,7 @@ The authoritative source for Kafka Streams is the official documentation. This f
 | `count` / `reduce` / `aggregate` | Aggregations |
 | `toStream` | KTable to KStream |
 
-### Processor API <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Processor%20API'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Processor API" title="Ask ChatGPT about this section">💬</a>
+### Processor API <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Processor%20API'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Processor API" title="Ask ChatGPT about this section">💬</a>
 
 The Processor API is more complex but more flexible:
 
@@ -107,7 +107,7 @@ public class MyProcessor implements Processor<String, String> {
 }
 ```
 
-### State stores <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'State%20stores'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="State stores" title="Ask ChatGPT about this section">💬</a>
+### State stores <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'State%20stores'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="State stores" title="Ask ChatGPT about this section">💬</a>
 
 | Store type | Use case |
 |------------|----------|
@@ -115,7 +115,7 @@ public class MyProcessor implements Processor<String, String> {
 | RocksDB | Persistent, fast, larger |
 | Custom | Implement `StateStore` |
 
-### Exactly-once semantics (EOS) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Exactly-once%20semantics%20(EOS)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Exactly-once semantics (EOS)" title="Ask ChatGPT about this section">💬</a>
+### Exactly-once semantics (EOS) <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Exactly-once%20semantics%20(EOS)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Exactly-once semantics (EOS)" title="Ask ChatGPT about this section">💬</a>
 
 Three patterns:
 
@@ -127,7 +127,7 @@ Three patterns:
 props.put(StreamsConfig.PROCESSING_GUARANTEE_CONFIG, StreamsConfig.EXACTLY_ONCE_V2);
 ```
 
-### Interactive queries <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Interactive%20queries'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Interactive queries" title="Ask ChatGPT about this section">💬</a>
+### Interactive queries <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Interactive%20queries'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Interactive queries" title="Ask ChatGPT about this section">💬</a>
 
 Expose state stores as queryable REST endpoints:
 
@@ -136,7 +136,7 @@ ReadOnlyKeyValueStore<String, Long> store = streams.store("my-store", QueryableS
 String value = store.get(someKey);
 ```
 
-### Configuration <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Configuration'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Configuration" title="Ask ChatGPT about this section">💬</a>
+### Configuration <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Configuration'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Configuration" title="Ask ChatGPT about this section">💬</a>
 
 | Config | Default | Purpose |
 |--------|---------|---------|

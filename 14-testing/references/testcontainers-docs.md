@@ -187,7 +187,7 @@ new GenericContainer<>("...")
 
 ## Common patterns
 
-### Database per test class <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Database%20per%20test%20class'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Database per test class" title="Ask ChatGPT about this section">💬</a>
+### Database per test class <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Database%20per%20test%20class'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Database per test class" title="Ask ChatGPT about this section">💬</a>
 
 ```java
 @Testcontainers
@@ -198,7 +198,7 @@ class UserTest {
 }
 ```
 
-### Shared database across classes <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Shared%20database%20across%20classes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Shared database across classes" title="Ask ChatGPT about this section">💬</a>
+### Shared database across classes <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Shared%20database%20across%20classes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Shared database across classes" title="Ask ChatGPT about this section">💬</a>
 
 ```java
 @Testcontainers(parallel = true)
@@ -209,7 +209,7 @@ class IntegrationTestBase {
 }
 ```
 
-### Multiple containers <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Multiple%20containers'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Multiple containers" title="Ask ChatGPT about this section">💬</a>
+### Multiple containers <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Multiple%20containers'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Multiple containers" title="Ask ChatGPT about this section">💬</a>
 
 ```java
 @Container

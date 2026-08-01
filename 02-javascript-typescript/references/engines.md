@@ -4,7 +4,7 @@ This file catalogs the major JavaScript engines, their design choices, and links
 
 ## Major engines
 
-### V8 (Google) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'V8%20(Google)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="V8 (Google)" title="Ask ChatGPT about this section">💬</a>
+### V8 (Google) <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'V8%20(Google)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="V8 (Google)" title="Ask ChatGPT about this section">💬</a>
 
 - **Used by:** Chrome, Chromium, Edge, Node.js, Deno, Bun (initially), Cloudflare Workers (workerd).
 - **Written in:** C++.
@@ -12,7 +12,7 @@ This file catalogs the major JavaScript engines, their design choices, and links
 - **Blog:** <https://v8.dev/blog>
 - **Features:** WebAssembly, interpreter (Ignition), baseline JIT (Sparkplug), mid-tier JIT (Maglev, since 2023), optimizing JIT (TurboFan), GC (Orinoco, generational with concurrent major GC).
 
-### SpiderMonkey (Mozilla) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'SpiderMonkey%20(Mozilla)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="SpiderMonkey (Mozilla)" title="Ask ChatGPT about this section">💬</a>
+### SpiderMonkey (Mozilla) <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'SpiderMonkey%20(Mozilla)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="SpiderMonkey (Mozilla)" title="Ask ChatGPT about this section">💬</a>
 
 - **Used by:** Firefox, Servo (legacy).
 - **Written in:** C++.
@@ -20,21 +20,21 @@ This file catalogs the major JavaScript engines, their design choices, and links
 - **MDN SpiderMonkey docs:** <https://spidermonkey.dev/>
 - **Features:** WebAssembly, interpreter (Baseline), baseline JIT (Baseline JIT), optimizing JIT (IonMonkey), GC (generational, nursery + tenured, G1-like major GC).
 
-### JavaScriptCore / Nitro (Apple) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'JavaScriptCore%20%2F%20Nitro%20(Apple)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="JavaScriptCore / Nitro (Apple)" title="Ask ChatGPT about this section">💬</a>
+### JavaScriptCore / Nitro (Apple) <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'JavaScriptCore%20%2F%20Nitro%20(Apple)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="JavaScriptCore / Nitro (Apple)" title="Ask ChatGPT about this section">💬</a>
 
 - **Used by:** Safari, Bun (since 2022), other WebKit-based browsers.
 - **Written in:** C++.
 - **Repository:** <https://github.com/WebKit/WebKit/tree/main/Source/JavaScriptCore>
 - **Features:** WebAssembly, multiple tiers (LLInt → Baseline → DFG → FTL), GC (Generational + concurrent stop-the-world for old gen).
 
-### Hermes (Meta) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Hermes%20(Meta)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Hermes (Meta)" title="Ask ChatGPT about this section">💬</a>
+### Hermes (Meta) <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Hermes%20(Meta)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Hermes (Meta)" title="Ask ChatGPT about this section">💬</a>
 
 - **Used by:** React Native (Android and iOS).
 - **Written in:** C++.
 - **Repository:** <https://github.com/facebook/hermes>
 - **Features:** AOT compiler, smaller footprint, optimized for mobile startup; not full ES conformance — targets mobile use cases.
 
-### Chakra / ChakraCore (Microsoft, legacy) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Chakra%20%2F%20ChakraCore%20(Microsoft%2C%20legacy)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Chakra / ChakraCore (Microsoft, legacy)" title="Ask ChatGPT about this section">💬</a>
+### Chakra / ChakraCore (Microsoft, legacy) <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Chakra%20%2F%20ChakraCore%20(Microsoft%2C%20legacy)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Chakra / ChakraCore (Microsoft, legacy)" title="Ask ChatGPT about this section">💬</a>
 
 - **Used by:** legacy Edge (pre-Chromium), Node.js (legacy option).
 - **Status:** Microsoft Edge migrated to Chromium/Blink/V8 in 2020. ChakraCore is in maintenance.
@@ -54,7 +54,7 @@ graph TB
     Native --> GC["GC<br/>(Orinoco, etc.)"]
 ```
 
-### Pipeline stages <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Pipeline%20stages'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Pipeline stages" title="Ask ChatGPT about this section">💬</a>
+### Pipeline stages <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Pipeline%20stages'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Pipeline stages" title="Ask ChatGPT about this section">💬</a>
 
 1. **Parser** — produces an AST (abstract syntax tree). Many engines use a "pre-parser" to skip functions not yet called.
 2. **Bytecode compiler** — emits platform-independent bytecode for the interpreter.

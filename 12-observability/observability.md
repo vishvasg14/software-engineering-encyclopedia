@@ -98,23 +98,23 @@ graph TB
 
 ## 3. Five Ws + One H
 
-### What <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'What'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="What" title="Ask ChatGPT about this section">💬</a>
+### What <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'What'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="What" title="Ask ChatGPT about this section">💬</a>
 
 **Observability** is the ability to ask arbitrary questions about a system's state without shipping new code. It is built on **metrics** (aggregated numerical data), **logs** (discrete events), and **traces** (causally-related events across services).
 
-### Why <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Why'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Why" title="Ask ChatGPT about this section">💬</a>
+### Why <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Why'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Why" title="Ask ChatGPT about this section">💬</a>
 
 Distributed systems are complex; you can't reason about them from a single log line. Observability lets you understand the system from the outside, debug issues quickly, and verify SLOs.
 
-### When <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'When'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="When" title="Ask ChatGPT about this section">💬</a>
+### When <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'When'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="When" title="Ask ChatGPT about this section">💬</a>
 
 The term "observability" entered mainstream engineering vocabulary around 2017-2018, popularized by Cindy Sridharan's book and the OpenTracing / OpenTelemetry projects.
 
-### Where <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Where'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Where" title="Ask ChatGPT about this section">💬</a>
+### Where <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Where'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Where" title="Ask ChatGPT about this section">💬</a>
 
 Every web-scale company. Netflix pioneered distributed tracing. Google developed Dapper (precursor to OpenTelemetry). Charity Majors and the Honeycomb team popularized the modern observability mindset.
 
-### Who <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Who'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Who" title="Ask ChatGPT about this section">💬</a>
+### Who <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Who'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Who" title="Ask ChatGPT about this section">💬</a>
 
 - **Cindy Sridharan:** "Distributed Systems Observability" (book).
 - **Charity Majors:** Honeycomb; observability champion.
@@ -122,20 +122,20 @@ Every web-scale company. Netflix pioneered distributed tracing. Google developed
 - **Google SRE team:** SLIs, SLOs, error budgets.
 - **CNCF:** OpenTelemetry.
 
-### How (one-paragraph preview) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'How%20(one-paragraph%20preview)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="How (one-paragraph preview)" title="Ask ChatGPT about this section">💬</a>
+### How (one-paragraph preview) <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'How%20(one-paragraph%20preview)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="How (one-paragraph preview)" title="Ask ChatGPT about this section">💬</a>
 
 You instrument your application with a vendor-neutral SDK (OpenTelemetry). The SDK emits metrics, traces, and logs. A collector (OpenTelemetry Collector) receives them, batches them, and exports to backends (Prometheus, Loki, Tempo). Grafana queries these backends and provides dashboards. Alertmanager (for Prometheus) or Grafana alerting (for any datasource) generates alerts based on SLOs. On-call engineers respond via runbooks; SRE team conducts blameless postmortems.
 
 ## 4. History
 
-### 4.1 Origins (2005-2015) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'4.1%20Origins%20(2005-2015)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="4.1 Origins (2005-2015)" title="Ask ChatGPT about this section">💬</a>
+### 4.1 Origins (2005-2015) <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'4.1%20Origins%20(2005-2015)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="4.1 Origins (2005-2015)" title="Ask ChatGPT about this section">💬</a>
 
 - **2005** — Google Dapper paper; the foundation of distributed tracing.
 - **2010** — Twitter Zipkin open-sourced (inspired by Dapper).
 - **2014** — OpenTracing API specification (CNCF).
 - **2015** — Prometheus 1.0; CNCF graduated.
 
-### 4.2 Standardization (2016-2021) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'4.2%20Standardization%20(2016-2021)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="4.2 Standardization (2016-2021)" title="Ask ChatGPT about this section">💬</a>
+### 4.2 Standardization (2016-2021) <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'4.2%20Standardization%20(2016-2021)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="4.2 Standardization (2016-2021)" title="Ask ChatGPT about this section">💬</a>
 
 - **2016** — CNCF accepts OpenTracing.
 - **2017** — Cindy Sridharan publishes "Distributed Systems Observability" (book).
@@ -144,7 +144,7 @@ You instrument your application with a vendor-neutral SDK (OpenTelemetry). The S
 - **2020** — Grafana acquires Loki (logs).
 - **2021** — Grafana 8.0 with full observability stack (Loki, Tempo, Mimir).
 
-### 4.3 Unified (2021-2026) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'4.3%20Unified%20(2021-2026)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="4.3 Unified (2021-2026)" title="Ask ChatGPT about this section">💬</a>
+### 4.3 Unified (2021-2026) <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'4.3%20Unified%20(2021-2026)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="4.3 Unified (2021-2026)" title="Ask ChatGPT about this section">💬</a>
 
 - **2021** — OTel 1.0 (Tracing) stable; CNCF graduated.
 - **2022** — OTel metrics + logs spec stable.
@@ -168,7 +168,7 @@ timeline
 
 ## 5. Problem Statement
 
-### 5.1 What observability solves <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'5.1%20What%20observability%20solves'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="5.1 What observability solves" title="Ask ChatGPT about this section">💬</a>
+### 5.1 What observability solves <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'5.1%20What%20observability%20solves'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="5.1 What observability solves" title="Ask ChatGPT about this section">💬</a>
 
 - **Debug complex distributed systems** — find the root cause across services.
 - **Validate SLOs** — measure user-visible reliability.
@@ -177,14 +177,14 @@ timeline
 - **Performance debugging** — find hot paths.
 - **Business analytics** — track KPIs.
 
-### 5.2 What observability doesn't solve <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'5.2%20What%20observability%20doesn't%20solve'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="5.2 What observability doesn't solve" title="Ask ChatGPT about this section">💬</a>
+### 5.2 What observability doesn't solve <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'5.2%20What%20observability%20doesn't%20solve'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="5.2 What observability doesn't solve" title="Ask ChatGPT about this section">💬</a>
 
 - **Bugs in code** — debugging tools help.
 - **Bugs in design** — observability surfaces symptoms.
 - **Operational discipline** — SRE practices.
 - **Cost** — observability is itself costly.
 
-### 5.3 The cost of poor observability <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'5.3%20The%20cost%20of%20poor%20observability'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="5.3 The cost of poor observability" title="Ask ChatGPT about this section">💬</a>
+### 5.3 The cost of poor observability <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'5.3%20The%20cost%20of%20poor%20observability'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="5.3 The cost of poor observability" title="Ask ChatGPT about this section">💬</a>
 
 - Mean time to detect (MTTD) is high.
 - Mean time to resolve (MTTR) is high.
@@ -193,19 +193,19 @@ timeline
 
 ## 6. Real-World Motivation
 
-### 6.1 Netflix <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'6.1%20Netflix'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="6.1 Netflix" title="Ask ChatGPT about this section">💬</a>
+### 6.1 Netflix <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'6.1%20Netflix'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="6.1 Netflix" title="Ask ChatGPT about this section">💬</a>
 
 Pioneered distributed tracing with Atlas; uses Spinnaker for deployment; runs Eureka, Hystrix, Ribbon for microservices observability.
 
-### 6.2 Uber <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'6.2%20Uber'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="6.2 Uber" title="Ask ChatGPT about this section">💬</a>
+### 6.2 Uber <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'6.2%20Uber'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="6.2 Uber" title="Ask ChatGPT about this section">💬</a>
 
 Operates Jaeger at scale; built M3DB for metrics; uses OpenTracing.
 
-### 6.3 Twitter <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'6.3%20Twitter'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="6.3 Twitter" title="Ask ChatGPT about this section">💬</a>
+### 6.3 Twitter <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'6.3%20Twitter'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="6.3 Twitter" title="Ask ChatGPT about this section">💬</a>
 
 Open-sourced Zipkin; uses Prometheus at scale; built Vortex (metrics pipeline).
 
-### 6.4 Google <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'6.4%20Google'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="6.4 Google" title="Ask ChatGPT about this section">💬</a>
+### 6.4 Google <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'6.4%20Google'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="6.4 Google" title="Ask ChatGPT about this section">💬</a>
 
 Dapper (tracing), Monarch (metrics), Dremel (logs). Foundation for modern observability.
 
@@ -224,7 +224,7 @@ graph LR
 
 ## 7. Internal Working
 
-### 7.1 The three pillars <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'7.1%20The%20three%20pillars'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="7.1 The three pillars" title="Ask ChatGPT about this section">💬</a>
+### 7.1 The three pillars <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'7.1%20The%20three%20pillars'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="7.1 The three pillars" title="Ask ChatGPT about this section">💬</a>
 
 ```mermaid
 graph TB
@@ -241,7 +241,7 @@ graph TB
     Tempo --> Grafana
 ```
 
-### 7.2 Trace flow <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'7.2%20Trace%20flow'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="7.2 Trace flow" title="Ask ChatGPT about this section">💬</a>
+### 7.2 Trace flow <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'7.2%20Trace%20flow'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="7.2 Trace flow" title="Ask ChatGPT about this section">💬</a>
 
 ```mermaid
 sequenceDiagram
@@ -261,7 +261,7 @@ sequenceDiagram
     A-->>Client: response
 ```
 
-### 7.3 Subsystems <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'7.3%20Subsystems'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="7.3 Subsystems" title="Ask ChatGPT about this section">💬</a>
+### 7.3 Subsystems <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'7.3%20Subsystems'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="7.3 Subsystems" title="Ask ChatGPT about this section">💬</a>
 
 | Subsystem | Responsibility |
 |-----------|---------------|
@@ -279,13 +279,13 @@ sequenceDiagram
 
 This section is the heart of the document.
 
-### 8.1 The three pillars in detail <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.1%20The%20three%20pillars%20in%20detail'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.1 The three pillars in detail" title="Ask ChatGPT about this section">💬</a>
+### 8.1 The three pillars in detail <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'8.1%20The%20three%20pillars%20in%20detail'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.1 The three pillars in detail" title="Ask ChatGPT about this section">💬</a>
 
 **Metrics:** aggregated numerical measurements. Counters, gauges, histograms, summaries. Efficient for storage; good for dashboards and alerting. **Logs:** discrete events with structured data. Good for debugging; expensive at scale. **Traces:** causally-related spans across services. Show request path; expensive but invaluable.
 
 A mature observability platform has all three. Metrics for overview; logs for context; traces for path.
 
-### 8.2 Prometheus data model <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.2%20Prometheus%20data%20model'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.2 Prometheus data model" title="Ask ChatGPT about this section">💬</a>
+### 8.2 Prometheus data model <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'8.2%20Prometheus%20data%20model'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.2 Prometheus data model" title="Ask ChatGPT about this section">💬</a>
 
 ```promql
 http_requests_total{method="GET", path="/api/users", status="200"} 1234
@@ -305,7 +305,7 @@ http_requests_total{method="GET", path="/api/users", status="200"} 1234
 | **Histogram** | observations in buckets; can compute quantiles. |
 | **Summary** | like histogram; quantiles pre-computed. |
 
-### 8.3 PromQL <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.3%20PromQL'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.3 PromQL" title="Ask ChatGPT about this section">💬</a>
+### 8.3 PromQL <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'8.3%20PromQL'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.3 PromQL" title="Ask ChatGPT about this section">💬</a>
 
 PromQL is the Prometheus query language:
 
@@ -327,7 +327,7 @@ topk(5,
 )
 ```
 
-### 8.4 Recording rules <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.4%20Recording%20rules'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.4 Recording rules" title="Ask ChatGPT about this section">💬</a>
+### 8.4 Recording rules <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'8.4%20Recording%20rules'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.4 Recording rules" title="Ask ChatGPT about this section">💬</a>
 
 Pre-compute common queries:
 
@@ -342,7 +342,7 @@ groups:
         expr: sum by (path) (rate(http_requests_total{status=~"5.."}[5m]))
 ```
 
-### 8.5 Alerting rules <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.5%20Alerting%20rules'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.5 Alerting rules" title="Ask ChatGPT about this section">💬</a>
+### 8.5 Alerting rules <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'8.5%20Alerting%20rules'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.5 Alerting rules" title="Ask ChatGPT about this section">💬</a>
 
 ```yaml
 groups:
@@ -361,7 +361,7 @@ groups:
           description: "Service {{ $labels.service }} has {{ $value | humanizePercentage }} error rate."
 ```
 
-### 8.6 Prometheus architecture <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.6%20Prometheus%20architecture'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.6 Prometheus architecture" title="Ask ChatGPT about this section">💬</a>
+### 8.6 Prometheus architecture <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'8.6%20Prometheus%20architecture'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.6 Prometheus architecture" title="Ask ChatGPT about this section">💬</a>
 
 ```mermaid
 graph TB
@@ -380,7 +380,7 @@ graph TB
     AM --> Slack
 ```
 
-### 8.7 Grafana dashboards <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.7%20Grafana%20dashboards'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.7 Grafana dashboards" title="Ask ChatGPT about this section">💬</a>
+### 8.7 Grafana dashboards <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'8.7%20Grafana%20dashboards'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.7 Grafana dashboards" title="Ask ChatGPT about this section">💬</a>
 
 Grafana queries multiple datasources and visualizes them.
 
@@ -413,7 +413,7 @@ Grafana queries multiple datasources and visualizes them.
 }
 ```
 
-### 8.8 Loki <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.8%20Loki'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.8 Loki" title="Ask ChatGPT about this section">💬</a>
+### 8.8 Loki <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'8.8%20Loki'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.8 Loki" title="Ask ChatGPT about this section">💬</a>
 
 Loki is a log aggregation system by Grafana Labs, designed to be cost-effective.
 
@@ -444,7 +444,7 @@ graph TB
 {job="myapp"} |= "error" | json | level=~"error|fatal"
 ```
 
-### 8.9 Jaeger <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.9%20Jaeger'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.9 Jaeger" title="Ask ChatGPT about this section">💬</a>
+### 8.9 Jaeger <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'8.9%20Jaeger'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.9 Jaeger" title="Ask ChatGPT about this section">💬</a>
 
 Jaeger is Uber's distributed tracing system (CNCF graduated).
 
@@ -473,7 +473,7 @@ graph TB
 - **Storage backends:** Elasticsearch, Cassandra, Kafka.
 - **Service map:** visualization of dependencies.
 
-### 8.10 Tempo <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.10%20Tempo'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.10 Tempo" title="Ask ChatGPT about this section">💬</a>
+### 8.10 Tempo <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'8.10%20Tempo'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.10 Tempo" title="Ask ChatGPT about this section">💬</a>
 
 Grafana Tempo is a cost-effective tracing backend.
 
@@ -482,7 +482,7 @@ Grafana Tempo is a cost-effective tracing backend.
 - **Integrated with Grafana.**
 - **Compatible with Jaeger, Zipkin, OTel.**
 
-### 8.11 OpenTelemetry <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.11%20OpenTelemetry'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.11 OpenTelemetry" title="Ask ChatGPT about this section">💬</a>
+### 8.11 OpenTelemetry <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'8.11%20OpenTelemetry'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.11 OpenTelemetry" title="Ask ChatGPT about this section">💬</a>
 
 OpenTelemetry is the vendor-neutral observability SDK.
 
@@ -512,7 +512,7 @@ from opentelemetry.instrumentation.auto_instrumentation import configure_tracer_
 configure_tracer_provider()
 ```
 
-### 8.12 OpenTelemetry Collector <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.12%20OpenTelemetry%20Collector'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.12 OpenTelemetry Collector" title="Ask ChatGPT about this section">💬</a>
+### 8.12 OpenTelemetry Collector <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'8.12%20OpenTelemetry%20Collector'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.12 OpenTelemetry Collector" title="Ask ChatGPT about this section">💬</a>
 
 ```yaml
 receivers:
@@ -545,7 +545,7 @@ service:
       exporters: [otlp/jaeger]
 ```
 
-### 8.13 Alertmanager <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.13%20Alertmanager'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.13 Alertmanager" title="Ask ChatGPT about this section">💬</a>
+### 8.13 Alertmanager <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'8.13%20Alertmanager'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.13 Alertmanager" title="Ask ChatGPT about this section">💬</a>
 
 Alertmanager routes Prometheus alerts:
 
@@ -568,7 +568,7 @@ route:
       receiver: 'slack'
 ```
 
-### 8.14 SLOs and error budgets <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.14%20SLOs%20and%20error%20budgets'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.14 SLOs and error budgets" title="Ask ChatGPT about this section">💬</a>
+### 8.14 SLOs and error budgets <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'8.14%20SLOs%20and%20error%20budgets'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.14 SLOs and error budgets" title="Ask ChatGPT about this section">💬</a>
 
 **SLI (Service Level Indicator):** measurement.
 
@@ -591,7 +591,7 @@ sum(rate(http_requests_total{status=~"5.."}[1h]))
 - Fast burn (1h window) — page now.
 - Slow burn (6h, 24h, 72h windows) — warn.
 
-### 8.15 eBPF observability <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.15%20eBPF%20observability'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.15 eBPF observability" title="Ask ChatGPT about this section">💬</a>
+### 8.15 eBPF observability <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'8.15%20eBPF%20observability'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.15 eBPF observability" title="Ask ChatGPT about this section">💬</a>
 
 eBPF (extended Berkeley Packet Filter) is a Linux kernel technology for safe in-kernel programs.
 
@@ -608,7 +608,7 @@ eBPF (extended Berkeley Packet Filter) is a Linux kernel technology for safe in-
 - Process metrics without instrumentation.
 - Security observability.
 
-### 8.16 SRE practices <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.16%20SRE%20practices'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.16 SRE practices" title="Ask ChatGPT about this section">💬</a>
+### 8.16 SRE practices <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'8.16%20SRE%20practices'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.16 SRE practices" title="Ask ChatGPT about this section">💬</a>
 
 **On-call:**
 
@@ -635,7 +635,7 @@ eBPF (extended Berkeley Packet Filter) is a Linux kernel technology for safe in-
 - Measure toil.
 - Cap at 50% of ops time.
 
-### 8.17 Comparison: Prometheus vs Datadog vs New Relic <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.17%20Comparison%3A%20Prometheus%20vs%20Datadog%20vs%20New%20Relic'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.17 Comparison: Prometheus vs Datadog vs New Relic" title="Ask ChatGPT about this section">💬</a>
+### 8.17 Comparison: Prometheus vs Datadog vs New Relic <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'8.17%20Comparison%3A%20Prometheus%20vs%20Datadog%20vs%20New%20Relic'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.17 Comparison: Prometheus vs Datadog vs New Relic" title="Ask ChatGPT about this section">💬</a>
 
 | Dimension | Prometheus | Datadog | New Relic |
 |-----------|-----------|---------|-----------|
@@ -648,7 +648,7 @@ eBPF (extended Berkeley Packet Filter) is a Linux kernel technology for safe in-
 | **Lock-in** | None | Vendor | Vendor |
 | **Best for** | Self-hosted, cost | Full observability | Full observability, ease |
 
-### 8.18 Comparison: Loki vs ELK <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.18%20Comparison%3A%20Loki%20vs%20ELK'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.18 Comparison: Loki vs ELK" title="Ask ChatGPT about this section">💬</a>
+### 8.18 Comparison: Loki vs ELK <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'8.18%20Comparison%3A%20Loki%20vs%20ELK'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.18 Comparison: Loki vs ELK" title="Ask ChatGPT about this section">💬</a>
 
 | Dimension | Loki | ELK |
 |-----------|------|-----|
@@ -658,7 +658,7 @@ eBPF (extended Berkeley Packet Filter) is a Linux kernel technology for safe in-
 | **Cost** | Low | High |
 | **Best for** | Cost-effective log aggregation | Full-text search |
 
-### 8.19 Comparison: Jaeger vs Tempo <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.19%20Comparison%3A%20Jaeger%20vs%20Tempo'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.19 Comparison: Jaeger vs Tempo" title="Ask ChatGPT about this section">💬</a>
+### 8.19 Comparison: Jaeger vs Tempo <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'8.19%20Comparison%3A%20Jaeger%20vs%20Tempo'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.19 Comparison: Jaeger vs Tempo" title="Ask ChatGPT about this section">💬</a>
 
 | Dimension | Jaeger | Tempo |
 |-----------|--------|-------|
@@ -668,7 +668,7 @@ eBPF (extended Berkeley Packet Filter) is a Linux kernel technology for safe in-
 | **Cost** | Higher | Lower |
 | **Best for** | Service map, operational debugging | Cost-effective, Grafana integration |
 
-### 8.20 Decision matrix <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.20%20Decision%20matrix'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.20 Decision matrix" title="Ask ChatGPT about this section">💬</a>
+### 8.20 Decision matrix <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'8.20%20Decision%20matrix'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.20 Decision matrix" title="Ask ChatGPT about this section">💬</a>
 
 | Workload | Recommended |
 |----------|------------|
@@ -680,7 +680,7 @@ eBPF (extended Berkeley Packet Filter) is a Linux kernel technology for safe in-
 | Cost-effective tracing | Tempo |
 | Real-time stream processing | Kafka + ksqlDB |
 
-### 8.21 Migration paths <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.21%20Migration%20paths'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.21 Migration paths" title="Ask ChatGPT about this section">💬</a>
+### 8.21 Migration paths <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'8.21%20Migration%20paths'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.21 Migration paths" title="Ask ChatGPT about this section">💬</a>
 
 - **Vendor observability → open source:** Export metrics via OTLP, run Prometheus + Grafana.
 - **Logs only → full stack:** Add metrics, traces.
@@ -690,7 +690,7 @@ eBPF (extended Berkeley Packet Filter) is a Linux kernel technology for safe in-
 
 ## 9. Architecture
 
-### 9.1 Reference observability stack <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'9.1%20Reference%20observability%20stack'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="9.1 Reference observability stack" title="Ask ChatGPT about this section">💬</a>
+### 9.1 Reference observability stack <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'9.1%20Reference%20observability%20stack'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="9.1 Reference observability stack" title="Ask ChatGPT about this section">💬</a>
 
 ```mermaid
 graph TB
@@ -724,7 +724,7 @@ graph TB
     AM --> PD
 ```
 
-### 9.2 Trace flow <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'9.2%20Trace%20flow'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="9.2 Trace flow" title="Ask ChatGPT about this section">💬</a>
+### 9.2 Trace flow <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'9.2%20Trace%20flow'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="9.2 Trace flow" title="Ask ChatGPT about this section">💬</a>
 
 ```mermaid
 sequenceDiagram
@@ -746,7 +746,7 @@ sequenceDiagram
 
 ## 10. Performance
 
-### 10.1 Cardinality <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'10.1%20Cardinality'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="10.1 Cardinality" title="Ask ChatGPT about this section">💬</a>
+### 10.1 Cardinality <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'10.1%20Cardinality'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="10.1 Cardinality" title="Ask ChatGPT about this section">💬</a>
 
 **Cardinality** is the number of unique label combinations.
 
@@ -757,14 +757,14 @@ sequenceDiagram
 
 **Best practice:** Keep cardinality < 100K per metric.
 
-### 10.2 Log volume <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'10.2%20Log%20volume'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="10.2 Log volume" title="Ask ChatGPT about this section">💬</a>
+### 10.2 Log volume <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'10.2%20Log%20volume'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="10.2 Log volume" title="Ask ChatGPT about this section">💬</a>
 
 - 1 KB per line × 1M events/day = 1 GB/day.
 - Costs add up fast.
 - **Sample in production** (e.g., 1% of INFO logs, 100% of ERROR).
 - **Aggregate to metrics** (e.g., error count).
 
-### 10.3 Trace sampling <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'10.3%20Trace%20sampling'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="10.3 Trace sampling" title="Ask ChatGPT about this section">💬</a>
+### 10.3 Trace sampling <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'10.3%20Trace%20sampling'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="10.3 Trace sampling" title="Ask ChatGPT about this section">💬</a>
 
 - **Head-based:** decide at start of trace.
 - **Tail-based:** decide at end of trace; keep all errors.
@@ -778,7 +778,7 @@ processors:
     sampling_percentage: 1
 ```
 
-### 10.4 Storage costs <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'10.4%20Storage%20costs'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="10.4 Storage costs" title="Ask ChatGPT about this section">💬</a>
+### 10.4 Storage costs <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'10.4%20Storage%20costs'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="10.4 Storage costs" title="Ask ChatGPT about this section">💬</a>
 
 - **Metrics:** ~1-3 bytes per sample.
 - **Logs:** ~500 bytes per line.
@@ -788,35 +788,35 @@ Plan: 1B spans/day × 3 KB = 3 TB/day. At S3 storage rates, ~$100/day.
 
 ## 11. Security
 
-### 11.1 Authentication <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'11.1%20Authentication'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="11.1 Authentication" title="Ask ChatGPT about this section">💬</a>
+### 11.1 Authentication <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'11.1%20Authentication'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="11.1 Authentication" title="Ask ChatGPT about this section">💬</a>
 
 - **Prometheus:** basic auth, bearer token; OIDC via proxy.
 - **Grafana:** LDAP, OAuth, OIDC, SAML.
 - **Loki:** basic auth, OIDC, OAuth.
 - **Tempo:** OIDC.
 
-### 11.2 PII in logs <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'11.2%20PII%20in%20logs'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="11.2 PII in logs" title="Ask ChatGPT about this section">💬</a>
+### 11.2 PII in logs <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'11.2%20PII%20in%20logs'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="11.2 PII in logs" title="Ask ChatGPT about this section">💬</a>
 
 - **Never log PII** (email, SSN, password, credit card).
 - **Redact sensitive data** in the application.
 - **Encrypt logs at rest.**
 - **Limit access.**
 
-### 11.3 Compliance <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'11.3%20Compliance'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="11.3 Compliance" title="Ask ChatGPT about this section">💬</a>
+### 11.3 Compliance <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'11.3%20Compliance'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="11.3 Compliance" title="Ask ChatGPT about this section">💬</a>
 
 - **GDPR:** right to erasure; logs must be deletable.
 - **HIPAA:** encryption, access controls.
 - **PCI-DSS:** no cardholder data in logs.
 - **SOC 2:** access logs, audit logs.
 
-### 11.4 Network security <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'11.4%20Network%20security'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="11.4 Network security" title="Ask ChatGPT about this section">💬</a>
+### 11.4 Network security <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'11.4%20Network%20security'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="11.4 Network security" title="Ask ChatGPT about this section">💬</a>
 
 - **TLS everywhere.**
 - **mTLS between services.**
 - **Authentication for all observability backends.**
 - **Network segmentation** (observability in private subnet).
 
-### 11.5 Secure configuration checklist <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'11.5%20Secure%20configuration%20checklist'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="11.5 Secure configuration checklist" title="Ask ChatGPT about this section">💬</a>
+### 11.5 Secure configuration checklist <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'11.5%20Secure%20configuration%20checklist'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="11.5 Secure configuration checklist" title="Ask ChatGPT about this section">💬</a>
 
 - [ ] TLS enabled.
 - [ ] Authentication required (no anonymous).
@@ -828,7 +828,7 @@ Plan: 1B spans/day × 3 KB = 3 TB/day. At S3 storage rates, ~$100/day.
 
 ## 12. Production Engineering
 
-### 12.1 Multi-cluster observability <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'12.1%20Multi-cluster%20observability'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="12.1 Multi-cluster observability" title="Ask ChatGPT about this section">💬</a>
+### 12.1 Multi-cluster observability <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'12.1%20Multi-cluster%20observability'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="12.1 Multi-cluster observability" title="Ask ChatGPT about this section">💬</a>
 
 ```mermaid
 graph TB
@@ -845,13 +845,13 @@ graph TB
 - **Mimir:** multi-tenant; Prometheus-compatible.
 - **Cortex:** deprecated in favor of Mimir.
 
-### 12.2 Multi-tenant observability <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'12.2%20Multi-tenant%20observability'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="12.2 Multi-tenant observability" title="Ask ChatGPT about this section">💬</a>
+### 12.2 Multi-tenant observability <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'12.2%20Multi-tenant%20observability'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="12.2 Multi-tenant observability" title="Ask ChatGPT about this section">💬</a>
 
 - **Mimir / Cortex:** multi-tenant by design.
 - **Per-team quotas.**
 - **RBAC** on data access.
 
-### 12.3 Cost optimization <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'12.3%20Cost%20optimization'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="12.3 Cost optimization" title="Ask ChatGPT about this section">💬</a>
+### 12.3 Cost optimization <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'12.3%20Cost%20optimization'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="12.3 Cost optimization" title="Ask ChatGPT about this section">💬</a>
 
 - **Drop unused labels** (high cardinality).
 - **Sample logs** (1% of INFO, 100% of ERROR).
@@ -859,7 +859,7 @@ graph TB
 - **Retention policies** (logs: 30d; metrics: 1y; traces: 7d).
 - **Storage tiering** (hot vs cold).
 
-### 12.4 Backup and DR <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'12.4%20Backup%20and%20DR'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="12.4 Backup and DR" title="Ask ChatGPT about this section">💬</a>
+### 12.4 Backup and DR <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'12.4%20Backup%20and%20DR'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="12.4 Backup and DR" title="Ask ChatGPT about this section">💬</a>
 
 - **Grafana dashboards:** versioned in Git.
 - **Recording rules:** versioned in Git.
@@ -867,7 +867,7 @@ graph TB
 - **Prometheus TSDB:** snapshot to S3 (via Thanos).
 - **Loki chunks:** in S3 (already).
 
-### 12.5 Observability as code <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'12.5%20Observability%20as%20code'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="12.5 Observability as code" title="Ask ChatGPT about this section">💬</a>
+### 12.5 Observability as code <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'12.5%20Observability%20as%20code'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="12.5 Observability as code" title="Ask ChatGPT about this section">💬</a>
 
 - **Prometheus:** rules in YAML, version-controlled.
 - **Grafana:** dashboards via API / Terraform provider.
@@ -876,33 +876,33 @@ graph TB
 
 ## 13. Production Case Studies
 
-### 13.1 Netflix <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'13.1%20Netflix'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="13.1 Netflix" title="Ask ChatGPT about this section">💬</a>
+### 13.1 Netflix <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'13.1%20Netflix'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="13.1 Netflix" title="Ask ChatGPT about this section">💬</a>
 
 Pioneered distributed tracing with Atlas. Operates large observability stack for streaming platform.
 
-### 13.2 Uber <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'13.2%20Uber'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="13.2 Uber" title="Ask ChatGPT about this section">💬</a>
+### 13.2 Uber <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'13.2%20Uber'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="13.2 Uber" title="Ask ChatGPT about this section">💬</a>
 
 Operates Jaeger at scale. Built M3DB (metrics DB). Uses OpenTracing since 2015.
 
-### 13.3 Twitter <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'13.3%20Twitter'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="13.3 Twitter" title="Ask ChatGPT about this section">💬</a>
+### 13.3 Twitter <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'13.3%20Twitter'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="13.3 Twitter" title="Ask ChatGPT about this section">💬</a>
 
 Built Zipkin (Jaeger ancestor). Uses Prometheus for metrics. Operates observability for high-traffic platform.
 
-### 13.4 Spotify <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'13.4%20Spotify'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="13.4 Spotify" title="Ask ChatGPT about this section">💬</a>
+### 13.4 Spotify <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'13.4%20Spotify'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="13.4 Spotify" title="Ask ChatGPT about this section">💬</a>
 
 Uses Prometheus + Grafana. Heavy use of SLOs for service reliability.
 
-### 13.5 Datadog <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'13.5%20Datadog'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="13.5 Datadog" title="Ask ChatGPT about this section">💬</a>
+### 13.5 Datadog <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'13.5%20Datadog'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="13.5 Datadog" title="Ask ChatGPT about this section">💬</a>
 
 Commercial SaaS observability platform. Pioneer in unified metrics, logs, traces. Major competitor in observability.
 
-### 13.6 Grafana Labs <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'13.6%20Grafana%20Labs'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="13.6 Grafana Labs" title="Ask ChatGPT about this section">💬</a>
+### 13.6 Grafana Labs <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'13.6%20Grafana%20Labs'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="13.6 Grafana Labs" title="Ask ChatGPT about this section">💬</a>
 
 Open source observability stack: Grafana (viz), Loki (logs), Tempo (traces), Mimir (metrics), Pyroscope (profiling), Beyla (eBPF).
 
 ## 14. Code Examples
 
-### 14.1 Basic: Prometheus query (PromQL) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'14.1%20Basic%3A%20Prometheus%20query%20(PromQL)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="14.1 Basic: Prometheus query (PromQL)" title="Ask ChatGPT about this section">💬</a>
+### 14.1 Basic: Prometheus query (PromQL) <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'14.1%20Basic%3A%20Prometheus%20query%20(PromQL)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="14.1 Basic: Prometheus query (PromQL)" title="Ask ChatGPT about this section">💬</a>
 
 ```promql
 # Request rate per service
@@ -925,13 +925,13 @@ sum by (pod) (
 sum by (namespace, pod) (kube_pod_container_status_restarts_total)
 ```
 
-### 14.2 Basic: Alertmanager rule <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'14.2%20Basic%3A%20Alertmanager%20rule'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="14.2 Basic: Alertmanager rule" title="Ask ChatGPT about this section">💬</a>
+### 14.2 Basic: Alertmanager rule <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'14.2%20Basic%3A%20Alertmanager%20rule'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="14.2 Basic: Alertmanager rule" title="Ask ChatGPT about this section">💬</a>
 
 ```yaml
 # see 03-prometheus-alerting/
 ```
 
-### 14.3 Basic: Grafana dashboard (JSON) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'14.3%20Basic%3A%20Grafana%20dashboard%20(JSON)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="14.3 Basic: Grafana dashboard (JSON)" title="Ask ChatGPT about this section">💬</a>
+### 14.3 Basic: Grafana dashboard (JSON) <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'14.3%20Basic%3A%20Grafana%20dashboard%20(JSON)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="14.3 Basic: Grafana dashboard (JSON)" title="Ask ChatGPT about this section">💬</a>
 
 ```json
 {
@@ -953,7 +953,7 @@ sum by (namespace, pod) (kube_pod_container_status_restarts_total)
 }
 ```
 
-### 14.4 Basic: OpenTelemetry instrumentation (Go) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'14.4%20Basic%3A%20OpenTelemetry%20instrumentation%20(Go)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="14.4 Basic: OpenTelemetry instrumentation (Go)" title="Ask ChatGPT about this section">💬</a>
+### 14.4 Basic: OpenTelemetry instrumentation (Go) <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'14.4%20Basic%3A%20OpenTelemetry%20instrumentation%20(Go)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="14.4 Basic: OpenTelemetry instrumentation (Go)" title="Ask ChatGPT about this section">💬</a>
 
 ```go
 import (
@@ -982,7 +982,7 @@ func handleRequest(w http.ResponseWriter, r *http.Request) {
 }
 ```
 
-### 14.5 Basic: Loki LogQL <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'14.5%20Basic%3A%20Loki%20LogQL'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="14.5 Basic: Loki LogQL" title="Ask ChatGPT about this section">💬</a>
+### 14.5 Basic: Loki LogQL <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'14.5%20Basic%3A%20Loki%20LogQL'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="14.5 Basic: Loki LogQL" title="Ask ChatGPT about this section">💬</a>
 
 ```logql
 # All logs from my-app
@@ -1002,7 +1002,7 @@ sum(count_over_time({job="my-app"}[1h])) -
   sum(count_over_time({job="my-app"}[2h]))
 ```
 
-### 14.6 Bad, anti-pattern, refactored, secure, performance-optimized examples <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'14.6%20Bad%2C%20anti-pattern%2C%20refactored%2C%20secure%2C%20performance-optimized%20examples'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="14.6 Bad, anti-pattern, refactored, secure, performance-optimized examples" title="Ask ChatGPT about this section">💬</a>
+### 14.6 Bad, anti-pattern, refactored, secure, performance-optimized examples <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'14.6%20Bad%2C%20anti-pattern%2C%20refactored%2C%20secure%2C%20performance-optimized%20examples'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="14.6 Bad, anti-pattern, refactored, secure, performance-optimized examples" title="Ask ChatGPT about this section">💬</a>
 
 **Bad: high cardinality label**
 
@@ -1038,14 +1038,14 @@ http_requests_total{method="GET", path="/api/users"} 1234
 
 ## 15. Common Mistakes
 
-### 15.1 Beginner mistakes <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'15.1%20Beginner%20mistakes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="15.1 Beginner mistakes" title="Ask ChatGPT about this section">💬</a>
+### 15.1 Beginner mistakes <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'15.1%20Beginner%20mistakes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="15.1 Beginner mistakes" title="Ask ChatGPT about this section">💬</a>
 
 - **High cardinality labels:** metrics explosion.
 - **No structured logs:** impossible to query.
 - **No trace propagation:** can't see request path.
 - **Logging in hot path:** CPU and I/O.
 
-### 15.2 Intermediate mistakes <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'15.2%20Intermediate%20mistakes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="15.2 Intermediate mistakes" title="Ask ChatGPT about this section">💬</a>
+### 15.2 Intermediate mistakes <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'15.2%20Intermediate%20mistakes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="15.2 Intermediate mistakes" title="Ask ChatGPT about this section">💬</a>
 
 - **No sampling:** all traces; storage cost.
 - **Alert on everything:** alert fatigue.
@@ -1053,7 +1053,7 @@ http_requests_total{method="GET", path="/api/users"} 1234
 - **No SLOs:** no target.
 - **No log retention policy:** storage cost.
 
-### 15.3 Senior mistakes <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'15.3%20Senior%20mistakes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="15.3 Senior mistakes" title="Ask ChatGPT about this section">💬</a>
+### 15.3 Senior mistakes <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'15.3%20Senior%20mistakes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="15.3 Senior mistakes" title="Ask ChatGPT about this section">💬</a>
 
 - **Vendor lock-in:** hard to migrate.
 - **No observability budget:** cost overruns.
@@ -1061,7 +1061,7 @@ http_requests_total{method="GET", path="/api/users"} 1234
 - **Manual dashboards:** drift.
 - **No error budget consumption tracking:** "more reliable than SLO" kills innovation.
 
-### 15.4 Production mistakes <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'15.4%20Production%20mistakes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="15.4 Production mistakes" title="Ask ChatGPT about this section">💬</a>
+### 15.4 Production mistakes <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'15.4%20Production%20mistakes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="15.4 Production mistakes" title="Ask ChatGPT about this section">💬</a>
 
 - **Single point of failure:** observability down = can't debug.
 - **Not testing observability:** alerts broken, no one notices.
@@ -1069,70 +1069,70 @@ http_requests_total{method="GET", path="/api/users"} 1234
 - **No SLI/SLO definition:** meaningless metrics.
 - **No SLO review:** SLOs become unrealistic.
 
-### 15.5 Migration mistakes <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'15.5%20Migration%20mistakes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="15.5 Migration mistakes" title="Ask ChatGPT about this section">💬</a>
+### 15.5 Migration mistakes <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'15.5%20Migration%20mistakes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="15.5 Migration mistakes" title="Ask ChatGPT about this section">💬</a>
 
 - **Big-bang migration:** high risk.
 - **No data model:** metrics without labels are useless.
 - **No retention strategy:** cost overrun.
 
-### 15.6 Configuration mistakes <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'15.6%20Configuration%20mistakes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="15.6 Configuration mistakes" title="Ask ChatGPT about this section">💬</a>
+### 15.6 Configuration mistakes <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'15.6%20Configuration%20mistakes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="15.6 Configuration mistakes" title="Ask ChatGPT about this section">💬</a>
 
 - **Prometheus without limits:** cardinality explosion.
 - **Loki without limits:** disk full.
 - **Grafana without auth:** data leak.
 
-### 15.7 Security mistakes <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'15.7%20Security%20mistakes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="15.7 Security mistakes" title="Ask ChatGPT about this section">💬</a>
+### 15.7 Security mistakes <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'15.7%20Security%20mistakes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="15.7 Security mistakes" title="Ask ChatGPT about this section">💬</a>
 
 - **PII in logs:** compliance violation.
 - **No auth on observability:** data leak.
 - **No encryption:** man-in-the-middle.
 
-### 15.8 Performance mistakes <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'15.8%20Performance%20mistakes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="15.8 Performance mistakes" title="Ask ChatGPT about this section">💬</a>
+### 15.8 Performance mistakes <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'15.8%20Performance%20mistakes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="15.8 Performance mistakes" title="Ask ChatGPT about this section">💬</a>
 
 - **High cardinality:** query slowness; OOM.
 - **No downsampling:** storage cost.
 - **Synchronous instrumentation:** app slowdown.
 
-### 15.9 Debugging mistakes <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'15.9%20Debugging%20mistakes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="15.9 Debugging mistakes" title="Ask ChatGPT about this section">💬</a>
+### 15.9 Debugging mistakes <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'15.9%20Debugging%20mistakes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="15.9 Debugging mistakes" title="Ask ChatGPT about this section">💬</a>
 
 - **Restarting without logs:** lose state.
 - **Only metrics, no traces:** can't see the path.
 - **No correlation ID:** can't correlate logs/metrics/traces.
 
-### 15.10 Deployment mistakes <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'15.10%20Deployment%20mistakes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="15.10 Deployment mistakes" title="Ask ChatGPT about this section">💬</a>
+### 15.10 Deployment mistakes <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'15.10%20Deployment%20mistakes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="15.10 Deployment mistakes" title="Ask ChatGPT about this section">💬</a>
 
 - **No IaC for observability config:** drift.
 - **No version control:** errors on git.
 
 ## 16. Debugging
 
-### 16.1 Using traces <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'16.1%20Using%20traces'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="16.1 Using traces" title="Ask ChatGPT about this section">💬</a>
+### 16.1 Using traces <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'16.1%20Using%20traces'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="16.1 Using traces" title="Ask ChatGPT about this section">💬</a>
 
 1. Get a trace ID from the user's request (response header, error message).
 2. Search in Tempo / Jaeger: `trace=<id>`.
 3. Look for the slowest span or error span.
 4. Drill into the span's logs and metrics.
 
-### 16.2 Using logs <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'16.2%20Using%20logs'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="16.2 Using logs" title="Ask ChatGPT about this section">💬</a>
+### 16.2 Using logs <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'16.2%20Using%20logs'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="16.2 Using logs" title="Ask ChatGPT about this section">💬</a>
 
 1. Identify the service from the user's request.
 2. Query Loki: `{service="X"} |~ "error"`.
 3. Look for trace_id; pivot to trace.
 
-### 16.3 Using metrics <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'16.3%20Using%20metrics'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="16.3 Using metrics" title="Ask ChatGPT about this section">💬</a>
+### 16.3 Using metrics <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'16.3%20Using%20metrics'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="16.3 Using metrics" title="Ask ChatGPT about this section">💬</a>
 
 1. Look at RED metrics for the service.
 2. Check anomalies (latency, error rate, request rate).
 3. Check dependencies (DB latency, downstream call rate).
 
-### 16.4 Common debugging scenarios <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'16.4%20Common%20debugging%20scenarios'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="16.4 Common debugging scenarios" title="Ask ChatGPT about this section">💬</a>
+### 16.4 Common debugging scenarios <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'16.4%20Common%20debugging%20scenarios'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="16.4 Common debugging scenarios" title="Ask ChatGPT about this section">💬</a>
 
 - **High latency:** Check p99 latency, look at slow DB queries, GC pauses.
 - **High error rate:** Look at error logs by status code, check recent deployments.
 - **Service down:** Check pod status, recent restarts, network connectivity.
 - **Memory leak:** Heap dump analysis; check old generation.
 
-### 16.5 Production troubleshooting checklist <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'16.5%20Production%20troubleshooting%20checklist'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="16.5 Production troubleshooting checklist" title="Ask ChatGPT about this section">💬</a>
+### 16.5 Production troubleshooting checklist <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'16.5%20Production%20troubleshooting%20checklist'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="16.5 Production troubleshooting checklist" title="Ask ChatGPT about this section">💬</a>
 
 - [ ] Capture trace ID.
 - [ ] Search logs by trace ID.
@@ -1143,32 +1143,32 @@ http_requests_total{method="GET", path="/api/users"} 1234
 
 ## 17. Monitoring & Observability
 
-### 17.1 Three pillars recap <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'17.1%20Three%20pillars%20recap'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="17.1 Three pillars recap" title="Ask ChatGPT about this section">💬</a>
+### 17.1 Three pillars recap <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'17.1%20Three%20pillars%20recap'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="17.1 Three pillars recap" title="Ask ChatGPT about this section">💬</a>
 
 - **Metrics:** Prometheus / Grafana Mimir.
 - **Logs:** Loki / Elasticsearch.
 - **Traces:** Tempo / Jaeger.
 
-### 17.2 RED method (for services) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'17.2%20RED%20method%20(for%20services)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="17.2 RED method (for services)" title="Ask ChatGPT about this section">💬</a>
+### 17.2 RED method (for services) <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'17.2%20RED%20method%20(for%20services)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="17.2 RED method (for services)" title="Ask ChatGPT about this section">💬</a>
 
 - **Rate** of requests.
 - **Errors** (count or rate).
 - **Duration** (latency).
 
-### 17.3 USE method (for resources) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'17.3%20USE%20method%20(for%20resources)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="17.3 USE method (for resources)" title="Ask ChatGPT about this section">💬</a>
+### 17.3 USE method (for resources) <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'17.3%20USE%20method%20(for%20resources)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="17.3 USE method (for resources)" title="Ask ChatGPT about this section">💬</a>
 
 - **Utilization** (% time busy).
 - **Saturation** (queue depth).
 - **Errors** (event count).
 
-### 17.4 Four Golden Signals (Google SRE) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'17.4%20Four%20Golden%20Signals%20(Google%20SRE)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="17.4 Four Golden Signals (Google SRE)" title="Ask ChatGPT about this section">💬</a>
+### 17.4 Four Golden Signals (Google SRE) <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'17.4%20Four%20Golden%20Signals%20(Google%20SRE)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="17.4 Four Golden Signals (Google SRE)" title="Ask ChatGPT about this section">💬</a>
 
 - **Latency.**
 - **Traffic.**
 - **Errors.**
 - **Saturation.**
 
-### 17.5 Alerting <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'17.5%20Alerting'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="17.5 Alerting" title="Ask ChatGPT about this section">💬</a>
+### 17.5 Alerting <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'17.5%20Alerting'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="17.5 Alerting" title="Ask ChatGPT about this section">💬</a>
 
 - **Symptom-based** (user-visible).
 - **SLO-based** (with burn rate).
@@ -1176,7 +1176,7 @@ http_requests_total{method="GET", path="/api/users"} 1234
 
 ## 18. Best Practices
 
-### 18.1 Industry best practices <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'18.1%20Industry%20best%20practices'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="18.1 Industry best practices" title="Ask ChatGPT about this section">💬</a>
+### 18.1 Industry best practices <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'18.1%20Industry%20best%20practices'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="18.1 Industry best practices" title="Ask ChatGPT about this section">💬</a>
 
 - **Instrument with OpenTelemetry** (vendor-neutral).
 - **Three pillars all in use.**
@@ -1189,7 +1189,7 @@ http_requests_total{method="GET", path="/api/users"} 1234
 - **Sampling** (head or tail-based).
 - **Multi-tenant** (per team, per env).
 
-### 18.2 Enterprise practices <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'18.2%20Enterprise%20practices'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="18.2 Enterprise practices" title="Ask ChatGPT about this section">💬</a>
+### 18.2 Enterprise practices <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'18.2%20Enterprise%20practices'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="18.2 Enterprise practices" title="Ask ChatGPT about this section">💬</a>
 
 - **Observability platform team.**
 - **Standardize instrumentation library.**
@@ -1197,39 +1197,39 @@ http_requests_total{method="GET", path="/api/users"} 1234
 - **Cost monitoring.**
 - **Chaos engineering.**
 
-### 18.3 Clean code <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'18.3%20Clean%20code'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="18.3 Clean code" title="Ask ChatGPT about this section">💬</a>
+### 18.3 Clean code <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'18.3%20Clean%20code'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="18.3 Clean code" title="Ask ChatGPT about this section">💬</a>
 
 - **Structured logging only.**
 - **No PII in logs.**
 - **Propagate trace context** (OTel SDK does this).
 
-### 18.4 Reliability <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'18.4%20Reliability'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="18.4 Reliability" title="Ask ChatGPT about this section">💬</a>
+### 18.4 Reliability <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'18.4%20Reliability'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="18.4 Reliability" title="Ask ChatGPT about this section">💬</a>
 
 - **Redundant collectors.**
 - **Long-term storage** (Thanos, Mimir).
 - **Backup dashboards.**
 
-### 18.5 Security <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'18.5%20Security'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="18.5 Security" title="Ask ChatGPT about this section">💬</a>
+### 18.5 Security <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'18.5%20Security'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="18.5 Security" title="Ask ChatGPT about this section">💬</a>
 
 - **TLS everywhere.**
 - **Auth on observability backends.**
 - **No PII in logs.**
 - **Encryption at rest.**
 
-### 18.6 Performance <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'18.6%20Performance'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="18.6 Performance" title="Ask ChatGPT about this section">💬</a>
+### 18.6 Performance <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'18.6%20Performance'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="18.6 Performance" title="Ask ChatGPT about this section">💬</a>
 
 - **Bounded cardinality.**
 - **Sampling.**
 - **Drop unused labels.**
 - **Retention policies.**
 
-### 18.7 Cost <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'18.7%20Cost'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="18.7 Cost" title="Ask ChatGPT about this section">💬</a>
+### 18.7 Cost <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'18.7%20Cost'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="18.7 Cost" title="Ask ChatGPT about this section">💬</a>
 
 - **Sampled logs.**
 - **Storage tiering.**
 - **Right-size metrics.**
 
-### 18.8 Deployment <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'18.8%20Deployment'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="18.8 Deployment" title="Ask ChatGPT about this section">💬</a>
+### 18.8 Deployment <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'18.8%20Deployment'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="18.8 Deployment" title="Ask ChatGPT about this section">💬</a>
 
 - **Observability as code.**
 - **Version controlled.**
@@ -1237,7 +1237,7 @@ http_requests_total{method="GET", path="/api/users"} 1234
 
 ## 19. Anti-Patterns
 
-### 19.1 High cardinality <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'19.1%20High%20cardinality'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="19.1 High cardinality" title="Ask ChatGPT about this section">💬</a>
+### 19.1 High cardinality <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'19.1%20High%20cardinality'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="19.1 High cardinality" title="Ask ChatGPT about this section">💬</a>
 
 ```promql
 http_requests_total{user_id="12345"} 1234  # millions of user_ids
@@ -1245,7 +1245,7 @@ http_requests_total{user_id="12345"} 1234  # millions of user_ids
 
 **Fix:** Use a sample, or aggregate to session_id.
 
-### 19.2 Unstructured logs <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'19.2%20Unstructured%20logs'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="19.2 Unstructured logs" title="Ask ChatGPT about this section">💬</a>
+### 19.2 Unstructured logs <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'19.2%20Unstructured%20logs'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="19.2 Unstructured logs" title="Ask ChatGPT about this section">💬</a>
 
 ```text
 "2024-01-15 10:23:45 INFO user logged in u12345"
@@ -1253,13 +1253,13 @@ http_requests_total{user_id="12345"} 1234  # millions of user_ids
 
 **Fix:** Use JSON: `{"ts": ..., "level": "info", "msg": "user logged in", "user_id": "u12345"}`.
 
-### 19.3 No trace propagation <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'19.3%20No%20trace%20propagation'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="19.3 No trace propagation" title="Ask ChatGPT about this section">💬</a>
+### 19.3 No trace propagation <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'19.3%20No%20trace%20propagation'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="19.3 No trace propagation" title="Ask ChatGPT about this section">💬</a>
 
 Different services using different trace IDs.
 
 **Fix:** Use OpenTelemetry SDK; propagates via W3C Trace Context.
 
-### 19.4 Alert fatigue <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'19.4%20Alert%20fatigue'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="19.4 Alert fatigue" title="Ask ChatGPT about this section">💬</a>
+### 19.4 Alert fatigue <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'19.4%20Alert%20fatigue'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="19.4 Alert fatigue" title="Ask ChatGPT about this section">💬</a>
 
 ```yaml
 - alert: high_cpu
@@ -1268,7 +1268,7 @@ Different services using different trace IDs.
 
 **Fix:** Alert on user-visible symptoms with SLO burn rate.
 
-### 19.5 No labels <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'19.5%20No%20labels'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="19.5 No labels" title="Ask ChatGPT about this section">💬</a>
+### 19.5 No labels <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'19.5%20No%20labels'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="19.5 No labels" title="Ask ChatGPT about this section">💬</a>
 
 ```promql
 http_requests_total 1234  # no dimensions
@@ -1276,14 +1276,14 @@ http_requests_total 1234  # no dimensions
 
 **Fix:** Add labels for method, path, status.
 
-### 19.6 Sampling incorrectly <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'19.6%20Sampling%20incorrectly'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="19.6 Sampling incorrectly" title="Ask ChatGPT about this section">💬</a>
+### 19.6 Sampling incorrectly <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'19.6%20Sampling%20incorrectly'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="19.6 Sampling incorrectly" title="Ask ChatGPT about this section">💬</a>
 
 - 100% sampling in production: storage cost.
 - 0% sampling in production: no traces.
 
 **Fix:** 1% head + 100% tail for errors.
 
-### 19.7 Logs without trace ID <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'19.7%20Logs%20without%20trace%20ID'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="19.7 Logs without trace ID" title="Ask ChatGPT about this section">💬</a>
+### 19.7 Logs without trace ID <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'19.7%20Logs%20without%20trace%20ID'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="19.7 Logs without trace ID" title="Ask ChatGPT about this section">💬</a>
 
 ```json
 {"timestamp": "...", "level": "error", "message": "..."}
@@ -1291,7 +1291,7 @@ http_requests_total 1234  # no dimensions
 
 **Fix:** Include trace_id and span_id in every log.
 
-### 19.8 Dashboards without SLOs <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'19.8%20Dashboards%20without%20SLOs'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="19.8 Dashboards without SLOs" title="Ask ChatGPT about this section">💬</a>
+### 19.8 Dashboards without SLOs <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'19.8%20Dashboards%20without%20SLOs'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="19.8 Dashboards without SLOs" title="Ask ChatGPT about this section">💬</a>
 
 Dashboard shows metrics, but no connection to business goals.
 
@@ -1299,43 +1299,43 @@ Dashboard shows metrics, but no connection to business goals.
 
 ## 20. Edge Cases
 
-### 20.1 Clock skew <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'20.1%20Clock%20skew'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="20.1 Clock skew" title="Ask ChatGPT about this section">💬</a>
+### 20.1 Clock skew <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'20.1%20Clock%20skew'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="20.1 Clock skew" title="Ask ChatGPT about this section">💬</a>
 
 Different servers have different times. Affects logs, traces.
 
 **Mitigation:** NTP; monotonic clocks; logical clocks in OTel.
 
-### 20.2 Missing data <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'20.2%20Missing%20data'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="20.2 Missing data" title="Ask ChatGPT about this section">💬</a>
+### 20.2 Missing data <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'20.2%20Missing%20data'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="20.2 Missing data" title="Ask ChatGPT about this section">💬</a>
 
 Some services don't report metrics. Or gaps in time series.
 
 **Mitigation:** `absent()` alerts; long-term storage handles gaps.
 
-### 20.3 High cardinality explosion <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'20.3%20High%20cardinality%20explosion'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="20.3 High cardinality explosion" title="Ask ChatGPT about this section">💬</a>
+### 20.3 High cardinality explosion <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'20.3%20High%20cardinality%20explosion'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="20.3 High cardinality explosion" title="Ask ChatGPT about this section">💬</a>
 
 A test deploy adds `test_id` label. Suddenly billions of unique combinations.
 
 **Mitigation:** Cardinality limits; schema validation.
 
-### 20.4 Cardinality drift <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'20.4%20Cardinality%20drift'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="20.4 Cardinality drift" title="Ask ChatGPT about this section">💬</a>
+### 20.4 Cardinality drift <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'20.4%20Cardinality%20drift'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="20.4 Cardinality drift" title="Ask ChatGPT about this section">💬</a>
 
 Slowly growing over time; eventually hits limits.
 
 **Mitigation:** Periodic cardinality audits.
 
-### 20.5 Storage costs <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'20.5%20Storage%20costs'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="20.5 Storage costs" title="Ask ChatGPT about this section">💬</a>
+### 20.5 Storage costs <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'20.5%20Storage%20costs'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="20.5 Storage costs" title="Ask ChatGPT about this section">💬</a>
 
 Logs grow unbounded; storage bill explodes.
 
 **Mitigation:** Retention policies; sampling.
 
-### 20.6 Log loss <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'20.6%20Log%20loss'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="20.6 Log loss" title="Ask ChatGPT about this section">💬</a>
+### 20.6 Log loss <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'20.6%20Log%20loss'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="20.6 Log loss" title="Ask ChatGPT about this section">💬</a>
 
 Lost spans due to buffer overflow.
 
 **Mitigation:** Persistent queue; backpressure; circuit breakers.
 
-### 20.7 Provider outage <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'20.7%20Provider%20outage'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="20.7 Provider outage" title="Ask ChatGPT about this section">💬</a>
+### 20.7 Provider outage <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'20.7%20Provider%20outage'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="20.7 Provider outage" title="Ask ChatGPT about this section">💬</a>
 
 CloudWatch / Datadog / etc. is down.
 
@@ -1345,7 +1345,7 @@ CloudWatch / Datadog / etc. is down.
 
 ## 21. Comparisons
 
-### 21.1 Prometheus vs Datadog vs New Relic <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'21.1%20Prometheus%20vs%20Datadog%20vs%20New%20Relic'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="21.1 Prometheus vs Datadog vs New Relic" title="Ask ChatGPT about this section">💬</a>
+### 21.1 Prometheus vs Datadog vs New Relic <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'21.1%20Prometheus%20vs%20Datadog%20vs%20New%20Relic'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="21.1 Prometheus vs Datadog vs New Relic" title="Ask ChatGPT about this section">💬</a>
 
 | Dimension | Prometheus | Datadog | New Relic |
 |-----------|-----------|---------|-----------|
@@ -1359,7 +1359,7 @@ CloudWatch / Datadog / etc. is down.
 | **Lock-in** | None | Vendor | Vendor |
 | **Best for** | Self-hosted, cost | Full stack, ease | Full stack, ease |
 
-### 21.2 Loki vs Elasticsearch <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'21.2%20Loki%20vs%20Elasticsearch'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="21.2 Loki vs Elasticsearch" title="Ask ChatGPT about this section">💬</a>
+### 21.2 Loki vs Elasticsearch <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'21.2%20Loki%20vs%20Elasticsearch'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="21.2 Loki vs Elasticsearch" title="Ask ChatGPT about this section">💬</a>
 
 | Dimension | Loki | Elasticsearch |
 |-----------|------|---------------|
@@ -1370,7 +1370,7 @@ CloudWatch / Datadog / etc. is down.
 | **Full-text search** | Limited | Excellent |
 | **Best for** | Cost-effective, label-based | Full-text search, complex queries |
 
-### 21.3 Jaeger vs Tempo <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'21.3%20Jaeger%20vs%20Tempo'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="21.3 Jaeger vs Tempo" title="Ask ChatGPT about this section">💬</a>
+### 21.3 Jaeger vs Tempo <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'21.3%20Jaeger%20vs%20Tempo'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="21.3 Jaeger vs Tempo" title="Ask ChatGPT about this section">💬</a>
 
 | Dimension | Jaeger | Tempo |
 |-----------|--------|-------|
@@ -1381,7 +1381,7 @@ CloudWatch / Datadog / etc. is down.
 | **Cost** | Higher | Lower |
 | **Best for** | Service map, ops debugging | Cost-effective, Grafana integration |
 
-### 21.4 ELK vs Grafana stack <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'21.4%20ELK%20vs%20Grafana%20stack'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="21.4 ELK vs Grafana stack" title="Ask ChatGPT about this section">💬</a>
+### 21.4 ELK vs Grafana stack <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'21.4%20ELK%20vs%20Grafana%20stack'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="21.4 ELK vs Grafana stack" title="Ask ChatGPT about this section">💬</a>
 
 | Dimension | ELK | Grafana Stack |
 |-----------|-----|---------------|
@@ -1393,7 +1393,7 @@ CloudWatch / Datadog / etc. is down.
 | **Lock-in** | ELK stack | None (open) |
 | **Best for** | Full-text search, existing Elastic | Open source, cost |
 
-### 21.5 OpenTelemetry vs vendor SDKs <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'21.5%20OpenTelemetry%20vs%20vendor%20SDKs'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="21.5 OpenTelemetry vs vendor SDKs" title="Ask ChatGPT about this section">💬</a>
+### 21.5 OpenTelemetry vs vendor SDKs <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'21.5%20OpenTelemetry%20vs%20vendor%20SDKs'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="21.5 OpenTelemetry vs vendor SDKs" title="Ask ChatGPT about this section">💬</a>
 
 | Dimension | OTel | Vendor SDKs (Datadog, New Relic) |
 |-----------|------|-------------------------------------|
@@ -1403,7 +1403,7 @@ CloudWatch / Datadog / etc. is down.
 | **Lock-in** | None | Vendor |
 | **Best for** | Portability, future | Best vendor experience |
 
-### 21.6 Decision matrix <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'21.6%20Decision%20matrix'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="21.6 Decision matrix" title="Ask ChatGPT about this section">💬</a>
+### 21.6 Decision matrix <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'21.6%20Decision%20matrix'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="21.6 Decision matrix" title="Ask ChatGPT about this section">💬</a>
 
 | Workload | Recommended |
 |----------|------------|
@@ -1416,7 +1416,7 @@ CloudWatch / Datadog / etc. is down.
 | Multi-tenant SaaS | Mimir + Loki + Tempo + Grafana |
 | Existing Elastic | ELK |
 
-### 21.7 Migration paths <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'21.7%20Migration%20paths'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="21.7 Migration paths" title="Ask ChatGPT about this section">💬</a>
+### 21.7 Migration paths <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'21.7%20Migration%20paths'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="21.7 Migration paths" title="Ask ChatGPT about this section">💬</a>
 
 - **Vendor → open source:** Export OTLP, run Prometheus + Grafana.
 - **Logs only → full stack:** Add metrics (Micrometer), traces (OTel).
@@ -1427,7 +1427,7 @@ CloudWatch / Datadog / etc. is down.
 
 ## 22. Interview Preparation
 
-### 22.1 Beginner (0-1 years) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'22.1%20Beginner%20(0-1%20years)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="22.1 Beginner (0-1 years)" title="Ask ChatGPT about this section">💬</a>
+### 22.1 Beginner (0-1 years) <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'22.1%20Beginner%20(0-1%20years)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="22.1 Beginner (0-1 years)" title="Ask ChatGPT about this section">💬</a>
 
 **Q1: What are the three pillars of observability?**
 **A:** Metrics (aggregated numerical measurements), logs (discrete events), and traces (causally-related spans across distributed systems).
@@ -1444,7 +1444,7 @@ CloudWatch / Datadog / etc. is down.
 **Q5: What is structured logging?**
 **A:** Logs in a structured format (JSON, Protobuf) rather than free-form text. Easier to query, filter, and analyze.
 
-### 22.2 Junior (1-2 years) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'22.2%20Junior%20(1-2%20years)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="22.2 Junior (1-2 years)" title="Ask ChatGPT about this section">💬</a>
+### 22.2 Junior (1-2 years) <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'22.2%20Junior%20(1-2%20years)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="22.2 Junior (1-2 years)" title="Ask ChatGPT about this section">💬</a>
 
 **Q6: What is the RED method?**
 **A:** Rate (requests per second), Errors (count or rate), Duration (latency). For monitoring services.
@@ -1461,7 +1461,7 @@ CloudWatch / Datadog / etc. is down.
 **Q10: What is a service level objective (SLO)?**
 **A:** A target value of an SLI. E.g., 99.9% of requests succeed over 30 days.
 
-### 22.3 Mid (2-4 years) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'22.3%20Mid%20(2-4%20years)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="22.3 Mid (2-4 years)" title="Ask ChatGPT about this section">💬</a>
+### 22.3 Mid (2-4 years) <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'22.3%20Mid%20(2-4%20years)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="22.3 Mid (2-4 years)" title="Ask ChatGPT about this section">💬</a>
 
 **Q11: How do you implement distributed tracing?**
 **A:** (1) Instrument with OTel SDK. (2) Each request gets trace ID. (3) Each service adds span. (4) Propagate trace context (W3C Trace Context). (5) Send spans to Jaeger/Tempo. (6) Query by trace ID in Grafana.
@@ -1481,7 +1481,7 @@ CloudWatch / Datadog / etc. is down.
 **Q16: How do you handle log volumes at scale?**
 **A:** (1) Sample in production (1% of INFO, 100% of ERROR). (2) Aggregate to metrics. (3) Use Loki (label-based, not full-text). (4) Lifecycle / retention policies. (5) Tiered storage (hot vs cold).
 
-### 22.4 Senior (4-6 years) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'22.4%20Senior%20(4-6%20years)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="22.4 Senior (4-6 years)" title="Ask ChatGPT about this section">💬</a>
+### 22.4 Senior (4-6 years) <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'22.4%20Senior%20(4-6%20years)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="22.4 Senior (4-6 years)" title="Ask ChatGPT about this section">💬</a>
 
 **Q17: How do you implement SLO-based alerting?**
 **A:** (1) Define SLIs and SLOs. (2) Compute error budget. (3) Use multi-window burn rate (e.g., 1h burn rate > 14.4x). (4) Page on fast burn, warn on slow burn. (5) Track burn rate over time.
@@ -1498,7 +1498,7 @@ CloudWatch / Datadog / etc. is down.
 **Q21: How do you debug a distributed incident?**
 **A:** (1) Get trace ID from user report. (2) Find the slow / error span. (3) Look at logs by trace ID. (4) Look at metrics for the service. (5) Check recent deployments. (6) Check upstream / downstream. (7) Engage on-call. (8) Postmortem.
 
-### 22.5 Lead (6-8 years) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'22.5%20Lead%20(6-8%20years)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="22.5 Lead (6-8 years)" title="Ask ChatGPT about this section">💬</a>
+### 22.5 Lead (6-8 years) <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'22.5%20Lead%20(6-8%20years)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="22.5 Lead (6-8 years)" title="Ask ChatGPT about this section">💬</a>
 
 **Q22: How do you evaluate observability vendors?**
 **A:** (1) Cost at your scale. (2) Coverage (metrics, logs, traces, profiling). (3) Lock-in (avoid where possible). (4) Onboarding time. (5) Reliability (SLA, multi-region). (6) Integration (PagerDuty, Slack, etc.).
@@ -1509,7 +1509,7 @@ CloudWatch / Datadog / etc. is down.
 **Q24: How do you design a global observability platform?**
 **A:** (1) Multi-region collectors. (2) Long-term storage (Thanos / Mimir / Cortex). (3) Federation (Prometheus federation; OTel Collector). (4) Single pane of glass (Grafana). (5) SLO-based alerting. (6) Per-region cost tracking.
 
-### 22.6 Staff (8-12 years) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'22.6%20Staff%20(8-12%20years)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="22.6 Staff (8-12 years)" title="Ask ChatGPT about this section">💬</a>
+### 22.6 Staff (8-12 years) <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'22.6%20Staff%20(8-12%20years)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="22.6 Staff (8-12 years)" title="Ask ChatGPT about this section">💬</a>
 
 **Q25: How do you evolve observability over years?**
 **A:** (1) Start with managed (Datadog, New Relic). (2) Migrate to open source for cost (Prometheus, Grafana). (3) Add eBPF for deeper observability. (4) Add profiling (Pyroscope). (5) Add user experience monitoring (RUM). (6) Continuous improvement.
@@ -1517,7 +1517,7 @@ CloudWatch / Datadog / etc. is down.
 **Q26: How do you build an SRE practice?**
 **A:** (1) Define SLOs first. (2) Use error budgets. (3) Blameless postmortems. (4) Toil reduction. (5) On-call rotation. (6) Runbooks. (7) Chaos engineering. (8) Continuous improvement culture.
 
-### 22.7 Principal / Architect <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'22.7%20Principal%20%2F%20Architect'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="22.7 Principal / Architect" title="Ask ChatGPT about this section">💬</a>
+### 22.7 Principal / Architect <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'22.7%20Principal%20%2F%20Architect'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="22.7 Principal / Architect" title="Ask ChatGPT about this section">💬</a>
 
 **Q27: When would you choose not to instrument something?**
 **A:** (1) Performance-critical hot path. (2) Already over-instrumented (overhead > value). (3) Doesn't matter to user. (4) Can be inferred from other signals.
@@ -1525,7 +1525,7 @@ CloudWatch / Datadog / etc. is down.
 **Q28: How do you measure observability maturity?**
 **A:** Crawl: metrics only. Walk: logs and dashboards. Run: traces and SLOs. Fly: proactive, automated, custom instrumentation. Use the observability maturity model.
 
-### 22.8 Scenario-based questions <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'22.8%20Scenario-based%20questions'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="22.8 Scenario-based questions" title="Ask ChatGPT about this section">💬</a>
+### 22.8 Scenario-based questions <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'22.8%20Scenario-based%20questions'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="22.8 Scenario-based questions" title="Ask ChatGPT about this section">💬</a>
 
 **Scenario 1:** Service latency is 10x higher than normal. How do you debug?
 **Answer:** (1) Check RED metrics (rate, errors, duration). (2) Look at recent deploys. (3) Check resource usage (CPU, memory, GC). (4) Check dependencies (DB latency, downstream services). (5) Look at traces for the slow path. (6) Check log errors. (7) Use continuous profiling (Pyroscope) if available.
@@ -1543,7 +1543,7 @@ CloudWatch / Datadog / etc. is down.
 
 ## 23. References
 
-### 23.1 Official documentation <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'23.1%20Official%20documentation'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="23.1 Official documentation" title="Ask ChatGPT about this section">💬</a>
+### 23.1 Official documentation <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'23.1%20Official%20documentation'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="23.1 Official documentation" title="Ask ChatGPT about this section">💬</a>
 
 - **Prometheus:** <https://prometheus.io/docs/>
 - **Grafana:** <https://grafana.com/docs/>
@@ -1554,7 +1554,7 @@ CloudWatch / Datadog / etc. is down.
 - **Elastic Stack:** <https://www.elastic.co/guide/index.html>
 - **Alertmanager:** <https://prometheus.io/docs/alerting/latest/alertmanager/>
 
-### 23.2 Foundational papers <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'23.2%20Foundational%20papers'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="23.2 Foundational papers" title="Ask ChatGPT about this section">💬</a>
+### 23.2 Foundational papers <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'23.2%20Foundational%20papers'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="23.2 Foundational papers" title="Ask ChatGPT about this section">💬</a>
 
 - **"Dapper, a Large-Scale Distributed Systems Tracing Infrastructure"** — Google (2010). The precursor to OpenTelemetry.
 - **"SRE Book"** — Google (free online). <https://sre.google/sre-book/table-of-contents/>
@@ -1562,7 +1562,7 @@ CloudWatch / Datadog / etc. is down.
 - **"Distributed Systems Observability"** — Cindy Sridharan (O'Reilly). Free online.
 - **"W3C Trace Context"** — W3C Recommendation. <https://www.w3.org/TR/trace-context/>
 
-### 23.3 Books <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'23.3%20Books'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="23.3 Books" title="Ask ChatGPT about this section">💬</a>
+### 23.3 Books <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'23.3%20Books'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="23.3 Books" title="Ask ChatGPT about this section">💬</a>
 
 - *Prometheus: Up & Running* — Brian Brazil (O'Reilly).
 - *Observability Engineering* — Charity Majors, Lorin Hochstein, George Miranda (O'Reilly).
@@ -1573,7 +1573,7 @@ CloudWatch / Datadog / etc. is down.
 - *Database Reliability Engineering* — Laine Campbell, Charity Majors (O'Reilly).
 - *Cloud FinOps* — J.R. Storment, Mike Fuller (O'Reilly).
 
-### 23.4 Engineering blogs <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'23.4%20Engineering%20blogs'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="23.4 Engineering blogs" title="Ask ChatGPT about this section">💬</a>
+### 23.4 Engineering blogs <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'23.4%20Engineering%20blogs'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="23.4 Engineering blogs" title="Ask ChatGPT about this section">💬</a>
 
 - **Grafana Blog:** <https://grafana.com/blog/
 - **OpenTelemetry Blog:** <https://opentelemetry.io/blog/
@@ -1583,7 +1583,7 @@ CloudWatch / Datadog / etc. is down.
 - **Charity Majors' blog:** <https://charity.wtf/
 - **Honeycomb blog:** <https://www.honeycomb.io/blog/
 
-### 23.5 Tools <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'23.5%20Tools'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="23.5 Tools" title="Ask ChatGPT about this section">💬</a>
+### 23.5 Tools <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'23.5%20Tools'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="23.5 Tools" title="Ask ChatGPT about this section">💬</a>
 
 - **Prometheus:** <https://prometheus.io/>
 - **Grafana:** <https://grafana.com/>
@@ -1596,14 +1596,14 @@ CloudWatch / Datadog / etc. is down.
 - **VictoriaMetrics:** <https://victoriametrics.com/>
 - **InfluxDB:** <https://www.influxdata.com/>
 
-### 23.6 Conferences <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'23.6%20Conferences'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="23.6 Conferences" title="Ask ChatGPT about this section">💬</a>
+### 23.6 Conferences <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'23.6%20Conferences'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="23.6 Conferences" title="Ask ChatGPT about this section">💬</a>
 
 - **KubeCon + CloudNativeCon:** Observability track.
 - **SREcon:** annual.
 - **GrafanaCon:** annual.
 - **PromCon:** annual.
 
-### 23.7 Free online resources <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'23.7%20Free%20online%20resources'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="23.7 Free online resources" title="Ask ChatGPT about this section">💬</a>
+### 23.7 Free online resources <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'23.7%20Free%20online%20resources'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="23.7 Free online resources" title="Ask ChatGPT about this section">💬</a>
 
 - **Prometheus course:** <https://training.prometheus.io/>
 - **Grafana tutorials:** <https://grafana.com/tutorials/>

@@ -45,7 +45,7 @@ The inner circle knows nothing about the outer circle. The outer circle depends 
 
 ## SOLID in depth
 
-### Single Responsibility Principle (SRP) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Single%20Responsibility%20Principle%20(SRP)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Single Responsibility Principle (SRP)" title="Ask ChatGPT about this section">💬</a>
+### Single Responsibility Principle (SRP) <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Single%20Responsibility%20Principle%20(SRP)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Single Responsibility Principle (SRP)" title="Ask ChatGPT about this section">💬</a>
 
 A class should have only one reason to change. If a class has multiple responsibilities, changes in one responsibility affect others.
 
@@ -76,7 +76,7 @@ class ReportGenerator {
 }
 ```
 
-### Open/Closed Principle (OCP) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Open%2FClosed%20Principle%20(OCP)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Open/Closed Principle (OCP)" title="Ask ChatGPT about this section">💬</a>
+### Open/Closed Principle (OCP) <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Open%2FClosed%20Principle%20(OCP)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Open/Closed Principle (OCP)" title="Ask ChatGPT about this section">💬</a>
 
 Software entities should be open for extension, closed for modification.
 
@@ -97,7 +97,7 @@ class Square extends Shape {
 }
 ```
 
-### Liskov Substitution Principle (LSP) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Liskov%20Substitution%20Principle%20(LSP)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Liskov Substitution Principle (LSP)" title="Ask ChatGPT about this section">💬</a>
+### Liskov Substitution Principle (LSP) <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Liskov%20Substitution%20Principle%20(LSP)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Liskov Substitution Principle (LSP)" title="Ask ChatGPT about this section">💬</a>
 
 Subtypes must be substitutable for base types.
 
@@ -113,7 +113,7 @@ class Square extends Rectangle {
 }
 ```
 
-### Interface Segregation Principle (ISP) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Interface%20Segregation%20Principle%20(ISP)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Interface Segregation Principle (ISP)" title="Ask ChatGPT about this section">💬</a>
+### Interface Segregation Principle (ISP) <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Interface%20Segregation%20Principle%20(ISP)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Interface Segregation Principle (ISP)" title="Ask ChatGPT about this section">💬</a>
 
 Clients should not be forced to depend on methods they do not use.
 
@@ -138,7 +138,7 @@ class Human implements Workable, Feedable {
 }
 ```
 
-### Dependency Inversion Principle (DIP) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Dependency%20Inversion%20Principle%20(DIP)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Dependency Inversion Principle (DIP)" title="Ask ChatGPT about this section">💬</a>
+### Dependency Inversion Principle (DIP) <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Dependency%20Inversion%20Principle%20(DIP)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Dependency Inversion Principle (DIP)" title="Ask ChatGPT about this section">💬</a>
 
 High-level modules should not depend on low-level modules. Both should depend on abstractions.
 

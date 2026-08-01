@@ -11,7 +11,7 @@ The canonical reference for design patterns is the Gang of Four (GoF) book and t
 
 ## GoF Pattern Categories
 
-### Creational (5 patterns) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Creational%20(5%20patterns)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Creational (5 patterns)" title="Ask ChatGPT about this section">💬</a>
+### Creational (5 patterns) <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Creational%20(5%20patterns)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Creational (5 patterns)" title="Ask ChatGPT about this section">💬</a>
 
 Deal with object creation mechanisms.
 
@@ -23,7 +23,7 @@ Deal with object creation mechanisms.
 | **Builder** | Construct complex objects step by step | When constructor has many parameters |
 | **Prototype** | Clone an existing object | When creation is expensive |
 
-### Structural (7 patterns) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Structural%20(7%20patterns)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Structural (7 patterns)" title="Ask ChatGPT about this section">💬</a>
+### Structural (7 patterns) <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Structural%20(7%20patterns)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Structural (7 patterns)" title="Ask ChatGPT about this section">💬</a>
 
 Deal with object composition.
 
@@ -37,7 +37,7 @@ Deal with object composition.
 | **Flyweight** | Share state across many objects |
 | **Proxy** | Placeholder for another object |
 
-### Behavioral (11 patterns) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Behavioral%20(11%20patterns)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Behavioral (11 patterns)" title="Ask ChatGPT about this section">💬</a>
+### Behavioral (11 patterns) <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Behavioral%20(11%20patterns)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Behavioral (11 patterns)" title="Ask ChatGPT about this section">💬</a>
 
 Deal with object collaboration and responsibility.
 
@@ -57,7 +57,7 @@ Deal with object collaboration and responsibility.
 
 ## Modern patterns (post-GoF)
 
-### Microservices patterns <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Microservices%20patterns'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Microservices patterns" title="Ask ChatGPT about this section">💬</a>
+### Microservices patterns <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Microservices%20patterns'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Microservices patterns" title="Ask ChatGPT about this section">💬</a>
 
 - API Gateway
 - Service Registry / Discovery (Consul, Eureka)
@@ -71,7 +71,7 @@ Deal with object collaboration and responsibility.
 - Sidecar / Ambassador
 - Backend for Frontend (BFF)
 
-### Cloud-native patterns <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Cloud-native%20patterns'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Cloud-native patterns" title="Ask ChatGPT about this section">💬</a>
+### Cloud-native patterns <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Cloud-native%20patterns'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Cloud-native patterns" title="Ask ChatGPT about this section">💬</a>
 
 - Health Check
 - Distributed Tracing
@@ -84,7 +84,7 @@ Deal with object collaboration and responsibility.
 - Cache-Aside
 - Health Endpoint Monitoring
 
-### Enterprise application patterns (Fowler) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Enterprise%20application%20patterns%20(Fowler)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Enterprise application patterns (Fowler)" title="Ask ChatGPT about this section">💬</a>
+### Enterprise application patterns (Fowler) <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Enterprise%20application%20patterns%20(Fowler)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Enterprise application patterns (Fowler)" title="Ask ChatGPT about this section">💬</a>
 
 - Repository
 - Unit of Work
@@ -96,7 +96,7 @@ Deal with object collaboration and responsibility.
 - Query Object
 - Specification
 
-### Domain-Driven Design patterns (Evans/Vernon) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Domain-Driven%20Design%20patterns%20(Evans%2FVernon)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Domain-Driven Design patterns (Evans/Vernon)" title="Ask ChatGPT about this section">💬</a>
+### Domain-Driven Design patterns (Evans/Vernon) <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Domain-Driven%20Design%20patterns%20(Evans%2FVernon)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Domain-Driven Design patterns (Evans/Vernon)" title="Ask ChatGPT about this section">💬</a>
 
 - Aggregate
 - Entity
@@ -111,7 +111,7 @@ Deal with object collaboration and responsibility.
 
 ## Pattern examples
 
-### Singleton <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Singleton'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Singleton" title="Ask ChatGPT about this section">💬</a>
+### Singleton <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Singleton'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Singleton" title="Ask ChatGPT about this section">💬</a>
 
 ```java
 public class Config {
@@ -124,7 +124,7 @@ public class Config {
 }
 ```
 
-### Factory Method <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Factory%20Method'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Factory Method" title="Ask ChatGPT about this section">💬</a>
+### Factory Method <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Factory%20Method'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Factory Method" title="Ask ChatGPT about this section">💬</a>
 
 ```java
 abstract class Dialog {
@@ -140,7 +140,7 @@ class WindowsDialog extends Dialog {
 }
 ```
 
-### Observer <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Observer'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Observer" title="Ask ChatGPT about this section">💬</a>
+### Observer <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Observer'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Observer" title="Ask ChatGPT about this section">💬</a>
 
 ```java
 interface Observer { void update(Event e); }
@@ -151,7 +151,7 @@ class Subject {
 }
 ```
 
-### Strategy <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Strategy'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Strategy" title="Ask ChatGPT about this section">💬</a>
+### Strategy <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Strategy'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Strategy" title="Ask ChatGPT about this section">💬</a>
 
 ```java
 interface Strategy { int doOperation(int a, int b); }
@@ -160,7 +160,7 @@ class Sub implements Strategy { int doOperation(int a, int b) { return a - b; } 
 class Context { Strategy s; Context(Strategy s) { this.s = s; } int exec(int a, int b) { return s.doOperation(a, b); } }
 ```
 
-### Decorator <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Decorator'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Decorator" title="Ask ChatGPT about this section">💬</a>
+### Decorator <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Decorator'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Decorator" title="Ask ChatGPT about this section">💬</a>
 
 ```java
 interface Component { String operation(); }

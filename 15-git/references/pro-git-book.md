@@ -29,7 +29,7 @@ The canonical book on Git is *Pro Git* by Scott Chacon and Ben Straub. It is fre
 
 ## Key concepts from Pro Git
 
-### The three states <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'The%20three%20states'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="The three states" title="Ask ChatGPT about this section">💬</a>
+### The three states <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'The%20three%20states'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="The three states" title="Ask ChatGPT about this section">💬</a>
 
 ```
 modified → staged → committed
@@ -43,7 +43,7 @@ Files in your working directory:
 - **Staged:** added to index.
 - **Committed:** data safely stored in local database.
 
-### Object model <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Object%20model'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Object model" title="Ask ChatGPT about this section">💬</a>
+### Object model <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Object%20model'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Object model" title="Ask ChatGPT about this section">💬</a>
 
 Git's data model: snapshot-based, not delta-based. Four object types:
 
@@ -52,38 +52,38 @@ Git's data model: snapshot-based, not delta-based. Four object types:
 - **Commit:** snapshot with parent(s).
 - **Tag:** annotated ref pointing to a commit.
 
-### Refs <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Refs'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Refs" title="Ask ChatGPT about this section">💬</a>
+### Refs <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Refs'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Refs" title="Ask ChatGPT about this section">💬</a>
 
 - **Branch:** ref to a commit (e.g., `refs/heads/main`).
 - **Tag:** ref to a tag object (lightweight or annotated).
 - **HEAD:** ref to current branch (or detached commit).
 
-### Branches <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Branches'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Branches" title="Ask ChatGPT about this section">💬</a>
+### Branches <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Branches'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Branches" title="Ask ChatGPT about this section">💬</a>
 
 - **master / main:** default branch.
 - **Topic branches:** short-lived for a feature.
 - **Remote branches:** refs/remotes/origin/<branch>.
 - **Tags:** releases.
 
-### Merging <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Merging'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Merging" title="Ask ChatGPT about this section">💬</a>
+### Merging <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Merging'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Merging" title="Ask ChatGPT about this section">💬</a>
 
 Three-way merge: common ancestor + two branches. Produces a merge commit (or fast-forwards).
 
-### Rebasing <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Rebasing'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Rebasing" title="Ask ChatGPT about this section">💬</a>
+### Rebasing <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Rebasing'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Rebasing" title="Ask ChatGPT about this section">💬</a>
 
 Replay your commits on top of another branch. Linear history. **Never rebase public branches** (rewrites history).
 
 ## Workflows from Pro Git
 
-### Centralized workflow <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Centralized%20workflow'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Centralized workflow" title="Ask ChatGPT about this section">💬</a>
+### Centralized workflow <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Centralized%20workflow'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Centralized workflow" title="Ask ChatGPT about this section">💬</a>
 
 Single central repo, main branch. One dev at a time on main.
 
-### Integration-manager workflow <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Integration-manager%20workflow'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Integration-manager workflow" title="Ask ChatGPT about this section">💬</a>
+### Integration-manager workflow <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Integration-manager%20workflow'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Integration-manager workflow" title="Ask ChatGPT about this section">💬</a>
 
 Maintainer integrates changes from contributors.
 
-### Dictator-and-lieutenants workflow <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Dictator-and-lieutenants%20workflow'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Dictator-and-lieutenants workflow" title="Ask ChatGPT about this section">💬</a>
+### Dictator-and-lieutenants workflow <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Dictator-and-lieutenants%20workflow'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Dictator-and-lieutenants workflow" title="Ask ChatGPT about this section">💬</a>
 
 Linux kernel model. Lieutenants maintain subsystems, dictator merges.
 

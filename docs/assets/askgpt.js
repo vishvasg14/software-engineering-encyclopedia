@@ -23,7 +23,7 @@
   ];
 
   function openChatGPT(prompt) {
-    var url = 'https://chatgpt.com/?q=' + encodeURIComponent(prompt);
+    var url = 'https://chatgpt.com/?prompt=' + encodeURIComponent(prompt);
     window.open(url, '_blank', 'noopener');
   }
 

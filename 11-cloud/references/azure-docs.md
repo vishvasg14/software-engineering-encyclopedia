@@ -12,7 +12,7 @@ The authoritative source for Azure is the official documentation. This file cata
 
 ## Key services referenced in the document
 
-### Compute <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Compute'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Compute" title="Ask ChatGPT about this section">💬</a>
+### Compute <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Compute'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Compute" title="Ask ChatGPT about this section">💬</a>
 
 | Service | AWS equivalent | URL |
 |---------|----------------|-----|
@@ -24,7 +24,7 @@ The authoritative source for Azure is the official documentation. This file cata
 | **App Service** | Elastic Beanstalk | <https://learn.microsoft.com/azure/app-service/ |
 | **Batch** | AWS Batch | <https://learn.microsoft.com/azure/batch/ |
 
-### Storage <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Storage'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Storage" title="Ask ChatGPT about this section">💬</a>
+### Storage <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Storage'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Storage" title="Ask ChatGPT about this section">💬</a>
 
 | Service | AWS equivalent | URL |
 |---------|----------------|-----|
@@ -35,7 +35,7 @@ The authoritative source for Azure is the official documentation. This file cata
 | **Disk Storage** | EBS | <https://learn.microsoft.com/azure/storage/disks/ |
 | **Archive Storage** | Glacier | <https://learn.microsoft.com/azure/storage/blobs/access-tiers-overview/ |
 
-### Database <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Database'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Database" title="Ask ChatGPT about this section">💬</a>
+### Database <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Database'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Database" title="Ask ChatGPT about this section">💬</a>
 
 | Service | AWS equivalent | URL |
 |---------|----------------|-----|
@@ -46,7 +46,7 @@ The authoritative source for Azure is the official documentation. This file cata
 | **Azure Cache for Redis** | ElastiCache | <https://learn.microsoft.com/azure/azure-cache-for-redis/ |
 | **Azure Synapse** | Redshift | <https://learn.microsoft.com/azure/synapse-analytics/ |
 
-### Networking <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Networking'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Networking" title="Ask ChatGPT about this section">💬</a>
+### Networking <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Networking'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Networking" title="Ask ChatGPT about this section">💬</a>
 
 | Service | AWS equivalent | URL |
 |---------|----------------|-----|
@@ -60,7 +60,7 @@ The authoritative source for Azure is the official documentation. This file cata
 | **Private Link** | PrivateLink | <https://learn.microsoft.com/azure/private-link/ |
 | **Azure DNS** | Route 53 | <https://learn.microsoft.com/azure/dns/ |
 
-### Security <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Security'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Security" title="Ask ChatGPT about this section">💬</a>
+### Security <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Security'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Security" title="Ask ChatGPT about this section">💬</a>
 
 | Service | AWS equivalent | URL |
 |---------|----------------|-----|
@@ -72,7 +72,7 @@ The authoritative source for Azure is the official documentation. This file cata
 | **DDoS Protection** | Shield | <https://learn.microsoft.com/azure/ddos-protection/ |
 | **WAF** | WAF | <https://learn.microsoft.com/azure/web-application-firewall/ |
 
-### Messaging <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Messaging'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Messaging" title="Ask ChatGPT about this section">💬</a>
+### Messaging <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Messaging'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Messaging" title="Ask ChatGPT about this section">💬</a>
 
 | Service | AWS equivalent | URL |
 |---------|----------------|-----|
@@ -82,14 +82,14 @@ The authoritative source for Azure is the official documentation. This file cata
 | **Storage Queues** | SQS | <https://learn.microsoft.com/azure/storage/queues/ |
 | **Service Bus for Kafka** | MSK | <https://learn.microsoft.com/azure/service-bus-messaging/service-bus-for-kafka-overview/ |
 
-### API <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'API'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="API" title="Ask ChatGPT about this section">💬</a>
+### API <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'API'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="API" title="Ask ChatGPT about this section">💬</a>
 
 | Service | AWS equivalent | URL |
 |---------|----------------|-----|
 | **API Management** | API Gateway | <https://learn.microsoft.com/azure/api-management/ |
 | **App Gateway** | ALB | <https://learn.microsoft.com/azure/application-gateway/ |
 
-### Observability <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Observability'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Observability" title="Ask ChatGPT about this section">💬</a>
+### Observability <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Observability'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Observability" title="Ask ChatGPT about this section">💬</a>
 
 | Service | AWS equivalent | URL |
 |---------|----------------|-----|
@@ -99,7 +99,7 @@ The authoritative source for Azure is the official documentation. This file cata
 | **Azure Activity Log** | CloudTrail | <https://learn.microsoft.com/azure/azure-monitor/essentials/activity-log/ |
 | **Azure Advisor** | Trusted Advisor | <https://learn.microsoft.com/azure/advisor/ |
 
-### Cost management <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Cost%20management'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Cost management" title="Ask ChatGPT about this section">💬</a>
+### Cost management <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Cost%20management'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Cost management" title="Ask ChatGPT about this section">💬</a>
 
 | Service | URL |
 |---------|-----|

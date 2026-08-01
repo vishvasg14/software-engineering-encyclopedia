@@ -11,7 +11,7 @@ Signals are Angular's reactive primitive introduced in v16 (developer preview) a
 
 ## Core API
 
-### `signal()` <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'%60signal()%60'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="`signal()`" title="Ask ChatGPT about this section">💬</a>
+### `signal()` <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'%60signal()%60'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="`signal()`" title="Ask ChatGPT about this section">💬</a>
 
 Creates a writable signal:
 
@@ -25,7 +25,7 @@ counter.update(n => n + 1); // Update based on current
 counter.mutate(n => n.push(1)); // Mutate array (only for arrays)
 ```
 
-### `computed()` <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'%60computed()%60'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="`computed()`" title="Ask ChatGPT about this section">💬</a>
+### `computed()` <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'%60computed()%60'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="`computed()`" title="Ask ChatGPT about this section">💬</a>
 
 Creates a read-only signal derived from other signals:
 
@@ -42,7 +42,7 @@ Properties:
 - Memoized: cached until inputs change.
 - Glitch-free: synchronous derivation.
 
-### `effect()` <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'%60effect()%60'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="`effect()`" title="Ask ChatGPT about this section">💬</a>
+### `effect()` <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'%60effect()%60'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="`effect()`" title="Ask ChatGPT about this section">💬</a>
 
 Side effect that runs when signals it reads change:
 
@@ -65,7 +65,7 @@ effect(() => { /* ... */ }, { injector });
 Options:
 - `manualCleanup` — don't auto-cleanup (for tests).
 
-### `untracked()` <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'%60untracked()%60'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="`untracked()`" title="Ask ChatGPT about this section">💬</a>
+### `untracked()` <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'%60untracked()%60'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="`untracked()`" title="Ask ChatGPT about this section">💬</a>
 
 Read signals without tracking:
 
@@ -80,7 +80,7 @@ const sum = computed(() => a() + untracked(() => b()));
 
 ## RxJS interop
 
-### `toSignal()` <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'%60toSignal()%60'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="`toSignal()`" title="Ask ChatGPT about this section">💬</a>
+### `toSignal()` <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'%60toSignal()%60'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="`toSignal()`" title="Ask ChatGPT about this section">💬</a>
 
 Convert Observable to Signal:
 
@@ -97,7 +97,7 @@ Options:
 - `injector` — injector to use.
 - `manualCleanup` — don't auto-cleanup.
 
-### `toObservable()` <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'%60toObservable()%60'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="`toObservable()`" title="Ask ChatGPT about this section">💬</a>
+### `toObservable()` <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'%60toObservable()%60'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="`toObservable()`" title="Ask ChatGPT about this section">💬</a>
 
 Convert Signal to Observable:
 
@@ -115,7 +115,7 @@ By default, `toObservable` uses an effect to track the signal. Pass `manualClean
 
 ## Advanced
 
-### `effect()` with cleanup <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'%60effect()%60%20with%20cleanup'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="`effect()` with cleanup" title="Ask ChatGPT about this section">💬</a>
+### `effect()` with cleanup <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'%60effect()%60%20with%20cleanup'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="`effect()` with cleanup" title="Ask ChatGPT about this section">💬</a>
 
 ```typescript
 effect((onCleanup) => {
@@ -124,7 +124,7 @@ effect((onCleanup) => {
 });
 ```
 
-### `linkedSignal()` (Angular 19+) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'%60linkedSignal()%60%20(Angular%2019%2B)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="`linkedSignal()` (Angular 19+)" title="Ask ChatGPT about this section">💬</a>
+### `linkedSignal()` (Angular 19+) <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'%60linkedSignal()%60%20(Angular%2019%2B)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="`linkedSignal()` (Angular 19+)" title="Ask ChatGPT about this section">💬</a>
 
 Writable signal that resets when a source changes:
 
@@ -140,7 +140,7 @@ const filtered = linkedSignal({
 });
 ```
 
-### `resource()` (Angular 19+, experimental) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'%60resource()%60%20(Angular%2019%2B%2C%20experimental)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="`resource()` (Angular 19+, experimental)" title="Ask ChatGPT about this section">💬</a>
+### `resource()` (Angular 19+, experimental) <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'%60resource()%60%20(Angular%2019%2B%2C%20experimental)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="`resource()` (Angular 19+, experimental)" title="Ask ChatGPT about this section">💬</a>
 
 Async loading state with signals:
 
@@ -224,7 +224,7 @@ Signals are simpler for synchronous state but lack RxJS's async operators. Use b
 
 ## Patterns
 
-### State container <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'State%20container'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="State container" title="Ask ChatGPT about this section">💬</a>
+### State container <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'State%20container'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="State container" title="Ask ChatGPT about this section">💬</a>
 
 ```typescript
 @Injectable({ providedIn: 'root' })
@@ -237,7 +237,7 @@ class CounterStore {
 }
 ```
 
-### Component input with signals <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Component%20input%20with%20signals'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Component input with signals" title="Ask ChatGPT about this section">💬</a>
+### Component input with signals <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Component%20input%20with%20signals'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Component input with signals" title="Ask ChatGPT about this section">💬</a>
 
 ```typescript
 @Component({
@@ -248,7 +248,7 @@ class MyComponent {
 }
 ```
 
-### Model inputs (two-way binding) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Model%20inputs%20(two-way%20binding)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Model inputs (two-way binding)" title="Ask ChatGPT about this section">💬</a>
+### Model inputs (two-way binding) <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Model%20inputs%20(two-way%20binding)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Model inputs (two-way binding)" title="Ask ChatGPT about this section">💬</a>
 
 ```typescript
 @Component({

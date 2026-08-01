@@ -21,7 +21,7 @@
 
 ## SEV1 Playbook: Suspected Data Breach
 
-### 1. Detection (0-15 min) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'1.%20Detection%20(0-15%20min)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="1. Detection (0-15 min)" title="Ask ChatGPT about this section">💬</a>
+### 1. Detection (0-15 min) <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'1.%20Detection%20(0-15%20min)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="1. Detection (0-15 min)" title="Ask ChatGPT about this section">💬</a>
 
 - [ ] Alert fires: unusual access, data exfiltration, suspicious logins.
 - [ ] Acknowledge alert in PagerDuty.
@@ -29,14 +29,14 @@
 - [ ] Open incident channel (Slack #sec-incident).
 - [ ] Start incident document (Scribe).
 
-### 2. Containment (15-60 min) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'2.%20Containment%20(15-60%20min)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="2. Containment (15-60 min)" title="Ask ChatGPT about this section">💬</a>
+### 2. Containment (15-60 min) <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'2.%20Containment%20(15-60%20min)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="2. Containment (15-60 min)" title="Ask ChatGPT about this section">💬</a>
 
 - [ ] Isolate affected systems (revoke credentials, block IPs).
 - [ ] Preserve evidence (snapshots of logs, memory dumps).
 - [ ] Stop the bleeding — don't tip off attacker.
 - [ ] Identify blast radius.
 
-### 3. Investigation (1-24 hours) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'3.%20Investigation%20(1-24%20hours)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="3. Investigation (1-24 hours)" title="Ask ChatGPT about this section">💬</a>
+### 3. Investigation (1-24 hours) <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'3.%20Investigation%20(1-24%20hours)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="3. Investigation (1-24 hours)" title="Ask ChatGPT about this section">💬</a>
 
 - [ ] Review logs (CloudTrail, application logs, OS logs).
 - [ ] Identify entry point.
@@ -44,28 +44,28 @@
 - [ ] Identify affected users.
 - [ ] Forensic analysis (if needed).
 
-### 4. Eradication (1-7 days) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'4.%20Eradication%20(1-7%20days)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="4. Eradication (1-7 days)" title="Ask ChatGPT about this section">💬</a>
+### 4. Eradication (1-7 days) <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'4.%20Eradication%20(1-7%20days)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="4. Eradication (1-7 days)" title="Ask ChatGPT about this section">💬</a>
 
 - [ ] Patch the vulnerability.
 - [ ] Remove attacker access.
 - [ ] Reset credentials.
 - [ ] Update detection rules.
 
-### 5. Recovery (1-7 days) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'5.%20Recovery%20(1-7%20days)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="5. Recovery (1-7 days)" title="Ask ChatGPT about this section">💬</a>
+### 5. Recovery (1-7 days) <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'5.%20Recovery%20(1-7%20days)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="5. Recovery (1-7 days)" title="Ask ChatGPT about this section">💬</a>
 
 - [ ] Restore from backup if needed.
 - [ ] Verify integrity.
 - [ ] Increase monitoring.
 - [ ] Validate with red team.
 
-### 6. Communication (parallel) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'6.%20Communication%20(parallel)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="6. Communication (parallel)" title="Ask ChatGPT about this section">💬</a>
+### 6. Communication (parallel) <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'6.%20Communication%20(parallel)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="6. Communication (parallel)" title="Ask ChatGPT about this section">💬</a>
 
 - [ ] **Internal:** leadership, legal, PR.
 - [ ] **Regulators:** GDPR 72-hour notification; CCPA; state laws.
 - [ ] **Customers:** data breach notification.
 - [ ] **Public:** blog post; press.
 
-### 7. Postmortem (within 2 weeks) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'7.%20Postmortem%20(within%202%20weeks)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="7. Postmortem (within 2 weeks)" title="Ask ChatGPT about this section">💬</a>
+### 7. Postmortem (within 2 weeks) <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'7.%20Postmortem%20(within%202%20weeks)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="7. Postmortem (within 2 weeks)" title="Ask ChatGPT about this section">💬</a>
 
 - [ ] **Blameless** postmortem.
 - [ ] Timeline of events.
@@ -76,7 +76,7 @@
 
 ## Communication templates
 
-### Initial customer notification <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Initial%20customer%20notification'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Initial customer notification" title="Ask ChatGPT about this section">💬</a>
+### Initial customer notification <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Initial%20customer%20notification'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Initial customer notification" title="Ask ChatGPT about this section">💬</a>
 
 ```
 Subject: [ACTION REQUIRED] Security Incident at [Company]
@@ -97,7 +97,7 @@ Sincerely,
 [Security Team]
 ```
 
-### Regulatory notification (GDPR) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Regulatory%20notification%20(GDPR)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Regulatory notification (GDPR)" title="Ask ChatGPT about this section">💬</a>
+### Regulatory notification (GDPR) <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Regulatory%20notification%20(GDPR)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Regulatory notification (GDPR)" title="Ask ChatGPT about this section">💬</a>
 
 Required within 72 hours of awareness.
 

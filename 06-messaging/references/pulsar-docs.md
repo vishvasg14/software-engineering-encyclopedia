@@ -11,7 +11,7 @@ The authoritative source for Apache Pulsar is the official documentation. This f
 
 ## Architecture
 
-### Components <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Components'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Components" title="Ask ChatGPT about this section">💬</a>
+### Components <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Components'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Components" title="Ask ChatGPT about this section">💬</a>
 
 | Component | Purpose |
 |-----------|---------|
@@ -21,7 +21,7 @@ The authoritative source for Apache Pulsar is the official documentation. This f
 | **BookKeeper Metadata** | Coordination for BookKeeper |
 | **Pulsar Proxy** | Gateway for client connections |
 
-### Concepts <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Concepts'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Concepts" title="Ask ChatGPT about this section">💬</a>
+### Concepts <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Concepts'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Concepts" title="Ask ChatGPT about this section">💬</a>
 
 | Concept | URL |
 |---------|-----|
@@ -40,7 +40,7 @@ The authoritative source for Apache Pulsar is the official documentation. This f
 | Geo-Replication | <https://pulsar.apache.org/docs/administration-geo/> |
 | Tiered Storage | <https://pulsar.apache.org/docs/tiered-storage-overview/> |
 
-### Subscription types <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Subscription%20types'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Subscription types" title="Ask ChatGPT about this section">💬</a>
+### Subscription types <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Subscription%20types'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Subscription types" title="Ask ChatGPT about this section">💬</a>
 
 | Type | URL |
 |------|-----|
@@ -49,7 +49,7 @@ The authoritative source for Apache Pulsar is the official documentation. This f
 | Shared | <https://pulsar.apache.org/docs/concepts-messaging/#shared> |
 | Key_Shared | <https://pulsar.apache.org/docs/concepts-messaging/#key_shared> |
 
-### Pulsar Functions <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Pulsar%20Functions'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Pulsar Functions" title="Ask ChatGPT about this section">💬</a>
+### Pulsar Functions <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Pulsar%20Functions'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Pulsar Functions" title="Ask ChatGPT about this section">💬</a>
 
 | Topic | URL |
 |-------|-----|
@@ -60,7 +60,7 @@ The authoritative source for Apache Pulsar is the official documentation. This f
 | State Store | <https://pulsar.apache.org/docs/functions-state-store/> |
 | Windowing | <https://pulsar.apache.org/docs/functions-windowing/> |
 
-### Pulsar IO <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Pulsar%20IO'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Pulsar IO" title="Ask ChatGPT about this section">💬</a>
+### Pulsar IO <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Pulsar%20IO'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Pulsar IO" title="Ask ChatGPT about this section">💬</a>
 
 | Topic | URL |
 |-------|-----|
@@ -72,7 +72,7 @@ The authoritative source for Apache Pulsar is the official documentation. This f
 | JDBC Source | <https://pulsar.apache.org/docs/io-jdbc-source/> |
 | Debezium Source | <https://pulsar.apache.org/docs/io-debezium-source/> |
 
-### Schema <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Schema'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Schema" title="Ask ChatGPT about this section">💬</a>
+### Schema <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Schema'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Schema" title="Ask ChatGPT about this section">💬</a>
 
 | Topic | URL |
 |-------|-----|
@@ -82,7 +82,7 @@ The authoritative source for Apache Pulsar is the official documentation. This f
 | Protobuf | <https://pulsar.apache.org/docs/schema-protobuf/> |
 | Schema Evolution | <https://pulsar.apache.org/docs/schema-evolution-compatibility/> |
 
-### Operations <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Operations'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Operations" title="Ask ChatGPT about this section">💬</a>
+### Operations <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Operations'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Operations" title="Ask ChatGPT about this section">💬</a>
 
 | Topic | URL |
 |-------|-----|

@@ -106,23 +106,23 @@ graph TB
 
 ## 3. Five Ws + One H
 
-### What <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'What'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="What" title="Ask ChatGPT about this section">💬</a>
+### What <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'What'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="What" title="Ask ChatGPT about this section">💬</a>
 
 **Git** is a free, open-source distributed version control system. It uses a content-addressable filesystem; every change is a snapshot of files with metadata. Git tracks changes locally, supports branching and merging efficiently, and can synchronize with remote repositories.
 
-### Why <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Why'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Why" title="Ask ChatGPT about this section">💬</a>
+### Why <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Why'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Why" title="Ask ChatGPT about this section">💬</a>
 
 Git enables collaboration, version history, branching, and review workflows. It's fast, distributed, and supports millions of workflows.
 
-### When <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'When'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="When" title="Ask ChatGPT about this section">💬</a>
+### When <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'When'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="When" title="Ask ChatGPT about this section">💬</a>
 
 Git was created by Linus Torvalds in 2005 to manage the Linux kernel after BitKeeper licensing changed. Since then, it has become the de facto standard VCS.
 
-### Where <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Where'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Where" title="Ask ChatGPT about this section">💬</a>
+### Where <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Where'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Where" title="Ask ChatGPT about this section">💬</a>
 
 Every software project, open source or commercial. GitHub, GitLab, and Bitbucket are the dominant hosting services. Self-hosted Git is common in enterprises.
 
-### Who <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Who'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Who" title="Ask ChatGPT about this section">💬</a>
+### Who <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Who'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Who" title="Ask ChatGPT about this section">💬</a>
 
 - **Linus Torvalds:** created Git in 2005.
 - **Junio Hamano:** maintainer since 2005.
@@ -130,20 +130,20 @@ Every software project, open source or commercial. GitHub, GitLab, and Bitbucket
 - **GitLab:** founded by Dmytro Zaporozhets and Valery Sizov in 2011.
 - **Atlassian (Bitbucket):** acquired Bitbucket in 2010.
 
-### How (one-paragraph preview) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'How%20(one-paragraph%20preview)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="How (one-paragraph preview)" title="Ask ChatGPT about this section">💬</a>
+### How (one-paragraph preview) <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'How%20(one-paragraph%20preview)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="How (one-paragraph preview)" title="Ask ChatGPT about this section">💬</a>
 
 You create a local repository with `git init`, make commits with `git commit`, push to a remote with `git push`, and collaborate via branches, pull requests, and code reviews. Git's data model is a DAG of commits pointing to trees pointing to blobs. Branches and tags are pointers to commits. You choose a branching strategy (Git Flow, GitHub Flow, or trunk-based) that fits your team size and release cadence. You tag releases with SemVer (e.g., v1.2.3). You automate releases with semantic-release or release-please. For operations, you use GitOps (ArgoCD, Flux) to make Git the source of truth for infrastructure.
 
 ## 4. History
 
-### 4.1 Origins (2005) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'4.1%20Origins%20(2005)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="4.1 Origins (2005)" title="Ask ChatGPT about this section">💬</a>
+### 4.1 Origins (2005) <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'4.1%20Origins%20(2005)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="4.1 Origins (2005)" title="Ask ChatGPT about this section">💬</a>
 
 - **April 2005** — Linus Torvalds starts Git after BitKeeper licensing changes.
 - **June 2005** — Git manages the Linux kernel.
 - **July 2005** — Junio Hamano takes over maintainership.
 - **December 2005** — Git 1.0 released.
 
-### 4.2 Growth (2006-2015) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'4.2%20Growth%20(2006-2015)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="4.2 Growth (2006-2015)" title="Ask ChatGPT about this section">💬</a>
+### 4.2 Growth (2006-2015) <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'4.2%20Growth%20(2006-2015)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="4.2 Growth (2006-2015)" title="Ask ChatGPT about this section">💬</a>
 
 - **2007** — Git gains traction outside Linux kernel development.
 - **2008** — GitHub launches; Git becomes the de facto standard.
@@ -152,7 +152,7 @@ You create a local repository with `git init`, make commits with `git commit`, p
 - **2014** — Git 2.0 released.
 - **2018** — Microsoft acquires GitHub for $7.5B.
 
-### 4.3 Modern (2018-2026) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'4.3%20Modern%20(2018-2026)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="4.3 Modern (2018-2026)" title="Ask ChatGPT about this section">💬</a>
+### 4.3 Modern (2018-2026) <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'4.3%20Modern%20(2018-2026)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="4.3 Modern (2018-2026)" title="Ask ChatGPT about this section">💬</a>
 
 - **2018** — LFS 2.0; signed commits (GPG, SSH); partial clone.
 - **2020** — Git 2.30; switch and restore; sparse-checkout.
@@ -175,7 +175,7 @@ timeline
 
 ## 5. Problem Statement
 
-### 5.1 What Git solves <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'5.1%20What%20Git%20solves'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="5.1 What Git solves" title="Ask ChatGPT about this section">💬</a>
+### 5.1 What Git solves <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'5.1%20What%20Git%20solves'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="5.1 What Git solves" title="Ask ChatGPT about this section">💬</a>
 
 - **Version history** — every change preserved.
 - **Branching and merging** — parallel development.
@@ -184,7 +184,7 @@ timeline
 - **Traceability** — who changed what, when, why.
 - **Reproducibility** — checkout any version.
 
-### 5.2 What Git doesn't solve <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'5.2%20What%20Git%20doesn't%20solve'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="5.2 What Git doesn't solve" title="Ask ChatGPT about this section">💬</a>
+### 5.2 What Git doesn't solve <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'5.2%20What%20Git%20doesn't%20solve'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="5.2 What Git doesn't solve" title="Ask ChatGPT about this section">💬</a>
 
 - **Merge conflicts** — only humans can resolve.
 - **Large files** — use Git LFS.
@@ -192,7 +192,7 @@ timeline
 - **Code review quality** — use linters, not Git.
 - **Deployment** — use GitOps on top.
 
-### 5.3 The cost of poor VCS practices <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'5.3%20The%20cost%20of%20poor%20VCS%20practices'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="5.3 The cost of poor VCS practices" title="Ask ChatGPT about this section">💬</a>
+### 5.3 The cost of poor VCS practices <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'5.3%20The%20cost%20of%20poor%20VCS%20practices'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="5.3 The cost of poor VCS practices" title="Ask ChatGPT about this section">💬</a>
 
 - **Lost history** — `git push --force` on shared branches.
 - **Conflicting workflows** — no branching strategy.
@@ -201,23 +201,23 @@ timeline
 
 ## 6. Real-World Motivation
 
-### 6.1 Linux Kernel <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'6.1%20Linux%20Kernel'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="6.1 Linux Kernel" title="Ask ChatGPT about this section">💬</a>
+### 6.1 Linux Kernel <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'6.1%20Linux%20Kernel'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="6.1 Linux Kernel" title="Ask ChatGPT about this section">💬</a>
 
 Created Git; uses it for the entire kernel. Manages millions of lines of code; releases every 2-3 months.
 
-### 6.2 GitHub <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'6.2%20GitHub'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="6.2 GitHub" title="Ask ChatGPT about this section">💬</a>
+### 6.2 GitHub <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'6.2%20GitHub'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="6.2 GitHub" title="Ask ChatGPT about this section">💬</a>
 
 Hosts > 100M repositories. Built on Git; adds PRs, issues, Actions.
 
-### 6.3 GitLab <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'6.3%20GitLab'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="6.3 GitLab" title="Ask ChatGPT about this section">💬</a>
+### 6.3 GitLab <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'6.3%20GitLab'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="6.3 GitLab" title="Ask ChatGPT about this section">💬</a>
 
 Integrated DevOps platform; built on Git; adds CI/CD, security scanning.
 
-### 6.4 Microsoft <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'6.4%20Microsoft'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="6.4 Microsoft" title="Ask ChatGPT about this section">💬</a>
+### 6.4 Microsoft <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'6.4%20Microsoft'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="6.4 Microsoft" title="Ask ChatGPT about this section">💬</a>
 
 Owns GitHub. Uses Git for Windows development.
 
-### 6.5 Google <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'6.5%20Google'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="6.5 Google" title="Ask ChatGPT about this section">💬</a>
+### 6.5 Google <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'6.5%20Google'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="6.5 Google" title="Ask ChatGPT about this section">💬</a>
 
 Monorepo (Piper) with custom VCS (not Git, but influenced by it); also uses Git for many projects.
 
@@ -236,7 +236,7 @@ graph LR
 
 ## 7. Internal Working
 
-### 7.1 The three states <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'7.1%20The%20three%20states'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="7.1 The three states" title="Ask ChatGPT about this section">💬</a>
+### 7.1 The three states <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'7.1%20The%20three%20states'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="7.1 The three states" title="Ask ChatGPT about this section">💬</a>
 
 ```mermaid
 graph LR
@@ -260,7 +260,7 @@ The three areas:
 - **Index / Staging area:** files staged for next commit.
 - **HEAD:** current commit (or branch pointer).
 
-### 7.2 Git objects <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'7.2%20Git%20objects'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="7.2 Git objects" title="Ask ChatGPT about this section">💬</a>
+### 7.2 Git objects <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'7.2%20Git%20objects'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="7.2 Git objects" title="Ask ChatGPT about this section">💬</a>
 
 ```mermaid
 graph TB
@@ -279,14 +279,14 @@ Four object types:
 - **Commit:** snapshot + parent(s) + author + message.
 - **Tag:** annotated ref to a commit.
 
-### 7.3 Git references <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'7.3%20Git%20references'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="7.3 Git references" title="Ask ChatGPT about this section">💬</a>
+### 7.3 Git references <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'7.3%20Git%20references'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="7.3 Git references" title="Ask ChatGPT about this section">💬</a>
 
 - **HEAD:** current commit pointer.
 - **Branch:** movable ref (e.g., `refs/heads/main`).
 - **Tag:** fixed ref (e.g., `refs/tags/v1.0.0`).
 - **Remote branch:** ref to remote's branch (e.g., `refs/remotes/origin/main`).
 
-### 7.4 Git workflow <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'7.4%20Git%20workflow'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="7.4 Git workflow" title="Ask ChatGPT about this section">💬</a>
+### 7.4 Git workflow <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'7.4%20Git%20workflow'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="7.4 Git workflow" title="Ask ChatGPT about this section">💬</a>
 
 ```mermaid
 sequenceDiagram
@@ -309,7 +309,7 @@ sequenceDiagram
 
 This section is the heart of the document.
 
-### 8.1 Git objects deep <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.1%20Git%20objects%20deep'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.1 Git objects deep" title="Ask ChatGPT about this section">💬</a>
+### 8.1 Git objects deep <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'8.1%20Git%20objects%20deep'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.1 Git objects deep" title="Ask ChatGPT about this section">💬</a>
 
 **Blob:** stores file content. Identified by SHA-1 (now SHA-256 in 2.42+) of content. Same content = same hash = same object.
 
@@ -319,7 +319,7 @@ This section is the heart of the document.
 
 **Tag:** annotated object pointing to a commit. Contains tag name, tagger, message, signature.
 
-### 8.2 The object graph <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.2%20The%20object%20graph'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.2 The object graph" title="Ask ChatGPT about this section">💬</a>
+### 8.2 The object graph <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'8.2%20The%20object%20graph'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.2 The object graph" title="Ask ChatGPT about this section">💬</a>
 
 ```mermaid
 graph TB
@@ -333,7 +333,7 @@ graph TB
 
 Each commit points to a tree; trees contain blobs (and other trees). The DAG is built by hash chains.
 
-### 8.3 Pack files <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.3%20Pack%20files'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.3 Pack files" title="Ask ChatGPT about this section">💬</a>
+### 8.3 Pack files <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'8.3%20Pack%20files'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.3 Pack files" title="Ask ChatGPT about this section">💬</a>
 
 To save space, Git packs many objects into a single file using delta compression:
 
@@ -342,7 +342,7 @@ To save space, Git packs many objects into a single file using delta compression
 - **Pack index:** sorted index for fast lookup.
 - **GC:** `git gc` packs loose objects.
 
-### 8.4 Reflog <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.4%20Reflog'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.4 Reflog" title="Ask ChatGPT about this section">💬</a>
+### 8.4 Reflog <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'8.4%20Reflog'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.4 Reflog" title="Ask ChatGPT about this section">💬</a>
 
 Every ref movement is logged:
 
@@ -360,7 +360,7 @@ $ git reflog
 $ git checkout -b recovered-commit abc1234
 ```
 
-### 8.5 Git commands cheat sheet <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.5%20Git%20commands%20cheat%20sheet'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.5 Git commands cheat sheet" title="Ask ChatGPT about this section">💬</a>
+### 8.5 Git commands cheat sheet <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'8.5%20Git%20commands%20cheat%20sheet'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.5 Git commands cheat sheet" title="Ask ChatGPT about this section">💬</a>
 
 ```bash
 # Setup
@@ -424,7 +424,7 @@ git log -S "search-term"
 git bisect
 ```
 
-### 8.6 Branching strategies <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.6%20Branching%20strategies'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.6 Branching strategies" title="Ask ChatGPT about this section">💬</a>
+### 8.6 Branching strategies <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'8.6%20Branching%20strategies'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.6 Branching strategies" title="Ask ChatGPT about this section">💬</a>
 
 #### 8.6.1 Git Flow (Vincent Driessen, 2010)
 
@@ -520,7 +520,7 @@ graph TB
 | **Trunk-based** | Low | High-trust CD | Any | Continuous |
 | **GitLab Flow** | High | Multiple env | Medium | Weekly+ |
 
-### 8.7 Merging and rebasing <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.7%20Merging%20and%20rebasing'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.7 Merging and rebasing" title="Ask ChatGPT about this section">💬</a>
+### 8.7 Merging and rebasing <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'8.7%20Merging%20and%20rebasing'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.7 Merging and rebasing" title="Ask ChatGPT about this section">💬</a>
 
 #### 8.7.1 Three-way merge
 
@@ -556,7 +556,7 @@ Merge multiple branches at once.
 git merge branch1 branch2 branch3
 ```
 
-### 8.8 Rebasing <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.8%20Rebasing'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.8 Rebasing" title="Ask ChatGPT about this section">💬</a>
+### 8.8 Rebasing <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'8.8%20Rebasing'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.8 Rebasing" title="Ask ChatGPT about this section">💬</a>
 
 Replay your commits on top of another branch. **Never rebase public branches** (rewrites history).
 
@@ -579,7 +579,7 @@ Editors:
 - **fixup:** like squash, discard message.
 - **drop:** discard.
 
-### 8.9 Stashing <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.9%20Stashing'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.9 Stashing" title="Ask ChatGPT about this section">💬</a>
+### 8.9 Stashing <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'8.9%20Stashing'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.9 Stashing" title="Ask ChatGPT about this section">💬</a>
 
 Temporarily save uncommitted changes.
 
@@ -593,7 +593,7 @@ git stash branch newbranch   # create branch from stash
 
 Use cases: switching branches mid-work, cleaning working tree.
 
-### 8.10 Cherry-picking <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.10%20Cherry-picking'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.10 Cherry-picking" title="Ask ChatGPT about this section">💬</a>
+### 8.10 Cherry-picking <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'8.10%20Cherry-picking'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.10 Cherry-picking" title="Ask ChatGPT about this section">💬</a>
 
 Apply a specific commit from another branch.
 
@@ -603,7 +603,7 @@ git cherry-pick <commit-hash>
 
 Use cases: backport a fix, pick a feature.
 
-### 8.11 Submodules <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.11%20Submodules'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.11 Submodules" title="Ask ChatGPT about this section">💬</a>
+### 8.11 Submodules <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'8.11%20Submodules'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.11 Submodules" title="Ask ChatGPT about this section">💬</a>
 
 Include another repo as a subdirectory.
 
@@ -616,7 +616,7 @@ git submodule update --init --recursive
 
 **Cons:** complex workflow, git log is confusing.
 
-### 8.12 Subtrees <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.12%20Subtrees'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.12 Subtrees" title="Ask ChatGPT about this section">💬</a>
+### 8.12 Subtrees <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'8.12%20Subtrees'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.12 Subtrees" title="Ask ChatGPT about this section">💬</a>
 
 Similar to submodules but managed as a regular directory.
 
@@ -628,7 +628,7 @@ git subtree add --prefix=lib <url> main --squash
 
 **Cons:** larger history, manual squashing.
 
-### 8.13 Git hooks <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.13%20Git%20hooks'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.13 Git hooks" title="Ask ChatGPT about this section">💬</a>
+### 8.13 Git hooks <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'8.13%20Git%20hooks'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.13 Git hooks" title="Ask ChatGPT about this section">💬</a>
 
 **Client-side:**
 
@@ -650,7 +650,7 @@ git subtree add --prefix=lib <url> main --squash
 - **pre-commit:** <https://pre-commit.com/> (Python-based, multi-language).
 - **lefthook:** <https://github.com/evilmartians/lefthook> (Go-based, fast).
 
-### 8.14 Hooks example (Husky) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.14%20Hooks%20example%20(Husky)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.14 Hooks example (Husky)" title="Ask ChatGPT about this section">💬</a>
+### 8.14 Hooks example (Husky) <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'8.14%20Hooks%20example%20(Husky)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.14 Hooks example (Husky)" title="Ask ChatGPT about this section">💬</a>
 
 ```json
 // package.json
@@ -668,7 +668,7 @@ git subtree add --prefix=lib <url> main --squash
 }
 ```
 
-### 8.15 SemVer 2.0.0 <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.15%20SemVer%202.0.0'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.15 SemVer 2.0.0" title="Ask ChatGPT about this section">💬</a>
+### 8.15 SemVer 2.0.0 <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'8.15%20SemVer%202.0.0'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.15 SemVer 2.0.0" title="Ask ChatGPT about this section">💬</a>
 
 ```
 MAJOR.MINOR.PATCH[-PRERELEASE][+BUILD]
@@ -684,7 +684,7 @@ MAJOR.MINOR.PATCH[-PRERELEASE][+BUILD]
 
 **Precedence** (low to high): 1.0.0-alpha < 1.0.0-alpha.1 < 1.0.0-beta < 1.0.0.
 
-### 8.16 Conventional Commits <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.16%20Conventional%20Commits'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.16 Conventional Commits" title="Ask ChatGPT about this section">💬</a>
+### 8.16 Conventional Commits <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'8.16%20Conventional%20Commits'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.16 Conventional Commits" title="Ask ChatGPT about this section">💬</a>
 
 ```
 <type>[scope]: <description>
@@ -711,7 +711,7 @@ MAJOR.MINOR.PATCH[-PRERELEASE][+BUILD]
 - **semantic-release:** automate versioning.
 - **release-please:** GitHub Action for releases.
 
-### 8.17 Release workflow <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.17%20Release%20workflow'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.17 Release workflow" title="Ask ChatGPT about this section">💬</a>
+### 8.17 Release workflow <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'8.17%20Release%20workflow'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.17 Release workflow" title="Ask ChatGPT about this section">💬</a>
 
 ```mermaid
 sequenceDiagram
@@ -732,7 +732,7 @@ sequenceDiagram
     CI->>CI: 9. Deploy to production
 ```
 
-### 8.18 GitOps <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.18%20GitOps'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.18 GitOps" title="Ask ChatGPT about this section">💬</a>
+### 8.18 GitOps <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'8.18%20GitOps'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.18 GitOps" title="Ask ChatGPT about this section">💬</a>
 
 Use Git as source of truth for operations.
 
@@ -758,7 +758,7 @@ graph TB
 - **Helm + GitOps:** templated deployment.
 - **Kustomize + GitOps:** layered configuration.
 
-### 8.19 Submodules vs subtrees <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.19%20Submodules%20vs%20subtrees'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.19 Submodules vs subtrees" title="Ask ChatGPT about this section">💬</a>
+### 8.19 Submodules vs subtrees <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'8.19%20Submodules%20vs%20subtrees'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.19 Submodules vs subtrees" title="Ask ChatGPT about this section">💬</a>
 
 | Feature | Submodules | Subtrees |
 |---------|-----------|----------|
@@ -768,7 +768,7 @@ graph TB
 | **Simplicity** | Lower | Higher |
 | **Size on clone** | Smaller | Larger |
 
-### 8.20 Git LFS (Large File Storage) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.20%20Git%20LFS%20(Large%20File%20Storage)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.20 Git LFS (Large File Storage)" title="Ask ChatGPT about this section">💬</a>
+### 8.20 Git LFS (Large File Storage) <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'8.20%20Git%20LFS%20(Large%20File%20Storage)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.20 Git LFS (Large File Storage)" title="Ask ChatGPT about this section">💬</a>
 
 ```bash
 git lfs install
@@ -782,7 +782,7 @@ git push
 
 **Alternatives:** Submodules, separate repos, DVC (Data Version Control).
 
-### 8.21 Signing commits <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.21%20Signing%20commits'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.21 Signing commits" title="Ask ChatGPT about this section">💬</a>
+### 8.21 Signing commits <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'8.21%20Signing%20commits'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.21 Signing commits" title="Ask ChatGPT about this section">💬</a>
 
 ```bash
 # GPG
@@ -799,7 +799,7 @@ git commit -S -m "Signed commit"
 
 Verify: `git log --show-signature`.
 
-### 8.22 Monorepo vs polyrepo <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.22%20Monorepo%20vs%20polyrepo'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.22 Monorepo vs polyrepo" title="Ask ChatGPT about this section">💬</a>
+### 8.22 Monorepo vs polyrepo <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'8.22%20Monorepo%20vs%20polyrepo'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.22 Monorepo vs polyrepo" title="Ask ChatGPT about this section">💬</a>
 
 | Approach | Pros | Cons |
 |----------|------|------|
@@ -808,7 +808,7 @@ Verify: `git log --show-signature`.
 
 **Tools for monorepo:** Bazel, Nx, Turborepo, Buck, Pants.
 
-### 8.23 Recovery and debugging <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.23%20Recovery%20and%20debugging'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.23 Recovery and debugging" title="Ask ChatGPT about this section">💬</a>
+### 8.23 Recovery and debugging <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'8.23%20Recovery%20and%20debugging'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.23 Recovery and debugging" title="Ask ChatGPT about this section">💬</a>
 
 ```bash
 # Recover deleted commit
@@ -826,7 +826,7 @@ git worktree add ../hotfix hotfix-1
 git worktree add ../experiment new-feature
 ```
 
-### 8.24 Common Git operations compared <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.24%20Common%20Git%20operations%20compared'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.24 Common Git operations compared" title="Ask ChatGPT about this section">💬</a>
+### 8.24 Common Git operations compared <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'8.24%20Common%20Git%20operations%20compared'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.24 Common Git operations compared" title="Ask ChatGPT about this section">💬</a>
 
 | Operation | Command | Notes |
 |-----------|---------|-------|
@@ -840,7 +840,7 @@ git worktree add ../experiment new-feature
 | Clean untracked | `git clean -fd` | DESTRUCTIVE |
 | Find when bug | `git bisect` | Binary search |
 
-### 8.25 Tools and integrations <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.25%20Tools%20and%20integrations'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.25 Tools and integrations" title="Ask ChatGPT about this section">💬</a>
+### 8.25 Tools and integrations <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'8.25%20Tools%20and%20integrations'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.25 Tools and integrations" title="Ask ChatGPT about this section">💬</a>
 
 | Tool | Purpose |
 |------|---------|
@@ -859,7 +859,7 @@ git worktree add ../experiment new-feature
 | **git-filter-repo** | Rewrite history safely |
 | **BFG** | Remove secrets from history |
 
-### 8.26 Common mistakes <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.26%20Common%20mistakes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.26 Common mistakes" title="Ask ChatGPT about this section">💬</a>
+### 8.26 Common mistakes <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'8.26%20Common%20mistakes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.26 Common mistakes" title="Ask ChatGPT about this section">💬</a>
 
 - **Force-push to shared branches** — destroys history.
 - **No .gitignore** — committing generated files.
@@ -869,7 +869,7 @@ git worktree add ../experiment new-feature
 - **Committing to main directly** — bypasses review.
 - **Skipping pre-commit hooks** — loses automation.
 
-### 8.27 When to use what <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.27%20When%20to%20use%20what'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.27 When to use what" title="Ask ChatGPT about this section">💬</a>
+### 8.27 When to use what <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'8.27%20When%20to%20use%20what'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.27 When to use what" title="Ask ChatGPT about this section">💬</a>
 
 | Use case | Recommendation |
 |----------|---------------|
@@ -883,7 +883,7 @@ git worktree add ../experiment new-feature
 
 ## 9. Architecture
 
-### 9.1 Distributed Git workflow <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'9.1%20Distributed%20Git%20workflow'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="9.1 Distributed Git workflow" title="Ask ChatGPT about this section">💬</a>
+### 9.1 Distributed Git workflow <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'9.1%20Distributed%20Git%20workflow'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="9.1 Distributed Git workflow" title="Ask ChatGPT about this section">💬</a>
 
 ```mermaid
 graph LR
@@ -903,7 +903,7 @@ graph LR
     Main -->|CI/CD| Prod[Production]
 ```
 
-### 9.2 GitOps reference architecture <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'9.2%20GitOps%20reference%20architecture'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="9.2 GitOps reference architecture" title="Ask ChatGPT about this section">💬</a>
+### 9.2 GitOps reference architecture <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'9.2%20GitOps%20reference%20architecture'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="9.2 GitOps reference architecture" title="Ask ChatGPT about this section">💬</a>
 
 ```mermaid
 graph TB
@@ -921,7 +921,7 @@ graph TB
 
 ## 10. Performance
 
-### 10.1 Git performance <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'10.1%20Git%20performance'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="10.1 Git performance" title="Ask ChatGPT about this section">💬</a>
+### 10.1 Git performance <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'10.1%20Git%20performance'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="10.1 Git performance" title="Ask ChatGPT about this section">💬</a>
 
 - **git status:** O(number of files).
 - **git log:** O(n) for n commits (fast with packed).
@@ -929,7 +929,7 @@ graph TB
 - **git clone:** O(repo size) — first time only.
 - **git fetch:** O(changes since last fetch).
 
-### 10.2 Large repos <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'10.2%20Large%20repos'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="10.2 Large repos" title="Ask ChatGPT about this section">💬</a>
+### 10.2 Large repos <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'10.2%20Large%20repos'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="10.2 Large repos" title="Ask ChatGPT about this section">💬</a>
 
 - **Git LFS:** large file storage.
 - **Partial clone:** `git clone --filter=blob:none`.
@@ -937,7 +937,7 @@ graph TB
 - **Shallow clone:** `git clone --depth 1`.
 - **Mono-repo tools:** Bazel, Nx (avoid full clone).
 
-### 10.3 .gitattributes <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'10.3%20.gitattributes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="10.3 .gitattributes" title="Ask ChatGPT about this section">💬</a>
+### 10.3 .gitattributes <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'10.3%20.gitattributes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="10.3 .gitattributes" title="Ask ChatGPT about this section">💬</a>
 
 ```
 *.psd binary
@@ -948,7 +948,7 @@ graph TB
 
 Mark large files as binary for better diffs.
 
-### 10.4 fsmonitor <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'10.4%20fsmonitor'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="10.4 fsmonitor" title="Ask ChatGPT about this section">💬</a>
+### 10.4 fsmonitor <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'10.4%20fsmonitor'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="10.4 fsmonitor" title="Ask ChatGPT about this section">💬</a>
 
 - `core.fsmonitor`: OS-specific file watching for `git status`.
 - macOS: fsevents.
@@ -957,7 +957,7 @@ Mark large files as binary for better diffs.
 
 ## 11. Security
 
-### 11.1 Secrets in git <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'11.1%20Secrets%20in%20git'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="11.1 Secrets in git" title="Ask ChatGPT about this section">💬</a>
+### 11.1 Secrets in git <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'11.1%20Secrets%20in%20git'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="11.1 Secrets in git" title="Ask ChatGPT about this section">💬</a>
 
 - **Pre-commit hooks** to detect secrets (TruffleHog, git-secrets, detect-secrets).
 - **Never commit AWS keys, passwords, tokens.**
@@ -965,7 +965,7 @@ Mark large files as binary for better diffs.
 - **Use a secrets manager** (Vault, AWS SM).
 - **.gitignore** sensitive files.
 
-### 11.2 Branch protection <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'11.2%20Branch%20protection'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="11.2 Branch protection" title="Ask ChatGPT about this section">💬</a>
+### 11.2 Branch protection <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'11.2%20Branch%20protection'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="11.2 Branch protection" title="Ask ChatGPT about this section">💬</a>
 
 ```yaml
 # GitHub branch protection
@@ -979,20 +979,20 @@ no_force_pushes: true
 no_deletions: true
 ```
 
-### 11.3 Signed commits <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'11.3%20Signed%20commits'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="11.3 Signed commits" title="Ask ChatGPT about this section">💬</a>
+### 11.3 Signed commits <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'11.3%20Signed%20commits'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="11.3 Signed commits" title="Ask ChatGPT about this section">💬</a>
 
 - **GPG:** traditional method.
 - **SSH (since 2.34):** simpler.
 - **Sigstore / cosign:** for images and artifacts.
 
-### 11.4 Audit and log <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'11.4%20Audit%20and%20log'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="11.4 Audit and log" title="Ask ChatGPT about this section">💬</a>
+### 11.4 Audit and log <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'11.4%20Audit%20and%20log'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="11.4 Audit and log" title="Ask ChatGPT about this section">💬</a>
 
 - **git log:** who, when, what.
 - **git log -p:** with diff.
 - **GitHub audit logs:** enterprise feature.
 - **GitLab audit events:** enterprise feature.
 
-### 11.5 Supply chain security (SLSA) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'11.5%20Supply%20chain%20security%20(SLSA)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="11.5 Supply chain security (SLSA)" title="Ask ChatGPT about this section">💬</a>
+### 11.5 Supply chain security (SLSA) <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'11.5%20Supply%20chain%20security%20(SLSA)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="11.5 Supply chain security (SLSA)" title="Ask ChatGPT about this section">💬</a>
 
 - **SLSA framework:** supply chain integrity.
 - **Sigstore / cosign:** artifact signing.
@@ -1001,7 +1001,7 @@ no_deletions: true
 
 ## 12. Production Engineering
 
-### 12.1 Trunk-based development <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'12.1%20Trunk-based%20development'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="12.1 Trunk-based development" title="Ask ChatGPT about this section">💬</a>
+### 12.1 Trunk-based development <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'12.1%20Trunk-based%20development'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="12.1 Trunk-based development" title="Ask ChatGPT about this section">💬</a>
 
 - Single main branch.
 - Short-lived feature branches (< 1 day).
@@ -1009,7 +1009,7 @@ no_deletions: true
 - Continuous integration / deployment.
 - Strong test suite.
 
-### 12.2 Release engineering <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'12.2%20Release%20engineering'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="12.2 Release engineering" title="Ask ChatGPT about this section">💬</a>
+### 12.2 Release engineering <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'12.2%20Release%20engineering'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="12.2 Release engineering" title="Ask ChatGPT about this section">💬</a>
 
 - **Conventional Commits** for messages.
 - **semantic-release** or **release-please** for automation.
@@ -1017,7 +1017,7 @@ no_deletions: true
 - **GitHub Releases** for artifacts.
 - **Calendar versioning** (CalVer) for products.
 
-### 12.3 DORA metrics (DevOps Research and Assessment) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'12.3%20DORA%20metrics%20(DevOps%20Research%20and%20Assessment)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="12.3 DORA metrics (DevOps Research and Assessment)" title="Ask ChatGPT about this section">💬</a>
+### 12.3 DORA metrics (DevOps Research and Assessment) <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'12.3%20DORA%20metrics%20(DevOps%20Research%20and%20Assessment)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="12.3 DORA metrics (DevOps Research and Assessment)" title="Ask ChatGPT about this section">💬</a>
 
 - **Deployment frequency:** how often you deploy.
 - **Lead time for changes:** commit to production.
@@ -1026,7 +1026,7 @@ no_deletions: true
 
 High performers: deploy multiple times per day; lead time < 1 hour; MTTR < 1 hour; change failure rate < 15%.
 
-### 12.4 Code review <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'12.4%20Code%20review'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="12.4 Code review" title="Ask ChatGPT about this section">💬</a>
+### 12.4 Code review <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'12.4%20Code%20review'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="12.4 Code review" title="Ask ChatGPT about this section">💬</a>
 
 - Pull requests as default.
 - Required reviewers.
@@ -1034,7 +1034,7 @@ High performers: deploy multiple times per day; lead time < 1 hour; MTTR < 1 hou
 - Status checks (CI, lint, tests).
 - Branch protection.
 
-### 12.5 Merge strategies <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'12.5%20Merge%20strategies'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="12.5 Merge strategies" title="Ask ChatGPT about this section">💬</a>
+### 12.5 Merge strategies <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'12.5%20Merge%20strategies'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="12.5 Merge strategies" title="Ask ChatGPT about this section">💬</a>
 
 - **Merge commit:** default; preserves history.
 - **Squash:** clean history; single commit per PR.
@@ -1042,47 +1042,47 @@ High performers: deploy multiple times per day; lead time < 1 hour; MTTR < 1 hou
 
 ## 13. Production Case Studies
 
-### 13.1 Linux Kernel <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'13.1%20Linux%20Kernel'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="13.1 Linux Kernel" title="Ask ChatGPT about this section">💬</a>
+### 13.1 Linux Kernel <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'13.1%20Linux%20Kernel'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="13.1 Linux Kernel" title="Ask ChatGPT about this section">💬</a>
 
 Uses Git; ~30k commits per release. Maintained by Linus Torvalds and lieutenants.
 
-### 13.2 GitHub <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'13.2%20GitHub'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="13.2 GitHub" title="Ask ChatGPT about this section">💬</a>
+### 13.2 GitHub <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'13.2%20GitHub'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="13.2 GitHub" title="Ask ChatGPT about this section">💬</a>
 
 Built on Git; the canonical Git hosting service. PRs, issues, Actions.
 
-### 13.3 GitLab <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'13.3%20GitLab'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="13.3 GitLab" title="Ask ChatGPT about this section">💬</a>
+### 13.3 GitLab <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'13.3%20GitLab'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="13.3 GitLab" title="Ask ChatGPT about this section">💬</a>
 
 Integrated DevOps; built on Git; adds CI/CD, security scanning.
 
-### 13.4 Microsoft <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'13.4%20Microsoft'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="13.4 Microsoft" title="Ask ChatGPT about this section">💬</a>
+### 13.4 Microsoft <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'13.4%20Microsoft'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="13.4 Microsoft" title="Ask ChatGPT about this section">💬</a>
 
 Owns GitHub; uses Git for Windows. Monorepo for components.
 
-### 13.5 Google <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'13.5%20Google'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="13.5 Google" title="Ask ChatGPT about this section">💬</a>
+### 13.5 Google <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'13.5%20Google'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="13.5 Google" title="Ask ChatGPT about this section">💬</a>
 
 Mostly uses Piper (custom VCS), but also uses Git for many projects.
 
 ## 14. Code Examples
 
-### 14.1 Basic: Git workflow (shell) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'14.1%20Basic%3A%20Git%20workflow%20(shell)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="14.1 Basic: Git workflow (shell)" title="Ask ChatGPT about this section">💬</a>
+### 14.1 Basic: Git workflow (shell) <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'14.1%20Basic%3A%20Git%20workflow%20(shell)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="14.1 Basic: Git workflow (shell)" title="Ask ChatGPT about this section">💬</a>
 
 ```bash
 # see 01-git-basics/
 ```
 
-### 14.2 Basic: Branching (shell) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'14.2%20Basic%3A%20Branching%20(shell)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="14.2 Basic: Branching (shell)" title="Ask ChatGPT about this section">💬</a>
+### 14.2 Basic: Branching (shell) <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'14.2%20Basic%3A%20Branching%20(shell)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="14.2 Basic: Branching (shell)" title="Ask ChatGPT about this section">💬</a>
 
 ```bash
 # see 02-branching/
 ```
 
-### 14.3 Basic: Rebasing (shell) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'14.3%20Basic%3A%20Rebasing%20(shell)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="14.3 Basic: Rebasing (shell)" title="Ask ChatGPT about this section">💬</a>
+### 14.3 Basic: Rebasing (shell) <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'14.3%20Basic%3A%20Rebasing%20(shell)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="14.3 Basic: Rebasing (shell)" title="Ask ChatGPT about this section">💬</a>
 
 ```bash
 # see 04-rebasing/
 ```
 
-### 14.4 Conventional Commits and semantic-release <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'14.4%20Conventional%20Commits%20and%20semantic-release'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="14.4 Conventional Commits and semantic-release" title="Ask ChatGPT about this section">💬</a>
+### 14.4 Conventional Commits and semantic-release <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'14.4%20Conventional%20Commits%20and%20semantic-release'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="14.4 Conventional Commits and semantic-release" title="Ask ChatGPT about this section">💬</a>
 
 ```yaml
 # .releaserc.yml
@@ -1097,13 +1097,13 @@ plugins:
   - "@semantic-release/git"
 ```
 
-### 14.5 GitOps with ArgoCD <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'14.5%20GitOps%20with%20ArgoCD'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="14.5 GitOps with ArgoCD" title="Ask ChatGPT about this section">💬</a>
+### 14.5 GitOps with ArgoCD <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'14.5%20GitOps%20with%20ArgoCD'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="14.5 GitOps with ArgoCD" title="Ask ChatGPT about this section">💬</a>
 
 ```yaml
 # see 14-gitops/
 ```
 
-### 14.6 Bad, anti-pattern, refactured, secure, performance-optimized <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'14.6%20Bad%2C%20anti-pattern%2C%20refactured%2C%20secure%2C%20performance-optimized'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="14.6 Bad, anti-pattern, refactured, secure, performance-optimized" title="Ask ChatGPT about this section">💬</a>
+### 14.6 Bad, anti-pattern, refactured, secure, performance-optimized <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'14.6%20Bad%2C%20anti-pattern%2C%20refactured%2C%20secure%2C%20performance-optimized'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="14.6 Bad, anti-pattern, refactured, secure, performance-optimized" title="Ask ChatGPT about this section">💬</a>
 
 **Bad: large commits**
 
@@ -1144,7 +1144,7 @@ git clone --depth 1 --no-tags --single-branch <url>
 
 ## 15. Common Mistakes
 
-### 15.1 Beginner mistakes <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'15.1%20Beginner%20mistakes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="15.1 Beginner mistakes" title="Ask ChatGPT about this section">💬</a>
+### 15.1 Beginner mistakes <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'15.1%20Beginner%20mistakes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="15.1 Beginner mistakes" title="Ask ChatGPT about this section">💬</a>
 
 - **No .gitignore** — committing generated files.
 - **Force-push to main** — destroys shared history.
@@ -1152,7 +1152,7 @@ git clone --depth 1 --no-tags --single-branch <url>
 - **No commit messages** — untraceable changes.
 - **Skipping hooks** — loses automation.
 
-### 15.2 Intermediate mistakes <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'15.2%20Intermediate%20mistakes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="15.2 Intermediate mistakes" title="Ask ChatGPT about this section">💬</a>
+### 15.2 Intermediate mistakes <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'15.2%20Intermediate%20mistakes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="15.2 Intermediate mistakes" title="Ask ChatGPT about this section">💬</a>
 
 - **Long-lived branches** — merge hell.
 - **Force-push with --force instead of --force-with-lease** — can overwrite others' work.
@@ -1160,7 +1160,7 @@ git clone --depth 1 --no-tags --single-branch <url>
 - **No branch protection.**
 - **Monorepo without proper tooling.**
 
-### 15.3 Senior mistakes <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'15.3%20Senior%20mistakes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="15.3 Senior mistakes" title="Ask ChatGPT about this section">💬</a>
+### 15.3 Senior mistakes <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'15.3%20Senior%20mistakes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="15.3 Senior mistakes" title="Ask ChatGPT about this section">💬</a>
 
 - **No branching strategy** — ad-hoc.
 - **No release automation** — manual errors.
@@ -1168,7 +1168,7 @@ git clone --depth 1 --no-tags --single-branch <url>
 - **No artifact signing** — supply chain.
 - **No signed commits** — provenance.
 
-### 15.4 Production mistakes <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'15.4%20Production%20mistakes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="15.4 Production mistakes" title="Ask ChatGPT about this section">💬</a>
+### 15.4 Production mistakes <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'15.4%20Production%20mistakes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="15.4 Production mistakes" title="Ask ChatGPT about this section">💬</a>
 
 - **Hot fix on main without PR** — bypasses review.
 - **Bad merge during incident** — adds to chaos.
@@ -1176,41 +1176,41 @@ git clone --depth 1 --no-tags --single-branch <url>
 - **No runbook for git operations.**
 - **Repo too large** — performance issues.
 
-### 15.5 Migration mistakes <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'15.5%20Migration%20mistakes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="15.5 Migration mistakes" title="Ask ChatGPT about this section">💬</a>
+### 15.5 Migration mistakes <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'15.5%20Migration%20mistakes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="15.5 Migration mistakes" title="Ask ChatGPT about this section">💬</a>
 
 - **Force-push rewrite of shared history** — disrupts others.
 - **Migrating repo with no communication** — broken CI for others.
 - **No backup before migration.**
 - **Mixing up git operations with deploy.**
 
-### 15.6 Configuration mistakes <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'15.6%20Configuration%20mistakes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="15.6 Configuration mistakes" title="Ask ChatGPT about this section">💬</a>
+### 15.6 Configuration mistakes <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'15.6%20Configuration%20mistakes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="15.6 Configuration mistakes" title="Ask ChatGPT about this section">💬</a>
 
 - **Not setting user.email / user.name.**
 - **No core.autocrlf on Windows.**
 - **No SSH keys set up correctly.**
 
-### 15.7 Security mistakes <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'15.7%20Security%20mistakes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="15.7 Security mistakes" title="Ask ChatGPT about this section">💬</a>
+### 15.7 Security mistakes <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'15.7%20Security%20mistakes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="15.7 Security mistakes" title="Ask ChatGPT about this section">💬</a>
 
 - **Committing .env files.**
 - **Committing credentials.**
 - **No pre-commit secrets scanning.**
 - **HTTP remotes instead of SSH.**
 
-### 15.8 Performance mistakes <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'15.8%20Performance%20mistakes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="15.8 Performance mistakes" title="Ask ChatGPT about this section">💬</a>
+### 15.8 Performance mistakes <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'15.8%20Performance%20mistakes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="15.8 Performance mistakes" title="Ask ChatGPT about this section">💬</a>
 
 - **Large binary files in repo** without LFS.
 - **Long histories** in shallow clones not working.
 - **No fsmonitor** for large repos.
 - **No sparse checkout** in monorepos.
 
-### 15.9 Debugging mistakes <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'15.9%20Debugging%20mistakes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="15.9 Debugging mistakes" title="Ask ChatGPT about this section">💬</a>
+### 15.9 Debugging mistakes <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'15.9%20Debugging%20mistakes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="15.9 Debugging mistakes" title="Ask ChatGPT about this section">💬</a>
 
 - **Resetting remote main without recovery plan.**
 - **Force-push after losing work.**
 - **No reflog awareness** when losing commits.
 - **Cherry-picking wrong commits.**
 
-### 15.10 Deployment mistakes <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'15.10%20Deployment%20mistakes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="15.10 Deployment mistakes" title="Ask ChatGPT about this section">💬</a>
+### 15.10 Deployment mistakes <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'15.10%20Deployment%20mistakes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="15.10 Deployment mistakes" title="Ask ChatGPT about this section">💬</a>
 
 - **Deploying from local main** instead of CI artifact.
 - **No artifact signing** for production.
@@ -1219,7 +1219,7 @@ git clone --depth 1 --no-tags --single-branch <url>
 
 ## 16. Debugging
 
-### 16.1 Recovering a lost commit <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'16.1%20Recovering%20a%20lost%20commit'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="16.1 Recovering a lost commit" title="Ask ChatGPT about this section">💬</a>
+### 16.1 Recovering a lost commit <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'16.1%20Recovering%20a%20lost%20commit'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="16.1 Recovering a lost commit" title="Ask ChatGPT about this section">💬</a>
 
 ```bash
 # 1. Find the commit in reflog
@@ -1232,7 +1232,7 @@ git checkout <sha>
 git checkout -b recovered-branch <sha>
 ```
 
-### 16.2 Using git bisect <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'16.2%20Using%20git%20bisect'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="16.2 Using git bisect" title="Ask ChatGPT about this section">💬</a>
+### 16.2 Using git bisect <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'16.2%20Using%20git%20bisect'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="16.2 Using git bisect" title="Ask ChatGPT about this section">💬</a>
 
 ```bash
 git bisect start
@@ -1246,7 +1246,7 @@ git bisect reset
 
 Automate with `git bisect run` for tests.
 
-### 16.3 Using worktrees <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'16.3%20Using%20worktrees'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="16.3 Using worktrees" title="Ask ChatGPT about this section">💬</a>
+### 16.3 Using worktrees <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'16.3%20Using%20worktrees'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="16.3 Using worktrees" title="Ask ChatGPT about this section">💬</a>
 
 Multiple working directories from one repo.
 
@@ -1257,7 +1257,7 @@ git worktree add ../experiment new-feature
 
 Useful for parallel work without stashing.
 
-### 16.4 Recovering from a force-push <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'16.4%20Recovering%20from%20a%20force-push'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="16.4 Recovering from a force-push" title="Ask ChatGPT about this section">💬</a>
+### 16.4 Recovering from a force-push <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'16.4%20Recovering%20from%20a%20force-push'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="16.4 Recovering from a force-push" title="Ask ChatGPT about this section">💬</a>
 
 ```bash
 # Find the lost commit in reflog
@@ -1268,7 +1268,7 @@ git fetch origin
 git fetch origin refs/origin/old-main:old-main
 ```
 
-### 16.5 Debugging merge conflicts <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'16.5%20Debugging%20merge%20conflicts'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="16.5 Debugging merge conflicts" title="Ask ChatGPT about this section">💬</a>
+### 16.5 Debugging merge conflicts <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'16.5%20Debugging%20merge%20conflicts'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="16.5 Debugging merge conflicts" title="Ask ChatGPT about this section">💬</a>
 
 ```bash
 git status          # see conflicts
@@ -1281,7 +1281,7 @@ git commit
 
 Or use `git mergetool` with configured visual merge tool (VSCode, vimdiff, meld).
 
-### 16.6 Production troubleshooting checklist <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'16.6%20Production%20troubleshooting%20checklist'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="16.6 Production troubleshooting checklist" title="Ask ChatGPT about this section">💬</a>
+### 16.6 Production troubleshooting checklist <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'16.6%20Production%20troubleshooting%20checklist'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="16.6 Production troubleshooting checklist" title="Ask ChatGPT about this section">💬</a>
 
 - [ ] Check `git status` and `git log`.
 - [ ] Check reflog for recent actions.
@@ -1292,21 +1292,21 @@ Or use `git mergetool` with configured visual merge tool (VSCode, vimdiff, meld)
 
 ## 17. Monitoring & Observability
 
-### 17.1 DORA metrics <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'17.1%20DORA%20metrics'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="17.1 DORA metrics" title="Ask ChatGPT about this section">💬</a>
+### 17.1 DORA metrics <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'17.1%20DORA%20metrics'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="17.1 DORA metrics" title="Ask ChatGPT about this section">💬</a>
 
 - **Deployment frequency:** how often you deploy.
 - **Lead time:** commit to production.
 - **Change failure rate:** % of changes causing failures.
 - **MTTR:** mean time to recover.
 
-### 17.2 Source control metrics <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'17.2%20Source%20control%20metrics'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="17.2 Source control metrics" title="Ask ChatGPT about this section">💬</a>
+### 17.2 Source control metrics <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'17.2%20Source%20control%20metrics'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="17.2 Source control metrics" title="Ask ChatGPT about this section">💬</a>
 
 - **Commit frequency:** per developer.
 - **PR cycle time:** open to merge.
 - **Branch age:** how long feature branches live.
 - **Tag frequency:** release cadence.
 
-### 17.3 Tools <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'17.3%20Tools'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="17.3 Tools" title="Ask ChatGPT about this section">💬</a>
+### 17.3 Tools <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'17.3%20Tools'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="17.3 Tools" title="Ask ChatGPT about this section">💬</a>
 
 - **GitHub Insights:** <https://github.com/organizations/.../people>
 - **GitLab Insights:** <https://gitlab.com/.../analytics>
@@ -1315,7 +1315,7 @@ Or use `git mergetool` with configured visual merge tool (VSCode, vimdiff, meld)
 
 ## 18. Best Practices
 
-### 18.1 Industry best practices <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'18.1%20Industry%20best%20practices'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="18.1 Industry best practices" title="Ask ChatGPT about this section">💬</a>
+### 18.1 Industry best practices <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'18.1%20Industry%20best%20practices'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="18.1 Industry best practices" title="Ask ChatGPT about this section">💬</a>
 
 - **Commit often, push regularly.**
 - **Write good commit messages** (conventional commits).
@@ -1328,7 +1328,7 @@ Or use `git mergetool` with configured visual merge tool (VSCode, vimdiff, meld)
 - **Don't commit secrets.**
 - **Use Git LFS** for large files.
 
-### 18.2 Enterprise practices <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'18.2%20Enterprise%20practices'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="18.2 Enterprise practices" title="Ask ChatGPT about this section">💬</a>
+### 18.2 Enterprise practices <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'18.2%20Enterprise%20practices'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="18.2 Enterprise practices" title="Ask ChatGPT about this section">💬</a>
 
 - **Trunk-based development** with feature flags.
 - **Code review** with CODEOWNERS.
@@ -1339,7 +1339,7 @@ Or use `git mergetool` with configured visual merge tool (VSCode, vimdiff, meld)
 - **Submodules/subtrees** for shared code.
 - **Artifact signing** for supply chain.
 
-### 18.3 Clean commits <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'18.3%20Clean%20commits'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="18.3 Clean commits" title="Ask ChatGPT about this section">💬</a>
+### 18.3 Clean commits <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'18.3%20Clean%20commits'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="18.3 Clean commits" title="Ask ChatGPT about this section">💬</a>
 
 - Atomic commits (one logical change).
 - Conventional messages.
@@ -1347,7 +1347,7 @@ Or use `git mergetool` with configured visual merge tool (VSCode, vimdiff, meld)
 - No commented-out code.
 - No debug logs.
 
-### 18.4 Reliability <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'18.4%20Reliability'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="18.4 Reliability" title="Ask ChatGPT about this section">💬</a>
+### 18.4 Reliability <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'18.4%20Reliability'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="18.4 Reliability" title="Ask ChatGPT about this section">💬</a>
 
 - Reflog awareness.
 - Use `--force-with-lease` not `--force`.
@@ -1355,7 +1355,7 @@ Or use `git mergetool` with configured visual merge tool (VSCode, vimdiff, meld)
 - CI checks before merge.
 - Branch protection.
 
-### 18.5 Security <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'18.5%20Security'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="18.5 Security" title="Ask ChatGPT about this section">💬</a>
+### 18.5 Security <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'18.5%20Security'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="18.5 Security" title="Ask ChatGPT about this section">💬</a>
 
 - No secrets in commits.
 - Pre-commit secrets scanning.
@@ -1363,7 +1363,7 @@ Or use `git mergetool` with configured visual merge tool (VSCode, vimdiff, meld)
 - Signed commits.
 - Branch protection.
 
-### 18.6 Performance <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'18.6%20Performance'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="18.6 Performance" title="Ask ChatGPT about this section">💬</a>
+### 18.6 Performance <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'18.6%20Performance'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="18.6 Performance" title="Ask ChatGPT about this section">💬</a>
 
 - Shallow clone for CI.
 - Sparse checkout for monorepo work.
@@ -1371,14 +1371,14 @@ Or use `git mergetool` with configured visual merge tool (VSCode, vimdiff, meld)
 - LFS for large files.
 - fsmonitor for large repos.
 
-### 18.7 Testing <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'18.7%20Testing'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="18.7 Testing" title="Ask ChatGPT about this section">💬</a>
+### 18.7 Testing <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'18.7%20Testing'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="18.7 Testing" title="Ask ChatGPT about this section">💬</a>
 
 - CI on every push.
 - Status checks before merge.
 - Branch protection.
 - Pre-commit hooks.
 
-### 18.8 Deployment <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'18.8%20Deployment'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="18.8 Deployment" title="Ask ChatGPT about this section">💬</a>
+### 18.8 Deployment <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'18.8%20Deployment'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="18.8 Deployment" title="Ask ChatGPT about this section">💬</a>
 
 - Releases from CI, not local.
 - Tag every release.
@@ -1388,7 +1388,7 @@ Or use `git mergetool` with configured visual merge tool (VSCode, vimdiff, meld)
 
 ## 19. Anti-Patterns
 
-### 19.1 Long-lived feature branches <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'19.1%20Long-lived%20feature%20branches'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="19.1 Long-lived feature branches" title="Ask ChatGPT about this section">💬</a>
+### 19.1 Long-lived feature branches <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'19.1%20Long-lived%20feature%20branches'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="19.1 Long-lived feature branches" title="Ask ChatGPT about this section">💬</a>
 
 ```mermaid
 gitGraph
@@ -1408,14 +1408,14 @@ gitGraph
 
 Merging after weeks = "merge hell". Short-lived branches (< 1 day) for trunk-based.
 
-### 19.2 Force push to shared branches <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'19.2%20Force%20push%20to%20shared%20branches'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="19.2 Force push to shared branches" title="Ask ChatGPT about this section">💬</a>
+### 19.2 Force push to shared branches <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'19.2%20Force%20push%20to%20shared%20branches'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="19.2 Force push to shared branches" title="Ask ChatGPT about this section">💬</a>
 
 ```bash
 git push --force  # BAD
 git push --force-with-lease  # GOOD
 ```
 
-### 19.3 Secrets in commits <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'19.3%20Secrets%20in%20commits'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="19.3 Secrets in commits" title="Ask ChatGPT about this section">💬</a>
+### 19.3 Secrets in commits <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'19.3%20Secrets%20in%20commits'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="19.3 Secrets in commits" title="Ask ChatGPT about this section">💬</a>
 
 ```bash
 echo "AWS_SECRET_ACCESS_KEY=..." > config.yaml
@@ -1425,7 +1425,7 @@ git commit -m "Add config"
 
 Use a secrets manager; pre-commit secrets scan.
 
-### 19.4 No .gitignore <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'19.4%20No%20.gitignore'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="19.4 No .gitignore" title="Ask ChatGPT about this section">💬</a>
+### 19.4 No .gitignore <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'19.4%20No%20.gitignore'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="19.4 No .gitignore" title="Ask ChatGPT about this section">💬</a>
 
 Without .gitignore, you commit:
 - node_modules/
@@ -1435,7 +1435,7 @@ Without .gitignore, you commit:
 
 Create a .gitignore from templates (github/gitignore).
 
-### 19.5 Giant commits <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'19.5%20Giant%20commits'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="19.5 Giant commits" title="Ask ChatGPT about this section">💬</a>
+### 19.5 Giant commits <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'19.5%20Giant%20commits'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="19.5 Giant commits" title="Ask ChatGPT about this section">💬</a>
 
 ```bash
 git add .
@@ -1444,7 +1444,7 @@ git commit -m "Refactor everything"
 
 Atomic commits, focused changes.
 
-### 19.6 No CI checks before merge <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'19.6%20No%20CI%20checks%20before%20merge'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="19.6 No CI checks before merge" title="Ask ChatGPT about this section">💬</a>
+### 19.6 No CI checks before merge <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'19.6%20No%20CI%20checks%20before%20merge'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="19.6 No CI checks before merge" title="Ask ChatGPT about this section">💬</a>
 
 - Tests fail.
 - Linter fails.
@@ -1453,56 +1453,56 @@ Atomic commits, focused changes.
 
 ## 20. Edge Cases
 
-### 20.1 Large repos <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'20.1%20Large%20repos'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="20.1 Large repos" title="Ask ChatGPT about this section">💬</a>
+### 20.1 Large repos <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'20.1%20Large%20repos'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="20.1 Large repos" title="Ask ChatGPT about this section">💬</a>
 
 - **Shallow clone:** `git clone --depth 1`.
 - **Partial clone:** `git clone --filter=blob:none`.
 - **Sparse checkout:** `git sparse-checkout init`.
 - **LFS:** large files.
 
-### 20.2 Monorepo performance <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'20.2%20Monorepo%20performance'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="20.2 Monorepo performance" title="Ask ChatGPT about this section">💬</a>
+### 20.2 Monorepo performance <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'20.2%20Monorepo%20performance'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="20.2 Monorepo performance" title="Ask ChatGPT about this section">💬</a>
 
 - **Bazel** with `--remote_cache`.
 - **Sparse checkout** for partial work.
 - **Multiple worktrees.**
 - **Filtered remote tracking.**
 
-### 20.3 Submodules <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'20.3%20Submodules'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="20.3 Submodules" title="Ask ChatGPT about this section">💬</a>
+### 20.3 Submodules <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'20.3%20Submodules'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="20.3 Submodules" title="Ask ChatGPT about this section">💬</a>
 
 - **Update often** (each change in the parent).
 - **Pin to commit** in production.
 - **Git submodule foreach** for bulk operations.
 
-### 20.4 Long-running branches <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'20.4%20Long-running%20branches'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="20.4 Long-running branches" title="Ask ChatGPT about this section">💬</a>
+### 20.4 Long-running branches <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'20.4%20Long-running%20branches'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="20.4 Long-running branches" title="Ask ChatGPT about this section">💬</a>
 
 - **Feature flags** to merge incomplete features.
 - **Trunk-based** instead.
 - **Code review** for short-lived PRs.
 
-### 20.5 Conflicting workflows <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'20.5%20Conflicting%20workflows'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="20.5 Conflicting workflows" title="Ask ChatGPT about this section">💬</a>
+### 20.5 Conflicting workflows <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'20.5%20Conflicting%20workflows'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="20.5 Conflicting workflows" title="Ask ChatGPT about this section">💬</a>
 
 - **Establish a standard** in CONTRIBUTING.md.
 - **Enforce** via branch protection.
 - **Train team** on the workflow.
 
-### 20.6 Big binaries in repo <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'20.6%20Big%20binaries%20in%20repo'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="20.6 Big binaries in repo" title="Ask ChatGPT about this section">💬</a>
+### 20.6 Big binaries in repo <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'20.6%20Big%20binaries%20in%20repo'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="20.6 Big binaries in repo" title="Ask ChatGPT about this section">💬</a>
 
 - **Migrate to Git LFS:** `git lfs migrate import --include="*.psd"`.
 - **Or use a separate repo** for data.
 
-### 20.7 Recovering from corruption <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'20.7%20Recovering%20from%20corruption'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="20.7 Recovering from corruption" title="Ask ChatGPT about this section">💬</a>
+### 20.7 Recovering from corruption <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'20.7%20Recovering%20from%20corruption'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="20.7 Recovering from corruption" title="Ask ChatGPT about this section">💬</a>
 
 - **Re-clone** if `.git` is corrupted.
 - **Repair via `git fsck`** if recoverable.
 - **Backup** the repo regularly.
 
-### 20.8 Concurrent edits <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'20.8%20Concurrent%20edits'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="20.8 Concurrent edits" title="Ask ChatGPT about this section">💬</a>
+### 20.8 Concurrent edits <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'20.8%20Concurrent%20edits'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="20.8 Concurrent edits" title="Ask ChatGPT about this section">💬</a>
 
 - **Rebase before pushing** to reduce conflicts.
 - **Use `git rerere`** to remember conflict resolutions.
 - **Communicate with team** to coordinate.
 
-### 20.9 Branch protection bypass <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'20.9%20Branch%20protection%20bypass'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="20.9 Branch protection bypass" title="Ask ChatGPT about this section">💬</a>
+### 20.9 Branch protection bypass <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'20.9%20Branch%20protection%20bypass'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="20.9 Branch protection bypass" title="Ask ChatGPT about this section">💬</a>
 
 - Force-push by admin.
 - Disabling checks.
@@ -1510,7 +1510,7 @@ Atomic commits, focused changes.
 
 Use GitHub/GitLab admin settings; require 2-person review for changes.
 
-### 20.10 Bisect on large code <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'20.10%20Bisect%20on%20large%20code'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="20.10 Bisect on large code" title="Ask ChatGPT about this section">💬</a>
+### 20.10 Bisect on large code <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'20.10%20Bisect%20on%20large%20code'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="20.10 Bisect on large code" title="Ask ChatGPT about this section">💬</a>
 
 - **Narrow with `git bisect --first-parent`.**
 - **Use `git bisect run` with automated tests.**
@@ -1518,7 +1518,7 @@ Use GitHub/GitLab admin settings; require 2-person review for changes.
 
 ## 21. Comparisons
 
-### 21.1 Git Flow vs GitHub Flow vs trunk-based <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'21.1%20Git%20Flow%20vs%20GitHub%20Flow%20vs%20trunk-based'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="21.1 Git Flow vs GitHub Flow vs trunk-based" title="Ask ChatGPT about this section">💬</a>
+### 21.1 Git Flow vs GitHub Flow vs trunk-based <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'21.1%20Git%20Flow%20vs%20GitHub%20Flow%20vs%20trunk-based'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="21.1 Git Flow vs GitHub Flow vs trunk-based" title="Ask ChatGPT about this section">💬</a>
 
 | Dimension | Git Flow | GitHub Flow | Trunk-based |
 |-----------|---------|-------------|-------------|
@@ -1528,7 +1528,7 @@ Use GitHub/GitLab admin settings; require 2-person review for changes.
 | Best for | Scheduled releases | SaaS, web | High-trust CD |
 | Complexity | High | Low | Low |
 
-### 21.2 Git vs Mercurial vs SVN <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'21.2%20Git%20vs%20Mercurial%20vs%20SVN'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="21.2 Git vs Mercurial vs SVN" title="Ask ChatGPT about this section">💬</a>
+### 21.2 Git vs Mercurial vs SVN <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'21.2%20Git%20vs%20Mercurial%20vs%20SVN'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="21.2 Git vs Mercurial vs SVN" title="Ask ChatGPT about this section">💬</a>
 
 | VCS | Era | Status |
 |-----|-----|--------|
@@ -1537,7 +1537,7 @@ Use GitHub/GitLab admin settings; require 2-person review for changes.
 | **SVN** | 2000+ | Legacy |
 | **CVS** | 1990+ | Legacy |
 
-### 21.3 SemVer vs CalVer <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'21.3%20SemVer%20vs%20CalVer'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="21.3 SemVer vs CalVer" title="Ask ChatGPT about this section">💬</a>
+### 21.3 SemVer vs CalVer <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'21.3%20SemVer%20vs%20CalVer'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="21.3 SemVer vs CalVer" title="Ask ChatGPT about this section">💬</a>
 
 | Dimension | SemVer | CalVer |
 |-----------|--------|---------|
@@ -1547,7 +1547,7 @@ Use GitHub/GitLab admin settings; require 2-person review for changes.
 | Pre-release | `-alpha.1`, `-rc.1` | `-rc.1` |
 | Tools | semantic-release | release-please, bumpversion |
 
-### 21.4 GitHub vs GitLab vs Bitbucket <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'21.4%20GitHub%20vs%20GitLab%20vs%20Bitbucket'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="21.4 GitHub vs GitLab vs Bitbucket" title="Ask ChatGPT about this section">💬</a>
+### 21.4 GitHub vs GitLab vs Bitbucket <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'21.4%20GitHub%20vs%20GitLab%20vs%20Bitbucket'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="21.4 GitHub vs GitLab vs Bitbucket" title="Ask ChatGPT about this section">💬</a>
 
 | Dimension | GitHub | GitLab | Bitbucket |
 |-----------|--------|--------|-----------|
@@ -1556,7 +1556,7 @@ Use GitHub/GitLab admin settings; require 2-person review for changes.
 | Best for | Open source, integration | DevOps platform | Atlassian ecosystem |
 | Permissions | Branch protection, rules | More granular | Project-level |
 
-### 21.5 Monorepo vs polyrepo tools <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'21.5%20Monorepo%20vs%20polyrepo%20tools'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="21.5 Monorepo vs polyrepo tools" title="Ask ChatGPT about this section">💬</a>
+### 21.5 Monorepo vs polyrepo tools <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'21.5%20Monorepo%20vs%20polyrepo%20tools'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="21.5 Monorepo vs polyrepo tools" title="Ask ChatGPT about this section">💬</a>
 
 | Tool | Strengths |
 |------|-----------|
@@ -1566,7 +1566,7 @@ Use GitHub/GitLab admin settings; require 2-person review for changes.
 | **Pants** | Twitter; Python; JVM |
 | **Lerna** | JS; mature; declining |
 
-### 21.6 GitOps tools <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'21.6%20GitOps%20tools'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="21.6 GitOps tools" title="Ask ChatGPT about this section">💬</a>
+### 21.6 GitOps tools <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'21.6%20GitOps%20tools'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="21.6 GitOps tools" title="Ask ChatGPT about this section">💬</a>
 
 | Tool | Description |
 |------|-------------|
@@ -1576,7 +1576,7 @@ Use GitHub/GitLab admin settings; require 2-person review for changes.
 | **Flagger** | Canary / A/B testing |
 | **Jenkins X** | Jenkins-based GitOps |
 
-### 21.7 SemVer tools <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'21.7%20SemVer%20tools'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="21.7 SemVer tools" title="Ask ChatGPT about this section">💬</a>
+### 21.7 SemVer tools <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'21.7%20SemVer%20tools'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="21.7 SemVer tools" title="Ask ChatGPT about this section">💬</a>
 
 | Tool | Language | Maturity |
 |------|---------|----------|
@@ -1586,7 +1586,7 @@ Use GitHub/GitLab admin settings; require 2-person review for changes.
 | **python-semantic-release** | Python | Mature |
 | **cargo-release** | Rust | Mature |
 
-### 21.8 Conventional Commits tools <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'21.8%20Conventional%20Commits%20tools'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="21.8 Conventional Commits tools" title="Ask ChatGPT about this section">💬</a>
+### 21.8 Conventional Commits tools <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'21.8%20Conventional%20Commits%20tools'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="21.8 Conventional Commits tools" title="Ask ChatGPT about this section">💬</a>
 
 | Tool | Purpose |
 |------|---------|
@@ -1596,7 +1596,7 @@ Use GitHub/GitLab admin settings; require 2-person review for changes.
 | **release-please** | GitHub Action for releases |
 | **git-cliff** | Changelog generator |
 
-### 21.9 Git hooks managers <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'21.9%20Git%20hooks%20managers'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="21.9 Git hooks managers" title="Ask ChatGPT about this section">💬</a>
+### 21.9 Git hooks managers <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'21.9%20Git%20hooks%20managers'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="21.9 Git hooks managers" title="Ask ChatGPT about this section">💬</a>
 
 | Tool | Language | Strengths |
 |------|---------|----------|
@@ -1606,7 +1606,7 @@ Use GitHub/GitLab admin settings; require 2-person review for changes.
 | **overcommit** | Ruby | Git hooks |
 | **git-hooks** | Node | Configurable |
 
-### 21.10 Decision matrix <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'21.10%20Decision%20matrix'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="21.10 Decision matrix" title="Ask ChatGPT about this section">💬</a>
+### 21.10 Decision matrix <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'21.10%20Decision%20matrix'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="21.10 Decision matrix" title="Ask ChatGPT about this section">💬</a>
 
 | Workload | Recommended |
 |----------|------------|
@@ -1618,7 +1618,7 @@ Use GitHub/GitLab admin settings; require 2-person review for changes.
 
 ## 22. Interview Preparation
 
-### 22.1 Beginner (0-1 years) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'22.1%20Beginner%20(0-1%20years)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="22.1 Beginner (0-1 years)" title="Ask ChatGPT about this section">💬</a>
+### 22.1 Beginner (0-1 years) <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'22.1%20Beginner%20(0-1%20years)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="22.1 Beginner (0-1 years)" title="Ask ChatGPT about this section">💬</a>
 
 **Q1: What is Git?**
 **A:** A free, open-source distributed version control system that tracks changes in any set of files. Created by Linus Torvalds in 2005.
@@ -1635,7 +1635,7 @@ Use GitHub/GitLab admin settings; require 2-person review for changes.
 **Q5: What is the difference between `git pull` and `git fetch`?**
 **A:** `git fetch` downloads changes but doesn't merge. `git pull` does fetch + merge (or rebase with `--rebase`).
 
-### 22.2 Junior (1-2 years) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'22.2%20Junior%20(1-2%20years)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="22.2 Junior (1-2 years)" title="Ask ChatGPT about this section">💬</a>
+### 22.2 Junior (1-2 years) <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'22.2%20Junior%20(1-2%20years)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="22.2 Junior (1-2 years)" title="Ask ChatGPT about this section">💬</a>
 
 **Q6: What is the difference between merge and rebase?**
 **A:** Merge creates a merge commit combining branches. Rebase replays your commits on top of another branch, rewriting history. Never rebase public branches.
@@ -1652,7 +1652,7 @@ Use GitHub/GitLab admin settings; require 2-person review for changes.
 **Q10: What is a tag?**
 **A:** A pointer to a commit, like a branch, but doesn't move. Used for releases (e.g., v1.0.0).
 
-### 22.3 Mid (2-4 years) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'22.3%20Mid%20(2-4%20years)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="22.3 Mid (2-4 years)" title="Ask ChatGPT about this section">💬</a>
+### 22.3 Mid (2-4 years) <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'22.3%20Mid%20(2-4%20years)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="22.3 Mid (2-4 years)" title="Ask ChatGPT about this section">💬</a>
 
 **Q11: How do you choose a branching strategy?**
 **A:** Team size and release cadence. Trunk-based for high-trust CD teams. GitHub Flow for typical SaaS. Git Flow for scheduled releases and multiple versions in production.
@@ -1672,7 +1672,7 @@ Use GitHub/GitLab admin settings; require 2-person review for changes.
 **Q16: What is Git LFS?**
 **A:** Git Large File Storage. Replaces large files in your repo with pointer files; the actual content is stored separately. Good for images, videos, datasets.
 
-### 22.4 Senior (4-6 years) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'22.4%20Senior%20(4-6%20years)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="22.4 Senior (4-6 years)" title="Ask ChatGPT about this section">💬</a>
+### 22.4 Senior (4-6 years) <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'22.4%20Senior%20(4-6%20years)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="22.4 Senior (4-6 years)" title="Ask ChatGPT about this section">💬</a>
 
 **Q17: How do you implement Conventional Commits?**
 **A:** (1) Adopt the commit message format. (2) Use commitlint to validate in pre-commit hook. (3) Use semantic-release or release-please to automate versioning. (4) Generate CHANGELOG.md from commits.
@@ -1689,7 +1689,7 @@ Use GitHub/GitLab admin settings; require 2-person review for changes.
 **Q21: How do you handle a monorepo at scale?**
 **A:** (1) Sparse checkout for partial work. (2) Use a build tool (Bazel, Nx). (3) LFS for large files. (4) Shallow clone for CI. (5) Filter remotes. (6) Path-based CI.
 
-### 22.5 Lead (6-8 years) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'22.5%20Lead%20(6-8%20years)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="22.5 Lead (6-8 years)" title="Ask ChatGPT about this section">💬</a>
+### 22.5 Lead (6-8 years) <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'22.5%20Lead%20(6-8%20years)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="22.5 Lead (6-8 years)" title="Ask ChatGPT about this section">💬</a>
 
 **Q22: How do you implement a trunk-based development strategy?**
 **A:** (1) Single main branch as the source of truth. (2) Short-lived feature branches (< 1 day). (3) Feature flags for incomplete features. (4) Strong CI/CD. (5) High-trust team culture. (6) Pair programming for knowledge sharing.
@@ -1700,7 +1700,7 @@ Use GitHub/GitLab admin settings; require 2-person review for changes.
 **Q24: How do you scale Git for a large monorepo?**
 **A:** (1) Shallow clones for CI. (2) Partial clone with filter. (3) Sparse checkout for monorepo. (4) fsmonitor for status speed. (5) LFS for binaries. (6) Build system like Bazel for partial builds.
 
-### 22.6 Staff (8-12 years) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'22.6%20Staff%20(8-12%20years)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="22.6 Staff (8-12 years)" title="Ask ChatGPT about this section">💬</a>
+### 22.6 Staff (8-12 years) <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'22.6%20Staff%20(8-12%20years)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="22.6 Staff (8-12 years)" title="Ask ChatGPT about this section">💬</a>
 
 **Q25: How do you design a release engineering strategy?**
 **A:** (1) Conventional Commits for messages. (2) SemVer for libraries; CalVer for products. (3) semantic-release or release-please for automation. (4) Generate CHANGELOG.md. (5) Sign releases (Sigstore). (6) Track in artifact repository. (7) Coordinate with downstream consumers.
@@ -1708,7 +1708,7 @@ Use GitHub/GitLab admin settings; require 2-person review for changes.
 **Q26: How do you handle the dual-write problem in GitOps?**
 **A:** (1) Git is the source of truth; cluster is reconciled to match. (2) Use pull-based reconciliation (ArgoCD). (3) Use sync waves for ordering. (4) Manual approval for production. (5) Drift detection alerts. (6) Rollback via Git revert.
 
-### 22.7 Principal / Architect <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'22.7%20Principal%20%2F%20Architect'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="22.7 Principal / Architect" title="Ask ChatGPT about this section">💬</a>
+### 22.7 Principal / Architect <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'22.7%20Principal%20%2F%20Architect'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="22.7 Principal / Architect" title="Ask ChatGPT about this section">💬</a>
 
 **Q27: When would you choose polyrepo over monorepo?**
 **A:** (1) Independent teams with low coupling. (2) Independent versioning. (3) Slow monorepo performance. (4) Cross-repo changes rare. (5) Clear API contracts.
@@ -1716,7 +1716,7 @@ Use GitHub/GitLab admin settings; require 2-person review for changes.
 **Q28: How do you evolve a VCS strategy over years?**
 **A:** (1) Start simple (trunk-based). (2) Add features (PRs, branch protection). (3) Automate releases. (4) Add chaos testing. (5) Continuously improve based on incidents and feedback.
 
-### 22.8 Scenario-based questions <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'22.8%20Scenario-based%20questions'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="22.8 Scenario-based questions" title="Ask ChatGPT about this section">💬</a>
+### 22.8 Scenario-based questions <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'22.8%20Scenario-based%20questions'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="22.8 Scenario-based questions" title="Ask ChatGPT about this section">💬</a>
 
 **Scenario 1:** A developer accidentally committed a secret to main. How do you fix it?
 **Answer:** (1) Rotate the secret immediately. (2) Use `git filter-repo` to remove from history. (3) Force-push to rewrite history. (4) Notify team. (5) Review all recent commits for other secrets. (6) Add pre-commit hook to prevent recurrence.
@@ -1734,7 +1734,7 @@ Use GitHub/GitLab admin settings; require 2-person review for changes.
 
 ## 23. References
 
-### 23.1 Official documentation <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'23.1%20Official%20documentation'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="23.1 Official documentation" title="Ask ChatGPT about this section">💬</a>
+### 23.1 Official documentation <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'23.1%20Official%20documentation'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="23.1 Official documentation" title="Ask ChatGPT about this section">💬</a>
 
 - **Git Documentation:** <https://git-scm.com/doc>
 - **Pro Git book (free):** <https://git-scm.com/book/en/v2
@@ -1745,21 +1745,21 @@ Use GitHub/GitLab admin settings; require 2-person review for changes.
 - **CalVer:** <https://calver.org/
 - **Trunk-based development:** <https://trunkbaseddevelopment.com/
 
-### 23.2 Foundational resources <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'23.2%20Foundational%20resources'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="23.2 Foundational resources" title="Ask ChatGPT about this section">💬</a>
+### 23.2 Foundational resources <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'23.2%20Foundational%20resources'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="23.2 Foundational resources" title="Ask ChatGPT about this section">💬</a>
 
 - **Pro Git (2nd edition)** — Scott Chacon, Ben Straub. Free online.
 - **Version Control with Git** — Jon Loeliger, Matthew McCullough (O'Reilly).
 - **Git for Teams** — Emma Jane Hogbin Westby (O'Reilly).
 - **Git Pocket Guide** — Richard E. Silverman (O'Reilly).
 
-### 23.3 Communities <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'23.3%20Communities'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="23.3 Communities" title="Ask ChatGPT about this section">💬</a>
+### 23.3 Communities <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'23.3%20Communities'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="23.3 Communities" title="Ask ChatGPT about this section">💬</a>
 
 - **r/git:** <https://www.reddit.com/r/git/>
 - **GitHub Community Forum:** <https://github.community/>
 - **Stack Overflow git:** <https://stackoverflow.com/questions/tagged/git>
 - **Atlassian Community:** <https://community.atlassian.com/>
 
-### 23.4 Tools <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'23.4%20Tools'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="23.4 Tools" title="Ask ChatGPT about this section">💬</a>
+### 23.4 Tools <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'23.4%20Tools'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="23.4 Tools" title="Ask ChatGPT about this section">💬</a>
 
 - **Git LFS:** <https://git-lfs.github.com/>
 - **git-filter-repo:** <https://github.com/newren/git-filter-repo>
@@ -1773,13 +1773,13 @@ Use GitHub/GitLab admin settings; require 2-person review for changes.
 - **ArgoCD:** <https://argo-cd.readthedocs.io/>
 - **Flux:** <https://fluxcd.io/>
 
-### 23.5 Conferences <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'23.5%20Conferences'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="23.5 Conferences" title="Ask ChatGPT about this section">💬</a>
+### 23.5 Conferences <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'23.5%20Conferences'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="23.5 Conferences" title="Ask ChatGPT about this section">💬</a>
 
 - **Git Merge.**
 - **GitOps Days.**
 - **KubeCon + CloudNativeCon** (GitOps track).
 
-### 23.6 Free online resources <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'23.6%20Free%20online%20resources'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="23.6 Free online resources" title="Ask ChatGPT about this section">💬</a>
+### 23.6 Free online resources <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'23.6%20Free%20online%20resources'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="23.6 Free online resources" title="Ask ChatGPT about this section">💬</a>
 
 - **Pro Git book:** <https://git-scm.com/book/en/v2>
 - **Learn Git Branching:** <https://learngitbranching.js.org/>

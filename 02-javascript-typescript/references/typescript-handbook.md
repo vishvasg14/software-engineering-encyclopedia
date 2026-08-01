@@ -48,7 +48,7 @@ This file catalogs the official TypeScript documentation resources referenced in
 
 ## tsconfig.json options (organized by category)
 
-### Language and compiler behavior <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Language%20and%20compiler%20behavior'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Language and compiler behavior" title="Ask ChatGPT about this section">💬</a>
+### Language and compiler behavior <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Language%20and%20compiler%20behavior'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Language and compiler behavior" title="Ask ChatGPT about this section">💬</a>
 
 - `target` — ECMAScript target version.
 - `module` — Module system (`CommonJS`, `ESNext`, `Node16`, etc.).
@@ -60,7 +60,7 @@ This file catalogs the official TypeScript documentation resources referenced in
 - `noEmit` — Don't emit JS (type-check only).
 - `isolatedModules` — Each file must be transpilable in isolation (Babel, esbuild compatible).
 
-### Type checking strictness <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Type%20checking%20strictness'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Type checking strictness" title="Ask ChatGPT about this section">💬</a>
+### Type checking strictness <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Type%20checking%20strictness'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Type checking strictness" title="Ask ChatGPT about this section">💬</a>
 
 - `strict` — Enables all strict checks.
 - `noImplicitAny` — Forbid implicit `any`.
@@ -75,7 +75,7 @@ This file catalogs the official TypeScript documentation resources referenced in
 - `noUncheckedIndexedAccess` — Add `| undefined` to indexed access.
 - `noImplicitOverride` — Require `override` keyword.
 
-### Module resolution <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Module%20resolution'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Module resolution" title="Ask ChatGPT about this section">💬</a>
+### Module resolution <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Module%20resolution'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Module resolution" title="Ask ChatGPT about this section">💬</a>
 
 - `baseUrl` — Base directory for module resolution.
 - `paths` — Path aliases.
@@ -83,7 +83,7 @@ This file catalogs the official TypeScript documentation resources referenced in
 - `typeRoots` — Where to find type definitions.
 - `types` — Which `@types/*` packages to include.
 
-### Emit <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Emit'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Emit" title="Ask ChatGPT about this section">💬</a>
+### Emit <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Emit'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Emit" title="Ask ChatGPT about this section">💬</a>
 
 - `outDir` — Output directory.
 - `outFile` — Single-file output (for AMD/System).
@@ -94,11 +94,11 @@ This file catalogs the official TypeScript documentation resources referenced in
 - `importHelpers` — Import `__extends` from `tslib`.
 - `newLine` — Output newline character.
 
-### Output format <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Output%20format'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Output format" title="Ask ChatGPT about this section">💬</a>
+### Output format <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Output%20format'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Output format" title="Ask ChatGPT about this section">💬</a>
 
 - `removeComments`, `preserveConstEnums`, `downlevelIteration`.
 
-### Project references <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Project%20references'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Project references" title="Ask ChatGPT about this section">💬</a>
+### Project references <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Project%20references'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Project references" title="Ask ChatGPT about this section">💬</a>
 
 - `composite` — Project can be referenced by other projects.
 - `tsBuildInfoFile` — Build info cache location.

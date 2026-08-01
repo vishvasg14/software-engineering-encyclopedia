@@ -12,14 +12,14 @@ The authoritative source for Redis is the Redis project and Redis Labs. This fil
 
 ## Topics referenced in the document
 
-### Getting started <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Getting%20started'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Getting started" title="Ask ChatGPT about this section">💬</a>
+### Getting started <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Getting%20started'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Getting started" title="Ask ChatGPT about this section">💬</a>
 
 | Topic | URL |
 |-------|-----|
 | Quick start | <https://redis.io/docs/getting-started/> |
 | Installation | <https://redis.io/docs/getting-started/installation/> |
 
-### Data types <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Data%20types'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Data types" title="Ask ChatGPT about this section">💬</a>
+### Data types <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Data%20types'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Data types" title="Ask ChatGPT about this section">💬</a>
 
 | Topic | URL |
 |-------|-----|
@@ -33,7 +33,7 @@ The authoritative source for Redis is the Redis project and Redis Labs. This fil
 | HyperLogLogs | <https://redis.io/docs/data-types/hyperloglogs/> |
 | Geospatial | <https://redis.io/docs/data-types/geospatial/> |
 
-### Commands <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Commands'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Commands" title="Ask ChatGPT about this section">💬</a>
+### Commands <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Commands'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Commands" title="Ask ChatGPT about this section">💬</a>
 
 | Topic | URL |
 |-------|-----|
@@ -48,7 +48,7 @@ The authoritative source for Redis is the Redis project and Redis Labs. This fil
 | Streams intro | <https://redis.io/docs/data-types/streams/> |
 | Consumer groups | <https://redis.io/docs/data-types/streams/#consumer-groups> |
 
-### Persistence <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Persistence'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Persistence" title="Ask ChatGPT about this section">💬</a>
+### Persistence <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Persistence'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Persistence" title="Ask ChatGPT about this section">💬</a>
 
 | Topic | URL |
 |-------|-----|
@@ -56,7 +56,7 @@ The authoritative source for Redis is the Redis project and Redis Labs. This fil
 | AOF persistence | <https://redis.io/docs/management/persistence/> |
 | Persistence trade-offs | <https://redis.io/docs/management/persistence/> |
 
-### Replication and HA <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Replication%20and%20HA'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Replication and HA" title="Ask ChatGPT about this section">💬</a>
+### Replication and HA <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Replication%20and%20HA'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Replication and HA" title="Ask ChatGPT about this section">💬</a>
 
 | Topic | URL |
 |-------|-----|
@@ -65,7 +65,7 @@ The authoritative source for Redis is the Redis project and Redis Labs. This fil
 | Cluster | <https://redis.io/docs/management/scaling/> |
 | Cluster tutorial | <https://redis.io/docs/management/scaling/> |
 
-### Operations <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Operations'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Operations" title="Ask ChatGPT about this section">💬</a>
+### Operations <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Operations'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Operations" title="Ask ChatGPT about this section">💬</a>
 
 | Topic | URL |
 |-------|-----|
@@ -76,7 +76,7 @@ The authoritative source for Redis is the Redis project and Redis Labs. This fil
 | ACL | <https://redis.io/docs/management/access-control/> |
 | TLS | <https://redis.io/docs/management/security/> |
 
-### Clients <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Clients'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Clients" title="Ask ChatGPT about this section">💬</a>
+### Clients <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Clients'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Clients" title="Ask ChatGPT about this section">💬</a>
 
 | Language | Client |
 |----------|--------|

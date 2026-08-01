@@ -9,7 +9,7 @@ The canonical reference for SemVer is semver.org. This file catalogs the SemVer 
 
 ## Specification summary
 
-### Version format <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Version%20format'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Version format" title="Ask ChatGPT about this section">💬</a>
+### Version format <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Version%20format'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Version format" title="Ask ChatGPT about this section">💬</a>
 
 ```
 MAJOR.MINOR.PATCH[-PRERELEASE][+BUILD]
@@ -21,7 +21,7 @@ MAJOR.MINOR.PATCH[-PRERELEASE][+BUILD]
 - **PRERELEASE:** optional, hyphen-separated (e.g., `-alpha.1`, `-rc.1`).
 - **BUILD:** optional, plus-separated (e.g., `+build.123`).
 
-### Examples <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Examples'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Examples" title="Ask ChatGPT about this section">💬</a>
+### Examples <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Examples'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Examples" title="Ask ChatGPT about this section">💬</a>
 
 ```
 1.0.0
@@ -80,7 +80,7 @@ Order (low to high): `1.0.0-alpha < 1.0.0-alpha.1 < 1.0.0-alpha.beta < 1.0.0-bet
 
 <https://www.conventionalcommits.org/>
 
-### Format <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Format'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Format" title="Ask ChatGPT about this section">💬</a>
+### Format <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Format'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Format" title="Ask ChatGPT about this section">💬</a>
 
 ```
 <type>[optional scope]: <description>

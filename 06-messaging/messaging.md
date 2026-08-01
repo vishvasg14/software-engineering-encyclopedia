@@ -91,42 +91,42 @@ graph TB
 
 ## 3. Five Ws + One H
 
-### What <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'What'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="What" title="Ask ChatGPT about this section">💬</a>
+### What <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'What'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="What" title="Ask ChatGPT about this section">💬</a>
 
 **Apache Kafka** is a distributed event streaming platform — a horizontally scalable, fault-tolerant, durable log-based message broker. It provides pub/sub semantics with ordered, replayable message streams across topics and partitions.
 
-### Why <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Why'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Why" title="Ask ChatGPT about this section">💬</a>
+### Why <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Why'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Why" title="Ask ChatGPT about this section">💬</a>
 
 Kafka exists because traditional message brokers (ActiveMQ, RabbitMQ) were designed for short-lived queues and didn't scale to the volume of activity logs that companies like LinkedIn needed (2010–2011). The "log" abstraction — durable, ordered, replayable — turned out to be a unifying primitive for many distributed systems problems.
 
-### When <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'When'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="When" title="Ask ChatGPT about this section">💬</a>
+### When <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'When'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="When" title="Ask ChatGPT about this section">💬</a>
 
 Kafka 0.7 was released in 2011; Kafka 1.0 in 2017 (production-ready API); Kafka 3.0 in 2021 (KRaft production-ready); Kafka 3.3 in 2023 (KRaft default). Today, Kafka is the dominant event streaming platform.
 
-### Where <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Where'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Where" title="Ask ChatGPT about this section">💬</a>
+### Where <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Where'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Where" title="Ask ChatGPT about this section">💬</a>
 
 Used by 80%+ of Fortune 100 companies for log aggregation, event sourcing, stream processing, message queuing, change data capture, and real-time analytics.
 
-### Who <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Who'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Who" title="Ask ChatGPT about this section">💬</a>
+### Who <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Who'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Who" title="Ask ChatGPT about this section">💬</a>
 
 - **Original creator:** Jay Kreps, Neha Narkhede, Jun Rao at LinkedIn (2010).
 - **Maintainer:** Apache Software Foundation; major contributors from Confluent, LinkedIn, Uber, Microsoft.
 - **Commercial:** Confluent (founded by Kafka creators) provides commercial Kafka-as-a-service and additional tools.
 
-### How (one-paragraph preview) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'How%20(one-paragraph%20preview)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="How (one-paragraph preview)" title="Ask ChatGPT about this section">💬</a>
+### How (one-paragraph preview) <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'How%20(one-paragraph%20preview)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="How (one-paragraph preview)" title="Ask ChatGPT about this section">💬</a>
 
 A producer publishes a message to a topic. The broker routes the message to a partition based on the partition key (or round-robin if no key). The partition is an append-only log on disk, replicated across multiple brokers. A consumer reads from a partition, tracking its position via an offset. Consumer groups distribute partitions across consumers for parallelism. Brokers coordinate cluster state via KRaft (Raft consensus) since Kafka 3.3 (formerly ZooKeeper). All this is designed to be partitioned, replicated, and fault-tolerant.
 
 ## 4. History
 
-### 4.1 Origins (2010-2012) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'4.1%20Origins%20(2010-2012)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="4.1 Origins (2010-2012)" title="Ask ChatGPT about this section">💬</a>
+### 4.1 Origins (2010-2012) <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'4.1%20Origins%20(2010-2012)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="4.1 Origins (2010-2012)" title="Ask ChatGPT about this section">💬</a>
 
 - **2010** — LinkedIn engineers Jay Kreps, Neha Narkhede, and Jun Rao begin building Kafka to handle LinkedIn's massive activity streams and log aggregation.
 - **January 2011** — Kafka 0.7 open-sourced at LinkedIn.
 - **November 2011** — Kafka graduates from Apache incubator.
 - **2012** — Kafka 0.8 adds replication (the key feature for production durability).
 
-### 4.2 Growth (2013-2017) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'4.2%20Growth%20(2013-2017)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="4.2 Growth (2013-2017)" title="Ask ChatGPT about this section">💬</a>
+### 4.2 Growth (2013-2017) <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'4.2%20Growth%20(2013-2017)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="4.2 Growth (2013-2017)" title="Ask ChatGPT about this section">💬</a>
 
 - **2013** — Kafka 0.8.1 with replication. LinkedIn reports trillions of messages per day.
 - **2014** — Apache Kafka graduates to top-level project.
@@ -134,7 +134,7 @@ A producer publishes a message to a topic. The broker routes the message to a pa
 - **2016** — Kafka 0.10: Kafka Streams (stream processing built-in), message timestamps.
 - **2017** — Kafka 0.11: Exactly-once semantics via transactional API (KIP-98). Kafka 1.0 declares API stability.
 
-### 4.3 The Kafka era (2018-2022) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'4.3%20The%20Kafka%20era%20(2018-2022)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="4.3 The Kafka era (2018-2022)" title="Ask ChatGPT about this section">💬</a>
+### 4.3 The Kafka era (2018-2022) <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'4.3%20The%20Kafka%20era%20(2018-2022)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="4.3 The Kafka era (2018-2022)" title="Ask ChatGPT about this section">💬</a>
 
 - **2018** — Kafka 2.0: Java 8+ baseline, KIP-279, KIP-339.
 - **2019** — Kafka 2.4: TLS 1.3, KIP-380.
@@ -142,14 +142,14 @@ A producer publishes a message to a topic. The broker routes the message to a pa
 - **2021** — Kafka 3.0: KRaft production-ready (replacing ZooKeeper dependency).
 - **2022** — Kafka 3.2: Tiered storage production-ready.
 
-### 4.4 KRaft and streams (2023-2026) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'4.4%20KRaft%20and%20streams%20(2023-2026)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="4.4 KRaft and streams (2023-2026)" title="Ask ChatGPT about this section">💬</a>
+### 4.4 KRaft and streams (2023-2026) <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'4.4%20KRaft%20and%20streams%20(2023-2026)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="4.4 KRaft and streams (2023-2026)" title="Ask ChatGPT about this section">💬</a>
 
 - **2023** — Kafka 3.3: KRaft becomes default (no ZooKeeper), KIP-848 (next-gen consumer rebalance) preview.
 - **2024** — Kafka 3.5: KIP-848 improvements, continued refinement.
 - **2025** — Kafka 3.7, 3.8: ongoing improvements.
 - **2026** — Kafka 4.0 in development.
 
-### 4.5 RabbitMQ history <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'4.5%20RabbitMQ%20history'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="4.5 RabbitMQ history" title="Ask ChatGPT about this section">💬</a>
+### 4.5 RabbitMQ history <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'4.5%20RabbitMQ%20history'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="4.5 RabbitMQ history" title="Ask ChatGPT about this section">💬</a>
 
 - **2007** — RabbitMQ 1.0 released by Rabbit Technologies (acquired by SpringSource/VMware).
 - **2010** — Acquired by SpringSource (later VMware/Pivotal).
@@ -159,7 +159,7 @@ A producer publishes a message to a topic. The broker routes the message to a pa
 - **2024** — RabbitMQ 3.13 with OAuth 2.0 support.
 - **2025** — RabbitMQ 4.0 with Khepri (Raft-based metadata).
 
-### 4.6 Pulsar history <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'4.6%20Pulsar%20history'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="4.6 Pulsar history" title="Ask ChatGPT about this section">💬</a>
+### 4.6 Pulsar history <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'4.6%20Pulsar%20history'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="4.6 Pulsar history" title="Ask ChatGPT about this section">💬</a>
 
 - **2016** — Original Yahoo open-source release.
 - **2017** — Apache Pulsar top-level project.
@@ -168,7 +168,7 @@ A producer publishes a message to a topic. The broker routes the message to a pa
 - **2023** — Pulsar 3.0: Major rewrite.
 - **2025** — Pulsar 3.3: Performance improvements.
 
-### 4.7 Governance <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'4.7%20Governance'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="4.7 Governance" title="Ask ChatGPT about this section">💬</a>
+### 4.7 Governance <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'4.7%20Governance'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="4.7 Governance" title="Ask ChatGPT about this section">💬</a>
 
 - **Apache Kafka:** Apache Software Foundation; major contributors Confluent, LinkedIn, Microsoft.
 - **RabbitMQ:** Broadcom (via VMware).
@@ -195,7 +195,7 @@ timeline
 
 ## 5. Problem Statement
 
-### 5.1 What messaging solved <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'5.1%20What%20messaging%20solved'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="5.1 What messaging solved" title="Ask ChatGPT about this section">💬</a>
+### 5.1 What messaging solved <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'5.1%20What%20messaging%20solved'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="5.1 What messaging solved" title="Ask ChatGPT about this section">💬</a>
 
 Before message brokers, application integration relied on:
 
@@ -213,11 +213,11 @@ Message brokers addressed:
 - **Fan-out** — multiple consumers get the same messages.
 - **Backpressure** — buffering handles spikes.
 
-### 5.2 Pre-Kafka pain <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'5.2%20Pre-Kafka%20pain'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="5.2 Pre-Kafka pain" title="Ask ChatGPT about this section">💬</a>
+### 5.2 Pre-Kafka pain <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'5.2%20Pre-Kafka%20pain'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="5.2 Pre-Kafka pain" title="Ask ChatGPT about this section">💬</a>
 
 In the late 2000s, LinkedIn's activity pipeline used a combination of ActiveMQ and custom Java pipelines. Each change required coordinated deployments across producer and consumer systems. Scale was painful. Logs (for analytics) and queues (for messaging) were separate systems with different semantics.
 
-### 5.3 Kafka's breakthrough <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'5.3%20Kafka's%20breakthrough'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="5.3 Kafka's breakthrough" title="Ask ChatGPT about this section">💬</a>
+### 5.3 Kafka's breakthrough <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'5.3%20Kafka's%20breakthrough'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="5.3 Kafka's breakthrough" title="Ask ChatGPT about this section">💬</a>
 
 Kafka's insight: **a log is a fundamental abstraction**. The same ordered, durable, replayable record stream can serve:
 
@@ -230,7 +230,7 @@ Kafka's insight: **a log is a fundamental abstraction**. The same ordered, durab
 
 A single system handles all these use cases. This is why Kafka won.
 
-### 5.4 What's still hard <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'5.4%20What's%20still%20hard'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="5.4 What's still hard" title="Ask ChatGPT about this section">💬</a>
+### 5.4 What's still hard <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'5.4%20What's%20still%20hard'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="5.4 What's still hard" title="Ask ChatGPT about this section">💬</a>
 
 - **Operational complexity** — Kafka clusters require careful sizing, monitoring, and tuning.
 - **Cost** — at scale, Kafka is expensive (storage, network).
@@ -240,7 +240,7 @@ A single system handles all these use cases. This is why Kafka won.
 
 ## 6. Real-World Motivation
 
-### 6.1 Kafka in production <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'6.1%20Kafka%20in%20production'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="6.1 Kafka in production" title="Ask ChatGPT about this section">💬</a>
+### 6.1 Kafka in production <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'6.1%20Kafka%20in%20production'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="6.1 Kafka in production" title="Ask ChatGPT about this section">💬</a>
 
 - **LinkedIn** — Kafka's birthplace. Original use case: log aggregation, activity tracking. Production stats: trillions of messages per day.
 - **Uber** — trillions of messages per day across hundreds of services. Uber has published detailed Kafka operations guides.
@@ -253,20 +253,20 @@ A single system handles all these use cases. This is why Kafka won.
 - **Visa** — Transaction processing at scale.
 - **Pinterest** — Event-driven architecture.
 
-### 6.2 RabbitMQ in production <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'6.2%20RabbitMQ%20in%20production'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="6.2 RabbitMQ in production" title="Ask ChatGPT about this section">💬</a>
+### 6.2 RabbitMQ in production <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'6.2%20RabbitMQ%20in%20production'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="6.2 RabbitMQ in production" title="Ask ChatGPT about this section">💬</a>
 
 - **VMware** — Internal microservices.
 - **SAAS providers** — Many smaller-scale SaaS companies use RabbitMQ.
 - **Trading systems** — Low-latency queue applications.
 
-### 6.3 Pulsar in production <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'6.3%20Pulsar%20in%20production'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="6.3 Pulsar in production" title="Ask ChatGPT about this section">💬</a>
+### 6.3 Pulsar in production <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'6.3%20Pulsar%20in%20production'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="6.3 Pulsar in production" title="Ask ChatGPT about this section">💬</a>
 
 - **Yahoo Japan** — Massive-scale messaging.
 - **Tencent** — Bilibili messaging infrastructure.
 - **Splunk** — Observability data ingestion.
 - **Pinterest** — Some workloads.
 
-### 6.4 Economic and engineering motivation <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'6.4%20Economic%20and%20engineering%20motivation'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="6.4 Economic and engineering motivation" title="Ask ChatGPT about this section">💬</a>
+### 6.4 Economic and engineering motivation <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'6.4%20Economic%20and%20engineering%20motivation'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="6.4 Economic and engineering motivation" title="Ask ChatGPT about this section">💬</a>
 
 - **Decoupling** — teams can deploy independently.
 - **Resilience** — failures don't cascade.
@@ -274,7 +274,7 @@ A single system handles all these use cases. This is why Kafka won.
 - **Replayability** — bug fixes, schema evolution, new consumers.
 - **Stream processing** — Kafka Streams, ksqlDB for real-time analytics.
 
-### 6.5 Why not alternatives? <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'6.5%20Why%20not%20alternatives%3F'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="6.5 Why not alternatives?" title="Ask ChatGPT about this section">💬</a>
+### 6.5 Why not alternatives? <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'6.5%20Why%20not%20alternatives%3F'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="6.5 Why not alternatives?" title="Ask ChatGPT about this section">💬</a>
 
 | Alternative | Why not dominant |
 |-------------|------------------|
@@ -302,7 +302,7 @@ graph LR
 
 ## 7. Internal Working
 
-### 7.1 The lifecycle of a Kafka message <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'7.1%20The%20lifecycle%20of%20a%20Kafka%20message'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="7.1 The lifecycle of a Kafka message" title="Ask ChatGPT about this section">💬</a>
+### 7.1 The lifecycle of a Kafka message <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'7.1%20The%20lifecycle%20of%20a%20Kafka%20message'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="7.1 The lifecycle of a Kafka message" title="Ask ChatGPT about this section">💬</a>
 
 ```mermaid
 sequenceDiagram
@@ -324,7 +324,7 @@ sequenceDiagram
     Consumer->>Broker1: commit offset
 ```
 
-### 7.2 Subsystems that participate <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'7.2%20Subsystems%20that%20participate'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="7.2 Subsystems that participate" title="Ask ChatGPT about this section">💬</a>
+### 7.2 Subsystems that participate <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'7.2%20Subsystems%20that%20participate'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="7.2 Subsystems that participate" title="Ask ChatGPT about this section">💬</a>
 
 | Subsystem | Responsibility |
 |-----------|---------------|
@@ -336,7 +336,7 @@ sequenceDiagram
 | **Schema Registry** | Manages message schemas |
 | **Connect** | Source/sink connectors for external systems |
 
-### 7.3 Kafka architecture <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'7.3%20Kafka%20architecture'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="7.3 Kafka architecture" title="Ask ChatGPT about this section">💬</a>
+### 7.3 Kafka architecture <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'7.3%20Kafka%20architecture'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="7.3 Kafka architecture" title="Ask ChatGPT about this section">💬</a>
 
 ```mermaid
 graph TB
@@ -360,7 +360,7 @@ graph TB
 
 This section is the heart of the document.
 
-### 8.1 Kafka architecture <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.1%20Kafka%20architecture'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.1 Kafka architecture" title="Ask ChatGPT about this section">💬</a>
+### 8.1 Kafka architecture <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'8.1%20Kafka%20architecture'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.1 Kafka architecture" title="Ask ChatGPT about this section">💬</a>
 
 Kafka is a **distributed, partitioned, replicated commit log service**. Core concepts:
 
@@ -374,7 +374,7 @@ Kafka is a **distributed, partitioned, replicated commit log service**. Core con
 - **Cluster** — multiple brokers.
 - **Replication** — partitions are replicated across N brokers for fault tolerance.
 
-### 8.2 Partitions <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.2%20Partitions'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.2 Partitions" title="Ask ChatGPT about this section">💬</a>
+### 8.2 Partitions <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'8.2%20Partitions'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.2 Partitions" title="Ask ChatGPT about this section">💬</a>
 
 ```mermaid
 graph TB
@@ -397,7 +397,7 @@ A partition is an **append-only log**. Records are appended in order. Each recor
 - **Partitioning key** determines which partition a record goes to: `hash(key) % num_partitions`.
 - **Choose partition key carefully** — good keys distribute load; bad keys cause hot partitions.
 
-### 8.3 Producer <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.3%20Producer'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.3 Producer" title="Ask ChatGPT about this section">💬</a>
+### 8.3 Producer <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'8.3%20Producer'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.3 Producer" title="Ask ChatGPT about this section">💬</a>
 
 ```java
 Properties props = new Properties();
@@ -426,7 +426,7 @@ producer.close();
 | `linger.ms` | Wait time to fill batch (default 0) |
 | `max.in.flight.requests.per.connection` | Max unacknowledged requests (1 with idempotence) |
 
-### 8.4 Consumer <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.4%20Consumer'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.4 Consumer" title="Ask ChatGPT about this section">💬</a>
+### 8.4 Consumer <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'8.4%20Consumer'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.4 Consumer" title="Ask ChatGPT about this section">💬</a>
 
 ```java
 Properties props = new Properties();
@@ -451,7 +451,7 @@ while (true) {
 
 **Consumer groups:** multiple consumers with the same `group.id` form a group. Partitions are distributed across consumers in the group. Each partition is consumed by exactly one consumer at a time.
 
-### 8.5 Replication and ISR <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.5%20Replication%20and%20ISR'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.5 Replication and ISR" title="Ask ChatGPT about this section">💬</a>
+### 8.5 Replication and ISR <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'8.5%20Replication%20and%20ISR'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.5 Replication and ISR" title="Ask ChatGPT about this section">💬</a>
 
 ```mermaid
 graph TB
@@ -475,7 +475,7 @@ graph TB
 - If a follower falls behind (more than `replica.lag.time.max.ms`), it's removed from ISR.
 - If the leader fails, a new leader is elected from the ISR.
 
-### 8.6 Storage: log segments <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.6%20Storage%3A%20log%20segments'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.6 Storage: log segments" title="Ask ChatGPT about this section">💬</a>
+### 8.6 Storage: log segments <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'8.6%20Storage%3A%20log%20segments'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.6 Storage: log segments" title="Ask ChatGPT about this section">💬</a>
 
 Each partition is stored as a sequence of **segment files** on disk:
 
@@ -492,7 +492,7 @@ graph LR
 - **Retention** — old segments deleted by time (`retention.ms`) or size (`retention.bytes`).
 - **Compaction** — keep only the latest record per key (for changelog topics).
 
-### 8.7 KRaft <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.7%20KRaft'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.7 KRaft" title="Ask ChatGPT about this section">💬</a>
+### 8.7 KRaft <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'8.7%20KRaft'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.7 KRaft" title="Ask ChatGPT about this section">💬</a>
 
 Since Kafka 3.3, KRaft (Kafka Raft) replaces ZooKeeper for cluster metadata. KRaft uses the Raft consensus algorithm directly within Kafka.
 
@@ -520,7 +520,7 @@ graph TB
     C2 --> C3
 ```
 
-### 8.8 Exactly-once semantics (EOS) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.8%20Exactly-once%20semantics%20(EOS)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.8 Exactly-once semantics (EOS)" title="Ask ChatGPT about this section">💬</a>
+### 8.8 Exactly-once semantics (EOS) <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'8.8%20Exactly-once%20semantics%20(EOS)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.8 Exactly-once semantics (EOS)" title="Ask ChatGPT about this section">💬</a>
 
 Kafka supports exactly-once semantics through three mechanisms:
 
@@ -552,7 +552,7 @@ try {
 }
 ```
 
-### 8.9 Kafka Streams <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.9%20Kafka%20Streams'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.9 Kafka Streams" title="Ask ChatGPT about this section">💬</a>
+### 8.9 Kafka Streams <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'8.9%20Kafka%20Streams'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.9 Kafka Streams" title="Ask ChatGPT about this section">💬</a>
 
 Kafka Streams is a **client library** for stream processing built on Kafka. It provides:
 
@@ -590,7 +590,7 @@ KTable<Windowed<String>, Long> windowed = source
 props.put(StreamsConfig.PROCESSING_GUARANTEE_CONFIG, StreamsConfig.EXACTLY_ONCE_V2);
 ```
 
-### 8.10 ksqlDB <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.10%20ksqlDB'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.10 ksqlDB" title="Ask ChatGPT about this section">💬</a>
+### 8.10 ksqlDB <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'8.10%20ksqlDB'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.10 ksqlDB" title="Ask ChatGPT about this section">💬</a>
 
 ksqlDB is an SQL engine for stream processing on Kafka. It supports tables, streams, joins, windowing, and materialized views.
 
@@ -606,7 +606,7 @@ CREATE TABLE customer_totals AS
     GROUP BY customer_id;
 ```
 
-### 8.11 Kafka Connect <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.11%20Kafka%20Connect'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.11 Kafka Connect" title="Ask ChatGPT about this section">💬</a>
+### 8.11 Kafka Connect <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'8.11%20Kafka%20Connect'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.11 Kafka Connect" title="Ask ChatGPT about this section">💬</a>
 
 Kafka Connect integrates external systems with Kafka via source and sink connectors.
 
@@ -626,7 +626,7 @@ Kafka Connect integrates external systems with Kafka via source and sink connect
 }
 ```
 
-### 8.12 RabbitMQ <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.12%20RabbitMQ'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.12 RabbitMQ" title="Ask ChatGPT about this section">💬</a>
+### 8.12 RabbitMQ <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'8.12%20RabbitMQ'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.12 RabbitMQ" title="Ask ChatGPT about this section">💬</a>
 
 RabbitMQ is a **traditional AMQP message broker** with queues, exchanges, and bindings.
 
@@ -662,7 +662,7 @@ ch.basicConsume("queue", true, handler, consumerTag -> {});
 
 **Quorum queues** (RabbitMQ 3.8+): Raft-based replicated queues for fault tolerance.
 
-### 8.13 Pulsar <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.13%20Pulsar'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.13 Pulsar" title="Ask ChatGPT about this section">💬</a>
+### 8.13 Pulsar <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'8.13%20Pulsar'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.13 Pulsar" title="Ask ChatGPT about this section">💬</a>
 
 Pulsar uses a **segmented architecture** — separate brokers (stateless) and storage (BookKeeper). This enables:
 
@@ -680,7 +680,7 @@ Pulsar uses a **segmented architecture** — separate brokers (stateless) and st
 | **Shared** | Multiple consumers, round-robin |
 | **Key_Shared** | Multiple consumers, key-based affinity |
 
-### 8.14 Messaging patterns <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.14%20Messaging%20patterns'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.14 Messaging patterns" title="Ask ChatGPT about this section">💬</a>
+### 8.14 Messaging patterns <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'8.14%20Messaging%20patterns'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.14 Messaging patterns" title="Ask ChatGPT about this section">💬</a>
 
 **Pub/sub:** producers send to topics/exchanges, multiple consumers subscribe.
 
@@ -700,7 +700,7 @@ Pulsar uses a **segmented architecture** — separate brokers (stateless) and st
 
 ## 9. Architecture
 
-### 9.1 Kafka cluster topology <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'9.1%20Kafka%20cluster%20topology'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="9.1 Kafka cluster topology" title="Ask ChatGPT about this section">💬</a>
+### 9.1 Kafka cluster topology <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'9.1%20Kafka%20cluster%20topology'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="9.1 Kafka cluster topology" title="Ask ChatGPT about this section">💬</a>
 
 ```mermaid
 graph TB
@@ -723,7 +723,7 @@ graph TB
     C --> B4
 ```
 
-### 9.2 KRaft internals <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'9.2%20KRaft%20internals'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="9.2 KRaft internals" title="Ask ChatGPT about this section">💬</a>
+### 9.2 KRaft internals <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'9.2%20KRaft%20internals'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="9.2 KRaft internals" title="Ask ChatGPT about this section">💬</a>
 
 ```mermaid
 graph TB
@@ -742,7 +742,7 @@ graph TB
     Leader -.replicates.-> Follower2
 ```
 
-### 9.3 Log segment storage <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'9.3%20Log%20segment%20storage'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="9.3 Log segment storage" title="Ask ChatGPT about this section">💬</a>
+### 9.3 Log segment storage <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'9.3%20Log%20segment%20storage'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="9.3 Log segment storage" title="Ask ChatGPT about this section">💬</a>
 
 ```mermaid
 graph LR
@@ -761,7 +761,7 @@ graph LR
     S0 --> TIME
 ```
 
-### 9.4 Producer → broker → consumer flow <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'9.4%20Producer%20%E2%86%92%20broker%20%E2%86%92%20consumer%20flow'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="9.4 Producer → broker → consumer flow" title="Ask ChatGPT about this section">💬</a>
+### 9.4 Producer → broker → consumer flow <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'9.4%20Producer%20%E2%86%92%20broker%20%E2%86%92%20consumer%20flow'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="9.4 Producer → broker → consumer flow" title="Ask ChatGPT about this section">💬</a>
 
 ```mermaid
 sequenceDiagram
@@ -788,7 +788,7 @@ sequenceDiagram
 
 ## 10. Performance
 
-### 10.1 Producer performance <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'10.1%20Producer%20performance'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="10.1 Producer performance" title="Ask ChatGPT about this section">💬</a>
+### 10.1 Producer performance <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'10.1%20Producer%20performance'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="10.1 Producer performance" title="Ask ChatGPT about this section">💬</a>
 
 | Lever | Effect |
 |-------|--------|
@@ -798,7 +798,7 @@ sequenceDiagram
 | Page cache | OS keeps hot log segments in memory |
 | Zero-copy (`sendfile()`) | Kafka uses sendfile to avoid copying through user space |
 
-### 10.2 Consumer performance <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'10.2%20Consumer%20performance'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="10.2 Consumer performance" title="Ask ChatGPT about this section">💬</a>
+### 10.2 Consumer performance <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'10.2%20Consumer%20performance'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="10.2 Consumer performance" title="Ask ChatGPT about this section">💬</a>
 
 | Lever | Effect |
 |-------|--------|
@@ -809,7 +809,7 @@ sequenceDiagram
 | Manual commit (vs auto-commit) | Control over commit semantics |
 | Parallel processing in handler | Multi-threaded handlers |
 
-### 10.3 Broker performance <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'10.3%20Broker%20performance'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="10.3 Broker performance" title="Ask ChatGPT about this section">💬</a>
+### 10.3 Broker performance <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'10.3%20Broker%20performance'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="10.3 Broker performance" title="Ask ChatGPT about this section">💬</a>
 
 | Lever | Effect |
 |-------|--------|
@@ -820,7 +820,7 @@ sequenceDiagram
 | `log.flush.interval.messages` | fsync frequency |
 | `log.segment.bytes` | Segment size (default 1 GB) |
 
-### 10.4 Partition sizing <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'10.4%20Partition%20sizing'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="10.4 Partition sizing" title="Ask ChatGPT about this section">💬</a>
+### 10.4 Partition sizing <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'10.4%20Partition%20sizing'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="10.4 Partition sizing" title="Ask ChatGPT about this section">💬</a>
 
 Rule of thumb: **target 1000-3000 partitions per broker**. Beyond that, controller overhead grows.
 
@@ -828,7 +828,7 @@ For a topic:
 - Number of partitions = max(consumer parallelism, target throughput / per-partition throughput).
 - Per-partition throughput ~10 MB/s in production.
 
-### 10.5 Replication factor <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'10.5%20Replication%20factor'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="10.5 Replication factor" title="Ask ChatGPT about this section">💬</a>
+### 10.5 Replication factor <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'10.5%20Replication%20factor'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="10.5 Replication factor" title="Ask ChatGPT about this section">💬</a>
 
 - **Production:** `replication.factor=3`.
 - **Critical topics:** `replication.factor=5` or use `min.insync.replicas=2` with `replication.factor=3`.
@@ -836,7 +836,7 @@ For a topic:
 
 ## 11. Security
 
-### 11.1 OWASP relevance <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'11.1%20OWASP%20relevance'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="11.1 OWASP relevance" title="Ask ChatGPT about this section">💬</a>
+### 11.1 OWASP relevance <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'11.1%20OWASP%20relevance'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="11.1 OWASP relevance" title="Ask ChatGPT about this section">💬</a>
 
 - **A01 Broken Access Control** — Kafka ACLs.
 - **A02 Cryptographic Failures** — TLS encryption in transit.
@@ -844,19 +844,19 @@ For a topic:
 - **A07 Authentication Failures** — SASL mechanisms.
 - **A09 Logging Failures** — audit logging via Auditbeat or custom.
 
-### 11.2 Encryption <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'11.2%20Encryption'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="11.2 Encryption" title="Ask ChatGPT about this section">💬</a>
+### 11.2 Encryption <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'11.2%20Encryption'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="11.2 Encryption" title="Ask ChatGPT about this section">💬</a>
 
 - **In transit:** TLS for client-broker and inter-broker (`ssl.*` configs).
 - **At rest:** Disk-level encryption (LUKS, AWS EBS encryption) — Kafka doesn't have built-in message encryption.
 
-### 11.3 Authentication <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'11.3%20Authentication'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="11.3 Authentication" title="Ask ChatGPT about this section">💬</a>
+### 11.3 Authentication <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'11.3%20Authentication'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="11.3 Authentication" title="Ask ChatGPT about this section">💬</a>
 
 - **SASL/PLAIN** — username/password (simple, requires TLS).
 - **SASL/SCRAM** — salted challenge-response (default in modern Kafka).
 - **SASL/GSSAPI (Kerberos)** — enterprise SSO.
 - **mTLS** — client certificates (broker-level).
 
-### 11.4 Authorization (ACLs) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'11.4%20Authorization%20(ACLs)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="11.4 Authorization (ACLs)" title="Ask ChatGPT about this section">💬</a>
+### 11.4 Authorization (ACLs) <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'11.4%20Authorization%20(ACLs)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="11.4 Authorization (ACLs)" title="Ask ChatGPT about this section">💬</a>
 
 Kafka ACLs control who can read/write/admin each topic:
 
@@ -867,13 +867,13 @@ kafka-acls --authorizer-properties zookeeper.connect=localhost:2181 \
 
 Operations: Read, Write, Create, Delete, Alter, Describe, ClusterAction, All.
 
-### 11.5 Schema security <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'11.5%20Schema%20security'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="11.5 Schema security" title="Ask ChatGPT about this section">💬</a>
+### 11.5 Schema security <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'11.5%20Schema%20security'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="11.5 Schema security" title="Ask ChatGPT about this section">💬</a>
 
 - Use Schema Registry for Avro/Protobuf/JSON-Schema.
 - Enforce compatibility (BACKWARD, FORWARD, FULL).
 - Use ACLs to restrict schema modifications.
 
-### 11.6 Secure configuration checklist <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'11.6%20Secure%20configuration%20checklist'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="11.6 Secure configuration checklist" title="Ask ChatGPT about this section">💬</a>
+### 11.6 Secure configuration checklist <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'11.6%20Secure%20configuration%20checklist'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="11.6 Secure configuration checklist" title="Ask ChatGPT about this section">💬</a>
 
 - [ ] TLS enabled for client-broker and inter-broker.
 - [ ] SASL/SCRAM or mTLS for authentication.
@@ -886,7 +886,7 @@ Operations: Read, Write, Create, Delete, Alter, Describe, ClusterAction, All.
 
 ## 12. Production Engineering
 
-### 12.1 How Kafka is used in production <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'12.1%20How%20Kafka%20is%20used%20in%20production'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="12.1 How Kafka is used in production" title="Ask ChatGPT about this section">💬</a>
+### 12.1 How Kafka is used in production <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'12.1%20How%20Kafka%20is%20used%20in%20production'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="12.1 How Kafka is used in production" title="Ask ChatGPT about this section">💬</a>
 
 - **Log aggregation** (Splunk, ELK, Datadog alternatives).
 - **Event sourcing** (microservices state).
@@ -895,7 +895,7 @@ Operations: Read, Write, Create, Delete, Alter, Describe, ClusterAction, All.
 - **Message queue** (request-reply, work queues).
 - **Real-time analytics** (ClickHouse, Druid, Pinot ingestion).
 
-### 12.2 Real architecture <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'12.2%20Real%20architecture'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="12.2 Real architecture" title="Ask ChatGPT about this section">💬</a>
+### 12.2 Real architecture <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'12.2%20Real%20architecture'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="12.2 Real architecture" title="Ask ChatGPT about this section">💬</a>
 
 ```mermaid
 graph TB
@@ -925,7 +925,7 @@ graph TB
     Stream --> Alert
 ```
 
-### 12.3 Production configuration <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'12.3%20Production%20configuration'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="12.3 Production configuration" title="Ask ChatGPT about this section">💬</a>
+### 12.3 Production configuration <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'12.3%20Production%20configuration'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="12.3 Production configuration" title="Ask ChatGPT about this section">💬</a>
 
 `server.properties` essentials:
 
@@ -951,7 +951,7 @@ log.flush.interval.messages=10000
 log.retention.hours=168
 ```
 
-### 12.4 Production monitoring <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'12.4%20Production%20monitoring'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="12.4 Production monitoring" title="Ask ChatGPT about this section">💬</a>
+### 12.4 Production monitoring <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'12.4%20Production%20monitoring'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="12.4 Production monitoring" title="Ask ChatGPT about this section">💬</a>
 
 - **JMX metrics** — built-in.
 - **Prometheus Kafka Exporter** — exposes broker, consumer, producer metrics.
@@ -959,7 +959,7 @@ log.retention.hours=168
 - **Cruise Control** (LinkedIn) — automated rebalancing and self-healing.
 - **Datadog, New Relic, Dynatrace** — commercial.
 
-### 12.5 Production debugging <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'12.5%20Production%20debugging'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="12.5 Production debugging" title="Ask ChatGPT about this section">💬</a>
+### 12.5 Production debugging <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'12.5%20Production%20debugging'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="12.5 Production debugging" title="Ask ChatGPT about this section">💬</a>
 
 - `kafka-consumer-groups.sh --describe` — consumer lag.
 - `kafka-log-dirs.sh` — log directory sizes.
@@ -968,28 +968,28 @@ log.retention.hours=168
 - JMX via JConsole or VisualVM.
 - Broker logs.
 
-### 12.6 Scaling <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'12.6%20Scaling'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="12.6 Scaling" title="Ask ChatGPT about this section">💬</a>
+### 12.6 Scaling <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'12.6%20Scaling'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="12.6 Scaling" title="Ask ChatGPT about this section">💬</a>
 
 - **Vertical** — bigger brokers (memory, disk, network).
 - **Horizontal** — add brokers; partitions rebalance.
 - **Tiered storage** (KIP-405) — offload old segments to S3.
 - **Cross-cluster replication** — MirrorMaker 2.0 (now Kafka Connect).
 
-### 12.7 Cost optimization <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'12.7%20Cost%20optimization'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="12.7 Cost optimization" title="Ask ChatGPT about this section">💬</a>
+### 12.7 Cost optimization <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'12.7%20Cost%20optimization'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="12.7 Cost optimization" title="Ask ChatGPT about this section">💬</a>
 
 - Tiered storage reduces disk costs dramatically.
 - Compression reduces network and disk.
 - Right-size brokers; avoid over-provisioning.
 - Use ephemeral brokers for transient workloads.
 
-### 12.8 Upgrade strategy <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'12.8%20Upgrade%20strategy'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="12.8 Upgrade strategy" title="Ask ChatGPT about this section">💬</a>
+### 12.8 Upgrade strategy <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'12.8%20Upgrade%20strategy'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="12.8 Upgrade strategy" title="Ask ChatGPT about this section">💬</a>
 
 - Read KIPs for breaking changes.
 - One version at a time.
 - Rolling upgrade brokers (one at a time).
 - Test in staging with realistic load.
 
-### 12.9 Migration from ZooKeeper to KRaft <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'12.9%20Migration%20from%20ZooKeeper%20to%20KRaft'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="12.9 Migration from ZooKeeper to KRaft" title="Ask ChatGPT about this section">💬</a>
+### 12.9 Migration from ZooKeeper to KRaft <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'12.9%20Migration%20from%20ZooKeeper%20to%20KRaft'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="12.9 Migration from ZooKeeper to KRaft" title="Ask ChatGPT about this section">💬</a>
 
 Kafka 3.3+ supports both. To migrate:
 
@@ -1000,7 +1000,7 @@ Kafka 3.3+ supports both. To migrate:
 
 ## 13. Production Case Studies
 
-### 13.1 LinkedIn — Kafka's birthplace <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'13.1%20LinkedIn%20%E2%80%94%20Kafka's%20birthplace'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="13.1 LinkedIn — Kafka's birthplace" title="Ask ChatGPT about this section">💬</a>
+### 13.1 LinkedIn — Kafka's birthplace <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'13.1%20LinkedIn%20%E2%80%94%20Kafka's%20birthplace'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="13.1 LinkedIn — Kafka's birthplace" title="Ask ChatGPT about this section">💬</a>
 
 LinkedIn built Kafka to replace their ActiveMQ + custom pipeline. Their published stats:
 
@@ -1010,7 +1010,7 @@ LinkedIn built Kafka to replace their ActiveMQ + custom pipeline. Their publishe
 
 Their engineering blog ("The Log", etc.) is foundational.
 
-### 13.2 Uber — trillions of messages <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'13.2%20Uber%20%E2%80%94%20trillions%20of%20messages'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="13.2 Uber — trillions of messages" title="Ask ChatGPT about this section">💬</a>
+### 13.2 Uber — trillions of messages <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'13.2%20Uber%20%E2%80%94%20trillions%20of%20messages'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="13.2 Uber — trillions of messages" title="Ask ChatGPT about this section">💬</a>
 
 Uber operates one of the largest Kafka deployments. They have published extensively on:
 
@@ -1018,43 +1018,43 @@ Uber operates one of the largest Kafka deployments. They have published extensiv
 - Schema management.
 - Tiered storage adoption.
 
-### 13.3 Netflix — Kafka for events <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'13.3%20Netflix%20%E2%80%94%20Kafka%20for%20events'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="13.3 Netflix — Kafka for events" title="Ask ChatGPT about this section">💬</a>
+### 13.3 Netflix — Kafka for events <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'13.3%20Netflix%20%E2%80%94%20Kafka%20for%20events'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="13.3 Netflix — Kafka for events" title="Ask ChatGPT about this section">💬</a>
 
 Netflix uses Kafka for event-driven architecture across their streaming platform. They've built tooling around it.
 
-### 13.4 Confluent — commercial Kafka <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'13.4%20Confluent%20%E2%80%94%20commercial%20Kafka'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="13.4 Confluent — commercial Kafka" title="Ask ChatGPT about this section">💬</a>
+### 13.4 Confluent — commercial Kafka <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'13.4%20Confluent%20%E2%80%94%20commercial%20Kafka'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="13.4 Confluent — commercial Kafka" title="Ask ChatGPT about this section">💬</a>
 
 Confluent (founded by Kafka creators) provides Confluent Platform with Schema Registry, ksqlDB, and managed cloud (Confluent Cloud).
 
-### 13.5 Discord — trillions of messages <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'13.5%20Discord%20%E2%80%94%20trillions%20of%20messages'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="13.5 Discord — trillions of messages" title="Ask ChatGPT about this section">💬</a>
+### 13.5 Discord — trillions of messages <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'13.5%20Discord%20%E2%80%94%20trillions%20of%20messages'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="13.5 Discord — trillions of messages" title="Ask ChatGPT about this section">💬</a>
 
 Discord uses Kafka combined with Cassandra for their messaging platform.
 
-### 13.6 Pinterest — Pulsar <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'13.6%20Pinterest%20%E2%80%94%20Pulsar'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="13.6 Pinterest — Pulsar" title="Ask ChatGPT about this section">💬</a>
+### 13.6 Pinterest — Pulsar <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'13.6%20Pinterest%20%E2%80%94%20Pulsar'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="13.6 Pinterest — Pulsar" title="Ask ChatGPT about this section">💬</a>
 
 Pinterest adopted Pulsar for some workloads, citing its multi-tenancy and tiered storage features.
 
 ## 14. Code Examples
 
-### 14.1 Basic: Kafka producer <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'14.1%20Basic%3A%20Kafka%20producer'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="14.1 Basic: Kafka producer" title="Ask ChatGPT about this section">💬</a>
+### 14.1 Basic: Kafka producer <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'14.1%20Basic%3A%20Kafka%20producer'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="14.1 Basic: Kafka producer" title="Ask ChatGPT about this section">💬</a>
 
 ```java
 // see 02-kafka-producers
 ```
 
-### 14.2 Basic: Kafka consumer <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'14.2%20Basic%3A%20Kafka%20consumer'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="14.2 Basic: Kafka consumer" title="Ask ChatGPT about this section">💬</a>
+### 14.2 Basic: Kafka consumer <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'14.2%20Basic%3A%20Kafka%20consumer'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="14.2 Basic: Kafka consumer" title="Ask ChatGPT about this section">💬</a>
 
 ```java
 // see 03-kafka-consumers
 ```
 
-### 14.3 Partitioning keys <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'14.3%20Partitioning%20keys'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="14.3 Partitioning keys" title="Ask ChatGPT about this section">💬</a>
+### 14.3 Partitioning keys <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'14.3%20Partitioning%20keys'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="14.3 Partitioning keys" title="Ask ChatGPT about this section">💬</a>
 
 ```java
 // see 04-partitions-keys
 ```
 
-### 14.4 Idempotent producer <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'14.4%20Idempotent%20producer'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="14.4 Idempotent producer" title="Ask ChatGPT about this section">💬</a>
+### 14.4 Idempotent producer <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'14.4%20Idempotent%20producer'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="14.4 Idempotent producer" title="Ask ChatGPT about this section">💬</a>
 
 ```java
 Properties props = new Properties();
@@ -1069,7 +1069,7 @@ KafkaProducer<String, String> producer = new KafkaProducer<>(props);
 // ... send records
 ```
 
-### 14.5 Exactly-once transactional producer <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'14.5%20Exactly-once%20transactional%20producer'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="14.5 Exactly-once transactional producer" title="Ask ChatGPT about this section">💬</a>
+### 14.5 Exactly-once transactional producer <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'14.5%20Exactly-once%20transactional%20producer'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="14.5 Exactly-once transactional producer" title="Ask ChatGPT about this section">💬</a>
 
 ```java
 producer.initTransactions();
@@ -1082,7 +1082,7 @@ try {
 }
 ```
 
-### 14.6 Kafka Streams topology <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'14.6%20Kafka%20Streams%20topology'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="14.6 Kafka Streams topology" title="Ask ChatGPT about this section">💬</a>
+### 14.6 Kafka Streams topology <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'14.6%20Kafka%20Streams%20topology'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="14.6 Kafka Streams topology" title="Ask ChatGPT about this section">💬</a>
 
 ```java
 StreamsBuilder builder = new StreamsBuilder();
@@ -1096,7 +1096,7 @@ KTable<String, Long> wordCounts = input
 wordCounts.toStream().to("output", Produced.with(Serdes.String(), Serdes.Long()));
 ```
 
-### 14.7 Outbox pattern (Spring/JPA) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'14.7%20Outbox%20pattern%20(Spring%2FJPA)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="14.7 Outbox pattern (Spring/JPA)" title="Ask ChatGPT about this section">💬</a>
+### 14.7 Outbox pattern (Spring/JPA) <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'14.7%20Outbox%20pattern%20(Spring%2FJPA)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="14.7 Outbox pattern (Spring/JPA)" title="Ask ChatGPT about this section">💬</a>
 
 ```java
 @Entity
@@ -1130,7 +1130,7 @@ public void publishPending() {
 }
 ```
 
-### 14.8 RabbitMQ publish/subscribe <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'14.8%20RabbitMQ%20publish%2Fsubscribe'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="14.8 RabbitMQ publish/subscribe" title="Ask ChatGPT about this section">💬</a>
+### 14.8 RabbitMQ publish/subscribe <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'14.8%20RabbitMQ%20publish%2Fsubscribe'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="14.8 RabbitMQ publish/subscribe" title="Ask ChatGPT about this section">💬</a>
 
 ```java
 // Producer
@@ -1148,7 +1148,7 @@ ch.basicConsume("my-queue", true, (consumerTag, delivery) -> {
 }, consumerTag -> {});
 ```
 
-### 14.9 Pulsar producer <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'14.9%20Pulsar%20producer'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="14.9 Pulsar producer" title="Ask ChatGPT about this section">💬</a>
+### 14.9 Pulsar producer <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'14.9%20Pulsar%20producer'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="14.9 Pulsar producer" title="Ask ChatGPT about this section">💬</a>
 
 ```java
 PulsarClient client = PulsarClient.builder().serviceUrl("pulsar://localhost:6650").build();
@@ -1159,7 +1159,7 @@ producer.send("Hello");
 producer.close();
 ```
 
-### 14.10 Bad, anti-pattern, refactored, secure, performance-optimized examples <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'14.10%20Bad%2C%20anti-pattern%2C%20refactored%2C%20secure%2C%20performance-optimized%20examples'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="14.10 Bad, anti-pattern, refactored, secure, performance-optimized examples" title="Ask ChatGPT about this section">💬</a>
+### 14.10 Bad, anti-pattern, refactored, secure, performance-optimized examples <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'14.10%20Bad%2C%20anti-pattern%2C%20refactored%2C%20secure%2C%20performance-optimized%20examples'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="14.10 Bad, anti-pattern, refactored, secure, performance-optimized examples" title="Ask ChatGPT about this section">💬</a>
 
 **Bad: no acks, no idempotence**
 
@@ -1203,7 +1203,7 @@ KafkaProducer is thread-safe; share one producer across threads.
 
 ## 15. Common Mistakes
 
-### 15.1 Beginner mistakes <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'15.1%20Beginner%20mistakes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="15.1 Beginner mistakes" title="Ask ChatGPT about this section">💬</a>
+### 15.1 Beginner mistakes <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'15.1%20Beginner%20mistakes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="15.1 Beginner mistakes" title="Ask ChatGPT about this section">💬</a>
 
 - **Not setting acks=all** — data loss on leader failure.
 - **Hot partition keys** — one partition gets all writes.
@@ -1212,7 +1212,7 @@ KafkaProducer is thread-safe; share one producer across threads.
 - **Polling with very short intervals** — wastes CPU.
 - **Sync operations blocking producer** — use `.get()` only when necessary.
 
-### 15.2 Intermediate mistakes <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'15.2%20Intermediate%20mistakes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="15.2 Intermediate mistakes" title="Ask ChatGPT about this section">💬</a>
+### 15.2 Intermediate mistakes <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'15.2%20Intermediate%20mistakes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="15.2 Intermediate mistakes" title="Ask ChatGPT about this section">💬</a>
 
 - **Reading from the same partition in two consumers** — both get the same messages, but offset commits conflict.
 - **Not handling rebalances** — rebalance storms.
@@ -1221,7 +1221,7 @@ KafkaProducer is thread-safe; share one producer across threads.
 - **Skipping schema evolution** — breaking changes break consumers.
 - **No retention policy** — disk fills.
 
-### 15.3 Senior mistakes <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'15.3%20Senior%20mistakes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="15.3 Senior mistakes" title="Ask ChatGPT about this section">💬</a>
+### 15.3 Senior mistakes <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'15.3%20Senior%20mistakes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="15.3 Senior mistakes" title="Ask ChatGPT about this section">💬</a>
 
 - **replication.factor=1 in production** — no durability.
 - **min.insync.replicas=1 with acks=all** — still loses data on partial failure.
@@ -1229,7 +1229,7 @@ KafkaProducer is thread-safe; share one producer across threads.
 - **Large messages** — exceeds `message.max.bytes`; causes memory pressure.
 - **No DLQ** — poison messages block consumer.
 
-### 15.4 Production mistakes <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'15.4%20Production%20mistakes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="15.4 Production mistakes" title="Ask ChatGPT about this section">💬</a>
+### 15.4 Production mistakes <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'15.4%20Production%20mistakes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="15.4 Production mistakes" title="Ask ChatGPT about this section">💬</a>
 
 - **No monitoring** — discover problems only after they cause outages.
 - **No alerts** — silent failures.
@@ -1237,37 +1237,37 @@ KafkaProducer is thread-safe; share one producer across threads.
 - **Insufficient network** — replication lag.
 - **Single AZ** — datacenter outage = total outage.
 
-### 15.5 Migration mistakes <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'15.5%20Migration%20mistakes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="15.5 Migration mistakes" title="Ask ChatGPT about this section">💬</a>
+### 15.5 Migration mistakes <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'15.5%20Migration%20mistakes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="15.5 Migration mistakes" title="Ask ChatGPT about this section">💬</a>
 
 - **From ZooKeeper to KRaft** — skipped validation.
 - **From RabbitMQ to Kafka** — semantics differ; replay vs queue.
 - **From Redis pub/sub to Kafka** — durability gap.
 
-### 15.6 Configuration mistakes <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'15.6%20Configuration%20mistakes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="15.6 Configuration mistakes" title="Ask ChatGPT about this section">💬</a>
+### 15.6 Configuration mistakes <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'15.6%20Configuration%20mistakes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="15.6 Configuration mistakes" title="Ask ChatGPT about this section">💬</a>
 
 - **`replication.factor=1` in dev** — fine for dev, deadly in prod.
 - **`acks=0` for "performance"** — but data loss.
 - **`auto.create.topics.enable=true`** — uncontrolled topic creation.
 
-### 15.7 Security mistakes <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'15.7%20Security%20mistakes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="15.7 Security mistakes" title="Ask ChatGPT about this section">💬</a>
+### 15.7 Security mistakes <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'15.7%20Security%20mistakes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="15.7 Security mistakes" title="Ask ChatGPT about this section">💬</a>
 
 - **SASL/PLAIN over plaintext** — credentials in the clear.
 - **No ACLs** — any client can read any topic.
 - **Hardcoded credentials**.
 
-### 15.8 Performance mistakes <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'15.8%20Performance%20mistakes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="15.8 Performance mistakes" title="Ask ChatGPT about this section">💬</a>
+### 15.8 Performance mistakes <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'15.8%20Performance%20mistakes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="15.8 Performance mistakes" title="Ask ChatGPT about this section">💬</a>
 
 - **`linger.ms=0`** — no batching; one record per request.
 - **`batch.size=1`** — same effect.
 - **`fetch.max.bytes` too small** — many round-trips.
 - **`fetch.max.wait.ms=0`** — busy loop.
 
-### 15.9 Debugging mistakes <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'15.9%20Debugging%20mistakes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="15.9 Debugging mistakes" title="Ask ChatGPT about this section">💬</a>
+### 15.9 Debugging mistakes <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'15.9%20Debugging%20mistakes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="15.9 Debugging mistakes" title="Ask ChatGPT about this section">💬</a>
 
 - **Restarting without capturing state** — broker logs, consumer lag, JMX.
 - **Looking at broker metrics, not consumer lag** — broker may be healthy while consumers are stuck.
 
-### 15.10 Deployment mistakes <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'15.10%20Deployment%20mistakes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="15.10 Deployment mistakes" title="Ask ChatGPT about this section">💬</a>
+### 15.10 Deployment mistakes <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'15.10%20Deployment%20mistakes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="15.10 Deployment mistakes" title="Ask ChatGPT about this section">💬</a>
 
 - **Mixing KRaft and ZooKeeper brokers** — configuration errors.
 - **Not testing failover** — automated failover that hasn't been tested is not failover.
@@ -1277,7 +1277,7 @@ KafkaProducer is thread-safe; share one producer across threads.
 
 ## 16. Debugging
 
-### 16.1 How to identify problems <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'16.1%20How%20to%20identify%20problems'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="16.1 How to identify problems" title="Ask ChatGPT about this section">💬</a>
+### 16.1 How to identify problems <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'16.1%20How%20to%20identify%20problems'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="16.1 How to identify problems" title="Ask ChatGPT about this section">💬</a>
 
 | Symptom | First diagnostic step |
 |---------|----------------------|
@@ -1290,7 +1290,7 @@ KafkaProducer is thread-safe; share one producer across threads.
 | Producer errors | `kafka.outgoing.byte.rate`, client logs |
 | Consumer rebalance storm | Consumer group state |
 
-### 16.2 Kafka CLI tools <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'16.2%20Kafka%20CLI%20tools'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="16.2 Kafka CLI tools" title="Ask ChatGPT about this section">💬</a>
+### 16.2 Kafka CLI tools <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'16.2%20Kafka%20CLI%20tools'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="16.2 Kafka CLI tools" title="Ask ChatGPT about this section">💬</a>
 
 ```bash
 # List topics
@@ -1309,7 +1309,7 @@ kafka-log-dirs.sh --bootstrap-server localhost:9092 --describe
 kafka-reassign-partitions.sh --bootstrap-server localhost:9092 --reassignment-json-file plan.json --execute
 ```
 
-### 16.3 JMX monitoring <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'16.3%20JMX%20monitoring'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="16.3 JMX monitoring" title="Ask ChatGPT about this section">💬</a>
+### 16.3 JMX monitoring <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'16.3%20JMX%20monitoring'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="16.3 JMX monitoring" title="Ask ChatGPT about this section">💬</a>
 
 ```bash
 # Connect jconsole
@@ -1323,7 +1323,7 @@ Key MBeans:
 - `kafka.server:type=ReplicaManager,name=UnderReplicatedPartitions`
 - `kafka.consumer:type=consumer-fetch-manager-metrics`
 
-### 16.4 Common debugging scenarios <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'16.4%20Common%20debugging%20scenarios'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="16.4 Common debugging scenarios" title="Ask ChatGPT about this section">💬</a>
+### 16.4 Common debugging scenarios <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'16.4%20Common%20debugging%20scenarios'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="16.4 Common debugging scenarios" title="Ask ChatGPT about this section">💬</a>
 
 **Consumer lag:**
 1. `kafka-consumer-groups.sh --describe` shows lag per partition.
@@ -1340,7 +1340,7 @@ Key MBeans:
 2. Check broker health.
 3. Check network latency.
 
-### 16.5 Production troubleshooting checklist <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'16.5%20Production%20troubleshooting%20checklist'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="16.5 Production troubleshooting checklist" title="Ask ChatGPT about this section">💬</a>
+### 16.5 Production troubleshooting checklist <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'16.5%20Production%20troubleshooting%20checklist'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="16.5 Production troubleshooting checklist" title="Ask ChatGPT about this section">💬</a>
 
 - [ ] Capture consumer group state.
 - [ ] Capture broker JMX metrics.
@@ -1353,7 +1353,7 @@ Key MBeans:
 
 ## 17. Monitoring & Observability
 
-### 17.1 Metrics <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'17.1%20Metrics'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="17.1 Metrics" title="Ask ChatGPT about this section">💬</a>
+### 17.1 Metrics <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'17.1%20Metrics'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="17.1 Metrics" title="Ask ChatGPT about this section">💬</a>
 
 **Broker metrics (Prometheus via kafka_exporter):**
 
@@ -1380,26 +1380,26 @@ Key MBeans:
 - Error rate.
 - Record queue size.
 
-### 17.2 Logging <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'17.2%20Logging'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="17.2 Logging" title="Ask ChatGPT about this section">💬</a>
+### 17.2 Logging <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'17.2%20Logging'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="17.2 Logging" title="Ask ChatGPT about this section">💬</a>
 
 - Configure `log4j2.properties` or `logback.xml`.
 - Log to file with rotation.
 - Structured logging (JSON) for production.
 - Ship to ELK, Loki, Datadog.
 
-### 17.3 Distributed tracing <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'17.3%20Distributed%20tracing'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="17.3 Distributed tracing" title="Ask ChatGPT about this section">💬</a>
+### 17.3 Distributed tracing <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'17.3%20Distributed%20tracing'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="17.3 Distributed tracing" title="Ask ChatGPT about this section">💬</a>
 
 - Kafka clients support OpenTelemetry instrumentation.
 - Inject trace context in message headers.
 - Trace from producer to consumer.
 
-### 17.4 Health checks <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'17.4%20Health%20checks'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="17.4 Health checks" title="Ask ChatGPT about this section">💬</a>
+### 17.4 Health checks <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'17.4%20Health%20checks'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="17.4 Health checks" title="Ask ChatGPT about this section">💬</a>
 
 - Broker: `kafka-broker-api-versions.sh` (returns metadata).
 - Consumer: heartbeat to a heartbeat topic or REST endpoint.
 - Liveness vs readiness probes (Kubernetes).
 
-### 17.5 Dashboards <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'17.5%20Dashboards'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="17.5 Dashboards" title="Ask ChatGPT about this section">💬</a>
+### 17.5 Dashboards <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'17.5%20Dashboards'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="17.5 Dashboards" title="Ask ChatGPT about this section">💬</a>
 
 Sample Grafana dashboard:
 
@@ -1410,7 +1410,7 @@ Sample Grafana dashboard:
 - GC pauses.
 - Disk usage.
 
-### 17.6 Alerts <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'17.6%20Alerts'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="17.6 Alerts" title="Ask ChatGPT about this section">💬</a>
+### 17.6 Alerts <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'17.6%20Alerts'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="17.6 Alerts" title="Ask ChatGPT about this section">💬</a>
 
 - Under-replicated partitions > 0 for 5 minutes.
 - Consumer lag > 10,000 for 5 minutes.
@@ -1420,7 +1420,7 @@ Sample Grafana dashboard:
 
 ## 18. Best Practices
 
-### 18.1 Industry best practices <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'18.1%20Industry%20best%20practices'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="18.1 Industry best practices" title="Ask ChatGPT about this section">💬</a>
+### 18.1 Industry best practices <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'18.1%20Industry%20best%20practices'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="18.1 Industry best practices" title="Ask ChatGPT about this section">💬</a>
 
 - **`acks=all` with `enable.idempotence=true`** for durability.
 - **`replication.factor=3`** with **`min.insync.replicas=2`**.
@@ -1433,7 +1433,7 @@ Sample Grafana dashboard:
 - **Use EOS for read-process-write** when needed.
 - **Tiered storage** for cost.
 
-### 18.2 Enterprise practices <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'18.2%20Enterprise%20practices'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="18.2 Enterprise practices" title="Ask ChatGPT about this section">💬</a>
+### 18.2 Enterprise practices <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'18.2%20Enterprise%20practices'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="18.2 Enterprise practices" title="Ask ChatGPT about this section">💬</a>
 
 - **Multi-AZ deployment** (3 brokers across 3 AZs).
 - **MirrorMaker 2.0** for cross-region replication.
@@ -1442,14 +1442,14 @@ Sample Grafana dashboard:
 - **Tiered storage with S3/GCS** for cost.
 - **mTLS** for sensitive data.
 
-### 18.3 Clean code <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'18.3%20Clean%20code'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="18.3 Clean code" title="Ask ChatGPT about this section">💬</a>
+### 18.3 Clean code <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'18.3%20Clean%20code'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="18.3 Clean code" title="Ask ChatGPT about this section">💬</a>
 
 - Idempotent message handlers.
 - Schema versioning.
 - Use Avro/Protobuf, not raw JSON.
 - Trace IDs in message headers.
 
-### 18.4 Reliability <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'18.4%20Reliability'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="18.4 Reliability" title="Ask ChatGPT about this section">💬</a>
+### 18.4 Reliability <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'18.4%20Reliability'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="18.4 Reliability" title="Ask ChatGPT about this section">💬</a>
 
 - Idempotent producers (default in modern Kafka).
 - Transactions for atomic multi-partition writes.
@@ -1457,28 +1457,28 @@ Sample Grafana dashboard:
 - Circuit breakers around consumer processing.
 - Retry with exponential backoff (idempotent).
 
-### 18.5 Security <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'18.5%20Security'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="18.5 Security" title="Ask ChatGPT about this section">💬</a>
+### 18.5 Security <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'18.5%20Security'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="18.5 Security" title="Ask ChatGPT about this section">💬</a>
 
 - TLS for all connections.
 - SASL/SCRAM for auth.
 - ACLs per topic.
 - Audit logging.
 
-### 18.6 Performance <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'18.6%20Performance'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="18.6 Performance" title="Ask ChatGPT about this section">💬</a>
+### 18.6 Performance <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'18.6%20Performance'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="18.6 Performance" title="Ask ChatGPT about this section">💬</a>
 
 - Idempotent producer (default).
 - Compression (snappy/zstd).
 - Batching (linger.ms, batch.size).
 - Right-size partitions.
 
-### 18.7 Testing <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'18.7%20Testing'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="18.7 Testing" title="Ask ChatGPT about this section">💬</a>
+### 18.7 Testing <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'18.7%20Testing'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="18.7 Testing" title="Ask ChatGPT about this section">💬</a>
 
 - **Testcontainers Kafka** for integration tests.
 - **Embedded Kafka** for unit tests.
 - **Mock consumer/producer** for app tests.
 - **Schema evolution tests**.
 
-### 18.8 Deployment <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'18.8%20Deployment'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="18.8 Deployment" title="Ask ChatGPT about this section">💬</a>
+### 18.8 Deployment <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'18.8%20Deployment'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="18.8 Deployment" title="Ask ChatGPT about this section">💬</a>
 
 - KRaft (no ZooKeeper).
 - Container images (Confluent or Strimzi).
@@ -1487,7 +1487,7 @@ Sample Grafana dashboard:
 
 ## 19. Anti-Patterns
 
-### 19.1 Hot partition key <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'19.1%20Hot%20partition%20key'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="19.1 Hot partition key" title="Ask ChatGPT about this section">💬</a>
+### 19.1 Hot partition key <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'19.1%20Hot%20partition%20key'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="19.1 Hot partition key" title="Ask ChatGPT about this section">💬</a>
 
 ```java
 producer.send(new ProducerRecord<>("events", "global", payload));  // all to one partition
@@ -1495,7 +1495,7 @@ producer.send(new ProducerRecord<>("events", "global", payload));  // all to one
 
 **Fix:** Use a real partition key (e.g., user ID, order ID).
 
-### 19.2 Large messages <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'19.2%20Large%20messages'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="19.2 Large messages" title="Ask ChatGPT about this section">💬</a>
+### 19.2 Large messages <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'19.2%20Large%20messages'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="19.2 Large messages" title="Ask ChatGPT about this section">💬</a>
 
 ```java
 producer.send(new ProducerRecord<>("events", largeBlob));  // > 1 MB
@@ -1503,7 +1503,7 @@ producer.send(new ProducerRecord<>("events", largeBlob));  // > 1 MB
 
 **Fix:** Use external storage (S3) with reference in message; or use Pulsar (better for large messages).
 
-### 19.3 No DLQ <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'19.3%20No%20DLQ'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="19.3 No DLQ" title="Ask ChatGPT about this section">💬</a>
+### 19.3 No DLQ <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'19.3%20No%20DLQ'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="19.3 No DLQ" title="Ask ChatGPT about this section">💬</a>
 
 ```java
 consumer.poll() -> process(record);  // if record is poison, infinite retries
@@ -1511,7 +1511,7 @@ consumer.poll() -> process(record);  // if record is poison, infinite retries
 
 **Fix:** Detect poison messages, send to DLQ, continue.
 
-### 19.4 Synchronous processing in consumer thread <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'19.4%20Synchronous%20processing%20in%20consumer%20thread'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="19.4 Synchronous processing in consumer thread" title="Ask ChatGPT about this section">💬</a>
+### 19.4 Synchronous processing in consumer thread <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'19.4%20Synchronous%20processing%20in%20consumer%20thread'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="19.4 Synchronous processing in consumer thread" title="Ask ChatGPT about this section">💬</a>
 
 ```java
 while (true) {
@@ -1524,13 +1524,13 @@ while (true) {
 
 **Fix:** Offload processing to a thread pool; commit offsets after processing completes.
 
-### 19.5 RabbitMQ as Kafka <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'19.5%20RabbitMQ%20as%20Kafka'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="19.5 RabbitMQ as Kafka" title="Ask ChatGPT about this section">💬</a>
+### 19.5 RabbitMQ as Kafka <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'19.5%20RabbitMQ%20as%20Kafka'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="19.5 RabbitMQ as Kafka" title="Ask ChatGPT about this section">💬</a>
 
 Using RabbitMQ's queue semantics for high-throughput streaming. RabbitMQ has lower throughput and less replay-friendly than Kafka.
 
 **Fix:** Choose the right tool. RabbitMQ for traditional messaging, Kafka for streaming.
 
-### 19.6 Kafka as database <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'19.6%20Kafka%20as%20database'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="19.6 Kafka as database" title="Ask ChatGPT about this section">💬</a>
+### 19.6 Kafka as database <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'19.6%20Kafka%20as%20database'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="19.6 Kafka as database" title="Ask ChatGPT about this section">💬</a>
 
 Storing all state in Kafka topics, expecting replay instead of state queries. Replay is expensive.
 
@@ -1538,45 +1538,45 @@ Storing all state in Kafka topics, expecting replay instead of state queries. Re
 
 ## 20. Edge Cases
 
-### 20.1 Partition rebalance storm <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'20.1%20Partition%20rebalance%20storm'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="20.1 Partition rebalance storm" title="Ask ChatGPT about this section">💬</a>
+### 20.1 Partition rebalance storm <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'20.1%20Partition%20rebalance%20storm'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="20.1 Partition rebalance storm" title="Ask ChatGPT about this section">💬</a>
 
 When a consumer joins/leaves, partitions rebalance. Frequent rebalances cause processing delays.
 
 **Fix:** Increase `session.timeout.ms` and `max.poll.interval.ms`; use static membership (KIP-345).
 
-### 20.2 Leader failure <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'20.2%20Leader%20failure'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="20.2 Leader failure" title="Ask ChatGPT about this section">💬</a>
+### 20.2 Leader failure <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'20.2%20Leader%20failure'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="20.2 Leader failure" title="Ask ChatGPT about this section">💬</a>
 
 When a leader fails, a new leader is elected from ISR. Brief unavailability (typically seconds).
 
 **Fix:** Monitor leader election count; increase ISR.
 
-### 20.3 Network partition <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'20.3%20Network%20partition'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="20.3 Network partition" title="Ask ChatGPT about this section">💬</a>
+### 20.3 Network partition <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'20.3%20Network%20partition'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="20.3 Network partition" title="Ask ChatGPT about this section">💬</a>
 
 If a partition lasts longer than `replica.lag.time.max.ms`, followers are removed from ISR. The leader can lose data on subsequent failure.
 
 **Fix:** Tune timeouts based on network reliability.
 
-### 20.4 ZooKeeper split-brain (legacy) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'20.4%20ZooKeeper%20split-brain%20(legacy)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="20.4 ZooKeeper split-brain (legacy)" title="Ask ChatGPT about this section">💬</a>
+### 20.4 ZooKeeper split-brain (legacy) <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'20.4%20ZooKeeper%20split-brain%20(legacy)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="20.4 ZooKeeper split-brain (legacy)" title="Ask ChatGPT about this section">💬</a>
 
 In old Kafka with ZooKeeper, network partitions between Kafka and ZK could cause inconsistent state. KRaft fixes this.
 
-### 20.5 KRaft recovery <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'20.5%20KRaft%20recovery'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="20.5 KRaft recovery" title="Ask ChatGPT about this section">💬</a>
+### 20.5 KRaft recovery <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'20.5%20KRaft%20recovery'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="20.5 KRaft recovery" title="Ask ChatGPT about this section">💬</a>
 
 After controller failure, a new controller is elected. Brief unavailability.
 
 **Fix:** Configure `controller.quorum.voters` for high availability.
 
-### 20.6 Message TTL <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'20.6%20Message%20TTL'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="20.6 Message TTL" title="Ask ChatGPT about this section">💬</a>
+### 20.6 Message TTL <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'20.6%20Message%20TTL'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="20.6 Message TTL" title="Ask ChatGPT about this section">💬</a>
 
 Kafka doesn't have per-message TTL by default. Use retention policies at the topic level.
 
-### 20.7 Hot key <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'20.7%20Hot%20key'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="20.7 Hot key" title="Ask ChatGPT about this section">💬</a>
+### 20.7 Hot key <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'20.7%20Hot%20key'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="20.7 Hot key" title="Ask ChatGPT about this section">💬</a>
 
 A partition key that's heavily used (e.g., a popular user) causes one partition to be a bottleneck.
 
 **Fix:** Compound key (e.g., `user_id + timestamp_suffix`); or random salt.
 
-### 20.8 Large messages exceeding limits <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'20.8%20Large%20messages%20exceeding%20limits'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="20.8 Large messages exceeding limits" title="Ask ChatGPT about this section">💬</a>
+### 20.8 Large messages exceeding limits <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'20.8%20Large%20messages%20exceeding%20limits'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="20.8 Large messages exceeding limits" title="Ask ChatGPT about this section">💬</a>
 
 `message.max.bytes` (default 1 MB) limits message size. Larger messages are rejected by the broker.
 
@@ -1586,7 +1586,7 @@ A partition key that's heavily used (e.g., a popular user) causes one partition 
 
 ## 21. Comparisons
 
-### 21.1 Kafka vs RabbitMQ vs Pulsar <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'21.1%20Kafka%20vs%20RabbitMQ%20vs%20Pulsar'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="21.1 Kafka vs RabbitMQ vs Pulsar" title="Ask ChatGPT about this section">💬</a>
+### 21.1 Kafka vs RabbitMQ vs Pulsar <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'21.1%20Kafka%20vs%20RabbitMQ%20vs%20Pulsar'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="21.1 Kafka vs RabbitMQ vs Pulsar" title="Ask ChatGPT about this section">💬</a>
 
 | Dimension | Kafka | RabbitMQ | Pulsar |
 |-----------|-------|----------|--------|
@@ -1609,7 +1609,7 @@ A partition key that's heavily used (e.g., a popular user) causes one partition 
 
 **When to choose Pulsar:** Multi-tenancy, geo-replication, serverless functions.
 
-### 21.2 Kafka vs RabbitMQ <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'21.2%20Kafka%20vs%20RabbitMQ'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="21.2 Kafka vs RabbitMQ" title="Ask ChatGPT about this section">💬</a>
+### 21.2 Kafka vs RabbitMQ <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'21.2%20Kafka%20vs%20RabbitMQ'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="21.2 Kafka vs RabbitMQ" title="Ask ChatGPT about this section">💬</a>
 
 | Dimension | Kafka | RabbitMQ |
 |-----------|-------|----------|
@@ -1622,21 +1622,21 @@ A partition key that's heavily used (e.g., a popular user) causes one partition 
 | Patterns | Streams, events, pub/sub | Pub/sub, work queues, RPC |
 | Maturity | Production-proven | Production-proven |
 
-### 21.3 Streams vs queues <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'21.3%20Streams%20vs%20queues'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="21.3 Streams vs queues" title="Ask ChatGPT about this section">💬</a>
+### 21.3 Streams vs queues <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'21.3%20Streams%20vs%20queues'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="21.3 Streams vs queues" title="Ask ChatGPT about this section">💬</a>
 
 | Pattern | Use case |
 |---------|----------|
 | Streams (Kafka topic) | Events, analytics, replay, many consumers |
 | Queues (RabbitMQ queue) | Task distribution, RPC, single consumer per message |
 
-### 21.4 Pull vs push <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'21.4%20Pull%20vs%20push'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="21.4 Pull vs push" title="Ask ChatGPT about this section">💬</a>
+### 21.4 Pull vs push <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'21.4%20Pull%20vs%20push'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="21.4 Pull vs push" title="Ask ChatGPT about this section">💬</a>
 
 | Model | Pros | Cons |
 |-------|------|------|
 | **Pull (Kafka)** | Consumer controls pace, replay, batching | Latency (poll interval) |
 | **Push (RabbitMQ)** | Low latency | Consumer can be overwhelmed |
 
-### 21.5 Kafka vs SQS vs Pub/Sub <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'21.5%20Kafka%20vs%20SQS%20vs%20Pub%2FSub'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="21.5 Kafka vs SQS vs Pub/Sub" title="Ask ChatGPT about this section">💬</a>
+### 21.5 Kafka vs SQS vs Pub/Sub <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'21.5%20Kafka%20vs%20SQS%20vs%20Pub%2FSub'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="21.5 Kafka vs SQS vs Pub/Sub" title="Ask ChatGPT about this section">💬</a>
 
 | Dimension | Kafka | SQS | Pub/Sub |
 |-----------|-------|-----|---------|
@@ -1646,7 +1646,7 @@ A partition key that's heavily used (e.g., a popular user) causes one partition 
 | Cost | Operational | Per-message | Per-message |
 | Multi-cloud | Complex | AWS-only | GCP-only |
 
-### 21.6 Decision matrix <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'21.6%20Decision%20matrix'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="21.6 Decision matrix" title="Ask ChatGPT about this section">💬</a>
+### 21.6 Decision matrix <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'21.6%20Decision%20matrix'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="21.6 Decision matrix" title="Ask ChatGPT about this section">💬</a>
 
 | Workload | Recommended |
 |----------|------------|
@@ -1661,7 +1661,7 @@ A partition key that's heavily used (e.g., a popular user) causes one partition 
 | Serverless function with messaging | Pulsar Functions |
 | IoT device messaging | MQTT + broker |
 
-### 21.7 Migration paths <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'21.7%20Migration%20paths'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="21.7 Migration paths" title="Ask ChatGPT about this section">💬</a>
+### 21.7 Migration paths <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'21.7%20Migration%20paths'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="21.7 Migration paths" title="Ask ChatGPT about this section">💬</a>
 
 - **RabbitMQ → Kafka:** Rewrite consumers to use Kafka client; topics map to queues (with consumer groups replacing queue-per-consumer).
 - **ActiveMQ → Kafka:** Same approach; ActiveMQ has both queues and topics.
@@ -1672,7 +1672,7 @@ A partition key that's heavily used (e.g., a popular user) causes one partition 
 
 ## 22. Interview Preparation
 
-### 22.1 Beginner (0-1 years) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'22.1%20Beginner%20(0-1%20years)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="22.1 Beginner (0-1 years)" title="Ask ChatGPT about this section">💬</a>
+### 22.1 Beginner (0-1 years) <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'22.1%20Beginner%20(0-1%20years)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="22.1 Beginner (0-1 years)" title="Ask ChatGPT about this section">💬</a>
 
 **Q1: What is Kafka?**
 **A:** A distributed event streaming platform — a log-based message broker. Producers write records to topics; consumers read them. Partitioned for parallelism, replicated for fault tolerance.
@@ -1689,7 +1689,7 @@ A partition key that's heavily used (e.g., a popular user) causes one partition 
 **Q5: What is an offset?**
 **A:** A monotonically increasing integer identifying a record's position in a partition.
 
-### 22.2 Junior (1-2 years) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'22.2%20Junior%20(1-2%20years)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="22.2 Junior (1-2 years)" title="Ask ChatGPT about this section">💬</a>
+### 22.2 Junior (1-2 years) <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'22.2%20Junior%20(1-2%20years)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="22.2 Junior (1-2 years)" title="Ask ChatGPT about this section">💬</a>
 
 **Q6: What is replication?**
 **A:** Each partition is replicated across multiple brokers. One replica is the leader (handles reads/writes); others are followers (replicate from the leader). Replication factor is the number of copies.
@@ -1706,7 +1706,7 @@ A partition key that's heavily used (e.g., a popular user) causes one partition 
 **Q10: What is the difference between a topic and a queue?**
 **A:** A topic is a log (multiple consumers, replay). A queue is a buffer (single consumer per message, no replay). Kafka uses topics; RabbitMQ uses queues.
 
-### 22.3 Mid (2-4 years) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'22.3%20Mid%20(2-4%20years)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="22.3 Mid (2-4 years)" title="Ask ChatGPT about this section">💬</a>
+### 22.3 Mid (2-4 years) <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'22.3%20Mid%20(2-4%20years)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="22.3 Mid (2-4 years)" title="Ask ChatGPT about this section">💬</a>
 
 **Q11: How does Kafka guarantee ordering?**
 **A:** Kafka guarantees ordering within a partition. Across partitions, no ordering. Choose a partition key to ensure related records go to the same partition.
@@ -1729,7 +1729,7 @@ A partition key that's heavily used (e.g., a popular user) causes one partition 
 **Q17: What is the difference between at-least-once and exactly-once?**
 **A:** At-least-once: producer may send duplicates; consumer must be idempotent. Exactly-once: with idempotent producer + transactions, no duplicates end-to-end.
 
-### 22.4 Senior (4-6 years) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'22.4%20Senior%20(4-6%20years)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="22.4 Senior (4-6 years)" title="Ask ChatGPT about this section">💬</a>
+### 22.4 Senior (4-6 years) <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'22.4%20Senior%20(4-6%20years)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="22.4 Senior (4-6 years)" title="Ask ChatGPT about this section">💬</a>
 
 **Q18: How would you design a high-throughput Kafka pipeline?**
 **A:** (1) Idempotent producer with `acks=all`. (2) Compression (snappy/zstd). (3) Batching (`linger.ms=10`, `batch.size=64KB`). (4) Partition by stable key for ordering + distribution. (5) Consumer group with parallelism = number of partitions. (6) Manual commit after processing. (7) DLQ for poison messages. (8) Monitor lag, throughput, GC pauses.
@@ -1746,7 +1746,7 @@ A partition key that's heavily used (e.g., a popular user) causes one partition 
 **Q22: How would you handle schema evolution?**
 **A:** (1) Use Avro/Protobuf with Schema Registry. (2) Set compatibility mode (BACKWARD, FORWARD, FULL). (3) New schema version must be compatible. (4) Consumers register for new schema; old consumers keep working until they upgrade.
 
-### 22.5 Lead (6-8 years) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'22.5%20Lead%20(6-8%20years)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="22.5 Lead (6-8 years)" title="Ask ChatGPT about this section">💬</a>
+### 22.5 Lead (6-8 years) <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'22.5%20Lead%20(6-8%20years)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="22.5 Lead (6-8 years)" title="Ask ChatGPT about this section">💬</a>
 
 **Q23: How would you design a multi-region Kafka deployment?**
 **A:** (1) Active-active: MirrorMaker 2.0 between regions. (2) Active-passive: writes to primary region, async replication to secondary. (3) Schema Registry replication. (4) Consumers in each region. (5) Latency tradeoffs (cross-region replication adds seconds). (6) Conflict resolution for bi-directional replication (rare).
@@ -1757,7 +1757,7 @@ A partition key that's heavily used (e.g., a popular user) causes one partition 
 **Q25: How would you design a Kafka-based event sourcing system?**
 **A:** (1) Each event represents a state change. (2) Events are append-only to a topic. (3) Aggregate state reconstructed by replaying events. (4) Snapshots for fast recovery. (5) Projections for query models. (6) Compaction for long-term storage.
 
-### 22.6 Staff (8-12 years) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'22.6%20Staff%20(8-12%20years)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="22.6 Staff (8-12 years)" title="Ask ChatGPT about this section">💬</a>
+### 22.6 Staff (8-12 years) <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'22.6%20Staff%20(8-12%20years)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="22.6 Staff (8-12 years)" title="Ask ChatGPT about this section">💬</a>
 
 **Q26: Design a globally distributed event streaming platform.**
 **A:** (1) Regional Kafka clusters with MirrorMaker 2.0. (2) Edge processing with Kafka Streams or ksqlDB. (3) Centralized observability (Confluent Control Center). (4) Tiered storage for cost. (5) Disaster recovery: cross-region replication with RPO/RTO targets. (6) Schema Registry federation.
@@ -1768,7 +1768,7 @@ A partition key that's heavily used (e.g., a popular user) causes one partition 
 **Q28: How do you handle GDPR / data residency in a Kafka deployment?**
 **A:** (1) Region-specific clusters. (2) Encryption at rest (disk-level). (3) Schema fields can be marked PII. (4) Compaction + retention policies to delete data. (5) Stream processors for tokenization/anonymization. (6) Audit logging.
 
-### 22.7 Principal / Architect <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'22.7%20Principal%20%2F%20Architect'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="22.7 Principal / Architect" title="Ask ChatGPT about this section">💬</a>
+### 22.7 Principal / Architect <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'22.7%20Principal%20%2F%20Architect'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="22.7 Principal / Architect" title="Ask ChatGPT about this section">💬</a>
 
 **Q29: When would you recommend NOT using Kafka?**
 **A:** (1) Simple request-response (use REST/gRPC). (2) Low-latency single-process messaging (use in-memory queues). (3) Very small message volumes (overhead of Kafka is excessive). (4) When operational complexity exceeds team capability. (5) For pure pub/sub without replay, lightweight broker (NATS, Redis).
@@ -1776,7 +1776,7 @@ A partition key that's heavily used (e.g., a popular user) causes one partition 
 **Q30: How do you evolve a Kafka-based architecture?**
 **A:** (1) Schema Registry for backward-compatible evolution. (2) Tiered storage to control costs. (3) KRaft for simplified operations. (4) Kafka Connect for integration. (5) Schema-per-domain (multiple topics per service). (6) Domain-driven design: bounded contexts map to topics.
 
-### 22.8 Scenario-based questions <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'22.8%20Scenario-based%20questions'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="22.8 Scenario-based questions" title="Ask ChatGPT about this section">💬</a>
+### 22.8 Scenario-based questions <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'22.8%20Scenario-based%20questions'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="22.8 Scenario-based questions" title="Ask ChatGPT about this section">💬</a>
 
 **Scenario 1:** Consumer lag is growing. What's wrong?
 **Answer:** (1) Consumer processing slower than producer. (2) Check consumer thread for stuck processing. (3) Add more consumers (up to partition count). (4) Optimize consumer (batch, async). (5) Check downstream service if consumer is blocked by it.
@@ -1794,7 +1794,7 @@ A partition key that's heavily used (e.g., a popular user) causes one partition 
 
 ## 23. References
 
-### 23.1 Official Documentation <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'23.1%20Official%20Documentation'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="23.1 Official Documentation" title="Ask ChatGPT about this section">💬</a>
+### 23.1 Official Documentation <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'23.1%20Official%20Documentation'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="23.1 Official Documentation" title="Ask ChatGPT about this section">💬</a>
 
 - **Apache Kafka:** <https://kafka.apache.org/documentation/>
 - **Kafka Streams:** <https://kafka.apache.org/documentation/streams/>
@@ -1802,14 +1802,14 @@ A partition key that's heavily used (e.g., a popular user) causes one partition 
 - **RabbitMQ:** <https://www.rabbitmq.com/docs>
 - **Apache Pulsar:** <https://pulsar.apache.org/docs/>
 
-### 23.2 Specifications <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'23.2%20Specifications'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="23.2 Specifications" title="Ask ChatGPT about this section">💬</a>
+### 23.2 Specifications <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'23.2%20Specifications'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="23.2 Specifications" title="Ask ChatGPT about this section">💬</a>
 
 - **AMQP 0-9-1:** <https://www.amqp.org/specification/0-9-1>
 - **AMQP 1.0:** <https://www.amqp.org/specification/1.0>
 - **MQTT:** <https://docs.oasis-open.org/mqtt/mqtt/v5.0/mqtt-v5.0.html>
 - **Kafka Improvement Proposals (KIPs):** <https://cwiki.apache.org/confluence/display/KAFKA/Kafka+Improvement+Proposals>
 
-### 23.3 Foundational papers and engineering blogs <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'23.3%20Foundational%20papers%20and%20engineering%20blogs'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="23.3 Foundational papers and engineering blogs" title="Ask ChatGPT about this section">💬</a>
+### 23.3 Foundational papers and engineering blogs <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'23.3%20Foundational%20papers%20and%20engineering%20blogs'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="23.3 Foundational papers and engineering blogs" title="Ask ChatGPT about this section">💬</a>
 
 - **"Kafka: A Distributed Messaging System for Log Processing"** — LinkedIn engineering blog.
 - **"The Log: What every software engineer should know about real-time data's unifying abstraction"** — Jay Kreps (LinkedIn).
@@ -1818,7 +1818,7 @@ A partition key that's heavily used (e.g., a popular user) causes one partition 
 - **"Paxos Made Simple"** — Lamport.
 - **"Time, Clocks, and the Ordering of Events in a Distributed System"** — Lamport.
 
-### 23.4 Books <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'23.4%20Books'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="23.4 Books" title="Ask ChatGPT about this section">💬</a>
+### 23.4 Books <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'23.4%20Books'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="23.4 Books" title="Ask ChatGPT about this section">💬</a>
 
 - *Kafka: The Definitive Guide* — Gwen Shapira, Todd Palino, Rajini Sivaram, Krit Petty (O'Reilly, 2nd edition).
 - *Effective Kafka* — Emil Koutanov (Leanpub).
@@ -1828,7 +1828,7 @@ A partition key that's heavily used (e.g., a popular user) causes one partition 
 - *Mastering Apache Pulsar* — Scalablyted (Leanpub).
 - *Designing Data-Intensive Applications* — Martin Kleppmann (O'Reilly).
 
-### 23.5 Engineering blogs <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'23.5%20Engineering%20blogs'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="23.5 Engineering blogs" title="Ask ChatGPT about this section">💬</a>
+### 23.5 Engineering blogs <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'23.5%20Engineering%20blogs'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="23.5 Engineering blogs" title="Ask ChatGPT about this section">💬</a>
 
 - **Confluent Blog:** <https://www.confluent.io/blog/>
 - **LinkedIn Engineering:** <https://engineering.linkedin.com/>
@@ -1838,7 +1838,7 @@ A partition key that's heavily used (e.g., a popular user) causes one partition 
 - **Pinterest Engineering:** <https://medium.com/pinterest-engineering/>
 - **Discord Engineering:** <https://discord.com/blog/tag/engineering>
 
-### 23.6 Tools <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'23.6%20Tools'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="23.6 Tools" title="Ask ChatGPT about this section">💬</a>
+### 23.6 Tools <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'23.6%20Tools'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="23.6 Tools" title="Ask ChatGPT about this section">💬</a>
 
 - **Kafka CLI:** `kafka-topics.sh`, `kafka-consumer-groups.sh`, etc.
 - **Kafka Connect:** source/sink connectors.
@@ -1850,13 +1850,13 @@ A partition key that's heavily used (e.g., a popular user) causes one partition 
 - **kcat:** <https://github.com/edenhill/kcat>
 - **Kowl (Kafka Web UI):** <https://github.com/cloudhut/kowl>
 
-### 23.7 Conferences <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'23.7%20Conferences'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="23.7 Conferences" title="Ask ChatGPT about this section">💬</a>
+### 23.7 Conferences <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'23.7%20Conferences'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="23.7 Conferences" title="Ask ChatGPT about this section">💬</a>
 
 - **Kafka Summit:** annual conference.
 - **QCon:** distributed systems track.
 - **Current:** <https://current.confluent.io/>
 
-### 23.8 Free online courses <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'23.8%20Free%20online%20courses'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="23.8 Free online courses" title="Ask ChatGPT about this section">💬</a>
+### 23.8 Free online courses <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'23.8%20Free%20online%20courses'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="23.8 Free online courses" title="Ask ChatGPT about this section">💬</a>
 
 - **Confluent Developer:** <https://developer.confluent.io/>
 - **Apache Kafka Fundamentals:** <https://www.confluent.io/training/>
@@ -1867,7 +1867,7 @@ A partition key that's heavily used (e.g., a popular user) causes one partition 
 
 These configs are anchored to Kafka 3.x. Verify against your specific build.
 
-### Broker <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Broker'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Broker" title="Ask ChatGPT about this section">💬</a>
+### Broker <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Broker'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Broker" title="Ask ChatGPT about this section">💬</a>
 
 | Config | Default | Purpose |
 |--------|---------|---------|
@@ -1883,7 +1883,7 @@ These configs are anchored to Kafka 3.x. Verify against your specific build.
 | `num.io.threads` | 8 | Disk I/O threads |
 | `auto.create.topics.enable` | true | Auto-create topics on produce |
 
-### Producer <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Producer'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Producer" title="Ask ChatGPT about this section">💬</a>
+### Producer <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Producer'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Producer" title="Ask ChatGPT about this section">💬</a>
 
 | Config | Default | Purpose |
 |--------|---------|---------|
@@ -1897,7 +1897,7 @@ These configs are anchored to Kafka 3.x. Verify against your specific build.
 | `linger.ms` | 0 | Wait time to fill batch |
 | `max.in.flight.requests.per.connection` | 5 | Max unacked requests |
 
-### Consumer <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Consumer'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Consumer" title="Ask ChatGPT about this section">💬</a>
+### Consumer <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Consumer'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Consumer" title="Ask ChatGPT about this section">💬</a>
 
 | Config | Default | Purpose |
 |--------|---------|---------|

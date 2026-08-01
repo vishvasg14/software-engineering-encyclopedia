@@ -56,7 +56,7 @@ The SQL standard is organized in multiple parts:
 
 ## Key concepts in the standard
 
-### Data types <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Data%20types'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Data types" title="Ask ChatGPT about this section">💬</a>
+### Data types <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Data%20types'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Data types" title="Ask ChatGPT about this section">💬</a>
 
 - **CHARACTER VARYING / VARCHAR** — variable-length string.
 - **CHARACTER / CHAR** — fixed-length string (padded with spaces).
@@ -67,7 +67,7 @@ The SQL standard is organized in multiple parts:
 - **BOOLEAN** — truth value.
 - **BLOB**, **CLOB**, **NCLOB** — large objects.
 
-### Statements <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Statements'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Statements" title="Ask ChatGPT about this section">💬</a>
+### Statements <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Statements'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Statements" title="Ask ChatGPT about this section">💬</a>
 
 - **SELECT** (with optional `INTO` for embedded SQL).
 - **INSERT**, **UPDATE**, **DELETE**, **MERGE** (since SQL:2003).
@@ -76,7 +76,7 @@ The SQL standard is organized in multiple parts:
 - **COMMIT**, **ROLLBACK** (TCL).
 - **CALL** — invoke a stored procedure (SQL/PSM).
 
-### Clauses <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Clauses'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Clauses" title="Ask ChatGPT about this section">💬</a>
+### Clauses <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Clauses'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Clauses" title="Ask ChatGPT about this section">💬</a>
 
 - **FROM** — source tables, subqueries, joins.
 - **WHERE** — row filter.
@@ -88,7 +88,7 @@ The SQL standard is organized in multiple parts:
 - **WITH** — CTEs (SQL:1999).
 - **WINDOW** — window function definitions (SQL:2003).
 
-### Predicates <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Predicates'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Predicates" title="Ask ChatGPT about this section">💬</a>
+### Predicates <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Predicates'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Predicates" title="Ask ChatGPT about this section">💬</a>
 
 - **Comparison:** `=`, `<>`, `<`, `>`, `<=`, `>=`.
 - **Logical:** `AND`, `OR`, `NOT`.
@@ -99,13 +99,13 @@ The SQL standard is organized in multiple parts:
 - **Quantified:** `= ANY`, `<> ALL`.
 - **Pattern matching:** `LIKE`, `SIMILAR TO` (SQL:1999), `REGEX` (SQL:2023).
 
-### Set operations <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Set%20operations'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Set operations" title="Ask ChatGPT about this section">💬</a>
+### Set operations <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Set%20operations'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Set operations" title="Ask ChatGPT about this section">💬</a>
 
 - **UNION** — set union (deduplicates).
 - **UNION ALL** — bag union (preserves duplicates).
 - **INTERSECT**, **EXCEPT** (a.k.a. `MINUS` in Oracle).
 
-### Joins <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Joins'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Joins" title="Ask ChatGPT about this section">💬</a>
+### Joins <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Joins'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Joins" title="Ask ChatGPT about this section">💬</a>
 
 - **INNER JOIN**
 - **LEFT OUTER JOIN**, **RIGHT OUTER JOIN**, **FULL OUTER JOIN**
@@ -113,7 +113,7 @@ The SQL standard is organized in multiple parts:
 - **CROSS JOIN**
 - **LATERAL** (SQL:2003+, most implementations)
 
-### Subqueries <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Subqueries'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Subqueries" title="Ask ChatGPT about this section">💬</a>
+### Subqueries <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Subqueries'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Subqueries" title="Ask ChatGPT about this section">💬</a>
 
 - **Scalar subqueries** (single value).
 - **Row subqueries** (single row).
@@ -121,7 +121,7 @@ The SQL standard is organized in multiple parts:
 - **Correlated subqueries** (reference outer query).
 - **IN, EXISTS, ANY, ALL** — subquery predicates.
 
-### Common Table Expressions (CTEs) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Common%20Table%20Expressions%20(CTEs)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Common Table Expressions (CTEs)" title="Ask ChatGPT about this section">💬</a>
+### Common Table Expressions (CTEs) <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Common%20Table%20Expressions%20(CTEs)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Common Table Expressions (CTEs)" title="Ask ChatGPT about this section">💬</a>
 
 ```sql
 WITH cte_name AS (
@@ -130,7 +130,7 @@ WITH cte_name AS (
 SELECT ... FROM cte_name;
 ```
 
-### Recursive CTEs <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Recursive%20CTEs'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Recursive CTEs" title="Ask ChatGPT about this section">💬</a>
+### Recursive CTEs <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Recursive%20CTEs'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Recursive CTEs" title="Ask ChatGPT about this section">💬</a>
 
 ```sql
 WITH RECURSIVE t(n) AS (
@@ -141,7 +141,7 @@ WITH RECURSIVE t(n) AS (
 SELECT * FROM t;
 ```
 
-### Window functions (SQL:2003) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Window%20functions%20(SQL%3A2003)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Window functions (SQL:2003)" title="Ask ChatGPT about this section">💬</a>
+### Window functions (SQL:2003) <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Window%20functions%20(SQL%3A2003)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Window functions (SQL:2003)" title="Ask ChatGPT about this section">💬</a>
 
 ```sql
 SELECT
@@ -152,7 +152,7 @@ SELECT
 FROM employees;
 ```
 
-### Isolation levels (SQL:1999) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Isolation%20levels%20(SQL%3A1999)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Isolation levels (SQL:1999)" title="Ask ChatGPT about this section">💬</a>
+### Isolation levels (SQL:1999) <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Isolation%20levels%20(SQL%3A1999)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Isolation levels (SQL:1999)" title="Ask ChatGPT about this section">💬</a>
 
 - `READ UNCOMMITTED`
 - `READ COMMITTED`
@@ -165,7 +165,7 @@ The standard also defines three phenomena:
 - **Non-repeatable read** — same query returns different data within a transaction.
 - **Phantom read** — query returns rows that didn't exist before (or fewer).
 
-### SQL/PSM (Persistent Stored Modules) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'SQL%2FPSM%20(Persistent%20Stored%20Modules)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="SQL/PSM (Persistent Stored Modules)" title="Ask ChatGPT about this section">💬</a>
+### SQL/PSM (Persistent Stored Modules) <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'SQL%2FPSM%20(Persistent%20Stored%20Modules)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="SQL/PSM (Persistent Stored Modules)" title="Ask ChatGPT about this section">💬</a>
 
 Procedural language for stored procedures:
 

@@ -24,7 +24,7 @@ Refactoring is the process of changing a software system in a way that does not 
 
 ## Refactoring catalog (selected)
 
-### Composing methods <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Composing%20methods'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Composing methods" title="Ask ChatGPT about this section">💬</a>
+### Composing methods <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Composing%20methods'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Composing methods" title="Ask ChatGPT about this section">💬</a>
 
 - **Extract Method:** turn a fragment into a method with a name.
 - **Inline Method:** put the method body into its caller.
@@ -36,7 +36,7 @@ Refactoring is the process of changing a software system in a way that does not 
 - **Replace Method with Method Object:** turn a long method into its own object.
 - **Substitute Algorithm:** swap a complex algorithm for a simpler one.
 
-### Moving features <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Moving%20features'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Moving features" title="Ask ChatGPT about this section">💬</a>
+### Moving features <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Moving%20features'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Moving features" title="Ask ChatGPT about this section">💬</a>
 
 - **Move Method:** move a method to the class that uses it most.
 - **Move Field:** move a field to the class that uses it most.
@@ -45,7 +45,7 @@ Refactoring is the process of changing a software system in a way that does not 
 - **Inline Class:** move all features into another class.
 - **Hide Delegate:** encapsulate the delegation.
 
-### Organizing data <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Organizing%20data'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Organizing data" title="Ask ChatGPT about this section">💬</a>
+### Organizing data <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Organizing%20data'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Organizing data" title="Ask ChatGPT about this section">💬</a>
 
 - **Replace Magic Number with Symbolic Constant:** name the constant.
 - **Encapsulate Field:** make fields private with accessors.
@@ -55,7 +55,7 @@ Refactoring is the process of changing a software system in a way that does not 
 - **Replace Type Code with State/Strategy:** when state affects behavior.
 - **Replace Array with Object:** when an array represents a record.
 
-### Simplifying conditional logic <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Simplifying%20conditional%20logic'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Simplifying conditional logic" title="Ask ChatGPT about this section">💬</a>
+### Simplifying conditional logic <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Simplifying%20conditional%20logic'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Simplifying conditional logic" title="Ask ChatGPT about this section">💬</a>
 
 - **Decompose Conditional:** extract methods from if/else.
 - **Consolidate Conditional Expression:** combine ifs with same result.
@@ -64,7 +64,7 @@ Refactoring is the process of changing a software system in a way that does not 
 - **Introduce Null Object:** replace null checks with a NullObject.
 - **Introduce Assertion:** make assumptions explicit.
 
-### Simplifying method calls <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Simplifying%20method%20calls'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Simplifying method calls" title="Ask ChatGPT about this section">💬</a>
+### Simplifying method calls <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Simplifying%20method%20calls'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Simplifying method calls" title="Ask ChatGPT about this section">💬</a>
 
 - **Rename Method:** clear names.
 - **Add Parameter:** add missing information.
@@ -79,7 +79,7 @@ Refactoring is the process of changing a software system in a way that does not 
 - **Replace Constructor with Factory Method:** use factory.
 - **Replace Error Code with Exception:** use exceptions.
 
-### Dealing with generalization <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Dealing%20with%20generalization'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Dealing with generalization" title="Ask ChatGPT about this section">💬</a>
+### Dealing with generalization <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Dealing%20with%20generalization'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Dealing with generalization" title="Ask ChatGPT about this section">💬</a>
 
 - **Pull Up Method:** move subclass method to superclass.
 - **Push Down Method:** move superclass method to subclass.
@@ -95,7 +95,7 @@ Refactoring is the process of changing a software system in a way that does not 
 
 A **code smell** is a surface indication of a deeper problem. From Fowler's book.
 
-### Bloaters <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Bloaters'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Bloaters" title="Ask ChatGPT about this section">💬</a>
+### Bloaters <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Bloaters'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Bloaters" title="Ask ChatGPT about this section">💬</a>
 
 - Long Method
 - Large Class
@@ -104,14 +104,14 @@ A **code smell** is a surface indication of a deeper problem. From Fowler's book
 - Data Clumps
 - Switch Statement
 
-### Object-Orientation Abusers <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Object-Orientation%20Abusers'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Object-Orientation Abusers" title="Ask ChatGPT about this section">💬</a>
+### Object-Orientation Abusers <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Object-Orientation%20Abusers'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Object-Orientation Abusers" title="Ask ChatGPT about this section">💬</a>
 
 - Switch Statement (when polymorphism is better)
 - Temporary Field
 - Refused Bequest
 - Alternative Classes with Different Interfaces
 
-### Change Preventers <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Change%20Preventers'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Change Preventers" title="Ask ChatGPT about this section">💬</a>
+### Change Preventers <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Change%20Preventers'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Change Preventers" title="Ask ChatGPT about this section">💬</a>
 
 - Divergent Change
 - Shotgun Surgery

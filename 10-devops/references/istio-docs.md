@@ -10,7 +10,7 @@ The authoritative source for Istio is the official documentation. This file cata
 
 ## Topics referenced in the document
 
-### Concepts <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Concepts'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Concepts" title="Ask ChatGPT about this section">💬</a>
+### Concepts <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Concepts'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Concepts" title="Ask ChatGPT about this section">💬</a>
 
 | Topic | URL |
 |-------|-----|
@@ -20,7 +20,7 @@ The authoritative source for Istio is the official documentation. This file cata
 | Sidecar injection | <https://istio.io/latest/docs/setup/additional-setup/sidecar-injection/> |
 | Ambient mesh | <https://istio.io/latest/docs/ambient/> |
 
-### Traffic management <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Traffic%20management'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Traffic management" title="Ask ChatGPT about this section">💬</a>
+### Traffic management <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Traffic%20management'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Traffic management" title="Ask ChatGPT about this section">💬</a>
 
 | Topic | URL |
 |-------|-----|
@@ -31,7 +31,7 @@ The authoritative source for Istio is the official documentation. This file cata
 | Traffic splitting | <https://istio.io/latest/docs/concepts/traffic-management/> |
 | Canary deployments | <https://istio.io/latest/docs/setup/upgrade/canary/> |
 
-### Security <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Security'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Security" title="Ask ChatGPT about this section">💬</a>
+### Security <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Security'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Security" title="Ask ChatGPT about this section">💬</a>
 
 | Topic | URL |
 |-------|-----|
@@ -41,7 +41,7 @@ The authoritative source for Istio is the official documentation. This file cata
 | AuthorizationPolicy | <https://istio.io/latest/docs/reference/config/security/authorization_policy/> |
 | JWT | <https://istio.io/latest/docs/concepts/security/#jwt> |
 
-### Observability <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Observability'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Observability" title="Ask ChatGPT about this section">💬</a>
+### Observability <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Observability'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Observability" title="Ask ChatGPT about this section">💬</a>
 
 | Topic | URL |
 |-------|-----|
@@ -51,7 +51,7 @@ The authoritative source for Istio is the official documentation. This file cata
 | Traces | <https://istio.io/latest/docs/concepts/observability/#traces> |
 | Access logs | <https://istio.io/latest/docs/concepts/observability/#access-logs> |
 
-### Configuration <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Configuration'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Configuration" title="Ask ChatGPT about this section">💬</a>
+### Configuration <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Configuration'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Configuration" title="Ask ChatGPT about this section">💬</a>
 
 | Topic | URL |
 |-------|-----|

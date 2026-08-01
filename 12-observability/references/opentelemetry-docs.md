@@ -47,7 +47,7 @@ The authoritative source for OpenTelemetry is the official documentation. This f
 
 ## Concepts
 
-### Signals <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Signals'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Signals" title="Ask ChatGPT about this section">💬</a>
+### Signals <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Signals'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Signals" title="Ask ChatGPT about this section">💬</a>
 
 - **Trace:** distributed request path.
 - **Span:** unit of work.
@@ -55,7 +55,7 @@ The authoritative source for OpenTelemetry is the official documentation. This f
 - **Log:** discrete event.
 - **Baggage:** key-value context propagation.
 
-### Span attributes <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Span%20attributes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Span attributes" title="Ask ChatGPT about this section">💬</a>
+### Span attributes <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Span%20attributes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Span attributes" title="Ask ChatGPT about this section">💬</a>
 
 - **Span kind:** CLIENT, SERVER, PRODUCER, CONSUMER, INTERNAL.
 - **Span status:** UNSET, OK, ERROR.
@@ -63,7 +63,7 @@ The authoritative source for OpenTelemetry is the official documentation. This f
 - **Events:** timestamped annotations.
 - **Links:** related spans across services.
 
-### Context propagation <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Context%20propagation'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Context propagation" title="Ask ChatGPT about this section">💬</a>
+### Context propagation <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Context%20propagation'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Context propagation" title="Ask ChatGPT about this section">💬</a>
 
 - **W3C Trace Context:** standard for trace IDs.
 - **W3C Baggage:** standard for key-value context.
@@ -111,7 +111,7 @@ service:
       exporters: [otlp/jaeger]
 ```
 
-### Receivers <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Receivers'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Receivers" title="Ask ChatGPT about this section">💬</a>
+### Receivers <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Receivers'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Receivers" title="Ask ChatGPT about this section">💬</a>
 
 - OTLP (gRPC, HTTP).
 - Prometheus.
@@ -121,7 +121,7 @@ service:
 - Fluentd.
 - File logs.
 
-### Processors <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Processors'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Processors" title="Ask ChatGPT about this section">💬</a>
+### Processors <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Processors'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Processors" title="Ask ChatGPT about this section">💬</a>
 
 - batch
 - memory_limiter
@@ -132,7 +132,7 @@ service:
 - probabilistic_sampler
 - filter
 
-### Exporters <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Exporters'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Exporters" title="Ask ChatGPT about this section">💬</a>
+### Exporters <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Exporters'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Exporters" title="Ask ChatGPT about this section">💬</a>
 
 - OTLP
 - Prometheus
@@ -144,7 +144,7 @@ service:
 - File
 - Logging
 
-### Extensions <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Extensions'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Extensions" title="Ask ChatGPT about this section">💬</a>
+### Extensions <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Extensions'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Extensions" title="Ask ChatGPT about this section">💬</a>
 
 - health_check
 - pprof

@@ -16,7 +16,7 @@ The authoritative source for Apache Kafka is the official documentation. This fi
 
 ## Key sections referenced in this document
 
-### Quick Start <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Quick%20Start'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Quick Start" title="Ask ChatGPT about this section">💬</a>
+### Quick Start <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Quick%20Start'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Quick Start" title="Ask ChatGPT about this section">💬</a>
 
 | Topic | URL |
 |-------|-----|
@@ -24,7 +24,7 @@ The authoritative source for Apache Kafka is the official documentation. This fi
 | Use Cases | <https://kafka.apache.org/uses> |
 | Ecosystem | <https://kafka.apache.org/ecosystem> |
 
-### Documentation <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Documentation'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Documentation" title="Ask ChatGPT about this section">💬</a>
+### Documentation <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Documentation'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Documentation" title="Ask ChatGPT about this section">💬</a>
 
 | Topic | URL |
 |-------|-----|
@@ -37,7 +37,7 @@ The authoritative source for Apache Kafka is the official documentation. This fi
 | Log | <https://kafka.apache.org/documentation/#intro_log> |
 | Distribution | <https://kafka.apache.org/documentation/#distribution_impl> |
 
-### Design <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Design'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Design" title="Ask ChatGPT about this section">💬</a>
+### Design <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Design'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Design" title="Ask ChatGPT about this section">💬</a>
 
 | Topic | URL |
 |-------|-----|
@@ -52,7 +52,7 @@ The authoritative source for Apache Kafka is the official documentation. This fi
 | Log Compaction | <https://kafka.apache.org/documentation/#compaction> |
 | Quotas | <https://kafka.apache.org/documentation/#design_quotas> |
 
-### Configuration <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Configuration'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Configuration" title="Ask ChatGPT about this section">💬</a>
+### Configuration <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Configuration'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Configuration" title="Ask ChatGPT about this section">💬</a>
 
 | Topic | URL |
 |-------|-----|
@@ -62,7 +62,7 @@ The authoritative source for Apache Kafka is the official documentation. This fi
 | Topic Configs | <https://kafka.apache.org/documentation/#topicconfigs> |
 | Admin Client Configs | <https://kafka.apache.org/documentation/#adminclientconfigs> |
 
-### Operations <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Operations'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Operations" title="Ask ChatGPT about this section">💬</a>
+### Operations <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Operations'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Operations" title="Ask ChatGPT about this section">💬</a>
 
 | Topic | URL |
 |-------|-----|
@@ -76,7 +76,7 @@ The authoritative source for Apache Kafka is the official documentation. This fi
 | Monitoring | <https://kafka.apache.org/documentation/#monitoring> |
 | ZooKeeper | <https://kafka.apache.org/documentation/#zk> |
 
-### Kafka Streams <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Kafka%20Streams'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Kafka Streams" title="Ask ChatGPT about this section">💬</a>
+### Kafka Streams <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Kafka%20Streams'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Kafka Streams" title="Ask ChatGPT about this section">💬</a>
 
 | Topic | URL |
 |-------|-----|
@@ -92,7 +92,7 @@ The authoritative source for Apache Kafka is the official documentation. This fi
 | Windowing | <https://kafka.apache.org/documentation/streams/developer-guide/dsl-api.html#streams-concepts-windowing> |
 | Joins | <https://kafka.apache.org/documentation/streams/developer-guide/dsl-api.html#streams-concepts-joins> |
 
-### Kafka Connect <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Kafka%20Connect'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Kafka Connect" title="Ask ChatGPT about this section">💬</a>
+### Kafka Connect <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Kafka%20Connect'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Kafka Connect" title="Ask ChatGPT about this section">💬</a>
 
 | Topic | URL |
 |-------|-----|
@@ -101,7 +101,7 @@ The authoritative source for Apache Kafka is the official documentation. This fi
 | Source Connectors | <https://docs.confluent.io/platform/current/connect/devguide.html> |
 | Sink Connectors | <https://docs.confluent.io/platform/current/connect/devguide.html> |
 
-### Security <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Security'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Security" title="Ask ChatGPT about this section">💬</a>
+### Security <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Security'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Security" title="Ask ChatGPT about this section">💬</a>
 
 | Topic | URL |
 |-------|-----|
@@ -110,7 +110,7 @@ The authoritative source for Apache Kafka is the official documentation. This fi
 | Authentication | <https://kafka.apache.org/documentation/#security_sasl> |
 | Authorization | <https://kafka.apache.org/documentation/#security_authz> |
 
-### KRaft <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'KRaft'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="KRaft" title="Ask ChatGPT about this section">💬</a>
+### KRaft <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'KRaft'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="KRaft" title="Ask ChatGPT about this section">💬</a>
 
 | Topic | URL |
 |-------|-----|

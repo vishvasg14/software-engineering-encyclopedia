@@ -110,23 +110,23 @@ graph TB
 
 ## 3. Five Ws + One H
 
-### What <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'What'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="What" title="Ask ChatGPT about this section">💬</a>
+### What <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'What'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="What" title="Ask ChatGPT about this section">💬</a>
 
 **REST** is an architectural style that uses HTTP methods (GET, POST, PUT, DELETE, PATCH) on resources identified by URLs, with stateless communication and a uniform interface. **GraphQL** is a query language and runtime for APIs that lets clients specify exact data requirements. **gRPC** is a high-performance RPC framework using HTTP/2 and Protocol Buffers. **WebSocket** is a protocol that upgrades an HTTP connection to a bidirectional, full-duplex, long-lived TCP socket.
 
-### Why <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Why'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Why" title="Ask ChatGPT about this section">💬</a>
+### Why <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Why'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Why" title="Ask ChatGPT about this section">💬</a>
 
 API styles exist because applications need to communicate across networks. REST solved the chaos of SOAP. GraphQL solved over-fetching and under-fetching in mobile-era REST. gRPC solved performance and type safety for service-to-service. WebSocket solved real-time bidirectional needs that HTTP request-response couldn't.
 
-### When <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'When'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="When" title="Ask ChatGPT about this section">💬</a>
+### When <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'When'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="When" title="Ask ChatGPT about this section">💬</a>
 
 REST has been the dominant web API style since ~2005. GraphQL became mainstream in 2015-2020. gRPC is widely used at Google, Netflix, Square, and others since ~2017. WebSocket has been used for real-time features (chat, trading, gaming) since ~2012.
 
-### Where <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Where'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Where" title="Ask ChatGPT about this section">💬</a>
+### Where <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Where'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Where" title="Ask ChatGPT about this section">💬</a>
 
 REST: GitHub, Twitter (older), Stripe, Twilio, virtually all public APIs. GraphQL: GitHub v4, Shopify, Facebook, Pinterest. gRPC: Netflix, Square, Google internal, CockroachDB. WebSocket: Slack, Discord, trading platforms, online games.
 
-### Who <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Who'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Who" title="Ask ChatGPT about this section">💬</a>
+### Who <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Who'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Who" title="Ask ChatGPT about this section">💬</a>
 
 - **REST:** Roy Fielding (2000 dissertation); standardized via HTTP specs.
 - **GraphQL:** Lee Byron, Dan Schafer, Nick Schrock at Facebook (2012); open-sourced 2015; now a Linux Foundation project.
@@ -134,13 +134,13 @@ REST: GitHub, Twitter (older), Stripe, Twilio, virtually all public APIs. GraphQ
 - **WebSocket:** Ian Hickson, Michael Carter (HTML5 spec); RFC 6455 (2011).
 - **OpenAPI:** OpenAPI Initiative (Linux Foundation).
 
-### How (one-paragraph preview) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'How%20(one-paragraph%20preview)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="How (one-paragraph preview)" title="Ask ChatGPT about this section">💬</a>
+### How (one-paragraph preview) <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'How%20(one-paragraph%20preview)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="How (one-paragraph preview)" title="Ask ChatGPT about this section">💬</a>
 
 A client constructs a request (REST: HTTP + JSON; GraphQL: query string + variables; gRPC: Protobuf binary frame over HTTP/2; WebSocket: HTTP upgrade handshake + frames). It sends the request to a server. The server deserializes, validates, processes, and returns a serialized response. Modern APIs sit behind API gateways (Kong, Envoy, Apigee) that add auth, rate limiting, caching, and observability. Each style trades off complexity, performance, and developer ergonomics in different ways.
 
 ## 4. History
 
-### 4.1 Origins (1991-2010) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'4.1%20Origins%20(1991-2010)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="4.1 Origins (1991-2010)" title="Ask ChatGPT about this section">💬</a>
+### 4.1 Origins (1991-2010) <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'4.1%20Origins%20(1991-2010)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="4.1 Origins (1991-2010)" title="Ask ChatGPT about this section">💬</a>
 
 - **1991** — Tim Berners-Lee's HTTP/0.9 specification.
 - **1996** — HTTP/1.0 standardization (RFC 1945).
@@ -148,7 +148,7 @@ A client constructs a request (REST: HTTP + JSON; GraphQL: query string + variab
 - **2000** — Roy Fielding's dissertation defines REST (representational state transfer) at UC Irvine.
 - **2001** — SOAP (Simple Object Access Protocol) emerges as the dominant enterprise API style.
 
-### 4.2 The REST revolution (2010-2015) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'4.2%20The%20REST%20revolution%20(2010-2015)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="4.2 The REST revolution (2010-2015)" title="Ask ChatGPT about this section">💬</a>
+### 4.2 The REST revolution (2010-2015) <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'4.2%20The%20REST%20revolution%20(2010-2015)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="4.2 The REST revolution (2010-2015)" title="Ask ChatGPT about this section">💬</a>
 
 - **2010** — Stripe launches a REST API that becomes a model for clean API design.
 - **2011** — Twitter reinvents over REST after the famous "fail whale" era of SOAP-style complexity.
@@ -157,7 +157,7 @@ A client constructs a request (REST: HTTP + JSON; GraphQL: query string + variab
 - **2015** — Facebook open-sources GraphQL; gRPC 1.0 released.
 - **2015** — RFC 7540 standardizes HTTP/2.
 
-### 4.3 The diversification era (2015-2022) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'4.3%20The%20diversification%20era%20(2015-2022)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="4.3 The diversification era (2015-2022)" title="Ask ChatGPT about this section">💬</a>
+### 4.3 The diversification era (2015-2022) <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'4.3%20The%20diversification%20era%20(2015-2022)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="4.3 The diversification era (2015-2022)" title="Ask ChatGPT about this section">💬</a>
 
 - **2016** — Swagger becomes OpenAPI 3.0; the OpenAPI Initiative is founded.
 - **2017** — HTTP/2 adoption becomes widespread.
@@ -167,13 +167,13 @@ A client constructs a request (REST: HTTP + JSON; GraphQL: query string + variab
 - **2022** — HTTP/3 standard (RFC 9114).
 - **2024** — OpenAPI 3.1.1 published.
 
-### 4.4 WebSocket timeline <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'4.4%20WebSocket%20timeline'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="4.4 WebSocket timeline" title="Ask ChatGPT about this section">💬</a>
+### 4.4 WebSocket timeline <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'4.4%20WebSocket%20timeline'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="4.4 WebSocket timeline" title="Ask ChatGPT about this section">💬</a>
 
 - **2011** — WebSocket RFC 6455.
 - **2016** — WSS (WebSocket Secure) widely deployed.
 - **2018+** — WebSocket adoption for chat, collaboration tools.
 
-### 4.5 Governance <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'4.5%20Governance'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="4.5 Governance" title="Ask ChatGPT about this section">💬</a>
+### 4.5 Governance <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'4.5%20Governance'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="4.5 Governance" title="Ask ChatGPT about this section">💬</a>
 
 - **HTTP:** IETF (Internet Engineering Task Force) + WHATWG.
 - **REST:** No formal standards body; community-driven.
@@ -201,7 +201,7 @@ timeline
 
 ## 5. Problem Statement
 
-### 5.1 What API styles solve <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'5.1%20What%20API%20styles%20solve'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="5.1 What API styles solve" title="Ask ChatGPT about this section">💬</a>
+### 5.1 What API styles solve <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'5.1%20What%20API%20styles%20solve'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="5.1 What API styles solve" title="Ask ChatGPT about this section">💬</a>
 
 Before modern APIs, integration relied on:
 
@@ -216,7 +216,7 @@ Modern API styles address:
 - **Performance** — fast serialization, caching, streaming.
 - **Evolvability** — versioning, federation.
 
-### 5.2 The REST advantage <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'5.2%20The%20REST%20advantage'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="5.2 The REST advantage" title="Ask ChatGPT about this section">💬</a>
+### 5.2 The REST advantage <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'5.2%20The%20REST%20advantage'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="5.2 The REST advantage" title="Ask ChatGPT about this section">💬</a>
 
 REST simplified APIs by:
 
@@ -225,14 +225,14 @@ REST simplified APIs by:
 - Cacheable responses (HTTP semantics).
 - Self-describing messages (Content-Type).
 
-### 5.3 Why not always REST? <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'5.3%20Why%20not%20always%20REST%3F'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="5.3 Why not always REST?" title="Ask ChatGPT about this section">💬</a>
+### 5.3 Why not always REST? <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'5.3%20Why%20not%20always%20REST%3F'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="5.3 Why not always REST?" title="Ask ChatGPT about this section">💬</a>
 
 - **Over-fetching** — REST endpoints return fixed shapes; clients often need subsets.
 - **Under-fetching** — clients need multiple round-trips.
 - **Versioning burden** — supporting multiple API versions.
 - **Performance** — JSON parsing, single-request-per-resource models.
 
-### 5.4 What each API style solved <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'5.4%20What%20each%20API%20style%20solved'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="5.4 What each API style solved" title="Ask ChatGPT about this section">💬</a>
+### 5.4 What each API style solved <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'5.4%20What%20each%20API%20style%20solved'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="5.4 What each API style solved" title="Ask ChatGPT about this section">💬</a>
 
 | Style | Problem solved | Tradeoff |
 |-------|----------------|----------|
@@ -243,7 +243,7 @@ REST simplified APIs by:
 
 ## 6. Real-World Motivation
 
-### 6.1 REST <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'6.1%20REST'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="6.1 REST" title="Ask ChatGPT about this section">💬</a>
+### 6.1 REST <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'6.1%20REST'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="6.1 REST" title="Ask ChatGPT about this section">💬</a>
 
 - **GitHub** — REST API with 1000s of endpoints; OpenAPI spec.
 - **Stripe** — Model REST API; widely emulated.
@@ -252,7 +252,7 @@ REST simplified APIs by:
 - **AWS** — Every AWS service has a REST API.
 - **Every public SaaS** — Stripe, Twilio, Shopify (alongside GraphQL), Slack (alongside WebSocket).
 
-### 6.2 GraphQL <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'6.2%20GraphQL'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="6.2 GraphQL" title="Ask ChatGPT about this section">💬</a>
+### 6.2 GraphQL <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'6.2%20GraphQL'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="6.2 GraphQL" title="Ask ChatGPT about this section">💬</a>
 
 - **GitHub v4 API** — Major GraphQL adopter.
 - **Shopify** — GraphQL storefront API.
@@ -260,7 +260,7 @@ REST simplified APIs by:
 - **Pinterest, Twitter, Yelp, Coursera** — Production GraphQL.
 - **Apollo Federation** — Powers large composed APIs (Expedia, Walmart).
 
-### 6.3 gRPC <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'6.3%20gRPC'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="6.3 gRPC" title="Ask ChatGPT about this section">💬</a>
+### 6.3 gRPC <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'6.3%20gRPC'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="6.3 gRPC" title="Ask ChatGPT about this section">💬</a>
 
 - **Netflix** — Service-to-service communication.
 - **Google** — Internal RPC for nearly everything.
@@ -268,7 +268,7 @@ REST simplified APIs by:
 - **CockroachDB, etcd, containerd** — CNCF projects using gRPC.
 - **Kubernetes** — Internal components communicate via gRPC.
 
-### 6.4 WebSocket <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'6.4%20WebSocket'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="6.4 WebSocket" title="Ask ChatGPT about this section">💬</a>
+### 6.4 WebSocket <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'6.4%20WebSocket'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="6.4 WebSocket" title="Ask ChatGPT about this section">💬</a>
 
 - **Slack** — Real-time messaging.
 - **Discord** — Real-time chat.
@@ -276,7 +276,7 @@ REST simplified APIs by:
 - **Online games** — Multiplayer sync.
 - **VS Code Live Share** — Real-time collaboration.
 
-### 6.5 Economic and engineering motivation <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'6.5%20Economic%20and%20engineering%20motivation'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="6.5 Economic and engineering motivation" title="Ask ChatGPT about this section">💬</a>
+### 6.5 Economic and engineering motivation <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'6.5%20Economic%20and%20engineering%20motivation'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="6.5 Economic and engineering motivation" title="Ask ChatGPT about this section">💬</a>
 
 - **Developer productivity** — declarative interfaces with code generation.
 - **Performance** — gRPC for service-to-service; WebSocket for real-time.
@@ -301,7 +301,7 @@ graph LR
 
 ## 7. Internal Working
 
-### 7.1 The lifecycle of an API request <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'7.1%20The%20lifecycle%20of%20an%20API%20request'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="7.1 The lifecycle of an API request" title="Ask ChatGPT about this section">💬</a>
+### 7.1 The lifecycle of an API request <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'7.1%20The%20lifecycle%20of%20an%20API%20request'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="7.1 The lifecycle of an API request" title="Ask ChatGPT about this section">💬</a>
 
 ```mermaid
 sequenceDiagram
@@ -322,7 +322,7 @@ sequenceDiagram
     Gateway-->>Client: response
 ```
 
-### 7.2 Subsystems that participate <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'7.2%20Subsystems%20that%20participate'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="7.2 Subsystems that participate" title="Ask ChatGPT about this section">💬</a>
+### 7.2 Subsystems that participate <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'7.2%20Subsystems%20that%20participate'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="7.2 Subsystems that participate" title="Ask ChatGPT about this section">💬</a>
 
 | Subsystem | Responsibility |
 |-----------|---------------|
@@ -334,7 +334,7 @@ sequenceDiagram
 | **Observability** | Metrics, logs, traces |
 | **Schema registry** | API contracts (OpenAPI, Protobuf, GraphQL SDL) |
 
-### 7.3 HTTP request/response flow (REST) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'7.3%20HTTP%20request%2Fresponse%20flow%20(REST)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="7.3 HTTP request/response flow (REST)" title="Ask ChatGPT about this section">💬</a>
+### 7.3 HTTP request/response flow (REST) <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'7.3%20HTTP%20request%2Fresponse%20flow%20(REST)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="7.3 HTTP request/response flow (REST)" title="Ask ChatGPT about this section">💬</a>
 
 ```mermaid
 sequenceDiagram
@@ -344,7 +344,7 @@ sequenceDiagram
     S-->>C: HTTP/1.1 200 OK<br/>Content-Type: application/json<br/>ETag: "abc123"<br/>{"id":"123","name":"Alice"}
 ```
 
-### 7.4 HTTP/2 multiplexing <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'7.4%20HTTP%2F2%20multiplexing'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="7.4 HTTP/2 multiplexing" title="Ask ChatGPT about this section">💬</a>
+### 7.4 HTTP/2 multiplexing <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'7.4%20HTTP%2F2%20multiplexing'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="7.4 HTTP/2 multiplexing" title="Ask ChatGPT about this section">💬</a>
 
 ```mermaid
 graph TB
@@ -360,7 +360,7 @@ graph TB
     Client --> Stream3 --> Server
 ```
 
-### 7.5 GraphQL execution flow <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'7.5%20GraphQL%20execution%20flow'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="7.5 GraphQL execution flow" title="Ask ChatGPT about this section">💬</a>
+### 7.5 GraphQL execution flow <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'7.5%20GraphQL%20execution%20flow'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="7.5 GraphQL execution flow" title="Ask ChatGPT about this section">💬</a>
 
 ```mermaid
 sequenceDiagram
@@ -373,7 +373,7 @@ sequenceDiagram
     S-->>C: {"data":{"user":{"name":"Alice","friends":[{"name":"Bob"}]}}}
 ```
 
-### 7.6 gRPC flow <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'7.6%20gRPC%20flow'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="7.6 gRPC flow" title="Ask ChatGPT about this section">💬</a>
+### 7.6 gRPC flow <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'7.6%20gRPC%20flow'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="7.6 gRPC flow" title="Ask ChatGPT about this section">💬</a>
 
 ```mermaid
 sequenceDiagram
@@ -389,7 +389,7 @@ sequenceDiagram
 
 This section is the heart of the document.
 
-### 8.1 REST design <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.1%20REST%20design'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.1 REST design" title="Ask ChatGPT about this section">💬</a>
+### 8.1 REST design <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'8.1%20REST%20design'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.1 REST design" title="Ask ChatGPT about this section">💬</a>
 
 **Resources, not verbs:**
 
@@ -422,7 +422,7 @@ GET    /users/123/orders  # sub-resource
 | 429 | Rate limited |
 | 5xx | Server errors |
 
-### 8.2 REST design patterns <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.2%20REST%20design%20patterns'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.2 REST design patterns" title="Ask ChatGPT about this section">💬</a>
+### 8.2 REST design patterns <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'8.2%20REST%20design%20patterns'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.2 REST design patterns" title="Ask ChatGPT about this section">💬</a>
 
 **Pagination:**
 
@@ -465,7 +465,7 @@ Cache-Control: public, max-age=300
 ETag: "abc123"
 ```
 
-### 8.3 Problem Details (RFC 7807) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.3%20Problem%20Details%20(RFC%207807)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.3 Problem Details (RFC 7807)" title="Ask ChatGPT about this section">💬</a>
+### 8.3 Problem Details (RFC 7807) <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'8.3%20Problem%20Details%20(RFC%207807)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.3 Problem Details (RFC 7807)" title="Ask ChatGPT about this section">💬</a>
 
 ```json
 {
@@ -479,7 +479,7 @@ ETag: "abc123"
 
 Standard `application/problem+json` media type.
 
-### 8.4 GraphQL <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.4%20GraphQL'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.4 GraphQL" title="Ask ChatGPT about this section">💬</a>
+### 8.4 GraphQL <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'8.4%20GraphQL'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.4 GraphQL" title="Ask ChatGPT about this section">💬</a>
 
 **Schema:**
 
@@ -571,7 +571,7 @@ const resolvers = {
 
 Apollo Federation allows multiple GraphQL services to be composed into a unified schema. Each subgraph declares its types; the router composes them.
 
-### 8.5 gRPC <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.5%20gRPC'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.5 gRPC" title="Ask ChatGPT about this section">💬</a>
+### 8.5 gRPC <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'8.5%20gRPC'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.5 gRPC" title="Ask ChatGPT about this section">💬</a>
 
 **Service definition (.proto):**
 
@@ -657,7 +657,7 @@ client = new UserServiceClient(
 );
 ```
 
-### 8.6 WebSocket <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.6%20WebSocket'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.6 WebSocket" title="Ask ChatGPT about this section">💬</a>
+### 8.6 WebSocket <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'8.6%20WebSocket'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.6 WebSocket" title="Ask ChatGPT about this section">💬</a>
 
 **Handshake:**
 
@@ -707,7 +707,7 @@ class ResilientWebSocket {
 - **Redis pub/sub** — broadcast across multiple backend instances.
 - **Kafka** — durable event log (see Messaging doc).
 
-### 8.7 HTTP/2 <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.7%20HTTP%2F2'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.7 HTTP/2" title="Ask ChatGPT about this section">💬</a>
+### 8.7 HTTP/2 <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'8.7%20HTTP%2F2'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.7 HTTP/2" title="Ask ChatGPT about this section">💬</a>
 
 - **Binary framing** — easier parsing.
 - **Multiplexing** — multiple requests over one TCP connection; no head-of-line blocking.
@@ -715,7 +715,7 @@ class ResilientWebSocket {
 - **Server push** — server can push resources (deprecated in practice).
 - **Stream prioritization** — important requests get priority.
 
-### 8.8 HTTP/3 <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.8%20HTTP%2F3'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.8 HTTP/3" title="Ask ChatGPT about this section">💬</a>
+### 8.8 HTTP/3 <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'8.8%20HTTP%2F3'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.8 HTTP/3" title="Ask ChatGPT about this section">💬</a>
 
 - **QUIC transport** — UDP-based.
 - **No head-of-line blocking** — each stream is independent.
@@ -723,7 +723,7 @@ class ResilientWebSocket {
 - **Connection migration** — survives IP address changes (mobile).
 - **Built-in TLS 1.3** — required.
 
-### 8.9 Authentication <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.9%20Authentication'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.9 Authentication" title="Ask ChatGPT about this section">💬</a>
+### 8.9 Authentication <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'8.9%20Authentication'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.9 Authentication" title="Ask ChatGPT about this section">💬</a>
 
 **OAuth 2.1 grant types:**
 
@@ -794,7 +794,7 @@ JWT format: `header.payload.signature`
 - Mutual authentication.
 - Common for service-to-service.
 
-### 8.10 Authorization <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.10%20Authorization'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.10 Authorization" title="Ask ChatGPT about this section">💬</a>
+### 8.10 Authorization <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'8.10%20Authorization'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.10 Authorization" title="Ask ChatGPT about this section">💬</a>
 
 **RBAC (Role-Based Access Control):**
 
@@ -825,7 +825,7 @@ Authorization: Bearer abc
 scope: users:read
 ```
 
-### 8.11 Versioning <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.11%20Versioning'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.11 Versioning" title="Ask ChatGPT about this section">💬</a>
+### 8.11 Versioning <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'8.11%20Versioning'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.11 Versioning" title="Ask ChatGPT about this section">💬</a>
 
 **URI versioning:**
 ```
@@ -845,7 +845,7 @@ GET /users
 Accept: application/vnd.myapi.v2+json
 ```
 
-### 8.12 OpenAPI 3.1 <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'8.12%20OpenAPI%203.1'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.12 OpenAPI 3.1" title="Ask ChatGPT about this section">💬</a>
+### 8.12 OpenAPI 3.1 <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'8.12%20OpenAPI%203.1'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="8.12 OpenAPI 3.1" title="Ask ChatGPT about this section">💬</a>
 
 ```yaml
 openapi: 3.1.0
@@ -885,7 +885,7 @@ OpenAPI 3.1 aligns with JSON Schema 2020-12. Generate clients and servers from s
 
 ## 9. Architecture
 
-### 9.1 API gateway topology <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'9.1%20API%20gateway%20topology'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="9.1 API gateway topology" title="Ask ChatGPT about this section">💬</a>
+### 9.1 API gateway topology <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'9.1%20API%20gateway%20topology'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="9.1 API gateway topology" title="Ask ChatGPT about this section">💬</a>
 
 ```mermaid
 graph TB
@@ -912,7 +912,7 @@ graph TB
     Svc3 --> DB
 ```
 
-### 9.2 REST maturity model (Richardson) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'9.2%20REST%20maturity%20model%20(Richardson)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="9.2 REST maturity model (Richardson)" title="Ask ChatGPT about this section">💬</a>
+### 9.2 REST maturity model (Richardson) <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'9.2%20REST%20maturity%20model%20(Richardson)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="9.2 REST maturity model (Richardson)" title="Ask ChatGPT about this section">💬</a>
 
 ```mermaid
 graph TB
@@ -925,7 +925,7 @@ graph TB
 
 Most public APIs are at Level 2 (e.g., GitHub, Stripe). Level 3 (HATEOAS) is rare.
 
-### 9.3 GraphQL execution pipeline <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'9.3%20GraphQL%20execution%20pipeline'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="9.3 GraphQL execution pipeline" title="Ask ChatGPT about this section">💬</a>
+### 9.3 GraphQL execution pipeline <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'9.3%20GraphQL%20execution%20pipeline'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="9.3 GraphQL execution pipeline" title="Ask ChatGPT about this section">💬</a>
 
 ```mermaid
 graph TB
@@ -937,7 +937,7 @@ graph TB
     DataLoader --> Response["Build response"]
 ```
 
-### 9.4 gRPC streaming <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'9.4%20gRPC%20streaming'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="9.4 gRPC streaming" title="Ask ChatGPT about this section">💬</a>
+### 9.4 gRPC streaming <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'9.4%20gRPC%20streaming'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="9.4 gRPC streaming" title="Ask ChatGPT about this section">💬</a>
 
 ```mermaid
 graph TB
@@ -955,7 +955,7 @@ graph TB
     end
 ```
 
-### 9.5 WebSocket multiplexing <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'9.5%20WebSocket%20multiplexing'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="9.5 WebSocket multiplexing" title="Ask ChatGPT about this section">💬</a>
+### 9.5 WebSocket multiplexing <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'9.5%20WebSocket%20multiplexing'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="9.5 WebSocket multiplexing" title="Ask ChatGPT about this section">💬</a>
 
 ```mermaid
 graph TB
@@ -973,7 +973,7 @@ graph TB
 
 ## 10. Performance
 
-### 10.1 REST performance <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'10.1%20REST%20performance'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="10.1 REST performance" title="Ask ChatGPT about this section">💬</a>
+### 10.1 REST performance <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'10.1%20REST%20performance'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="10.1 REST performance" title="Ask ChatGPT about this section">💬</a>
 
 | Lever | Effect |
 |-------|--------|
@@ -985,7 +985,7 @@ graph TB
 | Pagination | Avoid huge responses |
 | Sparse fieldsets | Avoid over-fetching |
 
-### 10.2 GraphQL performance <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'10.2%20GraphQL%20performance'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="10.2 GraphQL performance" title="Ask ChatGPT about this section">💬</a>
+### 10.2 GraphQL performance <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'10.2%20GraphQL%20performance'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="10.2 GraphQL performance" title="Ask ChatGPT about this section">💬</a>
 
 - **N+1 prevention via DataLoader** — batch and cache resolver calls.
 - **Persisted queries** — server stores the parsed query; client sends hash.
@@ -1003,20 +1003,20 @@ const userLoader = new DataLoader(async (ids) =>
 userLoader.prime('1', user);  // initial cache
 ```
 
-### 10.3 gRPC performance <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'10.3%20gRPC%20performance'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="10.3 gRPC performance" title="Ask ChatGPT about this section">💬</a>
+### 10.3 gRPC performance <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'10.3%20gRPC%20performance'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="10.3 gRPC performance" title="Ask ChatGPT about this section">💬</a>
 
 - **HTTP/2 multiplexing** — many concurrent RPCs over one connection.
 - **Protobuf binary** — 3-10x smaller than JSON.
 - **Streaming** — server can push updates.
 - **Connection pooling** — reuse TCP connections.
 
-### 10.4 WebSocket performance <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'10.4%20WebSocket%20performance'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="10.4 WebSocket performance" title="Ask ChatGPT about this section">💬</a>
+### 10.4 WebSocket performance <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'10.4%20WebSocket%20performance'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="10.4 WebSocket performance" title="Ask ChatGPT about this section">💬</a>
 
 - **Frame compression** (`permessage-deflate`).
 - **Binary frames** instead of text (smaller).
 - **Connection scaling** — sticky sessions, Redis broadcast.
 
-### 10.5 Caching strategies <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'10.5%20Caching%20strategies'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="10.5 Caching strategies" title="Ask ChatGPT about this section">💬</a>
+### 10.5 Caching strategies <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'10.5%20Caching%20strategies'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="10.5 Caching strategies" title="Ask ChatGPT about this section">💬</a>
 
 - **HTTP caching**: `Cache-Control`, `ETag`, `Vary`.
 - **CDN caching**: Cloudflare, Fastly, CloudFront.
@@ -1025,7 +1025,7 @@ userLoader.prime('1', user);  // initial cache
 
 ## 11. Security
 
-### 11.1 OWASP API Security Top 10 <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'11.1%20OWASP%20API%20Security%20Top%2010'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="11.1 OWASP API Security Top 10" title="Ask ChatGPT about this section">💬</a>
+### 11.1 OWASP API Security Top 10 <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'11.1%20OWASP%20API%20Security%20Top%2010'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="11.1 OWASP API Security Top 10" title="Ask ChatGPT about this section">💬</a>
 
 - **API1: Broken Object Level Authorization** — validate user can access resource.
 - **API2: Broken Authentication** — use OAuth2 / OIDC, not custom auth.
@@ -1038,7 +1038,7 @@ userLoader.prime('1', user);  // initial cache
 - **API9: Improper Inventory Management** — track all endpoints.
 - **API10: Unsafe Consumption of APIs** — validate third-party responses.
 
-### 11.2 Common attacks <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'11.2%20Common%20attacks'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="11.2 Common attacks" title="Ask ChatGPT about this section">💬</a>
+### 11.2 Common attacks <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'11.2%20Common%20attacks'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="11.2 Common attacks" title="Ask ChatGPT about this section">💬</a>
 
 - **Injection** (SQL, NoSQL, OS command) — parameterize.
 - **XSS** — escape output.
@@ -1047,7 +1047,7 @@ userLoader.prime('1', user);  // initial cache
 - **Mass assignment** — explicit field allowlists.
 - **Replay attacks** — nonces, timestamps, JWT exp.
 
-### 11.3 JWT best practices <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'11.3%20JWT%20best%20practices'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="11.3 JWT best practices" title="Ask ChatGPT about this section">💬</a>
+### 11.3 JWT best practices <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'11.3%20JWT%20best%20practices'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="11.3 JWT best practices" title="Ask ChatGPT about this section">💬</a>
 
 - Use `alg: RS256` or `ES256` (asymmetric).
 - Validate `iss`, `aud`, `exp`, `nbf`, `iat`.
@@ -1056,7 +1056,7 @@ userLoader.prime('1', user);  // initial cache
 - Don't put PII in JWT (it's base64, not encrypted).
 - Rotate signing keys (`kid` claim).
 
-### 11.4 OAuth2 best practices <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'11.4%20OAuth2%20best%20practices'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="11.4 OAuth2 best practices" title="Ask ChatGPT about this section">💬</a>
+### 11.4 OAuth2 best practices <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'11.4%20OAuth2%20best%20practices'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="11.4 OAuth2 best practices" title="Ask ChatGPT about this section">💬</a>
 
 - Use **authorization code + PKCE** for public clients.
 - Use **client credentials** for service-to-service.
@@ -1065,12 +1065,12 @@ userLoader.prime('1', user);  // initial cache
 - Use refresh tokens with rotation.
 - Implement token revocation (blacklist or short TTL).
 
-### 11.5 mTLS <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'11.5%20mTLS'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="11.5 mTLS" title="Ask ChatGPT about this section">💬</a>
+### 11.5 mTLS <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'11.5%20mTLS'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="11.5 mTLS" title="Ask ChatGPT about this section">💬</a>
 
 - Both client and server present certificates.
 - Common in service-to-service and zero-trust networks.
 
-### 11.6 Secure configuration checklist <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'11.6%20Secure%20configuration%20checklist'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="11.6 Secure configuration checklist" title="Ask ChatGPT about this section">💬</a>
+### 11.6 Secure configuration checklist <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'11.6%20Secure%20configuration%20checklist'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="11.6 Secure configuration checklist" title="Ask ChatGPT about this section">💬</a>
 
 - [ ] TLS enforced (HTTPS only).
 - [ ] Authentication via OAuth2 / JWT (no custom auth).
@@ -1086,7 +1086,7 @@ userLoader.prime('1', user);  // initial cache
 
 ## 12. Production Engineering
 
-### 12.1 API gateways <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'12.1%20API%20gateways'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="12.1 API gateways" title="Ask ChatGPT about this section">💬</a>
+### 12.1 API gateways <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'12.1%20API%20gateways'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="12.1 API gateways" title="Ask ChatGPT about this section">💬</a>
 
 API gateways handle cross-cutting concerns:
 
@@ -1096,7 +1096,7 @@ API gateways handle cross-cutting concerns:
 - **Apigee** — Google Cloud.
 - **NGINX** — reverse proxy with caching, rate limiting.
 
-### 12.2 Rate limiting <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'12.2%20Rate%20limiting'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="12.2 Rate limiting" title="Ask ChatGPT about this section">💬</a>
+### 12.2 Rate limiting <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'12.2%20Rate%20limiting'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="12.2 Rate limiting" title="Ask ChatGPT about this section">💬</a>
 
 - **Token bucket** — per-user.
 - **Leaky bucket** — smooths bursts.
@@ -1106,7 +1106,7 @@ API gateways handle cross-cutting concerns:
 
 Tools: Kong, Envoy, Cloudflare.
 
-### 12.3 Observability <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'12.3%20Observability'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="12.3 Observability" title="Ask ChatGPT about this section">💬</a>
+### 12.3 Observability <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'12.3%20Observability'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="12.3 Observability" title="Ask ChatGPT about this section">💬</a>
 
 - **Metrics:** Prometheus, OpenTelemetry (OTel).
 - **Tracing:** OpenTelemetry, Jaeger.
@@ -1118,27 +1118,27 @@ const span = trace.getActiveSpan();
 span?.setAttribute('http.method', 'GET');
 ```
 
-### 12.4 Deployment <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'12.4%20Deployment'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="12.4 Deployment" title="Ask ChatGPT about this section">💬</a>
+### 12.4 Deployment <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'12.4%20Deployment'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="12.4 Deployment" title="Ask ChatGPT about this section">💬</a>
 
 - **Blue-green** — switch over instantly.
 - **Canary** — partial rollouts.
 - **Container** — Kubernetes, ECS.
 - **API versioning** — maintain multiple versions simultaneously.
 
-### 12.5 Cost optimization <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'12.5%20Cost%20optimization'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="12.5 Cost optimization" title="Ask ChatGPT about this section">💬</a>
+### 12.5 Cost optimization <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'12.5%20Cost%20optimization'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="12.5 Cost optimization" title="Ask ChatGPT about this section">💬</a>
 
 - Caching reduces backend load.
 - Compression reduces bandwidth.
 - Rate limiting protects from abuse.
 - Tiered APIs (free vs paid).
 
-### 12.6 Upgrade strategy <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'12.6%20Upgrade%20strategy'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="12.6 Upgrade strategy" title="Ask ChatGPT about this section">💬</a>
+### 12.6 Upgrade strategy <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'12.6%20Upgrade%20strategy'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="12.6 Upgrade strategy" title="Ask ChatGPT about this section">💬</a>
 
 - **OpenAPI / Protobuf first** — backward-compatible changes; never break clients.
 - **Deprecation warnings** — `Deprecation` and `Sunset` HTTP headers (RFC 8594).
 - **Sunset date** — give clients time to migrate.
 
-### 12.7 Migration: REST to GraphQL <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'12.7%20Migration%3A%20REST%20to%20GraphQL'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="12.7 Migration: REST to GraphQL" title="Ask ChatGPT about this section">💬</a>
+### 12.7 Migration: REST to GraphQL <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'12.7%20Migration%3A%20REST%20to%20GraphQL'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="12.7 Migration: REST to GraphQL" title="Ask ChatGPT about this section">💬</a>
 
 1. Identify clients with over-fetching pain.
 2. Define GraphQL schema (often a 1:1 mirror of REST resources).
@@ -1147,43 +1147,43 @@ span?.setAttribute('http.method', 'GET');
 
 ## 13. Production Case Studies
 
-### 13.1 GitHub <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'13.1%20GitHub'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="13.1 GitHub" title="Ask ChatGPT about this section">💬</a>
+### 13.1 GitHub <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'13.1%20GitHub'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="13.1 GitHub" title="Ask ChatGPT about this section">💬</a>
 
 GitHub maintains both a REST API and a GraphQL API (v4). The GraphQL API was added for clients that needed efficient queries across related entities (issues, pull requests, repos, comments). Both APIs use OAuth2 / personal access tokens.
 
-### 13.2 Netflix <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'13.2%20Netflix'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="13.2 Netflix" title="Ask ChatGPT about this section">💬</a>
+### 13.2 Netflix <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'13.2%20Netflix'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="13.2 Netflix" title="Ask ChatGPT about this section">💬</a>
 
 Netflix uses gRPC extensively for service-to-service communication. Their Polyglot Architecture team has published on gRPC patterns at scale.
 
-### 13.3 Stripe <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'13.3%20Stripe'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="13.3 Stripe" title="Ask ChatGPT about this section">💬</a>
+### 13.3 Stripe <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'13.3%20Stripe'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="13.3 Stripe" title="Ask ChatGPT about this section">💬</a>
 
 Stripe's REST API is a gold standard for clean API design. Idempotency keys, clear status codes, consistent error structures. Influenced many subsequent APIs.
 
-### 13.4 Slack <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'13.4%20Slack'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="13.4 Slack" title="Ask ChatGPT about this section">💬</a>
+### 13.4 Slack <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'13.4%20Slack'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="13.4 Slack" title="Ask ChatGPT about this section">💬</a>
 
 Slack uses WebSocket for real-time messaging. Their `socket mode` and Events API power interactive features.
 
-### 13.5 Shopify <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'13.5%20Shopify'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="13.5 Shopify" title="Ask ChatGPT about this section">💬</a>
+### 13.5 Shopify <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'13.5%20Shopify'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="13.5 Shopify" title="Ask ChatGPT about this section">💬</a>
 
 Shopify runs a large REST API and a GraphQL storefront API. GraphQL enables app developers to fetch exactly the data they need for product pages.
 
-### 13.6 Square <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'13.6%20Square'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="13.6 Square" title="Ask ChatGPT about this section">💬</a>
+### 13.6 Square <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'13.6%20Square'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="13.6 Square" title="Ask ChatGPT about this section">💬</a>
 
 Square uses gRPC internally for service-to-service. They publish libraries in many languages.
 
-### 13.7 Twitter <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'13.7%20Twitter'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="13.7 Twitter" title="Ask ChatGPT about this section">💬</a>
+### 13.7 Twitter <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'13.7%20Twitter'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="13.7 Twitter" title="Ask ChatGPT about this section">💬</a>
 
 Twitter's API history includes REST (v1.1) and GraphQL (newer). They documented their migration to GraphQL extensively.
 
 ## 14. Code Examples
 
-### 14.1 Basic: REST endpoint (Express) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'14.1%20Basic%3A%20REST%20endpoint%20(Express)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="14.1 Basic: REST endpoint (Express)" title="Ask ChatGPT about this section">💬</a>
+### 14.1 Basic: REST endpoint (Express) <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'14.1%20Basic%3A%20REST%20endpoint%20(Express)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="14.1 Basic: REST endpoint (Express)" title="Ask ChatGPT about this section">💬</a>
 
 ```typescript
 // see 01-rest-basics
 ```
 
-### 14.2 OpenAPI spec <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'14.2%20OpenAPI%20spec'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="14.2 OpenAPI spec" title="Ask ChatGPT about this section">💬</a>
+### 14.2 OpenAPI spec <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'14.2%20OpenAPI%20spec'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="14.2 OpenAPI spec" title="Ask ChatGPT about this section">💬</a>
 
 ```yaml
 openapi: 3.1.0
@@ -1214,13 +1214,13 @@ components:
       required: [id, name, email]
 ```
 
-### 14.3 GraphQL schema + resolvers <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'14.3%20GraphQL%20schema%20%2B%20resolvers'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="14.3 GraphQL schema + resolvers" title="Ask ChatGPT about this section">💬</a>
+### 14.3 GraphQL schema + resolvers <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'14.3%20GraphQL%20schema%20%2B%20resolvers'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="14.3 GraphQL schema + resolvers" title="Ask ChatGPT about this section">💬</a>
 
 ```typescript
 // see 07-graphql-schema and 08-graphql-resolvers
 ```
 
-### 14.4 gRPC service (.proto + Python) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'14.4%20gRPC%20service%20(.proto%20%2B%20Python)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="14.4 gRPC service (.proto + Python)" title="Ask ChatGPT about this section">💬</a>
+### 14.4 gRPC service (.proto + Python) <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'14.4%20gRPC%20service%20(.proto%20%2B%20Python)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="14.4 gRPC service (.proto + Python)" title="Ask ChatGPT about this section">💬</a>
 
 ```protobuf
 syntax = "proto3";
@@ -1237,7 +1237,7 @@ class UserServicer(user_pb2_grpc.UserServiceServicer):
         return user_pb2.User(id=request.id, name="Alice", email="alice@example.com")
 ```
 
-### 14.5 WebSocket handler <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'14.5%20WebSocket%20handler'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="14.5 WebSocket handler" title="Ask ChatGPT about this section">💬</a>
+### 14.5 WebSocket handler <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'14.5%20WebSocket%20handler'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="14.5 WebSocket handler" title="Ask ChatGPT about this section">💬</a>
 
 ```typescript
 import { WebSocketServer } from 'ws';
@@ -1251,7 +1251,7 @@ wss.on('connection', (ws) => {
 });
 ```
 
-### 14.6 OAuth2 authorization code + PKCE <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'14.6%20OAuth2%20authorization%20code%20%2B%20PKCE'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="14.6 OAuth2 authorization code + PKCE" title="Ask ChatGPT about this section">💬</a>
+### 14.6 OAuth2 authorization code + PKCE <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'14.6%20OAuth2%20authorization%20code%20%2B%20PKCE'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="14.6 OAuth2 authorization code + PKCE" title="Ask ChatGPT about this section">💬</a>
 
 ```typescript
 // Generate code verifier and challenge
@@ -1280,7 +1280,7 @@ const token = await fetch('https://auth.example.com/token', {
 });
 ```
 
-### 14.7 Bad, anti-pattern, refactored, secure, performance-optimized <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'14.7%20Bad%2C%20anti-pattern%2C%20refactored%2C%20secure%2C%20performance-optimized'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="14.7 Bad, anti-pattern, refactored, secure, performance-optimized" title="Ask ChatGPT about this section">💬</a>
+### 14.7 Bad, anti-pattern, refactored, secure, performance-optimized <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'14.7%20Bad%2C%20anti-pattern%2C%20refactored%2C%20secure%2C%20performance-optimized'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="14.7 Bad, anti-pattern, refactored, secure, performance-optimized" title="Ask ChatGPT about this section">💬</a>
 
 **Bad: returning stack traces**
 
@@ -1355,7 +1355,7 @@ app.get('/users', async (req, res) => {
 
 ## 15. Common Mistakes
 
-### 15.1 Beginner mistakes <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'15.1%20Beginner%20mistakes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="15.1 Beginner mistakes" title="Ask ChatGPT about this section">💬</a>
+### 15.1 Beginner mistakes <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'15.1%20Beginner%20mistakes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="15.1 Beginner mistakes" title="Ask ChatGPT about this section">💬</a>
 
 - **GET request that mutates state** — should be POST.
 - **Returning 200 for errors** — use 4xx/5xx.
@@ -1363,7 +1363,7 @@ app.get('/users', async (req, res) => {
 - **No versioning** — harder to deprecate.
 - **Missing idempotency keys** — POST repeats cause duplicates.
 
-### 15.2 Intermediate mistakes <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'15.2%20Intermediate%20mistakes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="15.2 Intermediate mistakes" title="Ask ChatGPT about this section">💬</a>
+### 15.2 Intermediate mistakes <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'15.2%20Intermediate%20mistakes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="15.2 Intermediate mistakes" title="Ask ChatGPT about this section">💬</a>
 
 - **N+1 queries in GraphQL** — always use DataLoader.
 - **Missing pagination** — large queries time out.
@@ -1371,7 +1371,7 @@ app.get('/users', async (req, res) => {
 - **No ETag / conditional requests** — wasted bandwidth.
 - **JSON `null` vs `undefined` vs missing** — inconsistent.
 
-### 15.3 Senior mistakes <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'15.3%20Senior%20mistakes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="15.3 Senior mistakes" title="Ask ChatGPT about this section">💬</a>
+### 15.3 Senior mistakes <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'15.3%20Senior%20mistakes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="15.3 Senior mistakes" title="Ask ChatGPT about this section">💬</a>
 
 - **Breaking changes without versioning** — clients break.
 - **Leaking stack traces** — security info disclosure.
@@ -1379,7 +1379,7 @@ app.get('/users', async (req, res) => {
 - **Missing auth on certain endpoints** — partial security.
 - **Returning 200 with an error in body** — debugging nightmare.
 
-### 15.4 Production mistakes <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'15.4%20Production%20mistakes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="15.4 Production mistakes" title="Ask ChatGPT about this section">💬</a>
+### 15.4 Production mistakes <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'15.4%20Production%20mistakes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="15.4 Production mistakes" title="Ask ChatGPT about this section">💬</a>
 
 - **No rate limiting** — vulnerable to abuse.
 - **Long-running synchronous endpoints** — block workers.
@@ -1387,21 +1387,21 @@ app.get('/users', async (req, res) => {
 - **Hardcoded secrets in URLs** — leaked in logs.
 - **No request tracing** — can't debug.
 
-### 15.5 Migration mistakes <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'15.5%20Migration%20mistakes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="15.5 Migration mistakes" title="Ask ChatGPT about this section">💬</a>
+### 15.5 Migration mistakes <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'15.5%20Migration%20mistakes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="15.5 Migration mistakes" title="Ask ChatGPT about this section">💬</a>
 
 - **REST to GraphQL** — incomplete field coverage.
 - **HTTP/1.1 to HTTP/2** — not enabling multiplexing tuning.
 - **HTTP to HTTPS** — mixed-content issues.
 - **v1 to v2** — keeping too many versions forever.
 
-### 15.6 Configuration mistakes <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'15.6%20Configuration%20mistakes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="15.6 Configuration mistakes" title="Ask ChatGPT about this section">💬</a>
+### 15.6 Configuration mistakes <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'15.6%20Configuration%20mistakes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="15.6 Configuration mistakes" title="Ask ChatGPT about this section">💬</a>
 
 - **CORS `Allow-Origin: *` with credentials** — security risk.
 - **JWT in localStorage** — XSS exposure.
 - **OAuth2 without PKCE for SPA** — code interception risk.
 - **Open API without security** — internals exposed.
 
-### 15.7 Security mistakes <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'15.7%20Security%20mistakes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="15.7 Security mistakes" title="Ask ChatGPT about this section">💬</a>
+### 15.7 Security mistakes <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'15.7%20Security%20mistakes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="15.7 Security mistakes" title="Ask ChatGPT about this section">💬</a>
 
 - **Custom auth** — use OAuth2 / JWT.
 - **No input validation** — OpenAPI for shapes.
@@ -1409,20 +1409,20 @@ app.get('/users', async (req, res) => {
 - **Weak JWT secret** — use RS256.
 - **No replay protection** — nonces, JWT exp.
 
-### 15.8 Performance mistakes <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'15.8%20Performance%20mistakes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="15.8 Performance mistakes" title="Ask ChatGPT about this section">💬</a>
+### 15.8 Performance mistakes <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'15.8%20Performance%20mistakes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="15.8 Performance mistakes" title="Ask ChatGPT about this section">💬</a>
 
 - **No compression** — wasted bandwidth.
 - **No pagination** — large queries.
 - **No caching** — redundant work.
 - **No HTTP/2** — head-of-line blocking.
 
-### 15.9 Debugging mistakes <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'15.9%20Debugging%20mistakes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="15.9 Debugging mistakes" title="Ask ChatGPT about this section">💬</a>
+### 15.9 Debugging mistakes <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'15.9%20Debugging%20mistakes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="15.9 Debugging mistakes" title="Ask ChatGPT about this section">💬</a>
 
 - **Restarting without capturing state** — logs, traces.
 - **Not using OpenAPI tooling** — reinventing testing.
 - **Hardcoded URLs** — different environments.
 
-### 15.10 Deployment mistakes <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'15.10%20Deployment%20mistakes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="15.10 Deployment mistakes" title="Ask ChatGPT about this section">💬</a>
+### 15.10 Deployment mistakes <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'15.10%20Deployment%20mistakes'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="15.10 Deployment mistakes" title="Ask ChatGPT about this section">💬</a>
 
 - **No blue-green** — risky deploys.
 - **No canary** — full rollout.
@@ -1432,7 +1432,7 @@ app.get('/users', async (req, res) => {
 
 ## 16. Debugging
 
-### 16.1 REST debugging <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'16.1%20REST%20debugging'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="16.1 REST debugging" title="Ask ChatGPT about this section">💬</a>
+### 16.1 REST debugging <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'16.1%20REST%20debugging'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="16.1 REST debugging" title="Ask ChatGPT about this section">💬</a>
 
 ```bash
 # Verbose curl
@@ -1448,7 +1448,7 @@ curl -L -w "@curl-format.txt" https://api.example.com/users/123
 curl -X POST -H "Content-Type: application/json" -d '{"name":"Alice"}' https://api.example.com/users
 ```
 
-### 16.2 GraphQL debugging <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'16.2%20GraphQL%20debugging'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="16.2 GraphQL debugging" title="Ask ChatGPT about this section">💬</a>
+### 16.2 GraphQL debugging <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'16.2%20GraphQL%20debugging'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="16.2 GraphQL debugging" title="Ask ChatGPT about this section">💬</a>
 
 - **GraphiQL** — in-browser IDE.
 - **Apollo Studio** — schema explorer.
@@ -1461,7 +1461,7 @@ curl -X POST -H "Content-Type: application/json" \
     https://api.example.com/graphql
 ```
 
-### 16.3 gRPC debugging <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'16.3%20gRPC%20debugging'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="16.3 gRPC debugging" title="Ask ChatGPT about this section">💬</a>
+### 16.3 gRPC debugging <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'16.3%20gRPC%20debugging'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="16.3 gRPC debugging" title="Ask ChatGPT about this section">💬</a>
 
 - **grpcurl** — command-line client with reflection.
 
@@ -1473,13 +1473,13 @@ grpcurl -plaintext localhost:50051 user.UserService/GetUser
 - **BloomRPC, Kreya** — GUI clients.
 - **Server reflection** — enable `grpc.reflection.v1alpha` for tooling.
 
-### 16.4 WebSocket debugging <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'16.4%20WebSocket%20debugging'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="16.4 WebSocket debugging" title="Ask ChatGPT about this section">💬</a>
+### 16.4 WebSocket debugging <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'16.4%20WebSocket%20debugging'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="16.4 WebSocket debugging" title="Ask ChatGPT about this section">💬</a>
 
 - **Browser DevTools** — Network tab shows WS frames.
 - **wscat** — command-line tool.
 - **WebSocket King** — browser extension.
 
-### 16.5 OpenAPI tools <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'16.5%20OpenAPI%20tools'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="16.5 OpenAPI tools" title="Ask ChatGPT about this section">💬</a>
+### 16.5 OpenAPI tools <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'16.5%20OpenAPI%20tools'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="16.5 OpenAPI tools" title="Ask ChatGPT about this section">💬</a>
 
 - **Swagger UI** — interactive docs.
 - **Swagger Editor** — write spec.
@@ -1487,13 +1487,13 @@ grpcurl -plaintext localhost:50051 user.UserService/GetUser
 - **Insomnia** — REST and GraphQL.
 - **OpenAPI Generator** — generate clients/servers.
 
-### 16.6 OAuth2 debugging <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'16.6%20OAuth2%20debugging'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="16.6 OAuth2 debugging" title="Ask ChatGPT about this section">💬</a>
+### 16.6 OAuth2 debugging <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'16.6%20OAuth2%20debugging'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="16.6 OAuth2 debugging" title="Ask ChatGPT about this section">💬</a>
 
 - **jwt.io** — decode tokens.
 - **OAuth2 playground** (e.g., oauth.com/playground).
 - Browser DevTools for inspecting token in `localStorage` / cookies.
 
-### 16.7 Production troubleshooting checklist <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'16.7%20Production%20troubleshooting%20checklist'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="16.7 Production troubleshooting checklist" title="Ask ChatGPT about this section">💬</a>
+### 16.7 Production troubleshooting checklist <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'16.7%20Production%20troubleshooting%20checklist'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="16.7 Production troubleshooting checklist" title="Ask ChatGPT about this section">💬</a>
 
 - [ ] Capture request ID (`X-Request-ID`).
 - [ ] Capture trace ID (OpenTelemetry).
@@ -1504,13 +1504,13 @@ grpcurl -plaintext localhost:50051 user.UserService/GetUser
 
 ## 17. Monitoring & Observability
 
-### 17.1 Three pillars <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'17.1%20Three%20pillars'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="17.1 Three pillars" title="Ask ChatGPT about this section">💬</a>
+### 17.1 Three pillars <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'17.1%20Three%20pillars'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="17.1 Three pillars" title="Ask ChatGPT about this section">💬</a>
 
 - **Metrics:** RED (Rate, Errors, Duration) for requests.
 - **Logs:** Structured (JSON), centralized.
 - **Traces:** OpenTelemetry, distributed.
 
-### 17.2 Key metrics <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'17.2%20Key%20metrics'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="17.2 Key metrics" title="Ask ChatGPT about this section">💬</a>
+### 17.2 Key metrics <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'17.2%20Key%20metrics'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="17.2 Key metrics" title="Ask ChatGPT about this section">💬</a>
 
 | Metric | Meaning |
 |--------|---------|
@@ -1522,7 +1522,7 @@ grpcurl -plaintext localhost:50051 user.UserService/GetUser
 | `websocket_connections_active` | Active WS connections |
 | `oauth_token_issued_total` | Tokens issued |
 
-### 17.3 OpenTelemetry <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'17.3%20OpenTelemetry'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="17.3 OpenTelemetry" title="Ask ChatGPT about this section">💬</a>
+### 17.3 OpenTelemetry <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'17.3%20OpenTelemetry'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="17.3 OpenTelemetry" title="Ask ChatGPT about this section">💬</a>
 
 ```typescript
 import { trace } from '@opentelemetry/api';
@@ -1537,13 +1537,13 @@ const span = tracer.startSpan('handle-request');
 span.end();
 ```
 
-### 17.4 Logging <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'17.4%20Logging'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="17.4 Logging" title="Ask ChatGPT about this section">💬</a>
+### 17.4 Logging <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'17.4%20Logging'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="17.4 Logging" title="Ask ChatGPT about this section">💬</a>
 
 - Structured logs (JSON) to ELK, Loki, or Datadog.
 - Include request ID, trace ID, user ID, route.
 - Don't log sensitive data (PII, tokens).
 
-### 17.5 Dashboards <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'17.5%20Dashboards'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="17.5 Dashboards" title="Ask ChatGPT about this section">💬</a>
+### 17.5 Dashboards <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'17.5%20Dashboards'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="17.5 Dashboards" title="Ask ChatGPT about this section">💬</a>
 
 Sample Grafana dashboard:
 
@@ -1554,7 +1554,7 @@ Sample Grafana dashboard:
 - Open Circuit breakers.
 - Cache hit ratio.
 
-### 17.6 Alerts <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'17.6%20Alerts'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="17.6 Alerts" title="Ask ChatGPT about this section">💬</a>
+### 17.6 Alerts <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'17.6%20Alerts'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="17.6 Alerts" title="Ask ChatGPT about this section">💬</a>
 
 - Error rate > 1% for 5 minutes.
 - p99 latency > 500ms.
@@ -1563,7 +1563,7 @@ Sample Grafana dashboard:
 
 ## 18. Best Practices
 
-### 18.1 Industry best practices <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'18.1%20Industry%20best%20practices'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="18.1 Industry best practices" title="Ask ChatGPT about this section">💬</a>
+### 18.1 Industry best practices <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'18.1%20Industry%20best%20practices'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="18.1 Industry best practices" title="Ask ChatGPT about this section">💬</a>
 
 - **OpenAPI spec for every REST API.**
 - **GraphQL SDL for every GraphQL API.**
@@ -1578,7 +1578,7 @@ Sample Grafana dashboard:
 - **Rate limiting** at the gateway.
 - **Observability** — OpenTelemetry.
 
-### 18.2 Enterprise practices <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'18.2%20Enterprise%20practices'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="18.2 Enterprise practices" title="Ask ChatGPT about this section">💬</a>
+### 18.2 Enterprise practices <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'18.2%20Enterprise%20practices'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="18.2 Enterprise practices" title="Ask ChatGPT about this section">💬</a>
 
 - **API gateway** — Kong, Envoy, Apigee.
 - **Schema registry** — OpenAPI in CI.
@@ -1586,21 +1586,21 @@ Sample Grafana dashboard:
 - **Backwards compatibility** — never break clients.
 - **Sunset policy** — deprecate over versions.
 
-### 18.3 Clean contracts <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'18.3%20Clean%20contracts'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="18.3 Clean contracts" title="Ask ChatGPT about this section">💬</a>
+### 18.3 Clean contracts <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'18.3%20Clean%20contracts'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="18.3 Clean contracts" title="Ask ChatGPT about this section">💬</a>
 
 - Stable URL paths.
 - Predictable resource hierarchy.
 - Consistent error format.
 - Comprehensive examples in docs.
 
-### 18.4 Reliability <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'18.4%20Reliability'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="18.4 Reliability" title="Ask ChatGPT about this section">💬</a>
+### 18.4 Reliability <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'18.4%20Reliability'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="18.4 Reliability" title="Ask ChatGPT about this section">💬</a>
 
 - Health checks (`/health`, `/ready`).
 - Circuit breakers for downstream calls.
 - Retries with exponential backoff.
 - Timeouts on all I/O.
 
-### 18.5 Security <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'18.5%20Security'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="18.5 Security" title="Ask ChatGPT about this section">💬</a>
+### 18.5 Security <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'18.5%20Security'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="18.5 Security" title="Ask ChatGPT about this section">💬</a>
 
 - TLS 1.3.
 - OAuth2 + JWT.
@@ -1611,7 +1611,7 @@ Sample Grafana dashboard:
 - CORS configured.
 - Security headers.
 
-### 18.6 Performance <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'18.6%20Performance'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="18.6 Performance" title="Ask ChatGPT about this section">💬</a>
+### 18.6 Performance <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'18.6%20Performance'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="18.6 Performance" title="Ask ChatGPT about this section">💬</a>
 
 - HTTP/3 (HTTP/2 fallback).
 - Compression (gzip, br).
@@ -1620,7 +1620,7 @@ Sample Grafana dashboard:
 - Pagination + sparse fieldsets.
 - Connection pooling.
 
-### 18.7 Testing <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'18.7%20Testing'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="18.7 Testing" title="Ask ChatGPT about this section">💬</a>
+### 18.7 Testing <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'18.7%20Testing'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="18.7 Testing" title="Ask ChatGPT about this section">💬</a>
 
 - Unit tests for handlers.
 - Contract tests (Pact).
@@ -1628,7 +1628,7 @@ Sample Grafana dashboard:
 - Load tests (k6, Gatling).
 - Security tests (OWASP ZAP).
 
-### 18.8 Deployment <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'18.8%20Deployment'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="18.8 Deployment" title="Ask ChatGPT about this section">💬</a>
+### 18.8 Deployment <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'18.8%20Deployment'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="18.8 Deployment" title="Ask ChatGPT about this section">💬</a>
 
 - API gateway.
 - Blue-green or canary.
@@ -1638,7 +1638,7 @@ Sample Grafana dashboard:
 
 ## 19. Anti-Patterns
 
-### 19.1 RPC over REST <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'19.1%20RPC%20over%20REST'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="19.1 RPC over REST" title="Ask ChatGPT about this section">💬</a>
+### 19.1 RPC over REST <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'19.1%20RPC%20over%20REST'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="19.1 RPC over REST" title="Ask ChatGPT about this section">💬</a>
 
 Sending non-resource operations via POST:
 
@@ -1649,31 +1649,31 @@ POST /executeOrder  // Bad — should be POST /orders
 
 **Fix:** Use resource endpoints.
 
-### 19.2 Verb in URL <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'19.2%20Verb%20in%20URL'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="19.2 Verb in URL" title="Ask ChatGPT about this section">💬</a>
+### 19.2 Verb in URL <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'19.2%20Verb%20in%20URL'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="19.2 Verb in URL" title="Ask ChatGPT about this section">💬</a>
 
 ```
 GET /api/getUser/123  // Bad — use GET /api/users/123
 ```
 
-### 19.3 Returning HTML for errors <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'19.3%20Returning%20HTML%20for%20errors'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="19.3 Returning HTML for errors" title="Ask ChatGPT about this section">💬</a>
+### 19.3 Returning HTML for errors <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'19.3%20Returning%20HTML%20for%20errors'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="19.3 Returning HTML for errors" title="Ask ChatGPT about this section">💬</a>
 
 Returning a stack trace or HTML error page instead of structured JSON.
 
 **Fix:** Use Problem Details (RFC 7807).
 
-### 19.4 Ad-hoc auth <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'19.4%20Ad-hoc%20auth'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="19.4 Ad-hoc auth" title="Ask ChatGPT about this section">💬</a>
+### 19.4 Ad-hoc auth <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'19.4%20Ad-hoc%20auth'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="19.4 Ad-hoc auth" title="Ask ChatGPT about this section">💬</a>
 
 Custom token schemes, sessions without expiry, etc.
 
 **Fix:** Use OAuth2 / JWT.
 
-### 19.5 Unbounded queries <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'19.5%20Unbounded%20queries'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="19.5 Unbounded queries" title="Ask ChatGPT about this section">💬</a>
+### 19.5 Unbounded queries <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'19.5%20Unbounded%20queries'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="19.5 Unbounded queries" title="Ask ChatGPT about this section">💬</a>
 
 No pagination; queries return entire tables.
 
 **Fix:** Pagination + limits.
 
-### 19.6 Mixing concerns <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'19.6%20Mixing%20concerns'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="19.6 Mixing concerns" title="Ask ChatGPT about this section">💬</a>
+### 19.6 Mixing concerns <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'19.6%20Mixing%20concerns'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="19.6 Mixing concerns" title="Ask ChatGPT about this section">💬</a>
 
 API server does business logic, validation, and persistence in one.
 
@@ -1681,39 +1681,39 @@ API server does business logic, validation, and persistence in one.
 
 ## 20. Edge Cases
 
-### 20.1 CORS preflight <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'20.1%20CORS%20preflight'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="20.1 CORS preflight" title="Ask ChatGPT about this section">💬</a>
+### 20.1 CORS preflight <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'20.1%20CORS%20preflight'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="20.1 CORS preflight" title="Ask ChatGPT about this section">💬</a>
 
 OPTIONS request before PUT/POST with custom headers — must respond with `Access-Control-Allow-*` headers.
 
-### 20.2 Idempotency replay <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'20.2%20Idempotency%20replay'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="20.2 Idempotency replay" title="Ask ChatGPT about this section">💬</a>
+### 20.2 Idempotency replay <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'20.2%20Idempotency%20replay'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="20.2 Idempotency replay" title="Ask ChatGPT about this section">💬</a>
 
 Same Idempotency-Key returns same response — must store results for 24+ hours; on conflict, return the stored response.
 
-### 20.3 JWT rotation <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'20.3%20JWT%20rotation'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="20.3 JWT rotation" title="Ask ChatGPT about this section">💬</a>
+### 20.3 JWT rotation <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'20.3%20JWT%20rotation'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="20.3 JWT rotation" title="Ask ChatGPT about this section">💬</a>
 
 When signing keys rotate, tokens issued before rotation still validate. Use `kid` header to identify the key.
 
-### 20.4 GraphQL circular references <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'20.4%20GraphQL%20circular%20references'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="20.4 GraphQL circular references" title="Ask ChatGPT about this section">💬</a>
+### 20.4 GraphQL circular references <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'20.4%20GraphQL%20circular%20references'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="20.4 GraphQL circular references" title="Ask ChatGPT about this section">💬</a>
 
 Two types reference each other. DataLoader prevents infinite loops.
 
-### 20.5 WebSocket reconnection <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'20.5%20WebSocket%20reconnection'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="20.5 WebSocket reconnection" title="Ask ChatGPT about this section">💬</a>
+### 20.5 WebSocket reconnection <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'20.5%20WebSocket%20reconnection'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="20.5 WebSocket reconnection" title="Ask ChatGPT about this section">💬</a>
 
 Server may go down; client must reconnect with exponential backoff. State on server may be lost — design for stateless connections.
 
-### 20.6 OAuth2 token expiration <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'20.6%20OAuth2%20token%20expiration'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="20.6 OAuth2 token expiration" title="Ask ChatGPT about this section">💬</a>
+### 20.6 OAuth2 token expiration <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'20.6%20OAuth2%20token%20expiration'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="20.6 OAuth2 token expiration" title="Ask ChatGPT about this section">💬</a>
 
 Access tokens expire (15 min typical). Refresh tokens get new access tokens. Handle 401 + retry.
 
-### 20.7 Large responses <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'20.7%20Large%20responses'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="20.7 Large responses" title="Ask ChatGPT about this section">💬</a>
+### 20.7 Large responses <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'20.7%20Large%20responses'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="20.7 Large responses" title="Ask ChatGPT about this section">💬</a>
 
 Streaming (chunked transfer) for very large responses. Compress. Consider pagination.
 
-### 20.8 Cursor stability <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'20.8%20Cursor%20stability'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="20.8 Cursor stability" title="Ask ChatGPT about this section">💬</a>
+### 20.8 Cursor stability <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'20.8%20Cursor%20stability'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="20.8 Cursor stability" title="Ask ChatGPT about this section">💬</a>
 
 Cursors must be stable even when data changes. Use offset+id, not offset alone.
 
-### 20.9 Server-sent events fallback <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'20.9%20Server-sent%20events%20fallback'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="20.9 Server-sent events fallback" title="Ask ChatGPT about this section">💬</a>
+### 20.9 Server-sent events fallback <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'20.9%20Server-sent%20events%20fallback'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="20.9 Server-sent events fallback" title="Ask ChatGPT about this section">💬</a>
 
 If WebSocket isn't available, fall back to SSE or long-polling.
 
@@ -1721,7 +1721,7 @@ If WebSocket isn't available, fall back to SSE or long-polling.
 
 ## 21. Comparisons
 
-### 21.1 REST vs GraphQL vs gRPC <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'21.1%20REST%20vs%20GraphQL%20vs%20gRPC'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="21.1 REST vs GraphQL vs gRPC" title="Ask ChatGPT about this section">💬</a>
+### 21.1 REST vs GraphQL vs gRPC <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'21.1%20REST%20vs%20GraphQL%20vs%20gRPC'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="21.1 REST vs GraphQL vs gRPC" title="Ask ChatGPT about this section">💬</a>
 
 | Dimension | REST | GraphQL | gRPC |
 |-----------|------|---------|------|
@@ -1759,7 +1759,7 @@ If WebSocket isn't available, fall back to SSE or long-polling.
 - Strong type safety required.
 - Polyglot teams (Protobuf generators for many languages).
 
-### 21.2 WebSocket vs SSE vs Long Polling <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'21.2%20WebSocket%20vs%20SSE%20vs%20Long%20Polling'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="21.2 WebSocket vs SSE vs Long Polling" title="Ask ChatGPT about this section">💬</a>
+### 21.2 WebSocket vs SSE vs Long Polling <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'21.2%20WebSocket%20vs%20SSE%20vs%20Long%20Polling'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="21.2 WebSocket vs SSE vs Long Polling" title="Ask ChatGPT about this section">💬</a>
 
 | Dimension | WebSocket | SSE | Long Polling |
 |-----------|-----------|-----|-------------|
@@ -1769,7 +1769,7 @@ If WebSocket isn't available, fall back to SSE or long-polling.
 | Browser support | Universal | Most (no IE) | Universal |
 | Best for | Real-time bi-directional | Server push (notifications) | Simple real-time without WS |
 
-### 21.3 OAuth2 vs mTLS <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'21.3%20OAuth2%20vs%20mTLS'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="21.3 OAuth2 vs mTLS" title="Ask ChatGPT about this section">💬</a>
+### 21.3 OAuth2 vs mTLS <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'21.3%20OAuth2%20vs%20mTLS'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="21.3 OAuth2 vs mTLS" title="Ask ChatGPT about this section">💬</a>
 
 | Dimension | OAuth2/JWT | mTLS |
 |-----------|-----------|------|
@@ -1779,7 +1779,7 @@ If WebSocket isn't available, fall back to SSE or long-polling.
 | **Setup** | Identity provider (Auth0, Cognito) | PKI infrastructure |
 | **Performance** | Token verification | TLS handshake |
 
-### 21.4 Streaming: gRPC vs WebSocket <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'21.4%20Streaming%3A%20gRPC%20vs%20WebSocket'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="21.4 Streaming: gRPC vs WebSocket" title="Ask ChatGPT about this section">💬</a>
+### 21.4 Streaming: gRPC vs WebSocket <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'21.4%20Streaming%3A%20gRPC%20vs%20WebSocket'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="21.4 Streaming: gRPC vs WebSocket" title="Ask ChatGPT about this section">💬</a>
 
 | Dimension | gRPC streaming | WebSocket |
 |-----------|----------------|-----------|
@@ -1789,7 +1789,7 @@ If WebSocket isn't available, fall back to SSE or long-polling.
 | **Browser support** | grpc-web | Native |
 | **Best for** | Service-to-service, typed RPC | Browser-to-server events |
 
-### 21.5 Migration paths <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'21.5%20Migration%20paths'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="21.5 Migration paths" title="Ask ChatGPT about this section">💬</a>
+### 21.5 Migration paths <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'21.5%20Migration%20paths'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="21.5 Migration paths" title="Ask ChatGPT about this section">💬</a>
 
 - **REST → GraphQL:** Add a GraphQL gateway over REST APIs (Apollo Federation).
 - **REST → gRPC:** Use grpc-gateway to expose REST endpoints over gRPC services.
@@ -1800,7 +1800,7 @@ If WebSocket isn't available, fall back to SSE or long-polling.
 
 ## 22. Interview Preparation
 
-### 22.1 Beginner (0-1 years) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'22.1%20Beginner%20(0-1%20years)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="22.1 Beginner (0-1 years)" title="Ask ChatGPT about this section">💬</a>
+### 22.1 Beginner (0-1 years) <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'22.1%20Beginner%20(0-1%20years)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="22.1 Beginner (0-1 years)" title="Ask ChatGPT about this section">💬</a>
 
 **Q1: What is REST?**
 **A:** REST is an architectural style that uses HTTP methods (GET, POST, PUT, DELETE) on resources identified by URLs. It emphasizes stateless communication and a uniform interface.
@@ -1817,7 +1817,7 @@ If WebSocket isn't available, fall back to SSE or long-polling.
 **Q5: What is JSON?**
 **A:** JavaScript Object Notation — a text-based data interchange format. The most common payload format for modern APIs.
 
-### 22.2 Junior (1-2 years) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'22.2%20Junior%20(1-2%20years)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="22.2 Junior (1-2 years)" title="Ask ChatGPT about this section">💬</a>
+### 22.2 Junior (1-2 years) <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'22.2%20Junior%20(1-2%20years)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="22.2 Junior (1-2 years)" title="Ask ChatGPT about this section">💬</a>
 
 **Q6: What is the difference between authentication and authorization?**
 **A:** Authentication verifies identity (who you are). Authorization verifies permissions (what you can do).
@@ -1834,7 +1834,7 @@ If WebSocket isn't available, fall back to SSE or long-polling.
 **Q10: What is WebSocket?**
 **A:** A protocol for full-duplex bidirectional communication over a single TCP connection, upgraded from HTTP.
 
-### 22.3 Mid (2-4 years) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'22.3%20Mid%20(2-4%20years)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="22.3 Mid (2-4 years)" title="Ask ChatGPT about this section">💬</a>
+### 22.3 Mid (2-4 years) <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'22.3%20Mid%20(2-4%20years)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="22.3 Mid (2-4 years)" title="Ask ChatGPT about this section">💬</a>
 
 **Q11: What is CORS and how do you configure it?**
 **A:** Cross-Origin Resource Sharing — browser mechanism to allow cross-origin requests. Configure on the server via `Access-Control-Allow-Origin` and related headers.
@@ -1854,7 +1854,7 @@ If WebSocket isn't available, fall back to SSE or long-polling.
 **Q16: What is OpenAPI?**
 **A:** A specification (formerly Swagger) for describing REST APIs. Used to generate docs, clients, servers, and tests.
 
-### 22.4 Senior (4-6 years) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'22.4%20Senior%20(4-6%20years)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="22.4 Senior (4-6 years)" title="Ask ChatGPT about this section">💬</a>
+### 22.4 Senior (4-6 years) <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'22.4%20Senior%20(4-6%20years)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="22.4 Senior (4-6 years)" title="Ask ChatGPT about this section">💬</a>
 
 **Q17: How would you design a public API?**
 **A:** (1) Resource modeling (nouns, hierarchical). (2) HTTP methods correctly used. (3) Proper status codes (RFC 9110). (4) Versioning strategy. (5) OpenAPI specification. (6) Authentication via OAuth2. (7) Rate limiting. (8) Pagination + filtering. (9) Error handling (RFC 7807 Problem Details). (10) HATEOAS optional. (11) Documentation portal (Swagger UI / Redoc).
@@ -1871,7 +1871,7 @@ If WebSocket isn't available, fall back to SSE or long-polling.
 **Q21: How would you handle API evolution?**
 **A:** (1) Never break clients. (2) Add new fields/parameters (additive). (3) New versions via URI (`/v2/`) when removing fields. (4) Maintain multiple versions simultaneously. (5) Deprecation warnings (`Deprecation`, `Sunset` headers). (6) OpenAPI spec tracks everything.
 
-### 22.5 Lead (6-8 years) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'22.5%20Lead%20(6-8%20years)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="22.5 Lead (6-8 years)" title="Ask ChatGPT about this section">💬</a>
+### 22.5 Lead (6-8 years) <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'22.5%20Lead%20(6-8%20years)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="22.5 Lead (6-8 years)" title="Ask ChatGPT about this section">💬</a>
 
 **Q22: How would you design a multi-region API?**
 **A:** (1) Edge gateways (Cloudflare, AWS CloudFront). (2) Per-region API gateways. (3) Active-active vs active-passive. (4) Data locality (storing EU data in EU). (5) Read replicas. (6) Latency-aware routing. (7) JWT keys synchronized or per-region.
@@ -1882,7 +1882,7 @@ If WebSocket isn't available, fall back to SSE or long-polling.
 **Q24: How do you handle N+1 in production GraphQL?**
 **A:** (1) DataLoader batching and caching for every relation resolver. (2) Query complexity analysis and limits. (3) Persisted queries with cost analysis. (4) Schema design: avoid list-of-list resolutions where possible.
 
-### 22.6 Staff (8-12 years) <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'22.6%20Staff%20(8-12%20years)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="22.6 Staff (8-12 years)" title="Ask ChatGPT about this section">💬</a>
+### 22.6 Staff (8-12 years) <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'22.6%20Staff%20(8-12%20years)'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="22.6 Staff (8-12 years)" title="Ask ChatGPT about this section">💬</a>
 
 **Q25: Design a global API platform for a multi-product company.**
 **A:** (1) API gateway (Kong, Envoy). (2) Per-product microservices with their own schemas. (3) API federation for cross-product queries (GraphQL Federation). (4) Centralized auth (OIDC). (5) Observability (OpenTelemetry). (6) Per-region deployments. (7) Multi-version support. (8) Developer portal (API catalog, docs, sandboxes).
@@ -1890,7 +1890,7 @@ If WebSocket isn't available, fall back to SSE or long-polling.
 **Q26: How would you migrate from JWT session tokens to OAuth2?**
 **A:** (1) Stand up OAuth2 authorization server (Keycloak, Auth0, Ory). (2) Identify clients (web, mobile, server). (3) For SPAs: authorization code + PKCE. (4) For server-to-server: client credentials. (5) Token revocation strategy. (6) Migration of existing JWTs (gradual). (7) Token rotation and refresh handling.
 
-### 22.7 Principal / Architect <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'22.7%20Principal%20%2F%20Architect'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="22.7 Principal / Architect" title="Ask ChatGPT about this section">💬</a>
+### 22.7 Principal / Architect <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'22.7%20Principal%20%2F%20Architect'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="22.7 Principal / Architect" title="Ask ChatGPT about this section">💬</a>
 
 **Q27: When would you choose REST vs GraphQL vs gRPC for a system?**
 **A:** REST for public APIs with broad consumers. GraphQL when clients have varied data needs (mobile + web). gRPC for service-to-service in microservices. WebSocket for real-time features. Use combinations: gRPC service-to-service + REST/GraphQL public APIs.
@@ -1898,7 +1898,7 @@ If WebSocket isn't available, fall back to SSE or long-polling.
 **Q28: How do you design for API security at scale?**
 **A:** Defense in depth: (1) Edge (TLS, DDoS protection, CDN). (2) Gateway (rate limiting, auth). (3) Service (RBAC, scopes, validation). (4) Storage (encryption at rest). (5) Network (mTLS, zero-trust). (6) Audit logging. (7) Secrets management. (8) Continuous security testing.
 
-### 22.8 Scenario-based questions <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'22.8%20Scenario-based%20questions'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="22.8 Scenario-based questions" title="Ask ChatGPT about this section">💬</a>
+### 22.8 Scenario-based questions <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'22.8%20Scenario-based%20questions'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="22.8 Scenario-based questions" title="Ask ChatGPT about this section">💬</a>
 
 **Scenario 1:** Mobile app makes a REST call to get user info; needs user + posts + comments + recent orders. Each is a separate REST endpoint. Mobile app makes 4 round-trips.
 **Answer:** Use GraphQL — single endpoint, client specifies exact fields, single round-trip.
@@ -1916,7 +1916,7 @@ If WebSocket isn't available, fall back to SSE or long-polling.
 
 ## 23. References
 
-### 23.1 Official specifications <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'23.1%20Official%20specifications'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="23.1 Official specifications" title="Ask ChatGPT about this section">💬</a>
+### 23.1 Official specifications <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'23.1%20Official%20specifications'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="23.1 Official specifications" title="Ask ChatGPT about this section">💬</a>
 
 - **HTTP Semantics:** <https://www.rfc-editor.org/rfc/rfc9110.html>
 - **HTTP/1.1:** <https://www.rfc-editor.org/rfc/rfc9112.html>
@@ -1935,12 +1935,12 @@ If WebSocket isn't available, fall back to SSE or long-polling.
 - **GraphQL Spec:** <https://spec.graphql.org/>
 - **OpenAPI 3.1.0:** <https://spec.openapis.org/oas/v3.1.0>
 
-### 23.2 Foundational documents <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'23.2%20Foundational%20documents'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="23.2 Foundational documents" title="Ask ChatGPT about this section">💬</a>
+### 23.2 Foundational documents <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'23.2%20Foundational%20documents'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="23.2 Foundational documents" title="Ask ChatGPT about this section">💬</a>
 
 - **Roy Fielding's REST dissertation:** <https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm>
 - **Leonard Richardson's Maturity Model.**
 
-### 23.3 Books <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'23.3%20Books'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="23.3 Books" title="Ask ChatGPT about this section">💬</a>
+### 23.3 Books <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'23.3%20Books'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="23.3 Books" title="Ask ChatGPT about this section">💬</a>
 
 - *RESTful Web APIs* — Richardson, Amundsen, Ruby (O'Reilly).
 - *HTTP: The Definitive Guide* — David Gourley et al. (O'Reilly).
@@ -1952,7 +1952,7 @@ If WebSocket isn't available, fall back to SSE or long-polling.
 - *API Design Patterns* — JJ Geewax (Manning).
 - *High Performance Browser Networking* — Ilya Grigorik (free online).
 
-### 23.4 Engineering blogs and resources <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'23.4%20Engineering%20blogs%20and%20resources'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="23.4 Engineering blogs and resources" title="Ask ChatGPT about this section">💬</a>
+### 23.4 Engineering blogs and resources <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'23.4%20Engineering%20blogs%20and%20resources'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="23.4 Engineering blogs and resources" title="Ask ChatGPT about this section">💬</a>
 
 - **Stripe API blog:** <https://stripe.com/blog/engineering>
 - **GitHub Engineering:** <https://github.blog/engineering/>
@@ -1963,7 +1963,7 @@ If WebSocket isn't available, fall back to SSE or long-polling.
 - **Slack Engineering:** <https://slack.engineering/>
 - **Square / Block Engineering:** <https://developer.squareup.com/blog>
 
-### 23.5 Open source tools <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'23.5%20Open%20source%20tools'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="23.5 Open source tools" title="Ask ChatGPT about this section">💬</a>
+### 23.5 Open source tools <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'23.5%20Open%20source%20tools'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="23.5 Open source tools" title="Ask ChatGPT about this section">💬</a>
 
 - **Kong API Gateway:** <https://konghq.com/>
 - **Envoy Proxy:** <https://www.envoyproxy.io/>
@@ -1979,12 +1979,12 @@ If WebSocket isn't available, fall back to SSE or long-polling.
 - **Stoplight Elements:** <https://stoplight.io/open-source/elements>
 - **DataLoader:** <https://github.com/graphql/dataloader>
 
-### 23.6 Conferences <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'23.6%20Conferences'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="23.6 Conferences" title="Ask ChatGPT about this section">💬</a>
+### 23.6 Conferences <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'23.6%20Conferences'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="23.6 Conferences" title="Ask ChatGPT about this section">💬</a>
 
 - **QCon:** distributed systems track.
 - **API World, API Conference.**
 
-### 23.7 Free online resources <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'23.7%20Free%20online%20resources'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="23.7 Free online resources" title="Ask ChatGPT about this section">💬</a>
+### 23.7 Free online resources <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'23.7%20Free%20online%20resources'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="23.7 Free online resources" title="Ask ChatGPT about this section">💬</a>
 
 - **HTTP specification (free HTML versions):** <https://httpwg.org/>
 - **GraphQL Foundation Learn:** <https://graphql.org/learn/>

@@ -36,7 +36,7 @@ The authoritative source for Spring Boot is the official documentation. This fil
 
 ## Key sections referenced in this document
 
-### Getting Started <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Getting%20Started'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Getting Started" title="Ask ChatGPT about this section">💬</a>
+### Getting Started <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Getting%20Started'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Getting Started" title="Ask ChatGPT about this section">💬</a>
 
 | Topic | URL path |
 |-------|----------|
@@ -45,7 +45,7 @@ The authoritative source for Spring Boot is the official documentation. This fil
 | Installing Spring Boot | <https://docs.spring.io/spring-boot/reference/using/installing.html> |
 | First Spring Boot app | <https://docs.spring.io/spring-boot/reference/using/getting-started.html> |
 
-### Auto-configuration <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Auto-configuration'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Auto-configuration" title="Ask ChatGPT about this section">💬</a>
+### Auto-configuration <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Auto-configuration'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Auto-configuration" title="Ask ChatGPT about this section">💬</a>
 
 | Topic | URL path |
 |-------|----------|
@@ -54,7 +54,7 @@ The authoritative source for Spring Boot is the official documentation. This fil
 | Disabling auto-configuration | <https://docs.spring.io/spring-boot/reference/using/auto-configuration.html#using.auto-configuration.disabling-specific> |
 | Custom auto-configuration | <https://docs.spring.io/spring-boot/reference/features/developing-auto-configuration.html> |
 
-### Spring Boot features <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Spring%20Boot%20features'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Spring Boot features" title="Ask ChatGPT about this section">💬</a>
+### Spring Boot features <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Spring%20Boot%20features'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Spring Boot features" title="Ask ChatGPT about this section">💬</a>
 
 | Topic | URL path |
 |-------|----------|
@@ -67,7 +67,7 @@ The authoritative source for Spring Boot is the official documentation. This fil
 | Testing | <https://docs.spring.io/spring-boot/reference/features/testing.html> |
 | Developing with Spring Boot | <https://docs.spring.io/spring-boot/reference/features/developing-web-applications.html> |
 
-### Web <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Web'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Web" title="Ask ChatGPT about this section">💬</a>
+### Web <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Web'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Web" title="Ask ChatGPT about this section">💬</a>
 
 | Topic | URL path |
 |-------|----------|
@@ -77,7 +77,7 @@ The authoritative source for Spring Boot is the official documentation. This fil
 | WebFlux | <https://docs.spring.io/spring-boot/reference/web/reactive.html> |
 | Graceful shutdown | <https://docs.spring.io/spring-boot/reference/web/graceful-shutdown.html> |
 
-### Data <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Data'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Data" title="Ask ChatGPT about this section">💬</a>
+### Data <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Data'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Data" title="Ask ChatGPT about this section">💬</a>
 
 | Topic | URL path |
 |-------|----------|
@@ -89,7 +89,7 @@ The authoritative source for Spring Boot is the official documentation. This fil
 | MongoDB | <https://docs.spring.io/spring-boot/reference/data/nosql.html> |
 | Spring Data Repositories | <https://docs.spring.io/spring-boot/reference/data/sql.html#data.sql.repositories> |
 
-### Production-ready <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Production-ready'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Production-ready" title="Ask ChatGPT about this section">💬</a>
+### Production-ready <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Production-ready'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Production-ready" title="Ask ChatGPT about this section">💬</a>
 
 | Topic | URL path |
 |-------|----------|
@@ -102,7 +102,7 @@ The authoritative source for Spring Boot is the official documentation. This fil
 | HTTP | <https://docs.spring.io/spring-boot/reference/actuator/endpoints.html#actuator.endpoints.exposing> |
 | Observability | <https://docs.spring.io/spring-boot/reference/actuator/observability.html> |
 
-### Configuration <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Configuration'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Configuration" title="Ask ChatGPT about this section">💬</a>
+### Configuration <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Configuration'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Configuration" title="Ask ChatGPT about this section">💬</a>
 
 | Topic | URL path |
 |-------|----------|
@@ -110,7 +110,7 @@ The authoritative source for Spring Boot is the official documentation. This fil
 | Conditional annotations | <https://docs.spring.io/spring-boot/reference/features/developing-auto-configuration.html#features.developing-auto-configuration.condition-annotations> |
 | Type-safe configuration | <https://docs.spring.io/spring-boot/reference/features/external-config.html#features.external-config.typesafe-configuration-properties> |
 
-### Deployment <a class="askgpt-btn" href="https://chatgpt.com/?q=Explain%20'Deployment'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Deployment" title="Ask ChatGPT about this section">💬</a>
+### Deployment <a class="askgpt-btn" href="https://chatgpt.com/?prompt=Explain%20'Deployment'%20in%20detail%20with%20concrete%20examples%2C%20the%20main%20trade-offs%2C%20and%20common%20pitfalls%20a%20practitioner%20should%20know." target="_blank" rel="noopener" data-askgpt="Deployment" title="Ask ChatGPT about this section">💬</a>
 
 | Topic | URL path |
 |-------|----------|
