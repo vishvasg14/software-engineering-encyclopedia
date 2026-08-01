@@ -297,13 +297,11 @@ graph TB
 ```mermaid
 sequenceDiagram
     participant C as Client
-    participant Loop as Event Loop
-    Loop->>Loop: epoll_wait, kqueue or select
-    C->>Loop: send command
-    Loop->>Loop: parse
-    Loop->>Loop: execute (single-threaded)
-    Loop-->>C: response
-    Note over Loop: Memory access is the bottleneck.<br/>Single-threading avoids locks.
+    participant L as EventLoop
+    C->>L: send command
+    L->>L: parse and execute
+    L-->>C: response
+    Note over L: Memory access is the bottleneck.<br/>Single-threading avoids locks.
 
 ```
 

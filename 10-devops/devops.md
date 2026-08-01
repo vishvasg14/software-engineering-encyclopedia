@@ -816,24 +816,24 @@ graph TB
 
 ```mermaid
 graph TB
-    Dev["Developer"]
-    Git[("Git repo")]
-    CI["CI: build and test"]
-    Registry[("Container registry")]
-    Argo["ArgoCD"]
-    K8s["Kubernetes cluster"]
-    Prometheus["Prometheus"]
-    Grafana["Grafana"]
+    Dev[Developer]
+    GitRepo[(Git repo)]
+    CI[CI build and test]
+    Registry[(Container registry)]
+    Argo[ArgoCD]
+    K8s[Kubernetes cluster]
+    Prometheus[Prometheus]
+    Grafana[Grafana]
 
-    Dev ->|git push| Git
-    Git -> CI
-    CI -> Registry
-    CI -> Git
-    Git ->|poll| Argo
-    Registry -> K8s
-    Argo ->|apply manifests| K8s
-    K8s -> Prometheus
-    Prometheus -> Grafana
+    Dev -->|git push| GitRepo
+    GitRepo --> CI
+    CI --> Registry
+    CI --> GitRepo
+    GitRepo -->|poll| Argo
+    Registry --> K8s
+    Argo -->|apply manifests| K8s
+    K8s --> Prometheus
+    Prometheus --> Grafana
 
 ```
 
