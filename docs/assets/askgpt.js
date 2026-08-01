@@ -25,17 +25,15 @@
     });
   }
 
-  function openChatGPT(prompt, autoSubmit) {
-    // chatgpt.com URL parameters:
-    //   ?prompt={text}    → opens with the prompt in the compose box
-    //   ?model=gpt-5      → picks a model
-    // Auto-submit is NOT a real URL parameter — chatgpt.com does not honor
-    // any query string that triggers the Send button. The "auto-submit"
-    // checkbox is therefore a UI affordance: when checked, the prompt is
-    // also copied to the clipboard so the user can paste + Enter manually
-    // (especially useful on the mobile app or another device).
+  function openChatGPT(prompt, copyOnOpen) {
+    // chatgpt.com only supports prefill via ?prompt= — it does not honor
+    // any URL parameter that triggers the Send button. So we always open
+    // chatgpt.com with the prompt in the compose box; the user still has
+    // to click Send. To save them a step, we also copy the prompt to the
+    // clipboard so they can paste it from another device (mobile app,
+    // desktop, etc.) if needed.
     var url = 'https://chatgpt.com/?prompt=' + encodeURIComponent(prompt);
-    if (autoSubmit) {
+    if (copyOnOpen) {
       copyToClipboard(prompt, null);
     }
     window.open(url, '_blank', 'noopener');
@@ -84,7 +82,7 @@
     if (e.key === 'Escape') closeModal();
   }
 
-  function buildPrompt(url, section, preset, userText, autoSubmit) {
+  function buildPrompt(url, section, preset, userText) {
     var lines = [
       'Read this section of my software engineering encyclopedia and answer my question about it:',
       '',
@@ -96,10 +94,6 @@
     if (userText && userText.trim()) {
       lines.push('');
       lines.push('Additional context from me: ' + userText.trim());
-    }
-    if (autoSubmit) {
-      lines.push('');
-      lines.push('(Note: I have auto-submit enabled. Please send this as-is — the prompt is already copied to my clipboard.)');
     }
     return lines.join('\n');
   }
@@ -189,7 +183,7 @@
     card.appendChild(preview);
 
     function updatePreview() {
-      var p = buildPrompt(url, section, selectedPreset, textArea.value, autoSubmit);
+      var p = buildPrompt(url, section, selectedPreset, textArea.value);
       preview.textContent = p;
     }
 
@@ -200,23 +194,25 @@
     updatePreview();
     textArea.addEventListener('input', updatePreview);
 
-    // Auto-submit checkbox (default true)
-    var autoSubmit = true;
-    var autoRow = document.createElement('label');
-    autoRow.className = 'askgpt-auto';
-    var autoCheck = document.createElement('input');
-    autoCheck.type = 'checkbox';
-    autoCheck.checked = true;
-    autoRow.appendChild(autoCheck);
-    var autoText = document.createElement('span');
-    autoText.textContent = 'Submit to ChatGPT automatically (uncheck to just open with the prompt in the compose box)';
-    autoRow.appendChild(autoText);
-    autoCheck.addEventListener('change', function () {
-      autoSubmit = autoCheck.checked;
-      submit.textContent = autoSubmit ? 'Open & submit ChatGPT →' : 'Open ChatGPT →';
-      updatePreview();
+    // Copy-on-open checkbox (default true) — controls whether the prompt is
+    // copied to the clipboard when the user clicks "Open ChatGPT". Useful
+    // because chatgpt.com doesn't auto-submit, so the user will need to
+    // paste the prompt into the compose box manually. With copy-on-open
+    // they just Cmd+V then Enter.
+    var copyOnOpen = true;
+    var copyRow = document.createElement('label');
+    copyRow.className = 'askgpt-auto';
+    var copyCheck = document.createElement('input');
+    copyCheck.type = 'checkbox';
+    copyCheck.checked = true;
+    copyRow.appendChild(copyCheck);
+    var copyText = document.createElement('span');
+    copyText.textContent = 'Copy the prompt to my clipboard when I click "Open ChatGPT"';
+    copyRow.appendChild(copyText);
+    copyCheck.addEventListener('change', function () {
+      copyOnOpen = copyCheck.checked;
     });
-    card.appendChild(autoRow);
+    card.appendChild(copyRow);
 
     // Buttons row
     var btnRow = document.createElement('div');
@@ -244,8 +240,8 @@
     submit.className = 'askgpt-submit';
     submit.textContent = 'Open & submit ChatGPT →';
     submit.addEventListener('click', function () {
-      var p = buildPrompt(url, section, selectedPreset, textArea.value, autoSubmit);
-      openChatGPT(p, autoSubmit);
+      var p = buildPrompt(url, section, selectedPreset, textArea.value);
+      openChatGPT(p, copyOnOpen);
       closeModal();
     });
     btnRow.appendChild(submit);
