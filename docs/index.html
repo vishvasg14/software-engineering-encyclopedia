@@ -179,9 +179,11 @@
     }
     article.innerHTML = '<div class="loading">Loading…</div>';
     try {
-      // Pages serves the repo at /<repo-name>/... — fetch by relative path
-      // using the chapter's markdown file as the URL.
-      const url = path;
+      // Pages is configured to serve from /docs, but the chapter markdown
+      // files live at the repo root. Fetch from raw.githubusercontent.com
+      // instead — that endpoint serves the full repo and is CORS-enabled
+      // for public repos.
+      const url = 'https://raw.githubusercontent.com/vishvasg14/software-engineering-encyclopedia/main/' + path;
       const res = await fetch(url);
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       const md = await res.text();
