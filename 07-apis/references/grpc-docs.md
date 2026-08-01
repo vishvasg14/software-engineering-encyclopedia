@@ -53,7 +53,7 @@ The authoritative source for gRPC is the gRPC project at CNCF. This file catalog
 
 ## Topics referenced
 
-### Protocol Buffers
+### Protocol Buffers <a class="askgpt-btn" data-askgpt="Protocol Buffers" title="Ask ChatGPT about this section">💬</a>
 
 ```proto
 syntax = "proto3";
@@ -100,7 +100,7 @@ message DeleteUserRequest {
 }
 ```
 
-### Streaming types
+### Streaming types <a class="askgpt-btn" data-askgpt="Streaming types" title="Ask ChatGPT about this section">💬</a>
 
 | Type | Client | Server |
 |------|--------|--------|
@@ -109,7 +109,7 @@ message DeleteUserRequest {
 | **Client streaming** | Stream of requests | Single response |
 | **Bidirectional** | Stream of requests | Stream of responses |
 
-### Status codes
+### Status codes <a class="askgpt-btn" data-askgpt="Status codes" title="Ask ChatGPT about this section">💬</a>
 
 | Code | Number | Description |
 |------|--------|-------------|
@@ -131,7 +131,7 @@ message DeleteUserRequest {
 | `DATA_LOSS` | 15 | Data loss |
 | `UNAUTHENTICATED` | 16 | Auth required |
 
-### Interceptors
+### Interceptors <a class="askgpt-btn" data-askgpt="Interceptors" title="Ask ChatGPT about this section">💬</a>
 
 ```java
 public class AuthInterceptor implements ClientInterceptor {
@@ -153,7 +153,7 @@ public class AuthInterceptor implements ClientInterceptor {
 }
 ```
 
-### Deadlines and cancellation
+### Deadlines and cancellation <a class="askgpt-btn" data-askgpt="Deadlines and cancellation" title="Ask ChatGPT about this section">💬</a>
 
 ```java
 // Client sets deadline
@@ -163,7 +163,7 @@ User user = stub
     .getUser(request);
 ```
 
-### Server-side streaming example
+### Server-side streaming example <a class="askgpt-btn" data-askgpt="Server-side streaming example" title="Ask ChatGPT about this section">💬</a>
 
 ```java
 @Override
@@ -177,7 +177,7 @@ public void listUsers(ListUsersRequest request,
 }
 ```
 
-### Client-side streaming example
+### Client-side streaming example <a class="askgpt-btn" data-askgpt="Client-side streaming example" title="Ask ChatGPT about this section">💬</a>
 
 ```java
 @Override

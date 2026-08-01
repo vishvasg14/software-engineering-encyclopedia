@@ -23,7 +23,7 @@ The authoritative source for RabbitMQ is the official documentation. This file c
 
 ## Key sections referenced in this document
 
-### Concepts
+### Concepts <a class="askgpt-btn" data-askgpt="Concepts" title="Ask ChatGPT about this section">💬</a>
 
 | Topic | URL |
 |-------|-----|
@@ -36,7 +36,7 @@ The authoritative source for RabbitMQ is the official documentation. This file c
 | Virtual Hosts | <https://www.rabbitmq.com/docs/vhosts> |
 | Connections | <https://www.rabbitmq.com/docs/connections> |
 
-### Exchange types
+### Exchange types <a class="askgpt-btn" data-askgpt="Exchange types" title="Ask ChatGPT about this section">💬</a>
 
 | Exchange | URL |
 |----------|-----|
@@ -45,7 +45,7 @@ The authoritative source for RabbitMQ is the official documentation. This file c
 | Topic | <https://www.rabbitmq.com/docs/exchanges#topic> |
 | Headers | <https://www.rabbitmq.com/docs/exchanges#headers> |
 
-### Patterns
+### Patterns <a class="askgpt-btn" data-askgpt="Patterns" title="Ask ChatGPT about this section">💬</a>
 
 | Topic | URL |
 |-------|-----|
@@ -57,7 +57,7 @@ The authoritative source for RabbitMQ is the official documentation. This file c
 | Quorum Queues | <https://www.rabbitmq.com/docs/quorum-queues> |
 | Streams | <https://www.rabbitmq.com/docs/streams> |
 
-### Reliability
+### Reliability <a class="askgpt-btn" data-askgpt="Reliability" title="Ask ChatGPT about this section">💬</a>
 
 | Topic | URL |
 |-------|-----|
@@ -68,7 +68,7 @@ The authoritative source for RabbitMQ is the official documentation. This file c
 | Consumer Priority | <https://www.rabbitmq.com/docs/priority> |
 | Persistence | <https://www.rabbitmq.com/docs/persistence-conf> |
 
-### Operations
+### Operations <a class="askgpt-btn" data-askgpt="Operations" title="Ask ChatGPT about this section">💬</a>
 
 | Topic | URL |
 |-------|-----|
@@ -80,7 +80,7 @@ The authoritative source for RabbitMQ is the official documentation. This file c
 | High Availability | <https://www.rabbitmq.com/docs/ha> |
 | Backup | <https://www.rabbitmq.com/docs/backup> |
 
-### Security
+### Security <a class="askgpt-btn" data-askgpt="Security" title="Ask ChatGPT about this section">💬</a>
 
 | Topic | URL |
 |-------|-----|
@@ -89,7 +89,7 @@ The authoritative source for RabbitMQ is the official documentation. This file c
 | TLS | <https://www.rabbitmq.com/docs/ssl> |
 | LDAP | <https://www.rabbitmq.com/docs/ldap> |
 
-### Clients
+### Clients <a class="askgpt-btn" data-askgpt="Clients" title="Ask ChatGPT about this section">💬</a>
 
 | Language | Client |
 |----------|--------|

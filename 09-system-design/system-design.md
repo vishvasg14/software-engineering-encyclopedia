@@ -99,19 +99,19 @@ graph TB
 
 ## 3. Five Ws + One H
 
-### What
+### What <a class="askgpt-btn" data-askgpt="What" title="Ask ChatGPT about this section">💬</a>
 
 **System design** is the discipline of choosing architectures, components, protocols, and data structures to meet requirements at scale. **Distributed systems** are the systems that result from running software across multiple machines.
 
-### Why
+### Why <a class="askgpt-btn" data-askgpt="Why" title="Ask ChatGPT about this section">💬</a>
 
 Modern applications serve billions of users, process petabytes of data, and require 99.99%+ availability. Single-machine designs don't scale. Distributed designs trade complexity (consensus, partial failure, network latency) for scale.
 
-### When
+### When <a class="askgpt-btn" data-askgpt="When" title="Ask ChatGPT about this section">💬</a>
 
 System design as a discipline matured with the rise of web-scale services (Google, Amazon, eBay in the late 1990s / 2000s). Microservices became mainstream around 2014 with the publication of Lewis and Fowler's book. Modern concerns (serverless, edge compute, AI workloads) continue to evolve the field.
 
-### Where
+### Where <a class="askgpt-btn" data-askgpt="Where" title="Ask ChatGPT about this section">💬</a>
 
 - **Web services:** Google, Amazon, Netflix, Meta, Twitter/X.
 - **Enterprise:** Banks, governments, healthcare.
@@ -119,7 +119,7 @@ System design as a discipline matured with the rise of web-scale services (Googl
 - **Real-time analytics:** Uber, Lyft, Airbnb.
 - **IoT and edge:** Industrial, autonomous systems.
 
-### Who
+### Who <a class="askgpt-btn" data-askgpt="Who" title="Ask ChatGPT about this section">💬</a>
 
 - **Eric Brewer:** CAP theorem (2000).
 - **Leslie Lamport:** Paxos, time/clock ordering (1978+).
@@ -129,13 +129,13 @@ System design as a discipline matured with the rise of web-scale services (Googl
 - **Sam Newman:** Microservices.
 - **Daniel Abadi:** PACELC.
 
-### How (one-paragraph preview)
+### How (one-paragraph preview) <a class="askgpt-btn" data-askgpt="How (one-paragraph preview)" title="Ask ChatGPT about this section">💬</a>
 
 A system designer gathers requirements (functional and non-functional), estimates scale, identifies bottlenecks, chooses an architecture (monolith vs microservices vs modular monolith), designs data flow (synchronous vs asynchronous), selects algorithms (consensus, replication, caching), and plans operations (observability, deployment, scaling). For distributed systems specifically, you reason about failure modes (network partitions, process crashes, clock skew) and trade-offs (CAP, consistency vs latency).
 
 ## 4. History
 
-### 4.1 Origins (1960s-1990s)
+### 4.1 Origins (1960s-1990s) <a class="askgpt-btn" data-askgpt="4.1 Origins (1960s-1990s)" title="Ask ChatGPT about this section">💬</a>
 
 - **1960s** — Time-sharing systems; ARPANET.
 - **1978** — Leslie Lamport's "Time, Clocks, and the Ordering of Events" — the foundational paper on distributed systems ordering.
@@ -143,7 +143,7 @@ A system designer gathers requirements (functional and non-functional), estimate
 - **1991** — WWW.
 - **1998** — Lamport publishes "Paxos Made Simple" (concept existed since 1989).
 
-### 4.2 The web era (2000-2010)
+### 4.2 The web era (2000-2010) <a class="askgpt-btn" data-askgpt="4.2 The web era (2000-2010)" title="Ask ChatGPT about this section">💬</a>
 
 - **2000** — Eric Brewer's PODC keynote introduces the CAP conjecture.
 - **2002** — Gilbert and Lynch formally prove CAP.
@@ -152,7 +152,7 @@ A system designer gathers requirements (functional and non-functional), estimate
 - **2006-2007** — Amazon Dynamo, Google Bigtable papers.
 - **2007** — Kafka project begins at LinkedIn.
 
-### 4.3 The cloud and microservices era (2010-2018)
+### 4.3 The cloud and microservices era (2010-2018) <a class="askgpt-btn" data-askgpt="4.3 The cloud and microservices era (2010-2018)" title="Ask ChatGPT about this section">💬</a>
 
 - **2010-2012** — Microservices concepts crystallize.
 - **2012** — Twitter's "fail whale" era ends; migration to JVM-based services.
@@ -162,7 +162,7 @@ A system designer gathers requirements (functional and non-functional), estimate
 - **2015** — Kubernetes 1.0.
 - **2016** — Service mesh (Linkerd, Istio).
 
-### 4.4 The cloud-native era (2018-2026)
+### 4.4 The cloud-native era (2018-2026) <a class="askgpt-btn" data-askgpt="4.4 The cloud-native era (2018-2026)" title="Ask ChatGPT about this section">💬</a>
 
 - **2018** — Knative, serverless.
 - **2019** — Cross-cloud, multi-cloud patterns.
@@ -188,7 +188,7 @@ timeline
 
 ## 5. Problem Statement
 
-### 5.1 What system design solves
+### 5.1 What system design solves <a class="askgpt-btn" data-askgpt="5.1 What system design solves" title="Ask ChatGPT about this section">💬</a>
 
 System design addresses:
 
@@ -199,14 +199,14 @@ System design addresses:
 - **Security** — protecting data and systems.
 - **Cost** — operating economically.
 
-### 5.2 What system design doesn't solve
+### 5.2 What system design doesn't solve <a class="askgpt-btn" data-askgpt="5.2 What system design doesn't solve" title="Ask ChatGPT about this section">💬</a>
 
 - **Domain modeling** — that's where DDD helps.
 - **Code quality** — that's where clean code helps.
 - **Team organization** — that's where Conway's law bites.
 - **Process** — that's where agile/scrum helps.
 
-### 5.3 The cost of scale
+### 5.3 The cost of scale <a class="askgpt-btn" data-askgpt="5.3 The cost of scale" title="Ask ChatGPT about this section">💬</a>
 
 At small scale, you can ignore most distributed systems concerns. At large scale, you must design for:
 
@@ -217,27 +217,27 @@ At small scale, you can ignore most distributed systems concerns. At large scale
 
 ## 6. Real-World Motivation
 
-### 6.1 Amazon
+### 6.1 Amazon <a class="askgpt-btn" data-askgpt="6.1 Amazon" title="Ask ChatGPT about this section">💬</a>
 
 Amazon's evolution from monolith to microservices is the canonical case study. Jeff Bezos issued the famous "API mandate" in 2002: all teams must expose data and functionality via service interfaces. This led to the Amazon SOA, which evolved into modern microservices.
 
-### 6.2 Netflix
+### 6.2 Netflix <a class="askgpt-btn" data-askgpt="6.2 Netflix" title="Ask ChatGPT about this section">💬</a>
 
 Netflix migrated from Oracle-backed monolith to Cassandra + microservices on AWS in 2008-2017. They pioneered many patterns: Hystrix circuit breaker, Eureka service discovery, Zuul gateway, Chaos Monkey for resilience testing.
 
-### 6.3 Uber
+### 6.3 Uber <a class="askgpt-btn" data-askgpt="6.3 Uber" title="Ask ChatGPT about this section">💬</a>
 
 Uber went from a Python monolith to a domain-oriented microservices architecture (2500+ services in 2020). They documented the trade-offs in their "Microservice Architecture" engineering blog.
 
-### 6.4 Stripe
+### 6.4 Stripe <a class="askgpt-btn" data-askgpt="6.4 Stripe" title="Ask ChatGPT about this section">💬</a>
 
 Stripe operates one of the most sophisticated payment processing systems. They use event-driven architecture extensively, with detailed state machines for payment flows.
 
-### 6.5 Twitter / X
+### 6.5 Twitter / X <a class="askgpt-btn" data-askgpt="6.5 Twitter / X" title="Ask ChatGPT about this section">💬</a>
 
 Twitter's transition from Rails monolith to "Service Oriented Architecture" (SOA) — and then back to a more managed approach — is well-documented. They used Scala and Mesos/Manhattan.
 
-### 6.6 Shopify
+### 6.6 Shopify <a class="askgpt-btn" data-askgpt="6.6 Shopify" title="Ask ChatGPT about this section">💬</a>
 
 Shopify runs a modular monolith on Rails. They've explicitly avoided microservices, choosing strong module boundaries inside a single deployable.
 
@@ -256,7 +256,7 @@ graph LR
 
 ## 7. Internal Working
 
-### 7.1 Request flow in a distributed system
+### 7.1 Request flow in a distributed system <a class="askgpt-btn" data-askgpt="7.1 Request flow in a distributed system" title="Ask ChatGPT about this section">💬</a>
 
 ```mermaid
 sequenceDiagram
@@ -279,7 +279,7 @@ sequenceDiagram
     CDN-->>U: response
 ```
 
-### 7.2 Subsystems that participate
+### 7.2 Subsystems that participate <a class="askgpt-btn" data-askgpt="7.2 Subsystems that participate" title="Ask ChatGPT about this section">💬</a>
 
 | Subsystem | Responsibility |
 |-----------|---------------|
@@ -292,7 +292,7 @@ sequenceDiagram
 | **Message queue** | Async events |
 | **Observability** | Metrics, logs, traces |
 
-### 7.3 The CAP triangle
+### 7.3 The CAP triangle <a class="askgpt-btn" data-askgpt="7.3 The CAP triangle" title="Ask ChatGPT about this section">💬</a>
 
 ```mermaid
 graph TB
@@ -312,7 +312,7 @@ During a network partition (P), you must choose between Consistency (C) and Avai
 
 This section is the heart of the document.
 
-### 8.1 CAP and PACELC
+### 8.1 CAP and PACELC <a class="askgpt-btn" data-askgpt="8.1 CAP and PACELC" title="Ask ChatGPT about this section">💬</a>
 
 **CAP theorem:** In a distributed system, you can have at most two of:
 
@@ -328,7 +328,7 @@ Since network partitions are inevitable, you must choose C or A during a partiti
 - **PC/EC** — Spanner, FaunaDB.
 - **PA/EC** — Cosmos DB (configurable).
 
-### 8.2 Consistency models
+### 8.2 Consistency models <a class="askgpt-btn" data-askgpt="8.2 Consistency models" title="Ask ChatGPT about this section">💬</a>
 
 **Strong (linearizable):** Reads see the most recent write. Expensive; often requires consensus.
 
@@ -340,7 +340,7 @@ Since network partitions are inevitable, you must choose C or A during a partiti
 
 **Monotonic reads:** A user never sees older data after newer.
 
-### 8.3 Raft consensus
+### 8.3 Raft consensus <a class="askgpt-btn" data-askgpt="8.3 Raft consensus" title="Ask ChatGPT about this section">💬</a>
 
 Raft decomposes consensus into three subproblems:
 
@@ -372,7 +372,7 @@ stateDiagram-v2
 - Leader completeness: committed entry present in all future leaders.
 - State machine safety: same index applies same command.
 
-### 8.4 Paxos (brief)
+### 8.4 Paxos (brief) <a class="askgpt-btn" data-askgpt="8.4 Paxos (brief)" title="Ask ChatGPT about this section">💬</a>
 
 Paxos is the original consensus algorithm. It's correct but notoriously hard to understand. Multi-Paxos optimizes for the steady state.
 
@@ -384,7 +384,7 @@ Paxos phases:
 
 Raft is essentially a more understandable Paxos variant.
 
-### 8.5 Architecture styles
+### 8.5 Architecture styles <a class="askgpt-btn" data-askgpt="8.5 Architecture styles" title="Ask ChatGPT about this section">💬</a>
 
 ```mermaid
 graph TB
@@ -427,7 +427,7 @@ graph TB
 - Cold starts; limited runtime; vendor lock-in.
 - Best for spiky, event-driven workloads.
 
-### 8.6 Domain-Driven Design (DDD)
+### 8.6 Domain-Driven Design (DDD) <a class="askgpt-btn" data-askgpt="8.6 Domain-Driven Design (DDD)" title="Ask ChatGPT about this section">💬</a>
 
 **Strategic patterns:**
 
@@ -458,7 +458,7 @@ graph TB
     CustomerRef -. published event .-> AC
 ```
 
-### 8.7 Clean Architecture
+### 8.7 Clean Architecture <a class="askgpt-btn" data-askgpt="8.7 Clean Architecture" title="Ask ChatGPT about this section">💬</a>
 
 ```mermaid
 graph TB
@@ -486,13 +486,13 @@ graph TB
 
 Dependencies point inward. Inner layers know nothing about outer layers.
 
-### 8.8 Hexagonal Architecture (Ports and Adapters)
+### 8.8 Hexagonal Architecture (Ports and Adapters) <a class="askgpt-btn" data-askgpt="8.8 Hexagonal Architecture (Ports and Adapters)" title="Ask ChatGPT about this section">💬</a>
 
 - **Domain:** Business logic.
 - **Ports:** Interfaces (driving and driven).
 - **Adapters:** Concrete implementations (web, database, etc.).
 
-### 8.9 Onion Architecture
+### 8.9 Onion Architecture <a class="askgpt-btn" data-askgpt="8.9 Onion Architecture" title="Ask ChatGPT about this section">💬</a>
 
 Similar to Clean Architecture. Layers:
 - Domain Model (innermost).
@@ -500,7 +500,7 @@ Similar to Clean Architecture. Layers:
 - Application Services.
 - Infrastructure (outermost).
 
-### 8.10 CQRS (Command-Query Responsibility Segregation)
+### 8.10 CQRS (Command-Query Responsibility Segregation) <a class="askgpt-btn" data-askgpt="8.10 CQRS (Command-Query Responsibility Segregation)" title="Ask ChatGPT about this section">💬</a>
 
 ```mermaid
 graph TB
@@ -536,7 +536,7 @@ graph TB
 - Simple CRUD with no scaling issues.
 - Adds complexity.
 
-### 8.11 Event-driven architecture
+### 8.11 Event-driven architecture <a class="askgpt-btn" data-askgpt="8.11 Event-driven architecture" title="Ask ChatGPT about this section">💬</a>
 
 **Event notification:** Notify other systems of an event. Loose coupling.
 
@@ -546,7 +546,7 @@ graph TB
 
 **Event storming:** Domain discovery technique using sticky notes to map events.
 
-### 8.12 Saga pattern
+### 8.12 Saga pattern <a class="askgpt-btn" data-askgpt="8.12 Saga pattern" title="Ask ChatGPT about this section">💬</a>
 
 Long-running transactions across services. Two types:
 
@@ -572,7 +572,7 @@ sequenceDiagram
 
 **Compensating actions:** On failure, each step has a reverse action (e.g., refund payment, release inventory).
 
-### 8.13 Outbox pattern
+### 8.13 Outbox pattern <a class="askgpt-btn" data-askgpt="8.13 Outbox pattern" title="Ask ChatGPT about this section">💬</a>
 
 The "dual write" problem: writing to DB and publishing to Kafka is not atomic.
 
@@ -596,7 +596,7 @@ sequenceDiagram
 
 **Transactional outbox:** The outbox row is written in the same transaction as the business write. A separate process polls the outbox and publishes to Kafka, marking rows as published.
 
-### 8.14 Idempotency
+### 8.14 Idempotency <a class="askgpt-btn" data-askgpt="8.14 Idempotency" title="Ask ChatGPT about this section">💬</a>
 
 The same request made multiple times produces the same result. Essential for:
 
@@ -611,7 +611,7 @@ Idempotency-Key: abc123
 
 Server stores the result by key. Same key returns same result. Expires after 24 hours.
 
-### 8.15 Rate limiting
+### 8.15 Rate limiting <a class="askgpt-btn" data-askgpt="8.15 Rate limiting" title="Ask ChatGPT about this section">💬</a>
 
 | Algorithm | Pros | Cons |
 |-----------|------|------|
@@ -623,7 +623,7 @@ Server stores the result by key. Same key returns same result. Expires after 24 
 
 Tools: **Resilience4j** (Java), **redis-cell** (Redis), **NGINX limit_req**, **Envoy ratelimit**.
 
-### 8.16 Distributed locks
+### 8.16 Distributed locks <a class="askgpt-btn" data-askgpt="8.16 Distributed locks" title="Ask ChatGPT about this section">💬</a>
 
 A mutex across machines. Implementations:
 
@@ -635,7 +635,7 @@ A mutex across machines. Implementations:
 
 **Caveat:** Distributed locks are hard to get right. Most use cases can use database row-level locks or optimistic concurrency.
 
-### 8.17 Microservices migration
+### 8.17 Microservices migration <a class="askgpt-btn" data-askgpt="8.17 Microservices migration" title="Ask ChatGPT about this section">💬</a>
 
 **Strangler fig pattern:** Gradually replace monolith endpoints with new services.
 
@@ -657,7 +657,7 @@ Steps:
 4. Migrate data (dual-write, then backfill).
 5. Decommission monolith component.
 
-### 8.18 Modular monolith
+### 8.18 Modular monolith <a class="askgpt-btn" data-askgpt="8.18 Modular monolith" title="Ask ChatGPT about this section">💬</a>
 
 A single deployable with strong internal module boundaries.
 
@@ -676,7 +676,7 @@ Modules communicate via in-process calls (not network). Boundaries enforced by p
 
 **Risk:** Without discipline, modules become tightly coupled. Mitigate with strict package boundaries, code review, and module tests.
 
-### 8.19 Classic problem: URL shortener
+### 8.19 Classic problem: URL shortener <a class="askgpt-btn" data-askgpt="8.19 Classic problem: URL shortener" title="Ask ChatGPT about this section">💬</a>
 
 Requirements: shorten URL to short code, redirect to original.
 
@@ -707,7 +707,7 @@ graph TB
 - Analytics (track clicks).
 - Expiration.
 
-### 8.20 Classic problem: Twitter timeline
+### 8.20 Classic problem: Twitter timeline <a class="askgpt-btn" data-askgpt="8.20 Classic problem: Twitter timeline" title="Ask ChatGPT about this section">💬</a>
 
 Requirements: user sees tweets from people they follow, in reverse chronological order.
 
@@ -739,7 +739,7 @@ graph TB
 - Celebrity user problem.
 - Storage growth.
 
-### 8.21 Classic problem: rate limiter
+### 8.21 Classic problem: rate limiter <a class="askgpt-btn" data-askgpt="8.21 Classic problem: rate limiter" title="Ask ChatGPT about this section">💬</a>
 
 Requirements: limit per-user/per-IP requests.
 
@@ -781,13 +781,13 @@ redis.call('EXPIRE', key, ttl)
 return allowed
 ```
 
-### 8.22 Classic problem: message queue
+### 8.22 Classic problem: message queue <a class="askgpt-btn" data-askgpt="8.22 Classic problem: message queue" title="Ask ChatGPT about this section">💬</a>
 
 Requirements: durable, ordered, high-throughput message delivery.
 
 Reference design: **Kafka** (covered in [Messaging doc](../06-messaging/messaging.md)).
 
-### 8.23 Classic problem: distributed cache
+### 8.23 Classic problem: distributed cache <a class="askgpt-btn" data-askgpt="8.23 Classic problem: distributed cache" title="Ask ChatGPT about this section">💬</a>
 
 Reference design: **Redis** (covered in [Caching doc](../08-caching/caching.md)).
 
@@ -795,7 +795,7 @@ Reference design: **Redis** (covered in [Caching doc](../08-caching/caching.md))
 
 ## 9. Architecture
 
-### 9.1 Reference architecture: large-scale web service
+### 9.1 Reference architecture: large-scale web service <a class="askgpt-btn" data-askgpt="9.1 Reference architecture: large-scale web service" title="Ask ChatGPT about this section">💬</a>
 
 ```mermaid
 graph TB
@@ -836,7 +836,7 @@ graph TB
     Kafka --> S2
 ```
 
-### 9.2 Monolith vs modular vs microservices
+### 9.2 Monolith vs modular vs microservices <a class="askgpt-btn" data-askgpt="9.2 Monolith vs modular vs microservices" title="Ask ChatGPT about this section">💬</a>
 
 | Dimension | Monolith | Modular Monolith | Microservices |
 |-----------|----------|------------------|----------------|
@@ -850,7 +850,7 @@ graph TB
 
 ## 10. Performance
 
-### 10.1 Latency budgets
+### 10.1 Latency budgets <a class="askgpt-btn" data-askgpt="10.1 Latency budgets" title="Ask ChatGPT about this section">💬</a>
 
 | Component | Budget |
 |-----------|--------|
@@ -863,13 +863,13 @@ graph TB
 | Cache | 1ms |
 | Total | ~200ms p99 |
 
-### 10.2 Throughput calculation
+### 10.2 Throughput calculation <a class="askgpt-btn" data-askgpt="10.2 Throughput calculation" title="Ask ChatGPT about this section">💬</a>
 
 **Little's Law:** `Concurrency = Throughput × Latency`.
 
 To handle 100K requests/sec at 100ms latency, you need 10K concurrent in-flight requests.
 
-### 10.3 Backpressure
+### 10.3 Backpressure <a class="askgpt-btn" data-askgpt="10.3 Backpressure" title="Ask ChatGPT about this section">💬</a>
 
 When downstream can't keep up:
 
@@ -879,7 +879,7 @@ When downstream can't keep up:
 
 ## 11. Security
 
-### 11.1 Defense in depth
+### 11.1 Defense in depth <a class="askgpt-btn" data-askgpt="11.1 Defense in depth" title="Ask ChatGPT about this section">💬</a>
 
 ```mermaid
 graph TB
@@ -892,14 +892,14 @@ graph TB
     App --> Data
 ```
 
-### 11.2 Zero trust
+### 11.2 Zero trust <a class="askgpt-btn" data-askgpt="11.2 Zero trust" title="Ask ChatGPT about this section">💬</a>
 
 - Every request authenticated.
 - Every connection encrypted (mTLS).
 - Every service has its own credentials.
 - Network segmentation.
 
-### 11.3 Secrets management
+### 11.3 Secrets management <a class="askgpt-btn" data-askgpt="11.3 Secrets management" title="Ask ChatGPT about this section">💬</a>
 
 - **HashiCorp Vault:** Centralized secrets.
 - **AWS Secrets Manager:** Cloud-managed.
@@ -907,20 +907,20 @@ graph TB
 
 ## 12. Production Engineering
 
-### 12.1 Observability
+### 12.1 Observability <a class="askgpt-btn" data-askgpt="12.1 Observability" title="Ask ChatGPT about this section">💬</a>
 
 - **Metrics:** RED (Rate, Errors, Duration), USE (Utilization, Saturation, Errors).
 - **Logs:** Structured (JSON), centralized.
 - **Traces:** Distributed (OpenTelemetry, Jaeger).
 - **SLOs:** Service Level Objectives.
 
-### 12.2 Deployment
+### 12.2 Deployment <a class="askgpt-btn" data-askgpt="12.2 Deployment" title="Ask ChatGPT about this section">💬</a>
 
 - **Blue-green:** switch over.
 - **Canary:** partial rollouts.
 - **GitOps:** declarative.
 
-### 12.3 Capacity planning
+### 12.3 Capacity planning <a class="askgpt-btn" data-askgpt="12.3 Capacity planning" title="Ask ChatGPT about this section">💬</a>
 
 - **Load testing:** k6, Gatling, JMeter.
 - **Forecast:** model growth.
@@ -928,63 +928,63 @@ graph TB
 
 ## 13. Production Case Studies
 
-### 13.1 Amazon
+### 13.1 Amazon <a class="askgpt-btn" data-askgpt="13.1 Amazon" title="Ask ChatGPT about this section">💬</a>
 
 The original microservices case study. Jeff Bezos's 2002 API mandate drove the company toward service-oriented architecture. By 2020, Amazon runs tens of thousands of services.
 
-### 13.2 Netflix
+### 13.2 Netflix <a class="askgpt-btn" data-askgpt="13.2 Netflix" title="Ask ChatGPT about this section">💬</a>
 
 Migrated from Oracle monolith to Cassandra + microservices in 2008-2017. They pioneered many patterns: Hystrix, Eureka, Zuul, Chaos Monkey.
 
-### 13.3 Uber
+### 13.3 Uber <a class="askgpt-btn" data-askgpt="13.3 Uber" title="Ask ChatGPT about this section">💬</a>
 
 2500+ microservices. Domain-Oriented Microservice Architecture (DOMA) — bounded contexts around business capabilities (e.g., "rides", "payments", "eats").
 
-### 13.4 Stripe
+### 13.4 Stripe <a class="askgpt-btn" data-askgpt="13.4 Stripe" title="Ask ChatGPT about this section">💬</a>
 
 Event-driven architecture. Complex state machines for payment flows. Detailed error handling.
 
-### 13.5 Shopify
+### 13.5 Shopify <a class="askgpt-btn" data-askgpt="13.5 Shopify" title="Ask ChatGPT about this section">💬</a>
 
 Modular monolith on Rails. Explicitly avoided microservices. Strong module boundaries.
 
-### 13.6 Twitter / X
+### 13.6 Twitter / X <a class="askgpt-btn" data-askgpt="13.6 Twitter / X" title="Ask ChatGPT about this section">💬</a>
 
 Migrated from Rails monolith to "Manhattan" Scala-based microservices on Mesos. Then consolidated some back into services.
 
 ## 14. Code Examples
 
-### 14.1 Basic: CQRS read/write split (TypeScript)
+### 14.1 Basic: CQRS read/write split (TypeScript) <a class="askgpt-btn" data-askgpt="14.1 Basic: CQRS read/write split (TypeScript)" title="Ask ChatGPT about this section">💬</a>
 
 ```typescript
 // see 01-cqrs/
 ```
 
-### 14.2 Saga pattern
+### 14.2 Saga pattern <a class="askgpt-btn" data-askgpt="14.2 Saga pattern" title="Ask ChatGPT about this section">💬</a>
 
 ```typescript
 // see 03-saga/
 ```
 
-### 14.3 Outbox pattern
+### 14.3 Outbox pattern <a class="askgpt-btn" data-askgpt="14.3 Outbox pattern" title="Ask ChatGPT about this section">💬</a>
 
 ```typescript
 // see 04-outbox-pattern/
 ```
 
-### 14.4 Idempotency
+### 14.4 Idempotency <a class="askgpt-btn" data-askgpt="14.4 Idempotency" title="Ask ChatGPT about this section">💬</a>
 
 ```typescript
 // see 12-idempotency/
 ```
 
-### 14.5 Rate limiter (token bucket, Lua + Redis)
+### 14.5 Rate limiter (token bucket, Lua + Redis) <a class="askgpt-btn" data-askgpt="14.5 Rate limiter (token bucket, Lua + Redis)" title="Ask ChatGPT about this section">💬</a>
 
 ```lua
 -- see 11-rate-limiter/
 ```
 
-### 14.6 Bad, anti-pattern, refactored, secure examples
+### 14.6 Bad, anti-pattern, refactored, secure examples <a class="askgpt-btn" data-askgpt="14.6 Bad, anti-pattern, refactored, secure examples" title="Ask ChatGPT about this section">💬</a>
 
 **Bad: distributed monolith**
 
@@ -1021,7 +1021,7 @@ Migrated from Rails monolith to "Manhattan" Scala-based microservices on Mesos. 
 
 ## 15. Common Mistakes
 
-### 15.1 Beginner mistakes
+### 15.1 Beginner mistakes <a class="askgpt-btn" data-askgpt="15.1 Beginner mistakes" title="Ask ChatGPT about this section">💬</a>
 
 - **Premature microservices** — splitting a small app too early.
 - **No idempotency** — POST without keys; double charges.
@@ -1029,7 +1029,7 @@ Migrated from Rails monolith to "Manhattan" Scala-based microservices on Mesos. 
 - **No timeouts** — one slow service blocks the whole chain.
 - **No circuit breakers** — one service failure cascades.
 
-### 15.2 Intermediate mistakes
+### 15.2 Intermediate mistakes <a class="askgpt-btn" data-askgpt="15.2 Intermediate mistakes" title="Ask ChatGPT about this section">💬</a>
 
 - **Distributed monolith** — services share a database.
 - **No compensation in saga** — failure leaves inconsistent state.
@@ -1037,54 +1037,54 @@ Migrated from Rails monolith to "Manhattan" Scala-based microservices on Mesos. 
 - **Hot partitions** — single key bottleneck.
 - **Missing observability** — can't debug.
 
-### 15.3 Senior mistakes
+### 15.3 Senior mistakes <a class="askgpt-btn" data-askgpt="15.3 Senior mistakes" title="Ask ChatGPT about this section">💬</a>
 
 - **Wrong architecture choice** — microservices when monolith fits.
 - **Synchronous chain in EDA** — defeats event-driven benefits.
 - **No backpressure** — cascading failures.
 - **Wrong consistency model** — strong when eventual would work.
 
-### 15.4 Production mistakes
+### 15.4 Production mistakes <a class="askgpt-btn" data-askgpt="15.4 Production mistakes" title="Ask ChatGPT about this section">💬</a>
 
 - **No rate limiting** — DOS.
 - **No timeout** — hangs.
 - **No retry budget** — retry storm.
 - **No chaos testing** — discover problems at launch.
 
-### 15.5 Migration mistakes
+### 15.5 Migration mistakes <a class="askgpt-btn" data-askgpt="15.5 Migration mistakes" title="Ask ChatGPT about this section">💬</a>
 
 - **Big-bang migration** — all at once; high risk.
 - **Shared database between services** — defeats the point.
 - **No rollback plan** — when something breaks.
 - **No feature flags** — can't disable.
 
-### 15.6 Configuration mistakes
+### 15.6 Configuration mistakes <a class="askgpt-btn" data-askgpt="15.6 Configuration mistakes" title="Ask ChatGPT about this section">💬</a>
 
 - **Timeouts too long** — slow detection.
 - **Connection pool too small** — exhausted.
 - **No rate limit** — vulnerable.
 
-### 15.7 Security mistakes
+### 15.7 Security mistakes <a class="askgpt-btn" data-askgpt="15.7 Security mistakes" title="Ask ChatGPT about this section">💬</a>
 
 - **Trusting internal network** — no mTLS.
 - **Long-lived tokens** — no rotation.
 - **Secrets in code** — git history leaks.
 - **No audit log** — can't investigate.
 
-### 15.8 Performance mistakes
+### 15.8 Performance mistakes <a class="askgpt-btn" data-askgpt="15.8 Performance mistakes" title="Ask ChatGPT about this section">💬</a>
 
 - **Sync calls in async paths** — defeats purpose.
 - **Hot key in cache** — single point.
 - **N+1 queries** — DB round-trips.
 - **No batching** — missed optimization.
 
-### 15.9 Debugging mistakes
+### 15.9 Debugging mistakes <a class="askgpt-btn" data-askgpt="15.9 Debugging mistakes" title="Ask ChatGPT about this section">💬</a>
 
 - **Restarting without logs** — lose state.
 - **No correlation IDs** — can't trace.
 - **No service map** — don't know dependencies.
 
-### 15.10 Deployment mistakes
+### 15.10 Deployment mistakes <a class="askgpt-btn" data-askgpt="15.10 Deployment mistakes" title="Ask ChatGPT about this section">💬</a>
 
 - **No canary** — full rollout.
 - **No health checks** — K8s doesn't know status.
@@ -1092,7 +1092,7 @@ Migrated from Rails monolith to "Manhattan" Scala-based microservices on Mesos. 
 
 ## 16. Debugging
 
-### 16.1 Distributed tracing
+### 16.1 Distributed tracing <a class="askgpt-btn" data-askgpt="16.1 Distributed tracing" title="Ask ChatGPT about this section">💬</a>
 
 ```typescript
 // OpenTelemetry
@@ -1106,14 +1106,14 @@ span?.setAttribute('user.id', '123');
 - **Trace ID:** Correlation across services.
 - **Span ID:** Unique per operation.
 
-### 16.2 Log correlation
+### 16.2 Log correlation <a class="askgpt-btn" data-askgpt="16.2 Log correlation" title="Ask ChatGPT about this section">💬</a>
 
 ```typescript
 // Inject trace ID into log
 logger.info({ traceId, spanId, message: 'user updated' });
 ```
 
-### 16.3 Common debugging tools
+### 16.3 Common debugging tools <a class="askgpt-btn" data-askgpt="16.3 Common debugging tools" title="Ask ChatGPT about this section">💬</a>
 
 - **Wireshark:** Packet capture.
 - **tcpdump:** Network debugging.
@@ -1123,7 +1123,7 @@ logger.info({ traceId, spanId, message: 'user updated' });
 - **redis-cli:** Redis debugging.
 - **psql:** PostgreSQL debugging.
 
-### 16.4 Chaos engineering
+### 16.4 Chaos engineering <a class="askgpt-btn" data-askgpt="16.4 Chaos engineering" title="Ask ChatGPT about this section">💬</a>
 
 Tools: **Chaos Monkey**, **Gremlin**, **Litmus**.
 
@@ -1134,7 +1134,7 @@ Experiments:
 - Fill disk.
 - Exhaust CPU.
 
-### 16.5 Production troubleshooting checklist
+### 16.5 Production troubleshooting checklist <a class="askgpt-btn" data-askgpt="16.5 Production troubleshooting checklist" title="Ask ChatGPT about this section">💬</a>
 
 - [ ] Capture trace ID.
 - [ ] Capture logs from all involved services.
@@ -1146,31 +1146,31 @@ Experiments:
 
 ## 17. Monitoring & Observability
 
-### 17.1 Three pillars
+### 17.1 Three pillars <a class="askgpt-btn" data-askgpt="17.1 Three pillars" title="Ask ChatGPT about this section">💬</a>
 
 - **Metrics:** Counters, gauges, histograms.
 - **Logs:** Structured events.
 - **Traces:** Distributed spans.
 
-### 17.2 RED method (for services)
+### 17.2 RED method (for services) <a class="askgpt-btn" data-askgpt="17.2 RED method (for services)" title="Ask ChatGPT about this section">💬</a>
 
 - **Rate:** Requests per second.
 - **Errors:** Failed requests per second.
 - **Duration:** Latency distribution.
 
-### 17.3 USE method (for resources)
+### 17.3 USE method (for resources) <a class="askgpt-btn" data-askgpt="17.3 USE method (for resources)" title="Ask ChatGPT about this section">💬</a>
 
 - **Utilization:** % time busy.
 - **Saturation:** Queue depth.
 - **Errors:** Error count.
 
-### 17.4 SLOs
+### 17.4 SLOs <a class="askgpt-btn" data-askgpt="17.4 SLOs" title="Ask ChatGPT about this section">💬</a>
 
 - **Availability:** 99.9%, 99.95%, 99.99%.
 - **Latency:** p50, p95, p99.
 - **Error rate:** 0.1%, 0.01%.
 
-### 17.5 Alerting
+### 17.5 Alerting <a class="askgpt-btn" data-askgpt="17.5 Alerting" title="Ask ChatGPT about this section">💬</a>
 
 - Page on user-visible symptoms (latency, error rate).
 - Don't page on internal symptoms (CPU, memory).
@@ -1178,7 +1178,7 @@ Experiments:
 
 ## 18. Best Practices
 
-### 18.1 Industry best practices
+### 18.1 Industry best practices <a class="askgpt-btn" data-askgpt="18.1 Industry best practices" title="Ask ChatGPT about this section">💬</a>
 
 - **Design for failure:** every request can fail; handle it.
 - **Idempotency:** every operation should be safe to retry.
@@ -1191,7 +1191,7 @@ Experiments:
 - **Chaos engineering:** test failure modes.
 - **Documentation:** ADRs for decisions.
 
-### 18.2 Enterprise practices
+### 18.2 Enterprise practices <a class="askgpt-btn" data-askgpt="18.2 Enterprise practices" title="Ask ChatGPT about this section">💬</a>
 
 - **Architecture decision records (ADRs):** Document why.
 - **Threat modeling:** Identify risks.
@@ -1199,14 +1199,14 @@ Experiments:
 - **Cost monitoring:** per-service attribution.
 - **On-call training:** Runbooks.
 
-### 18.3 Clean code
+### 18.3 Clean code <a class="askgpt-btn" data-askgpt="18.3 Clean code" title="Ask ChatGPT about this section">💬</a>
 
 - **Single responsibility:** one reason to change.
 - **Boundaries:** modules with clear interfaces.
 - **Testability:** pure functions where possible.
 - **Idempotency:** no side effects without intent.
 
-### 18.4 Reliability
+### 18.4 Reliability <a class="askgpt-btn" data-askgpt="18.4 Reliability" title="Ask ChatGPT about this section">💬</a>
 
 - **Circuit breakers** (Resilience4j).
 - **Retries with exponential backoff.**
@@ -1214,7 +1214,7 @@ Experiments:
 - **Bulkheads** (thread pools, connection pools).
 - **Health checks** (liveness, readiness).
 
-### 18.5 Security
+### 18.5 Security <a class="askgpt-btn" data-askgpt="18.5 Security" title="Ask ChatGPT about this section">💬</a>
 
 - **mTLS** for service-to-service.
 - **OAuth2 / JWT** for user auth.
@@ -1222,14 +1222,14 @@ Experiments:
 - **Audit logging.**
 - **Network policies** (Kubernetes NetworkPolicy).
 
-### 18.6 Performance
+### 18.6 Performance <a class="askgpt-btn" data-askgpt="18.6 Performance" title="Ask ChatGPT about this section">💬</a>
 
 - **Caching** (L1 in-JVM, L2 distributed).
 - **Connection pooling.**
 - **Async** for non-blocking I/O.
 - **CDN** for static.
 
-### 18.7 Testing
+### 18.7 Testing <a class="askgpt-btn" data-askgpt="18.7 Testing" title="Ask ChatGPT about this section">💬</a>
 
 - **Unit tests** for logic.
 - **Contract tests** (Pact).
@@ -1237,7 +1237,7 @@ Experiments:
 - **Load tests** (k6, Gatling).
 - **Chaos tests** (Gremlin).
 
-### 18.8 Deployment
+### 18.8 Deployment <a class="askgpt-btn" data-askgpt="18.8 Deployment" title="Ask ChatGPT about this section">💬</a>
 
 - **Canary** for safe rollouts.
 - **GitOps** for declarative.
@@ -1246,31 +1246,31 @@ Experiments:
 
 ## 19. Anti-Patterns
 
-### 19.1 Distributed monolith
+### 19.1 Distributed monolith <a class="askgpt-btn" data-askgpt="19.1 Distributed monolith" title="Ask ChatGPT about this section">💬</a>
 
 Services share a database; tight coupling; "microservices" in name only.
 
 **Fix:** True bounded contexts; each service owns its data.
 
-### 19.2 Sync chain
+### 19.2 Sync chain <a class="askgpt-btn" data-askgpt="19.2 Sync chain" title="Ask ChatGPT about this section">💬</a>
 
 A calls B calls C calls D. Latency adds up; one failure breaks all.
 
 **Fix:** Async events; aggregate at boundaries.
 
-### 19.3 Magic push
+### 19.3 Magic push <a class="askgpt-btn" data-askgpt="19.3 Magic push" title="Ask ChatGPT about this section">💬</a>
 
 A service "magically" pushes state to others without explicit contracts.
 
 **Fix:** Explicit events; clear ownership.
 
-### 19.4 Distributed transaction abuse
+### 19.4 Distributed transaction abuse <a class="askgpt-btn" data-askgpt="19.4 Distributed transaction abuse" title="Ask ChatGPT about this section">💬</a>
 
 Trying to do 2PC across many services. Slow; fragile.
 
 **Fix:** Saga with compensating actions.
 
-### 19.5 Choreography spaghetti
+### 19.5 Choreography spaghetti <a class="askgpt-btn" data-askgpt="19.5 Choreography spaghetti" title="Ask ChatGPT about this section">💬</a>
 
 Services emit events; consumers react; no one understands the flow.
 
@@ -1278,43 +1278,43 @@ Services emit events; consumers react; no one understands the flow.
 
 ## 20. Edge Cases
 
-### 20.1 Split brain
+### 20.1 Split brain <a class="askgpt-btn" data-askgpt="20.1 Split brain" title="Ask ChatGPT about this section">💬</a>
 
 Two services both think they're the leader. Can lead to data corruption.
 
 **Mitigation:** Quorum-based leader election (Raft, ZooKeeper).
 
-### 20.2 Thundering herd
+### 20.2 Thundering herd <a class="askgpt-btn" data-askgpt="20.2 Thundering herd" title="Ask ChatGPT about this section">💬</a>
 
 Many requests hit a cold cache simultaneously. DB overload.
 
 **Mitigation:** Single-flight, lock, early expiration.
 
-### 20.3 Hot partition
+### 20.3 Hot partition <a class="askgpt-btn" data-askgpt="20.3 Hot partition" title="Ask ChatGPT about this section">💬</a>
 
 Single key in distributed store gets all traffic.
 
 **Mitigation:** Random suffix, local cache, replication.
 
-### 20.4 Clock skew
+### 20.4 Clock skew <a class="askgpt-btn" data-askgpt="20.4 Clock skew" title="Ask ChatGPT about this section">💬</a>
 
 Servers have different times. Can confuse timestamps.
 
 **Mitigation:** NTP, monotonic clocks, logical clocks (vector, hybrid).
 
-### 20.5 Retry storms
+### 20.5 Retry storms <a class="askgpt-btn" data-askgpt="20.5 Retry storms" title="Ask ChatGPT about this section">💬</a>
 
 Service A retries on failure; service B is down; A floods B with retries.
 
 **Mitigation:** Exponential backoff with jitter; circuit breaker.
 
-### 20.6 Partial network failures
+### 20.6 Partial network failures <a class="askgpt-btn" data-askgpt="20.6 Partial network failures" title="Ask ChatGPT about this section">💬</a>
 
 Some packets get through; some don't. Hard to detect.
 
 **Mitigation:** Timeouts; circuit breakers; bulkheads.
 
-### 20.7 Data inconsistency
+### 20.7 Data inconsistency <a class="askgpt-btn" data-askgpt="20.7 Data inconsistency" title="Ask ChatGPT about this section">💬</a>
 
 Replicas diverge; updates applied in different orders.
 
@@ -1324,7 +1324,7 @@ Replicas diverge; updates applied in different orders.
 
 ## 21. Comparisons
 
-### 21.1 Monolith vs Modular Monolith vs Microservices
+### 21.1 Monolith vs Modular Monolith vs Microservices <a class="askgpt-btn" data-askgpt="21.1 Monolith vs Modular Monolith vs Microservices" title="Ask ChatGPT about this section">💬</a>
 
 | Dimension | Monolith | Modular Monolith | Microservices |
 |-----------|----------|------------------|----------------|
@@ -1336,7 +1336,7 @@ Replicas diverge; updates applied in different orders.
 | Scaling | Vertical | Vertical | Horizontal |
 | Best for | Startups | Most production | Massive scale |
 
-### 21.2 Synchronous vs Asynchronous
+### 21.2 Synchronous vs Asynchronous <a class="askgpt-btn" data-askgpt="21.2 Synchronous vs Asynchronous" title="Ask ChatGPT about this section">💬</a>
 
 | Dimension | Synchronous | Asynchronous |
 |-----------|-------------|--------------|
@@ -1347,7 +1347,7 @@ Replicas diverge; updates applied in different orders.
 
 **Rule of thumb:** Use sync for queries; use async for state changes that don't need immediate response.
 
-### 21.3 REST vs Events vs gRPC
+### 21.3 REST vs Events vs gRPC <a class="askgpt-btn" data-askgpt="21.3 REST vs Events vs gRPC" title="Ask ChatGPT about this section">💬</a>
 
 | Dimension | REST | Events | gRPC |
 |-----------|------|--------|------|
@@ -1357,7 +1357,7 @@ Replicas diverge; updates applied in different orders.
 | Browser support | Native | Needs WS/SSE | Needs grpc-web |
 | Best for | Public APIs | Domain events | Service-to-service |
 
-### 21.4 Consensus algorithms
+### 21.4 Consensus algorithms <a class="askgpt-btn" data-askgpt="21.4 Consensus algorithms" title="Ask ChatGPT about this section">💬</a>
 
 | Algorithm | Pros | Cons | Used by |
 |-----------|------|------|--------|
@@ -1366,7 +1366,7 @@ Replicas diverge; updates applied in different orders.
 | **Zab** | Mature | ZK-specific | ZooKeeper |
 | **EPaxos** | Low latency in some topologies | Complex | Some research systems |
 
-### 21.5 Rate limiting algorithms
+### 21.5 Rate limiting algorithms <a class="askgpt-btn" data-askgpt="21.5 Rate limiting algorithms" title="Ask ChatGPT about this section">💬</a>
 
 | Algorithm | Memory | Accuracy | Burst handling |
 |-----------|--------|----------|----------------|
@@ -1376,7 +1376,7 @@ Replicas diverge; updates applied in different orders.
 | Leaky bucket | Low | Good | Smooths |
 | Sliding log | High | Most accurate | Accurate |
 
-### 21.6 Decision matrix
+### 21.6 Decision matrix <a class="askgpt-btn" data-askgpt="21.6 Decision matrix" title="Ask ChatGPT about this section">💬</a>
 
 | Workload | Recommended |
 |----------|------------|
@@ -1387,7 +1387,7 @@ Replicas diverge; updates applied in different orders.
 | Real-time | Modular monolith + WebSockets |
 | Multi-cloud | Microservices + service mesh |
 
-### 21.7 Migration paths
+### 21.7 Migration paths <a class="askgpt-btn" data-askgpt="21.7 Migration paths" title="Ask ChatGPT about this section">💬</a>
 
 - **Monolith → Modular:** Extract modules, define boundaries, enforce.
 - **Modular → Microservices:** Strangler fig, one bounded context at a time.
@@ -1398,7 +1398,7 @@ Replicas diverge; updates applied in different orders.
 
 ## 22. Interview Preparation
 
-### 22.1 Beginner (0-1 years)
+### 22.1 Beginner (0-1 years) <a class="askgpt-btn" data-askgpt="22.1 Beginner (0-1 years)" title="Ask ChatGPT about this section">💬</a>
 
 **Q1: What is the CAP theorem?**
 **A:** In a distributed system, during a network partition, you must choose between Consistency and Availability. Since partitions are inevitable, you trade off.
@@ -1415,7 +1415,7 @@ Replicas diverge; updates applied in different orders.
 **Q5: What is a load balancer?**
 **A:** Distributes requests across multiple servers. Improves availability and capacity.
 
-### 22.2 Junior (1-2 years)
+### 22.2 Junior (1-2 years) <a class="askgpt-btn" data-askgpt="22.2 Junior (1-2 years)" title="Ask ChatGPT about this section">💬</a>
 
 **Q6: What is CQRS?**
 **A:** Command-Query Responsibility Segregation. Separate write and read models. Reads are denormalized for query speed; writes go through aggregates.
@@ -1432,7 +1432,7 @@ Replicas diverge; updates applied in different orders.
 **Q10: What is a bounded context?**
 **A:** A DDD concept — a model boundary where terms have a specific meaning. Each microservice typically owns one bounded context.
 
-### 22.3 Mid (2-4 years)
+### 22.3 Mid (2-4 years) <a class="askgpt-btn" data-askgpt="22.3 Mid (2-4 years)" title="Ask ChatGPT about this section">💬</a>
 
 **Q11: How do you handle distributed transactions without 2PC?**
 **A:** (1) Saga pattern with compensating actions. (2) Eventual consistency via events. (3) Outbox pattern for reliable event publication.
@@ -1452,7 +1452,7 @@ Replicas diverge; updates applied in different orders.
 **Q16: What is the difference between orchestration and choreography?**
 **A:** Orchestration: a central saga coordinates steps. Choreography: services emit events; no central coordinator. Orchestration is explicit but coupled; choreography is loosely coupled but harder to understand.
 
-### 22.4 Senior (4-6 years)
+### 22.4 Senior (4-6 years) <a class="askgpt-btn" data-askgpt="22.4 Senior (4-6 years)" title="Ask ChatGPT about this section">💬</a>
 
 **Q17: How would you design a distributed cache for a high-traffic service?**
 **A:** (1) Multi-tier: Caffeine (L1, in-JVM) + Redis (L2, distributed). (2) Cache-aside pattern. (3) Stampede protection (single-flight). (4) Hot key detection + local cache. (5) TTL strategy. (6) Monitoring hit rate.
@@ -1469,7 +1469,7 @@ Replicas diverge; updates applied in different orders.
 **Q21: How do you debug a system that's distributed across regions?**
 **A:** (1) Distributed tracing (OpenTelemetry). (2) Trace ID propagation. (3) Log aggregation. (4) Network observability. (5) Synthetic monitoring.
 
-### 22.5 Lead (6-8 years)
+### 22.5 Lead (6-8 years) <a class="askgpt-btn" data-askgpt="22.5 Lead (6-8 years)" title="Ask ChatGPT about this section">💬</a>
 
 **Q22: How do you choose between monolith, modular monolith, and microservices?**
 **A:** (1) Team size: small → monolith; medium → modular; large → microservices. (2) Domain clarity: clear bounded contexts → microservices; entangled → monolith. (3) Operational maturity: low → monolith; high → microservices. (4) Scaling needs: vertical → monolith; horizontal → microservices. (5) Default: modular monolith; split when needed.
@@ -1480,7 +1480,7 @@ Replicas diverge; updates applied in different orders.
 **Q24: How do you handle the dual-write problem?**
 **A:** (1) Outbox pattern: write event to DB in same transaction; separate process publishes. (2) Change data capture: read from DB binlog; publish to Kafka (e.g., Debezium). (3) Two-phase commit: avoid; slow and fragile.
 
-### 22.6 Staff (8-12 years)
+### 22.6 Staff (8-12 years) <a class="askgpt-btn" data-askgpt="22.6 Staff (8-12 years)" title="Ask ChatGPT about this section">💬</a>
 
 **Q25: Design a global, multi-region distributed system.**
 **A:** (1) Edge gateways (CDN, load balancers). (2) Regional API gateways. (3) Active-active services per region. (4) Async replication for state. (5) Conflict resolution: last-writer-wins or CRDTs. (6) Active-active data: read local, write global (or per-region). (7) Observability: distributed tracing. (8) Cost: right-size.
@@ -1491,7 +1491,7 @@ Replicas diverge; updates applied in different orders.
 **Q27: How do you evolve a distributed system over years?**
 **A:** (1) Bounded contexts stable. (2) Schemas evolve with backward compatibility. (3) Deprecation policy. (4) API versioning. (5) Feature flags. (6) Documented in ADRs.
 
-### 22.7 Principal / Architect
+### 22.7 Principal / Architect <a class="askgpt-btn" data-askgpt="22.7 Principal / Architect" title="Ask ChatGPT about this section">💬</a>
 
 **Q28: When would you choose NOT to use microservices?**
 **A:** (1) Small team. (2) Single domain. (3) Early stage. (4) Low operational maturity. (5) Cost-sensitive. Microservices add operational complexity. Modular monolith is often the right choice.
@@ -1499,7 +1499,7 @@ Replicas diverge; updates applied in different orders.
 **Q29: How do you evaluate distributed systems trade-offs?**
 **A:** (1) Identify requirements (consistency, latency, scale). (2) Apply CAP/PACELC. (3) Cost analysis (operational complexity). (4) Team capability. (5) Migration risk. (6) Document trade-offs in ADRs.
 
-### 22.8 Scenario-based questions
+### 22.8 Scenario-based questions <a class="askgpt-btn" data-askgpt="22.8 Scenario-based questions" title="Ask ChatGPT about this section">💬</a>
 
 **Scenario 1:** Your service is overwhelmed. How do you debug?
 **Answer:** (1) Check metrics (latency, error rate, throughput). (2) Distributed traces to find slow spans. (3) Check downstream service health. (4) Check DB performance (slow queries, locks). (5) Check resource saturation (CPU, memory, network). (6) Check recent deployments.
@@ -1517,7 +1517,7 @@ Replicas diverge; updates applied in different orders.
 
 ## 23. References
 
-### 23.1 Foundational papers
+### 23.1 Foundational papers <a class="askgpt-btn" data-askgpt="23.1 Foundational papers" title="Ask ChatGPT about this section">💬</a>
 
 - **"Time, Clocks, and the Ordering of Events in a Distributed System"** — Lamport (1978). Foundational.
 - **"Paxos Made Simple"** — Lamport (2001).
@@ -1530,7 +1530,7 @@ Replicas diverge; updates applied in different orders.
 - **"Kafka: A Distributed Messaging System for Log Processing"** — LinkedIn (2011).
 - **"Spanner: Google's Globally-Distributed Database"** — Corbett et al. (2012).
 
-### 23.2 Books
+### 23.2 Books <a class="askgpt-btn" data-askgpt="23.2 Books" title="Ask ChatGPT about this section">💬</a>
 
 - *Designing Data-Intensive Applications* — Martin Kleppmann (O'Reilly). **The book.** Free online.
 - *Building Microservices* — Sam Newman (O'Reilly).
@@ -1545,7 +1545,7 @@ Replicas diverge; updates applied in different orders.
 - *Clean Architecture* — Robert C. Martin.
 - *Event Storming* — Alberto Brandolini.
 
-### 23.3 Engineering blogs
+### 23.3 Engineering blogs <a class="askgpt-btn" data-askgpt="23.3 Engineering blogs" title="Ask ChatGPT about this section">💬</a>
 
 - **High Scalability:** <http://highscalability.com/>
 - **The morning paper:** <https://blog.acolyer.org/>
@@ -1556,7 +1556,7 @@ Replicas diverge; updates applied in different orders.
 - **Discord Engineering:** <https://discord.com/blog/tag/engineering>
 - **AWS Architecture Blog:** <https://aws.amazon.com/blogs/architecture/>
 
-### 23.4 Tools
+### 23.4 Tools <a class="askgpt-btn" data-askgpt="23.4 Tools" title="Ask ChatGPT about this section">💬</a>
 
 - **Excalidraw:** <https://excalidraw.com/>
 - **Mermaid:** <https://mermaid.js.org/>
@@ -1567,14 +1567,14 @@ Replicas diverge; updates applied in different orders.
 - **Gremlin:** <https://www.gremlin.com/>
 - **Litmus:** <https://litmuschaos.io/>
 
-### 23.5 Conferences
+### 23.5 Conferences <a class="askgpt-btn" data-askgpt="23.5 Conferences" title="Ask ChatGPT about this section">💬</a>
 
 - **QCon:** <https://qconferences.com/>
 - **StrangeLoop:** <https://thestrangeloop.com/>
 - **KubeCon:** <https://events.linuxfoundation.org/>
 - **GopherCon:** Go-specific system design.
 
-### 23.6 Free online courses
+### 23.6 Free online courses <a class="askgpt-btn" data-askgpt="23.6 Free online courses" title="Ask ChatGPT about this section">💬</a>
 
 - **CMU 15-440 Distributed Systems** — Andrew Myers.
 - **MIT 6.824 Distributed Systems** — Robert Morris.

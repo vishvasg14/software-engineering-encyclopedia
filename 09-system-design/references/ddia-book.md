@@ -12,7 +12,7 @@ The single most important book for system design and distributed systems is *Des
 
 ## Chapters referenced in this document
 
-### Part I: Foundations of Data Systems
+### Part I: Foundations of Data Systems <a class="askgpt-btn" data-askgpt="Part I: Foundations of Data Systems" title="Ask ChatGPT about this section">💬</a>
 
 | Chapter | Title | URL |
 |---------|-------|-----|
@@ -21,7 +21,7 @@ The single most important book for system design and distributed systems is *Des
 | 3 | Storage and Retrieval | <https://dataintensive.net/#chapter_3> |
 | 4 | Encoding and Evolution | <https://dataintensive.net/#chapter_4> |
 
-### Part II: Distributed Data
+### Part II: Distributed Data <a class="askgpt-btn" data-askgpt="Part II: Distributed Data" title="Ask ChatGPT about this section">💬</a>
 
 | Chapter | Title | URL |
 |---------|-------|-----|
@@ -31,7 +31,7 @@ The single most important book for system design and distributed systems is *Des
 | 8 | The Trouble with Distributed Systems | <https://dataintensive.net/#chapter_8> |
 | 9 | Consistency and Consensus | <https://dataintensive.net/#chapter_9> |
 
-### Part III: Derived Data
+### Part III: Derived Data <a class="askgpt-btn" data-askgpt="Part III: Derived Data" title="Ask ChatGPT about this section">💬</a>
 
 | Chapter | Title | URL |
 |---------|-------|-----|
@@ -41,39 +41,39 @@ The single most important book for system design and distributed systems is *Des
 
 ## Key concepts
 
-### Chapter 1 — Foundations
+### Chapter 1 — Foundations <a class="askgpt-btn" data-askgpt="Chapter 1 — Foundations" title="Ask ChatGPT about this section">💬</a>
 
 - **Reliable:** System continues to work correctly even in the face of adversity.
 - **Scalable:** Reasonable ways of dealing with growth.
 - **Maintainable:** Many people can work on it productively.
 
-### Chapter 5 — Replication
+### Chapter 5 — Replication <a class="askgpt-btn" data-askgpt="Chapter 5 — Replication" title="Ask ChatGPT about this section">💬</a>
 
 - **Single-leader replication:** All writes go to leader; followers replicate. Read from followers.
 - **Multi-leader replication:** Multiple leaders accept writes; conflict resolution.
 - **Leaderless replication:** Any node accepts writes; quorum reads/writes.
 
-### Chapter 7 — Transactions
+### Chapter 7 — Transactions <a class="askgpt-btn" data-askgpt="Chapter 7 — Transactions" title="Ask ChatGPT about this section">💬</a>
 
 - **ACID:** Atomicity, Consistency, Isolation, Durability.
 - **Isolation levels:** Read uncommitted, Read committed, Repeatable read, Serializable.
 - **Two-phase locking (2PL):** Pessimistic concurrency.
 - **Snapshot isolation (MVCC):** Multi-version concurrency control.
 
-### Chapter 8 — The Trouble with Distributed Systems
+### Chapter 8 — The Trouble with Distributed Systems <a class="askgpt-btn" data-askgpt="Chapter 8 — The Trouble with Distributed Systems" title="Ask ChatGPT about this section">💬</a>
 
 - **Networks are unreliable:** Packets lost, delayed, reordered.
 - **Clocks are unreliable:** Clock skew across machines.
 - **Processes can pause:** GC, paging, network delays.
 
-### Chapter 9 — Consistency and Consensus
+### Chapter 9 — Consistency and Consensus <a class="askgpt-btn" data-askgpt="Chapter 9 — Consistency and Consensus" title="Ask ChatGPT about this section">💬</a>
 
 - **Linearizability:** Reads see the most recent write.
 - **Causal consistency:** Causally-related ops are seen in order.
 - **Eventual consistency:** All replicas converge eventually.
 - **Consensus:** Agreement among nodes (Paxos, Raft, Zab).
 
-### Chapter 11 — Stream Processing
+### Chapter 11 — Stream Processing <a class="askgpt-btn" data-askgpt="Chapter 11 — Stream Processing" title="Ask ChatGPT about this section">💬</a>
 
 - **Event streams:** Kafka, Pulsar.
 - **Stream processing:** Kafka Streams, Flink.

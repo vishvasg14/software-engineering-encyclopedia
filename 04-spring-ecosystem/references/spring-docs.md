@@ -25,7 +25,7 @@ The authoritative source for Spring Framework is the official documentation. Thi
 
 ## Key sections referenced in this document
 
-### Core Technologies
+### Core Technologies <a class="askgpt-btn" data-askgpt="Core Technologies" title="Ask ChatGPT about this section">💬</a>
 
 | Topic | URL path |
 |-------|----------|
@@ -49,7 +49,7 @@ The authoritative source for Spring Framework is the official documentation. Thi
 | Null-safety | <https://docs.spring.io/spring-framework/reference/core/Null-safety.html> |
 | Data Buffers and Codecs | <https://docs.spring.io/spring-framework/reference/core/databuffer-codec.html> |
 
-### Testing
+### Testing <a class="askgpt-btn" data-askgpt="Testing" title="Ask ChatGPT about this section">💬</a>
 
 | Topic | URL path |
 |-------|----------|
@@ -58,7 +58,7 @@ The authoritative source for Spring Framework is the official documentation. Thi
 | Integration Testing | <https://docs.spring.io/spring-framework/reference/testing/integration-testing.html> |
 | JDBC Testing | <https://docs.spring.io/spring-framework/reference/testing/testcontext-framework.html> |
 
-### Data Access
+### Data Access <a class="askgpt-btn" data-askgpt="Data Access" title="Ask ChatGPT about this section">💬</a>
 
 | Topic | URL path |
 |-------|----------|
@@ -67,7 +67,7 @@ The authoritative source for Spring Framework is the official documentation. Thi
 | JDBC | <https://docs.spring.io/spring-framework/reference/data-access/jdbc.html> |
 | R2DBC | <https://docs.spring.io/spring-framework/reference/data-access/r2dbc.html> |
 
-### Web Servlet
+### Web Servlet <a class="askgpt-btn" data-askgpt="Web Servlet" title="Ask ChatGPT about this section">💬</a>
 
 | Topic | URL path |
 |-------|----------|
@@ -83,7 +83,7 @@ The authoritative source for Spring Framework is the official documentation. Thi
 | View technologies | <https://docs.spring.io/spring-framework/reference/web/servlet/view.html> |
 | HTTP clients | <https://docs.spring.io/spring-framework/reference/web/spring-webflux.html#webflux-client> |
 
-### Web Reactive
+### Web Reactive <a class="askgpt-btn" data-askgpt="Web Reactive" title="Ask ChatGPT about this section">💬</a>
 
 | Topic | URL path |
 |-------|----------|
@@ -92,7 +92,7 @@ The authoritative source for Spring Framework is the official documentation. Thi
 | DispatcherHandler | <https://docs.spring.io/spring-framework/reference/web-reactive/dispatcher-handler.html> |
 | Annotated controllers | <https://docs.spring.io/spring-framework/reference/web-reactive/controller.html> |
 
-### Integration
+### Integration <a class="askgpt-btn" data-askgpt="Integration" title="Ask ChatGPT about this section">💬</a>
 
 | Topic | URL path |
 |-------|----------|
@@ -101,7 +101,7 @@ The authoritative source for Spring Framework is the official documentation. Thi
 | JMS | <https://docs.spring.io/spring-framework/reference/integration/jms.html> |
 | Email | <https://docs.spring.io/spring-framework/reference/integration/email.html> |
 
-### Languages
+### Languages <a class="askgpt-btn" data-askgpt="Languages" title="Ask ChatGPT about this section">💬</a>
 
 | Topic | URL path |
 |-------|----------|

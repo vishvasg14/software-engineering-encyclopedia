@@ -25,7 +25,7 @@ The authoritative source for Caffeine is the GitHub project and the user guide. 
 
 ## Core API
 
-### Basic cache
+### Basic cache <a class="askgpt-btn" data-askgpt="Basic cache" title="Ask ChatGPT about this section">💬</a>
 
 ```java
 Cache<Key, Graph> cache = Caffeine.newBuilder()
@@ -40,7 +40,7 @@ Graph value = cache.get(key, k -> createExpensiveGraph(k));
 cache.invalidate(key);
 ```
 
-### Loading cache
+### Loading cache <a class="askgpt-btn" data-askgpt="Loading cache" title="Ask ChatGPT about this section">💬</a>
 
 ```java
 LoadingCache<Key, Graph> cache = Caffeine.newBuilder()
@@ -52,7 +52,7 @@ LoadingCache<Key, Graph> cache = Caffeine.newBuilder()
 Graph value = cache.get(key);
 ```
 
-### Async loading
+### Async loading <a class="askgpt-btn" data-askgpt="Async loading" title="Ask ChatGPT about this section">💬</a>
 
 ```java
 AsyncCache<Key, Graph> cache = Caffeine.newBuilder()
@@ -65,7 +65,7 @@ CompletableFuture<Graph> future = cache.get(key, k -> createExpensiveGraph(k));
 
 ## Configuration options
 
-### Size-based
+### Size-based <a class="askgpt-btn" data-askgpt="Size-based" title="Ask ChatGPT about this section">💬</a>
 
 | Option | Description |
 |--------|-------------|
@@ -75,7 +75,7 @@ CompletableFuture<Graph> future = cache.get(key, k -> createExpensiveGraph(k));
 | `weakKeys()`, `weakValues()` | Use weak references |
 | `softValues()` | Use soft references |
 
-### Time-based
+### Time-based <a class="askgpt-btn" data-askgpt="Time-based" title="Ask ChatGPT about this section">💬</a>
 
 | Option | Description |
 |--------|-------------|
@@ -85,7 +85,7 @@ CompletableFuture<Graph> future = cache.get(key, k -> createExpensiveGraph(k));
 | `refreshAfterWrite(Duration)` | Async refresh before expiry |
 | `refreshAfterAccess(Duration)` | Async refresh after read |
 
-### Population
+### Population <a class="askgpt-btn" data-askgpt="Population" title="Ask ChatGPT about this section">💬</a>
 
 | Option | Description |
 |--------|-------------|
@@ -95,14 +95,14 @@ CompletableFuture<Graph> future = cache.get(key, k -> createExpensiveGraph(k));
 | `softValues()` | Soft references |
 | `recordStats()` | Enable statistics |
 
-### Eviction
+### Eviction <a class="askgpt-btn" data-askgpt="Eviction" title="Ask ChatGPT about this section">💬</a>
 
 | Option | Description |
 |--------|-------------|
 | `removalListener(RemovalListener)` | Listen to eviction events |
 | `evictionListener(EvictionListener)` | Listen to evictions only |
 
-### Other
+### Other <a class="askgpt-btn" data-askgpt="Other" title="Ask ChatGPT about this section">💬</a>
 
 | Option | Description |
 |--------|-------------|

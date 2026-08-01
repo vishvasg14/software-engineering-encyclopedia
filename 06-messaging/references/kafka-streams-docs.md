@@ -10,7 +10,7 @@ The authoritative source for Kafka Streams is the official documentation. This f
 
 ## Architecture
 
-### Core concepts
+### Core concepts <a class="askgpt-btn" data-askgpt="Core concepts" title="Ask ChatGPT about this section">💬</a>
 
 | Concept | URL |
 |---------|-----|
@@ -25,7 +25,7 @@ The authoritative source for Kafka Streams is the official documentation. This f
 | Time | <https://kafka.apache.org/documentation/streams/core-concepts#streams_concepts_time> |
 | Processor API | <https://kafka.apache.org/documentation/streams/core-concepts#streams_concepts_processor_api> |
 
-### Architecture
+### Architecture <a class="askgpt-btn" data-askgpt="Architecture" title="Ask ChatGPT about this section">💬</a>
 
 | Topic | URL |
 |-------|-----|
@@ -38,7 +38,7 @@ The authoritative source for Kafka Streams is the official documentation. This f
 | Exactly-Once Semantics | <https://kafka.apache.org/documentation/streams/architecture#streams_architecture_eos> |
 | Interactive Queries | <https://kafka.apache.org/documentation/streams/architecture#streams_architecture_interactive_queries> |
 
-### Developer Guide
+### Developer Guide <a class="askgpt-btn" data-askgpt="Developer Guide" title="Ask ChatGPT about this section">💬</a>
 
 | Topic | URL |
 |-------|-----|
@@ -53,7 +53,7 @@ The authoritative source for Kafka Streams is the official documentation. This f
 | Running Streams Application | <https://kafka.apache.org/documentation/streams/developer-guide/running-app> |
 | Schema Evolution | <https://kafka.apache.org/documentation/streams/developer-guide/serdes> |
 
-### KStream DSL
+### KStream DSL <a class="askgpt-btn" data-askgpt="KStream DSL" title="Ask ChatGPT about this section">💬</a>
 
 | Method | Purpose |
 |--------|---------|
@@ -71,7 +71,7 @@ The authoritative source for Kafka Streams is the official documentation. This f
 | `windowedBy` | Windowing |
 | `to` / `toStream` | Output |
 
-### KTable DSL
+### KTable DSL <a class="askgpt-btn" data-askgpt="KTable DSL" title="Ask ChatGPT about this section">💬</a>
 
 | Method | Purpose |
 |--------|---------|
@@ -82,7 +82,7 @@ The authoritative source for Kafka Streams is the official documentation. This f
 | `count` / `reduce` / `aggregate` | Aggregations |
 | `toStream` | KTable to KStream |
 
-### Processor API
+### Processor API <a class="askgpt-btn" data-askgpt="Processor API" title="Ask ChatGPT about this section">💬</a>
 
 The Processor API is more complex but more flexible:
 
@@ -107,7 +107,7 @@ public class MyProcessor implements Processor<String, String> {
 }
 ```
 
-### State stores
+### State stores <a class="askgpt-btn" data-askgpt="State stores" title="Ask ChatGPT about this section">💬</a>
 
 | Store type | Use case |
 |------------|----------|
@@ -115,7 +115,7 @@ public class MyProcessor implements Processor<String, String> {
 | RocksDB | Persistent, fast, larger |
 | Custom | Implement `StateStore` |
 
-### Exactly-once semantics (EOS)
+### Exactly-once semantics (EOS) <a class="askgpt-btn" data-askgpt="Exactly-once semantics (EOS)" title="Ask ChatGPT about this section">💬</a>
 
 Three patterns:
 
@@ -127,7 +127,7 @@ Three patterns:
 props.put(StreamsConfig.PROCESSING_GUARANTEE_CONFIG, StreamsConfig.EXACTLY_ONCE_V2);
 ```
 
-### Interactive queries
+### Interactive queries <a class="askgpt-btn" data-askgpt="Interactive queries" title="Ask ChatGPT about this section">💬</a>
 
 Expose state stores as queryable REST endpoints:
 
@@ -136,7 +136,7 @@ ReadOnlyKeyValueStore<String, Long> store = streams.store("my-store", QueryableS
 String value = store.get(someKey);
 ```
 
-### Configuration
+### Configuration <a class="askgpt-btn" data-askgpt="Configuration" title="Ask ChatGPT about this section">💬</a>
 
 | Config | Default | Purpose |
 |--------|---------|---------|

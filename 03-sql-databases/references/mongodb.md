@@ -66,7 +66,7 @@ WiredTiger supports:
 
 ## Replication
 
-### Replica sets
+### Replica sets <a class="askgpt-btn" data-askgpt="Replica sets" title="Ask ChatGPT about this section">💬</a>
 
 A replica set is a group of mongod instances that maintain the same data set. Primary receives writes, secondaries replicate.
 
@@ -78,15 +78,15 @@ graph LR
     Secondary2 -.->|async replication| Primary
 ```
 
-### Oplog
+### Oplog <a class="askgpt-btn" data-askgpt="Oplog" title="Ask ChatGPT about this section">💬</a>
 
 The operations log (`oplog.rs`) is a capped collection that records all writes. Secondaries tail the primary's oplog to replicate.
 
-### Election
+### Election <a class="askgpt-btn" data-askgpt="Election" title="Ask ChatGPT about this section">💬</a>
 
 When the primary becomes unavailable, the remaining secondaries hold an election using Raft-like consensus. By default, writes are acknowledged only after the primary commits.
 
-### Write concern
+### Write concern <a class="askgpt-btn" data-askgpt="Write concern" title="Ask ChatGPT about this section">💬</a>
 
 | Level | Behavior |
 |-------|----------|
@@ -95,7 +95,7 @@ When the primary becomes unavailable, the remaining secondaries hold an election
 | `{w: "majority"}` | Acknowledged by majority of replica set members |
 | `{w: 2}` | Acknowledged by primary + 1 secondary |
 
-### Read concern
+### Read concern <a class="askgpt-btn" data-askgpt="Read concern" title="Ask ChatGPT about this section">💬</a>
 
 | Level | Behavior |
 |-------|----------|

@@ -4,14 +4,14 @@ This file catalogs the foundational papers and research that inform the SQL & Da
 
 ## Foundational papers
 
-### The relational model
+### The relational model <a class="askgpt-btn" data-askgpt="The relational model" title="Ask ChatGPT about this section">💬</a>
 
 - **"A Relational Model of Data for Large Shared Data Banks"** — Edgar F. Codd. *Communications of the ACM, 1970.*
   - The paper that invented the relational model.
   - Defined tuples, relations, relational algebra.
   - <https://www.seas.upenn.edu/~zives/03f/cis550/codd.pdf>
 
-### Transaction processing
+### Transaction processing <a class="askgpt-btn" data-askgpt="Transaction processing" title="Ask ChatGPT about this section">💬</a>
 
 - **"ARIES: A Transaction Recovery Method Supporting Fine-Granularity Locking and Partial Rollbacks"** — Mohan, Hader, Lindsay, Pirahesh, Schwarz. *ACM TODS, 1992.*
   - The algorithm behind almost every modern database's recovery (write-ahead logging, fuzzy checkpoints, restart from log).
@@ -20,7 +20,7 @@ This file catalogs the foundational papers and research that inform the SQL & Da
 - **"The Notion of Consistency and Other Topics in Transaction Processing"** — Gray, Helland, McJones. *1976.*
   - Discusses ACID properties, isolation levels.
 
-### Concurrency control
+### Concurrency control <a class="askgpt-btn" data-askgpt="Concurrency control" title="Ask ChatGPT about this section">💬</a>
 
 - **"Granularity of Locks and Degrees of Consistency in a Shared Data Base"** — Gray, Lorie, Putzolu. *1975.*
   - Defines isolation levels, lock granularity, phantoms.
@@ -28,13 +28,13 @@ This file catalogs the foundational papers and research that inform the SQL & Da
 - **"On Optimistic Methods for Concurrency Control** — Kung, Robinson. *ACM TODS, 1981.*
   - Optimistic concurrency control vs pessimistic.
 
-### Multi-version concurrency control (MVCC)
+### Multi-version concurrency control (MVCC) <a class="askgpt-btn" data-askgpt="Multi-version concurrency control (MVCC)" title="Ask ChatGPT about this section">💬</a>
 
 - **"Multiversion Concurrency Control—Theory and Algorithms"** — Bernstein, Hadzilacos, Goodman. *ACM Computing Surveys, 1983.*
 
 - **"An Efficient Multiversion Access Structure"** — Driscoll, Sarnak, Sleator, Tarjan. *1986.*
 
-### ACID
+### ACID <a class="askgpt-btn" data-askgpt="ACID" title="Ask ChatGPT about this section">💬</a>
 
 - **"Principles of Transaction-Oriented Database Recovery"** — Haerder, Reuter. *ACM Computing Surveys, 1983.*
   - The "ACID" acronym originates here.
@@ -46,7 +46,7 @@ This file catalogs the foundational papers and research that inform the SQL & Da
 
 - **"The R*-Tree: An Efficient and Robust Access Method for Points and Rectangles"** — Beckmann, Kriegel, Schneider, Seeger. *1990.*
 
-### Log-structured merge-trees (LSM)
+### Log-structured merge-trees (LSM) <a class="askgpt-btn" data-askgpt="Log-structured merge-trees (LSM)" title="Ask ChatGPT about this section">💬</a>
 
 - **"The Log-Structured Merge-Tree (LSM-Tree)"** — O'Neil, Cheng, Gawlick, O'Neil. *1996.*
   - The basis for modern write-optimized stores (LevelDB, RocksDB, Cassandra).

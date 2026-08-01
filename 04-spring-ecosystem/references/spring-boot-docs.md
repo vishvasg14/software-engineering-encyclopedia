@@ -36,7 +36,7 @@ The authoritative source for Spring Boot is the official documentation. This fil
 
 ## Key sections referenced in this document
 
-### Getting Started
+### Getting Started <a class="askgpt-btn" data-askgpt="Getting Started" title="Ask ChatGPT about this section">💬</a>
 
 | Topic | URL path |
 |-------|----------|
@@ -45,7 +45,7 @@ The authoritative source for Spring Boot is the official documentation. This fil
 | Installing Spring Boot | <https://docs.spring.io/spring-boot/reference/using/installing.html> |
 | First Spring Boot app | <https://docs.spring.io/spring-boot/reference/using/getting-started.html> |
 
-### Auto-configuration
+### Auto-configuration <a class="askgpt-btn" data-askgpt="Auto-configuration" title="Ask ChatGPT about this section">💬</a>
 
 | Topic | URL path |
 |-------|----------|
@@ -54,7 +54,7 @@ The authoritative source for Spring Boot is the official documentation. This fil
 | Disabling auto-configuration | <https://docs.spring.io/spring-boot/reference/using/auto-configuration.html#using.auto-configuration.disabling-specific> |
 | Custom auto-configuration | <https://docs.spring.io/spring-boot/reference/features/developing-auto-configuration.html> |
 
-### Spring Boot features
+### Spring Boot features <a class="askgpt-btn" data-askgpt="Spring Boot features" title="Ask ChatGPT about this section">💬</a>
 
 | Topic | URL path |
 |-------|----------|
@@ -67,7 +67,7 @@ The authoritative source for Spring Boot is the official documentation. This fil
 | Testing | <https://docs.spring.io/spring-boot/reference/features/testing.html> |
 | Developing with Spring Boot | <https://docs.spring.io/spring-boot/reference/features/developing-web-applications.html> |
 
-### Web
+### Web <a class="askgpt-btn" data-askgpt="Web" title="Ask ChatGPT about this section">💬</a>
 
 | Topic | URL path |
 |-------|----------|
@@ -77,7 +77,7 @@ The authoritative source for Spring Boot is the official documentation. This fil
 | WebFlux | <https://docs.spring.io/spring-boot/reference/web/reactive.html> |
 | Graceful shutdown | <https://docs.spring.io/spring-boot/reference/web/graceful-shutdown.html> |
 
-### Data
+### Data <a class="askgpt-btn" data-askgpt="Data" title="Ask ChatGPT about this section">💬</a>
 
 | Topic | URL path |
 |-------|----------|
@@ -89,7 +89,7 @@ The authoritative source for Spring Boot is the official documentation. This fil
 | MongoDB | <https://docs.spring.io/spring-boot/reference/data/nosql.html> |
 | Spring Data Repositories | <https://docs.spring.io/spring-boot/reference/data/sql.html#data.sql.repositories> |
 
-### Production-ready
+### Production-ready <a class="askgpt-btn" data-askgpt="Production-ready" title="Ask ChatGPT about this section">💬</a>
 
 | Topic | URL path |
 |-------|----------|
@@ -102,7 +102,7 @@ The authoritative source for Spring Boot is the official documentation. This fil
 | HTTP | <https://docs.spring.io/spring-boot/reference/actuator/endpoints.html#actuator.endpoints.exposing> |
 | Observability | <https://docs.spring.io/spring-boot/reference/actuator/observability.html> |
 
-### Configuration
+### Configuration <a class="askgpt-btn" data-askgpt="Configuration" title="Ask ChatGPT about this section">💬</a>
 
 | Topic | URL path |
 |-------|----------|
@@ -110,7 +110,7 @@ The authoritative source for Spring Boot is the official documentation. This fil
 | Conditional annotations | <https://docs.spring.io/spring-boot/reference/features/developing-auto-configuration.html#features.developing-auto-configuration.condition-annotations> |
 | Type-safe configuration | <https://docs.spring.io/spring-boot/reference/features/external-config.html#features.external-config.typesafe-configuration-properties> |
 
-### Deployment
+### Deployment <a class="askgpt-btn" data-askgpt="Deployment" title="Ask ChatGPT about this section">💬</a>
 
 | Topic | URL path |
 |-------|----------|

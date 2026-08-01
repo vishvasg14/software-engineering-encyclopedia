@@ -11,7 +11,7 @@ Signals are Angular's reactive primitive introduced in v16 (developer preview) a
 
 ## Core API
 
-### `signal()`
+### `signal()` <a class="askgpt-btn" data-askgpt="`signal()`" title="Ask ChatGPT about this section">💬</a>
 
 Creates a writable signal:
 
@@ -25,7 +25,7 @@ counter.update(n => n + 1); // Update based on current
 counter.mutate(n => n.push(1)); // Mutate array (only for arrays)
 ```
 
-### `computed()`
+### `computed()` <a class="askgpt-btn" data-askgpt="`computed()`" title="Ask ChatGPT about this section">💬</a>
 
 Creates a read-only signal derived from other signals:
 
@@ -42,7 +42,7 @@ Properties:
 - Memoized: cached until inputs change.
 - Glitch-free: synchronous derivation.
 
-### `effect()`
+### `effect()` <a class="askgpt-btn" data-askgpt="`effect()`" title="Ask ChatGPT about this section">💬</a>
 
 Side effect that runs when signals it reads change:
 
@@ -65,7 +65,7 @@ effect(() => { /* ... */ }, { injector });
 Options:
 - `manualCleanup` — don't auto-cleanup (for tests).
 
-### `untracked()`
+### `untracked()` <a class="askgpt-btn" data-askgpt="`untracked()`" title="Ask ChatGPT about this section">💬</a>
 
 Read signals without tracking:
 
@@ -80,7 +80,7 @@ const sum = computed(() => a() + untracked(() => b()));
 
 ## RxJS interop
 
-### `toSignal()`
+### `toSignal()` <a class="askgpt-btn" data-askgpt="`toSignal()`" title="Ask ChatGPT about this section">💬</a>
 
 Convert Observable to Signal:
 
@@ -97,7 +97,7 @@ Options:
 - `injector` — injector to use.
 - `manualCleanup` — don't auto-cleanup.
 
-### `toObservable()`
+### `toObservable()` <a class="askgpt-btn" data-askgpt="`toObservable()`" title="Ask ChatGPT about this section">💬</a>
 
 Convert Signal to Observable:
 
@@ -115,7 +115,7 @@ By default, `toObservable` uses an effect to track the signal. Pass `manualClean
 
 ## Advanced
 
-### `effect()` with cleanup
+### `effect()` with cleanup <a class="askgpt-btn" data-askgpt="`effect()` with cleanup" title="Ask ChatGPT about this section">💬</a>
 
 ```typescript
 effect((onCleanup) => {
@@ -124,7 +124,7 @@ effect((onCleanup) => {
 });
 ```
 
-### `linkedSignal()` (Angular 19+)
+### `linkedSignal()` (Angular 19+) <a class="askgpt-btn" data-askgpt="`linkedSignal()` (Angular 19+)" title="Ask ChatGPT about this section">💬</a>
 
 Writable signal that resets when a source changes:
 
@@ -140,7 +140,7 @@ const filtered = linkedSignal({
 });
 ```
 
-### `resource()` (Angular 19+, experimental)
+### `resource()` (Angular 19+, experimental) <a class="askgpt-btn" data-askgpt="`resource()` (Angular 19+, experimental)" title="Ask ChatGPT about this section">💬</a>
 
 Async loading state with signals:
 
@@ -224,7 +224,7 @@ Signals are simpler for synchronous state but lack RxJS's async operators. Use b
 
 ## Patterns
 
-### State container
+### State container <a class="askgpt-btn" data-askgpt="State container" title="Ask ChatGPT about this section">💬</a>
 
 ```typescript
 @Injectable({ providedIn: 'root' })
@@ -237,7 +237,7 @@ class CounterStore {
 }
 ```
 
-### Component input with signals
+### Component input with signals <a class="askgpt-btn" data-askgpt="Component input with signals" title="Ask ChatGPT about this section">💬</a>
 
 ```typescript
 @Component({
@@ -248,7 +248,7 @@ class MyComponent {
 }
 ```
 
-### Model inputs (two-way binding)
+### Model inputs (two-way binding) <a class="askgpt-btn" data-askgpt="Model inputs (two-way binding)" title="Ask ChatGPT about this section">💬</a>
 
 ```typescript
 @Component({

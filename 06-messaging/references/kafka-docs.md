@@ -16,7 +16,7 @@ The authoritative source for Apache Kafka is the official documentation. This fi
 
 ## Key sections referenced in this document
 
-### Quick Start
+### Quick Start <a class="askgpt-btn" data-askgpt="Quick Start" title="Ask ChatGPT about this section">💬</a>
 
 | Topic | URL |
 |-------|-----|
@@ -24,7 +24,7 @@ The authoritative source for Apache Kafka is the official documentation. This fi
 | Use Cases | <https://kafka.apache.org/uses> |
 | Ecosystem | <https://kafka.apache.org/ecosystem> |
 
-### Documentation
+### Documentation <a class="askgpt-btn" data-askgpt="Documentation" title="Ask ChatGPT about this section">💬</a>
 
 | Topic | URL |
 |-------|-----|
@@ -37,7 +37,7 @@ The authoritative source for Apache Kafka is the official documentation. This fi
 | Log | <https://kafka.apache.org/documentation/#intro_log> |
 | Distribution | <https://kafka.apache.org/documentation/#distribution_impl> |
 
-### Design
+### Design <a class="askgpt-btn" data-askgpt="Design" title="Ask ChatGPT about this section">💬</a>
 
 | Topic | URL |
 |-------|-----|
@@ -52,7 +52,7 @@ The authoritative source for Apache Kafka is the official documentation. This fi
 | Log Compaction | <https://kafka.apache.org/documentation/#compaction> |
 | Quotas | <https://kafka.apache.org/documentation/#design_quotas> |
 
-### Configuration
+### Configuration <a class="askgpt-btn" data-askgpt="Configuration" title="Ask ChatGPT about this section">💬</a>
 
 | Topic | URL |
 |-------|-----|
@@ -62,7 +62,7 @@ The authoritative source for Apache Kafka is the official documentation. This fi
 | Topic Configs | <https://kafka.apache.org/documentation/#topicconfigs> |
 | Admin Client Configs | <https://kafka.apache.org/documentation/#adminclientconfigs> |
 
-### Operations
+### Operations <a class="askgpt-btn" data-askgpt="Operations" title="Ask ChatGPT about this section">💬</a>
 
 | Topic | URL |
 |-------|-----|
@@ -76,7 +76,7 @@ The authoritative source for Apache Kafka is the official documentation. This fi
 | Monitoring | <https://kafka.apache.org/documentation/#monitoring> |
 | ZooKeeper | <https://kafka.apache.org/documentation/#zk> |
 
-### Kafka Streams
+### Kafka Streams <a class="askgpt-btn" data-askgpt="Kafka Streams" title="Ask ChatGPT about this section">💬</a>
 
 | Topic | URL |
 |-------|-----|
@@ -92,7 +92,7 @@ The authoritative source for Apache Kafka is the official documentation. This fi
 | Windowing | <https://kafka.apache.org/documentation/streams/developer-guide/dsl-api.html#streams-concepts-windowing> |
 | Joins | <https://kafka.apache.org/documentation/streams/developer-guide/dsl-api.html#streams-concepts-joins> |
 
-### Kafka Connect
+### Kafka Connect <a class="askgpt-btn" data-askgpt="Kafka Connect" title="Ask ChatGPT about this section">💬</a>
 
 | Topic | URL |
 |-------|-----|
@@ -101,7 +101,7 @@ The authoritative source for Apache Kafka is the official documentation. This fi
 | Source Connectors | <https://docs.confluent.io/platform/current/connect/devguide.html> |
 | Sink Connectors | <https://docs.confluent.io/platform/current/connect/devguide.html> |
 
-### Security
+### Security <a class="askgpt-btn" data-askgpt="Security" title="Ask ChatGPT about this section">💬</a>
 
 | Topic | URL |
 |-------|-----|
@@ -110,7 +110,7 @@ The authoritative source for Apache Kafka is the official documentation. This fi
 | Authentication | <https://kafka.apache.org/documentation/#security_sasl> |
 | Authorization | <https://kafka.apache.org/documentation/#security_authz> |
 
-### KRaft
+### KRaft <a class="askgpt-btn" data-askgpt="KRaft" title="Ask ChatGPT about this section">💬</a>
 
 | Topic | URL |
 |-------|-----|

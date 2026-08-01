@@ -47,7 +47,7 @@ The authoritative source for GraphQL is the GraphQL Foundation and the GraphQL s
 
 ## Concepts
 
-### Type system
+### Type system <a class="askgpt-btn" data-askgpt="Type system" title="Ask ChatGPT about this section">💬</a>
 
 | Type | Description |
 |------|-------------|
@@ -60,7 +60,7 @@ The authoritative source for GraphQL is the GraphQL Foundation and the GraphQL s
 | `List` | `[Type]` |
 | `NonNull` | `Type!` (required) |
 
-### Queries
+### Queries <a class="askgpt-btn" data-askgpt="Queries" title="Ask ChatGPT about this section">💬</a>
 
 ```graphql
 query GetUser($id: ID!) {
@@ -75,7 +75,7 @@ query GetUser($id: ID!) {
 }
 ```
 
-### Mutations
+### Mutations <a class="askgpt-btn" data-askgpt="Mutations" title="Ask ChatGPT about this section">💬</a>
 
 ```graphql
 mutation CreateUser($input: CreateUserInput!) {
@@ -86,7 +86,7 @@ mutation CreateUser($input: CreateUserInput!) {
 }
 ```
 
-### Subscriptions
+### Subscriptions <a class="askgpt-btn" data-askgpt="Subscriptions" title="Ask ChatGPT about this section">💬</a>
 
 ```graphql
 subscription OnMessage($chatId: ID!) {
@@ -100,7 +100,7 @@ subscription OnMessage($chatId: ID!) {
 }
 ```
 
-### Fragments
+### Fragments <a class="askgpt-btn" data-askgpt="Fragments" title="Ask ChatGPT about this section">💬</a>
 
 ```graphql
 fragment UserSummary on User {
@@ -116,7 +116,7 @@ query {
 }
 ```
 
-### Variables
+### Variables <a class="askgpt-btn" data-askgpt="Variables" title="Ask ChatGPT about this section">💬</a>
 
 ```graphql
 query GetUsers($limit: Int = 10, $offset: Int = 0) {
@@ -126,7 +126,7 @@ query GetUsers($limit: Int = 10, $offset: Int = 0) {
 }
 ```
 
-### Aliases
+### Aliases <a class="askgpt-btn" data-askgpt="Aliases" title="Ask ChatGPT about this section">💬</a>
 
 ```graphql
 query {
@@ -135,7 +135,7 @@ query {
 }
 ```
 
-### Directives
+### Directives <a class="askgpt-btn" data-askgpt="Directives" title="Ask ChatGPT about this section">💬</a>
 
 GraphQL supports custom directives for cross-cutting concerns.
 

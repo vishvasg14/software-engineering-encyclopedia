@@ -40,20 +40,20 @@ graph TB
 
 Redis offers two persistence mechanisms:
 
-### RDB (Redis Database file)
+### RDB (Redis Database file) <a class="askgpt-btn" data-askgpt="RDB (Redis Database file)" title="Ask ChatGPT about this section">💬</a>
 
 - Point-in-time snapshots at configurable intervals.
 - Compact, fast to load.
 - Configurable via `save <seconds> <changes>`.
 
-### AOF (Append Only File)
+### AOF (Append Only File) <a class="askgpt-btn" data-askgpt="AOF (Append Only File)" title="Ask ChatGPT about this section">💬</a>
 
 - Logs every write operation.
 - Configurable fsync policy: `everysec`, `always`, `no`.
 - Can be replayed to reconstruct state.
 - Rewrite (compaction) to prevent unbounded growth.
 
-### Mixed mode (since 7.0)
+### Mixed mode (since 7.0) <a class="askgpt-btn" data-askgpt="Mixed mode (since 7.0)" title="Ask ChatGPT about this section">💬</a>
 
 - Default in Redis 7.0.
 - Combines RDB snapshot + AOF log.

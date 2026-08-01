@@ -12,14 +12,14 @@ The authoritative source for Redis is the Redis project and Redis Labs. This fil
 
 ## Topics referenced in the document
 
-### Getting started
+### Getting started <a class="askgpt-btn" data-askgpt="Getting started" title="Ask ChatGPT about this section">💬</a>
 
 | Topic | URL |
 |-------|-----|
 | Quick start | <https://redis.io/docs/getting-started/> |
 | Installation | <https://redis.io/docs/getting-started/installation/> |
 
-### Data types
+### Data types <a class="askgpt-btn" data-askgpt="Data types" title="Ask ChatGPT about this section">💬</a>
 
 | Topic | URL |
 |-------|-----|
@@ -33,7 +33,7 @@ The authoritative source for Redis is the Redis project and Redis Labs. This fil
 | HyperLogLogs | <https://redis.io/docs/data-types/hyperloglogs/> |
 | Geospatial | <https://redis.io/docs/data-types/geospatial/> |
 
-### Commands
+### Commands <a class="askgpt-btn" data-askgpt="Commands" title="Ask ChatGPT about this section">💬</a>
 
 | Topic | URL |
 |-------|-----|
@@ -48,7 +48,7 @@ The authoritative source for Redis is the Redis project and Redis Labs. This fil
 | Streams intro | <https://redis.io/docs/data-types/streams/> |
 | Consumer groups | <https://redis.io/docs/data-types/streams/#consumer-groups> |
 
-### Persistence
+### Persistence <a class="askgpt-btn" data-askgpt="Persistence" title="Ask ChatGPT about this section">💬</a>
 
 | Topic | URL |
 |-------|-----|
@@ -56,7 +56,7 @@ The authoritative source for Redis is the Redis project and Redis Labs. This fil
 | AOF persistence | <https://redis.io/docs/management/persistence/> |
 | Persistence trade-offs | <https://redis.io/docs/management/persistence/> |
 
-### Replication and HA
+### Replication and HA <a class="askgpt-btn" data-askgpt="Replication and HA" title="Ask ChatGPT about this section">💬</a>
 
 | Topic | URL |
 |-------|-----|
@@ -65,7 +65,7 @@ The authoritative source for Redis is the Redis project and Redis Labs. This fil
 | Cluster | <https://redis.io/docs/management/scaling/> |
 | Cluster tutorial | <https://redis.io/docs/management/scaling/> |
 
-### Operations
+### Operations <a class="askgpt-btn" data-askgpt="Operations" title="Ask ChatGPT about this section">💬</a>
 
 | Topic | URL |
 |-------|-----|
@@ -76,7 +76,7 @@ The authoritative source for Redis is the Redis project and Redis Labs. This fil
 | ACL | <https://redis.io/docs/management/access-control/> |
 | TLS | <https://redis.io/docs/management/security/> |
 
-### Clients
+### Clients <a class="askgpt-btn" data-askgpt="Clients" title="Ask ChatGPT about this section">💬</a>
 
 | Language | Client |
 |----------|--------|

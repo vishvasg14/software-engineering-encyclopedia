@@ -48,7 +48,7 @@ This file catalogs the official TypeScript documentation resources referenced in
 
 ## tsconfig.json options (organized by category)
 
-### Language and compiler behavior
+### Language and compiler behavior <a class="askgpt-btn" data-askgpt="Language and compiler behavior" title="Ask ChatGPT about this section">💬</a>
 
 - `target` — ECMAScript target version.
 - `module` — Module system (`CommonJS`, `ESNext`, `Node16`, etc.).
@@ -60,7 +60,7 @@ This file catalogs the official TypeScript documentation resources referenced in
 - `noEmit` — Don't emit JS (type-check only).
 - `isolatedModules` — Each file must be transpilable in isolation (Babel, esbuild compatible).
 
-### Type checking strictness
+### Type checking strictness <a class="askgpt-btn" data-askgpt="Type checking strictness" title="Ask ChatGPT about this section">💬</a>
 
 - `strict` — Enables all strict checks.
 - `noImplicitAny` — Forbid implicit `any`.
@@ -75,7 +75,7 @@ This file catalogs the official TypeScript documentation resources referenced in
 - `noUncheckedIndexedAccess` — Add `| undefined` to indexed access.
 - `noImplicitOverride` — Require `override` keyword.
 
-### Module resolution
+### Module resolution <a class="askgpt-btn" data-askgpt="Module resolution" title="Ask ChatGPT about this section">💬</a>
 
 - `baseUrl` — Base directory for module resolution.
 - `paths` — Path aliases.
@@ -83,7 +83,7 @@ This file catalogs the official TypeScript documentation resources referenced in
 - `typeRoots` — Where to find type definitions.
 - `types` — Which `@types/*` packages to include.
 
-### Emit
+### Emit <a class="askgpt-btn" data-askgpt="Emit" title="Ask ChatGPT about this section">💬</a>
 
 - `outDir` — Output directory.
 - `outFile` — Single-file output (for AMD/System).
@@ -94,11 +94,11 @@ This file catalogs the official TypeScript documentation resources referenced in
 - `importHelpers` — Import `__extends` from `tslib`.
 - `newLine` — Output newline character.
 
-### Output format
+### Output format <a class="askgpt-btn" data-askgpt="Output format" title="Ask ChatGPT about this section">💬</a>
 
 - `removeComments`, `preserveConstEnums`, `downlevelIteration`.
 
-### Project references
+### Project references <a class="askgpt-btn" data-askgpt="Project references" title="Ask ChatGPT about this section">💬</a>
 
 - `composite` — Project can be referenced by other projects.
 - `tsBuildInfoFile` — Build info cache location.

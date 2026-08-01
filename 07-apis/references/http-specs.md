@@ -55,7 +55,7 @@ The authoritative source for HTTP is the IETF (Internet Engineering Task Force).
 
 ## HTTP semantics basics
 
-### Methods
+### Methods <a class="askgpt-btn" data-askgpt="Methods" title="Ask ChatGPT about this section">💬</a>
 
 | Method | Idempotent | Safe | Description |
 |--------|-----------|------|-------------|
@@ -68,7 +68,7 @@ The authoritative source for HTTP is the IETF (Internet Engineering Task Force).
 | OPTIONS | Yes | Yes | Describe communication options |
 | TRACE | Yes | Yes | Echo back received request |
 
-### Status codes
+### Status codes <a class="askgpt-btn" data-askgpt="Status codes" title="Ask ChatGPT about this section">💬</a>
 
 | Class | Range | Meaning |
 |-------|-------|---------|
@@ -102,7 +102,7 @@ The authoritative source for HTTP is the IETF (Internet Engineering Task Force).
 | 503 | Service Unavailable | Maintenance / overload |
 | 504 | Gateway Timeout | |
 
-### Headers
+### Headers <a class="askgpt-btn" data-askgpt="Headers" title="Ask ChatGPT about this section">💬</a>
 
 **Request headers:**
 

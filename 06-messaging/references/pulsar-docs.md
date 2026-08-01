@@ -11,7 +11,7 @@ The authoritative source for Apache Pulsar is the official documentation. This f
 
 ## Architecture
 
-### Components
+### Components <a class="askgpt-btn" data-askgpt="Components" title="Ask ChatGPT about this section">💬</a>
 
 | Component | Purpose |
 |-----------|---------|
@@ -21,7 +21,7 @@ The authoritative source for Apache Pulsar is the official documentation. This f
 | **BookKeeper Metadata** | Coordination for BookKeeper |
 | **Pulsar Proxy** | Gateway for client connections |
 
-### Concepts
+### Concepts <a class="askgpt-btn" data-askgpt="Concepts" title="Ask ChatGPT about this section">💬</a>
 
 | Concept | URL |
 |---------|-----|
@@ -40,7 +40,7 @@ The authoritative source for Apache Pulsar is the official documentation. This f
 | Geo-Replication | <https://pulsar.apache.org/docs/administration-geo/> |
 | Tiered Storage | <https://pulsar.apache.org/docs/tiered-storage-overview/> |
 
-### Subscription types
+### Subscription types <a class="askgpt-btn" data-askgpt="Subscription types" title="Ask ChatGPT about this section">💬</a>
 
 | Type | URL |
 |------|-----|
@@ -49,7 +49,7 @@ The authoritative source for Apache Pulsar is the official documentation. This f
 | Shared | <https://pulsar.apache.org/docs/concepts-messaging/#shared> |
 | Key_Shared | <https://pulsar.apache.org/docs/concepts-messaging/#key_shared> |
 
-### Pulsar Functions
+### Pulsar Functions <a class="askgpt-btn" data-askgpt="Pulsar Functions" title="Ask ChatGPT about this section">💬</a>
 
 | Topic | URL |
 |-------|-----|
@@ -60,7 +60,7 @@ The authoritative source for Apache Pulsar is the official documentation. This f
 | State Store | <https://pulsar.apache.org/docs/functions-state-store/> |
 | Windowing | <https://pulsar.apache.org/docs/functions-windowing/> |
 
-### Pulsar IO
+### Pulsar IO <a class="askgpt-btn" data-askgpt="Pulsar IO" title="Ask ChatGPT about this section">💬</a>
 
 | Topic | URL |
 |-------|-----|
@@ -72,7 +72,7 @@ The authoritative source for Apache Pulsar is the official documentation. This f
 | JDBC Source | <https://pulsar.apache.org/docs/io-jdbc-source/> |
 | Debezium Source | <https://pulsar.apache.org/docs/io-debezium-source/> |
 
-### Schema
+### Schema <a class="askgpt-btn" data-askgpt="Schema" title="Ask ChatGPT about this section">💬</a>
 
 | Topic | URL |
 |-------|-----|
@@ -82,7 +82,7 @@ The authoritative source for Apache Pulsar is the official documentation. This f
 | Protobuf | <https://pulsar.apache.org/docs/schema-protobuf/> |
 | Schema Evolution | <https://pulsar.apache.org/docs/schema-evolution-compatibility/> |
 
-### Operations
+### Operations <a class="askgpt-btn" data-askgpt="Operations" title="Ask ChatGPT about this section">💬</a>
 
 | Topic | URL |
 |-------|-----|

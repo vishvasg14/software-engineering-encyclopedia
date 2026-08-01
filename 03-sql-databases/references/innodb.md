@@ -98,13 +98,13 @@ MySQL supports several replication modes:
 | **Semisynchronous** | At least one replica acknowledges receipt of the binlog event before primary commits. |
 | **Synchronous** (MySQL Group Replication, Galera) | All replicas acknowledge before commit. |
 
-### Binlog formats
+### Binlog formats <a class="askgpt-btn" data-askgpt="Binlog formats" title="Ask ChatGPT about this section">💬</a>
 
 - **STATEMENT** — log SQL statements (smaller; less safe for non-deterministic functions).
 - **ROW** — log row changes (larger; safest for replication).
 - **MIXED** — MySQL decides per-statement.
 
-### GTIDs (Global Transaction Identifiers)
+### GTIDs (Global Transaction Identifiers) <a class="askgpt-btn" data-askgpt="GTIDs (Global Transaction Identifiers)" title="Ask ChatGPT about this section">💬</a>
 
 Since MySQL 5.6, GTIDs provide a unique identifier for each committed transaction across the topology. Required for safe failover.
 

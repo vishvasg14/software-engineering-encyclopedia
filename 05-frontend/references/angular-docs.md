@@ -24,7 +24,7 @@ The authoritative source for Angular is the official documentation. This file ca
 
 ## Key sections referenced in this document
 
-### Core
+### Core <a class="askgpt-btn" data-askgpt="Core" title="Ask ChatGPT about this section">💬</a>
 
 | Topic | URL |
 |-------|-----|
@@ -38,7 +38,7 @@ The authoritative source for Angular is the official documentation. This file ca
 | Change detection | <https://angular.dev/guide/change-detection> |
 | Zone.js | <https://angular.dev/guide/zone> |
 
-### Components
+### Components <a class="askgpt-btn" data-askgpt="Components" title="Ask ChatGPT about this section">💬</a>
 
 | Topic | URL |
 |-------|-----|
@@ -53,7 +53,7 @@ The authoritative source for Angular is the official documentation. This file ca
 | Outputs | <https://angular.dev/guide/components/outputs> |
 | Deferrable views | <https://angular.dev/guide/defer> |
 
-### Templates
+### Templates <a class="askgpt-btn" data-askgpt="Templates" title="Ask ChatGPT about this section">💬</a>
 
 | Topic | URL |
 |-------|-----|
@@ -65,7 +65,7 @@ The authoritative source for Angular is the official documentation. This file ca
 | Built-in control flow (@if/@for) | <https://angular.dev/guide/templates/control-flow> |
 | Pipes | <https://angular.dev/guide/pipes> |
 
-### Forms
+### Forms <a class="askgpt-btn" data-askgpt="Forms" title="Ask ChatGPT about this section">💬</a>
 
 | Topic | URL |
 |-------|-----|
@@ -75,7 +75,7 @@ The authoritative source for Angular is the official documentation. This file ca
 | Form validation | <https://angular.dev/guide/forms/form-validation> |
 | Dynamic forms | <https://angular.dev/guide/forms/dynamic-forms> |
 
-### RxJS and Signals
+### RxJS and Signals <a class="askgpt-btn" data-askgpt="RxJS and Signals" title="Ask ChatGPT about this section">💬</a>
 
 | Topic | URL |
 |-------|-----|
@@ -86,7 +86,7 @@ The authoritative source for Angular is the official documentation. This file ca
 | Computed signals | <https://angular.dev/guide/signals#computed-signals> |
 | Effects | <https://angular.dev/guide/signals#effects> |
 
-### HTTP
+### HTTP <a class="askgpt-btn" data-askgpt="HTTP" title="Ask ChatGPT about this section">💬</a>
 
 | Topic | URL |
 |-------|-----|
@@ -94,7 +94,7 @@ The authoritative source for Angular is the official documentation. This file ca
 | HTTP interceptors | <https://angular.dev/guide/http/interceptors> |
 | Testing HTTP | <https://angular.dev/guide/http/testing> |
 
-### Routing
+### Routing <a class="askgpt-btn" data-askgpt="Routing" title="Ask ChatGPT about this section">💬</a>
 
 | Topic | URL |
 |-------|-----|
@@ -104,7 +104,7 @@ The authoritative source for Angular is the official documentation. This file ca
 | Lazy loading | <https://angular.dev/guide/standalone-components#lazy-loading> |
 | RouterLink | <https://angular.dev/api/router/RouterLink> |
 
-### Standalone APIs
+### Standalone APIs <a class="askgpt-btn" data-askgpt="Standalone APIs" title="Ask ChatGPT about this section">💬</a>
 
 | Topic | URL |
 |-------|-----|
@@ -112,7 +112,7 @@ The authoritative source for Angular is the official documentation. This file ca
 | Migration to standalone | <https://angular.dev/guide/standalone-migration> |
 | Bootstrapping standalone apps | <https://angular.dev/guide/standalone-components#bootstrapping-an-application> |
 
-### Testing
+### Testing <a class="askgpt-btn" data-askgpt="Testing" title="Ask ChatGPT about this section">💬</a>
 
 | Topic | URL |
 |-------|-----|
@@ -122,7 +122,7 @@ The authoritative source for Angular is the official documentation. This file ca
 | Testing HTTP | <https://angular.dev/guide/http/testing> |
 | Code coverage | <https://angular.dev/guide/testing/code-coverage> |
 
-### Performance
+### Performance <a class="askgpt-btn" data-askgpt="Performance" title="Ask ChatGPT about this section">💬</a>
 
 | Topic | URL |
 |-------|-----|
@@ -131,7 +131,7 @@ The authoritative source for Angular is the official documentation. This file ca
 | Change detection optimization | <https://angular.dev/guide/change-detection#optimizing-change-detection> |
 | Bundle budgets | <https://angular.dev/guide/build#configuring-size-budgets> |
 
-### Deployment
+### Deployment <a class="askgpt-btn" data-askgpt="Deployment" title="Ask ChatGPT about this section">💬</a>
 
 | Topic | URL |
 |-------|-----|

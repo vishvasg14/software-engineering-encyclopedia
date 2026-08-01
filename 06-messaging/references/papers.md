@@ -4,7 +4,7 @@ This file catalogs the foundational papers and engineering documents that inform
 
 ## Foundational papers
 
-### Distributed logs and systems
+### Distributed logs and systems <a class="askgpt-btn" data-askgpt="Distributed logs and systems" title="Ask ChatGPT about this section">💬</a>
 
 - **"Kafka: A Distributed Messaging System for Log Processing"** — LinkedIn engineering blog (2011).
 - **"How Kafka is Tested"** — Apache Kafka wiki.
@@ -12,7 +12,7 @@ This file catalogs the foundational papers and engineering documents that inform
   - The "log" as a unifying abstraction for distributed systems.
   - <https://engineering.linkedin.com/distributed-systems/log-what-every-software-engineer-should-know-about-real-time-datas-unifying>
 
-### Consensus
+### Consensus <a class="askgpt-btn" data-askgpt="Consensus" title="Ask ChatGPT about this section">💬</a>
 
 - **"Paxos Made Simple"** — Leslie Lamport (2001).
   - The canonical Paxos paper.
@@ -22,7 +22,7 @@ This file catalogs the foundational papers and engineering documents that inform
 - **"Zab: High-performance broadcast for primary-backup systems"** — Flavio P. Junqueira, Benjamin C. Reed, Benjamin Serafino (2011).
   - The consensus algorithm used by ZooKeeper (Kafka's legacy metadata store).
 
-### Stream processing
+### Stream processing <a class="askgpt-btn" data-askgpt="Stream processing" title="Ask ChatGPT about this section">💬</a>
 
 - **"The 8 Requirements of Real-Time Stream Processing"** — Tyler Akidau (Google, 2015).
   - Stream processing fundamentals.
@@ -33,24 +33,24 @@ This file catalogs the foundational papers and engineering documents that inform
   - Google stream processing.
 - **"Kafka Streams: A Stream Processing Framework for Apache Kafka"** — Wang et al. (KSQL white paper).
 
-### Distributed transactions
+### Distributed transactions <a class="askgpt-btn" data-askgpt="Distributed transactions" title="Ask ChatGPT about this section">💬</a>
 
 - **"Exactly-Once Semantics in Kafka"** — KIP-98.
 - **"Chandy-Lamport Distributed Snapshots"** — K. Chandy, L. Lamport (1985).
   - The basis for Kafka's exactly-once semantics via streaming snapshots.
 
-### RabbitMQ and AMQP
+### RabbitMQ and AMQP <a class="askgpt-btn" data-askgpt="RabbitMQ and AMQP" title="Ask ChatGPT about this section">💬</a>
 
 - **"AMQP 0-9-1 Specification"** — AMQP working group.
 - **"RabbitMQ in Action"** — Alvaro Videla, Jason Williams (Manning).
 
-### CDC and outbox
+### CDC and outbox <a class="askgpt-btn" data-askgpt="CDC and outbox" title="Ask ChatGPT about this section">💬</a>
 
 - **"Outbox Pattern"** — Chris Richardson (Microservices.io).
 - **"Debezium: A Log-Based Change Data Capture Platform"** — Debezium documentation.
 - **"Transactional Outbox Pattern"** — Microsoft patterns catalog.
 
-### Other foundational
+### Other foundational <a class="askgpt-btn" data-askgpt="Other foundational" title="Ask ChatGPT about this section">💬</a>
 
 - **"Time, Clocks, and the Ordering of Events in a Distributed System"** — Leslie Lamport (1978).
   - The foundational paper on distributed systems ordering.
