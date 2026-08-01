@@ -154,16 +154,44 @@
   }
 
   function mdToHtml(md) {
-    // Use GitHub-flavored markdown via marked (CDN).
     const renderer = new marked.Renderer();
-    // Replace ```mermaid blocks with <div class="mermaid">…</div> for mermaid.js.
+
+    // Override the heading renderer to split the heading text from the
+    // trailing <a class="askgpt-btn">…</a>. marked treats <a> inside a
+    // heading line as inline HTML and re-parses its href (which contains a
+    // long URL-encoded prompt), corrupting the output. We split the line
+    // ourselves and emit the heading text and the button as separate HTML.
+    function renderHeading(text, level) {
+      // Split off the trailing <a …>…</a> if present.
+      var m = text.match(/^([\s\S]*?)\s*(<a class=['"]askgpt-btn['"][\s\S]*?<\/a>)\s*$/);
+      var inner;
+      if (m) {
+        var headingText = m[1].trim();
+        var buttonHtml = m[2];
+        inner = escapeHtml(headingText) + ' ' + buttonHtml;
+      } else {
+        inner = escapeHtml(text);
+      }
+      return '<h' + level + '>' + inner + '</h' + level + '>\n';
+    }
+    renderer.heading = function (text, level) {
+      return renderHeading(text, level);
+    };
+    // Some marked versions pass raw vs escaped separately
+    renderer.heading = function (text, level, raw) {
+      return renderHeading(raw || text, level);
+    };
+
+    // Mermaid code blocks → <div class="mermaid">…</div>
     renderer.code = function (code, lang) {
       if (lang === 'mermaid') {
         return '<div class="mermaid">' + code + '</div>';
       }
       return '<pre><code>' + escapeHtml(code) + '</code></pre>';
     };
-    marked.setOptions({ renderer, gfm: true, breaks: false });
+
+    // marked v12 uses object-style options
+    marked.use({ renderer: renderer, gfm: true, breaks: false });
     return marked.parse(md);
   }
   function escapeHtml(s) {
@@ -191,6 +219,17 @@
       // Re-trigger askgpt init for the freshly-injected buttons.
       if (window.askgptInit) window.askgptInit();
       else initAskGPT();
+      // Run mermaid against the freshly-injected <div class="mermaid">
+      // elements (startOnLoad already ran on first page load and missed them).
+      if (window.mermaid && typeof window.mermaid.run === 'function') {
+        try {
+          await window.mermaid.run({
+            nodes: article.querySelectorAll('.mermaid'),
+          });
+        } catch (e) {
+          console.warn('mermaid.render failed for some blocks:', e);
+        }
+      }
       location.hash = '#' + num;
     } catch (err) {
       article.innerHTML = `<div class="error">Failed to load <code>${path}</code>: ${err.message}</div>`;
